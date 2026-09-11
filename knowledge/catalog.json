@@ -609,6 +609,8 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiLendingCDP",
+        "Verification.QuantumPhaseFlipCode",
         "Verification.CryptoPedersenCommitment",
         "Verification.DistributedRaftLogAppend",
         "Verification.DistributedRaftConsensus",
@@ -678,6 +680,22 @@
       "section": "cryptography",
       "source": "Verification/CryptoPedersenCommitment.lean",
       "card": "knowledge/06_cryptography_and_zk/CryptoPedersenCommitment.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumPhaseFlipCode",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumPhaseFlipCode.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumPhaseFlipCode.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiLendingCDP",
+      "section": "finance",
+      "source": "Verification/DeFiLendingCDP.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiLendingCDP.en.md",
       "project_imports": [],
       "novelty": "not-assessed"
     }

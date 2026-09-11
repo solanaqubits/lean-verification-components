@@ -1,3 +1,5 @@
+import Verification.DeFiLendingCDP
+import Verification.QuantumPhaseFlipCode
 import Verification.CryptoPedersenCommitment
 import Verification.DistributedRaftLogAppend
 import Verification.DistributedRaftConsensus
@@ -44,6 +46,9 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DeFiLendingCDP
+open QuantumPhaseFlipCode
 
 universe uRaft3
 
@@ -153,6 +158,7 @@ structure QuantumPhysicsFullSuite : Prop where
   transport : SpintronicTransportFormalSuite
   symplectic : SymplecticDynamicsFormalSuite
   majorana : QuantumMajoranaChain.QuantumMajoranaFormalSuite
+  phase_flip : QuantumPhaseFlipCode.QuantumPhaseFlipFormalSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -166,6 +172,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   transport := spintronic_transport_master_verification_suite
   symplectic := symplectic_dynamics_master_verification_suite
   majorana := QuantumMajoranaChain.quantum_majorana_master_verification_suite
+  phase_flip := QuantumPhaseFlipCode.quantum_phase_flip_master_verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
@@ -206,6 +213,7 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   eip1559 : MechanismDesignEIP1559FormalSuite
   pbs : MechanismDesignPBSFormalSuite
   concentrated : DeFiConcentratedLiquidity.DeFiConcentratedLiquidityFormalSuite
+  cdp : DeFiLendingCDP.DeFiLendingCDPFormalSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   toFinanceDeFiFullSuite := finance_defi_full_master_suite
@@ -215,6 +223,7 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   eip1559 := mechanism_design_eip1559_master_verification_suite
   pbs := mechanism_design_pbs_master_verification_suite
   concentrated := DeFiConcentratedLiquidity.defi_concentrated_liquidity_master_verification_suite
+  cdp := DeFiLendingCDP.defi_lending_cdp_master_verification_suite
 }
 
 /-- Cardinal quorum conditions, without protocol-level safety or termination claims. -/

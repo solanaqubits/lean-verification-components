@@ -747,7 +747,7 @@ skew-matrix commutator models, prescribed toric energy/count formulas, and sympl
 finance combines sequential settlement, exact constant-product swaps, portfolio variance bounds,
 aggregate channel/timelock invariants, conditional fixed-rate cycle losses, real-valued base-fee bounds, and conditional PBS accounting;
 distributed systems collects cardinal quorum intersection and availability conditions.
-The registry directly imports 41 component modules; the project-wide audit also
+The registry directly imports 43 component modules; the project-wide audit also
 covers their dependencies and declarations outside the registry.
 The original Finsler suite remains available. The combined Lamzouri suite
 preserves all earlier quotient guarantees and additionally includes the
@@ -1271,7 +1271,7 @@ provides syntax highlighting, snippets, and language-server diagnostics.
 DeFiConcentratedLiquidity, QuantumMajoranaChain and DistributedRaftConsensus
 are now included in the registry. Their original limitations remain.
 The standalone CLI and agent skill are described in
-.
+[the verifier guide](verifier-skill.en.md).
 
 ## Local Raft log append
 
@@ -1286,3 +1286,14 @@ monotone log). This does not model AppendEntries RPC or distributed Log Matching
 opening for `H ≠ 0`, and a ratio identity extracted from a collision with
 distinct messages. The model uses real scalars, not finite cryptographic groups.
 No randomness distribution, perfect hiding, or computational binding is proved.
+
+## Phase-flip decoding components
+
+`QuantumPhaseFlipCode` proves HZH = X under a scalar normalization hypothesis,
+Z² = I, and injectivity and inverse decoding for a prescribed four-label syndrome
+table. The codewords, three-qubit stabilizer measurements, and state-space
+recovery are not constructed. No continuous-noise-channel claim is made.
+
+## Static CDP lending model
+
+`DeFiLendingCDP` proves nonnegativity and threshold characterizations of health factor, strict price/debt monotonicity under positive numerator assumptions, and an uncapped seizure-value identity. It does not formalize a liquidation transition, collateral sufficiency, oracle behavior, or a deployed lending protocol.

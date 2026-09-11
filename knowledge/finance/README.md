@@ -20,3 +20,5 @@
 The models retain their stated balance, price, and fee assumptions. They do not verify production smart-contract code, transaction ordering, or every protocol rule.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
+
+- [DeFiLendingCDP](../08_finance_and_risk/DeFiLendingCDP.en.md): health-factor and liquidation-quote scalar invariants.

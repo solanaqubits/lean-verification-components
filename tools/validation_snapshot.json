@@ -1,21 +1,20 @@
 {
-  "description": "Public English source export; strict verification and live tests completed locally. Counts include generated declarations.",
-  "modules_checked": 64,
-  "master_direct_imports": 41,
-  "full_build_jobs": 3369,
+  "modules_checked": 66,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 3197,
+    "declarations": 3332,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "d872627dc53b97144b317ff83e14811199d711657483d84ba552cd08635f1004",
+    "Verification.MasterSuite": "b8164a0556e33b72ee3b816d213fa3598901eff16754f106297637d0c54ce4c6",
+    "Verification.DeFiLendingCDP": "17a09cebcd683ced46c255b15f723392f105bb4c513b33cd619e6cbccc15504a",
+    "Verification.QuantumPhaseFlipCode": "ab51edfd12f9f597bacead9e09e1e350b652b0ba2c3aff934abaa29d1d860a67",
     "Verification.CryptoPedersenCommitment": "90581daec61cb069b71d0cd260605e56c412e39857bccc32daf24da63b0289c7",
     "Verification.DistributedRaftLogAppend": "2c0570f8c65fc8f65b505d77c1c18bbea5fda3e4a628caf5f4f0de9dac145449",
     "Verification.DistributedRaftConsensus": "89cf3887f090c80d0fbcc0058a1c1733ce524d906253a67a3489e081f6b045c2",
@@ -79,10 +78,29 @@
     "Verification.Generated": "c2d2efb42cf5c16d1cb4014c84f1fda96adf0b2c86f627c08259422ae5df9cfc"
   },
   "strict_checks_passed": true,
+  "description": "Public repository validation: 66 modules, strict compilation and project-wide axiom audit; counts include generated declarations.",
+  "independent_axiom_audit": {
+    "declarations": 3332,
+    "passed": true,
+    "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
   "regression_tests": {
     "passed": 19,
-    "skipped": 0
+    "runs": [
+      19
+    ],
+    "note": "Public repository: complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1, no skipped tests."
   },
-  "english_card_generation_checked": true,
-  "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a"
+  "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
+  "master_direct_imports": 43,
+  "full_build_jobs": 3371,
+  "pipeline": {
+    "verify": true,
+    "audit": true,
+    "integrate": true,
+    "card": true,
+    "verify_all": true,
+    "knowledge_catalog": true,
+    "reservoir_config": true
+  }
 }

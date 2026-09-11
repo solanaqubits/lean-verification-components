@@ -18,6 +18,8 @@
 | [SymplecticHamiltonianDynamics](SymplecticHamiltonianDynamics.en.md) | The prescribed symplectic Euler step has determinant one and preserves a modified quadratic energy, nonnegative when h²k < 4m. |
 | [QuantumMajoranaChain](QuantumMajoranaChain.en.md) | Explicit complex 2×2 matrices: Majorana algebra, CAR, a number projection, and involutive parity. No spatial chain is constructed. |
 
+| [QuantumPhaseFlipCode](../07_quantum_physics_and_optics/QuantumPhaseFlipCode.en.md) | HZH = X, Z² = I, and an invertible four-label syndrome table; no state-space recovery theorem. |
+
 ## Scope
 
 The results concern the explicit matrices, transformations, and scalar energy models. Their correspondence to a physical device or a full many-body system is not established by compilation.

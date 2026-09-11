@@ -44,5 +44,21 @@
     "field": "pedersen",
     "constructor": "crypto_full_master_suite",
     "proof": "CryptoPedersenCommitment.crypto_pedersen_master_verification_suite"
+  },
+  "Verification.QuantumPhaseFlipCode": {
+    "suite_struct": "QuantumPhaseFlipFormalSuite",
+    "suite_type": "QuantumPhaseFlipCode.QuantumPhaseFlipFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "phase_flip",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumPhaseFlipCode.quantum_phase_flip_master_verification_suite"
+  },
+  "Verification.DeFiLendingCDP": {
+    "suite_struct": "DeFiLendingCDPFormalSuite",
+    "suite_type": "DeFiLendingCDP.DeFiLendingCDPFormalSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "cdp",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiLendingCDP.defi_lending_cdp_master_verification_suite"
   }
 }
