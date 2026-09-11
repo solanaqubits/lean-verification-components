@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "name": "lean4-formal-verifier",
+  "description": "Strict Lean module checks, project-declaration axiom audits, reviewed registry integration, and English card drafts",
+  "interface": "cli-and-python",
+  "entrypoint": "tools/verifier_skill.py",
+  "instructions": ".agents/skills/lean4-formal-verifier/SKILL.md",
+  "guide": "docs/verifier-skill.en.md",
+  "runtime": "Python 3.10+ on POSIX, elan/Lake with the project's pinned Lean toolchain",
+  "commands": [
+    "verify",
+    "audit",
+    "verify-all",
+    "scaffold",
+    "integrate",
+    "card"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "network_server": false,
+  "mcp_server": false,
+  "manifest_format": "project-local descriptive manifest; not a standard MCP client configuration",
+  "trust": "trusted repository and toolchain; Lean and Lake may execute local code",
+  "mutations": {
+    "verify": "Lake build artifacts",
+    "scaffold": "temporary Lean candidate and build artifacts, cleaned on normal completion",
+    "integrate": "dry-run by default; --apply edits registry and root, rolls back sources on failure",
+    "card": "returns draft on stdout; does not write knowledge files",
+    "audit": "Strict rebuild and audit; Lake build artifacts"
+  }
+}

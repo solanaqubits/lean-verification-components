@@ -1,0 +1,48 @@
+{
+  "Verification.DeFiConcentratedLiquidity": {
+    "suite_struct": "DeFiConcentratedLiquidityFormalSuite",
+    "suite_type": "DeFiConcentratedLiquidity.DeFiConcentratedLiquidityFormalSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "concentrated",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiConcentratedLiquidity.defi_concentrated_liquidity_master_verification_suite"
+  },
+  "Verification.QuantumMajoranaChain": {
+    "suite_struct": "QuantumMajoranaFormalSuite",
+    "suite_type": "QuantumMajoranaChain.QuantumMajoranaFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "majorana",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumMajoranaChain.quantum_majorana_master_verification_suite"
+  },
+  "Verification.DistributedRaftConsensus": {
+    "suite_struct": "DistributedRaftFormalSuite",
+    "suite_type": "DistributedRaftConsensus.DistributedRaftFormalSuite.{uRaft1, uRaft2, uRaft3}",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedRaftConsensus.distributed_raft_master_verification_suite",
+    "universes": [
+      "uRaft1",
+      "uRaft2",
+      "uRaft3"
+    ],
+    "registry_type": "DistributedSystemsFullSuite.{uRaft1, uRaft2, uRaft3}"
+  },
+  "Verification.DistributedRaftLogAppend": {
+    "suite_struct": "DistributedRaftLogAppendFormalSuite",
+    "suite_type": "DistributedRaftLogAppend.DistributedRaftLogAppendFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_append",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedRaftLogAppend.distributed_raft_log_append_master_verification_suite"
+  },
+  "Verification.CryptoPedersenCommitment": {
+    "suite_struct": "CryptoPedersenFormalSuite",
+    "suite_type": "CryptoPedersenCommitment.CryptoPedersenFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "pedersen",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoPedersenCommitment.crypto_pedersen_master_verification_suite"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lean 4 Formal Verifier"
+  short_description: "Verify Lean proofs, axiom dependencies and scope"
+  default_prompt: "Use $lean4-formal-verifier to formalize and verify this invariant and document its assumptions."

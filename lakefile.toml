@@ -1,0 +1,23 @@
+name = "lean-verification-components"
+version = "0.1.0"
+description = "Formally verified domain-specific invariants in Lean 4: DeFi, quantum information, cryptography, and distributed systems"
+keywords = ["formal-verification", "defi", "quantum-computing", "cryptography", "distributed-systems", "raft", "lean4"]
+license = "Apache-2.0"
+licenseFiles = ["LICENSE"]
+homepage = "https://github.com/solanaqubits/lean-verification-components"
+defaultTargets = ["Verification"]
+
+[leanOptions]
+warningAsError = true
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "Verification"

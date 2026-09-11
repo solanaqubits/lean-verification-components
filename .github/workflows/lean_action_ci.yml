@@ -1,0 +1,32 @@
+name: Lean verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+        with:
+          build: true
+          build-args: "--wfail"
+          axiom-audit: true
+      - name: Verifier CLI regression tests
+        run: LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -v
+      - name: Verify all modules through the CLI
+        run: |
+          python3 tools/verifier_skill.py verify-all > verifier-report.json || {
+            cat verifier-report.json
+            exit 1
+          }
+          python3 -c 'import json; r=json.load(open("verifier-report.json")); print(r["audit"])'
+      - name: Check knowledge catalog
+        run: python3 scripts/check_knowledge.py

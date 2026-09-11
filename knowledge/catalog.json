@@ -1,0 +1,685 @@
+{
+  "schema_version": 1,
+  "sections": [
+    {
+      "id": "collatz",
+      "index": "knowledge/collatz/README.md",
+      "title_en": "Collatz and discrete dynamics"
+    },
+    {
+      "id": "riemann",
+      "index": "knowledge/riemann/README.md",
+      "title_en": "Explicit logarithmic bounds"
+    },
+    {
+      "id": "hopf",
+      "index": "knowledge/hopf/README.md",
+      "title_en": "Almost-complex algebra"
+    },
+    {
+      "id": "lamzouri",
+      "index": "knowledge/lamzouri/README.md",
+      "title_en": "Polynomial functionals and integrals"
+    },
+    {
+      "id": "finsler",
+      "index": "knowledge/finsler/README.md",
+      "title_en": "Coordinate and multilinear geometry"
+    },
+    {
+      "id": "proof-graphs",
+      "index": "knowledge/proof-graphs/README.md",
+      "title_en": "Proof certificates and DAGs"
+    },
+    {
+      "id": "cryptography",
+      "index": "knowledge/cryptography/README.md",
+      "title_en": "Cryptographic algebra and ZK components"
+    },
+    {
+      "id": "quantum-physics",
+      "index": "knowledge/quantum-physics/README.md",
+      "title_en": "Quantum algebra, photonics, and mechanics"
+    },
+    {
+      "id": "finance",
+      "index": "knowledge/finance/README.md",
+      "title_en": "Finance, liquidity, and mechanisms"
+    },
+    {
+      "id": "distributed",
+      "index": "knowledge/distributed/README.md",
+      "title_en": "Distributed consensus"
+    },
+    {
+      "id": "verification",
+      "index": "knowledge/verification/README.md",
+      "title_en": "Registry and axiom audit"
+    }
+  ],
+  "modules": [
+    {
+      "id": "CollatzBase",
+      "section": "collatz",
+      "source": "Verification/CollatzBase.lean",
+      "card": "knowledge/collatz/CollatzBase.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzAttractor",
+      "section": "collatz",
+      "source": "Verification/CollatzAttractor.lean",
+      "card": "knowledge/collatz/CollatzAttractor.en.md",
+      "project_imports": [
+        "Verification.CollatzBase"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzCycles",
+      "section": "collatz",
+      "source": "Verification/CollatzCycles.lean",
+      "card": "knowledge/collatz/CollatzCycles.en.md",
+      "project_imports": [
+        "Verification.CollatzBase"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzParity",
+      "section": "collatz",
+      "source": "Verification/CollatzParity.lean",
+      "card": "knowledge/collatz/CollatzParity.en.md",
+      "project_imports": [
+        "Verification.CollatzBase"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzDyadicContract",
+      "section": "collatz",
+      "source": "Verification/CollatzDyadicContract.lean",
+      "card": "knowledge/collatz/CollatzDyadicContract.en.md",
+      "project_imports": [
+        "Verification.CollatzBase",
+        "Verification.CollatzAttractor",
+        "Verification.CollatzParity"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzAverageDrift",
+      "section": "collatz",
+      "source": "Verification/CollatzAverageDrift.lean",
+      "card": "knowledge/collatz/CollatzAverageDrift.en.md",
+      "project_imports": [
+        "Verification.CollatzDyadicContract"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzBranchSeven",
+      "section": "collatz",
+      "source": "Verification/CollatzBranchSeven.lean",
+      "card": "knowledge/collatz/CollatzBranchSeven.en.md",
+      "project_imports": [
+        "Verification.CollatzDyadicContract"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzBranchFifteen",
+      "section": "collatz",
+      "source": "Verification/CollatzBranchFifteen.lean",
+      "card": "knowledge/collatz/CollatzBranchFifteen.en.md",
+      "project_imports": [
+        "Verification.CollatzBranchSeven"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzDyadicTree32",
+      "section": "collatz",
+      "source": "Verification/CollatzDyadicTree32.lean",
+      "card": "knowledge/collatz/CollatzDyadicTree32.en.md",
+      "project_imports": [
+        "Verification.CollatzBranchFifteen"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzGeometricDrift",
+      "section": "collatz",
+      "source": "Verification/CollatzGeometricDrift.lean",
+      "card": "knowledge/collatz/CollatzGeometricDrift.en.md",
+      "project_imports": [
+        "Verification.CollatzDyadicTree32"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzLogPotential",
+      "section": "collatz",
+      "source": "Verification/CollatzLogPotential.lean",
+      "card": "knowledge/collatz/CollatzLogPotential.en.md",
+      "project_imports": [
+        "Verification.CollatzGeometricDrift"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzRemainderBound",
+      "section": "collatz",
+      "source": "Verification/CollatzRemainderBound.lean",
+      "card": "knowledge/collatz/CollatzRemainderBound.en.md",
+      "project_imports": [
+        "Verification.CollatzGeometricDrift"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzEffectiveDrift",
+      "section": "collatz",
+      "source": "Verification/CollatzEffectiveDrift.lean",
+      "card": "knowledge/collatz/CollatzEffectiveDrift.en.md",
+      "project_imports": [
+        "Verification.CollatzLogPotential",
+        "Verification.CollatzRemainderBound",
+        "Verification.CollatzBranchSeven"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzMarkovOperator",
+      "section": "collatz",
+      "source": "Verification/CollatzMarkovOperator.lean",
+      "card": "knowledge/collatz/CollatzMarkovOperator.en.md",
+      "project_imports": [
+        "Verification.CollatzEffectiveDrift"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzUnified",
+      "section": "collatz",
+      "source": "Verification/CollatzUnified.lean",
+      "card": "knowledge/collatz/CollatzUnified.en.md",
+      "project_imports": [
+        "Verification.CollatzBase",
+        "Verification.CollatzAttractor",
+        "Verification.CollatzCycles",
+        "Verification.CollatzParity",
+        "Verification.CollatzDyadicContract",
+        "Verification.CollatzAverageDrift",
+        "Verification.CollatzBranchSeven",
+        "Verification.CollatzBranchFifteen",
+        "Verification.CollatzDyadicTree32",
+        "Verification.CollatzGeometricDrift",
+        "Verification.CollatzLogPotential",
+        "Verification.CollatzRemainderBound",
+        "Verification.CollatzEffectiveDrift",
+        "Verification.CollatzMarkovOperator"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CollatzBakerBound",
+      "section": "collatz",
+      "source": "Verification/CollatzBakerBound.lean",
+      "card": "knowledge/collatz/CollatzBakerBound.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "Collatz2Adic",
+      "section": "collatz",
+      "source": "Verification/Collatz2Adic.lean",
+      "card": "knowledge/collatz/Collatz2Adic.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "Collatz2AdicErgodic",
+      "section": "collatz",
+      "source": "Verification/Collatz2AdicErgodic.lean",
+      "card": "knowledge/collatz/Collatz2AdicErgodic.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "Generated",
+      "section": "collatz",
+      "source": "Verification/Generated.lean",
+      "card": "knowledge/collatz/Generated.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "RiemannBounds",
+      "section": "riemann",
+      "source": "Verification/RiemannBounds.lean",
+      "card": "knowledge/riemann/RiemannBounds.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "RiemannMainTerm",
+      "section": "riemann",
+      "source": "Verification/RiemannMainTerm.lean",
+      "card": "knowledge/riemann/RiemannMainTerm.en.md",
+      "project_imports": [
+        "Verification.RiemannBounds"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "RiemannNumericBound",
+      "section": "riemann",
+      "source": "Verification/RiemannNumericBound.lean",
+      "card": "knowledge/riemann/RiemannNumericBound.en.md",
+      "project_imports": [
+        "Verification.RiemannMainTerm"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "RiemannExplicitBound",
+      "section": "riemann",
+      "source": "Verification/RiemannExplicitBound.lean",
+      "card": "knowledge/riemann/RiemannExplicitBound.en.md",
+      "project_imports": [
+        "Verification.RiemannNumericBound"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "HopfObstruction",
+      "section": "hopf",
+      "source": "Verification/HopfObstruction.lean",
+      "card": "knowledge/hopf/HopfObstruction.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "HopfAlmostComplex",
+      "section": "hopf",
+      "source": "Verification/HopfAlmostComplex.lean",
+      "card": "knowledge/hopf/HopfAlmostComplex.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "HopfIntegrabilityBarrier",
+      "section": "hopf",
+      "source": "Verification/HopfIntegrabilityBarrier.lean",
+      "card": "knowledge/hopf/HopfIntegrabilityBarrier.en.md",
+      "project_imports": [
+        "Verification.HopfObstruction",
+        "Verification.HopfAlmostComplex"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "HopfOctonions",
+      "section": "hopf",
+      "source": "Verification/HopfOctonions.lean",
+      "card": "knowledge/hopf/HopfOctonions.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "LamzouriMollifier",
+      "section": "lamzouri",
+      "source": "Verification/LamzouriMollifier.lean",
+      "card": "knowledge/lamzouri/LamzouriMollifier.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "LamzouriOptimization",
+      "section": "lamzouri",
+      "source": "Verification/LamzouriOptimization.lean",
+      "card": "knowledge/lamzouri/LamzouriOptimization.en.md",
+      "project_imports": [
+        "Verification.LamzouriMollifier"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "LamzouriMeasure",
+      "section": "lamzouri",
+      "source": "Verification/LamzouriMeasure.lean",
+      "card": "knowledge/lamzouri/LamzouriMeasure.en.md",
+      "project_imports": [
+        "Verification.LamzouriMollifier"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "FinslerPolyMetric",
+      "section": "finsler",
+      "source": "Verification/FinslerPolyMetric.lean",
+      "card": "knowledge/finsler/FinslerPolyMetric.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "FinslerMultilinear",
+      "section": "finsler",
+      "source": "Verification/FinslerMultilinear.lean",
+      "card": "knowledge/finsler/FinslerMultilinear.en.md",
+      "project_imports": [
+        "Verification.FinslerPolyMetric"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "FinslerIndicatrix",
+      "section": "finsler",
+      "source": "Verification/FinslerIndicatrix.lean",
+      "card": "knowledge/finsler/FinslerIndicatrix.en.md",
+      "project_imports": [
+        "Verification.FinslerPolyMetric",
+        "Verification.FinslerMultilinear"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "ProofGraphDAG",
+      "section": "proof-graphs",
+      "source": "Verification/ProofGraphDAG.lean",
+      "card": "knowledge/proof-graphs/ProofGraphDAG.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "ProofGraphAcyclic",
+      "section": "proof-graphs",
+      "source": "Verification/ProofGraphAcyclic.lean",
+      "card": "knowledge/proof-graphs/ProofGraphAcyclic.en.md",
+      "project_imports": [
+        "Verification.ProofGraphDAG"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoSPNInvariants",
+      "section": "cryptography",
+      "source": "Verification/CryptoSPNInvariants.lean",
+      "card": "knowledge/cryptography/CryptoSPNInvariants.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoZKAir",
+      "section": "cryptography",
+      "source": "Verification/CryptoZKAir.lean",
+      "card": "knowledge/cryptography/CryptoZKAir.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoZKFRILowDegree",
+      "section": "cryptography",
+      "source": "Verification/CryptoZKFRILowDegree.lean",
+      "card": "knowledge/cryptography/CryptoZKFRILowDegree.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoKZGCommitment",
+      "section": "cryptography",
+      "source": "Verification/CryptoKZGCommitment.lean",
+      "card": "knowledge/cryptography/CryptoKZGCommitment.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "SpinPhotonicWaveguide",
+      "section": "quantum-physics",
+      "source": "Verification/SpinPhotonicWaveguide.lean",
+      "card": "knowledge/quantum-physics/SpinPhotonicWaveguide.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NonHermitianPhotonicEP",
+      "section": "quantum-physics",
+      "source": "Verification/NonHermitianPhotonicEP.lean",
+      "card": "knowledge/quantum-physics/NonHermitianPhotonicEP.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumTransmonEngine",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumTransmonEngine.lean",
+      "card": "knowledge/quantum-physics/QuantumTransmonEngine.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumHeatEngine",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumHeatEngine.lean",
+      "card": "knowledge/quantum-physics/QuantumHeatEngine.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumStabilizerCodes",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumStabilizerCodes.lean",
+      "card": "knowledge/quantum-physics/QuantumStabilizerCodes.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumCliffordTableau",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumCliffordTableau.lean",
+      "card": "knowledge/quantum-physics/QuantumCliffordTableau.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumToricCode",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumToricCode.lean",
+      "card": "knowledge/quantum-physics/QuantumToricCode.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NonAbelianHolonomy",
+      "section": "quantum-physics",
+      "source": "Verification/NonAbelianHolonomy.lean",
+      "card": "knowledge/quantum-physics/NonAbelianHolonomy.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "SpintronicTransport",
+      "section": "quantum-physics",
+      "source": "Verification/SpintronicTransport.lean",
+      "card": "knowledge/quantum-physics/SpintronicTransport.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "SymplecticHamiltonianDynamics",
+      "section": "quantum-physics",
+      "source": "Verification/SymplecticHamiltonianDynamics.lean",
+      "card": "knowledge/quantum-physics/SymplecticHamiltonianDynamics.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumMajoranaChain",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumMajoranaChain.lean",
+      "card": "knowledge/quantum-physics/QuantumMajoranaChain.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "AssetSettlement",
+      "section": "finance",
+      "source": "Verification/AssetSettlement.lean",
+      "card": "knowledge/finance/AssetSettlement.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiAMMInvariants",
+      "section": "finance",
+      "source": "Verification/DeFiAMMInvariants.lean",
+      "card": "knowledge/finance/DeFiAMMInvariants.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "PortfolioRiskEngine",
+      "section": "finance",
+      "source": "Verification/PortfolioRiskEngine.lean",
+      "card": "knowledge/finance/PortfolioRiskEngine.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "LightningHTLCNetwork",
+      "section": "finance",
+      "source": "Verification/LightningHTLCNetwork.lean",
+      "card": "knowledge/finance/LightningHTLCNetwork.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiMultiHopArbitrage",
+      "section": "finance",
+      "source": "Verification/DeFiMultiHopArbitrage.lean",
+      "card": "knowledge/finance/DeFiMultiHopArbitrage.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "MechanismDesignEIP1559",
+      "section": "finance",
+      "source": "Verification/MechanismDesignEIP1559.lean",
+      "card": "knowledge/finance/MechanismDesignEIP1559.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "MechanismDesignPBS",
+      "section": "finance",
+      "source": "Verification/MechanismDesignPBS.lean",
+      "card": "knowledge/finance/MechanismDesignPBS.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiConcentratedLiquidity",
+      "section": "finance",
+      "source": "Verification/DeFiConcentratedLiquidity.lean",
+      "card": "knowledge/finance/DeFiConcentratedLiquidity.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "BFTConsensusQuorum",
+      "section": "distributed",
+      "source": "Verification/BFTConsensusQuorum.lean",
+      "card": "knowledge/distributed/BFTConsensusQuorum.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftConsensus",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftConsensus.lean",
+      "card": "knowledge/distributed/DistributedRaftConsensus.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "MasterSuite",
+      "section": "verification",
+      "source": "Verification/MasterSuite.lean",
+      "card": "knowledge/verification/MasterSuite.en.md",
+      "project_imports": [
+        "Verification.CryptoPedersenCommitment",
+        "Verification.DistributedRaftLogAppend",
+        "Verification.DistributedRaftConsensus",
+        "Verification.QuantumMajoranaChain",
+        "Verification.DeFiConcentratedLiquidity",
+        "Verification.CryptoKZGCommitment",
+        "Verification.SymplecticHamiltonianDynamics",
+        "Verification.MechanismDesignPBS",
+        "Verification.Collatz2AdicErgodic",
+        "Verification.QuantumToricCode",
+        "Verification.MechanismDesignEIP1559",
+        "Verification.QuantumCliffordTableau",
+        "Verification.NonAbelianHolonomy",
+        "Verification.DeFiMultiHopArbitrage",
+        "Verification.CryptoZKFRILowDegree",
+        "Verification.QuantumStabilizerCodes",
+        "Verification.NonHermitianPhotonicEP",
+        "Verification.LightningHTLCNetwork",
+        "Verification.Collatz2Adic",
+        "Verification.QuantumHeatEngine",
+        "Verification.PortfolioRiskEngine",
+        "Verification.BFTConsensusQuorum",
+        "Verification.SpintronicTransport",
+        "Verification.AssetSettlement",
+        "Verification.DeFiAMMInvariants",
+        "Verification.CollatzBakerBound",
+        "Verification.CryptoZKAir",
+        "Verification.QuantumTransmonEngine",
+        "Verification.CollatzUnified",
+        "Verification.RiemannExplicitBound",
+        "Verification.HopfIntegrabilityBarrier",
+        "Verification.LamzouriOptimization",
+        "Verification.HopfOctonions",
+        "Verification.LamzouriMeasure",
+        "Verification.FinslerIndicatrix",
+        "Verification.ProofGraphAcyclic",
+        "Verification.FinslerPolyMetric",
+        "Verification.FinslerMultilinear",
+        "Verification.ProofGraphDAG",
+        "Verification.CryptoSPNInvariants",
+        "Verification.SpinPhotonicWaveguide"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "AxiomAudit",
+      "section": "verification",
+      "source": "Verification/AxiomAudit.lean",
+      "card": "knowledge/verification/AxiomAudit.en.md",
+      "project_imports": [
+        "Verification.MasterSuite"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftLogAppend",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftLogAppend.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftLogAppend.en.md",
+      "project_imports": [
+        "Verification.DistributedRaftConsensus"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoPedersenCommitment",
+      "section": "cryptography",
+      "source": "Verification/CryptoPedersenCommitment.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoPedersenCommitment.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    }
+  ]
+}
