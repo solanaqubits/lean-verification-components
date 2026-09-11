@@ -17,3 +17,7 @@
 These components do not prove end-to-end cryptographic security. Finite cryptographic groups, adversaries, probability distributions, and hardness reductions require separate models.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
+
+- [CryptoR1CSToQAP](../06_cryptography_and_zk/CryptoR1CSToQAP.en.md): two-node interpolation and scalar constraint factorization.
+
+- [CryptoFiatShamirTransform](../06_cryptography_and_zk/CryptoFiatShamirTransform.en.md): scalar Schnorr completeness and conditional witness extraction.

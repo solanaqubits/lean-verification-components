@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: b8164a0556e33b72ee3b816d213fa3598901eff16754f106297637d0c54ce4c6
+source_sha256: 02f55b6e01f7d282fad1f49b37bade27b1575059dce3325b0ac100586a793a3d
 novelty: not-assessed
 ---
 
@@ -24,19 +24,19 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuite.lean#L82)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuite.lean#L94)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuite.lean#L106)
-- [`collatz_full_master_suite`](../../Verification/MasterSuite.lean#L125)
-- [`crypto_full_master_suite`](../../Verification/MasterSuite.lean#L140)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuite.lean#L163)
-- [`hopf_full_master_suite`](../../Verification/MasterSuite.lean#L183)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuite.lean#L193)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuite.lean#L203)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuite.lean#L218)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuite.lean#L235)
-- [`riemann_full_master_suite`](../../Verification/MasterSuite.lean#L245)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L264)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuite.lean#L98)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuite.lean#L110)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuite.lean#L122)
+- [`collatz_full_master_suite`](../../Verification/MasterSuite.lean#L141)
+- [`crypto_full_master_suite`](../../Verification/MasterSuite.lean#L158)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuite.lean#L186)
+- [`hopf_full_master_suite`](../../Verification/MasterSuite.lean#L209)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuite.lean#L219)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuite.lean#L229)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuite.lean#L246)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuite.lean#L266)
+- [`riemann_full_master_suite`](../../Verification/MasterSuite.lean#L277)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L296)
 
 ## Verification
 

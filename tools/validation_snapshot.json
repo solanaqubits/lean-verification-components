@@ -1,18 +1,26 @@
 {
-  "modules_checked": 66,
+  "modules_checked": 74,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 3332,
+    "declarations": 3809,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "b8164a0556e33b72ee3b816d213fa3598901eff16754f106297637d0c54ce4c6",
+    "Verification.MasterSuite": "02f55b6e01f7d282fad1f49b37bade27b1575059dce3325b0ac100586a793a3d",
+    "Verification.DeFiTWAPOracle": "8e444f00451a648e2c06962e2a282a1867a20bc4ff5c1118a5bd496564de0f2c",
+    "Verification.QuantumGroverSearch": "fbf4210e5c0a7e2e2d5e827b9b25d0f9be7bebd6b780e39d99004335304cd3ce",
+    "Verification.DistributedVectorClocks": "f8ca20c92f8de535fd77073f7fed664650f9f150d079e3763dbf0c8de3c683e0",
+    "Verification.QuantumDeutschJozsa": "93cce3bdf53d1809912de5ee8906a2b204d89ef72409034bf4ac2df7302ccdb7",
+    "Verification.CryptoFiatShamirTransform": "f610ff29b97ce0192f99d8a931c1cdb861a7aeb2bc1b8dc30ddc1d8488a5d2ac",
+    "Verification.DeFiCurveStableSwap": "5dcb36a870fefc4c22a12043abfb4b8ce882ab17e3276e581390ee16361bef11",
+    "Verification.QuantumTeleportationProtocol": "bcc448fb6700e5c25859f93495dbc2b5893e6f74ca03cc2934f302f711cf78fa",
+    "Verification.CryptoR1CSToQAP": "0f7a933cba940db698a9bfdd824ab41c15fee8ca5d46f439ebb49b7f28aafab3",
     "Verification.DeFiLendingCDP": "17a09cebcd683ced46c255b15f723392f105bb4c513b33cd619e6cbccc15504a",
     "Verification.QuantumPhaseFlipCode": "ab51edfd12f9f597bacead9e09e1e350b652b0ba2c3aff934abaa29d1d860a67",
     "Verification.CryptoPedersenCommitment": "90581daec61cb069b71d0cd260605e56c412e39857bccc32daf24da63b0289c7",
@@ -78,9 +86,9 @@
     "Verification.Generated": "c2d2efb42cf5c16d1cb4014c84f1fda96adf0b2c86f627c08259422ae5df9cfc"
   },
   "strict_checks_passed": true,
-  "description": "Public repository validation: 66 modules, strict compilation and project-wide axiom audit; counts include generated declarations.",
+  "description": "Public v0.2.0 validation: 74 Lean files, 51 direct component imports, strict compilation and project-wide axiom audit; declaration counts include generated declarations.",
   "independent_axiom_audit": {
-    "declarations": 3332,
+    "declarations": 3809,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
@@ -92,8 +100,8 @@
     "note": "Public repository: complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1, no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 43,
-  "full_build_jobs": 3371,
+  "master_direct_imports": 51,
+  "full_build_jobs": 3379,
   "pipeline": {
     "verify": true,
     "audit": true,

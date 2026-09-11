@@ -22,3 +22,7 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
 
 - [DeFiLendingCDP](../08_finance_and_risk/DeFiLendingCDP.en.md): health-factor and liquidation-quote scalar invariants.
+
+- [DeFiCurveStableSwap](../08_finance_and_risk/DeFiCurveStableSwap.en.md): two-asset residual balance, zero-amplification equivalence and scaling.
+
+- [DeFiTWAPOracle](../08_finance_and_risk/DeFiTWAPOracle.en.md)

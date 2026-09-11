@@ -25,3 +25,9 @@
 The results concern the explicit matrices, transformations, and scalar energy models. Their correspondence to a physical device or a full many-body system is not established by compilation.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
+
+- [QuantumTeleportationProtocol](../07_quantum_physics_and_optics/QuantumTeleportationProtocol.en.md): exact correction of four prescribed complex amplitude pairs.
+
+- [QuantumDeutschJozsa](../07_quantum_physics_and_optics/QuantumDeutschJozsa.en.md): exact one-bit truth-table classification by prescribed amplitudes.
+
+- [QuantumGroverSearch](../07_quantum_physics_and_optics/QuantumGroverSearch.en.md): exact one-step search among four basis targets and unit squared overlap.

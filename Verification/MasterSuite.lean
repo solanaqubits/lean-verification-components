@@ -1,3 +1,11 @@
+import Verification.DeFiTWAPOracle
+import Verification.QuantumGroverSearch
+import Verification.DistributedVectorClocks
+import Verification.QuantumDeutschJozsa
+import Verification.CryptoFiatShamirTransform
+import Verification.DeFiCurveStableSwap
+import Verification.QuantumTeleportationProtocol
+import Verification.CryptoR1CSToQAP
 import Verification.DeFiLendingCDP
 import Verification.QuantumPhaseFlipCode
 import Verification.CryptoPedersenCommitment
@@ -47,6 +55,14 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumGroverSearch
+open DistributedVectorClocks
+open QuantumDeutschJozsa
+open CryptoFiatShamirTransform
+open DeFiTWAPOracle
+open DeFiCurveStableSwap
+open QuantumTeleportationProtocol
+open CryptoR1CSToQAP
 open DeFiLendingCDP
 open QuantumPhaseFlipCode
 
@@ -136,6 +152,8 @@ structure CryptoFullSuite : Prop where
   fri_suite : CryptoZKFRISuite.{uFRI}
   kzg_suite : CryptoKZGFormalSuite
   pedersen : CryptoPedersenCommitment.CryptoPedersenFormalSuite
+  r1cs_qap : CryptoR1CSToQAP.CryptoR1CSQAPFormalSuite
+  fiat_shamir : CryptoFiatShamirTransform.CryptoFiatShamirFormalSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -143,6 +161,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   fri_suite := crypto_zk_fri_master_verification_suite
   kzg_suite := crypto_kzg_master_verification_suite
   pedersen := CryptoPedersenCommitment.crypto_pedersen_master_verification_suite
+  r1cs_qap := CryptoR1CSToQAP.crypto_r1cs_to_qap_master_verification_suite
+  fiat_shamir := CryptoFiatShamirTransform.crypto_fiat_shamir_master_verification_suite
 }
 
 /-- The prescribed mode and gap models, without additional physical claims. -/
@@ -159,6 +179,9 @@ structure QuantumPhysicsFullSuite : Prop where
   symplectic : SymplecticDynamicsFormalSuite
   majorana : QuantumMajoranaChain.QuantumMajoranaFormalSuite
   phase_flip : QuantumPhaseFlipCode.QuantumPhaseFlipFormalSuite
+  teleportation : QuantumTeleportationProtocol.QuantumTeleportationFormalSuite
+  deutsch_jozsa : QuantumDeutschJozsa.QuantumDeutschJozsaFormalSuite
+  grover : QuantumGroverSearch.QuantumGroverFormalSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -173,6 +196,9 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   symplectic := symplectic_dynamics_master_verification_suite
   majorana := QuantumMajoranaChain.quantum_majorana_master_verification_suite
   phase_flip := QuantumPhaseFlipCode.quantum_phase_flip_master_verification_suite
+  teleportation := QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite
+  deutsch_jozsa := QuantumDeutschJozsa.quantum_deutsch_jozsa_master_verification_suite
+  grover := QuantumGroverSearch.quantum_grover_master_verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
@@ -214,6 +240,8 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   pbs : MechanismDesignPBSFormalSuite
   concentrated : DeFiConcentratedLiquidity.DeFiConcentratedLiquidityFormalSuite
   cdp : DeFiLendingCDP.DeFiLendingCDPFormalSuite
+  curveswap : DeFiCurveStableSwap.DeFiCurveStableSwapFormalSuite
+  twap : DeFiTWAPOracle.DeFiTWAPFormalSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   toFinanceDeFiFullSuite := finance_defi_full_master_suite
@@ -224,6 +252,8 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   pbs := mechanism_design_pbs_master_verification_suite
   concentrated := DeFiConcentratedLiquidity.defi_concentrated_liquidity_master_verification_suite
   cdp := DeFiLendingCDP.defi_lending_cdp_master_verification_suite
+  curveswap := DeFiCurveStableSwap.defi_curve_stableswap_master_verification_suite
+  twap := DeFiTWAPOracle.defi_twap_master_verification_suite
 }
 
 /-- Cardinal quorum conditions, without protocol-level safety or termination claims. -/
@@ -231,11 +261,13 @@ structure DistributedSystemsFullSuite : Prop where
   bft_quorum : BFTConsensusFormalSuite
   raft : DistributedRaftConsensus.DistributedRaftFormalSuite.{uRaft1, uRaft2, uRaft3}
   raft_append : DistributedRaftLogAppend.DistributedRaftLogAppendFormalSuite
+  vector_clocks : DistributedVectorClocks.DistributedVectorClocksFormalSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
   raft := DistributedRaftConsensus.distributed_raft_master_verification_suite
   raft_append := DistributedRaftLogAppend.distributed_raft_log_append_master_verification_suite
+  vector_clocks := DistributedVectorClocks.distributed_vector_clocks_master_verification_suite
 }
 
 /-- Wrapper for the existing explicit scalar bounds. -/

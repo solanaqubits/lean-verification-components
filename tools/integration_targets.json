@@ -60,5 +60,69 @@
     "field": "cdp",
     "constructor": "finance_risk_full_master_suite",
     "proof": "DeFiLendingCDP.defi_lending_cdp_master_verification_suite"
+  },
+  "Verification.CryptoR1CSToQAP": {
+    "suite_struct": "CryptoR1CSQAPFormalSuite",
+    "suite_type": "CryptoR1CSToQAP.CryptoR1CSQAPFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "r1cs_qap",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoR1CSToQAP.crypto_r1cs_to_qap_master_verification_suite"
+  },
+  "Verification.QuantumTeleportationProtocol": {
+    "suite_struct": "QuantumTeleportationFormalSuite",
+    "suite_type": "QuantumTeleportationProtocol.QuantumTeleportationFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "teleportation",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite"
+  },
+  "Verification.DeFiCurveStableSwap": {
+    "suite_struct": "DeFiCurveStableSwapFormalSuite",
+    "suite_type": "DeFiCurveStableSwap.DeFiCurveStableSwapFormalSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "curveswap",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiCurveStableSwap.defi_curve_stableswap_master_verification_suite"
+  },
+  "Verification.CryptoFiatShamirTransform": {
+    "suite_struct": "CryptoFiatShamirFormalSuite",
+    "suite_type": "CryptoFiatShamirTransform.CryptoFiatShamirFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "fiat_shamir",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoFiatShamirTransform.crypto_fiat_shamir_master_verification_suite"
+  },
+  "Verification.QuantumDeutschJozsa": {
+    "suite_struct": "QuantumDeutschJozsaFormalSuite",
+    "suite_type": "QuantumDeutschJozsa.QuantumDeutschJozsaFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "deutsch_jozsa",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumDeutschJozsa.quantum_deutsch_jozsa_master_verification_suite"
+  },
+  "Verification.DistributedVectorClocks": {
+    "suite_struct": "DistributedVectorClocksFormalSuite",
+    "suite_type": "DistributedVectorClocks.DistributedVectorClocksFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "vector_clocks",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedVectorClocks.distributed_vector_clocks_master_verification_suite"
+  },
+  "Verification.QuantumGroverSearch": {
+    "suite_struct": "QuantumGroverFormalSuite",
+    "suite_type": "QuantumGroverSearch.QuantumGroverFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "grover",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumGroverSearch.quantum_grover_master_verification_suite"
+  },
+  "Verification.DeFiTWAPOracle": {
+    "suite_struct": "DeFiTWAPFormalSuite",
+    "suite_type": "DeFiTWAPOracle.DeFiTWAPFormalSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "twap",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiTWAPOracle.defi_twap_master_verification_suite"
   }
 }

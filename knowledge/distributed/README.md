@@ -15,3 +15,5 @@
 Quorum intersection alone does not establish Leader Completeness. No full message-passing, failure, or distributed RPC model is proved correct.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
+
+- [DistributedVectorClocks](../09_distributed_systems/DistributedVectorClocks.en.md): two-counter order, ticks, least-upper-bound merge and incomparability.

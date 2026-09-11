@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 64 subject modules across ten areas, plus a registry and axiom
+snapshot contains 72 subject modules across ten areas, plus a registry and axiom
 auditor. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved

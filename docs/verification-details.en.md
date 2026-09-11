@@ -747,7 +747,7 @@ skew-matrix commutator models, prescribed toric energy/count formulas, and sympl
 finance combines sequential settlement, exact constant-product swaps, portfolio variance bounds,
 aggregate channel/timelock invariants, conditional fixed-rate cycle losses, real-valued base-fee bounds, and conditional PBS accounting;
 distributed systems collects cardinal quorum intersection and availability conditions.
-The registry directly imports 43 component modules; the project-wide audit also
+The registry directly imports 51 component modules; the project-wide audit also
 covers their dependencies and declarations outside the registry.
 The original Finsler suite remains available. The combined Lamzouri suite
 preserves all earlier quotient guarantees and additionally includes the
@@ -1297,3 +1297,39 @@ recovery are not constructed. No continuous-noise-channel claim is made.
 ## Static CDP lending model
 
 `DeFiLendingCDP` proves nonnegativity and threshold characterizations of health factor, strict price/debt monotonicity under positive numerator assumptions, and an uncapped seizure-value identity. It does not formalize a liquidation transition, collateral sufficiency, oracle behavior, or a deployed lending protocol.
+
+## Two-node R1CS to QAP component
+
+`CryptoR1CSToQAP` proves Lagrange interpolation at two distinct real nodes and pointwise residual factorization with an explicit constant quotient, in both directions with respect to two scalar row constraints. It does not encode general R1CS matrices or a shared witness, Polynomial divisibility, finite fields, or SNARK computational security.
+
+## Ideal teleportation branch corrections
+
+`QuantumTeleportationProtocol` proves that four explicitly assigned complex amplitude pairs are corrected to the input pair by prescribed matrices. It also checks the sum of four assigned quarter weights. The branch table is not derived from a three-qubit circuit, and no Born-rule probabilities, Bell basis orthogonality or adjoint-based unitarity theorem is included.
+
+## Two-asset StableSwap residual
+
+`DeFiCurveStableSwap` proves balanced equilibrium, an explicit zero-amplification equivalence with constant product for nonzero parameters, simultaneous sum/product balance, and degree-one scaling of the static residual. It does not prove a large-amplification limit, Newton solver convergence, swap transitions or deployed contract correctness.
+
+## Scalar Schnorr and Fiat-Shamir equations
+
+`CryptoFiatShamirTransform` proves honest completeness, conditional extraction from two accepted transcripts with a shared commitment and distinct challenges, and exact equality of the extracted scalar to the private key. Completeness also holds for any deterministic challenge function. Real scalar keys do not provide discrete-log hardness; random-oracle modeling, zero knowledge, forking and unforgeability are outside the module.
+
+## One-bit Deutsch-Jozsa amplitude classification
+
+`QuantumDeutschJozsa` proves exhaustive, disjoint classification of one-bit Boolean functions, normalization of prescribed real amplitudes and exact class criteria in terms of their squares. It does not derive these expressions from a circuit, model a physical oracle or count queries; one-query execution and quantum query advantage are not established by this module.
+
+## Two-process vector-clock algebra
+
+`DistributedVectorClocks` proves componentwise partial-order laws, strict-order transitivity, strict tick growth, least-upper-bound merge and symmetric irreflexive incomparability with concrete witnesses. Event histories and timestamp assignment are not modeled, so correspondence to a separately defined happens-before relation or causal delivery is not established.
+
+## Exact four-state Grover search
+
+`QuantumGroverSearch` defines explicit real-vector oracle and diffusion formulas and proves that their single composition maps the normalized uniform state to any of the four standard basis targets. Both unit overlap and its squared version are checked. General dimensions, gate-level oracle implementation, noise and a query-complexity model are not formalized.
+
+## Arithmetic TWAP accumulator
+
+`DeFiTWAPOracle` verifies positive window duration, recovery of a constant price
+from a supplied accumulator increment, and the exact duration-weighted displacement
+from one supplied price spike. The two-period weighted-average lemma is definitional.
+There is no integral construction, block sampling model, absolute spike bound,
+flash-loan security proof, uint256 wrap-around, or geometric Uniswap v3 TWAP.

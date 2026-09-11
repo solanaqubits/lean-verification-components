@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.2.0
+
+- Added eight components: two-point R1CS/QAP, teleportation branch recovery, StableSwap, scalar Schnorr/Fiat-Shamir, one-bit Deutsch-Jozsa amplitudes, two-process vector clocks, N=4 Grover search, and arithmetic TWAP.
+- Expanded MasterSuite to 51 direct imports and the English catalog to 74 Lean module cards.
+- Preserved Lean and Mathlib v4.33.1 and the Apache-2.0 license.
+
+These are bounded algebraic models. TWAP displacement does not prove flash-loan resistance; scalar cryptographic identities do not establish computational security. The quantum cards distinguish supplied amplitudes and branches from complete circuit and measurement models.
+
 ## v0.1.1
 
 - Added the phase-flip syndrome model and static CDP lending invariants.

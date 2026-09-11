@@ -609,6 +609,14 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiTWAPOracle",
+        "Verification.QuantumGroverSearch",
+        "Verification.DistributedVectorClocks",
+        "Verification.QuantumDeutschJozsa",
+        "Verification.CryptoFiatShamirTransform",
+        "Verification.DeFiCurveStableSwap",
+        "Verification.QuantumTeleportationProtocol",
+        "Verification.CryptoR1CSToQAP",
         "Verification.DeFiLendingCDP",
         "Verification.QuantumPhaseFlipCode",
         "Verification.CryptoPedersenCommitment",
@@ -696,6 +704,70 @@
       "section": "finance",
       "source": "Verification/DeFiLendingCDP.lean",
       "card": "knowledge/08_finance_and_risk/DeFiLendingCDP.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoR1CSToQAP",
+      "section": "cryptography",
+      "source": "Verification/CryptoR1CSToQAP.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoR1CSToQAP.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumTeleportationProtocol",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumTeleportationProtocol.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumTeleportationProtocol.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiCurveStableSwap",
+      "section": "finance",
+      "source": "Verification/DeFiCurveStableSwap.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiCurveStableSwap.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoFiatShamirTransform",
+      "section": "cryptography",
+      "source": "Verification/CryptoFiatShamirTransform.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoFiatShamirTransform.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumDeutschJozsa",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumDeutschJozsa.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumDeutschJozsa.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedVectorClocks",
+      "section": "distributed",
+      "source": "Verification/DistributedVectorClocks.lean",
+      "card": "knowledge/09_distributed_systems/DistributedVectorClocks.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumGroverSearch",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumGroverSearch.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumGroverSearch.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiTWAPOracle",
+      "section": "finance",
+      "source": "Verification/DeFiTWAPOracle.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiTWAPOracle.en.md",
       "project_imports": [],
       "novelty": "not-assessed"
     }
