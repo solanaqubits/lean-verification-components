@@ -13,7 +13,7 @@ novelty: not-assessed
 
 ## Verified result
 
-Ten suites of selected theorems with 42 direct imports. The registry does not contain every declaration in the project.
+Ten suites of selected theorems with 60 direct imports. The registry does not contain every declaration in the project.
 
 ## Assumptions and scope
 
