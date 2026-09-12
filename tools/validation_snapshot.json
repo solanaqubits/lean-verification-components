@@ -95,18 +95,18 @@
     "Verification.Generated": "c2d2efb42cf5c16d1cb4014c84f1fda96adf0b2c86f627c08259422ae5df9cfc"
   },
   "strict_checks_passed": true,
-  "description": "Imported proof-source hash evidence; public export validation is recorded separately.",
+  "description": "Public v0.3.0 validation: strict build, full verifier, independent axiom audit and 19 live regression tests.",
   "independent_axiom_audit": {
     "declarations": 4305,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 22,
+    "passed": 19,
     "runs": [
-      22
+      19
     ],
-    "note": "Complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
+    "note": "Complete live unittest discovery; no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
   "master_direct_imports": 60,
@@ -119,12 +119,5 @@
     "verify_all": true,
     "knowledge_catalog": true,
     "reservoir_config": true
-  },
-  "tests": {
-    "passed": 19,
-    "runs": [
-      19
-    ],
-    "note": "Complete live unittest discovery; no skipped tests."
   }
 }
