@@ -124,5 +124,77 @@
     "field": "twap",
     "constructor": "finance_risk_full_master_suite",
     "proof": "DeFiTWAPOracle.defi_twap_master_verification_suite"
+  },
+  "Verification.CryptoShamirSecretSharing": {
+    "suite_struct": "CryptoShamirFormalSuite",
+    "suite_type": "CryptoShamirSecretSharing.CryptoShamirFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "shamir",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoShamirSecretSharing.crypto_shamir_master_verification_suite"
+  },
+  "Verification.QuantumSuperdenseCoding": {
+    "suite_struct": "QuantumSuperdenseFormalSuite",
+    "suite_type": "QuantumSuperdenseCoding.QuantumSuperdenseFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "superdense",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumSuperdenseCoding.quantum_superdense_master_verification_suite"
+  },
+  "Verification.DistributedTwoPhaseCommit": {
+    "suite_struct": "DistributedTwoPhaseCommitFormalSuite",
+    "suite_type": "DistributedTwoPhaseCommit.DistributedTwoPhaseCommitFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "two_pc",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTwoPhaseCommit.distributed_two_phase_commit_master_verification_suite"
+  },
+  "Verification.DeFiImpermanentLoss": {
+    "suite_struct": "DeFiImpermanentLossFormalSuite",
+    "suite_type": "DeFiImpermanentLoss.DeFiImpermanentLossFormalSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "impermanent_loss",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiImpermanentLoss.defi_impermanent_loss_master_verification_suite"
+  },
+  "Verification.QuantumNoCloningTheorem": {
+    "suite_struct": "QuantumNoCloningFormalSuite",
+    "suite_type": "QuantumNoCloningTheorem.QuantumNoCloningFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "no_cloning",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumNoCloningTheorem.quantum_no_cloning_master_verification_suite"
+  },
+  "Verification.CryptoMerkleTree": {
+    "suite_struct": "CryptoMerkleTreeFormalSuite",
+    "suite_type": "CryptoMerkleTree.CryptoMerkleTreeFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "merkle_tree",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoMerkleTree.crypto_merkle_tree_master_verification_suite"
+  },
+  "Verification.DistributedPaxosConsensus": {
+    "suite_struct": "DistributedPaxosFormalSuite",
+    "suite_type": "DistributedPaxosConsensus.DistributedPaxosFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "paxos",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedPaxosConsensus.distributed_paxos_master_verification_suite"
+  },
+  "Verification.QuantumBB84Protocol": {
+    "suite_struct": "QuantumBB84FormalSuite",
+    "suite_type": "QuantumBB84Protocol.QuantumBB84FormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "bb84",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumBB84Protocol.quantum_bb84_master_verification_suite"
+  },
+  "Verification.DeFiERC4626Vault": {
+    "suite_struct": "DeFiERC4626FormalSuite",
+    "suite_type": "DeFiERC4626Vault.DeFiERC4626FormalSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "erc4626",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiERC4626Vault.defi_erc4626_master_verification_suite"
   }
 }

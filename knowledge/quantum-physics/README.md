@@ -31,3 +31,9 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumDeutschJozsa](../07_quantum_physics_and_optics/QuantumDeutschJozsa.en.md): exact one-bit truth-table classification by prescribed amplitudes.
 
 - [QuantumGroverSearch](../07_quantum_physics_and_optics/QuantumGroverSearch.en.md): exact one-step search among four basis targets and unit squared overlap.
+
+- [QuantumSuperdenseCoding](../07_quantum_physics_and_optics/QuantumSuperdenseCoding.en.md)
+
+- [QuantumNoCloningTheorem](../07_quantum_physics_and_optics/QuantumNoCloningTheorem.en.md)
+
+- [QuantumBB84Protocol](../07_quantum_physics_and_optics/QuantumBB84Protocol.en.md)

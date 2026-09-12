@@ -26,3 +26,7 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [DeFiCurveStableSwap](../08_finance_and_risk/DeFiCurveStableSwap.en.md): two-asset residual balance, zero-amplification equivalence and scaling.
 
 - [DeFiTWAPOracle](../08_finance_and_risk/DeFiTWAPOracle.en.md)
+
+- [DeFiImpermanentLoss](../08_finance_and_risk/DeFiImpermanentLoss.en.md)
+
+- [DeFiERC4626Vault](../08_finance_and_risk/DeFiERC4626Vault.en.md)

@@ -747,7 +747,7 @@ skew-matrix commutator models, prescribed toric energy/count formulas, and sympl
 finance combines sequential settlement, exact constant-product swaps, portfolio variance bounds,
 aggregate channel/timelock invariants, conditional fixed-rate cycle losses, real-valued base-fee bounds, and conditional PBS accounting;
 distributed systems collects cardinal quorum intersection and availability conditions.
-The registry directly imports 51 component modules; the project-wide audit also
+The registry directly imports 60 component modules; the project-wide audit also
 covers their dependencies and declarations outside the registry.
 The original Finsler suite remains available. The combined Lamzouri suite
 preserves all earlier quotient guarantees and additionally includes the
@@ -1333,3 +1333,76 @@ from a supplied accumulator increment, and the exact duration-weighted displacem
 from one supplied price spike. The two-period weighted-average lemma is definitional.
 There is no integral construction, block sampling model, absolute spike bound,
 flash-loan security proof, uint256 wrap-around, or geometric Uniswap v3 TWAP.
+
+## Two-share reconstruction algebra
+
+`CryptoShamirSecretSharing` proves reconstruction at zero from two distinct
+coordinates of a real affine polynomial. At a nonzero coordinate, every candidate
+secret has a unique compatible slope. No probability distribution, finite-field
+sampling, n-participant collection, arbitrary threshold, or VSS protocol is modeled;
+single-share compatibility is not a probabilistic perfect-secrecy theorem.
+
+## Superdense-coding vector table
+
+`QuantumSuperdenseCoding` checks four real Bell-vector representatives and an
+exact coordinate/sign classifier. Their squared norms are one at s*s = 1/2;
+distinct labels are orthogonal, and positive s permits recovery of the labels.
+The classifier is not a quantum measurement and is not invariant under global
+phase. No Pauli gate implementation, transmission resource count or physical
+superdense-coding protocol is proved by these coordinate identities.
+
+## Two-vote coordinator decision table
+
+`DistributedTwoPhaseCommit` verifies commit iff both supplied votes are yes and
+abort iff at least one is no. Its agreement-named lemma is reflexivity of the same
+expression, not agreement between separate participant states. No prepare/commit
+execution, broadcast delivery, data rollback, atomicity, termination, crash recovery
+or WAL is modeled.
+
+## Static impermanent-loss formula
+
+`DeFiImpermanentLoss` proves a negative-square factorization, nonpositivity,
+the zero-loss criterion and reciprocal-price symmetry for supplied valuations
+2*sqrt(k) and 1+k. Here k is a price ratio, not the reserve product. These
+valuations are not derived from swap dynamics; fees, concentrated liquidity,
+unequal weights and implementation arithmetic are outside the model.
+
+## Scalar no-cloning obstruction
+
+`QuantumNoCloningTheorem` classifies real solutions of the assumed equation
+x = x^2 and excludes the open interval (0,1). It does not derive that equation
+from a unitary operator or a tensor-product inner product. Endpoint equalities
+do not construct cloning operations. Complex overlaps and approximate cloning
+are outside the model.
+
+## Four-leaf Merkle path completeness
+
+`CryptoMerkleTree` verifies the orientation and folding of the four canonical
+two-step paths for any binary real-valued H. The universal result is a conjunction
+of those checks. H may be constant; acceptance does not establish membership
+soundness without further assumptions. Hash security, domain-separated byte
+encodings, arbitrary-depth and sparse trees are not modeled.
+
+## Local Paxos-related arithmetic
+
+`DistributedPaxosConsensus` proves a lower bound on quorum-size overlap arithmetic,
+stale-ballot ineligibility and promise growth under a strict prepare precondition.
+There are no actual quorum sets. Proposal equality assumes same-ballot value
+equality rather than deriving it from consensus. Cross-ballot agreement, phase-two
+selection, failure handling and full Paxos safety or liveness are not modeled.
+
+## BB84 basis-label and arithmetic checks
+
+`QuantumBB84Protocol` verifies equality testing of basis labels, an identity bit
+map and arithmetic involving the supplied parameter 1/4. No quantum measurement,
+attack experiment, conditioning on basis choices or independent detection events
+is modeled. The two-bit identity does not prove the general k-bit detection
+formula or key security.
+
+## Proportional vault conversions
+
+`DeFiERC4626Vault` proves exact real-valued conversion round trips, proportional
+deposit price invariance, homogeneity and strict monotonicity with positive
+reserves. Empty vaults, integer rounding, fees, donation attacks and virtual
+shares/assets are not modeled. These scalar identities do not establish
+ERC-4626 implementation compliance or contract security.

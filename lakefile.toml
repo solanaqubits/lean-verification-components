@@ -1,5 +1,5 @@
 name = "lean-verification-components"
-version = "0.2.0"
+version = "0.3.0"
 description = "Formally verified domain-specific invariants in Lean 4: DeFi, quantum information, cryptography, and distributed systems"
 keywords = ["formal-verification", "defi", "quantum-computing", "cryptography", "distributed-systems", "raft", "lean4"]
 license = "Apache-2.0"

@@ -609,6 +609,15 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiERC4626Vault",
+        "Verification.QuantumBB84Protocol",
+        "Verification.DistributedPaxosConsensus",
+        "Verification.CryptoMerkleTree",
+        "Verification.QuantumNoCloningTheorem",
+        "Verification.DeFiImpermanentLoss",
+        "Verification.DistributedTwoPhaseCommit",
+        "Verification.QuantumSuperdenseCoding",
+        "Verification.CryptoShamirSecretSharing",
         "Verification.DeFiTWAPOracle",
         "Verification.QuantumGroverSearch",
         "Verification.DistributedVectorClocks",
@@ -768,6 +777,78 @@
       "section": "finance",
       "source": "Verification/DeFiTWAPOracle.lean",
       "card": "knowledge/08_finance_and_risk/DeFiTWAPOracle.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoShamirSecretSharing",
+      "section": "cryptography",
+      "source": "Verification/CryptoShamirSecretSharing.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoShamirSecretSharing.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumSuperdenseCoding",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumSuperdenseCoding.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumSuperdenseCoding.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedTwoPhaseCommit",
+      "section": "distributed",
+      "source": "Verification/DistributedTwoPhaseCommit.lean",
+      "card": "knowledge/09_distributed_systems/DistributedTwoPhaseCommit.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiImpermanentLoss",
+      "section": "finance",
+      "source": "Verification/DeFiImpermanentLoss.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiImpermanentLoss.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumNoCloningTheorem",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumNoCloningTheorem.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumNoCloningTheorem.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoMerkleTree",
+      "section": "cryptography",
+      "source": "Verification/CryptoMerkleTree.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoMerkleTree.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedPaxosConsensus",
+      "section": "distributed",
+      "source": "Verification/DistributedPaxosConsensus.lean",
+      "card": "knowledge/09_distributed_systems/DistributedPaxosConsensus.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumBB84Protocol",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumBB84Protocol.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumBB84Protocol.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiERC4626Vault",
+      "section": "finance",
+      "source": "Verification/DeFiERC4626Vault.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiERC4626Vault.en.md",
       "project_imports": [],
       "novelty": "not-assessed"
     }

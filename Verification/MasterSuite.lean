@@ -1,3 +1,12 @@
+import Verification.DeFiERC4626Vault
+import Verification.QuantumBB84Protocol
+import Verification.DistributedPaxosConsensus
+import Verification.CryptoMerkleTree
+import Verification.QuantumNoCloningTheorem
+import Verification.DeFiImpermanentLoss
+import Verification.DistributedTwoPhaseCommit
+import Verification.QuantumSuperdenseCoding
+import Verification.CryptoShamirSecretSharing
 import Verification.DeFiTWAPOracle
 import Verification.QuantumGroverSearch
 import Verification.DistributedVectorClocks
@@ -55,10 +64,19 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumBB84Protocol
+open QuantumNoCloningTheorem
+open QuantumSuperdenseCoding
 open QuantumGroverSearch
+open DistributedPaxosConsensus
+open DistributedTwoPhaseCommit
 open DistributedVectorClocks
 open QuantumDeutschJozsa
+open CryptoMerkleTree
+open CryptoShamirSecretSharing
 open CryptoFiatShamirTransform
+open DeFiERC4626Vault
+open DeFiImpermanentLoss
 open DeFiTWAPOracle
 open DeFiCurveStableSwap
 open QuantumTeleportationProtocol
@@ -154,6 +172,8 @@ structure CryptoFullSuite : Prop where
   pedersen : CryptoPedersenCommitment.CryptoPedersenFormalSuite
   r1cs_qap : CryptoR1CSToQAP.CryptoR1CSQAPFormalSuite
   fiat_shamir : CryptoFiatShamirTransform.CryptoFiatShamirFormalSuite
+  shamir : CryptoShamirSecretSharing.CryptoShamirFormalSuite
+  merkle_tree : CryptoMerkleTree.CryptoMerkleTreeFormalSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -163,6 +183,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   pedersen := CryptoPedersenCommitment.crypto_pedersen_master_verification_suite
   r1cs_qap := CryptoR1CSToQAP.crypto_r1cs_to_qap_master_verification_suite
   fiat_shamir := CryptoFiatShamirTransform.crypto_fiat_shamir_master_verification_suite
+  shamir := CryptoShamirSecretSharing.crypto_shamir_master_verification_suite
+  merkle_tree := CryptoMerkleTree.crypto_merkle_tree_master_verification_suite
 }
 
 /-- The prescribed mode and gap models, without additional physical claims. -/
@@ -182,6 +204,9 @@ structure QuantumPhysicsFullSuite : Prop where
   teleportation : QuantumTeleportationProtocol.QuantumTeleportationFormalSuite
   deutsch_jozsa : QuantumDeutschJozsa.QuantumDeutschJozsaFormalSuite
   grover : QuantumGroverSearch.QuantumGroverFormalSuite
+  superdense : QuantumSuperdenseCoding.QuantumSuperdenseFormalSuite
+  no_cloning : QuantumNoCloningTheorem.QuantumNoCloningFormalSuite
+  bb84 : QuantumBB84Protocol.QuantumBB84FormalSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -199,6 +224,9 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   teleportation := QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite
   deutsch_jozsa := QuantumDeutschJozsa.quantum_deutsch_jozsa_master_verification_suite
   grover := QuantumGroverSearch.quantum_grover_master_verification_suite
+  superdense := QuantumSuperdenseCoding.quantum_superdense_master_verification_suite
+  no_cloning := QuantumNoCloningTheorem.quantum_no_cloning_master_verification_suite
+  bb84 := QuantumBB84Protocol.quantum_bb84_master_verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
@@ -242,6 +270,8 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   cdp : DeFiLendingCDP.DeFiLendingCDPFormalSuite
   curveswap : DeFiCurveStableSwap.DeFiCurveStableSwapFormalSuite
   twap : DeFiTWAPOracle.DeFiTWAPFormalSuite
+  impermanent_loss : DeFiImpermanentLoss.DeFiImpermanentLossFormalSuite
+  erc4626 : DeFiERC4626Vault.DeFiERC4626FormalSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   toFinanceDeFiFullSuite := finance_defi_full_master_suite
@@ -254,6 +284,8 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   cdp := DeFiLendingCDP.defi_lending_cdp_master_verification_suite
   curveswap := DeFiCurveStableSwap.defi_curve_stableswap_master_verification_suite
   twap := DeFiTWAPOracle.defi_twap_master_verification_suite
+  impermanent_loss := DeFiImpermanentLoss.defi_impermanent_loss_master_verification_suite
+  erc4626 := DeFiERC4626Vault.defi_erc4626_master_verification_suite
 }
 
 /-- Cardinal quorum conditions, without protocol-level safety or termination claims. -/
@@ -262,12 +294,16 @@ structure DistributedSystemsFullSuite : Prop where
   raft : DistributedRaftConsensus.DistributedRaftFormalSuite.{uRaft1, uRaft2, uRaft3}
   raft_append : DistributedRaftLogAppend.DistributedRaftLogAppendFormalSuite
   vector_clocks : DistributedVectorClocks.DistributedVectorClocksFormalSuite
+  two_pc : DistributedTwoPhaseCommit.DistributedTwoPhaseCommitFormalSuite
+  paxos : DistributedPaxosConsensus.DistributedPaxosFormalSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
   raft := DistributedRaftConsensus.distributed_raft_master_verification_suite
   raft_append := DistributedRaftLogAppend.distributed_raft_log_append_master_verification_suite
   vector_clocks := DistributedVectorClocks.distributed_vector_clocks_master_verification_suite
+  two_pc := DistributedTwoPhaseCommit.distributed_two_phase_commit_master_verification_suite
+  paxos := DistributedPaxosConsensus.distributed_paxos_master_verification_suite
 }
 
 /-- Wrapper for the existing explicit scalar bounds. -/

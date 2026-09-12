@@ -17,3 +17,7 @@ Quorum intersection alone does not establish Leader Completeness. No full messag
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
 
 - [DistributedVectorClocks](../09_distributed_systems/DistributedVectorClocks.en.md): two-counter order, ticks, least-upper-bound merge and incomparability.
+
+- [DistributedTwoPhaseCommit](../09_distributed_systems/DistributedTwoPhaseCommit.en.md)
+
+- [DistributedPaxosConsensus](../09_distributed_systems/DistributedPaxosConsensus.en.md)

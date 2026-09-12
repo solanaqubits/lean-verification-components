@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.3.0
+
+- Added nine components: scalar Shamir reconstruction, superdense Bell vectors, two-vote commit rules, impermanent loss, scalar no-cloning obstruction, four-leaf Merkle paths, local Paxos properties, BB84 label/arithmetic checks, and proportional vault conversions.
+- Expanded MasterSuite to 60 direct imports and the English catalog to 83 Lean module cards.
+- Preserved Lean and Mathlib v4.33.1 and Apache-2.0 licensing.
+
+The cards distinguish algebraic identities and local rules from cryptographic security, physical quantum protocols, execution-level consensus safety and integer smart-contract behavior.
+
 ## v0.2.0
 
 - Added eight components: two-point R1CS/QAP, teleportation branch recovery, StableSwap, scalar Schnorr/Fiat-Shamir, one-bit Deutsch-Jozsa amplitudes, two-process vector clocks, N=4 Grover search, and arithmetic TWAP.

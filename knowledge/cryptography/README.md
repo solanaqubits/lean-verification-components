@@ -21,3 +21,7 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoR1CSToQAP](../06_cryptography_and_zk/CryptoR1CSToQAP.en.md): two-node interpolation and scalar constraint factorization.
 
 - [CryptoFiatShamirTransform](../06_cryptography_and_zk/CryptoFiatShamirTransform.en.md): scalar Schnorr completeness and conditional witness extraction.
+
+- [CryptoShamirSecretSharing](../06_cryptography_and_zk/CryptoShamirSecretSharing.en.md)
+
+- [CryptoMerkleTree](../06_cryptography_and_zk/CryptoMerkleTree.en.md)

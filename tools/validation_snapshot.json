@@ -1,18 +1,27 @@
 {
-  "modules_checked": 74,
+  "modules_checked": 83,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 3809,
+    "declarations": 4305,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "02f55b6e01f7d282fad1f49b37bade27b1575059dce3325b0ac100586a793a3d",
+    "Verification.MasterSuite": "443e860f31194a7b6c8dec5d50a317f7168ada507b5b9740952264e22b5677bc",
+    "Verification.DeFiERC4626Vault": "3b4f2887fa040000751d03186c0ad66125795176f92d7eaf0b7a8fd4637a3423",
+    "Verification.QuantumBB84Protocol": "d35acd467d3ade0b693b9efb22ed93bb4ad874fbe09b24e6fdc07cd0508fa6ca",
+    "Verification.DistributedPaxosConsensus": "6add20b06145d0ed3456a7716b356c6d52787b7fa2698901d44bb2d080238ea2",
+    "Verification.CryptoMerkleTree": "5e4d846aa87640030fb295f2c574d3d4c9ad2ec7f9df34d5265b91292d0a5f53",
+    "Verification.QuantumNoCloningTheorem": "069c749182aaa5998a132f1698ae3dddbfaba1ddc6a644b6fd316be6399ebce1",
+    "Verification.DeFiImpermanentLoss": "4fafd51381bfb10fe0f73ffa134d33535237f992471f7d218bb2771eae78d72e",
+    "Verification.DistributedTwoPhaseCommit": "a86cf14e428e9a7d1982466cd21b4ec2ee86f77ddebe5b3b63335d5531306c29",
+    "Verification.QuantumSuperdenseCoding": "546494ec9f2b9b70e8cba7284dafe66e47981955487016098f62a426997cab64",
+    "Verification.CryptoShamirSecretSharing": "c7e84e0287fdae4a71e32077cd214999d35c8749d922a7afa1dda8407561e7ee",
     "Verification.DeFiTWAPOracle": "8e444f00451a648e2c06962e2a282a1867a20bc4ff5c1118a5bd496564de0f2c",
     "Verification.QuantumGroverSearch": "fbf4210e5c0a7e2e2d5e827b9b25d0f9be7bebd6b780e39d99004335304cd3ce",
     "Verification.DistributedVectorClocks": "f8ca20c92f8de535fd77073f7fed664650f9f150d079e3763dbf0c8de3c683e0",
@@ -86,22 +95,22 @@
     "Verification.Generated": "c2d2efb42cf5c16d1cb4014c84f1fda96adf0b2c86f627c08259422ae5df9cfc"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.2.0 validation: 74 Lean files, 51 direct component imports, strict compilation and project-wide axiom audit; declaration counts include generated declarations.",
+  "description": "Imported proof-source hash evidence; public export validation is recorded separately.",
   "independent_axiom_audit": {
-    "declarations": 3809,
+    "declarations": 4305,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 19,
+    "passed": 22,
     "runs": [
-      19
+      22
     ],
-    "note": "Public repository: complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1, no skipped tests."
+    "note": "Complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 51,
-  "full_build_jobs": 3379,
+  "master_direct_imports": 60,
+  "full_build_jobs": 3388,
   "pipeline": {
     "verify": true,
     "audit": true,
@@ -110,5 +119,12 @@
     "verify_all": true,
     "knowledge_catalog": true,
     "reservoir_config": true
+  },
+  "tests": {
+    "passed": 19,
+    "runs": [
+      19
+    ],
+    "note": "Complete live unittest discovery; no skipped tests."
   }
 }

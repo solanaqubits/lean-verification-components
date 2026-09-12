@@ -28,13 +28,13 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **74 Lean files** under `Verification/`, including 72 subject modules and
+The [validation record](knowledge/VERIFICATION.en.md) covers **83 Lean files** under `Verification/`, including 81 subject modules and
 two verification files. [MasterSuite](Verification/MasterSuite.lean) collects ten
-suites and directly imports **51 modules**. The project-wide audit checked
-**3,809 declarations**, including generated declarations, with only `propext`,
+suites and directly imports **60 modules**. The project-wide audit checked
+**4,305 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The full build completed with 3,379 jobs, including dependencies. All 19 public regression tests passed with no skips. These are recorded validation results, not a promise that every
+The full build completed with 3,388 jobs, including dependencies. All 19 public regression tests passed with no skips. These are recorded validation results, not a promise that every
 future commit or toolchain will pass.
 
 ## What the proofs establish
