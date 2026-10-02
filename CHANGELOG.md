@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.4.0
+
+- Expanded the distribution from 83 to 108 Lean files and from 60 to 84 direct
+  MasterSuite imports, with 6,442 audited declarations including generated ones.
+- Added 25 source files across cryptographic algebra, quantum models, DeFi,
+  distributed systems, and photonics; synchronized existing proofs and registries.
+- Added the three-component PhotonicsInterposerFullSuite for scalar MZI intensity
+  redistribution, exponential attenuation, and linear thermo-optic phase drift.
+  SolarisPhysicalModels is exported and audited separately, including cosine
+  orthogonality and conditional isometry, loss, and thermal-proxy results.
+- Added same-ballot Paxos safety from majority intersection and the explicit
+  SingleVote premise. This is not cross-ballot safety of a full Paxos execution.
+- Updated all English knowledge cards and navigation with explicit model limits.
+  MZI identities do not certify physical-device unitarity. The 9.812 MPa thermal
+  value is a one-dimensional scalar proxy, not a von Mises stress certification.
+- Added standard headers and module documentation to 17 exported files and
+  replaced the broad tactic import in SolarisPhysicalModels with explicit imports
+  so the public source builds with the configured header linter. Declaration and
+  proof bodies are unchanged by these packaging corrections.
+- Retained Lean 4.33.1, Mathlib v4.33.1, Apache-2.0 licensing, and independent
+  public Git history. See the [verification record](knowledge/VERIFICATION.en.md)
+  for the checks performed on this release.
+
+
 ## v0.3.0
 
 - Added nine components: scalar Shamir reconstruction, superdense Bell vectors, two-vote commit rules, impermanent loss, scalar no-cloning obstruction, four-leaf Merkle paths, local Paxos properties, BB84 label/arithmetic checks, and proportional vault conversions.

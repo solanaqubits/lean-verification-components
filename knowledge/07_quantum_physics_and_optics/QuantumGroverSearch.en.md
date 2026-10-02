@@ -3,7 +3,7 @@ id: QuantumGroverSearch
 language: en
 section: quantum-physics
 source: Verification/QuantumGroverSearch.lean
-source_sha256: fbf4210e5c0a7e2e2d5e827b9b25d0f9be7bebd6b780e39d99004335304cd3ce
+source_sha256: 5cbc65cf91941fbf9c483045f1afcdbb963f2e6f4502bd7d0fdca18635978faf
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,21 +14,14 @@ status: reviewed
 
 ## Verified result
 
-The uniform real state (1/2,1/2,1/2,1/2) has unit squared norm. For each of the four standard basis targets, one explicitly defined composition of oracle and diffusion maps this state exactly to that target. The target overlap equals one; an additional theorem establishes that its square also equals one.
+The existing real-vector reflection model, four exact search results and squared-overlap theorem are preserved. TargetItem provides four target labels; phaseOracle flips the corresponding coordinate. A bridge theorem equates this oracle with the existing reflection at the basis target. Another theorem expresses the existing diffusion as inversion about the coordinate mean. One defined composition from uniformSuperposition equals targetToBasis for every target, has overlap one, and the initial vector has norm squared one.
 
 ## Assumptions and limitations
 
-QState4 is an arbitrary real four-vector. Exact search assumes that the target is one of basis0, basis1, basis2 or basis3; it is not asserted for arbitrary vectors or multiple marked items. The oracle and diffusion are given by explicit reflection formulas. For an arbitrary target without unit norm, the oracle formula alone need not define a reflection. General norm preservation, involutivity and an operator-unitarity theorem are not proved here.
+This is an exact four-dimensional real-vector calculation for one marked basis target. No database, gate circuit, oracle query-cost model, measurement process or noise channel is encoded. Unit overlap is an amplitude; the older squared-overlap result is retained. The equality (pi/4)*sqrt(4)=1 is false: that expression equals pi/2. The one-iteration result is established directly by the operators, not by that asymptotic estimate.
 
-The original probability-named theorem states an overlap amplitude; the added squared-overlap theorem gives the real-amplitude probability expression for these normalized basis targets. No measurement process is defined. The proved step contains one oracle application by definition, but no separate query-cost model, gate decomposition, physical oracle implementation or general quantum speedup theorem is encoded. N > 4 search, iteration-count estimates, complex phases, continuous phase errors and noise are outside the model.
-
-## Value and novelty
-
-An exact small-dimensional example with explicit oracle and diffusion operations, suitable for checking conventions and future circuit-level proofs. Mathematical novelty and first-formalization claims have not been assessed.
+The original QState4 fields x0..x3 remain; x00..x11 are accessors, not new record fields. Old definitions and suite fields are preserved; new target-interface fields extend the suite. QuantumPhysicsFullSuite.grover_search accesses the existing grover field. No direct import is added. Larger search spaces, general iteration analysis, complex gates, physical measurement and depolarizing noise are outside this model. Scientific novelty and first-formalization claims have not been assessed.
 
 ## Verification
 
-[Validation record](../VERIFICATION.en.md). Entry point: `QuantumGroverSearch.quantum_grover_master_verification_suite`.
-
-- [`grover_exact_quantum_search`](../../Verification/QuantumGroverSearch.lean#L58)
-- [`grover_success_probability_sq_one`](../../Verification/QuantumGroverSearch.lean#L76)
+[Validation](../VERIFICATION.en.md). Entry point: `QuantumGroverSearch.quantum_grover_master_verification_suite`.

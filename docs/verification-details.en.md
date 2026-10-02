@@ -747,7 +747,7 @@ skew-matrix commutator models, prescribed toric energy/count formulas, and sympl
 finance combines sequential settlement, exact constant-product swaps, portfolio variance bounds,
 aggregate channel/timelock invariants, conditional fixed-rate cycle losses, real-valued base-fee bounds, and conditional PBS accounting;
 distributed systems collects cardinal quorum intersection and availability conditions.
-The registry directly imports 60 component modules; the project-wide audit also
+The registry directly imports 68 component modules; the project-wide audit also
 covers their dependencies and declarations outside the registry.
 The original Finsler suite remains available. The combined Lamzouri suite
 preserves all earlier quotient guarantees and additionally includes the
@@ -1406,3 +1406,43 @@ deposit price invariance, homogeneity and strict monotonicity with positive
 reserves. Empty vaults, integer rounding, fees, donation attacks and virtual
 shares/assets are not modeled. These scalar identities do not establish
 ERC-4626 implementation compliance or contract security.
+
+
+## Integer vault offsets
+
+`DeFiERC4626InflationDefense` proves static natural-number conversion examples, monotonicity and positive minting when deposit ≥ assets + 1. It also proves a zero-mint counterexample despite virtual offsets. No general attack-profit bound, execution trace or Solidity implementation is verified.
+
+
+## Two-bit Bernstein–Vazirani reconstruction
+
+`QuantumBernsteinVazirani` verifies the explicit real Hadamard–oracle–Hadamard composition for all four masks and its unit overlap with the target basis vector. The oracle is a prescribed sign table. There is no separate Boolean dot-product correspondence proof, query-cost semantics, probabilistic measurement model or physical circuit.
+
+
+## Scalar BLS aggregation equations
+
+`CryptoBLSSignatureAggregation` proves completeness for one scalar signature and a two-signer aggregate on a common message value, plus distributivity and homogeneity of real multiplication. This pairing is concrete multiplication, not a cryptographic pairing. Hash-to-curve, finite groups, rogue-key resistance, proof of possession, unforgeability and operation counts are not formalized.
+
+
+## Static two-node priority election
+
+`DistributedBullyElection` selects the highest active identifier from a supplied two-node snapshot. It proves conditional fallback, deterministic uniqueness, activity and maximality among those two nodes. Activity flags are inputs; failure detection, message exchanges, temporal failover, agreement across local views and protocol liveness are not formalized.
+
+
+## CDP coverage and partial repayment
+
+`DeFiCDPLiquidation` verifies scalar coverage criteria and strict health-factor improvement under partial debt repayment with unchanged collateral, price and threshold. Its seized-value formula is a division identity requiring positive price, without repayment or penalty sign constraints. It does not establish feasible seizure, improved health during liquidation, auction execution, DEX slippage or protocol solvency.
+
+
+## Scalar Schnorr transcripts
+
+`CryptoSchnorrSignature` proves honest completeness, witness extraction from two accepted transcripts with a shared commitment and distinct challenges, and acceptance of the constructed transcript. It also identifies the extracted witness with an original scalar key. No probability distributions or equality of simulated and honest distributions are defined, so acceptance is not a proof of HVZK. Finite-group hardness and signature unforgeability remain outside the model.
+
+
+## Three-qubit bit-flip coordinate model
+
+`QuantumBitFlipCode` proves exact recovery of encoded real amplitudes after any listed single bit flip, using a classifier of nonzero coordinate support. The classifier is not a projective parity measurement. Encoding normalization is conditional on the input squared amplitudes summing to one. Complex channels, phase errors, the full Shor code and fault-tolerance thresholds are outside the model.
+
+
+## Numeric Lamport clock steps
+
+`DistributedLamportClocks` proves strict increase under local tick and receive updates. Its timestamp-only step relation is also proved equivalent to strict numeric order: no event identity or send/receive matching is modeled. It therefore does not establish event-level causality equivalence or distinguish concurrent events.

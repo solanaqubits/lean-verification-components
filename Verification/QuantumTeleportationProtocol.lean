@@ -83,6 +83,63 @@ theorem branch_probabilities_sum :
     (1 / 4 : ℝ) + 1 / 4 + 1 / 4 + 1 / 4 = 1 := by
   norm_num
 
+/-- Real-amplitude interface; arbitrary amplitude pairs, not necessarily normalized. -/
+@[ext] structure QState2 where
+  x0 : ℝ
+  x1 : ℝ
+
+def dot (u v : QState2) : ℝ := u.x0 * v.x0 + u.x1 * v.x1
+def applyI (q : QState2) : QState2 := q
+def applyX (q : QState2) : QState2 := ⟨q.x1, q.x0⟩
+def applyZ (q : QState2) : QState2 := ⟨q.x0, -q.x1⟩
+def applyZX (q : QState2) : QState2 := applyZ (applyX q)
+
+inductive AliceOutcome where
+  | m00 | m01 | m10 | m11
+  deriving DecidableEq, Repr
+
+/-- Prescribed real branch states, not derived by projective measurement. -/
+def bobCollapsedState (α β : ℝ) (m : AliceOutcome) : QState2 :=
+  match m with
+  | .m00 => ⟨α, β⟩
+  | .m01 => ⟨β, α⟩
+  | .m10 => ⟨α, -β⟩
+  | .m11 => ⟨-β, α⟩
+
+def bobCorrection (m : AliceOutcome) (q : QState2) : QState2 :=
+  match m with
+  | .m00 => applyI q
+  | .m01 => applyX q
+  | .m10 => applyZ q
+  | .m11 => applyZX q
+
+theorem teleport_m00 (α β : ℝ) :
+    bobCorrection .m00 (bobCollapsedState α β .m00) = ⟨α, β⟩ := rfl
+
+theorem teleport_m01 (α β : ℝ) :
+    bobCorrection .m01 (bobCollapsedState α β .m01) = ⟨α, β⟩ := rfl
+
+theorem teleport_m10 (α β : ℝ) :
+    bobCorrection .m10 (bobCollapsedState α β .m10) = ⟨α, β⟩ := by
+  simp [bobCorrection, bobCollapsedState, applyZ]
+
+theorem teleport_m11 (α β : ℝ) :
+    bobCorrection .m11 (bobCollapsedState α β .m11) = ⟨α, β⟩ := by
+  simp [bobCorrection, bobCollapsedState, applyZX, applyZ, applyX]
+
+theorem teleport_universal_exactness (α β : ℝ) (m : AliceOutcome) :
+    bobCorrection m (bobCollapsedState α β m) = ⟨α, β⟩ := by
+  cases m
+  · exact teleport_m00 α β
+  · exact teleport_m01 α β
+  · exact teleport_m10 α β
+  · exact teleport_m11 α β
+
+/-- Normalization of an assigned scalar weight, not a measurement probability derivation. -/
+theorem outcome_probability_uniform (α β : ℝ) (h_norm : α ^ 2 + β ^ 2 = 1) :
+    (1 / 4 : ℝ) * (α ^ 2 + β ^ 2) = 1 / 4 := by
+  rw [h_norm, mul_one]
+
 structure QuantumTeleportationFormalSuite : Prop where
   h_phi_plus : ∀ psi, reconstructState BellMeasurement.phiPlus psi = psi
   h_phi_minus : ∀ psi, reconstructState BellMeasurement.phiMinus psi = psi
@@ -91,6 +148,15 @@ structure QuantumTeleportationFormalSuite : Prop where
   h_universal : ∀ m psi, reconstructState m psi = psi
   h_prob_sum : (1 / 4 : ℝ) + 1 / 4 + 1 / 4 + 1 / 4 = 1
 
+  h_rec_00 : ∀ (α β : ℝ), bobCorrection .m00 (bobCollapsedState α β .m00) = ⟨α, β⟩
+  h_rec_01 : ∀ (α β : ℝ), bobCorrection .m01 (bobCollapsedState α β .m01) = ⟨α, β⟩
+  h_rec_10 : ∀ (α β : ℝ), bobCorrection .m10 (bobCollapsedState α β .m10) = ⟨α, β⟩
+  h_rec_11 : ∀ (α β : ℝ), bobCorrection .m11 (bobCollapsedState α β .m11) = ⟨α, β⟩
+  h_rec_univ : ∀ (α β : ℝ) (m : AliceOutcome),
+    bobCorrection m (bobCollapsedState α β m) = ⟨α, β⟩
+  h_prob_uniform : ∀ (α β : ℝ), α ^ 2 + β ^ 2 = 1 →
+    (1 / 4 : ℝ) * (α ^ 2 + β ^ 2) = 1 / 4
+
 theorem quantum_teleportation_master_verification_suite : QuantumTeleportationFormalSuite := {
   h_phi_plus := teleport_recovery_phi_plus
   h_phi_minus := teleport_recovery_phi_minus
@@ -98,6 +164,12 @@ theorem quantum_teleportation_master_verification_suite : QuantumTeleportationFo
   h_psi_minus := teleport_recovery_psi_minus
   h_universal := teleportation_fidelity_exact
   h_prob_sum := branch_probabilities_sum
+  h_rec_00 := teleport_m00
+  h_rec_01 := teleport_m01
+  h_rec_10 := teleport_m10
+  h_rec_11 := teleport_m11
+  h_rec_univ := teleport_universal_exactness
+  h_prob_uniform := outcome_probability_uniform
 }
 
 #print axioms quantum_teleportation_master_verification_suite

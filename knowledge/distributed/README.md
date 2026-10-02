@@ -21,3 +21,13 @@ Quorum intersection alone does not establish Leader Completeness. No full messag
 - [DistributedTwoPhaseCommit](../09_distributed_systems/DistributedTwoPhaseCommit.en.md)
 
 - [DistributedPaxosConsensus](../09_distributed_systems/DistributedPaxosConsensus.en.md)
+
+- [DistributedBullyElection](../09_distributed_systems/DistributedBullyElection.en.md)
+
+- [DistributedLamportClocks](../09_distributed_systems/DistributedLamportClocks.en.md)
+
+- [DistributedRaftLogReplication](../09_distributed_systems/DistributedRaftLogReplication.en.md)
+
+- [DistributedPBFTConsensus](../09_distributed_systems/DistributedPBFTConsensus.en.md)
+
+- [DistributedPaxos](../09_distributed_systems/DistributedPaxos.en.md)

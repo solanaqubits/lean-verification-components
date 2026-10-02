@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 443e860f31194a7b6c8dec5d50a317f7168ada507b5b9740952264e22b5677bc
+source_sha256: 1f3cc826c9eefecbe17d79804e5cc291ba83da9369cc3bb9b73cd28ec170a7fb
 novelty: not-assessed
 ---
 
@@ -13,7 +13,7 @@ novelty: not-assessed
 
 ## Verified result
 
-Ten suites of selected theorems with 60 direct imports. The registry does not contain every declaration in the project.
+Eleven suites of selected theorems with 84 direct imports. The registry does not contain every declaration in the project.
 
 ## Assumptions and scope
 
@@ -24,19 +24,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuite.lean#L116)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuite.lean#L128)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuite.lean#L140)
-- [`collatz_full_master_suite`](../../Verification/MasterSuite.lean#L159)
-- [`crypto_full_master_suite`](../../Verification/MasterSuite.lean#L178)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuite.lean#L211)
-- [`hopf_full_master_suite`](../../Verification/MasterSuite.lean#L237)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuite.lean#L247)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuite.lean#L257)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuite.lean#L276)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuite.lean#L300)
-- [`riemann_full_master_suite`](../../Verification/MasterSuite.lean#L313)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L332)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuite.lean#L159)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuite.lean#L171)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuite.lean#L183)
+- [`collatz_full_master_suite`](../../Verification/MasterSuite.lean#L202)
+- [`crypto_full_master_suite`](../../Verification/MasterSuite.lean#L228)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuite.lean#L289)
+- [`hopf_full_master_suite`](../../Verification/MasterSuite.lean#L321)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuite.lean#L331)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuite.lean#L341)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuite.lean#L379)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuite.lean#L424)
+- [`riemann_full_master_suite`](../../Verification/MasterSuite.lean#L450)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L482)
+
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuite.lean#L460)
 
 ## Verification
 

@@ -26,16 +26,20 @@ the components in larger formal developments.
 | [Distributed consensus](knowledge/distributed/README.md) | Quorums, conditional election safety, and local log append |
 | [Registry and audit](knowledge/verification/README.md) | Selected suites and axiom dependencies |
 
-## Verified snapshot
+## Verified snapshot — v0.4.0
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **83 Lean files** under `Verification/`, including 81 subject modules and
-two verification files. [MasterSuite](Verification/MasterSuite.lean) collects ten
-suites and directly imports **60 modules**. The project-wide audit checked
-**4,305 declarations**, including generated declarations, with only `propext`,
+The [validation record](knowledge/VERIFICATION.en.md) covers **108 Lean files** under `Verification/`, including 106 subject modules and
+two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
+suites and directly imports **84 modules**. The project-wide audit checked
+**6,442 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The full build completed with 3,388 jobs, including dependencies. All 19 public regression tests passed with no skips. These are recorded validation results, not a promise that every
-future commit or toolchain will pass.
+The clean public build completed with 3,490 jobs, including dependencies.
+The independent axiom audit checked all 6,442 declarations against the same
+allowlist. All 19 public tests passed, including live compiler tests, and the
+knowledge catalog check passed. See the [v0.4.0 changelog](CHANGELOG.md) and validation record for
+release checks. These are recorded results, not a promise that every future
+commit or toolchain will pass.
 
 ## What the proofs establish
 

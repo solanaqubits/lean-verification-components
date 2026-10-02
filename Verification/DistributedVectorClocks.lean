@@ -72,6 +72,47 @@ theorem concurrent_witness_exists : ∃ v1 v2 : VClock2, concurrent v1 v2 := by
   dsimp [concurrent, le]
   omega
 
+/-- Compatibility name for the existing two-counter type. -/
+abbrev VectorClock2 := VClock2
+
+def receive1 (u w : VectorClock2) : VectorClock2 := tick1 (merge u w)
+def receive2 (u w : VectorClock2) : VectorClock2 := tick2 (merge u w)
+
+theorem vector_le_refl (u : VectorClock2) : le u u := le_refl u
+
+theorem vector_le_trans (u v w : VectorClock2) (huv : le u v) (hvw : le v w) : le u w :=
+  le_trans u v w huv hvw
+
+theorem vector_le_antisymm (u v : VectorClock2) (huv : le u v) (hvu : le v u) : u = v :=
+  le_antisymm u v huv hvu
+
+theorem receive1_strictly_greater_than_local (u w : VectorClock2) : lt u (receive1 u w) := by
+  refine ⟨le_trans _ _ _ (merge_ge_left u w) (tick1_strictly_increases _).1, ?_⟩
+  intro h
+  have hc := congrArg VClock2.c1 h
+  dsimp [receive1, tick1, merge] at hc
+  omega
+
+theorem receive1_dominates_message (u w : VectorClock2) : le w (receive1 u w) :=
+  le_trans _ _ _ (merge_ge_right u w) (tick1_strictly_increases _).1
+
+/-- The analogous local monotonicity guarantee for the second receiving node. -/
+theorem receive2_strictly_greater_than_local (u w : VectorClock2) : lt u (receive2 u w) := by
+  refine ⟨le_trans _ _ _ (merge_ge_left u w) (tick2_strictly_increases _).1, ?_⟩
+  intro h
+  have hc := congrArg VClock2.c2 h
+  dsimp [receive2, tick2, merge] at hc
+  omega
+
+theorem receive2_dominates_message (u w : VectorClock2) : le w (receive2 u w) :=
+  le_trans _ _ _ (merge_ge_right u w) (tick2_strictly_increases _).1
+
+/-- Incomparability of two vectors, without an event-history interpretation. -/
+theorem concurrent_independent_events_exist :
+    concurrent (tick1 ⟨0, 0⟩) (tick2 ⟨0, 0⟩) := by
+  dsimp [concurrent, le, tick1, tick2]
+  omega
+
 structure DistributedVectorClocksFormalSuite : Prop where
   h_le_refl : ∀ v, le v v
   h_le_trans : ∀ v1 v2 v3, le v1 v2 → le v2 v3 → le v1 v3
@@ -86,6 +127,11 @@ structure DistributedVectorClocksFormalSuite : Prop where
   h_conc_symm : ∀ v1 v2, concurrent v1 v2 ↔ concurrent v2 v1
   h_conc_irref : ∀ v, ¬ concurrent v v
   h_conc_exists : ∃ v1 v2, concurrent v1 v2
+  h_recv1_lt : ∀ u w, lt u (receive1 u w)
+  h_recv1_dom : ∀ u w, le w (receive1 u w)
+  h_recv2_lt : ∀ u w, lt u (receive2 u w)
+  h_recv2_dom : ∀ u w, le w (receive2 u w)
+  h_concurrency : concurrent (tick1 ⟨0, 0⟩) (tick2 ⟨0, 0⟩)
 
 theorem distributed_vector_clocks_master_verification_suite :
     DistributedVectorClocksFormalSuite := {
@@ -102,7 +148,15 @@ theorem distributed_vector_clocks_master_verification_suite :
   h_conc_symm := concurrent_symm
   h_conc_irref := concurrent_irreflexive
   h_conc_exists := concurrent_witness_exists
+  h_recv1_lt := receive1_strictly_greater_than_local
+  h_recv1_dom := receive1_dominates_message
+  h_recv2_lt := receive2_strictly_greater_than_local
+  h_recv2_dom := receive2_dominates_message
+  h_concurrency := concurrent_independent_events_exist
 }
+
+theorem distributed_vector_clocks_master_suite : DistributedVectorClocksFormalSuite :=
+  distributed_vector_clocks_master_verification_suite
 
 #print axioms distributed_vector_clocks_master_verification_suite
 

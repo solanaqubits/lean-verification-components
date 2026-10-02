@@ -609,6 +609,30 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.ThermoOpticPhaseDrift",
+        "Verification.OpticalLossAttenuation",
+        "Verification.SolarisMithraCore",
+        "Verification.DistributedPaxos",
+        "Verification.DeFiBondingCurve",
+        "Verification.DeFiOvercollateralizedLending",
+        "Verification.QuantumBellCHSH",
+        "Verification.DeFiFlashLoan",
+        "Verification.CryptoGroth16SNARK",
+        "Verification.DistributedPBFTConsensus",
+        "Verification.DistributedRaftLogReplication",
+        "Verification.CryptoR1CSConstraintSystem",
+        "Verification.DeFiConstantProductSwap",
+        "Verification.CryptoSumcheckProtocol",
+        "Verification.CryptoKZGPolynomialCommitment",
+        "Verification.CryptoElGamalEncryption",
+        "Verification.DistributedLamportClocks",
+        "Verification.QuantumBitFlipCode",
+        "Verification.CryptoSchnorrSignature",
+        "Verification.DeFiCDPLiquidation",
+        "Verification.DistributedBullyElection",
+        "Verification.CryptoBLSSignatureAggregation",
+        "Verification.QuantumBernsteinVazirani",
+        "Verification.DeFiERC4626InflationDefense",
         "Verification.DeFiERC4626Vault",
         "Verification.QuantumBB84Protocol",
         "Verification.DistributedPaxosConsensus",
@@ -849,6 +873,206 @@
       "section": "finance",
       "source": "Verification/DeFiERC4626Vault.lean",
       "card": "knowledge/08_finance_and_risk/DeFiERC4626Vault.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiERC4626InflationDefense",
+      "section": "finance",
+      "source": "Verification/DeFiERC4626InflationDefense.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiERC4626InflationDefense.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumBernsteinVazirani",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumBernsteinVazirani.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumBernsteinVazirani.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoBLSSignatureAggregation",
+      "section": "cryptography",
+      "source": "Verification/CryptoBLSSignatureAggregation.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoBLSSignatureAggregation.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedBullyElection",
+      "section": "distributed",
+      "source": "Verification/DistributedBullyElection.lean",
+      "card": "knowledge/09_distributed_systems/DistributedBullyElection.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiCDPLiquidation",
+      "section": "finance",
+      "source": "Verification/DeFiCDPLiquidation.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiCDPLiquidation.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoSchnorrSignature",
+      "section": "cryptography",
+      "source": "Verification/CryptoSchnorrSignature.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoSchnorrSignature.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumBitFlipCode",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumBitFlipCode.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumBitFlipCode.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedLamportClocks",
+      "section": "distributed",
+      "source": "Verification/DistributedLamportClocks.lean",
+      "card": "knowledge/09_distributed_systems/DistributedLamportClocks.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoElGamalEncryption",
+      "section": "cryptography",
+      "source": "Verification/CryptoElGamalEncryption.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoElGamalEncryption.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoKZGPolynomialCommitment",
+      "section": "cryptography",
+      "source": "Verification/CryptoKZGPolynomialCommitment.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoKZGPolynomialCommitment.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoSumcheckProtocol",
+      "section": "cryptography",
+      "source": "Verification/CryptoSumcheckProtocol.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoSumcheckProtocol.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiConstantProductSwap",
+      "section": "finance",
+      "source": "Verification/DeFiConstantProductSwap.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiConstantProductSwap.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoR1CSConstraintSystem",
+      "section": "cryptography",
+      "source": "Verification/CryptoR1CSConstraintSystem.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoR1CSConstraintSystem.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftLogReplication",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftLogReplication.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftLogReplication.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedPBFTConsensus",
+      "section": "distributed",
+      "source": "Verification/DistributedPBFTConsensus.lean",
+      "card": "knowledge/09_distributed_systems/DistributedPBFTConsensus.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoGroth16SNARK",
+      "section": "cryptography",
+      "source": "Verification/CryptoGroth16SNARK.lean",
+      "card": "knowledge/06_cryptography_and_zk/CryptoGroth16SNARK.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiFlashLoan",
+      "section": "finance",
+      "source": "Verification/DeFiFlashLoan.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiFlashLoan.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumBellCHSH",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumBellCHSH.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/QuantumBellCHSH.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiOvercollateralizedLending",
+      "section": "finance",
+      "source": "Verification/DeFiOvercollateralizedLending.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiOvercollateralizedLending.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DeFiBondingCurve",
+      "section": "finance",
+      "source": "Verification/DeFiBondingCurve.lean",
+      "card": "knowledge/08_finance_and_risk/DeFiBondingCurve.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedPaxos",
+      "section": "distributed",
+      "source": "Verification/DistributedPaxos.lean",
+      "card": "knowledge/09_distributed_systems/DistributedPaxos.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "SolarisMithraCore",
+      "section": "quantum-physics",
+      "source": "Verification/SolarisMithraCore.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/SolarisMithraCore.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "OpticalLossAttenuation",
+      "section": "quantum-physics",
+      "source": "Verification/OpticalLossAttenuation.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/OpticalLossAttenuation.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "ThermoOpticPhaseDrift",
+      "section": "quantum-physics",
+      "source": "Verification/ThermoOpticPhaseDrift.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/ThermoOpticPhaseDrift.en.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "SolarisPhysicalModels",
+      "section": "quantum-physics",
+      "source": "Verification/SolarisPhysicalModels.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/SolarisPhysicalModels.en.md",
       "project_imports": [],
       "novelty": "not-assessed"
     }

@@ -1,3 +1,27 @@
+import Verification.ThermoOpticPhaseDrift
+import Verification.OpticalLossAttenuation
+import Verification.SolarisMithraCore
+import Verification.DistributedPaxos
+import Verification.DeFiBondingCurve
+import Verification.DeFiOvercollateralizedLending
+import Verification.QuantumBellCHSH
+import Verification.DeFiFlashLoan
+import Verification.CryptoGroth16SNARK
+import Verification.DistributedPBFTConsensus
+import Verification.DistributedRaftLogReplication
+import Verification.CryptoR1CSConstraintSystem
+import Verification.DeFiConstantProductSwap
+import Verification.CryptoSumcheckProtocol
+import Verification.CryptoKZGPolynomialCommitment
+import Verification.CryptoElGamalEncryption
+import Verification.DistributedLamportClocks
+import Verification.QuantumBitFlipCode
+import Verification.CryptoSchnorrSignature
+import Verification.DeFiCDPLiquidation
+import Verification.DistributedBullyElection
+import Verification.CryptoBLSSignatureAggregation
+import Verification.QuantumBernsteinVazirani
+import Verification.DeFiERC4626InflationDefense
 import Verification.DeFiERC4626Vault
 import Verification.QuantumBB84Protocol
 import Verification.DistributedPaxosConsensus
@@ -64,24 +88,43 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open SolarisMithraCore
+open SolarisOptics
+open SolarisThermoOptics
+
+open QuantumBellCHSH
 open QuantumBB84Protocol
 open QuantumNoCloningTheorem
 open QuantumSuperdenseCoding
+open QuantumBernsteinVazirani
 open QuantumGroverSearch
+open DistributedBullyElection
 open DistributedPaxosConsensus
+open DistributedPaxos
 open DistributedTwoPhaseCommit
+open DistributedLamportClocks
 open DistributedVectorClocks
 open QuantumDeutschJozsa
 open CryptoMerkleTree
+open CryptoPedersenCommitment
+open CryptoBLSSignatureAggregation
 open CryptoShamirSecretSharing
+open CryptoSchnorrSignature
 open CryptoFiatShamirTransform
+open DeFiERC4626InflationDefense
 open DeFiERC4626Vault
 open DeFiImpermanentLoss
 open DeFiTWAPOracle
 open DeFiCurveStableSwap
 open QuantumTeleportationProtocol
 open CryptoR1CSToQAP
+open DeFiConcentratedLiquidity
+open DeFiOvercollateralizedLending
+open DeFiBondingCurve
+open DeFiFlashLoan
+open DeFiCDPLiquidation
 open DeFiLendingCDP
+open QuantumBitFlipCode
 open QuantumPhaseFlipCode
 
 universe uRaft3
@@ -174,6 +217,13 @@ structure CryptoFullSuite : Prop where
   fiat_shamir : CryptoFiatShamirTransform.CryptoFiatShamirFormalSuite
   shamir : CryptoShamirSecretSharing.CryptoShamirFormalSuite
   merkle_tree : CryptoMerkleTree.CryptoMerkleTreeFormalSuite
+  bls_signature : CryptoBLSSignatureAggregation.CryptoBLSSignatureFormalSuite
+  schnorr_signature : CryptoSchnorrSignature.CryptoSchnorrFormalSuite
+  elgamal_encryption : CryptoElGamalEncryption.CryptoElGamalFormalSuite
+  kzg_commitment : CryptoKZGPolynomialCommitment.CryptoKZGFormalSuite
+  sumcheck_protocol : CryptoSumcheckProtocol.CryptoSumcheckFormalSuite
+  r1cs_system : CryptoR1CSConstraintSystem.CryptoR1CSFormalSuite
+  groth16_snark : CryptoGroth16SNARK.CryptoGroth16FormalSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -185,7 +235,32 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   fiat_shamir := CryptoFiatShamirTransform.crypto_fiat_shamir_master_verification_suite
   shamir := CryptoShamirSecretSharing.crypto_shamir_master_verification_suite
   merkle_tree := CryptoMerkleTree.crypto_merkle_tree_master_verification_suite
+  bls_signature := by
+    exact CryptoBLSSignatureAggregation.crypto_bls_signature_master_verification_suite
+  schnorr_signature := by
+    exact CryptoSchnorrSignature.crypto_schnorr_master_verification_suite
+  elgamal_encryption := by
+    exact CryptoElGamalEncryption.crypto_elgamal_master_verification_suite
+  kzg_commitment := by
+    exact CryptoKZGPolynomialCommitment.crypto_kzg_master_verification_suite
+  sumcheck_protocol := by
+    exact CryptoSumcheckProtocol.crypto_sumcheck_master_verification_suite
+  r1cs_system := by
+    exact CryptoR1CSConstraintSystem.crypto_r1cs_master_verification_suite
+  groth16_snark := by
+    exact CryptoGroth16SNARK.crypto_groth16_master_verification_suite
 }
+
+theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :
+    CryptoShamirSecretSharing.CryptoShamirSecretSharingFormalSuite := suite.shamir.h_additive_suite
+
+/-- Access to the extended BLS component without duplicating the registry field. -/
+theorem CryptoFullSuite.bls_signature_aggregation (suite : CryptoFullSuite) :
+    CryptoBLSSignatureAggregation.CryptoBLSSignatureFormalSuite := suite.bls_signature
+
+/-- Compatibility name for the existing Pedersen component; not another registry entry. -/
+theorem CryptoFullSuite.pedersen_commitment (suite : CryptoFullSuite) :
+    CryptoPedersenCommitment.CryptoPedersenFormalSuite := suite.pedersen
 
 /-- The prescribed mode and gap models, without additional physical claims. -/
 structure QuantumPhysicsFullSuite : Prop where
@@ -207,6 +282,9 @@ structure QuantumPhysicsFullSuite : Prop where
   superdense : QuantumSuperdenseCoding.QuantumSuperdenseFormalSuite
   no_cloning : QuantumNoCloningTheorem.QuantumNoCloningFormalSuite
   bb84 : QuantumBB84Protocol.QuantumBB84FormalSuite
+  bernstein_vazirani : QuantumBernsteinVazirani.QuantumBernsteinVaziraniFormalSuite
+  bit_flip_code : QuantumBitFlipCode.QuantumBitFlipCodeFormalSuite
+  bell_chsh : QuantumBellCHSH.QuantumBellCHSHFormalSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -227,6 +305,12 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   superdense := QuantumSuperdenseCoding.quantum_superdense_master_verification_suite
   no_cloning := QuantumNoCloningTheorem.quantum_no_cloning_master_verification_suite
   bb84 := QuantumBB84Protocol.quantum_bb84_master_verification_suite
+  bernstein_vazirani := by
+    exact QuantumBernsteinVazirani.quantum_bernstein_vazirani_master_verification_suite
+  bit_flip_code := by
+    exact QuantumBitFlipCode.quantum_bit_flip_code_master_verification_suite
+  bell_chsh := by
+    exact QuantumBellCHSH.quantum_bell_chsh_master_verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
@@ -259,6 +343,19 @@ theorem finance_defi_full_master_suite : FinanceDeFiFullSuite := {
   amm := defi_amm_master_verification_suite
 }
 
+/-- Explicit circuit results from the existing superdense component. -/
+theorem QuantumPhysicsFullSuite.superdense_coding (suite : QuantumPhysicsFullSuite) :
+    QuantumSuperdenseCoding.QuantumSuperdenseCodingFormalSuite :=
+  suite.superdense.h_circuit
+
+/-- Alternate access to the existing Grover suite. -/
+theorem QuantumPhysicsFullSuite.grover_search (suite : QuantumPhysicsFullSuite) :
+    QuantumGroverSearch.QuantumGroverFormalSuite := suite.grover
+
+/-- Alternate access to the existing teleportation suite. -/
+theorem QuantumPhysicsFullSuite.quantum_teleportation (suite : QuantumPhysicsFullSuite) :
+    QuantumTeleportationProtocol.QuantumTeleportationFormalSuite := suite.teleportation
+
 /-- Extend the settlement and swap package with portfolio variance guarantees. -/
 structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   risk_engine : PortfolioRiskFormalSuite
@@ -272,6 +369,12 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   twap : DeFiTWAPOracle.DeFiTWAPFormalSuite
   impermanent_loss : DeFiImpermanentLoss.DeFiImpermanentLossFormalSuite
   erc4626 : DeFiERC4626Vault.DeFiERC4626FormalSuite
+  erc4626_inflation_defense : DeFiERC4626InflationDefense.DeFiERC4626InflationDefenseFormalSuite
+  cdp_liquidation : DeFiCDPLiquidation.DeFiCDPLiquidationFormalSuite
+  cpmm_swap : DeFiConstantProductSwap.DeFiConstantProductSwapFormalSuite
+  flash_loan : DeFiFlashLoan.DeFiFlashLoanFormalSuite
+  overcollateralized_lending : DeFiOvercollateralizedLendingFormalSuite
+  bonding_curve : DeFiBondingCurve.DeFiBondingCurveFormalSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   toFinanceDeFiFullSuite := finance_defi_full_master_suite
@@ -286,7 +389,23 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   twap := DeFiTWAPOracle.defi_twap_master_verification_suite
   impermanent_loss := DeFiImpermanentLoss.defi_impermanent_loss_master_verification_suite
   erc4626 := DeFiERC4626Vault.defi_erc4626_master_verification_suite
+  erc4626_inflation_defense := by
+    exact DeFiERC4626InflationDefense.defi_erc4626_inflation_defense_master_suite
+  cdp_liquidation := by
+    exact DeFiCDPLiquidation.defi_cdp_liquidation_master_verification_suite
+  cpmm_swap := by
+    exact DeFiConstantProductSwap.defi_constant_product_swap_master_verification_suite
+  flash_loan := by
+    exact DeFiFlashLoan.defi_flash_loan_master_suite
+  overcollateralized_lending := by
+    exact DeFiOvercollateralizedLending.defi_overcollateralized_lending_master_suite
+  bonding_curve := by
+    exact DeFiBondingCurve.defi_bonding_curve_master_suite
 }
+
+/-- Alias for the existing concentrated-liquidity component. -/
+theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuite) :
+    DeFiConcentratedLiquidity.DeFiConcentratedLiquidityFormalSuite := suite.concentrated
 
 /-- Cardinal quorum conditions, without protocol-level safety or termination claims. -/
 structure DistributedSystemsFullSuite : Prop where
@@ -296,6 +415,11 @@ structure DistributedSystemsFullSuite : Prop where
   vector_clocks : DistributedVectorClocks.DistributedVectorClocksFormalSuite
   two_pc : DistributedTwoPhaseCommit.DistributedTwoPhaseCommitFormalSuite
   paxos : DistributedPaxosConsensus.DistributedPaxosFormalSuite
+  bully_election : DistributedBullyElection.DistributedBullyFormalSuite
+  lamport_clocks : DistributedLamportClocks.DistributedLamportClocksFormalSuite
+  raft_log_replication : DistributedRaftLogReplication.DistributedRaftFormalSuite
+  pbft_consensus : DistributedPBFTConsensus.DistributedPBFTFormalSuite
+  paxos_consensus : DistributedPaxos.DistributedPaxosFormalSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -304,7 +428,20 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   vector_clocks := DistributedVectorClocks.distributed_vector_clocks_master_verification_suite
   two_pc := DistributedTwoPhaseCommit.distributed_two_phase_commit_master_verification_suite
   paxos := DistributedPaxosConsensus.distributed_paxos_master_verification_suite
+  bully_election := by
+    exact DistributedBullyElection.distributed_bully_master_verification_suite
+  lamport_clocks := by
+    exact DistributedLamportClocks.distributed_lamport_clocks_master_suite
+  raft_log_replication := by
+    exact DistributedRaftLogReplication.distributed_raft_master_verification_suite
+  pbft_consensus := by
+    exact DistributedPBFTConsensus.distributed_pbft_master_verification_suite
+  paxos_consensus := by
+    exact DistributedPaxos.distributed_paxos_master_suite
 }
+
+theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :
+    DistributedTwoPhaseCommit.DistributedTwoPhaseCommitFormalSuite := suite.two_pc
 
 /-- Wrapper for the existing explicit scalar bounds. -/
 structure RiemannFullSuite : Prop where
@@ -314,9 +451,22 @@ theorem riemann_full_master_suite : RiemannFullSuite := {
   riemann_explicit := riemann_master_verification_suite
 }
 
-/-- Ten top-level packages of selected guarantees.
+/-- Analytical scalar photonics components; physical applicability remains external. -/
+structure PhotonicsInterposerFullSuite : Prop where
+  mzi_core : SolarisMithraCore.MZIAnalyticalSuite
+  optical_loss : SolarisOptics.OpticalLossSuite
+  thermo_optic : SolarisThermoOptics.ThermoOpticSuite
+
+theorem photonics_interposer_master_suite : PhotonicsInterposerFullSuite := {
+  mzi_core := SolarisMithraCore.mzi_master_verification_suite
+  optical_loss := SolarisOptics.optical_loss_master_suite
+  thermo_optic := SolarisThermoOptics.thermo_optic_master_suite
+}
+
+/-- Eleven top-level packages of selected guarantees.
 Their original hypotheses and scope limitations are preserved. -/
 structure VerificationMasterRegistry : Prop where
+  photonics_suite : PhotonicsInterposerFullSuite
   collatz_suite : CollatzFullSuite
   riemann_suite : RiemannFullSuite
   hopf_suite : HopfFullSuite.{uHopf}
@@ -330,6 +480,7 @@ structure VerificationMasterRegistry : Prop where
 
 /-- Assemble the registry from the existing proofs without extending their interpretation. -/
 theorem verification_master_registry : VerificationMasterRegistry := {
+  photonics_suite := photonics_interposer_master_suite
   collatz_suite := collatz_full_master_suite
   riemann_suite := riemann_full_master_suite
   hopf_suite := hopf_full_master_suite

@@ -3,35 +3,31 @@ id: CryptoPedersenCommitment
 language: en
 section: cryptography
 source: Verification/CryptoPedersenCommitment.lean
-source_sha256: 90581daec61cb069b71d0cd260605e56c412e39857bccc32daf24da63b0289c7
+source_sha256: 5ea97b426007c289f99b689b1a50439caffee161142a1b03cc356366b6809bff
 novelty: not-assessed
+status: reviewed
 ---
 
 # CryptoPedersenCommitment
 
-[Section](../cryptography/README.md) · [Lean source](../../Verification/CryptoPedersenCommitment.lean)
+[Section](../cryptography/README.md) · [Lean](../../Verification/CryptoPedersenCommitment.lean)
 
 ## Verified result
 
-For C(m,r)=mG+rH over real scalars, additivity, scalar linearity, an explicit change of opening, and a ratio identity extracted from a collision. H ≠ 0 is required; the collision result also assumes distinct messages.
+The original real-scalar commitment API C(m,r)=mG+rH and its earlier theorems are preserved. DLogRelation supplies a nonzero x with H=xG. The new opening formula r'=r+(m-m')/x gives the same commitment for any target message m'; pedersen_hiding_unique additionally proves existence and uniqueness of its blinding scalar.
 
-## Assumptions and scope
+A collision between distinct messages forces r2-r1≠0 and yields H=((m1-m2)/(r2-r1))*G. The module retains the earlier converse-ratio identity for G/H. It also proves zero commitment, additive and scalar identities, and additivity of the two-message scalar commitment m1*G1+m2*G2+rH.
 
-These components do not prove end-to-end cryptographic security. Finite cryptographic groups, adversaries, probability distributions, and hardness reductions require separate models.
+New entry points: pedersen_perfect_hiding, pedersen_hiding_unique, pedersen_collision_implies_blinding_diff, pedersen_binding_extracts_dlog, vector_pedersen_homomorphic_add and crypto_pedersen_commitment_master_suite.
 
-An alternative opening is not equality of commitment distributions. The real ratio G/H is directly available: discrete-log hardness and computational binding are not proved. The theorem names retain the submitted API but do not enlarge the formal claims.
+## Assumptions and limitations
 
-The Lean theorem types are authoritative for exact quantifiers and hypotheses.
-Scientific priority and first-formalization claims have not been established.
+Nonzero real parameters do not establish independent cryptographic generators. DLogRelation is supplied data and H/G is directly available over the reals. Existence and uniqueness of an alternative opening are algebraic facts, not equality of randomized commitment distributions. No randomness or adversary is modeled; neither information-theoretic perfect hiding nor computational binding is proved.
 
-## Proof entry points
+The vector extension contains exactly two message scalars and one blinding scalar; only its additive identity is shown. Arbitrary-dimensional commitments, finite prime-order groups and discrete-log hardness, secp256k1/Ristretto255/Ed25519, NUMS generator derivation and Schnorr opening proofs are not formalized. Scientific novelty has not been assessed.
 
-- [`pedersen_homomorphic_add`](../../Verification/CryptoPedersenCommitment.lean#L19)
-- [`pedersen_homomorphic_smul`](../../Verification/CryptoPedersenCommitment.lean#L24)
-- [`pedersen_perfect_hiding_equiv`](../../Verification/CryptoPedersenCommitment.lean#L31)
-- [`pedersen_binding_discrete_log`](../../Verification/CryptoPedersenCommitment.lean#L40)
-- [`crypto_pedersen_master_verification_suite`](../../Verification/CryptoPedersenCommitment.lean#L68)
+PedersenGenerators, PedersenSetup with its coercion, commit, and the old theorem signatures and equality directions remain available. Reverse-direction wrapper theorems commit_add_eq_addCommit and commit_smul_eq_smulCommit fill the new suite. CryptoPedersenFormalSuite gains h_extended, which manual constructors must supply. The existing CryptoFullSuite.pedersen_commitment accessor is preserved; its h_extended field exposes the new results without an additional import.
 
 ## Verification
 
-See the [validation record](../VERIFICATION.en.md) for the audited source snapshot.
+[Validation](../VERIFICATION.en.md). Entry point: `CryptoPedersenCommitment.crypto_pedersen_commitment_master_suite`.

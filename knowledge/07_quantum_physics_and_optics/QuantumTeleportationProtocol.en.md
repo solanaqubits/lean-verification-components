@@ -3,7 +3,7 @@ id: QuantumTeleportationProtocol
 language: en
 section: quantum-physics
 source: Verification/QuantumTeleportationProtocol.lean
-source_sha256: bcc448fb6700e5c25859f93495dbc2b5893e6f74ca03cc2934f302f711cf78fa
+source_sha256: 80fcb2ce6b0901d37c2fcffc473cf070df52b856c1adb221f3e67353fa7935f1
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,21 +14,14 @@ status: reviewed
 
 ## Verified result
 
-Four explicitly prescribed complex amplitude pairs are restored by the corresponding I, Z, X or ZX matrix. The universal theorem proves exact structural equality with the input pair for every branch label. For psiMinus the received pair is (-beta, alpha), and ZX maps it to (alpha, beta); this fixes the sign convention. A separate arithmetic theorem proves that four constants 1/4 sum to one.
+The existing complex QubitState interface and its four exact recovery theorems remain available. A real QState2 interface adds I, X, Z and ZX corrections, AliceOutcome labels, prescribed branch states and exact recovery for all four branches. Recovery holds for arbitrary amplitude pairs, without normalization. Under alpha²+beta²=1, the assigned scalar weight (alpha²+beta²)/4 equals 1/4. The original sum-of-four-quarters identity is retained.
 
 ## Assumptions and limitations
 
-QubitState is an arbitrary element of complex two-dimensional coordinate space, with no normalization condition. BellMeasurement is a four-constructor label type. Received states and corrections are defined by tables, not derived from a Bell-pair preparation, circuit or measurement. Selecting one of four outcomes requires two classical bits.
+Branch states are prescribed directly. No entangled three-qubit preparation, CNOT/H evolution, measurement projectors, Born-rule distribution or quantum channel is defined. The scalar weight theorem has no outcome argument and does not derive measurement probabilities. No operator-unitarity theorem is added. Complex two-amplitude recovery was already formalized; a full complex eight-dimensional teleportation circuit, decoherence and tomography are not.
 
-Bell basis vectors, orthogonality, measurement projectors and Born-rule probabilities are not defined. The sum-of-quarters theorem does not establish that these branches occur with probability 1/4. The matrices are explicit, but an adjoint-based unitarity theorem is not included. The eight-dimensional three-qubit tensor space, entanglement with an external system, physical transmission, quantum noise and memory are outside this model. The theorem name fidelity_exact denotes state equality; no fidelity function is defined.
-
-## Value and novelty
-
-Reusable correction identities for a future derivation of the branch table from a complete state-space model. Mathematical novelty and first-formalization status have not been assessed.
+The old API and MasterSuite.teleportation field are retained. QuantumPhysicsFullSuite.quantum_teleportation is an alternate accessor. The formal suite has additional real-interface fields, so manual constructors need to supply them. This extends an existing module and adds no direct import. Scientific novelty and first-formalization claims have not been assessed.
 
 ## Verification
 
-[Validation record](../VERIFICATION.en.md). Entry point: `QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite`.
-
-- [`teleportation_fidelity_exact`](../../Verification/QuantumTeleportationProtocol.lean#L73)
-- [`branch_probabilities_sum`](../../Verification/QuantumTeleportationProtocol.lean#L82)
+[Validation](../VERIFICATION.en.md). Entry point: `QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite`.

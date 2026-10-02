@@ -25,3 +25,17 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoShamirSecretSharing](../06_cryptography_and_zk/CryptoShamirSecretSharing.en.md)
 
 - [CryptoMerkleTree](../06_cryptography_and_zk/CryptoMerkleTree.en.md)
+
+- [CryptoBLSSignatureAggregation](../06_cryptography_and_zk/CryptoBLSSignatureAggregation.en.md)
+
+- [CryptoSchnorrSignature](../06_cryptography_and_zk/CryptoSchnorrSignature.en.md)
+
+- [CryptoElGamalEncryption](../06_cryptography_and_zk/CryptoElGamalEncryption.en.md)
+
+- [CryptoKZGPolynomialCommitment](../06_cryptography_and_zk/CryptoKZGPolynomialCommitment.en.md)
+
+- [CryptoSumcheckProtocol](../06_cryptography_and_zk/CryptoSumcheckProtocol.en.md)
+
+- [CryptoR1CSConstraintSystem](../06_cryptography_and_zk/CryptoR1CSConstraintSystem.en.md)
+
+- [CryptoGroth16SNARK](../06_cryptography_and_zk/CryptoGroth16SNARK.en.md)

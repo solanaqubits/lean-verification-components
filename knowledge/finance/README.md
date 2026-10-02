@@ -30,3 +30,15 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [DeFiImpermanentLoss](../08_finance_and_risk/DeFiImpermanentLoss.en.md)
 
 - [DeFiERC4626Vault](../08_finance_and_risk/DeFiERC4626Vault.en.md)
+
+- [DeFiERC4626InflationDefense](../08_finance_and_risk/DeFiERC4626InflationDefense.en.md)
+
+- [DeFiCDPLiquidation](../08_finance_and_risk/DeFiCDPLiquidation.en.md)
+
+- [DeFiConstantProductSwap](../08_finance_and_risk/DeFiConstantProductSwap.en.md)
+
+- [DeFiFlashLoan](../08_finance_and_risk/DeFiFlashLoan.en.md)
+
+- [DeFiOvercollateralizedLending](../08_finance_and_risk/DeFiOvercollateralizedLending.en.md)
+
+- [DeFiBondingCurve](../08_finance_and_risk/DeFiBondingCurve.en.md)

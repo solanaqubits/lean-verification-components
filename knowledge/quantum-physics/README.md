@@ -37,3 +37,17 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumNoCloningTheorem](../07_quantum_physics_and_optics/QuantumNoCloningTheorem.en.md)
 
 - [QuantumBB84Protocol](../07_quantum_physics_and_optics/QuantumBB84Protocol.en.md)
+
+- [QuantumBernsteinVazirani](../07_quantum_physics_and_optics/QuantumBernsteinVazirani.en.md)
+
+- [QuantumBitFlipCode](../07_quantum_physics_and_optics/QuantumBitFlipCode.en.md)
+
+- [QuantumBellCHSH](../07_quantum_physics_and_optics/QuantumBellCHSH.en.md)
+
+- [SolarisMithraCore](../07_quantum_physics_and_optics/SolarisMithraCore.en.md)
+
+- [OpticalLossAttenuation](../07_quantum_physics_and_optics/OpticalLossAttenuation.en.md)
+
+- [ThermoOpticPhaseDrift](../07_quantum_physics_and_optics/ThermoOpticPhaseDrift.en.md)
+
+- [SolarisPhysicalModels](../07_quantum_physics_and_optics/SolarisPhysicalModels.en.md)

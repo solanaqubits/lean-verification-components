@@ -3,7 +3,7 @@ id: DistributedVectorClocks
 language: en
 section: distributed
 source: Verification/DistributedVectorClocks.lean
-source_sha256: f8ca20c92f8de535fd77073f7fed664650f9f150d079e3763dbf0c8de3c683e0
+source_sha256: 767c56015644bb374cbe6af6a14d85c637a2ab9dc1dd9f964238e0560845d26b
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,22 +14,16 @@ status: reviewed
 
 ## Verified result
 
-Componentwise comparison of two natural-number counters is reflexive, transitive and antisymmetric. Its strict variant (comparison and inequality) is transitive. Either local tick strictly increases the vector. Componentwise maximum is commutative and is a least upper bound: both input bounds and minimality against every common upper bound are proved. Incomparability is symmetric and irreflexive, with witnesses (1,0) and (0,1).
+The component preserves reflexivity, transitivity and antisymmetry of componentwise order, strict-order transitivity, both local-tick inequalities, merge as a least upper bound, and incomparability properties. VectorClock2 is an abbreviation for the existing VClock2. receive1/receive2 merge the supplied counters and increment the receiving coordinate. For both operations, the result strictly exceeds the local vector and dominates the message vector. The concrete vectors tick1(0,0) and tick2(0,0) are incomparable.
 
 ## Assumptions and limitations
 
-VClock2 contains exactly two unbounded natural counters. The predicates le and lt describe vector order. concurrent means incomparability, not an independently defined relation on network events. No event histories, send/receive actions, process-order relation, message graph or timestamp assignment are encoded. Thus no equivalence between vector order and an independently defined happens-before relation is proved.
+These are algebraic properties of pairs of unbounded natural counters. No event identities, execution histories, message matching, network transition system or correspondence between vector order and event-level happens-before is formalized. The concurrency example proves incomparability of vectors, not independence of actual concurrent executions, and does not by itself close the event-model gap of the scalar Lamport component.
 
-merge is only componentwise maximum; a full receive transition that merges and then ticks is not specified. These lemmas do not prove delivery guarantees, causal consistency or independence of real events. N > 2 and dynamic membership, matrix clocks, asynchronous delivery, counter overflow and network failures are outside this model. The partial-order laws are explicit theorems; no Lean PartialOrder instance is installed.
+Existing definitions, theorem names and master entry point remain available. New vector_le_* names and distributed_vector_clocks_master_suite provide alternate entry points. The existing formal suite now has additional receive and concrete-incomparability fields; callers manually constructing it must provide them. No extra direct module import is introduced.
 
-## Value and novelty
-
-Reusable counter-order and least-upper-bound lemmas for future distributed execution models. Mathematical novelty and first-formalization claims have not been assessed.
+Dimensions above two, dynamic membership, interval tree clocks, vector compression, matrix clocks, overflow, failure detectors and implementation correctness are outside the model. Scientific novelty and first-formalization claims have not been assessed.
 
 ## Verification
 
-[Validation record](../VERIFICATION.en.md). Entry point: `DistributedVectorClocks.distributed_vector_clocks_master_verification_suite`.
-
-- [`lt_trans`](../../Verification/DistributedVectorClocks.lean#L26)
-- [`merge_le`](../../Verification/DistributedVectorClocks.lean#L57)
-- [`concurrent_witness_exists`](../../Verification/DistributedVectorClocks.lean#L70)
+[Validation](../VERIFICATION.en.md). Entry point: `DistributedVectorClocks.distributed_vector_clocks_master_suite`.
