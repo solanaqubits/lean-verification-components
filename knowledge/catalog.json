@@ -609,6 +609,8 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumStandardQuantumLimit",
+        "Verification.CryptoSchnorrBatchVerification",
         "Verification.MithraicPhaseCollapse",
         "Verification.CryptoMuSig2Aggregation",
         "Verification.DistributedRaftCompleteBridge",
@@ -1273,6 +1275,22 @@
       "section": "quantum-physics",
       "source": "Verification/MithraicPhaseCollapse.lean",
       "card": "knowledge/03_quantum_physics_and_optics/MithraicPhaseCollapse.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoSchnorrBatchVerification",
+      "section": "cryptography",
+      "source": "Verification/CryptoSchnorrBatchVerification.lean",
+      "card": "knowledge/07_cryptography/CryptoSchnorrBatchVerification.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumStandardQuantumLimit",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumStandardQuantumLimit.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumStandardQuantumLimit.md",
       "project_imports": [],
       "novelty": "not-assessed"
     }

@@ -59,3 +59,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [ChipPlacementCertificate](../07_quantum_physics_and_optics/ChipPlacementCertificate.md): exact 256-node bounds, positive dimensions, unique IDs, and pairwise disjoint closed rectangles; external provenance check.
 
 - [MithraicPhaseCollapse](../03_quantum_physics_and_optics/MithraicPhaseCollapse.md): scalar visibility bounds, fixed-maximum contrast decay, and a threshold specification; no quantum decoherence or automatic dump-port routing.
+
+- [QuantumStandardQuantumLimit](../03_quantum_physics_and_optics/QuantumStandardQuantumLimit.md): exact scalar noise minimum, unique optimizer, and an explicitly calibrated SQL-shaped bound.

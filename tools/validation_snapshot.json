@@ -1,18 +1,20 @@
 {
-  "modules_checked": 127,
+  "modules_checked": 129,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 7918,
+    "declarations": 7988,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "33a01743b5705116a6944d3e3ad15f8fab1aa3833d203f5ef7f2fbbc9ef74547",
+    "Verification.MasterSuite": "7701a637edfeccbf5f1a93e8c96374906833d07f4cca1b796f4971658c7675ec",
+    "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
+    "Verification.CryptoSchnorrBatchVerification": "e034ca9a562a8563e805b3963aeb5c00039bf91db54560d56e75a8808d10e9f8",
     "Verification.MithraicPhaseCollapse": "b55654dcd4cc96fe2708bb1656a4f6a5d985d43a54d920162e506e745ede82a8",
     "Verification.CryptoMuSig2Aggregation": "5236457dfbdf59b40499475fe5f0a70a5d00118bc14bffe572db0b9adafa5f44",
     "Verification.DistributedRaftCompleteBridge": "f7f149d890c8b09e481ff55acd7a36ebe3eb4a7d4d100f76257fa5afd7b4f35a",
@@ -139,22 +141,22 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.4.4: scalar two-nonce aggregation completeness and restricted naive-key cancellation barrier; scalar visibility bounds, fixed-maximum monotonicity and threshold validity. No cryptographic rogue-key security or quantum decoherence is claimed.",
+  "description": "Public v0.4.5: exact finite-field Schnorr batch acceptance counts and rational fractions for fixed nonzero discrepancies; scalar noise optimum and SQL-shaped bounds under explicit calibration. No signature security, sampler correctness or physical detector certification is claimed.",
   "independent_axiom_audit": {
-    "declarations": 7918,
+    "declarations": 7988,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 26,
+    "passed": 28,
     "runs": [
-      26
+      28
     ],
     "note": "Public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 94,
-  "full_build_jobs": 3509,
+  "master_direct_imports": 96,
+  "full_build_jobs": 3511,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -210,7 +212,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "23a1d55f56bd820cd1401c4eaa937d27bca75f9e81ee754abd3fd3fb6e654c20",
+  "root_source_sha256": "11a71ee44a957be4178959da2e2a99646876b0d056351d9b82ab281b6327d134",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -279,5 +281,38 @@
     "nonmarkovian_reservoir": false,
     "physical_device_certified": false
   },
-  "release_tag": "v0.4.4"
+  "schnorr_batch_scope": {
+    "field": "ZMod q with prime q",
+    "fixed_nonzero_discrepancy": true,
+    "coefficient_space": "all vectors, including zero coefficients",
+    "exact_single_round_count": true,
+    "exact_rational_fraction": true,
+    "independent_round_product_count": true,
+    "zero_rounds_fraction_one": true,
+    "scalar_discrepancy_to_batch_equation": true,
+    "probability_measure_or_sampler_implemented": false,
+    "adaptive_batch_security": false,
+    "euf_cma": false,
+    "elliptic_curve_implementation": false,
+    "csprng": false,
+    "bip340_coefficient_derivation": false,
+    "regression": "Exhaustive counts over ZMod 3, deterministic cancellation, zero residuals, single coordinate and zero rounds."
+  },
+  "quantum_sql_scope": {
+    "field": "Real",
+    "positive_coefficients_and_intensity": true,
+    "exact_square_remainder": true,
+    "attained_lower_bound": true,
+    "unique_positive_optimizer": true,
+    "balanced_noise_contributions": true,
+    "strict_gap_away_from_optimum": true,
+    "conditional_calibrated_variance_and_deviation": true,
+    "calibration_derived_from_quantum_model": false,
+    "random_processes_or_covariance": false,
+    "spectral_density_or_bandwidth_mapping": false,
+    "langevin_dynamics": false,
+    "physical_device_certified": false,
+    "regression": "Unequal coefficients with optimum I=2; tight calibration; failed bound without calibration and outside positive-intensity domain."
+  },
+  "release_tag": "v0.4.5"
 }

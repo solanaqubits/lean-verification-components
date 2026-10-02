@@ -28,19 +28,36 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **127 Lean files** under `Verification/`, including 125 subject modules and
+The [validation record](knowledge/VERIFICATION.en.md) covers **129 Lean files** under `Verification/`, including 127 subject modules and
 two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **94 modules**. The project-wide audit checked
-**7,918 declarations**, including generated declarations, with only `propext`,
+suites and directly imports **96 modules**. The project-wide audit checked
+**7,988 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The public release build completed with 3,509 jobs, including dependencies,
-and 26 public regression tests passed without skips. These are recorded
+The public release build completed with 3,511 jobs, including dependencies,
+and 28 public regression tests passed without skips. These are recorded
 validation results, not a promise that every future commit or toolchain will pass.
 
-## Release v0.4.4
+## Release v0.4.5
 
-This release adds two scalar algebraic models, bringing the registry to 94 direct imports.
+This release adds finite-field batch counting and conditional scalar noise
+optimization, bringing the registry to 96 direct imports.
+
+- [Schnorr batch verification](knowledge/07_cryptography/CryptoSchnorrBatchVerification.md)
+  proves completeness and exact accepting fractions `1/q` and `(1/q)^k` for
+  a fixed nonzero discrepancy over a prime field. The coefficient space contains
+  all vectors, including zeros. Uniform independent sampling is the interpretation
+  of the finite counting ratios, not an implemented sampler. EUF-CMA security,
+  CSPRNG correctness, and the BIP340 coefficient algorithm are outside scope.
+- [Conditional standard quantum limit](knowledge/03_quantum_physics_and_optics/QuantumStandardQuantumLimit.md)
+  proves the attained minimum `2*sqrt(A*B)`, balance, and unique positive optimizer
+  `sqrt(A/B)` of `A/I + B*I`. SQL-shaped bounds require explicit calibration.
+  The omitted noise correlation term is a modeling choice; no physical derivation
+  of calibration or detector certification is claimed.
+
+## Earlier additions in v0.4.4
+
+Release v0.4.4 added two scalar algebraic models, bringing the registry to 94 direct imports.
 
 - [MuSig2-style aggregation](knowledge/07_cryptography/CryptoMuSig2Aggregation.md)
   proves two-signer, two-nonce completeness and a restricted barrier to naive key

@@ -468,5 +468,21 @@
     "field": "mithraic_collapse",
     "constructor": "photonics_interposer_master_suite",
     "proof": "MithraicPhaseCollapse.mithraic_phase_collapse_master_suite"
+  },
+  "Verification.CryptoSchnorrBatchVerification": {
+    "suite_struct": "SchnorrBatchVerificationFormalSuite",
+    "suite_type": "CryptoSchnorrBatchVerification.SchnorrBatchVerificationFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "schnorr_batch",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoSchnorrBatchVerification.schnorr_batch_verification_master_suite"
+  },
+  "Verification.QuantumStandardQuantumLimit": {
+    "suite_struct": "QuantumSQLFormalSuite",
+    "suite_type": "QuantumStandardQuantumLimit.QuantumSQLFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "standard_quantum_limit",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumStandardQuantumLimit.quantum_sql_master_suite"
   }
 }

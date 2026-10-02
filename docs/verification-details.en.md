@@ -1586,3 +1586,22 @@ scalars. Positive total intensity excludes the dark 0/0 case. Equality at the
 threshold is accepted; zero contrast is rejected only by a positive threshold.
 The extrema are not simultaneous MZI output-port intensities. No quantum
 decoherence, physical noise mechanism, or automatic dump-port control is proved.
+
+
+## Finite-field batch counting and conditional noise optimization
+
+`CryptoSchnorrBatchVerification` proves exact accepting counts and rational
+fractions for a fixed nonzero discrepancy over `ZMod q`, with prime `q`.
+There are `q^(n-1)` accepting vectors out of `q^n`, giving `1/q`;
+full Cartesian products give `(1/q)^k` for repeated checks. Coefficients include
+zero. The interpretation as independent uniform sampling does not formalize a
+sampler or an adversarial security game. EUF-CMA, CSPRNG correctness, and BIP340
+coefficient derivation are not established.
+
+`QuantumStandardQuantumLimit` proves that `A/I + B*I`, for positive parameters,
+has attained minimum `2*sqrt(A*B)` and unique optimizer `sqrt(A/B)`, where the
+contributions balance. SQL-shaped variance and square-root bounds require the
+explicit calibration `(hbar/(2*m*omega_m))^2 ≤ A*B`. Calibration and omission of
+noise correlations are external model assumptions. Quantum commutators,
+spectral densities, Langevin dynamics, and physical detector performance are
+not formalized.

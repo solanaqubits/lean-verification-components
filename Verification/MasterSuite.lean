@@ -1,3 +1,5 @@
+import Verification.QuantumStandardQuantumLimit
+import Verification.CryptoSchnorrBatchVerification
 import Verification.MithraicPhaseCollapse
 import Verification.CryptoMuSig2Aggregation
 import Verification.DistributedRaftCompleteBridge
@@ -97,6 +99,10 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open QuantumStandardQuantumLimit
+
+open CryptoSchnorrBatchVerification
 
 open MithraicPhaseCollapse
 open QuantumOptomechanicalCoupling
@@ -247,6 +253,7 @@ structure CryptoFullSuite : Prop where
   groth16_snark : CryptoGroth16SNARK.CryptoGroth16FormalSuite
   feldman_vss : CryptoFeldmanVSS.FeldmanVSSFormalSuite
   musig2_aggregation : CryptoMuSig2Aggregation.MuSig2AggregationFormalSuite
+  schnorr_batch : CryptoSchnorrBatchVerification.SchnorrBatchVerificationFormalSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -274,6 +281,7 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoGroth16SNARK.crypto_groth16_master_verification_suite
   feldman_vss := CryptoFeldmanVSS.crypto_feldman_vss_master_suite
   musig2_aggregation := CryptoMuSig2Aggregation.crypto_musig2_aggregation_master_suite
+  schnorr_batch := CryptoSchnorrBatchVerification.schnorr_batch_verification_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :
@@ -311,6 +319,7 @@ structure QuantumPhysicsFullSuite : Prop where
   bit_flip_code : QuantumBitFlipCode.QuantumBitFlipCodeFormalSuite
   bell_chsh : QuantumBellCHSH.QuantumBellCHSHFormalSuite
   optomechanical_coupling : QuantumOptomechanicalCoupling.OptomechanicalCouplingFormalSuite
+  standard_quantum_limit : QuantumStandardQuantumLimit.QuantumSQLFormalSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -339,6 +348,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumBellCHSH.quantum_bell_chsh_master_verification_suite
   optomechanical_coupling := by
     exact QuantumOptomechanicalCoupling.quantum_optomechanical_coupling_master_suite
+  standard_quantum_limit := QuantumStandardQuantumLimit.quantum_sql_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

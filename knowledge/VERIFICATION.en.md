@@ -4,11 +4,11 @@
 
 The Lean sources are distributed with SHA-256 hashes in
 [validation_snapshot.json](../tools/validation_snapshot.json). The imported proof
-snapshot contains 127 Lean files under Verification/, 94 direct MasterSuite
-imports, and 7,918 declarations including generated declarations.
+snapshot contains 129 Lean files under Verification/, 96 direct MasterSuite
+imports, and 7,988 declarations including generated declarations.
 
-For release v0.4.4 the public export passed strict compilation with
-3,509 build jobs and 26 public regression tests without skips.
+For release v0.4.5 the public export passed strict compilation with
+3,511 build jobs and 28 public regression tests without skips.
 The complete module verifier and independent axiom audit passed; only the
 standard axioms listed below occurred.
 
@@ -79,3 +79,22 @@ scalars. Positive total intensity excludes the dark 0/0 case. Equality at the
 threshold is accepted; zero contrast is rejected only by a positive threshold.
 The extrema are not simultaneous MZI output-port intensities. No quantum
 decoherence, physical noise mechanism, or automatic dump-port control is proved.
+
+
+## Finite-field batch counting and conditional noise optimization
+
+`CryptoSchnorrBatchVerification` proves exact accepting counts and rational
+fractions for a fixed nonzero discrepancy over `ZMod q`, with prime `q`.
+There are `q^(n-1)` accepting vectors out of `q^n`, giving `1/q`;
+full Cartesian products give `(1/q)^k` for repeated checks. Coefficients include
+zero. The interpretation as independent uniform sampling does not formalize a
+sampler or an adversarial security game. EUF-CMA, CSPRNG correctness, and BIP340
+coefficient derivation are not established.
+
+`QuantumStandardQuantumLimit` proves that `A/I + B*I`, for positive parameters,
+has attained minimum `2*sqrt(A*B)` and unique optimizer `sqrt(A/B)`, where the
+contributions balance. SQL-shaped variance and square-root bounds require the
+explicit calibration `(hbar/(2*m*omega_m))^2 ≤ A*B`. Calibration and omission of
+noise correlations are external model assumptions. Quantum commutators,
+spectral densities, Langevin dynamics, and physical detector performance are
+not formalized.
