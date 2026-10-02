@@ -23,22 +23,40 @@ the components in larger formal developments.
 | [Cryptographic algebra](knowledge/cryptography/README.md) | Diffusion, traces, folding, and commitment identities |
 | [Quantum algebra, photonics, and mechanics](knowledge/quantum-physics/README.md) | Matrices, symmetries, and prescribed energy models |
 | [Finance and mechanisms](knowledge/finance/README.md) | Balances, reserves, fees, and portfolio risk |
-| [Distributed consensus](knowledge/distributed/README.md) | Quorums, reachable election safety, and conditional log properties |
+| [Distributed consensus](knowledge/distributed/README.md) | Quorums, conditional election safety, and local log append |
 | [Registry and audit](knowledge/verification/README.md) | Selected suites and axiom dependencies |
 
-## Verified snapshot — v0.4.1
+## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **110 Lean files** under `Verification/`, including 108 subject modules and
+The [validation record](knowledge/VERIFICATION.en.md) covers **114 Lean files** under `Verification/`, including 112 subject modules and
 two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **86 modules**. The project-wide audit checked
-**7,048 declarations**, including generated declarations, with only `propext`,
+suites and directly imports **90 modules**. The project-wide audit checked
+**7,397 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The clean strict build completed with 3,492 jobs, including dependencies, without
-warnings. All 19 public tests passed with live Lean checks enabled and no skips.
-Both the project verifier and the independent axiom audit passed. See the
-[verification record](knowledge/VERIFICATION.en.md) and [changelog](CHANGELOG.md)
-for the v0.4.1 results and scope. These results apply to this release and toolchain.
+The public release build completed with 3,496 jobs, including dependencies,
+and 24 public regression tests passed without skips. These are recorded
+validation results, not a promise that every future commit or toolchain will pass.
+
+## Release v0.4.2
+
+This release adds scalar Feldman share verification, translation and rectangular
+placement geometry, an exact 256-node placement certificate, and scalar
+optomechanical coupling. The concrete certificate is a separate registry module,
+so the registry has 90 direct imports.
+
+- Feldman verification and reconstruction are algebraic statements over the reals.
+  The public scalar commitment reveals the secret as `A0/G`; hiding is not claimed.
+- The placement certificate checks 256 nodes in a 4000 by 4000 micrometre die,
+  positive dimensions, unique identifiers, and pairwise disjoint closed rectangles.
+  Bounds and nonintersection are separate statements. The packaged JSON and
+  deterministic converter permit an external provenance check; Lean does not
+  verify the JSON parser or SHA-256 implementation. No routes, optical losses, or
+  propagation delays are certified.
+- Optomechanics proves normalized scalar energy/force identities, affine frequency
+  shifts, and properties of prescribed damping rates and an exponential envelope.
+  The physical regime of `4*g^2/kappa` is documented, not derived in Lean. Neither
+  quantum cooling nor full device stability is proved.
 
 ## What the proofs establish
 

@@ -404,5 +404,37 @@
     "field": "raft_state_machine",
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedRaftStateMachine.raft_state_machine_master_suite"
+  },
+  "Verification.CryptoFeldmanVSS": {
+    "suite_struct": "FeldmanVSSFormalSuite",
+    "suite_type": "CryptoFeldmanVSS.FeldmanVSSFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "feldman_vss",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoFeldmanVSS.crypto_feldman_vss_master_suite"
+  },
+  "Verification.ChipLayoutGeometry": {
+    "suite_struct": "ChipLayoutGeometryFormalSuite",
+    "suite_type": "SolarisLayout.ChipLayoutGeometryFormalSuite",
+    "parent": "PhotonicsInterposerFullSuite",
+    "field": "chip_layout",
+    "constructor": "photonics_interposer_master_suite",
+    "proof": "SolarisLayout.chip_layout_geometry_master_suite"
+  },
+  "Verification.QuantumOptomechanicalCoupling": {
+    "suite_struct": "OptomechanicalCouplingFormalSuite",
+    "suite_type": "QuantumOptomechanicalCoupling.OptomechanicalCouplingFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "optomechanical_coupling",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumOptomechanicalCoupling.quantum_optomechanical_coupling_master_suite"
+  },
+  "Verification.ChipPlacementCertificate": {
+    "suite_struct": "ChipPlacementCertificateSuite",
+    "suite_type": "SolarisLayout.ChipPlacementCertificateSuite",
+    "parent": "PhotonicsInterposerFullSuite",
+    "field": "chip_placement_certificate",
+    "constructor": "photonics_interposer_master_suite",
+    "proof": "SolarisLayout.chip_placement_certificate_master_suite"
   }
 }

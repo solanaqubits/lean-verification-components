@@ -12,7 +12,7 @@
 
 ## Scope
 
-Quorum intersection alone does not establish Leader Completeness. The operational Raft model proves election safety for reachable message-passing states. Leader Completeness remains conditional on log-history assumptions; global reachable-state Log Matching and the VoterEvolution bridge are not yet proved. No complete production Raft implementation or crash/recovery model is certified.
+Quorum intersection alone does not establish Leader Completeness. No full message-passing, failure, or distributed RPC model is proved correct.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
 

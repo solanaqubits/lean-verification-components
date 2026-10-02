@@ -1476,3 +1476,42 @@ the `HistoryValid`/`VoterEvolution` bridge, and unconditional Leader Completenes
 remain open; they are not assumed as guards in the transition relation.
 
 See the [scope card](../knowledge/09_distributed_systems/DistributedRaftStateMachine.md).
+
+
+## Scalar Feldman share verification
+
+`Verification/CryptoFeldmanVSS.lean` reuses the degree-at-most-one Shamir polynomial.
+For a nonzero real generator, verification against fixed coefficient commitments
+is equivalent to equality with the polynomial evaluation. Lagrange reconstruction
+commutes with scalar commitment, and two accepted shares at distinct coordinates
+recover the committed secret. This is not a full VSS protocol: reliable broadcast,
+complaints, dealer disqualification, finite-group discrete logarithms, and security
+against adversaries are outside the model. An explicit theorem shows that the
+constant commitment reveals the secret by division in the real scalar model.
+See the [English scope card](../knowledge/07_cryptography/CryptoFeldmanVSS.md).
+
+
+## Chip layout geometry and rational bounds
+
+`Verification/ChipLayoutGeometry.lean` proves that a common translation preserves
+squared and Euclidean distance. It equates edge inequalities with center bounds
+for a closed rectangular die. An exact rational list checker is proved sound and
+complete for these bounds, with a theorem transporting its result to real
+coordinates. The checker does not validate dimension signs, ID uniqueness,
+node counts, pairwise nonintersection, or fabrication rules. The SHA-256 string
+in the certificate is metadata without a proved relation to file bytes. No
+simulation manifest, routing model, optical loss, or delay is certified here.
+See the [scope card](../knowledge/07_quantum_physics_and_optics/ChipLayoutGeometry.md).
+
+
+## Scalar optomechanical coupling
+
+`Verification/QuantumOptomechanicalCoupling.lean` models normalized real-valued
+free and interaction energies. It proves the generalized-force derivative identity,
+affine cavity dispersion, enhancement by the prescribed rate `4*g^2/kappa` for
+nonzero enhanced coupling, and the algebraic positive-total-rate criterion.
+A stipulated exponential relaxation envelope decreases for positive total rate
+and is constant at the threshold. This does not prove quantum cooling or full
+coupled-system stability. Operator dynamics, thermal noise and physical scaling
+parameters remain outside the model. See the [scope card](../knowledge/03_quantum_physics_and_optics/QuantumOptomechanicalCoupling.md)
+for normalization, assumptions and the reference for the sideband approximation.

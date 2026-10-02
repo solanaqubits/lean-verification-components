@@ -609,6 +609,10 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.ChipPlacementCertificate",
+        "Verification.QuantumOptomechanicalCoupling",
+        "Verification.ChipLayoutGeometry",
+        "Verification.CryptoFeldmanVSS",
         "Verification.DistributedRaftStateMachine",
         "Verification.DistributedRaftLeaderCompleteness",
         "Verification.ThermoOpticPhaseDrift",
@@ -1093,6 +1097,42 @@
       "card": "knowledge/09_distributed_systems/DistributedRaftStateMachine.md",
       "project_imports": [
         "Verification.DistributedRaftLeaderCompleteness"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoFeldmanVSS",
+      "section": "cryptography",
+      "source": "Verification/CryptoFeldmanVSS.lean",
+      "card": "knowledge/07_cryptography/CryptoFeldmanVSS.md",
+      "project_imports": [
+        "Verification.CryptoShamirSecretSharing"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "ChipLayoutGeometry",
+      "section": "quantum-physics",
+      "source": "Verification/ChipLayoutGeometry.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/ChipLayoutGeometry.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumOptomechanicalCoupling",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumOptomechanicalCoupling.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumOptomechanicalCoupling.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "ChipPlacementCertificate",
+      "section": "quantum-physics",
+      "source": "Verification/ChipPlacementCertificate.lean",
+      "card": "knowledge/07_quantum_physics_and_optics/ChipPlacementCertificate.md",
+      "project_imports": [
+        "Verification.ChipLayoutGeometry"
       ],
       "novelty": "not-assessed"
     }

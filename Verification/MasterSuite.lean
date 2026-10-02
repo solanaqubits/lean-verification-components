@@ -1,3 +1,7 @@
+import Verification.ChipPlacementCertificate
+import Verification.QuantumOptomechanicalCoupling
+import Verification.ChipLayoutGeometry
+import Verification.CryptoFeldmanVSS
 import Verification.DistributedRaftStateMachine
 import Verification.DistributedRaftLeaderCompleteness
 import Verification.ThermoOpticPhaseDrift
@@ -89,6 +93,10 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open QuantumOptomechanicalCoupling
+
+open CryptoFeldmanVSS
 
 open DistributedRaftStateMachine
 open DistributedRaftLeaderCompleteness
@@ -229,6 +237,7 @@ structure CryptoFullSuite : Prop where
   sumcheck_protocol : CryptoSumcheckProtocol.CryptoSumcheckFormalSuite
   r1cs_system : CryptoR1CSConstraintSystem.CryptoR1CSFormalSuite
   groth16_snark : CryptoGroth16SNARK.CryptoGroth16FormalSuite
+  feldman_vss : CryptoFeldmanVSS.FeldmanVSSFormalSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -254,6 +263,7 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoR1CSConstraintSystem.crypto_r1cs_master_verification_suite
   groth16_snark := by
     exact CryptoGroth16SNARK.crypto_groth16_master_verification_suite
+  feldman_vss := CryptoFeldmanVSS.crypto_feldman_vss_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :
@@ -290,6 +300,7 @@ structure QuantumPhysicsFullSuite : Prop where
   bernstein_vazirani : QuantumBernsteinVazirani.QuantumBernsteinVaziraniFormalSuite
   bit_flip_code : QuantumBitFlipCode.QuantumBitFlipCodeFormalSuite
   bell_chsh : QuantumBellCHSH.QuantumBellCHSHFormalSuite
+  optomechanical_coupling : QuantumOptomechanicalCoupling.OptomechanicalCouplingFormalSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -316,6 +327,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumBitFlipCode.quantum_bit_flip_code_master_verification_suite
   bell_chsh := by
     exact QuantumBellCHSH.quantum_bell_chsh_master_verification_suite
+  optomechanical_coupling := by
+    exact QuantumOptomechanicalCoupling.quantum_optomechanical_coupling_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
@@ -467,11 +480,15 @@ structure PhotonicsInterposerFullSuite : Prop where
   mzi_core : SolarisMithraCore.MZIAnalyticalSuite
   optical_loss : SolarisOptics.OpticalLossSuite
   thermo_optic : SolarisThermoOptics.ThermoOpticSuite
+  chip_layout : SolarisLayout.ChipLayoutGeometryFormalSuite
+  chip_placement_certificate : SolarisLayout.ChipPlacementCertificateSuite
 
 theorem photonics_interposer_master_suite : PhotonicsInterposerFullSuite := {
   mzi_core := SolarisMithraCore.mzi_master_verification_suite
   optical_loss := SolarisOptics.optical_loss_master_suite
   thermo_optic := SolarisThermoOptics.thermo_optic_master_suite
+  chip_layout := SolarisLayout.chip_layout_geometry_master_suite
+  chip_placement_certificate := SolarisLayout.chip_placement_certificate_master_suite
 }
 
 /-- Eleven top-level packages of selected guarantees.

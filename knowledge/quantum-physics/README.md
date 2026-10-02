@@ -51,3 +51,9 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [ThermoOpticPhaseDrift](../07_quantum_physics_and_optics/ThermoOpticPhaseDrift.en.md)
 
 - [SolarisPhysicalModels](../07_quantum_physics_and_optics/SolarisPhysicalModels.en.md)
+
+- [ChipLayoutGeometry](../07_quantum_physics_and_optics/ChipLayoutGeometry.md): universal translation invariance and exact rational placement bounds; concrete data are certified separately.
+
+- [QuantumOptomechanicalCoupling](../03_quantum_physics_and_optics/QuantumOptomechanicalCoupling.md): scalar energy/force identities, affine dispersion, prescribed damping and relaxation; no quantum cooling theorem.
+
+- [ChipPlacementCertificate](../07_quantum_physics_and_optics/ChipPlacementCertificate.md): exact 256-node bounds, positive dimensions, unique IDs, and pairwise disjoint closed rectangles; external provenance check.

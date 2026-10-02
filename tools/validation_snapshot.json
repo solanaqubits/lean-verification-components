@@ -1,18 +1,23 @@
 {
-  "modules_checked": 110,
+  "modules_checked": 114,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 7048,
+    "declarations": 7397,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "082f9293fb43bfad753167c196f5102741c4a4a8e5b7689963f24770d3f1c866",
+    "Verification.MasterSuite": "03ae1cf8402486e65154fc535918430d65c4a81fbd59f4111cd7d80c9eef0286",
+    "Verification.ChipPlacementCertificate": "0f2630c29d8273c5c0d1010edad4096b1d0b3866393d84fe33e265e649caab3b",
+    "Verification.ChipLayoutGeometry": "e89d4dd29d86901037b766f572773ef786be264763de13dbc95af96d813d87ae",
+    "Verification.QuantumOptomechanicalCoupling": "b77ce2d085411707b3de3a2546809d41ea21f13f1ff20b8c40b3f281eb087e54",
+    "Verification.CryptoFeldmanVSS": "c093b765d886c521e4c47426cc588051f368073fb43ed62fb924c80073cb9af4",
+    "Verification.CryptoShamirSecretSharing": "59fde5cd871b66206025b821790f8dfc5610bfc2620f4f3e2bcb265e6dfeea4f",
     "Verification.DistributedRaftStateMachine": "9ad20662f35a4be873b876c18c98935a0e177d93ecaa1199a87f775ead059601",
     "Verification.DistributedRaftLeaderCompleteness": "fc62d005b9ad27383c19258dd72ddea6a1b5066f9d3cf3c5230151ecedf337cd",
     "Verification.ThermoOpticPhaseDrift": "f71198898e0a95337ba634905be7802041af7f0d71d8beb685d62980cfe803bf",
@@ -47,7 +52,6 @@
     "Verification.DeFiImpermanentLoss": "4fafd51381bfb10fe0f73ffa134d33535237f992471f7d218bb2771eae78d72e",
     "Verification.DistributedTwoPhaseCommit": "9144db157ea7ce2ce777539d70f9302adada81443260bb6f16921adf4ef9763f",
     "Verification.QuantumSuperdenseCoding": "b97f0289f7d571fb6aa827d37289b89f337261168d723460a98aac7df1a8a2ea",
-    "Verification.CryptoShamirSecretSharing": "59fde5cd871b66206025b821790f8dfc5610bfc2620f4f3e2bcb265e6dfeea4f",
     "Verification.DeFiTWAPOracle": "8e444f00451a648e2c06962e2a282a1867a20bc4ff5c1118a5bd496564de0f2c",
     "Verification.QuantumGroverSearch": "5cbc65cf91941fbf9c483045f1afcdbb963f2e6f4502bd7d0fdca18635978faf",
     "Verification.DistributedVectorClocks": "767c56015644bb374cbe6af6a14d85c637a2ab9dc1dd9f964238e0560845d26b",
@@ -122,28 +126,30 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Validation of the public v0.4.1 source distribution; counts include generated declarations.",
+  "description": "Verified exact 256-node placement: count, unique array IDs, positive dimensions, bounds and disjoint closed rectangles; external JSON/hash provenance.",
   "independent_axiom_audit": {
-    "declarations": 7048,
+    "declarations": 7397,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 19,
+    "passed": 24,
     "runs": [
-      19
+      24
     ],
-    "note": "Complete public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests. Private export-tool tests are not part of this distribution."
+    "note": "Complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 86,
-  "full_build_jobs": 3492,
+  "master_direct_imports": 90,
+  "full_build_jobs": 3496,
   "pipeline": {
-    "clean_strict_build": true,
+    "strict_build": true,
     "verify_all": true,
     "independent_axiom_audit": true,
     "live_tests": true,
-    "knowledge_catalog": true
+    "knowledge_catalog": true,
+    "exact_data_import_check": true,
+    "clean_project_build": true
   },
   "source_unchanged_during_verification": true,
   "raft_state_machine_scope": {
@@ -153,5 +159,42 @@
     "global_reachable_log_matching": false,
     "history_valid_voter_evolution_bridge": false
   },
-  "release_tag": "v0.4.1"
+  "feldman_vss_scope": {
+    "scalar_field": "Real",
+    "degree_at_most": 1,
+    "fixed_commitment_share_consistency": true,
+    "verified_share_reconstruction": true,
+    "cryptographic_hiding": false,
+    "finite_group_security": false,
+    "complaints_and_disqualification": false
+  },
+  "chip_layout_scope": {
+    "translation_distance_invariance": true,
+    "rational_checker_sound_and_complete_for_bounds": true,
+    "exact_real_embedding": true,
+    "concrete_manifest_certified": true,
+    "external_sha256_binding": "checked by Python converter; not formally verified",
+    "dimension_signs_checked": true,
+    "node_count_and_unique_ids_checked": true,
+    "nonintersection_checked": true,
+    "physical_routing_modeled": false,
+    "general_bounds_checker_checks_dimensions": false,
+    "closed_rectangles_disjoint": true,
+    "minimum_gap_proved": false
+  },
+  "optomechanical_scope": {
+    "scalar_normalized_energy": true,
+    "force_derivative_identity": true,
+    "affine_frequency": true,
+    "prescribed_damping_rate": true,
+    "positive_rate_envelope_decay": true,
+    "operator_hamiltonian": false,
+    "sideband_approximation_derived": false,
+    "thermal_cooling_proved": false,
+    "full_coupled_stability": false,
+    "physical_device_certified": false,
+    "force_strict_monotonicity": true,
+    "arbitrary_positive_damping_enhancement": true
+  },
+  "release_tag": "v0.4.2"
 }
