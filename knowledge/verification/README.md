@@ -6,7 +6,7 @@
 
 | Module | Verified result |
 |---|---|
-| [MasterSuite](MasterSuite.en.md) | Eleven suites of selected theorems with 92 direct imports. The registry does not contain every declaration in the project. |
+| [MasterSuite](MasterSuite.en.md) | Eleven suites of selected theorems with 94 direct imports. The registry does not contain every declaration in the project. |
 | [AxiomAudit](AxiomAudit.en.md) | The #audit_axioms command rejects disallowed transitive axioms of a selected declaration, including sorryAx. |
 
 ## Scope

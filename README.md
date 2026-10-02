@@ -28,17 +28,31 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **125 Lean files** under `Verification/`, including 123 subject modules and
+The [validation record](knowledge/VERIFICATION.en.md) covers **127 Lean files** under `Verification/`, including 125 subject modules and
 two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **92 modules**. The project-wide audit checked
-**7,812 declarations**, including generated declarations, with only `propext`,
+suites and directly imports **94 modules**. The project-wide audit checked
+**7,918 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The public release build completed with 3,507 jobs, including dependencies,
+The public release build completed with 3,509 jobs, including dependencies,
 and 26 public regression tests passed without skips. These are recorded
 validation results, not a promise that every future commit or toolchain will pass.
 
-## Release v0.4.3
+## Release v0.4.4
+
+This release adds two scalar algebraic models, bringing the registry to 94 direct imports.
+
+- [MuSig2-style aggregation](knowledge/07_cryptography/CryptoMuSig2Aggregation.md)
+  proves two-signer, two-nonce completeness and a restricted barrier to naive key
+  subtraction. Weights and challenges are supplied real scalars. Hash-based
+  rogue-key resistance, secp256k1, and the two-round network protocol are not proved.
+  Fixed weights admit a chosen target key; scalar public keys reveal their secrets.
+- [Interference visibility](knowledge/03_quantum_physics_and_optics/MithraicPhaseCollapse.md)
+  proves bounds, exact zero/unit contrast criteria, fixed-maximum monotonicity,
+  and threshold validity. Equality at the threshold is accepted. These results
+  do not establish quantum decoherence or physical dump-port control.
+
+## Earlier additions in v0.4.3
 
 This release adds the Raft network induction and complete bridge, with eleven new
 Lean files including supporting proofs. `reachable_global_log_matching` and

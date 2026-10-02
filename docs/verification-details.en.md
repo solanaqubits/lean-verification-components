@@ -1570,3 +1570,19 @@ and is constant at the threshold. This does not prove quantum cooling or full
 coupled-system stability. Operator dynamics, thermal noise and physical scaling
 parameters remain outside the model. See the [scope card](../knowledge/03_quantum_physics_and_optics/QuantumOptomechanicalCoupling.md)
 for normalization, assumptions and the reference for the sideband approximation.
+
+## Scalar aggregation and visibility
+
+`CryptoMuSig2Aggregation` proves scalar two-signer, two-nonce completeness,
+assembly from valid partial signatures, and a restricted naive-key cancellation
+barrier under distinct weights and a nonzero first key. It also proves that fixed
+weights admit a chosen aggregate key and that scalar public keys reveal secrets.
+This is not a cryptographic rogue-key security proof for BIP 327. Hash oracles,
+secp256k1, nonce-reuse defenses, and two-round network behavior are not modeled.
+
+`MithraicPhaseCollapse` proves visibility bounds, exact zero/unit contrast,
+monotonicity at a fixed maximum, and threshold acceptance/rejection over real
+scalars. Positive total intensity excludes the dark 0/0 case. Equality at the
+threshold is accepted; zero contrast is rejected only by a positive threshold.
+The extrema are not simultaneous MZI output-port intensities. No quantum
+decoherence, physical noise mechanism, or automatic dump-port control is proved.

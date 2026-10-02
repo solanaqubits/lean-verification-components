@@ -41,3 +41,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoGroth16SNARK](../06_cryptography_and_zk/CryptoGroth16SNARK.en.md)
 
 - [CryptoFeldmanVSS](../07_cryptography/CryptoFeldmanVSS.md): scalar share consistency and reconstruction against fixed coefficient commitments.
+
+- [CryptoMuSig2Aggregation](../07_cryptography/CryptoMuSig2Aggregation.md): two-signer, two-nonce scalar completeness and a restricted naive-key cancellation barrier; no MuSig2 security claim.

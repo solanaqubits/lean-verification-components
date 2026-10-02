@@ -1,18 +1,20 @@
 {
-  "modules_checked": 125,
+  "modules_checked": 127,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 7812,
+    "declarations": 7918,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "78dd7f03591d9245efeb133fd43b9b1936bd082a309f43dd45b0aa61819960fd",
+    "Verification.MasterSuite": "33a01743b5705116a6944d3e3ad15f8fab1aa3833d203f5ef7f2fbbc9ef74547",
+    "Verification.MithraicPhaseCollapse": "b55654dcd4cc96fe2708bb1656a4f6a5d985d43a54d920162e506e745ede82a8",
+    "Verification.CryptoMuSig2Aggregation": "5236457dfbdf59b40499475fe5f0a70a5d00118bc14bffe572db0b9adafa5f44",
     "Verification.DistributedRaftCompleteBridge": "f7f149d890c8b09e481ff55acd7a36ebe3eb4a7d4d100f76257fa5afd7b4f35a",
     "Verification.DistributedRaftTraceMatching": "c2d10bb90f7718f171ffd6654d7dcee5224d862eccfe9f04778e37667a5e93b7",
     "Verification.DistributedRaftNetworkInduction": "dea39913e94b22e08afe089f8160e2d4db5f527ad88ca505c0e86033065f2809",
@@ -137,9 +139,9 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.4.3: global Raft Log Matching, operational Leader Completeness for actual commit events, and retention of already-held committed prefixes; unchanged fixed-cluster transitions.",
+  "description": "Public v0.4.4: scalar two-nonce aggregation completeness and restricted naive-key cancellation barrier; scalar visibility bounds, fixed-maximum monotonicity and threshold validity. No cryptographic rogue-key security or quantum decoherence is claimed.",
   "independent_axiom_audit": {
-    "declarations": 7812,
+    "declarations": 7918,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
@@ -151,8 +153,8 @@
     "note": "Public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 92,
-  "full_build_jobs": 3507,
+  "master_direct_imports": 94,
+  "full_build_jobs": 3509,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -208,7 +210,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "c9548b1d781c7dd7cb9e5e34d321f81229f0c0846749bed92212f132304ca1e4",
+  "root_source_sha256": "23a1d55f56bd820cd1401c4eaa937d27bca75f9e81ee754abd3fd3fb6e654c20",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -244,5 +246,38 @@
     "liveness": false,
     "regression": "Actual 14-step execution: term-1 commitment, term-2 election of a different leader, general completeness and retention theorem applications."
   },
-  "release_tag": "v0.4.3"
+  "musig2_aggregation_scope": {
+    "field": "Real",
+    "signers": 2,
+    "nonces_per_signer": 2,
+    "honest_completeness": true,
+    "valid_partial_assembly": true,
+    "fixed_weight_additivity": true,
+    "restricted_naive_subtraction_barrier": true,
+    "barrier_requires_distinct_weights_and_nonzero_first_key": true,
+    "fixed_weights_admit_arbitrary_target_key": true,
+    "public_scalar_key_recovery": true,
+    "hash_oracle": false,
+    "bip327_key_coefficient_algorithm": false,
+    "rogue_key_security_reduction": false,
+    "secp256k1": false,
+    "two_round_operational_protocol": false,
+    "nonce_reuse_protection": false,
+    "parity_tweaks_serialization": false
+  },
+  "mithraic_phase_collapse_scope": {
+    "field": "Real",
+    "positive_sum_excludes_dark_pattern": true,
+    "visibility_bounds": true,
+    "exact_zero_and_unit_contrast": true,
+    "fixed_maximum_monotonicity": true,
+    "threshold_specification": true,
+    "threshold_equality_accepted": true,
+    "density_matrix_decoherence": false,
+    "physical_noise_mechanism": false,
+    "automatic_dump_port_control": false,
+    "nonmarkovian_reservoir": false,
+    "physical_device_certified": false
+  },
+  "release_tag": "v0.4.4"
 }

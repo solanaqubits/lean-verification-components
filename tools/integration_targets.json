@@ -452,5 +452,21 @@
     "field": "raft_complete_bridge",
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite"
+  },
+  "Verification.CryptoMuSig2Aggregation": {
+    "suite_struct": "MuSig2AggregationFormalSuite",
+    "suite_type": "CryptoMuSig2Aggregation.MuSig2AggregationFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "musig2_aggregation",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoMuSig2Aggregation.crypto_musig2_aggregation_master_suite"
+  },
+  "Verification.MithraicPhaseCollapse": {
+    "suite_struct": "MithraicPhaseCollapseFormalSuite",
+    "suite_type": "MithraicPhaseCollapse.MithraicPhaseCollapseFormalSuite",
+    "parent": "PhotonicsInterposerFullSuite",
+    "field": "mithraic_collapse",
+    "constructor": "photonics_interposer_master_suite",
+    "proof": "MithraicPhaseCollapse.mithraic_phase_collapse_master_suite"
   }
 }

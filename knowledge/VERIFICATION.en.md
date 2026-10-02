@@ -4,11 +4,11 @@
 
 The Lean sources are distributed with SHA-256 hashes in
 [validation_snapshot.json](../tools/validation_snapshot.json). The imported proof
-snapshot contains 125 Lean files under Verification/, 92 direct MasterSuite
-imports, and 7,812 declarations including generated declarations.
+snapshot contains 127 Lean files under Verification/, 94 direct MasterSuite
+imports, and 7,918 declarations including generated declarations.
 
-For release v0.4.3 the public export passed strict compilation with
-3,507 build jobs and 26 public regression tests without skips.
+For release v0.4.4 the public export passed strict compilation with
+3,509 build jobs and 26 public regression tests without skips.
 The complete module verifier and independent axiom audit passed; only the
 standard axioms listed below occurred.
 
@@ -63,3 +63,19 @@ or reordered protocol-generated messages. Dynamic membership, crash/recovery,
 Byzantine injection, and liveness are not proved. Two public compiler regressions
 exercise nonempty executions, message history, conflicting commands, and actual
 commitment followed by election of a different leader.
+
+## Scalar aggregation and visibility
+
+`CryptoMuSig2Aggregation` proves scalar two-signer, two-nonce completeness,
+assembly from valid partial signatures, and a restricted naive-key cancellation
+barrier under distinct weights and a nonzero first key. It also proves that fixed
+weights admit a chosen aggregate key and that scalar public keys reveal secrets.
+This is not a cryptographic rogue-key security proof for BIP 327. Hash oracles,
+secp256k1, nonce-reuse defenses, and two-round network behavior are not modeled.
+
+`MithraicPhaseCollapse` proves visibility bounds, exact zero/unit contrast,
+monotonicity at a fixed maximum, and threshold acceptance/rejection over real
+scalars. Positive total intensity excludes the dark 0/0 case. Equality at the
+threshold is accepted; zero contrast is rejected only by a positive threshold.
+The extrema are not simultaneous MZI output-port intensities. No quantum
+decoherence, physical noise mechanism, or automatic dump-port control is proved.

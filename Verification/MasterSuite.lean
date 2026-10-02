@@ -1,3 +1,5 @@
+import Verification.MithraicPhaseCollapse
+import Verification.CryptoMuSig2Aggregation
 import Verification.DistributedRaftCompleteBridge
 import Verification.DistributedRaftNetworkInduction
 import Verification.ChipPlacementCertificate
@@ -96,8 +98,10 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open MithraicPhaseCollapse
 open QuantumOptomechanicalCoupling
 
+open CryptoMuSig2Aggregation
 open CryptoFeldmanVSS
 
 open DistributedRaftCompleteBridge
@@ -242,6 +246,7 @@ structure CryptoFullSuite : Prop where
   r1cs_system : CryptoR1CSConstraintSystem.CryptoR1CSFormalSuite
   groth16_snark : CryptoGroth16SNARK.CryptoGroth16FormalSuite
   feldman_vss : CryptoFeldmanVSS.FeldmanVSSFormalSuite
+  musig2_aggregation : CryptoMuSig2Aggregation.MuSig2AggregationFormalSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -268,6 +273,7 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   groth16_snark := by
     exact CryptoGroth16SNARK.crypto_groth16_master_verification_suite
   feldman_vss := CryptoFeldmanVSS.crypto_feldman_vss_master_suite
+  musig2_aggregation := CryptoMuSig2Aggregation.crypto_musig2_aggregation_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :
@@ -492,6 +498,7 @@ structure PhotonicsInterposerFullSuite : Prop where
   thermo_optic : SolarisThermoOptics.ThermoOpticSuite
   chip_layout : SolarisLayout.ChipLayoutGeometryFormalSuite
   chip_placement_certificate : SolarisLayout.ChipPlacementCertificateSuite
+  mithraic_collapse : MithraicPhaseCollapse.MithraicPhaseCollapseFormalSuite
 
 theorem photonics_interposer_master_suite : PhotonicsInterposerFullSuite := {
   mzi_core := SolarisMithraCore.mzi_master_verification_suite
@@ -499,6 +506,7 @@ theorem photonics_interposer_master_suite : PhotonicsInterposerFullSuite := {
   thermo_optic := SolarisThermoOptics.thermo_optic_master_suite
   chip_layout := SolarisLayout.chip_layout_geometry_master_suite
   chip_placement_certificate := SolarisLayout.chip_placement_certificate_master_suite
+  mithraic_collapse := MithraicPhaseCollapse.mithraic_phase_collapse_master_suite
 }
 
 /-- Eleven top-level packages of selected guarantees.

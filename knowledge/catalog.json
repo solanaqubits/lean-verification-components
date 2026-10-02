@@ -609,6 +609,8 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.MithraicPhaseCollapse",
+        "Verification.CryptoMuSig2Aggregation",
         "Verification.DistributedRaftCompleteBridge",
         "Verification.DistributedRaftNetworkInduction",
         "Verification.ChipPlacementCertificate",
@@ -1256,6 +1258,22 @@
         "Verification.DistributedRaftCommittedPrefixLemmas",
         "Verification.DistributedRaftVoterRetention"
       ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoMuSig2Aggregation",
+      "section": "cryptography",
+      "source": "Verification/CryptoMuSig2Aggregation.lean",
+      "card": "knowledge/07_cryptography/CryptoMuSig2Aggregation.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "MithraicPhaseCollapse",
+      "section": "quantum-physics",
+      "source": "Verification/MithraicPhaseCollapse.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/MithraicPhaseCollapse.md",
+      "project_imports": [],
       "novelty": "not-assessed"
     }
   ]
