@@ -1446,3 +1446,33 @@ ERC-4626 implementation compliance or contract security.
 ## Numeric Lamport clock steps
 
 `DistributedLamportClocks` proves strict increase under local tick and receive updates. Its timestamp-only step relation is also proved equivalent to strict numeric order: no event identity or send/receive matching is modeled. It therefore does not establish event-level causality equivalence or distinguish concurrent events.
+
+## Conditional Raft Leader Completeness
+
+`DistributedRaftLeaderCompleteness` uses strong induction over an archive of
+terms and local voter-log histories. It proves retention of current-term commits
+and their prefixes, and command agreement for application events linked to
+commitment. Explicit assumptions cover Log Matching, entry provenance,
+append-only leader logs, majority elections, Up-to-Date, and admissible
+term-bounded voter histories. These are not proved invariants of an asynchronous
+Raft implementation. A nonempty example validates the assumptions, and a
+counterexample shows why Up-to-Date alone cannot imply prefix inclusion.
+
+See the [full scope card](../knowledge/09_distributed_systems/DistributedRaftLeaderCompleteness.md).
+
+
+## Operational Raft elections and local log preservation
+
+`DistributedRaftStateMachine` defines a fixed-cluster asynchronous small-step
+model with addressed RPCs, vote grants/deliveries, elections, replication and
+commit advancement. Historical single voting and election uniqueness follow
+from reachable states. A three-server execution reaches a replicated commit.
+Leader append-only is scoped to remaining leader in the same term.
+
+Log Matching preservation is proved for local append/merge operations under
+explicit freshness and input-log compatibility conditions. These conditions
+have not yet been derived for every reachable RPC history. Global Log Matching,
+the `HistoryValid`/`VoterEvolution` bridge, and unconditional Leader Completeness
+remain open; they are not assumed as guards in the transition relation.
+
+See the [scope card](../knowledge/09_distributed_systems/DistributedRaftStateMachine.md).

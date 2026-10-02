@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.4.1
+
+- Added DistributedRaftLeaderCompleteness and DistributedRaftStateMachine;
+  synchronized the registry and English knowledge catalog to 86 direct imports,
+  110 Lean files, and 7,048 declarations, including generated declarations.
+- Leader Completeness remains conditional on entry provenance, Log Matching,
+  and admissible voter histories; it is not derived from a complete RPC execution.
+- The operational model proves historical single voting and election safety for
+  reachable states. It includes addressed RPCs, replication, and a three-server
+  execution reaching a committed entry. Global reachable-state Log Matching and
+  the HistoryValid/VoterEvolution bridge remain open. Local log-operation lemmas
+  retain explicit compatibility and freshness premises.
+- Updated English cards, source hashes, integration recipes and catalog validation
+  for unsuffixed English Markdown cards. No Python simulations are included.
+- Retained the pinned Lean/Mathlib v4.33.1 toolchain and Apache-2.0 license.
+
 ## v0.4.0
 
 - Expanded the distribution from 83 to 108 Lean files and from 60 to 84 direct

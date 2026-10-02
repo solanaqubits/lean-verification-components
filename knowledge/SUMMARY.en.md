@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 89 subject modules across ten areas, plus a registry and axiom
+snapshot contains 108 subject modules across ten areas, plus a registry and axiom
 auditor. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
@@ -26,8 +26,8 @@ For example, the Collatz branch coefficients have arithmetic mean 639/512 > 1,
 while a related geometric product is below one. Keeping those distinct prevents
 an invalid global-contraction inference. The Pedersen module checks real scalar
 identities while explicitly leaving probabilistic hiding and computational binding
-outside its scope. The Raft append module supplies local list lemmas that a future
-message-passing proof could use.
+outside its scope. The operational Raft module proves election safety from reachable message-passing
+states. Its local log lemmas still require a global provenance and Log Matching proof.
 
 ## Novelty and remaining work
 

@@ -23,23 +23,22 @@ the components in larger formal developments.
 | [Cryptographic algebra](knowledge/cryptography/README.md) | Diffusion, traces, folding, and commitment identities |
 | [Quantum algebra, photonics, and mechanics](knowledge/quantum-physics/README.md) | Matrices, symmetries, and prescribed energy models |
 | [Finance and mechanisms](knowledge/finance/README.md) | Balances, reserves, fees, and portfolio risk |
-| [Distributed consensus](knowledge/distributed/README.md) | Quorums, conditional election safety, and local log append |
+| [Distributed consensus](knowledge/distributed/README.md) | Quorums, reachable election safety, and conditional log properties |
 | [Registry and audit](knowledge/verification/README.md) | Selected suites and axiom dependencies |
 
-## Verified snapshot — v0.4.0
+## Verified snapshot — v0.4.1
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **108 Lean files** under `Verification/`, including 106 subject modules and
+The [validation record](knowledge/VERIFICATION.en.md) covers **110 Lean files** under `Verification/`, including 108 subject modules and
 two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **84 modules**. The project-wide audit checked
-**6,442 declarations**, including generated declarations, with only `propext`,
+suites and directly imports **86 modules**. The project-wide audit checked
+**7,048 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The clean public build completed with 3,490 jobs, including dependencies.
-The independent axiom audit checked all 6,442 declarations against the same
-allowlist. All 19 public tests passed, including live compiler tests, and the
-knowledge catalog check passed. See the [v0.4.0 changelog](CHANGELOG.md) and validation record for
-release checks. These are recorded results, not a promise that every future
-commit or toolchain will pass.
+The clean strict build completed with 3,492 jobs, including dependencies, without
+warnings. All 19 public tests passed with live Lean checks enabled and no skips.
+Both the project verifier and the independent axiom audit passed. See the
+[verification record](knowledge/VERIFICATION.en.md) and [changelog](CHANGELOG.md)
+for the v0.4.1 results and scope. These results apply to this release and toolchain.
 
 ## What the proofs establish
 

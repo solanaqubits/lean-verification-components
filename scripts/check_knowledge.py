@@ -44,7 +44,7 @@ def main():
         if not card.is_relative_to((ROOT / 'knowledge').resolve()):
             errors.append(f'{name}: card must remain inside knowledge')
             continue
-        if card.name not in (name + '.en.md',):
+        if card.name not in (name + '.en.md', name + '.md'):
             errors.append(f'{name}: inconsistent card filename')
         source = ROOT / module['source']
         if not card.is_file() or not source.is_file():
@@ -69,7 +69,7 @@ def main():
             if not english.is_relative_to((ROOT / 'knowledge').resolve()):
                 errors.append(f'{name}: English card must remain inside knowledge')
                 continue
-            if english.name != name + '.en.md' or not english.is_file():
+            if english.name not in (name + '.en.md', name + '.md') or not english.is_file():
                 errors.append(f'{name}: missing or invalid English card')
                 continue
             english_text = english.read_text()

@@ -1,18 +1,20 @@
 {
-  "modules_checked": 108,
+  "modules_checked": 110,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 6442,
+    "declarations": 7048,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "1f3cc826c9eefecbe17d79804e5cc291ba83da9369cc3bb9b73cd28ec170a7fb",
+    "Verification.MasterSuite": "082f9293fb43bfad753167c196f5102741c4a4a8e5b7689963f24770d3f1c866",
+    "Verification.DistributedRaftStateMachine": "9ad20662f35a4be873b876c18c98935a0e177d93ecaa1199a87f775ead059601",
+    "Verification.DistributedRaftLeaderCompleteness": "fc62d005b9ad27383c19258dd72ddea6a1b5066f9d3cf3c5230151ecedf337cd",
     "Verification.ThermoOpticPhaseDrift": "f71198898e0a95337ba634905be7802041af7f0d71d8beb685d62980cfe803bf",
     "Verification.OpticalLossAttenuation": "2fc08e8a123535bf8b3f6fff06f6ed0055608c83ca3ebf7c5893204b0c5c1902",
     "Verification.SolarisMithraCore": "9227144d385e982e38dfe585681a75e16b17bdfaf3c45a9deb5c928ab0978b14",
@@ -120,46 +122,11 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Validation of the public v0.4.0 source distribution after packaging corrections; counts include generated declarations.",
+  "description": "Validation of the public v0.4.1 source distribution; counts include generated declarations.",
   "independent_axiom_audit": {
-    "declarations": 6442,
+    "declarations": 7048,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
-  },
-  "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 84,
-  "full_build_jobs": 3490,
-  "pipeline": {
-    "clean_strict_build": true,
-    "verify_all": true,
-    "independent_axiom_audit": true,
-    "live_tests": true,
-    "knowledge_catalog": true
-  },
-  "release_tag": "v0.4.0",
-  "source_unchanged_during_verification": true,
-  "export_adjustments": {
-    "header_and_module_documentation_files": [
-      "Verification/CryptoElGamalEncryption.lean",
-      "Verification/CryptoGroth16SNARK.lean",
-      "Verification/CryptoKZGPolynomialCommitment.lean",
-      "Verification/CryptoR1CSConstraintSystem.lean",
-      "Verification/CryptoSumcheckProtocol.lean",
-      "Verification/DeFiBondingCurve.lean",
-      "Verification/DeFiConstantProductSwap.lean",
-      "Verification/DeFiFlashLoan.lean",
-      "Verification/DeFiOvercollateralizedLending.lean",
-      "Verification/DistributedPBFTConsensus.lean",
-      "Verification/DistributedPaxos.lean",
-      "Verification/DistributedRaftLogReplication.lean",
-      "Verification/OpticalLossAttenuation.lean",
-      "Verification/QuantumBellCHSH.lean",
-      "Verification/SolarisMithraCore.lean",
-      "Verification/SolarisPhysicalModels.lean",
-      "Verification/ThermoOpticPhaseDrift.lean"
-    ],
-    "explicit_tactic_imports": "Verification/SolarisPhysicalModels.lean",
-    "declaration_and_proof_bodies_preserved": true
   },
   "regression_tests": {
     "passed": 19,
@@ -167,5 +134,24 @@
       19
     ],
     "note": "Complete public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests. Private export-tool tests are not part of this distribution."
-  }
+  },
+  "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
+  "master_direct_imports": 86,
+  "full_build_jobs": 3492,
+  "pipeline": {
+    "clean_strict_build": true,
+    "verify_all": true,
+    "independent_axiom_audit": true,
+    "live_tests": true,
+    "knowledge_catalog": true
+  },
+  "source_unchanged_during_verification": true,
+  "raft_state_machine_scope": {
+    "reachable_election_safety": true,
+    "historical_single_vote": true,
+    "log_matching": "local preservation under explicit input compatibility and freshness premises",
+    "global_reachable_log_matching": false,
+    "history_valid_voter_evolution_bridge": false
+  },
+  "release_tag": "v0.4.1"
 }

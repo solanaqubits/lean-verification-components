@@ -1,3 +1,5 @@
+import Verification.DistributedRaftStateMachine
+import Verification.DistributedRaftLeaderCompleteness
 import Verification.ThermoOpticPhaseDrift
 import Verification.OpticalLossAttenuation
 import Verification.SolarisMithraCore

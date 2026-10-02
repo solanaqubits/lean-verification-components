@@ -1,3 +1,5 @@
+import Verification.DistributedRaftStateMachine
+import Verification.DistributedRaftLeaderCompleteness
 import Verification.ThermoOpticPhaseDrift
 import Verification.OpticalLossAttenuation
 import Verification.SolarisMithraCore
@@ -87,6 +89,9 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedRaftStateMachine
+open DistributedRaftLeaderCompleteness
 
 open SolarisMithraCore
 open SolarisOptics
@@ -407,7 +412,7 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
 theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuite) :
     DeFiConcentratedLiquidity.DeFiConcentratedLiquidityFormalSuite := suite.concentrated
 
-/-- Cardinal quorum conditions, without protocol-level safety or termination claims. -/
+/-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
   bft_quorum : BFTConsensusFormalSuite
   raft : DistributedRaftConsensus.DistributedRaftFormalSuite.{uRaft1, uRaft2, uRaft3}
@@ -420,6 +425,8 @@ structure DistributedSystemsFullSuite : Prop where
   raft_log_replication : DistributedRaftLogReplication.DistributedRaftFormalSuite
   pbft_consensus : DistributedPBFTConsensus.DistributedPBFTFormalSuite
   paxos_consensus : DistributedPaxos.DistributedPaxosFormalSuite
+  raft_leader_completeness : DistributedRaftLeaderCompleteness.RaftLeaderCompletenessSuite
+  raft_state_machine : DistributedRaftStateMachine.RaftStateMachineFormalSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -438,6 +445,10 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedPBFTConsensus.distributed_pbft_master_verification_suite
   paxos_consensus := by
     exact DistributedPaxos.distributed_paxos_master_suite
+  raft_leader_completeness := by
+    exact DistributedRaftLeaderCompleteness.raft_leader_completeness_master_suite
+  raft_state_machine := by
+    exact DistributedRaftStateMachine.raft_state_machine_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

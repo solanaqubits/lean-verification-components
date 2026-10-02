@@ -609,6 +609,8 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedRaftStateMachine",
+        "Verification.DistributedRaftLeaderCompleteness",
         "Verification.ThermoOpticPhaseDrift",
         "Verification.OpticalLossAttenuation",
         "Verification.SolarisMithraCore",
@@ -1074,6 +1076,24 @@
       "source": "Verification/SolarisPhysicalModels.lean",
       "card": "knowledge/07_quantum_physics_and_optics/SolarisPhysicalModels.en.md",
       "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftLeaderCompleteness",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftLeaderCompleteness.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftLeaderCompleteness.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftStateMachine",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftStateMachine.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftStateMachine.md",
+      "project_imports": [
+        "Verification.DistributedRaftLeaderCompleteness"
+      ],
       "novelty": "not-assessed"
     }
   ]

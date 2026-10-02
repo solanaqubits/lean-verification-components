@@ -12,7 +12,7 @@
 
 ## Scope
 
-Quorum intersection alone does not establish Leader Completeness. No full message-passing, failure, or distributed RPC model is proved correct.
+Quorum intersection alone does not establish Leader Completeness. The operational Raft model proves election safety for reachable message-passing states. Leader Completeness remains conditional on log-history assumptions; global reachable-state Log Matching and the VoterEvolution bridge are not yet proved. No complete production Raft implementation or crash/recovery model is certified.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
 
@@ -31,3 +31,7 @@ Quorum intersection alone does not establish Leader Completeness. No full messag
 - [DistributedPBFTConsensus](../09_distributed_systems/DistributedPBFTConsensus.en.md)
 
 - [DistributedPaxos](../09_distributed_systems/DistributedPaxos.en.md)
+
+- [DistributedRaftLeaderCompleteness](../09_distributed_systems/DistributedRaftLeaderCompleteness.md): conditional strong-induction proof over archived logs, explicit provenance/Log Matching and admissible voter histories; committed-prefix and application safety.
+
+- [DistributedRaftStateMachine](../09_distributed_systems/DistributedRaftStateMachine.md): reachable-state election safety, historical single voting, and conditional local Log Matching lemmas; the global log-history bridge remains open.

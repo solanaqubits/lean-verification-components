@@ -388,5 +388,21 @@
     "field": "thermo_optic",
     "constructor": "photonics_interposer_master_suite",
     "proof": "SolarisThermoOptics.thermo_optic_master_suite"
+  },
+  "Verification.DistributedRaftLeaderCompleteness": {
+    "suite_struct": "RaftLeaderCompletenessSuite",
+    "suite_type": "DistributedRaftLeaderCompleteness.RaftLeaderCompletenessSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_leader_completeness",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedRaftLeaderCompleteness.raft_leader_completeness_master_suite"
+  },
+  "Verification.DistributedRaftStateMachine": {
+    "suite_struct": "RaftStateMachineFormalSuite",
+    "suite_type": "DistributedRaftStateMachine.RaftStateMachineFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_state_machine",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedRaftStateMachine.raft_state_machine_master_suite"
   }
 }
