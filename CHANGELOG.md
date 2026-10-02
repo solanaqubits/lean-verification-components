@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.4.3
+
+- Added global reachable-state Raft Log Matching and operational Leader Completeness
+  for actual commit events, plus retention of already-held committed prefixes.
+- Added eleven Lean files across two registry packages and their supporting proofs:
+  92 direct imports, 125 Lean files, and 7,812 audited declarations.
+- Preserved the original operational transitions and conflict-sensitive partial
+  AppendEntries. No abstract history validity or desired invariant is a new guard.
+- Added two public execution regressions; synchronized English cards, catalog,
+  source hashes, and model boundaries. Dynamic membership, crash/recovery,
+  Byzantine injection, and liveness remain outside scope.
+- Strict build: 3,507 jobs; 26 public tests; independent and CLI axiom audits.
+
+## v0.4.2
+
+- Added scalar Feldman VSS, chip layout geometry, an exact 256-node placement
+  certificate, and scalar optomechanical coupling.
+- 90 direct imports, 114 Lean files, 7,397 audited declarations; 24 public tests.
+- Separated exact geometric guarantees from external JSON/hash provenance and
+  physical assumptions. Scalar commitments do not establish cryptographic hiding.
+
+
 ## v0.4.1
 
 - Added DistributedRaftLeaderCompleteness and DistributedRaftStateMachine;

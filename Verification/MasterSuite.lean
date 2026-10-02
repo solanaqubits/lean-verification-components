@@ -1,3 +1,5 @@
+import Verification.DistributedRaftCompleteBridge
+import Verification.DistributedRaftNetworkInduction
 import Verification.ChipPlacementCertificate
 import Verification.QuantumOptomechanicalCoupling
 import Verification.ChipLayoutGeometry
@@ -98,6 +100,8 @@ open QuantumOptomechanicalCoupling
 
 open CryptoFeldmanVSS
 
+open DistributedRaftCompleteBridge
+open DistributedRaftNetworkInduction
 open DistributedRaftStateMachine
 open DistributedRaftLeaderCompleteness
 
@@ -440,6 +444,8 @@ structure DistributedSystemsFullSuite : Prop where
   paxos_consensus : DistributedPaxos.DistributedPaxosFormalSuite
   raft_leader_completeness : DistributedRaftLeaderCompleteness.RaftLeaderCompletenessSuite
   raft_state_machine : DistributedRaftStateMachine.RaftStateMachineFormalSuite
+  raft_network_induction : DistributedRaftNetworkInduction.RaftNetworkInductionSuite
+  raft_complete_bridge : DistributedRaftCompleteBridge.RaftCompleteBridgeSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -462,6 +468,10 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedRaftLeaderCompleteness.raft_leader_completeness_master_suite
   raft_state_machine := by
     exact DistributedRaftStateMachine.raft_state_machine_master_suite
+  raft_network_induction := by
+    exact DistributedRaftNetworkInduction.raft_network_induction_master_suite
+  raft_complete_bridge := by
+    exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

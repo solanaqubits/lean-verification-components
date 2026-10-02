@@ -609,6 +609,8 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedRaftCompleteBridge",
+        "Verification.DistributedRaftNetworkInduction",
         "Verification.ChipPlacementCertificate",
         "Verification.QuantumOptomechanicalCoupling",
         "Verification.ChipLayoutGeometry",
@@ -1133,6 +1135,126 @@
       "card": "knowledge/07_quantum_physics_and_optics/ChipPlacementCertificate.md",
       "project_imports": [
         "Verification.ChipLayoutGeometry"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftNetworkHistory",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftNetworkHistory.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftNetworkHistory.md",
+      "project_imports": [
+        "Verification.DistributedRaftStateMachine"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftNetworkLogLemmas",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftNetworkLogLemmas.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftNetworkLogLemmas.md",
+      "project_imports": [
+        "Verification.DistributedRaftStateMachine"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftNetworkInduction",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftNetworkInduction.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftNetworkInduction.md",
+      "project_imports": [
+        "Verification.DistributedRaftNetworkHistory",
+        "Verification.DistributedRaftNetworkLogLemmas"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftTraceMatching",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftTraceMatching.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftTraceMatching.md",
+      "project_imports": [
+        "Verification.DistributedRaftNetworkInduction"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftEventHistory",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftEventHistory.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftEventHistory.md",
+      "project_imports": [
+        "Verification.DistributedRaftNetworkInduction"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftLogOrder",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftLogOrder.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftLogOrder.md",
+      "project_imports": [
+        "Verification.DistributedRaftNetworkInduction"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftTraceOrigins",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftTraceOrigins.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftTraceOrigins.md",
+      "project_imports": [
+        "Verification.DistributedRaftEventHistory",
+        "Verification.DistributedRaftLogOrder"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftCommittedPrefixLemmas",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftCommittedPrefixLemmas.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftCommittedPrefixLemmas.md",
+      "project_imports": [
+        "Verification.DistributedRaftNetworkInduction"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftCandidateHistory",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftCandidateHistory.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftCandidateHistory.md",
+      "project_imports": [
+        "Verification.DistributedRaftTraceMatching",
+        "Verification.DistributedRaftEventHistory"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftVoterRetention",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftVoterRetention.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftVoterRetention.md",
+      "project_imports": [
+        "Verification.DistributedRaftEventHistory",
+        "Verification.DistributedRaftCandidateHistory",
+        "Verification.DistributedRaftCommittedPrefixLemmas"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftCompleteBridge",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftCompleteBridge.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftCompleteBridge.md",
+      "project_imports": [
+        "Verification.DistributedRaftTraceMatching",
+        "Verification.DistributedRaftEventHistory",
+        "Verification.DistributedRaftLogOrder",
+        "Verification.DistributedRaftTraceOrigins",
+        "Verification.DistributedRaftCommittedPrefixLemmas",
+        "Verification.DistributedRaftVoterRetention"
       ],
       "novelty": "not-assessed"
     }

@@ -23,27 +23,45 @@ the components in larger formal developments.
 | [Cryptographic algebra](knowledge/cryptography/README.md) | Diffusion, traces, folding, and commitment identities |
 | [Quantum algebra, photonics, and mechanics](knowledge/quantum-physics/README.md) | Matrices, symmetries, and prescribed energy models |
 | [Finance and mechanisms](knowledge/finance/README.md) | Balances, reserves, fees, and portfolio risk |
-| [Distributed consensus](knowledge/distributed/README.md) | Quorums, conditional election safety, and local log append |
+| [Distributed consensus](knowledge/distributed/README.md) | Quorums, reachable Log Matching, and operational Leader Completeness |
 | [Registry and audit](knowledge/verification/README.md) | Selected suites and axiom dependencies |
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **114 Lean files** under `Verification/`, including 112 subject modules and
+The [validation record](knowledge/VERIFICATION.en.md) covers **125 Lean files** under `Verification/`, including 123 subject modules and
 two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **90 modules**. The project-wide audit checked
-**7,397 declarations**, including generated declarations, with only `propext`,
+suites and directly imports **92 modules**. The project-wide audit checked
+**7,812 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The public release build completed with 3,496 jobs, including dependencies,
-and 24 public regression tests passed without skips. These are recorded
+The public release build completed with 3,507 jobs, including dependencies,
+and 26 public regression tests passed without skips. These are recorded
 validation results, not a promise that every future commit or toolchain will pass.
 
-## Release v0.4.2
+## Release v0.4.3
 
-This release adds scalar Feldman share verification, translation and rectangular
+This release adds the Raft network induction and complete bridge, with eleven new
+Lean files including supporting proofs. `reachable_global_log_matching` and
+`reachable_leader_completeness` follow from the unchanged operational transitions.
+Commitment is witnessed by an actual `Step.commit` in a finite execution, including
+the majority replication evidence and current-term anchor.
+
+A node already holding the entire committed prefix retains it through later steps
+of that execution. Delayed acknowledgements, message loss, duplication, arbitrary
+delivery order, and conflict-sensitive partial AppendEntries are covered.
+The model has a fixed nonempty cluster and protocol-generated messages. Dynamic
+membership, crash/recovery, Byzantine packet injection, and liveness are outside
+scope; this is not a certification of a deployed Raft implementation.
+
+See the [complete bridge card](knowledge/09_distributed_systems/DistributedRaftCompleteBridge.md)
+and [validation record](knowledge/VERIFICATION.en.md).
+
+## Earlier additions in v0.4.2
+
+Release v0.4.2 added scalar Feldman share verification, translation and rectangular
 placement geometry, an exact 256-node placement certificate, and scalar
 optomechanical coupling. The concrete certificate is a separate registry module,
-so the registry has 90 direct imports.
+bringing that release to 90 direct imports.
 
 - Feldman verification and reconstruction are algebraic statements over the reals.
   The public scalar commitment reveals the secret as `A0/G`; hiding is not claimed.

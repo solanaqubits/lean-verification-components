@@ -1,25 +1,36 @@
 {
-  "modules_checked": 114,
+  "modules_checked": 125,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 7397,
+    "declarations": 7812,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
     "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "03ae1cf8402486e65154fc535918430d65c4a81fbd59f4111cd7d80c9eef0286",
+    "Verification.MasterSuite": "78dd7f03591d9245efeb133fd43b9b1936bd082a309f43dd45b0aa61819960fd",
+    "Verification.DistributedRaftCompleteBridge": "f7f149d890c8b09e481ff55acd7a36ebe3eb4a7d4d100f76257fa5afd7b4f35a",
+    "Verification.DistributedRaftTraceMatching": "c2d10bb90f7718f171ffd6654d7dcee5224d862eccfe9f04778e37667a5e93b7",
+    "Verification.DistributedRaftNetworkInduction": "dea39913e94b22e08afe089f8160e2d4db5f527ad88ca505c0e86033065f2809",
+    "Verification.DistributedRaftNetworkHistory": "d1203d13a78f51266ef0fa67ef168bda7764fd298d714266f4d547dbe4064832",
+    "Verification.DistributedRaftStateMachine": "9ad20662f35a4be873b876c18c98935a0e177d93ecaa1199a87f775ead059601",
+    "Verification.DistributedRaftLeaderCompleteness": "fc62d005b9ad27383c19258dd72ddea6a1b5066f9d3cf3c5230151ecedf337cd",
+    "Verification.DistributedRaftNetworkLogLemmas": "844424271abff08b9e796939546153b4c92bc30010558f9f273812e3535f649e",
+    "Verification.DistributedRaftEventHistory": "5f4b973c83c1d90a35a98976cb354fc56e614713b48cd47ef681b15f53593a7a",
+    "Verification.DistributedRaftLogOrder": "ee3b4b761134c924ea97cc91c4b5a93bf95c48f028361fd61a0bf171b1089acc",
+    "Verification.DistributedRaftTraceOrigins": "974d4e4bf074ce99dce5ea26e867dd3eca928f2be65348204e59eddbf3c7c25e",
+    "Verification.DistributedRaftCommittedPrefixLemmas": "641b24e5f6186d44e3aff84f671688ab64d90efc6d9bc2868fe473253176c203",
+    "Verification.DistributedRaftVoterRetention": "e3fe959cfabda5303609b33f932ecf3abaf9f2dcc18ab1e7784f858cdfba449c",
+    "Verification.DistributedRaftCandidateHistory": "748ce51a2954159537cc924f7c43922275d6880c2f49270b98a14e19eb85c66d",
     "Verification.ChipPlacementCertificate": "0f2630c29d8273c5c0d1010edad4096b1d0b3866393d84fe33e265e649caab3b",
     "Verification.ChipLayoutGeometry": "e89d4dd29d86901037b766f572773ef786be264763de13dbc95af96d813d87ae",
     "Verification.QuantumOptomechanicalCoupling": "b77ce2d085411707b3de3a2546809d41ea21f13f1ff20b8c40b3f281eb087e54",
     "Verification.CryptoFeldmanVSS": "c093b765d886c521e4c47426cc588051f368073fb43ed62fb924c80073cb9af4",
     "Verification.CryptoShamirSecretSharing": "59fde5cd871b66206025b821790f8dfc5610bfc2620f4f3e2bcb265e6dfeea4f",
-    "Verification.DistributedRaftStateMachine": "9ad20662f35a4be873b876c18c98935a0e177d93ecaa1199a87f775ead059601",
-    "Verification.DistributedRaftLeaderCompleteness": "fc62d005b9ad27383c19258dd72ddea6a1b5066f9d3cf3c5230151ecedf337cd",
     "Verification.ThermoOpticPhaseDrift": "f71198898e0a95337ba634905be7802041af7f0d71d8beb685d62980cfe803bf",
     "Verification.OpticalLossAttenuation": "2fc08e8a123535bf8b3f6fff06f6ed0055608c83ca3ebf7c5893204b0c5c1902",
     "Verification.SolarisMithraCore": "9227144d385e982e38dfe585681a75e16b17bdfaf3c45a9deb5c928ab0978b14",
@@ -126,22 +137,22 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Verified exact 256-node placement: count, unique array IDs, positive dimensions, bounds and disjoint closed rectangles; external JSON/hash provenance.",
+  "description": "Public v0.4.3: global Raft Log Matching, operational Leader Completeness for actual commit events, and retention of already-held committed prefixes; unchanged fixed-cluster transitions.",
   "independent_axiom_audit": {
-    "declarations": 7397,
+    "declarations": 7812,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 24,
+    "passed": 26,
     "runs": [
-      24
+      26
     ],
-    "note": "Complete unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
+    "note": "Public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
   },
   "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 90,
-  "full_build_jobs": 3496,
+  "master_direct_imports": 92,
+  "full_build_jobs": 3507,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -156,8 +167,9 @@
     "reachable_election_safety": true,
     "historical_single_vote": true,
     "log_matching": "local preservation under explicit input compatibility and freshness premises",
-    "global_reachable_log_matching": false,
-    "history_valid_voter_evolution_bridge": false
+    "global_reachable_log_matching": true,
+    "history_valid_voter_evolution_bridge": false,
+    "operational_leader_completeness": true
   },
   "feldman_vss_scope": {
     "scalar_field": "Real",
@@ -196,5 +208,41 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "release_tag": "v0.4.2"
+  "root_source_sha256": "c9548b1d781c7dd7cb9e5e34d321f81229f0c0846749bed92212f132304ca1e4",
+  "raft_network_induction_scope": {
+    "unchanged_operational_steps": true,
+    "global_reachable_log_matching": true,
+    "historical_leader_snapshot_for_each_append_entries": true,
+    "concrete_leader_append_event_for_server_and_packet_entries": true,
+    "entry_index_equals_one_based_position": true,
+    "conflict_sensitive_partial_batches": true,
+    "message_loss_duplication_and_reordering": true,
+    "log_matching_is_transition_guard": false,
+    "byzantine_message_injection": false,
+    "history_valid_voter_evolution_bridge": false,
+    "unconditional_leader_completeness": false,
+    "membership_changes": false,
+    "crash_recovery": false,
+    "liveness": false,
+    "operational_bridge_module": "Verification.DistributedRaftCompleteBridge"
+  },
+  "raft_complete_bridge_scope": {
+    "unchanged_operational_steps": true,
+    "commitment_is_actual_step_commit": true,
+    "same_execution_vote_ack_and_record_witnesses": true,
+    "strong_induction_on_leader_term": true,
+    "operational_leader_completeness": true,
+    "earlier_entries_in_directly_committed_prefix_included": true,
+    "committed_prefix_retention": true,
+    "replica_retention_requires_initial_whole_committed_prefix": true,
+    "delayed_acknowledgements_and_partial_batches": true,
+    "log_matching_or_completeness_is_transition_guard": false,
+    "literal_whole_log_voter_evolution_instantiation": false,
+    "membership_changes": false,
+    "crash_recovery": false,
+    "byzantine_injection": false,
+    "liveness": false,
+    "regression": "Actual 14-step execution: term-1 commitment, term-2 election of a different leader, general completeness and retention theorem applications."
+  },
+  "release_tag": "v0.4.3"
 }

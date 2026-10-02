@@ -12,7 +12,7 @@
 
 ## Scope
 
-Quorum intersection alone does not establish Leader Completeness. No full message-passing, failure, or distributed RPC model is proved correct.
+The operational machine establishes election safety; NetworkInduction establishes reachable-state global Log Matching. Quorum intersection alone does not establish Leader Completeness. The separate CompleteBridge develops operational committed-prefix preservation using events from one execution, rather than literally instantiating the abstract `VoterEvolution`. Its own card records the final verification status. Crash recovery and dynamic membership remain outside the model.
 
 [Contributing](../CONTRIBUTING.en.md) · [Validation](../VERIFICATION.en.md)
 
@@ -34,4 +34,26 @@ Quorum intersection alone does not establish Leader Completeness. No full messag
 
 - [DistributedRaftLeaderCompleteness](../09_distributed_systems/DistributedRaftLeaderCompleteness.md): conditional strong-induction proof over archived logs, explicit provenance/Log Matching and admissible voter histories; committed-prefix and application safety.
 
-- [DistributedRaftStateMachine](../09_distributed_systems/DistributedRaftStateMachine.md): reachable-state election safety, historical single voting, and conditional local Log Matching lemmas; the global log-history bridge remains open.
+- [DistributedRaftStateMachine](../09_distributed_systems/DistributedRaftStateMachine.md): reachable-state election safety, historical single voting, and conditional local Log Matching lemmas; the separate NetworkInduction module closes global Log Matching; the separate CompleteBridge handles the operational completeness argument without literally instantiating abstract VoterEvolution.
+
+- [DistributedRaftNetworkInduction](../09_distributed_systems/DistributedRaftNetworkInduction.md)
+
+- [DistributedRaftNetworkHistory](../09_distributed_systems/DistributedRaftNetworkHistory.md)
+
+- [DistributedRaftNetworkLogLemmas](../09_distributed_systems/DistributedRaftNetworkLogLemmas.md)
+
+- [DistributedRaftTraceMatching](../09_distributed_systems/DistributedRaftTraceMatching.md)
+
+- [DistributedRaftEventHistory](../09_distributed_systems/DistributedRaftEventHistory.md)
+
+- [DistributedRaftLogOrder](../09_distributed_systems/DistributedRaftLogOrder.md)
+
+- [DistributedRaftTraceOrigins](../09_distributed_systems/DistributedRaftTraceOrigins.md)
+
+- [DistributedRaftCommittedPrefixLemmas](../09_distributed_systems/DistributedRaftCommittedPrefixLemmas.md)
+
+- [DistributedRaftCandidateHistory](../09_distributed_systems/DistributedRaftCandidateHistory.md)
+
+- [DistributedRaftVoterRetention](../09_distributed_systems/DistributedRaftVoterRetention.md)
+
+- [DistributedRaftCompleteBridge](../09_distributed_systems/DistributedRaftCompleteBridge.md)

@@ -1117,12 +1117,11 @@ makes no claim that `s = 1/3` is optimal, that `N₀ = 5` is minimal, or that
 
 ## Reproducing the verification
 
-After installing `elan`, an authorized collaborator can clone this private
-repository and run:
+After installing `elan`, clone this public repository and run:
 
 ```bash
 git clone https://github.com/solanaqubits/lean-verification-components.git
-cd Lean
+cd lean-verification-components
 source "$HOME/.elan/env"
 lake build --wfail
 lake env lean -DwarningAsError=true Verification/CollatzBase.lean
@@ -1454,8 +1453,9 @@ terms and local voter-log histories. It proves retention of current-term commits
 and their prefixes, and command agreement for application events linked to
 commitment. Explicit assumptions cover Log Matching, entry provenance,
 append-only leader logs, majority elections, Up-to-Date, and admissible
-term-bounded voter histories. These are not proved invariants of an asynchronous
-Raft implementation. A nonempty example validates the assumptions, and a
+term-bounded voter histories. This abstract module assumes those properties;
+the operational results below use the fixed-cluster transition model and do not
+literally instantiate its whole-log `VoterEvolution` relation. A nonempty example validates the assumptions, and a
 counterexample shows why Up-to-Date alone cannot imply prefix inclusion.
 
 See the [full scope card](../knowledge/09_distributed_systems/DistributedRaftLeaderCompleteness.md).
@@ -1469,13 +1469,68 @@ commit advancement. Historical single voting and election uniqueness follow
 from reachable states. A three-server execution reaches a replicated commit.
 Leader append-only is scoped to remaining leader in the same term.
 
-Log Matching preservation is proved for local append/merge operations under
-explicit freshness and input-log compatibility conditions. These conditions
-have not yet been derived for every reachable RPC history. Global Log Matching,
-the `HistoryValid`/`VoterEvolution` bridge, and unconditional Leader Completeness
-remain open; they are not assumed as guards in the transition relation.
+The local append/merge lemmas retain explicit freshness and input-log
+compatibility conditions. The separate network-induction module derives those
+conditions from reachable histories and proves global Log Matching, as described
+below. The complete bridge additionally derives operational Leader Completeness.
+Neither result adds a Log Matching or completeness guard to the transition relation.
 
 See the [scope card](../knowledge/09_distributed_systems/DistributedRaftStateMachine.md).
+
+
+## Reachable Raft Log Matching and entry provenance
+
+`DistributedRaftNetworkInduction.reachable_global_log_matching` derives global
+Log Matching from operational reachability for every fixed nonempty cluster.
+Equal terms at the same position in two server logs imply equal prefixes through
+that position. An archive of historical logs supplies the source snapshots needed
+to prove compatibility of partial AppendEntries batches. Server and packet entries
+have witnesses of an actual leader append, and stored indices equal their
+one-based log positions.
+
+The conflict-sensitive merge retains an existing suffix when a delayed short
+batch matches it; it replaces the suffix at the first term conflict. Message
+loss, duplication, delayed delivery, and arbitrary delivery order are included.
+The proof uses the original operational transitions and derives its invariants
+from reachability.
+
+See the [network-induction scope card](../knowledge/09_distributed_systems/DistributedRaftNetworkInduction.md).
+
+
+## Operational Raft Leader Completeness and committed-prefix retention
+
+`DistributedRaftCompleteBridge.committedInTerm` records an actual successful
+`Step.commit` in a finite execution from `initState`. The committing leader has
+a majority replication quorum and a current-term entry at the committed index.
+All entries in that committed prefix are covered, including older-term entries.
+The definition does not assume their presence in future leaders.
+
+`reachable_leader_completeness` proves that a leader in any greater term contains
+the committed entry. The proof connects votes, acknowledgements, and entry origins
+within the same execution, using majority intersection and strong induction on
+leader terms. Historical Log Matching and prefix retention discharge the required
+compatibility premises for partial batches and delayed acknowledgements.
+
+For a fixed commit event in one execution, `committed_prefix_preserved` proves
+that a node already containing the entire committed prefix at position `a`
+retains it at every position `b` with `a ≤ b ≤ run.length`. Initial possession
+may precede the commit event. This theorem requires the whole prefix initially;
+it does not assert that every replica has the prefix or eventually receives it.
+A regression executes a term-1 commitment followed by election of a different
+leader in term 2 and applies the general completeness and retention theorems.
+
+Here “unconditional” means derived from reachability and actual commitment within
+this model, without assuming abstract history invariants or adding preservation
+guards to `Step`. It does not mean assumption-free consensus safety. The model
+has a fixed nonempty cluster and authenticated protocol-generated messages.
+Crash/recovery, stable storage, dynamic membership, snapshots, Byzantine injection,
+timing, fairness, command application, and liveness are outside its scope. The
+result does not certify a deployed implementation or an application state machine.
+The earlier whole-log `HistoryValid`/`VoterEvolution` interface is not literally
+instantiated by the partial-batch operational proof.
+
+See the [complete-bridge scope card](../knowledge/09_distributed_systems/DistributedRaftCompleteBridge.md)
+and the [voter-retention helper card](../knowledge/09_distributed_systems/DistributedRaftVoterRetention.md).
 
 
 ## Scalar Feldman share verification

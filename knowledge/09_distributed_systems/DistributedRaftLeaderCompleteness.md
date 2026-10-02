@@ -50,3 +50,5 @@ The module does not prove that a Raft implementation or a complete network trans
 Reference: Ongaro and Ousterhout, [extended Raft paper, §5.4](https://raft.github.io/raft.pdf). This card describes the Lean model's actual premises, not a formalization of the entire paper.
 
 [Validation](../VERIFICATION.en.md). Suite theorem: `raft_leader_completeness_master_suite`.
+
+The separate [DistributedRaftCompleteBridge](DistributedRaftCompleteBridge.md) develops the operational completeness argument using same-execution histories and partial-batch preservation. It does not literally instantiate this abstract `VoterEvolution` relation; its verification status is documented separately.

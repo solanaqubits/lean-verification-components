@@ -13,10 +13,10 @@ Verified components grouped into ten subject areas and one verification section.
 | [Cryptographic algebra and ZK components](cryptography/README.md) | 17 |
 | [Quantum algebra, photonics, and mechanics](quantum-physics/README.md) | 28 |
 | [Finance, liquidity, and mechanisms](finance/README.md) | 19 |
-| [Distributed consensus](distributed/README.md) | 13 |
+| [Distributed consensus](distributed/README.md) | 24 |
 | [Registry and axiom audit](verification/README.md) | 2 |
 
-114 module cards: 112 subject modules and two verification files. The master registry directly imports 90 modules; these counts describe different sets.
+125 module cards: 123 subject modules and two verification files. The master registry directly imports 92 modules; these counts describe different sets.
 
 [Project value](SUMMARY.en.md) · [Validation](VERIFICATION.en.md) · [Contributing](CONTRIBUTING.en.md) · [Catalog](catalog.json)
 

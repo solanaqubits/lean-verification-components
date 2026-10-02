@@ -436,5 +436,21 @@
     "field": "chip_placement_certificate",
     "constructor": "photonics_interposer_master_suite",
     "proof": "SolarisLayout.chip_placement_certificate_master_suite"
+  },
+  "Verification.DistributedRaftNetworkInduction": {
+    "suite_struct": "RaftNetworkInductionSuite",
+    "suite_type": "DistributedRaftNetworkInduction.RaftNetworkInductionSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_network_induction",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedRaftNetworkInduction.raft_network_induction_master_suite"
+  },
+  "Verification.DistributedRaftCompleteBridge": {
+    "suite_struct": "RaftCompleteBridgeSuite",
+    "suite_type": "DistributedRaftCompleteBridge.RaftCompleteBridgeSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_complete_bridge",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite"
   }
 }

@@ -4,11 +4,11 @@
 
 The Lean sources are distributed with SHA-256 hashes in
 [validation_snapshot.json](../tools/validation_snapshot.json). The imported proof
-snapshot contains 114 Lean files under Verification/, 90 direct MasterSuite
-imports, and 7,397 declarations including generated declarations.
+snapshot contains 125 Lean files under Verification/, 92 direct MasterSuite
+imports, and 7,812 declarations including generated declarations.
 
-For release v0.4.2 the public export passed strict compilation with
-3,496 build jobs and 24 public regression tests without skips.
+For release v0.4.3 the public export passed strict compilation with
+3,507 build jobs and 26 public regression tests without skips.
 The complete module verifier and independent axiom audit passed; only the
 standard axioms listed below occurred.
 
@@ -48,3 +48,18 @@ delays, or physical fabrication.
 proves prescribed scalar relations, not a quantum operator model. The regime of
 the `4*g^2/kappa` approximation is documentation, not a Lean theorem; positive
 damping does not by itself establish physical cooling or full coupled stability.
+
+## Raft execution safety
+
+`DistributedRaftNetworkInduction` proves global Log Matching for reachable states.
+`DistributedRaftCompleteBridge` derives Leader Completeness from actual commit
+events and proves retention for nodes already holding the whole committed prefix.
+The earlier conditional abstract history premises are not assumed, and the
+original operational transitions are unchanged. The whole-log replacement rule
+of abstract VoterEvolution is not literally instantiated.
+
+The static-cluster model includes partial batches and delayed, duplicated, lost,
+or reordered protocol-generated messages. Dynamic membership, crash/recovery,
+Byzantine injection, and liveness are not proved. Two public compiler regressions
+exercise nonempty executions, message history, conflicting commands, and actual
+commitment followed by election of a different leader.
