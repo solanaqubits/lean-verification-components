@@ -1,18 +1,24 @@
 {
-  "modules_checked": 129,
+  "modules_checked": 134,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 7988,
+    "declarations": 8237,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "e5ad825cb91bfca334820fb23ca6bbc5dc19571d3a508748ddea4174a6a8bdde",
-    "Verification.MasterSuite": "7701a637edfeccbf5f1a93e8c96374906833d07f4cca1b796f4971658c7675ec",
+    "Verification.AxiomAudit": "54c107bad4c7a6371f616f27f1ea5342d1c6a7fc77e8bfa268d1c42bfd30859f",
+    "Verification.MasterSuite": "add3aca2f16a9af32d0182e03f4d869fbea18d94d255223357d5833205d88a10",
+    "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
+    "Verification.MasterSuiteComponents": "4f83c81db6be86d60aa603cd5f60ff500dbb2bb263bee122fb34fcd99836112c",
+    "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
+    "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
+    "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
+    "Verification.DistributedMarzulloAlgorithm": "a7c0b9c3f55e2be53a7cc5e90e567990295e699fbfc82172d5668f006ceef08d",
     "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
     "Verification.CryptoSchnorrBatchVerification": "e034ca9a562a8563e805b3963aeb5c00039bf91db54560d56e75a8808d10e9f8",
     "Verification.MithraicPhaseCollapse": "b55654dcd4cc96fe2708bb1656a4f6a5d985d43a54d920162e506e745ede82a8",
@@ -53,7 +59,6 @@
     "Verification.CryptoElGamalEncryption": "417ee25530fa7b57b72656c2728d9bb0093d3d34bf57356c194f2c715686c555",
     "Verification.DistributedLamportClocks": "2ea1af72a0e3dba8b708808b0692fb8513ddc4992a3a1208bb0849103374219f",
     "Verification.QuantumBitFlipCode": "5f7ede0e203a2c532c6d35ce2fd3dce13af63a9a265914a14cd71a6e9d3d9717",
-    "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
     "Verification.DeFiCDPLiquidation": "945e833111c7a049fd112ac20b7250e96fdee8d3b84ff459ae3ea934bf6d33c7",
     "Verification.DistributedBullyElection": "99b879843fd9dce0ee268e08e5fa90718b62f66c3940c7dae6ef62a631607d56",
     "Verification.CryptoBLSSignatureAggregation": "168b5e901376319516ed10cae8e98e2bb8d88564f085e98217d2577c5c2cbb71",
@@ -141,22 +146,23 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.4.5: exact finite-field Schnorr batch acceptance counts and rational fractions for fixed nonzero discrepancies; scalar noise optimum and SQL-shaped bounds under explicit calibration. No signature security, sampler correctness or physical detector certification is claimed.",
+  "description": "Public v0.5.0 validation: strict fresh project build, complete CLI verification, independent axiom audit, live tests and catalog/provenance checks.",
   "independent_axiom_audit": {
-    "declarations": 7988,
+    "declarations": 8237,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 28,
+    "passed": 35,
+    "skipped": 0,
     "runs": [
-      28
+      35
     ],
-    "note": "Public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1; no skipped tests."
+    "note": "Public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
   },
-  "verifier_sha256": "2c5c56248b8d4d873aec1609ca38a34b4eeeece366271d9efcf8980b72f2f63a",
-  "master_direct_imports": 96,
-  "full_build_jobs": 3511,
+  "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
+  "master_direct_imports": 100,
+  "full_build_jobs": 3516,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -164,7 +170,7 @@
     "live_tests": true,
     "knowledge_catalog": true,
     "exact_data_import_check": true,
-    "clean_project_build": true
+    "private_public_source_equality": true
   },
   "source_unchanged_during_verification": true,
   "raft_state_machine_scope": {
@@ -212,7 +218,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "11a71ee44a957be4178959da2e2a99646876b0d056351d9b82ab281b6327d134",
+  "root_source_sha256": "c069795d727bff7f0af84621cb41c70963a834132aad29f172cad6bfbc02dcaf",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -314,5 +320,84 @@
     "physical_device_certified": false,
     "regression": "Unequal coefficients with optimum I=2; tight calibration; failed bound without calibration and outside positive-intensity domain."
   },
-  "release_tag": "v0.4.5"
+  "marzullo_scope": {
+    "field": "Real",
+    "indexed_sources_preserve_multiplicity": true,
+    "closed_endpoints_and_singletons": true,
+    "list_filter_count_equivalence": true,
+    "finite_endpoint_threshold_envelope": true,
+    "exact_positive_threshold_success_criterion": true,
+    "minimal_enclosing_interval": true,
+    "truth_inclusion_under_explicit_fault_model": true,
+    "majority_honest_source_witness": true,
+    "maximal_overlap_can_exclude_truth": true,
+    "envelope_interior_all_meets_threshold": false,
+    "executable_numeric_algorithm": false,
+    "sorted_sweep_or_complexity": false,
+    "rfc5905_equivalence": false,
+    "physical_clock_drift": false,
+    "network_delay_model": false,
+    "pll_or_clock_discipline": false,
+    "regression": "Touching singleton, disconnected feasible set, misleading maximum, duplicate sources, empty/zero/impossible thresholds."
+  },
+  "transcript_forking_scope": {
+    "finite_uniform_matrix": true,
+    "nonempty_rows": true,
+    "challenge_cardinality_greater_than_one": true,
+    "independent_challenges_with_replacement": true,
+    "ordered_distinct_successful_pairs": true,
+    "exact_count_ratios": true,
+    "elementary_lower_bound": true,
+    "fork_existence_above_threshold": true,
+    "generic_field_scalar_extraction": true,
+    "row_fixed_commitment": true,
+    "injective_challenge_encoding": true,
+    "existing_schnorr_compatibility": true,
+    "probability_measure_or_sampler": false,
+    "general_multi_query_bellare_neven_lemma": false,
+    "adaptive_rom_execution": false,
+    "rewinding_algorithm_or_runtime": false,
+    "euf_cma_or_zero_knowledge_security": false,
+    "regression": "Exact finite counts, tight/strict bounds, threshold, ZMod 5 extraction, noninjective encoding, and combined matrix bridge."
+  },
+  "beam_splitter_scope": {
+    "real_orthogonal_mode_transform": true,
+    "signed_amplitudes": true,
+    "single_photon_partition": true,
+    "normalized_occupation_basis": true,
+    "arbitrary_real_state_coordinates": true,
+    "finite_symmetric_square_lift": true,
+    "polynomial_substitution_identity": true,
+    "two_photon_norm_preservation": true,
+    "ideal_hom_zero_iff_balanced": true,
+    "born_rule_external_interpretation": true,
+    "indistinguishability_model_assumption": true,
+    "complex_phase_or_convention_equivalence": false,
+    "full_fock_space_or_creation_operators": false,
+    "distinguishability_or_wave_packets": false,
+    "temporal_hom_profile": false,
+    "detector_or_hardware_validation": false,
+    "existing_mzi_equivalence": false,
+    "regression": "Transparent/reflecting/unbalanced/balanced splitters, signed amplitude, nonunit input norm, bunched probabilities, polynomial substitution and path-probability contrast."
+  },
+  "hundred_registry_scope": {
+    "domain_packages": 11,
+    "redundant_recent_projections": 5,
+    "subject_files": 130,
+    "registry_audit_support_files": 4,
+    "acyclic_components_milestone_central_graph": true,
+    "original_component_declarations_preserved": true,
+    "universe_polymorphic_package_interfaces": true,
+    "central_legacy_projections_preserved": true,
+    "recipe_parent_module_support": true,
+    "three_file_rollback_regression": true,
+    "all_existing_recipes_idempotent": true,
+    "new_domain_theorem": false,
+    "all_declarations_packaged": false,
+    "lean_proof_of_import_count": false
+  },
+  "release_tag": "v0.5.0",
+  "private_sync_commit": "4296c31379e43e73a5cddd61f1d2b9ddda924b75",
+  "public_report": "docs/release-v0.5.0.en.md",
+  "clean_build_scope": "Fresh project .lake/build; pinned dependencies use existing Mathlib cache."
 }

@@ -4,8 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 127 subject modules across ten areas, plus a registry and axiom
-auditor. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 130 subject files across ten areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -58,3 +57,11 @@ explicit calibration `(hbar/(2*m*omega_m))^2 ≤ A*B`. Calibration and omission 
 noise correlations are external model assumptions. Quantum commutators,
 spectral densities, Langevin dynamics, and physical detector performance are
 not formalized.
+
+
+## Hundred-import milestone
+
+Release v0.5.0 adds threshold time envelopes, elementary transcript forking,
+a real beam-splitter model with a finite two-boson lift, and the acyclic milestone
+registry. The registry assembles selected propositions without strengthening their
+hypotheses. See the [verification record](VERIFICATION.en.md) for scope and counts.

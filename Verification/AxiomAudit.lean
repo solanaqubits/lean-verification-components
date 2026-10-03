@@ -23,5 +23,6 @@ elab "#audit_axioms " id:ident : command => do
     throwError m!"[AXIOM AUDIT FAILED] Unauthorized axioms in '{constName}': {unauthorized.toList}"
 
 #audit_axioms MasterSuite.verification_master_registry
+#audit_axioms MasterHundredRegistry.master_hundred_registry_verified
 
 end AxiomAudit

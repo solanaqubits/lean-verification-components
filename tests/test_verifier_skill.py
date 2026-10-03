@@ -34,17 +34,19 @@ class VerifierUnitTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); (root/'Verification').mkdir()
             (root/'lean-toolchain').write_text('leanprover/lean4:v4.33.1\n')
-            for source in ['Verification/MasterSuite.lean', 'Verification/DeFiConcentratedLiquidity.lean', 'Verification.lean']:
+            for source in ['Verification/MasterSuiteComponents.lean', 'Verification/MasterSuite.lean', 'Verification/DeFiConcentratedLiquidity.lean', 'Verification.lean']:
                 (root/source).write_bytes((ROOT/source).read_bytes())
-            for relative in ['Verification/MasterSuite.lean', 'Verification.lean']:
+            for relative in ['Verification/MasterSuiteComponents.lean', 'Verification/MasterSuite.lean', 'Verification.lean']:
                 path = root/relative
                 path.write_text(''.join(line for line in path.read_text().splitlines(True)
                                         if 'DeFiConcentratedLiquidity' not in line))
             root_before = (root/'Verification.lean').read_bytes()
+            components_before = (root/'Verification/MasterSuiteComponents.lean').read_bytes()
             verifier = mod.Verifier(root)
             before = (root/'Verification/MasterSuite.lean').read_bytes()
             def fail_after_checking_mutation(_):
-                self.assertIn('  concentrated :', (root/'Verification/MasterSuite.lean').read_text())
+                self.assertIn('  concentrated :', (root/'Verification/MasterSuiteComponents.lean').read_text())
+                self.assertIn('import Verification.DeFiConcentratedLiquidity', (root/'Verification/MasterSuite.lean').read_text())
                 self.assertIn('import Verification.DeFiConcentratedLiquidity', (root/'Verification.lean').read_text())
                 return {'ok':False}
             with patch.object(verifier, '_verify', side_effect=fail_after_checking_mutation):
@@ -52,12 +54,13 @@ class VerifierUnitTests(unittest.TestCase):
             self.assertFalse(report['ok']); self.assertTrue(report['rolled_back'])
             self.assertEqual((root/'Verification/MasterSuite.lean').read_bytes(), before)
             self.assertEqual((root/'Verification.lean').read_bytes(), root_before)
+            self.assertEqual((root/'Verification/MasterSuiteComponents.lean').read_bytes(), components_before)
 
     def test_plan_is_idempotent(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); (root/'Verification').mkdir()
             (root/'lean-toolchain').write_text('leanprover/lean4:v4.33.1\n')
-            for source in ['Verification/MasterSuite.lean', 'Verification/DeFiConcentratedLiquidity.lean', 'Verification.lean']:
+            for source in ['Verification/MasterSuiteComponents.lean', 'Verification/MasterSuite.lean', 'Verification/DeFiConcentratedLiquidity.lean', 'Verification.lean']:
                 (root/source).write_bytes((ROOT/source).read_bytes())
             verifier = mod.Verifier(root)
             plan = verifier.integration_plan('Verification.DeFiConcentratedLiquidity', 'DeFiConcentratedLiquidityFormalSuite')

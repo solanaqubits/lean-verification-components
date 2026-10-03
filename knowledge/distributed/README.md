@@ -57,3 +57,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedRaftVoterRetention](../09_distributed_systems/DistributedRaftVoterRetention.md)
 
 - [DistributedRaftCompleteBridge](../09_distributed_systems/DistributedRaftCompleteBridge.md)
+
+- [DistributedMarzulloAlgorithm](../09_distributed_systems/DistributedMarzulloAlgorithm.md): exact-real threshold envelope, true-time inclusion under a fault budget, and a counterexample to maximum-overlap truth localization.

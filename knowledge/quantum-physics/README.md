@@ -61,3 +61,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [MithraicPhaseCollapse](../03_quantum_physics_and_optics/MithraicPhaseCollapse.md): scalar visibility bounds, fixed-maximum contrast decay, and a threshold specification; no quantum decoherence or automatic dump-port routing.
 
 - [QuantumStandardQuantumLimit](../03_quantum_physics_and_optics/QuantumStandardQuantumLimit.md): exact scalar noise minimum, unique optimizer, and an explicitly calibrated SQL-shaped bound.
+
+- [QuantumBeamSplitterTransform](../03_quantum_physics_and_optics/QuantumBeamSplitterTransform.md): Real orthogonal mode transformation, normalized finite two-photon lift and ideal balanced HOM suppression; no full Fock-space or detector model.

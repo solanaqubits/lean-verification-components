@@ -4,11 +4,11 @@
 
 The Lean sources are distributed with SHA-256 hashes in
 [validation_snapshot.json](../tools/validation_snapshot.json). The imported proof
-snapshot contains 129 Lean files under Verification/, 96 direct MasterSuite
-imports, and 7,988 declarations including generated declarations.
+snapshot contains 134 Lean files under Verification/, 100 direct MasterSuite
+imports, and 8,237 declarations including generated declarations.
 
-For release v0.4.5 the public export passed strict compilation with
-3,511 build jobs and 28 public regression tests without skips.
+For release v0.5.0 the public export passed strict compilation with
+3,516 build jobs and 35 public regression tests without skips.
 The complete module verifier and independent axiom audit passed; only the
 standard axioms listed below occurred.
 
@@ -98,3 +98,33 @@ explicit calibration `(hbar/(2*m*omega_m))^2 ≤ A*B`. Calibration and omission 
 noise correlations are external model assumptions. Quantum commutators,
 spectral densities, Langevin dynamics, and physical detector performance are
 not formalized.
+
+
+## Threshold time envelopes, elementary forking, and beam splitters
+
+`DistributedMarzulloAlgorithm` proves that a threshold envelope contains the true
+time under an explicit bound on faulty interval sources. It includes a counterexample
+to truth localization by maximum overlap. No NTP sorted sweep, network-delay model,
+clock drift, or PLL is verified.
+
+`CryptoTranscriptForkingLemma` proves the finite matrix bound
+`epsilon * (epsilon - 1/q)`, fork existence above the threshold, and scalar witness
+extraction. Rows are uniform and nonempty, challenges are independent and uniform
+with replacement, and the commitment is fixed per row. The general multi-query
+Bellare–Neven theorem, adaptive ROM behavior, and security/runtime reductions are
+outside scope.
+
+`QuantumBeamSplitterTransform` proves a real orthogonal two-mode transformation,
+its finite symmetric-square lift in a normalized occupation basis, preservation of
+both norms, and zero coincidence amplitude exactly at balanced power. The Born
+interpretation and indistinguishability are model assumptions. Complex reflection
+phases, full Fock space, wave packets, and physical detectors are not formalized.
+
+## Acyclic hundred-import registry
+
+`MasterSuiteComponents` retains the existing component declarations and names;
+`MasterHundredRegistry` assembles selected package propositions; `MasterSuite`
+imports the milestone and retains the central entry point. No reverse import is
+introduced. The new wrapper preserves hypotheses and adds no domain theorem.
+The 100 direct imports are an externally checked repository metric, not a Lean
+proof of coverage of every declaration or of open mathematical problems.

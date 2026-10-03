@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 7701a637edfeccbf5f1a93e8c96374906833d07f4cca1b796f4971658c7675ec
+source_sha256: add3aca2f16a9af32d0182e03f4d869fbea18d94d255223357d5833205d88a10
 novelty: not-assessed
 ---
 
@@ -13,7 +13,7 @@ novelty: not-assessed
 
 ## Verified result
 
-Eleven suites of selected theorems with 96 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven domain suites and a milestone aggregate with 100 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -24,21 +24,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuite.lean#L186)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuite.lean#L198)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuite.lean#L210)
-- [`collatz_full_master_suite`](../../Verification/MasterSuite.lean#L229)
-- [`crypto_full_master_suite`](../../Verification/MasterSuite.lean#L258)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuite.lean#L324)
-- [`hopf_full_master_suite`](../../Verification/MasterSuite.lean#L359)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuite.lean#L369)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuite.lean#L379)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuite.lean#L417)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuite.lean#L466)
-- [`riemann_full_master_suite`](../../Verification/MasterSuite.lean#L500)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L538)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L195)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L207)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L219)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L238)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L268)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L336)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L372)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L382)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L392)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L430)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L480)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L515)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L128)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuite.lean#L513)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L528)
 
 ## Verification
 
@@ -57,3 +57,11 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 `CryptoFullSuite.schnorr_batch` includes exact prime-field acceptance counts and fractions 1/q and (1/q)^k for fixed nonzero residuals under uniform independent coefficient sampling. These are finite counting ratios, not an implemented random sampler or a security theorem for Schnorr signatures.
 
 `QuantumPhysicsFullSuite.standard_quantum_limit` proves the exact minimum and unique positive optimizer of A/I + B*I, balanced contributions, and a conditional standard-deviation bound. Calibration and omission of cross correlations are external modeling assumptions; quantum uncertainty and spectral detector dynamics are not derived.
+
+`DistributedSystemsFullSuite.marzullo_algorithm` proves true-time inclusion in the smallest closed envelope of points meeting a fixed overlap threshold. The fault model assumes at least n-f sources contain the truth; f<n suffices for envelope inclusion, while n-f>f yields a shared honest-source witness. The envelope can contain unsupported gaps. A formal counterexample refutes true-time localization by maximum overlap. No sorted event sweep, RFC5905 equivalence, clock dynamics or NTP implementation is verified.
+
+`CryptoFullSuite.forking_lemma` proves the elementary finite uniform matrix bound ε(ε−1/q) ≤ pFork, fork existence above 1/q, and scalar witness extraction with a fixed row commitment and injective challenge encoding. Challenges are independent uniform draws with replacement, and equal draws count as failure. Exact ratios of finite counts are formalized; an adaptive random-oracle execution, the general multi-query Bellare–Neven forking lemma, runtime guarantees, and cryptographic security are not proved.
+
+`QuantumPhysicsFullSuite.beam_splitter` proves a real orthogonal two-mode transformation, its normalized finite three-coordinate two-boson lift, polynomial substitution, norm preservation and ideal HOM suppression for |1,1⟩ exactly at balanced power splitting. Indistinguishability and the Born-rule interpretation are modeling assumptions. No complex reflection phase, full Fock space, distinguishability, temporal dip profile, detector model, hardware validation or formal equivalence with existing MZI modules is claimed.
+
+`MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. The registry is included in release v0.5.0.

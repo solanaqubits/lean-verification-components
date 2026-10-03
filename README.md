@@ -28,17 +28,36 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **129 Lean files** under `Verification/`, including 127 subject modules and
-two verification files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **96 modules**. The project-wide audit checked
-**7,988 declarations**, including generated declarations, with only `propext`,
+The [validation record](knowledge/VERIFICATION.en.md) covers **134 Lean files** under `Verification/`, including 130 subject files and
+four registry/audit support files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
+suites and directly imports **100 modules**. The project-wide audit checked
+**8,237 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
 
-The public release build completed with 3,511 jobs, including dependencies,
-and 28 public regression tests passed without skips. These are recorded
+The public release build completed with 3,516 jobs, including dependencies,
+and 35 public regression tests passed without skips. These are recorded
 validation results, not a promise that every future commit or toolchain will pass.
 
-## Release v0.4.5
+## Release v0.5.0
+
+This release reaches **100 direct registry imports**, with three new domain
+packages and an acyclic milestone registry. It adds five Lean files in total.
+
+- [Time interval envelopes](knowledge/09_distributed_systems/DistributedMarzulloAlgorithm.md):
+  truth inclusion under an explicit fault bound; maximum-overlap localization is
+  refuted by a counterexample. No full NTP implementation is claimed.
+- [Elementary transcript forking](knowledge/07_cryptography/CryptoTranscriptForkingLemma.md):
+  finite matrix counting and scalar extraction, not the general multi-query
+  Bellare–Neven lemma or a ROM security proof.
+- [Beam splitter](knowledge/03_quantum_physics_and_optics/QuantumBeamSplitterTransform.md):
+  real mode and finite two-boson norm preservation, with an ideal balanced HOM zero;
+  complex phases, full Fock space, and physical detectors remain outside scope.
+- [Milestone registry](knowledge/11_meta_registry/MasterHundredRegistry.md):
+  selected existing guarantees assembled without changing hypotheses.
+  `MasterSuiteComponents` prevents cyclic imports and preserves component names.
+  The import count is not a count of independent domain results.
+
+## Earlier additions in v0.4.5
 
 This release adds finite-field batch counting and conditional scalar noise
 optimization, bringing the registry to 96 direct imports.

@@ -236,8 +236,9 @@ class Verifier:
         target = targets.get(module)
         if not target or target['suite_struct'] != suite_struct:
             raise VerificationError('No explicit integration recipe for this module/suite; add a reviewed recipe')
-        master_path = self.project / 'Verification/MasterSuite.lean'
-        original = master_path.read_text(); updated = original
+        parent_path, _ = self.source(target.get('parent_module', 'Verification.MasterSuite'))
+        parent_name = str(parent_path.relative_to(self.project))
+        original = parent_path.read_text(); updated = original
         field_line = f"  {target['field']} : {target['suite_type']}"
         value_line = f"  {target['field']} := {target['proof']}"
         for start, line in [(f"structure {target['parent']} : Prop", field_line),
@@ -261,19 +262,31 @@ class Verifier:
         for universe in target.get('universes', []):
             if not re.search(r'^universe .*\b' + re.escape(universe) + r'\b', updated, re.M):
                 updated = updated.replace('namespace MasterSuite\n', 'namespace MasterSuite\n\nuniverse ' + universe + '\n', 1)
+        changes = [(parent_name, original, updated)]
+        master_name = 'Verification/MasterSuite.lean'
+        master_before = (self.project / master_name).read_text()
+        master_after = updated if parent_name == master_name else master_before
+        if 'import ' + module + '\n' not in master_after:
+            master_after = 'import ' + module + '\n' + master_after
+        for universe in target.get('universes', []):
+            if not re.search(r'^universe .*\b' + re.escape(universe) + r'\b', master_after, re.M):
+                master_after = master_after.replace('namespace MasterSuite\n', 'namespace MasterSuite\n\nuniverse ' + universe + '\n', 1)
         if target.get('registry_type'):
             before = '  distributed_suite : DistributedSystemsFullSuite'
-            lines = updated.splitlines()
+            lines = master_after.splitlines()
             matched = [i for i,line in enumerate(lines) if line.startswith(before)]
             if len(matched) != 1: raise VerificationError('Cannot identify distributed registry field')
             lines[matched[0]] = '  distributed_suite : ' + target['registry_type']
-            updated = '\n'.join(lines) + '\n'
+            master_after = '\n'.join(lines) + '\n'
+        if parent_name == master_name:
+            changes[0] = (master_name, original, master_after)
+        else:
+            changes.append((master_name, master_before, master_after))
         root_path = self.project / 'Verification.lean'
         root_before = root_path.read_text()
         root_after = root_before if 'import ' + module + '\n' in root_before else 'import ' + module + '\n' + root_before
         import difflib
-        changes = [('Verification/MasterSuite.lean', original, updated),
-                   ('Verification.lean', root_before, root_after)]
+        changes.append(('Verification.lean', root_before, root_after))
         return {'module': module, 'changes': changes,
                 'diff': ''.join(''.join(difflib.unified_diff(a.splitlines(True), b.splitlines(True),
                                          fromfile=name, tofile=name)) for name,a,b in changes)}

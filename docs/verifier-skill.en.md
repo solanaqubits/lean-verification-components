@@ -42,3 +42,12 @@ from tools.verifier_skill import Verifier
 report = Verifier(".").verify_module("Verification/CryptoPedersenCommitment.lean")
 assert report["ok"], report
 ```
+
+## Registry integration after the component split
+
+Domain recipes select `Verification.MasterSuiteComponents` using `parent_module`.
+The default parent remains `Verification.MasterSuite` for central integration.
+The selected parent must resolve to a Lean source inside `Verification/`.
+Integration edits the parent suite and constructor, the central direct import, and
+the root import; a failed verification restores every changed source file. Existing
+recipes are idempotent. The milestone type carries explicit universe arguments.

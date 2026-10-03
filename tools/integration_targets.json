@@ -5,7 +5,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "concentrated",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "DeFiConcentratedLiquidity.defi_concentrated_liquidity_master_verification_suite"
+    "proof": "DeFiConcentratedLiquidity.defi_concentrated_liquidity_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumMajoranaChain": {
     "suite_struct": "QuantumMajoranaFormalSuite",
@@ -13,7 +14,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "majorana",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumMajoranaChain.quantum_majorana_master_verification_suite"
+    "proof": "QuantumMajoranaChain.quantum_majorana_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftConsensus": {
     "suite_struct": "DistributedRaftFormalSuite",
@@ -27,7 +29,8 @@
       "uRaft2",
       "uRaft3"
     ],
-    "registry_type": "DistributedSystemsFullSuite.{uRaft1, uRaft2, uRaft3}"
+    "registry_type": "DistributedSystemsFullSuite.{uRaft1, uRaft2, uRaft3}",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftLogAppend": {
     "suite_struct": "DistributedRaftLogAppendFormalSuite",
@@ -35,7 +38,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "raft_append",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "DistributedRaftLogAppend.distributed_raft_log_append_master_verification_suite"
+    "proof": "DistributedRaftLogAppend.distributed_raft_log_append_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoPedersenCommitment": {
     "suite_struct": "CryptoPedersenFormalSuite",
@@ -43,7 +47,8 @@
     "parent": "CryptoFullSuite",
     "field": "pedersen",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoPedersenCommitment.crypto_pedersen_master_verification_suite"
+    "proof": "CryptoPedersenCommitment.crypto_pedersen_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumPhaseFlipCode": {
     "suite_struct": "QuantumPhaseFlipFormalSuite",
@@ -51,7 +56,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "phase_flip",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumPhaseFlipCode.quantum_phase_flip_master_verification_suite"
+    "proof": "QuantumPhaseFlipCode.quantum_phase_flip_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiLendingCDP": {
     "suite_struct": "DeFiLendingCDPFormalSuite",
@@ -59,7 +65,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "cdp",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "DeFiLendingCDP.defi_lending_cdp_master_verification_suite"
+    "proof": "DeFiLendingCDP.defi_lending_cdp_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoR1CSToQAP": {
     "suite_struct": "CryptoR1CSQAPFormalSuite",
@@ -67,7 +74,8 @@
     "parent": "CryptoFullSuite",
     "field": "r1cs_qap",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoR1CSToQAP.crypto_r1cs_to_qap_master_verification_suite"
+    "proof": "CryptoR1CSToQAP.crypto_r1cs_to_qap_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumTeleportationProtocol": {
     "suite_struct": "QuantumTeleportationFormalSuite",
@@ -75,7 +83,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "teleportation",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite"
+    "proof": "QuantumTeleportationProtocol.quantum_teleportation_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiCurveStableSwap": {
     "suite_struct": "DeFiCurveStableSwapFormalSuite",
@@ -83,7 +92,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "curveswap",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "DeFiCurveStableSwap.defi_curve_stableswap_master_verification_suite"
+    "proof": "DeFiCurveStableSwap.defi_curve_stableswap_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoFiatShamirTransform": {
     "suite_struct": "CryptoFiatShamirFormalSuite",
@@ -91,7 +101,8 @@
     "parent": "CryptoFullSuite",
     "field": "fiat_shamir",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoFiatShamirTransform.crypto_fiat_shamir_master_verification_suite"
+    "proof": "CryptoFiatShamirTransform.crypto_fiat_shamir_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumDeutschJozsa": {
     "suite_struct": "QuantumDeutschJozsaFormalSuite",
@@ -99,7 +110,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "deutsch_jozsa",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumDeutschJozsa.quantum_deutsch_jozsa_master_verification_suite"
+    "proof": "QuantumDeutschJozsa.quantum_deutsch_jozsa_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedVectorClocks": {
     "suite_struct": "DistributedVectorClocksFormalSuite",
@@ -107,7 +119,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "vector_clocks",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "DistributedVectorClocks.distributed_vector_clocks_master_verification_suite"
+    "proof": "DistributedVectorClocks.distributed_vector_clocks_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumGroverSearch": {
     "suite_struct": "QuantumGroverFormalSuite",
@@ -115,7 +128,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "grover",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumGroverSearch.quantum_grover_master_verification_suite"
+    "proof": "QuantumGroverSearch.quantum_grover_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiTWAPOracle": {
     "suite_struct": "DeFiTWAPFormalSuite",
@@ -123,7 +137,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "twap",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "DeFiTWAPOracle.defi_twap_master_verification_suite"
+    "proof": "DeFiTWAPOracle.defi_twap_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoShamirSecretSharing": {
     "suite_struct": "CryptoShamirFormalSuite",
@@ -131,7 +146,8 @@
     "parent": "CryptoFullSuite",
     "field": "shamir",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoShamirSecretSharing.crypto_shamir_master_verification_suite"
+    "proof": "CryptoShamirSecretSharing.crypto_shamir_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumSuperdenseCoding": {
     "suite_struct": "QuantumSuperdenseFormalSuite",
@@ -139,7 +155,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "superdense",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumSuperdenseCoding.quantum_superdense_master_verification_suite"
+    "proof": "QuantumSuperdenseCoding.quantum_superdense_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedTwoPhaseCommit": {
     "suite_struct": "DistributedTwoPhaseCommitFormalSuite",
@@ -147,7 +164,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "two_pc",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "DistributedTwoPhaseCommit.distributed_two_phase_commit_master_verification_suite"
+    "proof": "DistributedTwoPhaseCommit.distributed_two_phase_commit_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiImpermanentLoss": {
     "suite_struct": "DeFiImpermanentLossFormalSuite",
@@ -155,7 +173,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "impermanent_loss",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "DeFiImpermanentLoss.defi_impermanent_loss_master_verification_suite"
+    "proof": "DeFiImpermanentLoss.defi_impermanent_loss_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumNoCloningTheorem": {
     "suite_struct": "QuantumNoCloningFormalSuite",
@@ -163,7 +182,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "no_cloning",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumNoCloningTheorem.quantum_no_cloning_master_verification_suite"
+    "proof": "QuantumNoCloningTheorem.quantum_no_cloning_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoMerkleTree": {
     "suite_struct": "CryptoMerkleTreeFormalSuite",
@@ -171,7 +191,8 @@
     "parent": "CryptoFullSuite",
     "field": "merkle_tree",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoMerkleTree.crypto_merkle_tree_master_verification_suite"
+    "proof": "CryptoMerkleTree.crypto_merkle_tree_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedPaxosConsensus": {
     "suite_struct": "DistributedPaxosFormalSuite",
@@ -179,7 +200,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "paxos",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "DistributedPaxosConsensus.distributed_paxos_master_verification_suite"
+    "proof": "DistributedPaxosConsensus.distributed_paxos_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumBB84Protocol": {
     "suite_struct": "QuantumBB84FormalSuite",
@@ -187,7 +209,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "bb84",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumBB84Protocol.quantum_bb84_master_verification_suite"
+    "proof": "QuantumBB84Protocol.quantum_bb84_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiERC4626Vault": {
     "suite_struct": "DeFiERC4626FormalSuite",
@@ -195,7 +218,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "erc4626",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "DeFiERC4626Vault.defi_erc4626_master_verification_suite"
+    "proof": "DeFiERC4626Vault.defi_erc4626_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiERC4626InflationDefense": {
     "suite_struct": "DeFiERC4626InflationDefenseFormalSuite",
@@ -203,7 +227,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "erc4626_inflation_defense",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "by\n    exact DeFiERC4626InflationDefense.defi_erc4626_inflation_defense_master_suite"
+    "proof": "by\n    exact DeFiERC4626InflationDefense.defi_erc4626_inflation_defense_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumBernsteinVazirani": {
     "suite_struct": "QuantumBernsteinVaziraniFormalSuite",
@@ -211,7 +236,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "bernstein_vazirani",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "by\n    exact QuantumBernsteinVazirani.quantum_bernstein_vazirani_master_verification_suite"
+    "proof": "by\n    exact QuantumBernsteinVazirani.quantum_bernstein_vazirani_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoBLSSignatureAggregation": {
     "suite_struct": "CryptoBLSSignatureFormalSuite",
@@ -219,7 +245,8 @@
     "parent": "CryptoFullSuite",
     "field": "bls_signature",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoBLSSignatureAggregation.crypto_bls_signature_master_verification_suite"
+    "proof": "by\n    exact CryptoBLSSignatureAggregation.crypto_bls_signature_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedBullyElection": {
     "suite_struct": "DistributedBullyFormalSuite",
@@ -227,7 +254,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "bully_election",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedBullyElection.distributed_bully_master_verification_suite"
+    "proof": "by\n    exact DistributedBullyElection.distributed_bully_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiCDPLiquidation": {
     "suite_struct": "DeFiCDPLiquidationFormalSuite",
@@ -235,7 +263,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "cdp_liquidation",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "by\n    exact DeFiCDPLiquidation.defi_cdp_liquidation_master_verification_suite"
+    "proof": "by\n    exact DeFiCDPLiquidation.defi_cdp_liquidation_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoSchnorrSignature": {
     "suite_struct": "CryptoSchnorrFormalSuite",
@@ -243,7 +272,8 @@
     "parent": "CryptoFullSuite",
     "field": "schnorr_signature",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoSchnorrSignature.crypto_schnorr_master_verification_suite"
+    "proof": "by\n    exact CryptoSchnorrSignature.crypto_schnorr_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumBitFlipCode": {
     "suite_struct": "QuantumBitFlipCodeFormalSuite",
@@ -251,7 +281,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "bit_flip_code",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "by\n    exact QuantumBitFlipCode.quantum_bit_flip_code_master_verification_suite"
+    "proof": "by\n    exact QuantumBitFlipCode.quantum_bit_flip_code_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedLamportClocks": {
     "suite_struct": "DistributedLamportClocksFormalSuite",
@@ -259,7 +290,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "lamport_clocks",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedLamportClocks.distributed_lamport_clocks_master_suite"
+    "proof": "by\n    exact DistributedLamportClocks.distributed_lamport_clocks_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoElGamalEncryption": {
     "suite_struct": "CryptoElGamalFormalSuite",
@@ -267,7 +299,8 @@
     "parent": "CryptoFullSuite",
     "field": "elgamal_encryption",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoElGamalEncryption.crypto_elgamal_master_verification_suite"
+    "proof": "by\n    exact CryptoElGamalEncryption.crypto_elgamal_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoKZGPolynomialCommitment": {
     "suite_struct": "CryptoKZGFormalSuite",
@@ -275,7 +308,8 @@
     "parent": "CryptoFullSuite",
     "field": "kzg_commitment",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoKZGPolynomialCommitment.crypto_kzg_master_verification_suite"
+    "proof": "by\n    exact CryptoKZGPolynomialCommitment.crypto_kzg_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoSumcheckProtocol": {
     "suite_struct": "CryptoSumcheckFormalSuite",
@@ -283,7 +317,8 @@
     "parent": "CryptoFullSuite",
     "field": "sumcheck_protocol",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoSumcheckProtocol.crypto_sumcheck_master_verification_suite"
+    "proof": "by\n    exact CryptoSumcheckProtocol.crypto_sumcheck_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiConstantProductSwap": {
     "suite_struct": "DeFiConstantProductSwapFormalSuite",
@@ -291,7 +326,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "cpmm_swap",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "by\n    exact DeFiConstantProductSwap.defi_constant_product_swap_master_verification_suite"
+    "proof": "by\n    exact DeFiConstantProductSwap.defi_constant_product_swap_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoR1CSConstraintSystem": {
     "suite_struct": "CryptoR1CSFormalSuite",
@@ -299,7 +335,8 @@
     "parent": "CryptoFullSuite",
     "field": "r1cs_system",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoR1CSConstraintSystem.crypto_r1cs_master_verification_suite"
+    "proof": "by\n    exact CryptoR1CSConstraintSystem.crypto_r1cs_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftLogReplication": {
     "suite_struct": "DistributedRaftFormalSuite",
@@ -307,7 +344,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "raft_log_replication",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedRaftLogReplication.distributed_raft_master_verification_suite"
+    "proof": "by\n    exact DistributedRaftLogReplication.distributed_raft_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedPBFTConsensus": {
     "suite_struct": "DistributedPBFTFormalSuite",
@@ -315,7 +353,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "pbft_consensus",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedPBFTConsensus.distributed_pbft_master_verification_suite"
+    "proof": "by\n    exact DistributedPBFTConsensus.distributed_pbft_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoGroth16SNARK": {
     "suite_struct": "CryptoGroth16FormalSuite",
@@ -323,7 +362,8 @@
     "parent": "CryptoFullSuite",
     "field": "groth16_snark",
     "constructor": "crypto_full_master_suite",
-    "proof": "by\n    exact CryptoGroth16SNARK.crypto_groth16_master_verification_suite"
+    "proof": "by\n    exact CryptoGroth16SNARK.crypto_groth16_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiFlashLoan": {
     "suite_struct": "DeFiFlashLoanFormalSuite",
@@ -331,7 +371,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "flash_loan",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "by\n    exact DeFiFlashLoan.defi_flash_loan_master_suite"
+    "proof": "by\n    exact DeFiFlashLoan.defi_flash_loan_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumBellCHSH": {
     "suite_struct": "QuantumBellCHSHFormalSuite",
@@ -339,7 +380,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "bell_chsh",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "by\n    exact QuantumBellCHSH.quantum_bell_chsh_master_verification_suite"
+    "proof": "by\n    exact QuantumBellCHSH.quantum_bell_chsh_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiOvercollateralizedLending": {
     "suite_struct": "DeFiOvercollateralizedLendingFormalSuite",
@@ -347,7 +389,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "overcollateralized_lending",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "by\n    exact DeFiOvercollateralizedLending.defi_overcollateralized_lending_master_suite"
+    "proof": "by\n    exact DeFiOvercollateralizedLending.defi_overcollateralized_lending_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DeFiBondingCurve": {
     "suite_struct": "DeFiBondingCurveFormalSuite",
@@ -355,7 +398,8 @@
     "parent": "FinanceRiskFullSuite",
     "field": "bonding_curve",
     "constructor": "finance_risk_full_master_suite",
-    "proof": "by\n    exact DeFiBondingCurve.defi_bonding_curve_master_suite"
+    "proof": "by\n    exact DeFiBondingCurve.defi_bonding_curve_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedPaxos": {
     "suite_struct": "DistributedPaxosFormalSuite",
@@ -363,7 +407,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "paxos_consensus",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedPaxos.distributed_paxos_master_suite"
+    "proof": "by\n    exact DistributedPaxos.distributed_paxos_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.SolarisMithraCore": {
     "suite_struct": "MZIAnalyticalSuite",
@@ -371,7 +416,8 @@
     "parent": "PhotonicsInterposerFullSuite",
     "field": "mzi_core",
     "constructor": "photonics_interposer_master_suite",
-    "proof": "SolarisMithraCore.mzi_master_verification_suite"
+    "proof": "SolarisMithraCore.mzi_master_verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.OpticalLossAttenuation": {
     "suite_struct": "OpticalLossSuite",
@@ -379,7 +425,8 @@
     "parent": "PhotonicsInterposerFullSuite",
     "field": "optical_loss",
     "constructor": "photonics_interposer_master_suite",
-    "proof": "SolarisOptics.optical_loss_master_suite"
+    "proof": "SolarisOptics.optical_loss_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.ThermoOpticPhaseDrift": {
     "suite_struct": "ThermoOpticSuite",
@@ -387,7 +434,8 @@
     "parent": "PhotonicsInterposerFullSuite",
     "field": "thermo_optic",
     "constructor": "photonics_interposer_master_suite",
-    "proof": "SolarisThermoOptics.thermo_optic_master_suite"
+    "proof": "SolarisThermoOptics.thermo_optic_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftLeaderCompleteness": {
     "suite_struct": "RaftLeaderCompletenessSuite",
@@ -395,7 +443,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "raft_leader_completeness",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedRaftLeaderCompleteness.raft_leader_completeness_master_suite"
+    "proof": "by\n    exact DistributedRaftLeaderCompleteness.raft_leader_completeness_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftStateMachine": {
     "suite_struct": "RaftStateMachineFormalSuite",
@@ -403,7 +452,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "raft_state_machine",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedRaftStateMachine.raft_state_machine_master_suite"
+    "proof": "by\n    exact DistributedRaftStateMachine.raft_state_machine_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoFeldmanVSS": {
     "suite_struct": "FeldmanVSSFormalSuite",
@@ -411,7 +461,8 @@
     "parent": "CryptoFullSuite",
     "field": "feldman_vss",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoFeldmanVSS.crypto_feldman_vss_master_suite"
+    "proof": "CryptoFeldmanVSS.crypto_feldman_vss_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.ChipLayoutGeometry": {
     "suite_struct": "ChipLayoutGeometryFormalSuite",
@@ -419,7 +470,8 @@
     "parent": "PhotonicsInterposerFullSuite",
     "field": "chip_layout",
     "constructor": "photonics_interposer_master_suite",
-    "proof": "SolarisLayout.chip_layout_geometry_master_suite"
+    "proof": "SolarisLayout.chip_layout_geometry_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumOptomechanicalCoupling": {
     "suite_struct": "OptomechanicalCouplingFormalSuite",
@@ -427,7 +479,8 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "optomechanical_coupling",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "by\n    exact QuantumOptomechanicalCoupling.quantum_optomechanical_coupling_master_suite"
+    "proof": "by\n    exact QuantumOptomechanicalCoupling.quantum_optomechanical_coupling_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.ChipPlacementCertificate": {
     "suite_struct": "ChipPlacementCertificateSuite",
@@ -435,7 +488,8 @@
     "parent": "PhotonicsInterposerFullSuite",
     "field": "chip_placement_certificate",
     "constructor": "photonics_interposer_master_suite",
-    "proof": "SolarisLayout.chip_placement_certificate_master_suite"
+    "proof": "SolarisLayout.chip_placement_certificate_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftNetworkInduction": {
     "suite_struct": "RaftNetworkInductionSuite",
@@ -443,7 +497,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "raft_network_induction",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedRaftNetworkInduction.raft_network_induction_master_suite"
+    "proof": "by\n    exact DistributedRaftNetworkInduction.raft_network_induction_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.DistributedRaftCompleteBridge": {
     "suite_struct": "RaftCompleteBridgeSuite",
@@ -451,7 +506,8 @@
     "parent": "DistributedSystemsFullSuite",
     "field": "raft_complete_bridge",
     "constructor": "distributed_systems_full_master_suite",
-    "proof": "by\n    exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite"
+    "proof": "by\n    exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoMuSig2Aggregation": {
     "suite_struct": "MuSig2AggregationFormalSuite",
@@ -459,7 +515,8 @@
     "parent": "CryptoFullSuite",
     "field": "musig2_aggregation",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoMuSig2Aggregation.crypto_musig2_aggregation_master_suite"
+    "proof": "CryptoMuSig2Aggregation.crypto_musig2_aggregation_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.MithraicPhaseCollapse": {
     "suite_struct": "MithraicPhaseCollapseFormalSuite",
@@ -467,7 +524,8 @@
     "parent": "PhotonicsInterposerFullSuite",
     "field": "mithraic_collapse",
     "constructor": "photonics_interposer_master_suite",
-    "proof": "MithraicPhaseCollapse.mithraic_phase_collapse_master_suite"
+    "proof": "MithraicPhaseCollapse.mithraic_phase_collapse_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.CryptoSchnorrBatchVerification": {
     "suite_struct": "SchnorrBatchVerificationFormalSuite",
@@ -475,7 +533,8 @@
     "parent": "CryptoFullSuite",
     "field": "schnorr_batch",
     "constructor": "crypto_full_master_suite",
-    "proof": "CryptoSchnorrBatchVerification.schnorr_batch_verification_master_suite"
+    "proof": "CryptoSchnorrBatchVerification.schnorr_batch_verification_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   },
   "Verification.QuantumStandardQuantumLimit": {
     "suite_struct": "QuantumSQLFormalSuite",
@@ -483,6 +542,42 @@
     "parent": "QuantumPhysicsFullSuite",
     "field": "standard_quantum_limit",
     "constructor": "quantum_physics_full_master_suite",
-    "proof": "QuantumStandardQuantumLimit.quantum_sql_master_suite"
+    "proof": "QuantumStandardQuantumLimit.quantum_sql_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedMarzulloAlgorithm": {
+    "suite_struct": "MarzulloAlgorithmFormalSuite",
+    "suite_type": "DistributedMarzulloAlgorithm.MarzulloAlgorithmFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "marzullo_algorithm",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedMarzulloAlgorithm.marzullo_algorithm_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoTranscriptForkingLemma": {
+    "suite_struct": "ForkingLemmaFormalSuite",
+    "suite_type": "CryptoTranscriptForkingLemma.ForkingLemmaFormalSuite",
+    "parent": "CryptoFullSuite",
+    "field": "forking_lemma",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoTranscriptForkingLemma.transcript_forking_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumBeamSplitterTransform": {
+    "suite_struct": "BeamSplitterFormalSuite",
+    "suite_type": "QuantumBeamSplitterTransform.BeamSplitterFormalSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "beam_splitter",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumBeamSplitterTransform.beam_splitter_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.MasterHundredRegistry": {
+    "suite_struct": "MasterHundredFormalSuite",
+    "suite_type": "MasterHundredFormalSuite.{u₁, u₂, u₃, u₄, u₅,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
+    "parent": "VerificationMasterRegistry",
+    "field": "master_hundred_registry",
+    "constructor": "verification_master_registry",
+    "proof": "MasterHundredRegistry.master_hundred_registry_verified"
   }
 }

@@ -31,8 +31,10 @@ improve the proof; never replace the intended conclusion with `True` or assume i
 
 ## Integration and cards
 
-`integrate MODULE SUITE` returns a diff. `--apply` updates only the registry/root
-using an explicit recipe in `tools/integration_targets.json`, then verifies and
+`integrate MODULE SUITE` returns a diff. `--apply` updates the recipe-selected
+parent module and the central/root imports. Existing domain packages live in
+`Verification.MasterSuiteComponents`; recipes select it with `parent_module`.
+It uses an explicit recipe in `tools/integration_targets.json`, then verifies and
 builds; failure restores those source files. Add a reviewed recipe for a new
 suite rather than guessing universes or overwriting the registry. Preserve inherited
 fields, integral results and existing public APIs. Source rollback does not

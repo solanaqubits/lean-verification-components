@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.5.0
+
+- Added threshold time envelopes, elementary transcript forking, and real beam-splitter models.
+- Split reusable components from the milestone registry without cyclic imports or changed proofs.
+- 100 direct imports, 134 Lean files, and 8,237 audited declarations.
+- Strict build: 3,516 jobs; 35 public tests without skips; CLI and independent axiom audits.
+- Preserved all model boundaries and exact placement provenance. No simulations are included.
+
 ## v0.4.3
 
 - Added global reachable-state Raft Log Matching and operational Leader Completeness

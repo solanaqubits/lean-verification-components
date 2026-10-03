@@ -45,3 +45,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoMuSig2Aggregation](../07_cryptography/CryptoMuSig2Aggregation.md): two-signer, two-nonce scalar completeness and a restricted naive-key cancellation barrier; no MuSig2 security claim.
 
 - [CryptoSchnorrBatchVerification](../07_cryptography/CryptoSchnorrBatchVerification.md): exact prime-field batch acceptance counts and independent-round fractions for fixed residuals.
+
+- [CryptoTranscriptForkingLemma](../07_cryptography/CryptoTranscriptForkingLemma.md): Finite uniform matrix forking bound and scalar witness extraction; no adaptive random-oracle reduction.
