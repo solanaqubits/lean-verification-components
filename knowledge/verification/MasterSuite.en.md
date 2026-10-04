@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: f011b31be1ad3633c3589de52f8d05599da930168837adce605e16310adc83c0
+source_sha256: 9520ac2a0f693d57179459c5f57d6cab2f8ef9a1ebd5d0dc6efd5cd1acf2b14e
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 105 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 106 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L196)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L208)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L220)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L239)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L269)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L337)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L373)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L383)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L393)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L431)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L482)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L518)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L137)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L197)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L209)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L221)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L240)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L270)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L339)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L376)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L386)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L396)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L434)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L485)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L521)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L138)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L531)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L534)
 
 ## Verification
 
@@ -65,10 +65,12 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `QuantumPhysicsFullSuite.beam_splitter` proves a real orthogonal two-mode transformation, its normalized finite three-coordinate two-boson lift, polynomial substitution, norm preservation and ideal HOM suppression for |1,1⟩ exactly at balanced power splitting. Indistinguishability and the Born-rule interpretation are modeling assumptions. No complex reflection phase, full Fock space, distinguishability, temporal dip profile, detector model, hardware validation or formal equivalence with existing MZI modules is claimed.
 
-`MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current numerical extensions are described in the validation record.
+`MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 105 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry source and import manifest remain unchanged; its distributed package inherits the new chandy_lamport field. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 106 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
-[NumericSQLGapBounds](../12_numeric_certificates/NumericSQLGapBounds.md) adds affine gap bounds, exact zero and real rounding composition.
+[Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 
-`DistributedSystemsFullSuite.chandy_lamport` derives consistency of saved local cuts and exact completed-channel transit lists from two-process FIFO transitions. Partial recording is characterized separately; fairness and termination are not proved.
+`DistributedSystemsFullSuite.chandy_lamport` derives consistency of saved local cuts and exact completed-channel contents from a two-process FIFO transition system. Partial transit recording has a separate theorem; fairness and termination are not proved.
+
+`QuantumPhysicsFullSuite.phase_estimation` derives exact two-bit phase recovery from controlled U/U², a supplied normalized eigenstate and inverse Fourier cancellation. Approximate phases and physical hardware are outside scope.

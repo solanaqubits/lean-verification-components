@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumPhaseEstimation",
         "Verification.DistributedChandyLamportSnapshot",
         "Verification.NumericSQLGapBounds",
         "Verification.NumericCertificateDigestBridge",
@@ -1340,6 +1341,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumPhaseEstimation",
         "Verification.DistributedChandyLamportSnapshot",
         "Verification.QuantumBeamSplitterTransform",
         "Verification.CryptoTranscriptForkingLemma",
@@ -1519,6 +1521,14 @@
       "section": "distributed",
       "source": "Verification/DistributedChandyLamportSnapshot.lean",
       "card": "knowledge/09_distributed_systems/DistributedChandyLamportSnapshot.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumPhaseEstimation",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumPhaseEstimation.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimation.md",
       "project_imports": [],
       "novelty": "not-assessed"
     }

@@ -1,18 +1,19 @@
 {
-  "modules_checked": 141,
+  "modules_checked": 142,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 9074,
+    "declarations": 9224,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "02f5e2ab2ad23eac0d6389a80ed2f64eddcae3d912f8aff844775b0e589ff7f6",
-    "Verification.MasterSuite": "f011b31be1ad3633c3589de52f8d05599da930168837adce605e16310adc83c0",
+    "Verification.AxiomAudit": "a964ec06f414f13ef1b8ef41f170af31599c02b027c123a90486c1b01c424a71",
+    "Verification.MasterSuite": "9520ac2a0f693d57179459c5f57d6cab2f8ef9a1ebd5d0dc6efd5cd1acf2b14e",
+    "Verification.QuantumPhaseEstimation": "73b042a0deffd448b9ef434570890c0f69d9d2072315ae8030bdb84b3a6a7690",
     "Verification.DistributedChandyLamportSnapshot": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2",
     "Verification.NumericSQLGapBounds": "6b04b810667cc631f1774b8df002005e1731426722203a9a5c1c188f77861f3d",
     "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
@@ -22,7 +23,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "7f81014d03d14c3e162fc26ba5debeb31dff3819ab304c872abd6d541670069e",
+    "Verification.MasterSuiteComponents": "5b1fc6eecba517f91ccacc8eb85998767e1f23dc6e8fe6e62a64d504f5679402",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
@@ -153,23 +154,15 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.3: operational Chandy-Lamport snapshot safety, with unused broad tactic import removed for fresh strict compilation.",
+  "description": "Public v0.5.4 exact two-bit QPE validation; proof hashes match the selected private snapshot.",
   "independent_axiom_audit": {
-    "declarations": 9074,
+    "declarations": 9224,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
-  "regression_tests": {
-    "passed": 40,
-    "skipped": 0,
-    "runs": [
-      40
-    ],
-    "note": "Public live unittest discovery, including compiler regressions; 71.860 seconds."
-  },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 105,
-  "full_build_jobs": 3523,
+  "master_direct_imports": 106,
+  "full_build_jobs": 3524,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -177,8 +170,9 @@
     "live_tests": true,
     "knowledge_catalog": true,
     "exact_data_import_check": true,
-    "integration_idempotent": true,
-    "source_correspondence_checked": true
+    "verify": true,
+    "audit": true,
+    "integrate": true
   },
   "source_unchanged_during_verification": true,
   "raft_state_machine_scope": {
@@ -226,7 +220,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "84b34bfa0725c4d956f044487111a6bf980eedb5c398955c83824b3fabf88610",
+  "root_source_sha256": "18cd2f73a1f2ca73e4c576b1ab9bba365d5bb29348dabaee2637f754657ea4c6",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -494,15 +488,59 @@
     "execution_reordering_reconstruction": false,
     "production_implementation": false
   },
-  "private_source_commit": "520eef27466667237fff4d6ef7d9821e17f9fcfe",
-  "source_correspondence": {
-    "lean_files_including_root": 142,
-    "byte_identical_files": 141,
-    "exception": "Verification/DistributedChandyLamportSnapshot.lean",
-    "only_change": "Removed unused import Mathlib.Tactic",
-    "definitions_and_proof_bodies_byte_identical": true,
-    "private_source_sha256": "a60f818107358100b96662387c2c0763ba801549a0ba06715e7c4fae950730be",
-    "public_source_sha256": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2"
+  "qpe_scope": {
+    "control_qubits": 2,
+    "target_qubits": 1,
+    "exact_phases": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "complex_amplitudes": true,
+    "exponential_fourier_kernel": true,
+    "two_sided_fourier_inverse": true,
+    "fourier_norm_preservation": true,
+    "paired_hadamard_kernel": true,
+    "controlled_U_and_U_squared": true,
+    "kickback_derived_from_eigenstate": true,
+    "normalized_exact_eigenstate_is_input": true,
+    "target_norm_preservation_is_input": true,
+    "joint_state_and_marginal_weights": true,
+    "deterministic_bit_recovery": true,
+    "born_rule_is_external_interpretation": true,
+    "other_phases_or_error_bounds": false,
+    "arbitrary_register_size": false,
+    "eigenstate_preparation": false,
+    "elementary_gate_synthesis_of_inverse_qft": false,
+    "gate_noise_or_hardware_validation": false,
+    "shor_algorithm": false
   },
-  "release_version": "0.5.3"
+  "private_source_commit": "13ee7282c5dd63c88eb4e4c2fd237e8dbd082e8d",
+  "private_regression_tests": {
+    "passed": 44,
+    "skipped": 0,
+    "runs": [
+      44
+    ],
+    "note": "Private live unittest discovery, including exporter and compiler regressions."
+  },
+  "public_release": {
+    "version": "0.5.4",
+    "previous_public_commit": "fe1097fd863e619737ed773f7c9461914f89229e",
+    "source_lean_files_including_root": 143,
+    "all_lean_sources_match_private": true,
+    "integration_idempotent": true,
+    "full_build_jobs": 3524,
+    "public_tests": 41
+  },
+  "regression_tests": {
+    "passed": 41,
+    "skipped": 0,
+    "runs": [
+      41
+    ],
+    "seconds": 74.651,
+    "note": "Public live unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
+  }
 }

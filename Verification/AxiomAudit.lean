@@ -36,3 +36,5 @@ end AxiomAudit
 #audit_axioms NumericSQLGapBounds.numeric_sql_gap_master_suite
 
 #audit_axioms DistributedChandyLamportSnapshot.chandy_lamport_master_suite
+
+#audit_axioms QuantumPhaseEstimation.quantum_phase_estimation_master_suite

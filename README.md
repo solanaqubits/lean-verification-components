@@ -28,12 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **141 Lean files** under
-`Verification/` and **105 direct MasterSuite imports**. There are **9,074 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **142 Lean files** under
+`Verification/` and **106 direct MasterSuite imports**. There are **9,224 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.3
+## Release v0.5.4
+
+[QuantumPhaseEstimation](knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimation.md)
+proves controlled U/U² phase kickback, inverse Fourier cancellation and deterministic
+recovery of the exact phases 0, 1/4, 1/2 and 3/4. The target operator preserves norm,
+and its normalized exact eigenstate is supplied as an input hypothesis.
+Approximate QPE, spectral leakage/error bounds, eigenstate preparation, noisy gates
+and physical quantum hardware are outside scope.
+
+See the [public release report](docs/release-v0.5.4.en.md) for fresh measurements,
+source correspondence and regression coverage. The fresh strict build passed **3524 jobs** and all **41 public tests** passed without skips.
+
+## Earlier additions in v0.5.3
 
 [DistributedChandyLamportSnapshot](knowledge/09_distributed_systems/DistributedChandyLamportSnapshot.md)
 derives saved-cut consistency and exact completed-channel transit lists from

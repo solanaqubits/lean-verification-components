@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.3](../docs/release-v0.5.3.en.md)
+[Knowledge base](README.md) · [Release v0.5.4](../docs/release-v0.5.4.en.md)
 
-This release contains 105 direct imports, 141 Lean files under Verification/ and
-9,074 project declarations. Exact proof-source hashes are recorded in
+This release contains 106 direct imports, 142 Lean files under Verification/ and
+9,224 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3,523 strict build jobs, 40 tests with no skips, and two audits covering 9,074 declarations. Reproduce with:
+Public validation passed: 3,524 strict build jobs, 41 tests with no skips, and two audits covering 9,224 declarations. Reproduce with:
 
 ```bash
 lake build --wfail
@@ -24,7 +24,11 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-A fresh public build required removing the unused broad `Mathlib.Tactic` import from the new module. All definitions and proof bodies match private source `520eef27466667237fff4d6ef7d9821e17f9fcfe`; the other 141 Lean files match byte-for-byte. No checks were disabled. See the release report for this source exception.
+The former unused-import correction is already present in the selected private QPE snapshot. All 143 Lean sources, including the root file, now match that snapshot byte-for-byte.
+
+## Exact QPE scope
+
+QuantumPhaseEstimation has two control qubits and a one-qubit complex target. Controlled U/U² derive phase kickback from an exact eigenstate equation; the inverse Fourier transform returns the correct basis state. The four supported phases are 0, 1/4, 1/2 and 3/4. A normalized eigenstate and norm-preserving complex-linear operator are supplied. Physical measurement, preparation, gate noise and approximate QPE are not certified.
 
 ## Numerical scope
 

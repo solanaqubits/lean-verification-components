@@ -620,5 +620,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedChandyLamportSnapshot.chandy_lamport_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumPhaseEstimation": {
+    "suite_struct": "QuantumPhaseEstimationSuite",
+    "suite_type": "QuantumPhaseEstimation.QuantumPhaseEstimationSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "phase_estimation",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumPhaseEstimation.quantum_phase_estimation_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

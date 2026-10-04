@@ -1,3 +1,4 @@
+import Verification.QuantumPhaseEstimation
 import Verification.DistributedChandyLamportSnapshot
 import Verification.QuantumBeamSplitterTransform
 import Verification.CryptoTranscriptForkingLemma
@@ -333,6 +334,7 @@ structure QuantumPhysicsFullSuite : Prop where
   optomechanical_coupling : QuantumOptomechanicalCoupling.OptomechanicalCouplingFormalSuite
   standard_quantum_limit : QuantumStandardQuantumLimit.QuantumSQLFormalSuite
   beam_splitter : QuantumBeamSplitterTransform.BeamSplitterFormalSuite
+  phase_estimation : QuantumPhaseEstimation.QuantumPhaseEstimationSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -363,6 +365,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumOptomechanicalCoupling.quantum_optomechanical_coupling_master_suite
   standard_quantum_limit := QuantumStandardQuantumLimit.quantum_sql_master_suite
   beam_splitter := QuantumBeamSplitterTransform.beam_splitter_master_suite
+  phase_estimation := QuantumPhaseEstimation.quantum_phase_estimation_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
