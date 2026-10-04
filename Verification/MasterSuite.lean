@@ -1,3 +1,6 @@
+import Verification.NumericCertificateDigestBridge
+import Verification.NumericSQLIntervalBounds
+import Verification.NumericRoundingCertificates
 import Verification.MasterHundredRegistry
 import Verification.QuantumBeamSplitterTransform
 import Verification.CryptoTranscriptForkingLemma
@@ -123,6 +126,9 @@ structure VerificationMasterRegistry : Prop where
   distributed_suite : DistributedSystemsFullSuite.{uRaft1, uRaft2, uRaft3}
   master_hundred_registry : MasterHundredFormalSuite.{u₁, u₂, u₃, u₄, u₅,
     uFRI, uHopf, uRaft1, uRaft2, uRaft3}
+  rounding_certificates : NumericRoundingCertificates.NumericRoundingCertificatesSuite
+  sql_intervals : NumericSQLIntervalBounds.NumericSQLIntervalBoundsSuite
+  digest_bridge : NumericCertificateDigestBridge.NumericCertificateDigestBridgeSuite
 
 /-- Assemble the registry from the existing proofs without extending their interpretation. -/
 theorem verification_master_registry : VerificationMasterRegistry := {
@@ -138,6 +144,9 @@ theorem verification_master_registry : VerificationMasterRegistry := {
   finance_suite := finance_risk_full_master_suite
   distributed_suite := distributed_systems_full_master_suite
   master_hundred_registry := MasterHundredRegistry.master_hundred_registry_verified
+  rounding_certificates := NumericRoundingCertificates.numeric_rounding_certificates_master_suite
+  sql_intervals := NumericSQLIntervalBounds.numeric_sql_interval_master_suite
+  digest_bridge := NumericCertificateDigestBridge.numeric_digest_bridge_master_suite
 }
 
 #print axioms verification_master_registry

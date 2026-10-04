@@ -3,8 +3,9 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: 54c107bad4c7a6371f616f27f1ea5342d1c6a7fc77e8bfa268d1c42bfd30859f
+source_sha256: 567174525dade8b79b1ec63c0025b276dffa064a9f167eef5771926ae8c8ebd7
 novelty: not-assessed
+status: reviewed
 ---
 
 # AxiomAudit

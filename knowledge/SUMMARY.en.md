@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 130 subject files across ten areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 135 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -65,3 +65,10 @@ Release v0.5.0 adds threshold time envelopes, elementary transcript forking,
 a real beam-splitter model with a finite two-boson lift, and the acyclic milestone
 registry. The registry assembles selected propositions without strengthening their
 hypotheses. See the [verification record](VERIFICATION.en.md) for scope and counts.
+
+
+The v0.5.1 numeric extension adds three registry suites in five source files.
+There are now 103 direct imports and 139 Lean files. The new results certify
+mathematical rounding and conditional root enclosures; composition with supplied
+digest/parser functions does not verify SHA-256, JSON, Python or source authenticity.
+See the [numeric section](12_numeric_certificates/README.md).

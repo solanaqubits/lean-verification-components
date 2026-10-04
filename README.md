@@ -28,17 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **134 Lean files** under `Verification/`, including 130 subject files and
-four registry/audit support files. [MasterSuite](Verification/MasterSuite.lean) collects eleven
-suites and directly imports **100 modules**. The project-wide audit checked
-**8,237 declarations**, including generated declarations, with only `propext`,
-`Classical.choice`, and `Quot.sound`. This is not a count of independent theorems.
+The [validation record](knowledge/VERIFICATION.en.md) covers **139 Lean files** under
+`Verification/` and **103 direct MasterSuite imports**. There are **8,680 audited
+declarations**, including generated declarations, with only `propext`,
+`Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-The public release build completed with 3,516 jobs, including dependencies,
-and 35 public regression tests passed without skips. These are recorded
-validation results, not a promise that every future commit or toolchain will pass.
+## Release v0.5.1
 
-## Release v0.5.0
+This release adds exact binary rounding certificates, a real-input extension,
+conditional enclosures of `sqrt(hbar/(mass*frequency))`, and a conditional bridge
+through caller-supplied digest and parser functions. Three registry suites are
+implemented by five Lean source files. The strict public build passed 3,521 tasks and all 38 public tests passed without skips. See the [release record](docs/release-v0.5.1.en.md).
+
+SHA-256 implementation, JSON/Python conformance, authenticated provenance and the
+separate SimLab gap `A/I+B*I-2*sqrt(A*B)` remain outside these results. Historical
+indeterminate interval records are preserved; separate exact evidence does not
+rewrite them.
+
+## Earlier additions in v0.5.0
 
 This release reaches **100 direct registry imports**, with three new domain
 packages and an acyclic milestone registry. It adds five Lean files in total.

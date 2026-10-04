@@ -25,4 +25,10 @@ elab "#audit_axioms " id:ident : command => do
 #audit_axioms MasterSuite.verification_master_registry
 #audit_axioms MasterHundredRegistry.master_hundred_registry_verified
 
+#audit_axioms NumericRoundingCertificates.numeric_rounding_certificates_master_suite
+
 end AxiomAudit
+
+#audit_axioms NumericSQLIntervalBounds.numeric_sql_interval_master_suite
+
+#audit_axioms NumericCertificateDigestBridge.numeric_digest_bridge_master_suite

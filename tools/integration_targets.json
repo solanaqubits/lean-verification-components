@@ -579,5 +579,29 @@
     "field": "master_hundred_registry",
     "constructor": "verification_master_registry",
     "proof": "MasterHundredRegistry.master_hundred_registry_verified"
+  },
+  "Verification.NumericRoundingCertificates": {
+    "suite_struct": "NumericRoundingCertificatesSuite",
+    "suite_type": "NumericRoundingCertificates.NumericRoundingCertificatesSuite",
+    "parent": "VerificationMasterRegistry",
+    "field": "rounding_certificates",
+    "constructor": "verification_master_registry",
+    "proof": "NumericRoundingCertificates.numeric_rounding_certificates_master_suite"
+  },
+  "Verification.NumericSQLIntervalBounds": {
+    "suite_struct": "NumericSQLIntervalBoundsSuite",
+    "suite_type": "NumericSQLIntervalBounds.NumericSQLIntervalBoundsSuite",
+    "parent": "VerificationMasterRegistry",
+    "field": "sql_intervals",
+    "constructor": "verification_master_registry",
+    "proof": "NumericSQLIntervalBounds.numeric_sql_interval_master_suite"
+  },
+  "Verification.NumericCertificateDigestBridge": {
+    "suite_struct": "NumericCertificateDigestBridgeSuite",
+    "suite_type": "NumericCertificateDigestBridge.NumericCertificateDigestBridgeSuite",
+    "parent": "VerificationMasterRegistry",
+    "field": "digest_bridge",
+    "constructor": "verification_master_registry",
+    "proof": "NumericCertificateDigestBridge.numeric_digest_bridge_master_suite"
   }
 }

@@ -3,8 +3,9 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: add3aca2f16a9af32d0182e03f4d869fbea18d94d255223357d5833205d88a10
+source_sha256: 6cfea315e79b04b23ea2e4518a54da0212f27e5cf3c37e368a39df2c44c50d3c
 novelty: not-assessed
+status: reviewed
 ---
 
 # MasterSuite
@@ -13,7 +14,7 @@ novelty: not-assessed
 
 ## Verified result
 
-Eleven domain suites and a milestone aggregate with 100 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, three numerical certificate suites, and the historical milestone aggregate with 103 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -64,4 +65,6 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `QuantumPhysicsFullSuite.beam_splitter` proves a real orthogonal two-mode transformation, its normalized finite three-coordinate two-boson lift, polynomial substitution, norm preservation and ideal HOM suppression for |1,1⟩ exactly at balanced power splitting. Indistinguishability and the Born-rule interpretation are modeling assumptions. No complex reflection phase, full Fock space, distinguishability, temporal dip profile, detector model, hardware validation or formal equivalence with existing MZI modules is claimed.
 
-`MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. The registry is included in release v0.5.0.
+`MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current numerical extensions are described in the validation record.
+
+The central registry now has 103 direct imports and the separate `rounding_certificates`, `sql_intervals` and `digest_bridge` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).

@@ -55,6 +55,11 @@
       "id": "verification",
       "index": "knowledge/verification/README.md",
       "title_en": "Registry and axiom audit"
+    },
+    {
+      "id": "numeric-certificates",
+      "title_en": "Exact numeric certificates",
+      "index": "knowledge/12_numeric_certificates/README.md"
     }
   ],
   "modules": [
@@ -609,6 +614,9 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.NumericCertificateDigestBridge",
+        "Verification.NumericSQLIntervalBounds",
+        "Verification.NumericRoundingCertificates",
         "Verification.MasterHundredRegistry",
         "Verification.QuantumBeamSplitterTransform",
         "Verification.CryptoTranscriptForkingLemma",
@@ -1439,6 +1447,54 @@
       "card": "knowledge/11_meta_registry/MasterHundredRegistry.md",
       "project_imports": [
         "Verification.MasterSuiteComponents"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NumericBinaryGrid",
+      "section": "numeric-certificates",
+      "source": "Verification/NumericBinaryGrid.lean",
+      "card": "knowledge/12_numeric_certificates/NumericBinaryGrid.md",
+      "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NumericRoundingCertificates",
+      "section": "numeric-certificates",
+      "source": "Verification/NumericRoundingCertificates.lean",
+      "card": "knowledge/12_numeric_certificates/NumericRoundingCertificates.md",
+      "project_imports": [
+        "Verification.NumericBinaryGrid"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NumericRealRounding",
+      "section": "numeric-certificates",
+      "source": "Verification/NumericRealRounding.lean",
+      "card": "knowledge/12_numeric_certificates/NumericRealRounding.md",
+      "project_imports": [
+        "Verification.NumericRoundingCertificates"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NumericSQLIntervalBounds",
+      "section": "numeric-certificates",
+      "source": "Verification/NumericSQLIntervalBounds.lean",
+      "card": "knowledge/12_numeric_certificates/NumericSQLIntervalBounds.md",
+      "project_imports": [
+        "Verification.NumericRealRounding"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NumericCertificateDigestBridge",
+      "section": "numeric-certificates",
+      "source": "Verification/NumericCertificateDigestBridge.lean",
+      "card": "knowledge/12_numeric_certificates/NumericCertificateDigestBridge.md",
+      "project_imports": [
+        "Verification.NumericSQLIntervalBounds"
       ],
       "novelty": "not-assessed"
     }

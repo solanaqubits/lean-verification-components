@@ -1635,3 +1635,17 @@ imports the milestone and retains the central entry point. No reverse import is
 introduced. The new wrapper preserves hypotheses and adds no domain theorem.
 The 100 direct imports are an externally checked repository metric, not a Lean
 proof of coverage of every declaration or of open mathematical problems.
+
+
+## Exact numerical certificates (v0.5.1)
+
+The [numeric section](../knowledge/12_numeric_certificates/README.md) contains exact
+rational rounding, a real-input extension, conditional SQL-root enclosures and a
+parameterized digest/parser composition theorem. The five source files contribute
+three direct registry imports. Signed zero, subnormal ties, overflow and historical
+indeterminate records retain their stated semantics.
+
+The root target is sqrt(hbar/(mass*frequency)); the SimLab optimization gap is a
+separate expression. Digest equality does not establish byte equality or authorship.
+SHA-256, JSON/Python conformance and external input binding remain unverified.
+See the [release record](release-v0.5.1.en.md) for public validation results.

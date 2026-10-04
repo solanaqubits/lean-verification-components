@@ -1,3 +1,6 @@
+import Verification.NumericCertificateDigestBridge
+import Verification.NumericSQLIntervalBounds
+import Verification.NumericRoundingCertificates
 import Verification.MasterHundredRegistry
 import Verification.QuantumBeamSplitterTransform
 import Verification.CryptoTranscriptForkingLemma
