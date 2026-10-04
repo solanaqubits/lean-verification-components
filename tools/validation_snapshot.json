@@ -1,30 +1,31 @@
 {
-  "modules_checked": 139,
+  "modules_checked": 140,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 8680,
+    "declarations": 8710,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "567174525dade8b79b1ec63c0025b276dffa064a9f167eef5771926ae8c8ebd7",
-    "Verification.MasterSuite": "6cfea315e79b04b23ea2e4518a54da0212f27e5cf3c37e368a39df2c44c50d3c",
-    "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
-    "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
+    "Verification.AxiomAudit": "b5ee90473245f4cef817dc32b467b2e13a79d079492c6232acf23b0eb57b84ce",
+    "Verification.MasterSuite": "9136f2dfc81d62dfb58216e7645433516764f5a80af16a9cffe4d324b4aa5def",
+    "Verification.NumericSQLGapBounds": "6b04b810667cc631f1774b8df002005e1731426722203a9a5c1c188f77861f3d",
+    "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
     "Verification.NumericRealRounding": "13e59b66be0e03567abf2301c6a911e05b25e87348c6183e79040bb0a8f45e2b",
     "Verification.NumericRoundingCertificates": "5af92a35e634988e13c860e3c106ea47ccb776653f09d0e1aa599e5692f71292",
     "Verification.NumericBinaryGrid": "e99fc432306360240ae307e2d8a3828ccacc400daad458fbd3181966e54ed5b4",
+    "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
+    "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
     "Verification.MasterSuiteComponents": "4f83c81db6be86d60aa603cd5f60ff500dbb2bb263bee122fb34fcd99836112c",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
     "Verification.DistributedMarzulloAlgorithm": "a7c0b9c3f55e2be53a7cc5e90e567990295e699fbfc82172d5668f006ceef08d",
-    "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
     "Verification.CryptoSchnorrBatchVerification": "e034ca9a562a8563e805b3963aeb5c00039bf91db54560d56e75a8808d10e9f8",
     "Verification.MithraicPhaseCollapse": "b55654dcd4cc96fe2708bb1656a4f6a5d985d43a54d920162e506e745ede82a8",
     "Verification.CryptoMuSig2Aggregation": "5236457dfbdf59b40499475fe5f0a70a5d00118bc14bffe572db0b9adafa5f44",
@@ -151,23 +152,23 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Proof-source hash evidence and measured public v0.5.1 validation.",
+  "description": "Public v0.5.2 validation: SQL gap affine bounds, exact zero and real rounding composition.",
   "independent_axiom_audit": {
-    "declarations": 8680,
+    "declarations": 8710,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 38,
+    "passed": 39,
     "skipped": 0,
     "runs": [
-      38
+      39
     ],
-    "note": "Public unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
+    "note": "Public live unittest discovery; private-only tests are not included."
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 103,
-  "full_build_jobs": 3521,
+  "master_direct_imports": 104,
+  "full_build_jobs": 3522,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -226,7 +227,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "d091ea3204cc2b536acfa127ff7509b19fe751f7d54e0ceffaedb80b6ffb047c",
+  "root_source_sha256": "40d6d4d93346ff7c517ff5b74d9bde43656ac51f7778436f6170018a469e5e7e",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -460,13 +461,13 @@
     "full_third_obligation_closed": false,
     "physical_detector_validation": false
   },
-  "release_tag": "v0.5.1",
+  "release_tag": "v0.5.2",
   "public_release_validation": {
-    "version": "0.5.1",
-    "private_source_snapshot": "2157ef97939cb466d3cc2bfdc34fac011d785c7d",
-    "previous_public_snapshot": "602c2db51ff1c8ee8f3aed6c74fac8b2083ed4b6",
-    "identical_lean_files_including_root": 140,
-    "english_catalog_modules": 139,
+    "version": "0.5.2",
+    "private_source_snapshot": "fb6176fdd9f0186c8c1406b7bf611d2b6b09af35",
+    "previous_public_snapshot": "6c4e097b59444f4f178feb9ea3e0e030e409dccc",
+    "identical_lean_files_including_root": 141,
+    "english_catalog_modules": 140,
     "catalog_sections": 12,
     "new_recipes_idempotent": true,
     "chip_manifest_check": true,
@@ -475,5 +476,19 @@
     "fresh_project_build": true,
     "isolated_dependency_copy": true
   },
-  "public_report": "docs/release-v0.5.1.en.md"
+  "public_report": "docs/release-v0.5.2.en.md",
+  "numeric_sql_gap_scope": {
+    "real_affine_enclosure": true,
+    "positive_parameters_zero_iff_balance": true,
+    "canonical_binary64_positive_zero": true,
+    "root_square_check_to_gap_rounding": true,
+    "requires_midpoint_distance": false,
+    "rationalized_enclosure": false,
+    "adaptive_termination": false,
+    "python_equivalence": false,
+    "json_sha256_or_external_input_binding": false,
+    "physical_detector_validation": false,
+    "historical_indeterminate_preserved": true,
+    "exact_cell_boundary_comparison_or_search": false
+  }
 }

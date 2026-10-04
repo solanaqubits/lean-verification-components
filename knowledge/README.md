@@ -17,7 +17,7 @@ English summaries of the verified components, grouped into eleven subject areas 
 | [Exact numeric certificates](12_numeric_certificates/README.md) | 5 |
 | [Registry and axiom audit](verification/README.md) | 4 |
 
-139 module cards: 135 subject modules and four registry/audit support files. The master registry directly imports 103 modules; these counts describe different sets.
+140 module cards: 136 subject modules and four registry/audit support files. The master registry directly imports 104 modules; these counts describe different sets.
 
 [Project value](SUMMARY.en.md) · [Validation](VERIFICATION.en.md) · [Contributing](CONTRIBUTING.en.md) · [Catalog](catalog.json)
 

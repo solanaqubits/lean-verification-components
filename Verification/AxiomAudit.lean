@@ -32,3 +32,5 @@ end AxiomAudit
 #audit_axioms NumericSQLIntervalBounds.numeric_sql_interval_master_suite
 
 #audit_axioms NumericCertificateDigestBridge.numeric_digest_bridge_master_suite
+
+#audit_axioms NumericSQLGapBounds.numeric_sql_gap_master_suite

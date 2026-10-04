@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.NumericSQLGapBounds",
         "Verification.NumericCertificateDigestBridge",
         "Verification.NumericSQLIntervalBounds",
         "Verification.NumericRoundingCertificates",
@@ -1494,6 +1495,19 @@
       "source": "Verification/NumericCertificateDigestBridge.lean",
       "card": "knowledge/12_numeric_certificates/NumericCertificateDigestBridge.md",
       "project_imports": [
+        "Verification.NumericSQLIntervalBounds"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "NumericSQLGapBounds",
+      "section": "numeric-certificates",
+      "source": "Verification/NumericSQLGapBounds.lean",
+      "card": "knowledge/12_numeric_certificates/NumericSQLGapBounds.md",
+      "project_imports": [
+        "Verification.QuantumStandardQuantumLimit",
+        "Verification.NumericRealRounding",
+        "Verification.NumericRoundingCertificates",
         "Verification.NumericSQLIntervalBounds"
       ],
       "novelty": "not-assessed"

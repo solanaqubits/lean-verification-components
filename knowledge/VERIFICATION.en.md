@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.1](../docs/release-v0.5.1.en.md)
+[Knowledge base](README.md) · [Release v0.5.2](../docs/release-v0.5.2.en.md)
 
-This release contains 103 direct imports, 139 Lean files under Verification/ and
-8,680 project declarations. Exact proof-source hashes are recorded in
+This release contains 104 direct imports, 140 Lean files under Verification/ and
+8,710 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3,521 strict build jobs, 38 tests with no skips, and two audits covering 8,680 declarations. Reproduce with:
+Public validation passed: 3,522 strict build jobs, 39 tests with no skips, and two audits covering 8,710 declarations. Reproduce with:
 
 ```bash
 lake build --wfail
@@ -28,8 +28,11 @@ The CLI has no `audit-all` or `test-all` subcommands.
   verification of Python or CPU instructions.
 - NumericRealRounding transports rational endpoint certificates to enclosed real values.
 - NumericSQLIntervalBounds encloses `sqrt(hbar/(mass*frequency))` under explicit
-  positive input intervals and containment hypotheses. Physical calibration and
-  the SimLab optimization gap are separate obligations.
+  positive input intervals and containment hypotheses. Physical calibration is external;
+  the separate gap expression is handled by NumericSQLGapBounds.
+- NumericSQLGapBounds derives affine gap bounds, exact zero iff balance for positive
+  parameters, canonical +0 and composition with real rounding. Rationalization,
+  exact cell-boundary comparison and the new SimLab search are not formalized.
 - NumericCertificateDigestBridge composes explicit pure digest/parser parameters
   with the mathematical checker. Expected digest, parser, grid and SQL inputs are
   external context. SHA-256, JSON/RFC 8259, Python equivalence, byte binding of those

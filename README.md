@@ -28,12 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **139 Lean files** under
-`Verification/` and **103 direct MasterSuite imports**. There are **8,680 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **140 Lean files** under
+`Verification/` and **104 direct MasterSuite imports**. There are **8,710 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.1
+## Release v0.5.2
+
+[NumericSQLGapBounds](knowledge/12_numeric_certificates/NumericSQLGapBounds.md)
+proves the affine enclosure of `G=A/I+B*I-2*sqrt(A*B)`, its exact-zero balance
+criterion for positive parameters, canonical +0 and composition with real rounding.
+Exact zero is distinct from a positive midpoint underflowing to +0.
+Historical indeterminate records are retained alongside separate exact evidence.
+
+Rationalization, exact cell-boundary comparison, the SimLab cell-search algorithm,
+Python, JSON/SHA-256 and external input-byte binding remain outside these proofs.
+The strict build passed 3,522 jobs and all 39 public tests passed without skips.
+See the [public release report](docs/release-v0.5.2.en.md).
+
+## Earlier additions in v0.5.1
 
 This release adds exact binary rounding certificates, a real-input extension,
 conditional enclosures of `sqrt(hbar/(mass*frequency))`, and a conditional bridge

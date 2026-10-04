@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 135 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 136 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -68,7 +68,9 @@ hypotheses. See the [verification record](VERIFICATION.en.md) for scope and coun
 
 
 The v0.5.1 numeric extension adds three registry suites in five source files.
-There are now 103 direct imports and 139 Lean files. The new results certify
+That release had 103 direct imports and 139 Lean files. Those results certify
 mathematical rounding and conditional root enclosures; composition with supplied
 digest/parser functions does not verify SHA-256, JSON, Python or source authenticity.
 See the [numeric section](12_numeric_certificates/README.md).
+
+Release v0.5.2 adds the affine SQL gap bounds, exact-zero criterion and real rounding composition, bringing the registry to 104 imports and 140 Lean files. Rationalization and exact cell-boundary comparison/search are separate obligations.

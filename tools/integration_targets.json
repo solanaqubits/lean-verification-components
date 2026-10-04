@@ -603,5 +603,13 @@
     "field": "digest_bridge",
     "constructor": "verification_master_registry",
     "proof": "NumericCertificateDigestBridge.numeric_digest_bridge_master_suite"
+  },
+  "Verification.NumericSQLGapBounds": {
+    "suite_struct": "NumericSQLGapBoundsSuite",
+    "suite_type": "NumericSQLGapBounds.NumericSQLGapBoundsSuite",
+    "parent": "VerificationMasterRegistry",
+    "field": "sql_gap_bounds",
+    "constructor": "verification_master_registry",
+    "proof": "NumericSQLGapBounds.numeric_sql_gap_master_suite"
   }
 }

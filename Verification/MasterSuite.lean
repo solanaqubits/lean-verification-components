@@ -1,3 +1,4 @@
+import Verification.NumericSQLGapBounds
 import Verification.NumericCertificateDigestBridge
 import Verification.NumericSQLIntervalBounds
 import Verification.NumericRoundingCertificates
@@ -129,6 +130,7 @@ structure VerificationMasterRegistry : Prop where
   rounding_certificates : NumericRoundingCertificates.NumericRoundingCertificatesSuite
   sql_intervals : NumericSQLIntervalBounds.NumericSQLIntervalBoundsSuite
   digest_bridge : NumericCertificateDigestBridge.NumericCertificateDigestBridgeSuite
+  sql_gap_bounds : NumericSQLGapBounds.NumericSQLGapBoundsSuite
 
 /-- Assemble the registry from the existing proofs without extending their interpretation. -/
 theorem verification_master_registry : VerificationMasterRegistry := {
@@ -147,6 +149,7 @@ theorem verification_master_registry : VerificationMasterRegistry := {
   rounding_certificates := NumericRoundingCertificates.numeric_rounding_certificates_master_suite
   sql_intervals := NumericSQLIntervalBounds.numeric_sql_interval_master_suite
   digest_bridge := NumericCertificateDigestBridge.numeric_digest_bridge_master_suite
+  sql_gap_bounds := NumericSQLGapBounds.numeric_sql_gap_master_suite
 }
 
 #print axioms verification_master_registry
