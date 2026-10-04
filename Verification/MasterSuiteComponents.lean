@@ -1,3 +1,4 @@
+import Verification.DistributedChandyLamportSnapshot
 import Verification.QuantumBeamSplitterTransform
 import Verification.CryptoTranscriptForkingLemma
 import Verification.DistributedMarzulloAlgorithm
@@ -476,6 +477,7 @@ structure DistributedSystemsFullSuite : Prop where
   raft_network_induction : DistributedRaftNetworkInduction.RaftNetworkInductionSuite
   raft_complete_bridge : DistributedRaftCompleteBridge.RaftCompleteBridgeSuite
   marzullo_algorithm : DistributedMarzulloAlgorithm.MarzulloAlgorithmFormalSuite
+  chandy_lamport : DistributedChandyLamportSnapshot.ChandyLamportFormalSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -503,6 +505,7 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   raft_complete_bridge := by
     exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite
   marzullo_algorithm := DistributedMarzulloAlgorithm.marzullo_algorithm_master_suite
+  chandy_lamport := DistributedChandyLamportSnapshot.chandy_lamport_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

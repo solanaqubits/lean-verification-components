@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedChandyLamportSnapshot",
         "Verification.NumericSQLGapBounds",
         "Verification.NumericCertificateDigestBridge",
         "Verification.NumericSQLIntervalBounds",
@@ -1339,6 +1340,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedChandyLamportSnapshot",
         "Verification.QuantumBeamSplitterTransform",
         "Verification.CryptoTranscriptForkingLemma",
         "Verification.DistributedMarzulloAlgorithm",
@@ -1510,6 +1512,14 @@
         "Verification.NumericRoundingCertificates",
         "Verification.NumericSQLIntervalBounds"
       ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedChandyLamportSnapshot",
+      "section": "distributed",
+      "source": "Verification/DistributedChandyLamportSnapshot.lean",
+      "card": "knowledge/09_distributed_systems/DistributedChandyLamportSnapshot.md",
+      "project_imports": [],
       "novelty": "not-assessed"
     }
   ]

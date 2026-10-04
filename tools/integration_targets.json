@@ -611,5 +611,14 @@
     "field": "sql_gap_bounds",
     "constructor": "verification_master_registry",
     "proof": "NumericSQLGapBounds.numeric_sql_gap_master_suite"
+  },
+  "Verification.DistributedChandyLamportSnapshot": {
+    "suite_struct": "ChandyLamportFormalSuite",
+    "suite_type": "DistributedChandyLamportSnapshot.ChandyLamportFormalSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "chandy_lamport",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedChandyLamportSnapshot.chandy_lamport_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

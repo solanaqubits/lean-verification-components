@@ -1,6 +1,6 @@
 # Knowledge base
 
-English summaries of the verified components, grouped into eleven subject areas and one verification section. English source notes are preserved alongside them.
+English summaries of the verified components, grouped into eleven subject areas and one verification section.
 
 | Section | Modules |
 |---|---:|
@@ -13,14 +13,14 @@ English summaries of the verified components, grouped into eleven subject areas 
 | [Cryptographic algebra and ZK components](cryptography/README.md) | 20 |
 | [Quantum algebra, photonics, and mechanics](quantum-physics/README.md) | 31 |
 | [Finance, liquidity, and mechanisms](finance/README.md) | 19 |
-| [Distributed consensus](distributed/README.md) | 25 |
-| [Exact numeric certificates](12_numeric_certificates/README.md) | 5 |
+| [Distributed consensus](distributed/README.md) | 26 |
+| [Exact numeric certificates](12_numeric_certificates/README.md) | 6 |
 | [Registry and axiom audit](verification/README.md) | 4 |
 
-140 module cards: 136 subject modules and four registry/audit support files. The master registry directly imports 104 modules; these counts describe different sets.
+141 module cards: 137 subject modules and four registry/audit support files. The master registry directly imports 105 modules; these counts describe different sets.
 
 [Project value](SUMMARY.en.md) · [Validation](VERIFICATION.en.md) · [Contributing](CONTRIBUTING.en.md) · [Catalog](catalog.json)
 
 The English cards are concise scope summaries, not word-for-word translations of every historical note. Lean statements remain authoritative. No scientific priority is claimed.
 
-[Exact numeric certificates / Точные численные сертификаты](12_numeric_certificates/README.md)
+[Exact numeric certificates](12_numeric_certificates/README.md)

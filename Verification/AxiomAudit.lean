@@ -34,3 +34,5 @@ end AxiomAudit
 #audit_axioms NumericCertificateDigestBridge.numeric_digest_bridge_master_suite
 
 #audit_axioms NumericSQLGapBounds.numeric_sql_gap_master_suite
+
+#audit_axioms DistributedChandyLamportSnapshot.chandy_lamport_master_suite

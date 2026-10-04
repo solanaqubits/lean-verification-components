@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 4f83c81db6be86d60aa603cd5f60ff500dbb2bb263bee122fb34fcd99836112c
+source_sha256: 7f81014d03d14c3e162fc26ba5debeb31dff3819ab304c872abd6d541670069e
 novelty: not-assessed
 status: reviewed
 ---
@@ -22,7 +22,7 @@ Universe declarations are retained. In particular, the crypto package carries th
 
 ## Dependency purpose
 
-The module imports the same 99 domain modules used by the pre-split central registry. [`MasterHundredRegistry`](../11_meta_registry/MasterHundredRegistry.md) imports these components to assemble the milestone proposition, and the central [`MasterSuite`](MasterSuite.en.md) can import that milestone. Components do not import either registry, avoiding a cycle. The central registry declaration itself is not defined in this file.
+The module imports the original 99 domain modules and the operational Chandy–Lamport module. DistributedSystemsFullSuite now includes chandy_lamport; aggregates referring to this package inherit the added field. [`MasterHundredRegistry`](../11_meta_registry/MasterHundredRegistry.md) imports these components to assemble the milestone proposition, and the central [`MasterSuite`](MasterSuite.en.md) can import that milestone. Components do not import either registry, avoiding a cycle. The central registry declaration itself is not defined in this file.
 
 The split is organizational. It introduces no new domain result and does not enlarge the meaning of any imported guarantee. A suite bundles selected propositions; it does not certify every declaration in its imports or complete coverage of every subject block. Counts of imports and source files are external repository checks, not theorems of the component packages.
 
@@ -30,4 +30,4 @@ The domain limitations remain in force. For example, `QuantumPhysicsFullSuite.be
 
 ## Verification
 
-Strict build, `verify-all`, independent axiom audit, all 35 public tests without skips, and catalog checks passed. MasterHundredRegistry also passed module `verify`, `audit`, and integration. Regressions check acyclicity, at least 100 unique central imports, arbitrary universes, legacy projections, idempotence of every recipe, and rollback of three files on failure. The measured snapshot has exactly 100 direct imports and 134 Lean files. See the [validation record](../VERIFICATION.en.md).
+See the [current validation record](../VERIFICATION.en.md). The operational snapshot field is constructed by `DistributedChandyLamportSnapshot.chandy_lamport_master_suite`; it proves the two-process safety and completed-channel guarantees described in its [scope card](../09_distributed_systems/DistributedChandyLamportSnapshot.md). The historical registry's import manifest is unchanged, but its distributed package type includes this added field.

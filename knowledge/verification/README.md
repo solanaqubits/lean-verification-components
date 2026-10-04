@@ -6,7 +6,7 @@
 
 | Module | Verified result |
 |---|---|
-| [MasterSuite](MasterSuite.en.md) | Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 104 direct imports. The registry does not contain every declaration in the project. |
+| [MasterSuite](MasterSuite.en.md) | Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 105 direct imports. The registry does not contain every declaration in the project. |
 | [AxiomAudit](AxiomAudit.en.md) | The #audit_axioms command rejects disallowed transitive axioms of a selected declaration, including sorryAx. |
 
 ## Scope
@@ -19,4 +19,4 @@ Axiom auditing checks dependencies of formal declarations, not whether the model
 
 - [MasterHundredRegistry](../11_meta_registry/MasterHundredRegistry.md): milestone aggregation without circular imports or stronger domain claims.
 
-The central registry now has 104 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 105 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry source and manifest remain unchanged; its distributed package inherits the new chandy_lamport field. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).

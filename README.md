@@ -28,12 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **140 Lean files** under
-`Verification/` and **104 direct MasterSuite imports**. There are **8,710 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **141 Lean files** under
+`Verification/` and **105 direct MasterSuite imports**. There are **9,074 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.2
+## Release v0.5.3
+
+[DistributedChandyLamportSnapshot](knowledge/09_distributed_systems/DistributedChandyLamportSnapshot.md)
+derives saved-cut consistency and exact completed-channel transit lists from
+explicit two-process FIFO transitions. Partial recording has a separate theorem.
+Termination, failures and arbitrary network topologies are not proved.
+
+The public module removes one unused broad tactic import to pass the enabled
+header linter on a fresh build; definitions and proof bodies are unchanged.
+See the [public release report](docs/release-v0.5.3.en.md) for measurements and
+source correspondence. The fresh strict build passed **3523 jobs** and all **40 public tests** passed without skips.
+
+## Earlier additions in v0.5.2
 
 [NumericSQLGapBounds](knowledge/12_numeric_certificates/NumericSQLGapBounds.md)
 proves the affine enclosure of `G=A/I+B*I-2*sqrt(A*B)`, its exact-zero balance

@@ -1,3 +1,4 @@
+import Verification.DistributedChandyLamportSnapshot
 import Verification.NumericSQLGapBounds
 import Verification.NumericCertificateDigestBridge
 import Verification.NumericSQLIntervalBounds

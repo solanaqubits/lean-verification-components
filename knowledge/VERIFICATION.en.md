@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.2](../docs/release-v0.5.2.en.md)
+[Knowledge base](README.md) · [Release v0.5.3](../docs/release-v0.5.3.en.md)
 
-This release contains 104 direct imports, 140 Lean files under Verification/ and
-8,710 project declarations. Exact proof-source hashes are recorded in
+This release contains 105 direct imports, 141 Lean files under Verification/ and
+9,074 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3,522 strict build jobs, 39 tests with no skips, and two audits covering 8,710 declarations. Reproduce with:
+Public validation passed: 3,523 strict build jobs, 40 tests with no skips, and two audits covering 9,074 declarations. Reproduce with:
 
 ```bash
 lake build --wfail
@@ -19,6 +19,12 @@ python3 scripts/generate_chip_manifest.py --check
 Both audits permit only `propext`, `Classical.choice`, and `Quot.sound`.
 The pinned independent axiom-audit complements the complete local verifier.
 The CLI has no `audit-all` or `test-all` subcommands.
+
+## Operational snapshot scope
+
+DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
+
+A fresh public build required removing the unused broad `Mathlib.Tactic` import from the new module. All definitions and proof bodies match private source `520eef27466667237fff4d6ef7d9821e17f9fcfe`; the other 141 Lean files match byte-for-byte. No checks were disabled. See the release report for this source exception.
 
 ## Numerical scope
 

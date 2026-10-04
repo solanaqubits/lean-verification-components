@@ -59,3 +59,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedRaftCompleteBridge](../09_distributed_systems/DistributedRaftCompleteBridge.md)
 
 - [DistributedMarzulloAlgorithm](../09_distributed_systems/DistributedMarzulloAlgorithm.md): exact-real threshold envelope, true-time inclusion under a fault budget, and a counterexample to maximum-overlap truth localization.
+
+- [DistributedChandyLamportSnapshot](../09_distributed_systems/DistributedChandyLamportSnapshot.md): operational two-process FIFO snapshots, consistent saved cuts and exact completed channel contents.

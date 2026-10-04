@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 136 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 137 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -74,3 +74,5 @@ digest/parser functions does not verify SHA-256, JSON, Python or source authenti
 See the [numeric section](12_numeric_certificates/README.md).
 
 Release v0.5.2 adds the affine SQL gap bounds, exact-zero criterion and real rounding composition, bringing the registry to 104 imports and 140 Lean files. Rationalization and exact cell-boundary comparison/search are separate obligations.
+
+Release v0.5.3 adds operational two-process Chandy–Lamport snapshot safety: saved-cut consistency and exact completed-channel contents. The current registry has 105 direct imports and 141 Lean files. Partial recording is distinct from completed channel contents; liveness and fault tolerance are not claimed.

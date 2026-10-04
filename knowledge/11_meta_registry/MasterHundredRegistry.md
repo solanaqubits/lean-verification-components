@@ -45,3 +45,5 @@ This module is included in release `v0.5.0`. Mathematical novelty and priority o
 ## Verification
 
 Strict build, `verify-all`, independent axiom audit, all 35 public tests without skips, and catalog checks passed. MasterHundredRegistry also passed module `verify`, `audit`, and integration. Regressions check acyclicity, at least 100 unique central imports, arbitrary universes, legacy projections, idempotence of every recipe, and rollback of three files on failure. The measured snapshot has exactly 100 direct imports and 134 Lean files. See the [validation record](../VERIFICATION.en.md).
+
+The historical import manifest remains unchanged. In v0.5.3, its referenced DistributedSystemsFullSuite inherits the operational chandy_lamport field from MasterSuiteComponents. This extends the aggregate package type while retaining its earlier fields.
