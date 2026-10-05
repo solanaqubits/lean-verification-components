@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedTwoPhaseCommitTimeout",
         "Verification.DistributedRaftCommitApplication",
         "Verification.QuantumDeutschJozsaGeneral",
         "Verification.QuantumGroverMultipleTargets",
@@ -1344,6 +1345,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedTwoPhaseCommitTimeout",
         "Verification.DistributedRaftCommitApplication",
         "Verification.QuantumDeutschJozsaGeneral",
         "Verification.QuantumGroverMultipleTargets",
@@ -1588,6 +1590,16 @@
       "card": "knowledge/09_distributed_systems/DistributedRaftCommitApplicationExample.md",
       "project_imports": [
         "Verification.DistributedRaftStateMachine"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedTwoPhaseCommitTimeout",
+      "section": "distributed",
+      "source": "Verification/DistributedTwoPhaseCommitTimeout.lean",
+      "card": "knowledge/09_distributed_systems/DistributedTwoPhaseCommitTimeout.md",
+      "project_imports": [
+        "Verification.DistributedTwoPhaseCommit"
       ],
       "novelty": "not-assessed"
     }

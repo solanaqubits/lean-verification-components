@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 143 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 144 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -85,4 +85,8 @@ Release v0.5.5 adds [multiple-target Grover dynamics](03_quantum_physics_and_opt
 
 Release v0.5.6 adds the general Deutsch–Jozsa Hadamard and XOR-ancilla circuit with promise separation, n=0 and one-qubit compatibility. That release had 108 direct imports and 144 Lean files.
 
-Release v0.5.7 adds [Raft commit application](09_distributed_systems/DistributedRaftCommitApplication.md): operational commit-index provenance and ordered local application. Cross-node folds require full-entry prefix equality; no new global State Machine Safety theorem is claimed. The current registry has 109 direct imports and 147 Lean files.
+Release v0.5.7 adds [Raft commit application](09_distributed_systems/DistributedRaftCommitApplication.md): operational commit-index provenance and ordered local application. Cross-node folds require full-entry prefix equality; no new global State Machine Safety theorem is claimed. That release had 109 direct imports and 147 Lean files.
+
+[Operational 2PC timeouts](09_distributed_systems/DistributedTwoPhaseCommitTimeout.md) adds reachable-state agreement, pre-vote abort safety and indistinguishable prepared histories. Blocking is characterized relative to a stopped coordinator and both participants prepared; a queued decision enables delivery without guaranteeing eventual progress.
+
+Release v0.5.8 contains 110 direct imports and 148 Lean files; see the [release report](../docs/release-v0.5.8.en.md).

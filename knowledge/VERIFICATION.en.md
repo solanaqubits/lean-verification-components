@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.7](../docs/release-v0.5.7.en.md)
+[Knowledge base](README.md) · [Release v0.5.8](../docs/release-v0.5.8.en.md)
 
-This release contains 109 direct imports, 147 Lean files under Verification/ and
-9,820 project declarations. Exact proof-source hashes are recorded in
+This release contains 110 direct imports, 148 Lean files under Verification/ and
+10,333 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3529 strict build jobs, 44 tests with no skips, and two audits covering 9820 declarations.
+Public validation passed: 3530 strict build jobs, 45 tests with no skips, and two audits covering 10333 declarations.
 
 Reproduce with:
 
@@ -26,7 +26,7 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 148 Lean sources, including the root file, match private snapshot `6d95f3a009bcb6057997f3f28d08e331e61ad2cc` byte-for-byte.
+All 149 Lean sources, including the root file, match private snapshot `fac78833f819eb57ec9d69e67dc80ef5613e4c8c` byte-for-byte.
 
 ## Exact QPE scope
 
@@ -82,3 +82,12 @@ shows why an old-term majority alone is insufficient. Cross-node fold agreement
 requires equality of full entries, including commands. This extension does not
 prove a new global State Machine Safety theorem, liveness, client exactly-once
 behavior, timeout handling, crash/recovery or fsync/WAL.
+
+## Operational 2PC timeout scope
+
+Two independent participants and a stopped coordinator distinguish safe pre-vote
+abort from unsafe forced decisions on identical prepared local views. Under both
+prepared and coordinator stopped, no queued decision is equivalent to no finite
+continuation reaching a terminal participant. Other packets may remain in flight.
+Decision delivery is possible, not guaranteed. Fairness, recovery, peer termination,
+3PC and disk durability are not claimed.

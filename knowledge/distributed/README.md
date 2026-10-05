@@ -67,3 +67,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 [DistributedRaftCommitIndexInvariant](../09_distributed_systems/DistributedRaftCommitIndexInvariant.md)
 
 [DistributedRaftCommitApplicationExample](../09_distributed_systems/DistributedRaftCommitApplicationExample.md)
+
+- [DistributedTwoPhaseCommitTimeout](../09_distributed_systems/DistributedTwoPhaseCommitTimeout.md): operational two-participant timeout safety, indistinguishable prepared histories, and conditional finite-escape blocking.

@@ -656,5 +656,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedRaftCommitApplication.distributed_raft_commit_application_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTwoPhaseCommitTimeout": {
+    "suite_struct": "DistributedTwoPhaseCommitTimeoutSuite",
+    "suite_type": "DistributedTwoPhaseCommitTimeout.DistributedTwoPhaseCommitTimeoutSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "two_phase_commit_timeout",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedTwoPhaseCommitTimeout.distributed_two_phase_commit_timeout_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

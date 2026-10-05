@@ -44,3 +44,5 @@ end AxiomAudit
 #audit_axioms QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite
 
 #audit_axioms DistributedRaftCommitApplication.distributed_raft_commit_application_master_suite
+
+#audit_axioms DistributedTwoPhaseCommitTimeout.distributed_two_phase_commit_timeout_master_suite

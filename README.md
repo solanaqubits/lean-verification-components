@@ -28,12 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **147 Lean files** under
-`Verification/` and **109 direct MasterSuite imports**. There are **9,820 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **148 Lean files** under
+`Verification/` and **110 direct MasterSuite imports**. There are **10,333 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.7
+## Release v0.5.8
+
+[Operational 2PC timeouts](knowledge/09_distributed_systems/DistributedTwoPhaseCommitTimeout.md)
+derives safe pre-vote abort, reachable-history indistinguishability and the unsafety
+of unilateral prepared decisions based only on a timeout. With both participants
+prepared and the coordinator stopped, blocking is characterized by absence of
+queued decision packets. A decision in flight permits a delivery step; fairness,
+recovery and completion of both participants are not established.
+See the [public release report](docs/release-v0.5.8.en.md): **3530 strict build jobs**, **45 public tests**, no warnings or skips.
+
+## Earlier additions in v0.5.7
 
 [Raft commit application](knowledge/09_distributed_systems/DistributedRaftCommitApplication.md)
 derives commit-index provenance, prefix retention and ordered deterministic local
@@ -241,3 +251,5 @@ projects; it is not a sandbox for untrusted Lean or Lake code.
 Licensed under [Apache License 2.0](LICENSE). This repository is an independent
 English-language source distribution with its own Git history and releases.
 See [publication notes](docs/publication.en.md) for Reservoir requirements.
+
+[Operational 2PC timeouts](knowledge/09_distributed_systems/DistributedTwoPhaseCommitTimeout.md) separates safe pre-vote abort from unsafe unilateral prepared decisions, and characterizes blocking only with both participants prepared and a stopped coordinator. Delivery of an in-flight decision remains possible; fairness and recovery are not claimed.

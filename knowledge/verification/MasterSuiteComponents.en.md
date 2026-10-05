@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: a1440ae19477b21240fbb5fe9d22929b09e13e1ba2be2dcac42a36c592de024d
+source_sha256: be603777baf96fb1efe2abf91e88cdd2929ea9d627b76c610c899f3810c55a49
 novelty: not-assessed
 status: reviewed
 ---
@@ -39,3 +39,5 @@ QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPha
 `QuantumPhysicsFullSuite.deutsch_jozsa_general` adds the general Hadamard and XOR-ancilla circuit, promise separation, edge cases and one-qubit compatibility.
 
 `DistributedSystemsFullSuite.raft_commit_application` adds operational commit-index provenance and deterministic local application. Global State Machine Safety is not claimed by this extension.
+
+`DistributedSystemsFullSuite.two_phase_commit_timeout` adds reachable operational agreement, pre-vote abort safety, prepared-view indistinguishability and the conditional stopped-coordinator blocking equivalence. The legacy `two_pc` field is preserved.
