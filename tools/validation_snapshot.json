@@ -1,18 +1,37 @@
 {
-  "modules_checked": 144,
+  "modules_checked": 147,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 9547,
+    "declarations": 9820,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "996ca43c01d67418fb96d666a799a2cfbdb5f6eddf5362c4965accb644b7f85d",
-    "Verification.MasterSuite": "02bf12ca8f98adc4878d780212111d9064d4452267c83fd4cc0b81985116a5ed",
+    "Verification.AxiomAudit": "980559b8d85ecd9191986799f69c826a57028bc10ed53febedfe896af3283c03",
+    "Verification.MasterSuite": "dfb048d20ff88a2795f4fc417e0024f43dca6eb3f8fda10b309dd2165a785d19",
+    "Verification.DistributedRaftCommitApplication": "7d35377b5dc62edd6472db7ec9a659e00d02416a36c07f344e36c946f2a2af8b",
+    "Verification.DistributedRaftCommitIndexInvariant": "20c95970a99250176a1a7c558317ebebc1fb1374d4f555a5f75db4ae09df5ae2",
+    "Verification.DistributedRaftCompleteBridge": "f7f149d890c8b09e481ff55acd7a36ebe3eb4a7d4d100f76257fa5afd7b4f35a",
+    "Verification.DistributedRaftTraceMatching": "c2d10bb90f7718f171ffd6654d7dcee5224d862eccfe9f04778e37667a5e93b7",
+    "Verification.DistributedRaftNetworkInduction": "dea39913e94b22e08afe089f8160e2d4db5f527ad88ca505c0e86033065f2809",
+    "Verification.DistributedRaftNetworkHistory": "d1203d13a78f51266ef0fa67ef168bda7764fd298d714266f4d547dbe4064832",
+    "Verification.DistributedRaftStateMachine": "9ad20662f35a4be873b876c18c98935a0e177d93ecaa1199a87f775ead059601",
+    "Verification.DistributedRaftLeaderCompleteness": "fc62d005b9ad27383c19258dd72ddea6a1b5066f9d3cf3c5230151ecedf337cd",
+    "Verification.DistributedRaftNetworkLogLemmas": "844424271abff08b9e796939546153b4c92bc30010558f9f273812e3535f649e",
+    "Verification.DistributedRaftEventHistory": "5f4b973c83c1d90a35a98976cb354fc56e614713b48cd47ef681b15f53593a7a",
+    "Verification.DistributedRaftLogOrder": "ee3b4b761134c924ea97cc91c4b5a93bf95c48f028361fd61a0bf171b1089acc",
+    "Verification.DistributedRaftTraceOrigins": "974d4e4bf074ce99dce5ea26e867dd3eca928f2be65348204e59eddbf3c7c25e",
+    "Verification.DistributedRaftCommittedPrefixLemmas": "641b24e5f6186d44e3aff84f671688ab64d90efc6d9bc2868fe473253176c203",
+    "Verification.DistributedRaftVoterRetention": "e3fe959cfabda5303609b33f932ecf3abaf9f2dcc18ab1e7784f858cdfba449c",
+    "Verification.DistributedRaftCandidateHistory": "748ce51a2954159537cc924f7c43922275d6880c2f49270b98a14e19eb85c66d",
+    "Verification.DistributedRaftCommitApplicationExample": "fac302c4c12bf50fbdad066c0c673008bcf22c835c74f3beb90aa24dc1e0615b",
+    "Verification.DistributedRaftLogAppend": "2c0570f8c65fc8f65b505d77c1c18bbea5fda3e4a628caf5f4f0de9dac145449",
+    "Verification.DistributedRaftConsensus": "89cf3887f090c80d0fbcc0058a1c1733ce524d906253a67a3489e081f6b045c2",
+    "Verification.DistributedRaftLogReplication": "4ba9d4701f459629c616cc990a87e537eea85aa9c3e8735654349135acbf30d7",
     "Verification.QuantumDeutschJozsaGeneral": "212724069433680933166519c16daac4314cd3396294090e35589ad64f6c767f",
     "Verification.QuantumDeutschJozsa": "93cce3bdf53d1809912de5ee8906a2b204d89ef72409034bf4ac2df7302ccdb7",
     "Verification.QuantumGroverMultipleTargets": "7dbcf830bde6e8469b45f30b449da35c3806f2a2aa5b19a183b92e3820390f6b",
@@ -27,7 +46,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "b8056f9f8993e2ddca1fd389c83b85afdb0d5b41d7acd5222e9aeb07ed3dd4c0",
+    "Verification.MasterSuiteComponents": "a1440ae19477b21240fbb5fe9d22929b09e13e1ba2be2dcac42a36c592de024d",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
@@ -35,19 +54,6 @@
     "Verification.CryptoSchnorrBatchVerification": "e034ca9a562a8563e805b3963aeb5c00039bf91db54560d56e75a8808d10e9f8",
     "Verification.MithraicPhaseCollapse": "b55654dcd4cc96fe2708bb1656a4f6a5d985d43a54d920162e506e745ede82a8",
     "Verification.CryptoMuSig2Aggregation": "5236457dfbdf59b40499475fe5f0a70a5d00118bc14bffe572db0b9adafa5f44",
-    "Verification.DistributedRaftCompleteBridge": "f7f149d890c8b09e481ff55acd7a36ebe3eb4a7d4d100f76257fa5afd7b4f35a",
-    "Verification.DistributedRaftTraceMatching": "c2d10bb90f7718f171ffd6654d7dcee5224d862eccfe9f04778e37667a5e93b7",
-    "Verification.DistributedRaftNetworkInduction": "dea39913e94b22e08afe089f8160e2d4db5f527ad88ca505c0e86033065f2809",
-    "Verification.DistributedRaftNetworkHistory": "d1203d13a78f51266ef0fa67ef168bda7764fd298d714266f4d547dbe4064832",
-    "Verification.DistributedRaftStateMachine": "9ad20662f35a4be873b876c18c98935a0e177d93ecaa1199a87f775ead059601",
-    "Verification.DistributedRaftLeaderCompleteness": "fc62d005b9ad27383c19258dd72ddea6a1b5066f9d3cf3c5230151ecedf337cd",
-    "Verification.DistributedRaftNetworkLogLemmas": "844424271abff08b9e796939546153b4c92bc30010558f9f273812e3535f649e",
-    "Verification.DistributedRaftEventHistory": "5f4b973c83c1d90a35a98976cb354fc56e614713b48cd47ef681b15f53593a7a",
-    "Verification.DistributedRaftLogOrder": "ee3b4b761134c924ea97cc91c4b5a93bf95c48f028361fd61a0bf171b1089acc",
-    "Verification.DistributedRaftTraceOrigins": "974d4e4bf074ce99dce5ea26e867dd3eca928f2be65348204e59eddbf3c7c25e",
-    "Verification.DistributedRaftCommittedPrefixLemmas": "641b24e5f6186d44e3aff84f671688ab64d90efc6d9bc2868fe473253176c203",
-    "Verification.DistributedRaftVoterRetention": "e3fe959cfabda5303609b33f932ecf3abaf9f2dcc18ab1e7784f858cdfba449c",
-    "Verification.DistributedRaftCandidateHistory": "748ce51a2954159537cc924f7c43922275d6880c2f49270b98a14e19eb85c66d",
     "Verification.ChipPlacementCertificate": "0f2630c29d8273c5c0d1010edad4096b1d0b3866393d84fe33e265e649caab3b",
     "Verification.ChipLayoutGeometry": "e89d4dd29d86901037b766f572773ef786be264763de13dbc95af96d813d87ae",
     "Verification.QuantumOptomechanicalCoupling": "b77ce2d085411707b3de3a2546809d41ea21f13f1ff20b8c40b3f281eb087e54",
@@ -63,7 +69,6 @@
     "Verification.DeFiFlashLoan": "451c7fca98adb2a6a066b614ba53da903d8f275feec738b4b4b2509b0fb6f120",
     "Verification.CryptoGroth16SNARK": "01b3257e826f3adbc06d82ed77d1ed574c131cc37a1cfa4bee8917df13b58c01",
     "Verification.DistributedPBFTConsensus": "900b7104b4a88397da6a312a3ed7eaae5aaa80d3bab0e82ca7d0cede22299693",
-    "Verification.DistributedRaftLogReplication": "4ba9d4701f459629c616cc990a87e537eea85aa9c3e8735654349135acbf30d7",
     "Verification.CryptoR1CSConstraintSystem": "17322d8ca0e12328e81a3eec6d781a18cdd6fa9e8bff656d013061668b149d68",
     "Verification.DeFiConstantProductSwap": "c2480cb3537c7cad83b29469482b9d279dbafd03a2c480bb5ee13e9476bc365d",
     "Verification.CryptoSumcheckProtocol": "38954593d744bdf4f1873cae9d1b66aa89ca3e8affabd4b6a853874be0ac7355",
@@ -93,8 +98,6 @@
     "Verification.DeFiLendingCDP": "17a09cebcd683ced46c255b15f723392f105bb4c513b33cd619e6cbccc15504a",
     "Verification.QuantumPhaseFlipCode": "ab51edfd12f9f597bacead9e09e1e350b652b0ba2c3aff934abaa29d1d860a67",
     "Verification.CryptoPedersenCommitment": "5ea97b426007c289f99b689b1a50439caffee161142a1b03cc356366b6809bff",
-    "Verification.DistributedRaftLogAppend": "2c0570f8c65fc8f65b505d77c1c18bbea5fda3e4a628caf5f4f0de9dac145449",
-    "Verification.DistributedRaftConsensus": "89cf3887f090c80d0fbcc0058a1c1733ce524d906253a67a3489e081f6b045c2",
     "Verification.QuantumMajoranaChain": "4f0807d66c0e02faabf9287c3e0373da39ce39ed2e404c50099c18213fcb1db2",
     "Verification.DeFiConcentratedLiquidity": "1b86c9d50298ec845903c27e087b0efc8de2e7691ad7d8b33578719ba3e2eabd",
     "Verification.CryptoKZGCommitment": "bb35e4c7485316cf7ad221f2688742b42ef49ea9f6efd23ad1490126e28e3cda",
@@ -156,25 +159,24 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.6 general Deutsch-Jozsa validation; proof hashes match the selected private snapshot.",
+  "description": "Public v0.5.7 Raft commit application validation; proof sources match the selected private snapshot.",
   "independent_axiom_audit": {
-    "declarations": 9547,
+    "declarations": 9820,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 108,
-  "full_build_jobs": 3526,
+  "master_direct_imports": 109,
+  "full_build_jobs": 3529,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
     "independent_axiom_audit": true,
+    "axiom_audit_hook": true,
     "live_tests": true,
     "knowledge_catalog": true,
     "exact_data_import_check": true,
-    "verify": true,
-    "audit": true,
-    "integrate": true
+    "integration_idempotent": true
   },
   "source_unchanged_during_verification": true,
   "raft_state_machine_scope": {
@@ -222,7 +224,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "7bfbafe64db5fc7a5803c4a3bd39d4b5fcd611494ae5b3ed7f2a6e455979d3a7",
+  "root_source_sha256": "3ab324f11e9f2d3a0f91f041633488afc98570b6a0e35012cf1cce9177d51cb4",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -563,31 +565,54 @@
     "physical_hardware_or_noise": false
   },
   "private_regression_tests": {
-    "passed": 46,
+    "passed": 47,
     "skipped": 0,
     "runs": [
-      46
+      47
     ],
-    "seconds": 74.975,
-    "note": "Private live unittest discovery, including exporter and compiler regressions."
+    "seconds": 76.977,
+    "note": "Private live unittest discovery including exporter and compiler regressions."
   },
-  "private_source_commit": "6a991c4e68244e11ca95a97a456ad8511c54eb32",
+  "private_source_commit": "6d95f3a009bcb6057997f3f28d08e331e61ad2cc",
   "regression_tests": {
-    "passed": 43,
+    "passed": 44,
     "skipped": 0,
     "runs": [
-      43
+      44
     ],
-    "seconds": 76.34,
+    "seconds": 78.996,
     "note": "Public live unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
   },
   "public_release": {
-    "version": "0.5.6",
-    "previous_public_commit": "0b9080416243a9a44f37237fe8abd12be98cb8ad",
-    "source_lean_files_including_root": 145,
+    "version": "0.5.7",
+    "previous_public_commit": "1d82058566af1f7b1c38acb284a4acac69e666ce",
+    "source_lean_files_including_root": 148,
     "all_lean_sources_match_private": true,
     "integration_idempotent": true,
-    "full_build_jobs": 3526,
-    "public_tests": 43
+    "full_build_jobs": 3529,
+    "public_tests": 44
+  },
+  "raft_commit_application_scope": {
+    "operational_entry_type_reused": true,
+    "command_type": "Nat",
+    "real_commit_event_provenance": true,
+    "server_and_rpc_induction": true,
+    "partial_batch_commit_propagation": true,
+    "commit_index_bounded_monotone": true,
+    "committed_subprefix_retention": true,
+    "application_overlay_preserves_network_rules": true,
+    "ordered_fold_for_arbitrary_state": true,
+    "applied_entries_have_prior_commit": true,
+    "application_history_and_index_monotone": true,
+    "local_enabledness": true,
+    "cross_node_fold_requires_full_prefix_equality": true,
+    "metadata_only_counterexample": true,
+    "reachable_old_term_majority_counterexample_steps": 45,
+    "positive_application_regression_network_steps": 11,
+    "new_global_state_machine_safety_theorem": false,
+    "fairness_or_liveness": false,
+    "crash_recovery_or_wal": false,
+    "client_exactly_once": false,
+    "python_json_sha256_or_simlab_bytes": false
   }
 }

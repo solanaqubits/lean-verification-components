@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedRaftCommitApplication",
         "Verification.QuantumDeutschJozsaGeneral",
         "Verification.QuantumGroverMultipleTargets",
         "Verification.QuantumPhaseEstimation",
@@ -1343,6 +1344,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedRaftCommitApplication",
         "Verification.QuantumDeutschJozsaGeneral",
         "Verification.QuantumGroverMultipleTargets",
         "Verification.QuantumPhaseEstimation",
@@ -1553,6 +1555,39 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md",
       "project_imports": [
         "Verification.QuantumDeutschJozsa"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftCommitApplication",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftCommitApplication.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftCommitApplication.md",
+      "project_imports": [
+        "Verification.DistributedRaftCommitIndexInvariant",
+        "Verification.DistributedRaftCommitApplicationExample",
+        "Verification.DistributedRaftLogAppend",
+        "Verification.DistributedRaftLogReplication"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftCommitIndexInvariant",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftCommitIndexInvariant.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftCommitIndexInvariant.md",
+      "project_imports": [
+        "Verification.DistributedRaftCompleteBridge"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftCommitApplicationExample",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftCommitApplicationExample.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftCommitApplicationExample.md",
+      "project_imports": [
+        "Verification.DistributedRaftStateMachine"
       ],
       "novelty": "not-assessed"
     }

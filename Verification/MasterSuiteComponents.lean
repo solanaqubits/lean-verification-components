@@ -1,3 +1,4 @@
+import Verification.DistributedRaftCommitApplication
 import Verification.QuantumDeutschJozsaGeneral
 import Verification.QuantumGroverMultipleTargets
 import Verification.QuantumPhaseEstimation
@@ -489,6 +490,7 @@ structure DistributedSystemsFullSuite : Prop where
   raft_complete_bridge : DistributedRaftCompleteBridge.RaftCompleteBridgeSuite
   marzullo_algorithm : DistributedMarzulloAlgorithm.MarzulloAlgorithmFormalSuite
   chandy_lamport : DistributedChandyLamportSnapshot.ChandyLamportFormalSuite
+  raft_commit_application : DistributedRaftCommitApplication.DistributedRaftCommitApplicationSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -517,6 +519,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedRaftCompleteBridge.raft_complete_bridge_master_suite
   marzullo_algorithm := DistributedMarzulloAlgorithm.marzullo_algorithm_master_suite
   chandy_lamport := DistributedChandyLamportSnapshot.chandy_lamport_master_suite
+  raft_commit_application := by
+    exact DistributedRaftCommitApplication.distributed_raft_commit_application_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

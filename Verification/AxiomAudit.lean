@@ -42,3 +42,5 @@ end AxiomAudit
 #audit_axioms QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite
 
 #audit_axioms QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite
+
+#audit_axioms DistributedRaftCommitApplication.distributed_raft_commit_application_master_suite

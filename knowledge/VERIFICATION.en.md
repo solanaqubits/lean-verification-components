@@ -1,12 +1,14 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.6](../docs/release-v0.5.6.en.md)
+[Knowledge base](README.md) · [Release v0.5.7](../docs/release-v0.5.7.en.md)
 
-This release contains 108 direct imports, 144 Lean files under Verification/ and
-9,547 project declarations. Exact proof-source hashes are recorded in
+This release contains 109 direct imports, 147 Lean files under Verification/ and
+9,820 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3,526 strict build jobs, 43 tests with no skips, and two audits covering 9,547 declarations. Reproduce with:
+Public validation passed: 3529 strict build jobs, 44 tests with no skips, and two audits covering 9820 declarations.
+
+Reproduce with:
 
 ```bash
 lake build --wfail
@@ -24,7 +26,7 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-The former unused-import correction is already present in the selected private Deutsch-Jozsa snapshot. All 145 Lean sources, including the root file, now match that snapshot byte-for-byte.
+All 148 Lean sources, including the root file, match private snapshot `6d95f3a009bcb6057997f3f28d08e331e61ad2cc` byte-for-byte.
 
 ## Exact QPE scope
 
@@ -70,3 +72,13 @@ an invariant orthonormal plane for nonempty proper target sets. It also proves
 both rank-one reflection counterexamples. No arbitrary-N search, query-complexity,
 trigonometric-angle formula, separate topological-closedness theorem, physical
 measurement, noise or hardware certification is claimed.
+
+## Raft commit application scope
+
+DistributedRaftCommitApplication and its two support modules derive actual
+commit-event provenance for server and RPC prefixes, retained committed prefixes,
+and ordered deterministic local application. A reachable 45-transition example
+shows why an old-term majority alone is insufficient. Cross-node fold agreement
+requires equality of full entries, including commands. This extension does not
+prove a new global State Machine Safety theorem, liveness, client exactly-once
+behavior, timeout handling, crash/recovery or fsync/WAL.

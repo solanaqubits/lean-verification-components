@@ -647,5 +647,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedRaftCommitApplication": {
+    "suite_struct": "DistributedRaftCommitApplicationSuite",
+    "suite_type": "DistributedRaftCommitApplication.DistributedRaftCommitApplicationSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_commit_application",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedRaftCommitApplication.distributed_raft_commit_application_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

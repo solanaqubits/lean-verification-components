@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 138 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 143 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -83,4 +83,6 @@ Release v0.5.5 adds [multiple-target Grover dynamics](03_quantum_physics_and_opt
 
 [General Deutsch–Jozsa](03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md) adds an explicit real Hadamard/XOR circuit for any finite n, preserving the old one-bit formulas. The classifier requires the constant-or-balanced promise; quantum hardware and oracle construction costs are not certified.
 
-Release v0.5.6 adds the general Deutsch–Jozsa Hadamard and XOR-ancilla circuit with promise separation, n=0 and one-qubit compatibility. The current registry has 108 direct imports and 144 Lean files.
+Release v0.5.6 adds the general Deutsch–Jozsa Hadamard and XOR-ancilla circuit with promise separation, n=0 and one-qubit compatibility. That release had 108 direct imports and 144 Lean files.
+
+Release v0.5.7 adds [Raft commit application](09_distributed_systems/DistributedRaftCommitApplication.md): operational commit-index provenance and ordered local application. Cross-node folds require full-entry prefix equality; no new global State Machine Safety theorem is claimed. The current registry has 109 direct imports and 147 Lean files.

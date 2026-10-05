@@ -28,12 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **144 Lean files** under
-`Verification/` and **108 direct MasterSuite imports**. There are **9,547 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **147 Lean files** under
+`Verification/` and **109 direct MasterSuite imports**. There are **9,820 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.6
+## Release v0.5.7
+
+[Raft commit application](knowledge/09_distributed_systems/DistributedRaftCommitApplication.md)
+derives commit-index provenance, prefix retention and ordered deterministic local
+application from operational traces. The package includes a reachable 45-transition
+old-term-majority counterexample. Cross-node fold agreement requires equality of
+full entries, including commands; no new global State Machine Safety is claimed.
+See the [public release report](docs/release-v0.5.7.en.md): **3529 strict build jobs**, **44 public tests**, no warnings or skips.
+
+## Earlier additions in v0.5.6
 
 [QuantumDeutschJozsaGeneral](knowledge/03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md)
 proves the n-qubit Hadamard transform, XOR-ancilla phase kickback, circuit-derived

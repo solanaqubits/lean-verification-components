@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: b8056f9f8993e2ddca1fd389c83b85afdb0d5b41d7acd5222e9aeb07ed3dd4c0
+source_sha256: a1440ae19477b21240fbb5fe9d22929b09e13e1ba2be2dcac42a36c592de024d
 novelty: not-assessed
 status: reviewed
 ---
@@ -37,3 +37,5 @@ QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPha
 `QuantumPhysicsFullSuite.grover_multiple_targets` adds exact N=4 subset dynamics, norm preservation, the proper-subset invariant plane and both rank-one reflection counterexamples.
 
 `QuantumPhysicsFullSuite.deutsch_jozsa_general` adds the general Hadamard and XOR-ancilla circuit, promise separation, edge cases and one-qubit compatibility.
+
+`DistributedSystemsFullSuite.raft_commit_application` adds operational commit-index provenance and deterministic local application. Global State Machine Safety is not claimed by this extension.
