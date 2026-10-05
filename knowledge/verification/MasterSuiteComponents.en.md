@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 5b1fc6eecba517f91ccacc8eb85998767e1f23dc6e8fe6e62a64d504f5679402
+source_sha256: 2393d3dc40fe430b128803d839b8e98e769dcba3cdd2a7c3a018bf183cb6801c
 novelty: not-assessed
 status: reviewed
 ---
@@ -33,3 +33,5 @@ The domain limitations remain in force. For example, `QuantumPhysicsFullSuite.be
 See the [current validation record](../VERIFICATION.en.md). The operational snapshot field is constructed by `DistributedChandyLamportSnapshot.chandy_lamport_master_suite`; it proves the two-process safety and completed-channel guarantees described in its [scope card](../09_distributed_systems/DistributedChandyLamportSnapshot.md). The historical registry's import manifest is unchanged, but its distributed package type includes this added field.
 
 QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPhaseEstimation.quantum_phase_estimation_master_suite. It preserves the exact two-bit phase and eigenstate hypotheses; existing aggregates referencing the quantum package inherit the field.
+
+`QuantumPhysicsFullSuite.grover_multiple_targets` adds exact N=4 subset dynamics, norm preservation, the proper-subset invariant plane and both rank-one reflection counterexamples.

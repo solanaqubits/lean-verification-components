@@ -1,18 +1,20 @@
 {
-  "modules_checked": 142,
+  "modules_checked": 143,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 9224,
+    "declarations": 9378,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "a964ec06f414f13ef1b8ef41f170af31599c02b027c123a90486c1b01c424a71",
-    "Verification.MasterSuite": "9520ac2a0f693d57179459c5f57d6cab2f8ef9a1ebd5d0dc6efd5cd1acf2b14e",
+    "Verification.AxiomAudit": "21c9757143b45e798c4e78b75cb253dd912b1650b4c4968cc32833bdf01d7004",
+    "Verification.MasterSuite": "e78ad1a7eb32742ca8110073c28a9fa02ddbee1cd3f79372418cccad1a957fed",
+    "Verification.QuantumGroverMultipleTargets": "7dbcf830bde6e8469b45f30b449da35c3806f2a2aa5b19a183b92e3820390f6b",
+    "Verification.QuantumGroverSearch": "5cbc65cf91941fbf9c483045f1afcdbb963f2e6f4502bd7d0fdca18635978faf",
     "Verification.QuantumPhaseEstimation": "73b042a0deffd448b9ef434570890c0f69d9d2072315ae8030bdb84b3a6a7690",
     "Verification.DistributedChandyLamportSnapshot": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2",
     "Verification.NumericSQLGapBounds": "6b04b810667cc631f1774b8df002005e1731426722203a9a5c1c188f77861f3d",
@@ -23,7 +25,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "5b1fc6eecba517f91ccacc8eb85998767e1f23dc6e8fe6e62a64d504f5679402",
+    "Verification.MasterSuiteComponents": "2393d3dc40fe430b128803d839b8e98e769dcba3cdd2a7c3a018bf183cb6801c",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
@@ -81,7 +83,6 @@
     "Verification.DistributedTwoPhaseCommit": "9144db157ea7ce2ce777539d70f9302adada81443260bb6f16921adf4ef9763f",
     "Verification.QuantumSuperdenseCoding": "b97f0289f7d571fb6aa827d37289b89f337261168d723460a98aac7df1a8a2ea",
     "Verification.DeFiTWAPOracle": "8e444f00451a648e2c06962e2a282a1867a20bc4ff5c1118a5bd496564de0f2c",
-    "Verification.QuantumGroverSearch": "5cbc65cf91941fbf9c483045f1afcdbb963f2e6f4502bd7d0fdca18635978faf",
     "Verification.DistributedVectorClocks": "767c56015644bb374cbe6af6a14d85c637a2ab9dc1dd9f964238e0560845d26b",
     "Verification.QuantumDeutschJozsa": "93cce3bdf53d1809912de5ee8906a2b204d89ef72409034bf4ac2df7302ccdb7",
     "Verification.CryptoFiatShamirTransform": "f610ff29b97ce0192f99d8a931c1cdb861a7aeb2bc1b8dc30ddc1d8488a5d2ac",
@@ -154,15 +155,15 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.4 exact two-bit QPE validation; proof hashes match the selected private snapshot.",
+  "description": "Public v0.5.5 multiple-target Grover validation; proof hashes match the selected private snapshot.",
   "independent_axiom_audit": {
-    "declarations": 9224,
+    "declarations": 9378,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 106,
-  "full_build_jobs": 3524,
+  "master_direct_imports": 107,
+  "full_build_jobs": 3525,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -220,7 +221,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "18cd2f73a1f2ca73e4c576b1ab9bba365d5bb29348dabaee2637f754657ea4c6",
+  "root_source_sha256": "969ebf997fb10cf873cb7b446dcec205bc52794508446e65d9be1dc3f1f8f9f9",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -516,31 +517,56 @@
     "gate_noise_or_hardware_validation": false,
     "shor_algorithm": false
   },
-  "private_source_commit": "13ee7282c5dd63c88eb4e4c2fd237e8dbd082e8d",
+  "grover_multiple_targets_scope": {
+    "dimension": 4,
+    "field": "Real",
+    "all_finite_target_subsets": true,
+    "actual_oracle_then_diffusion": true,
+    "arbitrary_state_norm_preservation": true,
+    "derived_two_amplitude_recurrence": true,
+    "all_natural_iteration_counts": true,
+    "M1_and_M3_periodic_weights": true,
+    "M2_stationary_half_weight": true,
+    "empty_fixed_uniform": true,
+    "full_global_sign_alternation": true,
+    "proper_subset_orthonormal_plane": true,
+    "plane_coordinate_uniqueness": true,
+    "plane_linear_and_step_closure": true,
+    "algebraic_rotation_matrix": true,
+    "legacy_singleton_operator_equality": true,
+    "rank_one_counterexamples_in_both_directions": true,
+    "topological_closedness_theorem": false,
+    "trigonometric_angle_formula": false,
+    "arbitrary_dimension_or_query_complexity": false,
+    "hardware_or_noise": false,
+    "born_interpretation_is_external": true
+  },
   "private_regression_tests": {
-    "passed": 44,
+    "passed": 45,
     "skipped": 0,
     "runs": [
-      44
+      45
     ],
-    "note": "Private live unittest discovery, including exporter and compiler regressions."
+    "note": "Private live unittest discovery, including exporter and compiler regressions.",
+    "seconds": 74.792
+  },
+  "private_source_commit": "7f08c02b55b137cc895b287e88b018329acf1794",
+  "regression_tests": {
+    "passed": 42,
+    "skipped": 0,
+    "runs": [
+      42
+    ],
+    "seconds": 74.485,
+    "note": "Public live unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
   },
   "public_release": {
-    "version": "0.5.4",
-    "previous_public_commit": "fe1097fd863e619737ed773f7c9461914f89229e",
-    "source_lean_files_including_root": 143,
+    "version": "0.5.5",
+    "previous_public_commit": "aaf4a6442736277cb89ef35500c59cc49c24c136",
+    "source_lean_files_including_root": 144,
     "all_lean_sources_match_private": true,
     "integration_idempotent": true,
-    "full_build_jobs": 3524,
-    "public_tests": 41
-  },
-  "regression_tests": {
-    "passed": 41,
-    "skipped": 0,
-    "runs": [
-      41
-    ],
-    "seconds": 74.651,
-    "note": "Public live unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
+    "full_build_jobs": 3525,
+    "public_tests": 42
   }
 }

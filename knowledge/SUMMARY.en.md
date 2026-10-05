@@ -77,4 +77,6 @@ Release v0.5.2 adds the affine SQL gap bounds, exact-zero criterion and real rou
 
 Release v0.5.3 adds operational two-process Chandy–Lamport snapshot safety: saved-cut consistency and exact completed-channel contents. That release has 105 direct imports and 141 Lean files. Partial recording is distinct from completed channel contents; liveness and fault tolerance are not claimed.
 
-Release v0.5.4 adds exact two-bit QPE, derived controlled phase kickback and inverse Fourier cancellation. The current registry has 106 direct imports and 142 Lean files. The exact normalized eigenstate is an input promise; approximate QPE and hardware are not certified.
+Release v0.5.4 adds exact two-bit QPE, derived controlled phase kickback and inverse Fourier cancellation. That release had 106 direct imports and 142 Lean files. The exact normalized eigenstate is an input promise; approximate QPE and hardware are not certified.
+
+Release v0.5.5 adds [multiple-target Grover dynamics](03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md) on four real coordinates, including every target subset and iteration count, legacy compatibility and both rank-one reflection counterexamples. The current registry has 107 direct imports and 143 Lean files.

@@ -574,7 +574,7 @@
   },
   "Verification.MasterHundredRegistry": {
     "suite_struct": "MasterHundredFormalSuite",
-    "suite_type": "MasterHundredFormalSuite.{u₁, u₂, u₃, u₄, u₅,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
+    "suite_type": "MasterHundredFormalSuite.{u\u2081, u\u2082, u\u2083, u\u2084, u\u2085,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
     "parent": "VerificationMasterRegistry",
     "field": "master_hundred_registry",
     "constructor": "verification_master_registry",
@@ -628,6 +628,15 @@
     "field": "phase_estimation",
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumPhaseEstimation.quantum_phase_estimation_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumGroverMultipleTargets": {
+    "suite_struct": "QuantumGroverMultipleTargetsSuite",
+    "suite_type": "QuantumGroverMultipleTargets.QuantumGroverMultipleTargetsSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "grover_multiple_targets",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
   }
 }

@@ -1,3 +1,4 @@
+import Verification.QuantumGroverMultipleTargets
 import Verification.QuantumPhaseEstimation
 import Verification.DistributedChandyLamportSnapshot
 import Verification.QuantumBeamSplitterTransform
@@ -335,6 +336,7 @@ structure QuantumPhysicsFullSuite : Prop where
   standard_quantum_limit : QuantumStandardQuantumLimit.QuantumSQLFormalSuite
   beam_splitter : QuantumBeamSplitterTransform.BeamSplitterFormalSuite
   phase_estimation : QuantumPhaseEstimation.QuantumPhaseEstimationSuite
+  grover_multiple_targets : QuantumGroverMultipleTargets.QuantumGroverMultipleTargetsSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -366,6 +368,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   standard_quantum_limit := QuantumStandardQuantumLimit.quantum_sql_master_suite
   beam_splitter := QuantumBeamSplitterTransform.beam_splitter_master_suite
   phase_estimation := QuantumPhaseEstimation.quantum_phase_estimation_master_suite
+  grover_multiple_targets := by
+    exact QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

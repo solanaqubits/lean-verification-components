@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumGroverMultipleTargets",
         "Verification.QuantumPhaseEstimation",
         "Verification.DistributedChandyLamportSnapshot",
         "Verification.NumericSQLGapBounds",
@@ -1341,6 +1342,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumGroverMultipleTargets",
         "Verification.QuantumPhaseEstimation",
         "Verification.DistributedChandyLamportSnapshot",
         "Verification.QuantumBeamSplitterTransform",
@@ -1530,6 +1532,16 @@
       "source": "Verification/QuantumPhaseEstimation.lean",
       "card": "knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimation.md",
       "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumGroverMultipleTargets",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumGroverMultipleTargets.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md",
+      "project_imports": [
+        "Verification.QuantumGroverSearch"
+      ],
       "novelty": "not-assessed"
     }
   ]

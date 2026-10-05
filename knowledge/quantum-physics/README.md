@@ -65,3 +65,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumBeamSplitterTransform](../03_quantum_physics_and_optics/QuantumBeamSplitterTransform.md): Real orthogonal mode transformation, normalized finite two-photon lift and ideal balanced HOM suppression; no full Fock-space or detector model.
 
 [QuantumPhaseEstimation](../03_quantum_physics_and_optics/QuantumPhaseEstimation.md) — exact complex two-bit QPE, controlled powers, Fourier cancellation and deterministic weights.
+
+[QuantumGroverMultipleTargets](../03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md) — exact subset dynamics, invariant plane and marked-state weights for all iteration counts at N=4.

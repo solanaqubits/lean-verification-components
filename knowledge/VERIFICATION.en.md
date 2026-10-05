@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.4](../docs/release-v0.5.4.en.md)
+[Knowledge base](README.md) · [Release v0.5.5](../docs/release-v0.5.5.en.md)
 
-This release contains 106 direct imports, 142 Lean files under Verification/ and
-9,224 project declarations. Exact proof-source hashes are recorded in
+This release contains 107 direct imports, 143 Lean files under Verification/ and
+9,378 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3,524 strict build jobs, 41 tests with no skips, and two audits covering 9,224 declarations. Reproduce with:
+Public validation passed: 3,525 strict build jobs, 42 tests with no skips, and two audits covering 9,378 declarations. Reproduce with:
 
 ```bash
 lake build --wfail
@@ -24,7 +24,7 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-The former unused-import correction is already present in the selected private QPE snapshot. All 143 Lean sources, including the root file, now match that snapshot byte-for-byte.
+The former unused-import correction is already present in the selected private Grover snapshot. All 144 Lean sources, including the root file, now match that snapshot byte-for-byte.
 
 ## Exact QPE scope
 
@@ -61,3 +61,12 @@ Scalar MuSig2 does not establish cryptographic security; the forking module prov
 an elementary finite-matrix bound, not a general ROM reduction. Visibility does
 not prove quantum decoherence. The documented optomechanical approximation regime
 is not derived in Lean. Historical hundred-module aggregation preserves these limits.
+
+## Multiple-target Grover scope
+
+QuantumGroverMultipleTargets proves all-subset N=4 real dynamics, all-natural-iteration
+success weights, arbitrary-state norm preservation, singleton compatibility and
+an invariant orthonormal plane for nonempty proper target sets. It also proves
+both rank-one reflection counterexamples. No arbitrary-N search, query-complexity,
+trigonometric-angle formula, separate topological-closedness theorem, physical
+measurement, noise or hardware certification is claimed.

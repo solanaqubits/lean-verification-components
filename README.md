@@ -28,12 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **142 Lean files** under
-`Verification/` and **106 direct MasterSuite imports**. There are **9,224 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **143 Lean files** under
+`Verification/` and **107 direct MasterSuite imports**. There are **9,378 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.4
+## Release v0.5.5
+
+[QuantumGroverMultipleTargets](knowledge/03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md)
+proves exact N=4 real-amplitude dynamics for every target subset and every natural
+iteration count, arbitrary-state norm preservation, the invariant symmetric plane
+for nonempty proper target sets and exact compatibility with the original singleton
+model. Two counterexamples delimit agreement with rank-one reflection.
+Arbitrary N, oracle query complexity, fractional phase rotations, physical noise
+and hardware remain outside scope. Born-rule interpretation is external.
+
+See the [public release report](docs/release-v0.5.5.en.md) for measured validation: **3525 strict build jobs**, **42 public tests**, no warnings or skips.
+
+## Earlier additions in v0.5.4
 
 [QuantumPhaseEstimation](knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimation.md)
 proves controlled U/U² phase kickback, inverse Fourier cancellation and deterministic
