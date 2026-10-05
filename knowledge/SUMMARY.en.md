@@ -79,4 +79,8 @@ Release v0.5.3 adds operational two-process Chandy–Lamport snapshot safety: sa
 
 Release v0.5.4 adds exact two-bit QPE, derived controlled phase kickback and inverse Fourier cancellation. That release had 106 direct imports and 142 Lean files. The exact normalized eigenstate is an input promise; approximate QPE and hardware are not certified.
 
-Release v0.5.5 adds [multiple-target Grover dynamics](03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md) on four real coordinates, including every target subset and iteration count, legacy compatibility and both rank-one reflection counterexamples. The current registry has 107 direct imports and 143 Lean files.
+Release v0.5.5 adds [multiple-target Grover dynamics](03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md) on four real coordinates, including every target subset and iteration count, legacy compatibility and both rank-one reflection counterexamples. That release had 107 direct imports and 143 Lean files.
+
+[General Deutsch–Jozsa](03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md) adds an explicit real Hadamard/XOR circuit for any finite n, preserving the old one-bit formulas. The classifier requires the constant-or-balanced promise; quantum hardware and oracle construction costs are not certified.
+
+Release v0.5.6 adds the general Deutsch–Jozsa Hadamard and XOR-ancilla circuit with promise separation, n=0 and one-qubit compatibility. The current registry has 108 direct imports and 144 Lean files.

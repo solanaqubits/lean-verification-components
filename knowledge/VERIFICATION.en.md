@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.5](../docs/release-v0.5.5.en.md)
+[Knowledge base](README.md) · [Release v0.5.6](../docs/release-v0.5.6.en.md)
 
-This release contains 107 direct imports, 143 Lean files under Verification/ and
-9,378 project declarations. Exact proof-source hashes are recorded in
+This release contains 108 direct imports, 144 Lean files under Verification/ and
+9,547 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3,525 strict build jobs, 42 tests with no skips, and two audits covering 9,378 declarations. Reproduce with:
+Public validation passed: 3,526 strict build jobs, 43 tests with no skips, and two audits covering 9,547 declarations. Reproduce with:
 
 ```bash
 lake build --wfail
@@ -24,7 +24,7 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-The former unused-import correction is already present in the selected private Grover snapshot. All 144 Lean sources, including the root file, now match that snapshot byte-for-byte.
+The former unused-import correction is already present in the selected private Deutsch-Jozsa snapshot. All 145 Lean sources, including the root file, now match that snapshot byte-for-byte.
 
 ## Exact QPE scope
 

@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumDeutschJozsaGeneral",
         "Verification.QuantumGroverMultipleTargets",
         "Verification.QuantumPhaseEstimation",
         "Verification.DistributedChandyLamportSnapshot",
@@ -1342,6 +1343,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumDeutschJozsaGeneral",
         "Verification.QuantumGroverMultipleTargets",
         "Verification.QuantumPhaseEstimation",
         "Verification.DistributedChandyLamportSnapshot",
@@ -1541,6 +1543,16 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md",
       "project_imports": [
         "Verification.QuantumGroverSearch"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumDeutschJozsaGeneral",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumDeutschJozsaGeneral.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md",
+      "project_imports": [
+        "Verification.QuantumDeutschJozsa"
       ],
       "novelty": "not-assessed"
     }

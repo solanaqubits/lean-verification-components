@@ -1,3 +1,4 @@
+import Verification.QuantumDeutschJozsaGeneral
 import Verification.QuantumGroverMultipleTargets
 import Verification.QuantumPhaseEstimation
 import Verification.DistributedChandyLamportSnapshot
@@ -337,6 +338,7 @@ structure QuantumPhysicsFullSuite : Prop where
   beam_splitter : QuantumBeamSplitterTransform.BeamSplitterFormalSuite
   phase_estimation : QuantumPhaseEstimation.QuantumPhaseEstimationSuite
   grover_multiple_targets : QuantumGroverMultipleTargets.QuantumGroverMultipleTargetsSuite
+  deutsch_jozsa_general : QuantumDeutschJozsaGeneral.QuantumDeutschJozsaGeneralSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -370,6 +372,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   phase_estimation := QuantumPhaseEstimation.quantum_phase_estimation_master_suite
   grover_multiple_targets := by
     exact QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite
+  deutsch_jozsa_general := by
+    exact QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

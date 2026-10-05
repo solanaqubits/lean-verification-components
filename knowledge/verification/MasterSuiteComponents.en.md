@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 2393d3dc40fe430b128803d839b8e98e769dcba3cdd2a7c3a018bf183cb6801c
+source_sha256: b8056f9f8993e2ddca1fd389c83b85afdb0d5b41d7acd5222e9aeb07ed3dd4c0
 novelty: not-assessed
 status: reviewed
 ---
@@ -35,3 +35,5 @@ See the [current validation record](../VERIFICATION.en.md). The operational snap
 QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPhaseEstimation.quantum_phase_estimation_master_suite. It preserves the exact two-bit phase and eigenstate hypotheses; existing aggregates referencing the quantum package inherit the field.
 
 `QuantumPhysicsFullSuite.grover_multiple_targets` adds exact N=4 subset dynamics, norm preservation, the proper-subset invariant plane and both rank-one reflection counterexamples.
+
+`QuantumPhysicsFullSuite.deutsch_jozsa_general` adds the general Hadamard and XOR-ancilla circuit, promise separation, edge cases and one-qubit compatibility.

@@ -638,5 +638,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumDeutschJozsaGeneral": {
+    "suite_struct": "QuantumDeutschJozsaGeneralSuite",
+    "suite_type": "QuantumDeutschJozsaGeneral.QuantumDeutschJozsaGeneralSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "deutsch_jozsa_general",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

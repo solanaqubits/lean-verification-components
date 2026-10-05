@@ -28,12 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **143 Lean files** under
-`Verification/` and **107 direct MasterSuite imports**. There are **9,378 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **144 Lean files** under
+`Verification/` and **108 direct MasterSuite imports**. There are **9,547 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.5
+## Release v0.5.6
+
+[QuantumDeutschJozsaGeneral](knowledge/03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md)
+proves the n-qubit Hadamard transform, XOR-ancilla phase kickback, circuit-derived
+amplitudes and zero-error classification under the constant-or-balanced promise.
+It covers n=0, exact one-qubit compatibility and counterexamples outside the promise.
+Physical implementation, gate synthesis and complexity bounds are not claimed.
+See the [public release report](docs/release-v0.5.6.en.md) for measured validation: **3526 strict build jobs**, **43 public tests**, no warnings or skips.
+
+## Earlier additions in v0.5.5
 
 [QuantumGroverMultipleTargets](knowledge/03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md)
 proves exact N=4 real-amplitude dynamics for every target subset and every natural

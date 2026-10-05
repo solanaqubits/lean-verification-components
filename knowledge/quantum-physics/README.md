@@ -67,3 +67,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 [QuantumPhaseEstimation](../03_quantum_physics_and_optics/QuantumPhaseEstimation.md) — exact complex two-bit QPE, controlled powers, Fourier cancellation and deterministic weights.
 
 [QuantumGroverMultipleTargets](../03_quantum_physics_and_optics/QuantumGroverMultipleTargets.md) — exact subset dynamics, invariant plane and marked-state weights for all iteration counts at N=4.
+
+[QuantumDeutschJozsaGeneral](../03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md) — general real Hadamard/XOR circuit, promise separation and one-bit compatibility.

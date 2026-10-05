@@ -40,3 +40,5 @@ end AxiomAudit
 #audit_axioms QuantumPhaseEstimation.quantum_phase_estimation_master_suite
 
 #audit_axioms QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite
+
+#audit_axioms QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite

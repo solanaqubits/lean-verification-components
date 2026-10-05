@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: e78ad1a7eb32742ca8110073c28a9fa02ddbee1cd3f79372418cccad1a957fed
+source_sha256: 02bf12ca8f98adc4878d780212111d9064d4452267c83fd4cc0b81985116a5ed
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 107 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 108 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L198)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L210)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L222)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L241)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L271)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L341)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L380)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L390)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L400)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L438)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L489)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L525)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L139)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L199)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L211)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L223)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L242)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L272)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L343)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L384)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L394)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L404)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L442)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L493)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L529)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L140)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L538)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L542)
 
 ## Verification
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 107 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 108 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 
@@ -76,3 +76,5 @@ The central registry now has 107 direct imports and the separate `rounding_certi
 `QuantumPhysicsFullSuite.phase_estimation` derives exact two-bit phase recovery from controlled U/U², a supplied normalized eigenstate and inverse Fourier cancellation. Approximate phases and physical hardware are outside scope.
 
 `QuantumPhysicsFullSuite.grover_multiple_targets` adds exact N=4 subset dynamics, norm preservation, the proper-subset invariant plane and both rank-one reflection counterexamples.
+
+`QuantumPhysicsFullSuite.deutsch_jozsa_general` adds the general Hadamard and XOR-ancilla circuit, promise separation, edge cases and one-qubit compatibility.
