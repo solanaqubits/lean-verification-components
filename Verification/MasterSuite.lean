@@ -1,3 +1,4 @@
+import Verification.DistributedThreePhaseCommit
 import Verification.DistributedTwoPhaseCommitTimeout
 import Verification.DistributedRaftCommitApplication
 import Verification.QuantumDeutschJozsaGeneral

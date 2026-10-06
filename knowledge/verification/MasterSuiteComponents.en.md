@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: be603777baf96fb1efe2abf91e88cdd2929ea9d627b76c610c899f3810c55a49
+source_sha256: 82ff94bdbfcc3d75176ed68e7a48a96f1409b3bde73d46db1f9cb6a721d62704
 novelty: not-assessed
 status: reviewed
 ---
@@ -41,3 +41,5 @@ QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPha
 `DistributedSystemsFullSuite.raft_commit_application` adds operational commit-index provenance and deterministic local application. Global State Machine Safety is not claimed by this extension.
 
 `DistributedSystemsFullSuite.two_phase_commit_timeout` adds reachable operational agreement, pre-vote abort safety, prepared-view indistinguishability and the conditional stopped-coordinator blocking equivalence. The legacy `two_pc` field is preserved.
+
+`DistributedSystemsFullSuite.three_phase_commit` includes operational two-participant agreement, finite completion paths and conditional weak-fair completion. The accurate epoch-view service remains an explicit environment contract.

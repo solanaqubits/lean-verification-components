@@ -665,5 +665,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedTwoPhaseCommitTimeout.distributed_two_phase_commit_timeout_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedThreePhaseCommit": {
+    "suite_struct": "DistributedThreePhaseCommitSuite",
+    "suite_type": "DistributedThreePhaseCommit.DistributedThreePhaseCommitSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "three_phase_commit",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

@@ -69,3 +69,9 @@ The operational machine establishes election safety; NetworkInduction establishe
 [DistributedRaftCommitApplicationExample](../09_distributed_systems/DistributedRaftCommitApplicationExample.md)
 
 - [DistributedTwoPhaseCommitTimeout](../09_distributed_systems/DistributedTwoPhaseCommitTimeout.md): operational two-participant timeout safety, indistinguishable prepared histories, and conditional finite-escape blocking.
+
+- [DistributedThreePhaseCommitCore](../09_distributed_systems/DistributedThreePhaseCommitCore.md) — two-participant 3PC, operational transitions and conditional completion.
+
+- [DistributedThreePhaseCommitCertificate](../09_distributed_systems/DistributedThreePhaseCommitCertificate.md) — two-participant 3PC, operational transitions and conditional completion.
+
+- [DistributedThreePhaseCommit](../09_distributed_systems/DistributedThreePhaseCommit.md) — two-participant 3PC, operational transitions and conditional completion.

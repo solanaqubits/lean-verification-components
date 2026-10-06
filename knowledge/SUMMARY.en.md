@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 144 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 147 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -90,3 +90,7 @@ Release v0.5.7 adds [Raft commit application](09_distributed_systems/Distributed
 [Operational 2PC timeouts](09_distributed_systems/DistributedTwoPhaseCommitTimeout.md) adds reachable-state agreement, pre-vote abort safety and indistinguishable prepared histories. Blocking is characterized relative to a stopped coordinator and both participants prepared; a queued decision enables delivery without guaranteeing eventual progress.
 
 Release v0.5.8 contains 110 direct imports and 148 Lean files; see the [release report](../docs/release-v0.5.8.en.md).
+
+[DistributedThreePhaseCommit](09_distributed_systems/DistributedThreePhaseCommit.md): two-participant operational safety, finite completion paths and completion under concrete action fairness after an accurate stable fenced view. Election and fencing are external contracts.
+
+Release v0.5.9 contains 111 direct imports and 151 Lean files; see the [release report](../docs/release-v0.5.9.en.md).

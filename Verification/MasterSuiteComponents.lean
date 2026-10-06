@@ -1,3 +1,4 @@
+import Verification.DistributedThreePhaseCommit
 import Verification.DistributedTwoPhaseCommitTimeout
 import Verification.DistributedRaftCommitApplication
 import Verification.QuantumDeutschJozsaGeneral
@@ -493,6 +494,7 @@ structure DistributedSystemsFullSuite : Prop where
   chandy_lamport : DistributedChandyLamportSnapshot.ChandyLamportFormalSuite
   raft_commit_application : DistributedRaftCommitApplication.DistributedRaftCommitApplicationSuite
   two_phase_commit_timeout : DistributedTwoPhaseCommitTimeout.DistributedTwoPhaseCommitTimeoutSuite
+  three_phase_commit : DistributedThreePhaseCommit.DistributedThreePhaseCommitSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -525,6 +527,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedRaftCommitApplication.distributed_raft_commit_application_master_suite
   two_phase_commit_timeout := by
     exact DistributedTwoPhaseCommitTimeout.distributed_two_phase_commit_timeout_master_suite
+  three_phase_commit := by
+    exact DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

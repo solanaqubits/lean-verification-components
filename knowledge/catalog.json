@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedThreePhaseCommit",
         "Verification.DistributedTwoPhaseCommitTimeout",
         "Verification.DistributedRaftCommitApplication",
         "Verification.QuantumDeutschJozsaGeneral",
@@ -1345,6 +1346,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedThreePhaseCommit",
         "Verification.DistributedTwoPhaseCommitTimeout",
         "Verification.DistributedRaftCommitApplication",
         "Verification.QuantumDeutschJozsaGeneral",
@@ -1600,6 +1602,36 @@
       "card": "knowledge/09_distributed_systems/DistributedTwoPhaseCommitTimeout.md",
       "project_imports": [
         "Verification.DistributedTwoPhaseCommit"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedThreePhaseCommitCore",
+      "section": "distributed",
+      "source": "Verification/DistributedThreePhaseCommitCore.lean",
+      "card": "knowledge/09_distributed_systems/DistributedThreePhaseCommitCore.md",
+      "project_imports": [
+        "Verification.DistributedTwoPhaseCommit"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedThreePhaseCommitCertificate",
+      "section": "distributed",
+      "source": "Verification/DistributedThreePhaseCommitCertificate.lean",
+      "card": "knowledge/09_distributed_systems/DistributedThreePhaseCommitCertificate.md",
+      "project_imports": [
+        "Verification.DistributedThreePhaseCommitCore"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedThreePhaseCommit",
+      "section": "distributed",
+      "source": "Verification/DistributedThreePhaseCommit.lean",
+      "card": "knowledge/09_distributed_systems/DistributedThreePhaseCommit.md",
+      "project_imports": [
+        "Verification.DistributedThreePhaseCommitCertificate"
       ],
       "novelty": "not-assessed"
     }

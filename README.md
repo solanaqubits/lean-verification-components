@@ -28,12 +28,20 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **148 Lean files** under
-`Verification/` and **110 direct MasterSuite imports**. There are **10,333 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **151 Lean files** under
+`Verification/` and **111 direct MasterSuite imports**. There are **11,063 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.8
+## Release v0.5.9
+
+[Two-participant 3PC](knowledge/09_distributed_systems/DistributedThreePhaseCommit.md)
+adds operational safety, recovery and conditional completion. Accurate membership,
+unique backup appointment and atomic epoch fencing are external contracts.
+Eventual completion additionally requires a stable live view and weak action fairness.
+See the [public release report](docs/release-v0.5.9.en.md): **3533 strict build jobs**, **46 public tests**, no warnings or skips.
+
+## Earlier additions in v0.5.8
 
 [Operational 2PC timeouts](knowledge/09_distributed_systems/DistributedTwoPhaseCommitTimeout.md)
 derives safe pre-vote abort, reachable-history indistinguishability and the unsafety
@@ -253,3 +261,5 @@ English-language source distribution with its own Git history and releases.
 See [publication notes](docs/publication.en.md) for Reservoir requirements.
 
 [Operational 2PC timeouts](knowledge/09_distributed_systems/DistributedTwoPhaseCommitTimeout.md) separates safe pre-vote abort from unsafe unilateral prepared decisions, and characterizes blocking only with both participants prepared and a stopped coordinator. Delivery of an in-flight decision remains possible; fairness and recovery are not claimed.
+
+[Two-participant 3PC](knowledge/09_distributed_systems/DistributedThreePhaseCommit.md) proves operational safety and conditional completion using a kernel-checked finite invariant certificate. Accurate membership, unique backup appointment and atomic epoch fencing are explicit external contracts. Weak fairness is required for eventual completion; no partition tolerance or runtime implementation is claimed.
