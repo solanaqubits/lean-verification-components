@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 82ff94bdbfcc3d75176ed68e7a48a96f1409b3bde73d46db1f9cb6a721d62704
+source_sha256: f5fd8c02e1c48e0b694b6b54d34be46499d2413b7394e713751e369f59d4ce64
 novelty: not-assessed
 status: reviewed
 ---
@@ -43,3 +43,5 @@ QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPha
 `DistributedSystemsFullSuite.two_phase_commit_timeout` adds reachable operational agreement, pre-vote abort safety, prepared-view indistinguishability and the conditional stopped-coordinator blocking equivalence. The legacy `two_pc` field is preserved.
 
 `DistributedSystemsFullSuite.three_phase_commit` includes operational two-participant agreement, finite completion paths and conditional weak-fair completion. The accurate epoch-view service remains an explicit environment contract.
+
+DistributedSystemsFullSuite.chandy_misra_haas adds inductive probe provenance and soundness for a fixed AND wait graph, finite detection paths and conditional progress under payload delivery fairness. Fresh-epoch reset is an external contract; arbitrary dynamic WFG soundness is explicitly refuted for the naive send-time-only extension. See the [CMH scope card](../09_distributed_systems/DistributedChandyMisraHaasDeadlock.md).

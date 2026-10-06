@@ -48,3 +48,5 @@ end AxiomAudit
 #audit_axioms DistributedTwoPhaseCommitTimeout.distributed_two_phase_commit_timeout_master_suite
 
 #audit_axioms DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite
+
+#audit_axioms DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite

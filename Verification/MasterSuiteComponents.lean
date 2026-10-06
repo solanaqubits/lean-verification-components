@@ -1,3 +1,4 @@
+import Verification.DistributedChandyMisraHaasDeadlock
 import Verification.DistributedThreePhaseCommit
 import Verification.DistributedTwoPhaseCommitTimeout
 import Verification.DistributedRaftCommitApplication
@@ -495,6 +496,7 @@ structure DistributedSystemsFullSuite : Prop where
   raft_commit_application : DistributedRaftCommitApplication.DistributedRaftCommitApplicationSuite
   two_phase_commit_timeout : DistributedTwoPhaseCommitTimeout.DistributedTwoPhaseCommitTimeoutSuite
   three_phase_commit : DistributedThreePhaseCommit.DistributedThreePhaseCommitSuite
+  chandy_misra_haas : DistributedChandyMisraHaasDeadlock.DistributedChandyMisraHaasSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -529,6 +531,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedTwoPhaseCommitTimeout.distributed_two_phase_commit_timeout_master_suite
   three_phase_commit := by
     exact DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite
+  chandy_misra_haas := by
+    exact DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

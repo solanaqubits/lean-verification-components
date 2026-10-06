@@ -75,3 +75,7 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedThreePhaseCommitCertificate](../09_distributed_systems/DistributedThreePhaseCommitCertificate.md) — two-participant 3PC, operational transitions and conditional completion.
 
 - [DistributedThreePhaseCommit](../09_distributed_systems/DistributedThreePhaseCommit.md) — two-participant 3PC, operational transitions and conditional completion.
+
+- [DistributedChandyMisraHaasDeadlock](../09_distributed_systems/DistributedChandyMisraHaasDeadlock.md) — static-epoch AND probes, soundness, fair delivery and dynamic counterexample.
+
+-  — static-epoch AND wait-graph detector.

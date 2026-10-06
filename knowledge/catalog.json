@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedChandyMisraHaasDeadlock",
         "Verification.DistributedThreePhaseCommit",
         "Verification.DistributedTwoPhaseCommitTimeout",
         "Verification.DistributedRaftCommitApplication",
@@ -1346,6 +1347,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedChandyMisraHaasDeadlock",
         "Verification.DistributedThreePhaseCommit",
         "Verification.DistributedTwoPhaseCommitTimeout",
         "Verification.DistributedRaftCommitApplication",
@@ -1633,6 +1635,14 @@
       "project_imports": [
         "Verification.DistributedThreePhaseCommitCertificate"
       ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedChandyMisraHaasDeadlock",
+      "section": "distributed",
+      "source": "Verification/DistributedChandyMisraHaasDeadlock.lean",
+      "card": "knowledge/09_distributed_systems/DistributedChandyMisraHaasDeadlock.md",
+      "project_imports": [],
       "novelty": "not-assessed"
     }
   ]

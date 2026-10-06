@@ -674,5 +674,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedChandyMisraHaasDeadlock": {
+    "suite_struct": "DistributedChandyMisraHaasSuite",
+    "suite_type": "DistributedChandyMisraHaasDeadlock.DistributedChandyMisraHaasSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "chandy_misra_haas",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
