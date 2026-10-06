@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.10](../docs/release-v0.5.10.en.md)
+[Knowledge base](README.md) · [Release v0.5.11](../docs/release-v0.5.11.en.md)
 
-This release contains 112 direct imports, 152 Lean files under Verification/ and
-11,347 project declarations. Exact proof-source hashes are recorded in
+This release contains 113 direct imports, 153 Lean files under Verification/ and
+11,475 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3534 strict build jobs, 47 tests with no skips, and two audits covering 11347 declarations.
+Public validation passed: 3535 strict build jobs, 48 tests with no skips, and two audits covering 11475 declarations.
 
 Reproduce with:
 
@@ -26,7 +26,7 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 153 Lean sources, including the root file, match corrected private snapshot `ac3e2363e6711b981f31e1cc782ec1b51cf69b35` byte-for-byte.
+All 154 Lean sources, including the root file, match private snapshot `2fbb1074ecec7634393cd3081938b2f9fb22edba` byte-for-byte.
 
 ## Exact QPE scope
 
@@ -108,3 +108,13 @@ soundness are inductive invariants; eventual detection after initiation requires
 the explicit payload-delivery contract. Graph replacement requires an external
 isolated reset. The dynamic counterexample refutes a naive send-time-only check,
 not the original CMH protocol. See the [release scope](../docs/release-v0.5.10.en.md).
+
+## Arbitrary-phase Grover scope
+
+The one-target C^4 model proves complex linearity, explicit adjoints and inverse
+identities, Hermitian norm preservation and a complex plane invariant under every
+pair of real phases. Equal phases from uniform have
+P(phi)=1-3*(1+cos(phi))^2/16 and P=1 iff cos(phi)=-1. At pi the raw step is the
+negative of the canonical step; measurement weights agree. This is not a general
+Hoyer phase-matching theorem or Long iteration schedule. Hardware, noise and
+Python/JSON/SHA-256/SimLab byte binding remain outside the result.

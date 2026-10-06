@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 148 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 149 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 

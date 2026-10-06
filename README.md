@@ -28,18 +28,35 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **152 Lean files** under
-`Verification/` and **112 direct MasterSuite imports**. There are **11,347 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **153 Lean files** under
+`Verification/` and **113 direct MasterSuite imports**. There are **11,475 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.9
+## Release v0.5.11
+
+[Arbitrary-phase Grover](knowledge/03_quantum_physics_and_optics/QuantumGroverArbitraryPhase.md)
+proves complex unitarity and invariant-plane preservation for every real phase pair
+in dimension four with one marked item. For equal phases and the uniform input,
+P(phi)=1-3*(1+cos(phi))^2/16; exact success is equivalent to cos(phi)=-1.
+The canonical bridge at pi includes a global minus sign. This case does not
+establish a noncanonical fractional correction of overshoot.
+See the [public release report](docs/release-v0.5.11.en.md). **3535 strict build jobs**, **48 public tests**, no warnings or skips.
+
+## Earlier additions in v0.5.10
+
+[Static-epoch AND deadlock detection](knowledge/09_distributed_systems/DistributedChandyMisraHaasDeadlock.md)
+proves probe provenance and detection soundness in a fixed wait graph, with
+progress under explicit delivery assumptions and a dynamic phantom counterexample.
+See the [public release report](docs/release-v0.5.10.en.md).
+
+## Earlier additions in v0.5.9
 
 [Two-participant 3PC](knowledge/09_distributed_systems/DistributedThreePhaseCommit.md)
 adds operational safety, recovery and conditional completion. Accurate membership,
 unique backup appointment and atomic epoch fencing are external contracts.
 Eventual completion additionally requires a stable live view and weak action fairness.
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
+See the [public release report](docs/release-v0.5.9.en.md).
 
 ## Earlier additions in v0.5.8
 
@@ -49,7 +66,7 @@ of unilateral prepared decisions based only on a timeout. With both participants
 prepared and the coordinator stopped, blocking is characterized by absence of
 queued decision packets. A decision in flight permits a delivery step; fairness,
 recovery and completion of both participants are not established.
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
+See the [public release report](docs/release-v0.5.8.en.md).
 
 ## Earlier additions in v0.5.7
 
@@ -58,7 +75,7 @@ derives commit-index provenance, prefix retention and ordered deterministic loca
 application from operational traces. The package includes a reachable 45-transition
 old-term-majority counterexample. Cross-node fold agreement requires equality of
 full entries, including commands; no new global State Machine Safety is claimed.
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
+See the [public release report](docs/release-v0.5.7.en.md).
 
 ## Earlier additions in v0.5.6
 
@@ -67,7 +84,7 @@ proves the n-qubit Hadamard transform, XOR-ancilla phase kickback, circuit-deriv
 amplitudes and zero-error classification under the constant-or-balanced promise.
 It covers n=0, exact one-qubit compatibility and counterexamples outside the promise.
 Physical implementation, gate synthesis and complexity bounds are not claimed.
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
+See the [public release report](docs/release-v0.5.6.en.md).
 
 ## Earlier additions in v0.5.5
 
@@ -79,7 +96,7 @@ model. Two counterexamples delimit agreement with rank-one reflection.
 Arbitrary N, oracle query complexity, fractional phase rotations, physical noise
 and hardware remain outside scope. Born-rule interpretation is external.
 
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
+See the [public release report](docs/release-v0.5.5.en.md).
 
 ## Earlier additions in v0.5.4
 
@@ -90,8 +107,8 @@ and its normalized exact eigenstate is supplied as an input hypothesis.
 Approximate QPE, spectral leakage/error bounds, eigenstate preparation, noisy gates
 and physical quantum hardware are outside scope.
 
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
-source correspondence and regression coverage. The fresh strict build passed **3524 jobs** and all **41 public tests** passed without skips.
+See the [public release report](docs/release-v0.5.4.en.md).
+That report records source correspondence and regression coverage. The fresh strict build passed **3524 jobs** and all **41 public tests** passed without skips.
 
 ## Earlier additions in v0.5.3
 
@@ -102,8 +119,8 @@ Termination, failures and arbitrary network topologies are not proved.
 
 The public module removes one unused broad tactic import to pass the enabled
 header linter on a fresh build; definitions and proof bodies are unchanged.
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
-source correspondence. The fresh strict build passed **3523 jobs** and all **40 public tests** passed without skips.
+See the [public release report](docs/release-v0.5.3.en.md).
+That report records source correspondence. The fresh strict build passed **3523 jobs** and all **40 public tests** passed without skips.
 
 ## Earlier additions in v0.5.2
 
@@ -116,7 +133,7 @@ Historical indeterminate records are retained alongside separate exact evidence.
 Rationalization, exact cell-boundary comparison, the SimLab cell-search algorithm,
 Python, JSON/SHA-256 and external input-byte binding remain outside these proofs.
 The strict build passed 3,522 jobs and all 39 public tests passed without skips.
-See the [public release report](docs/release-v0.5.10.en.md): **3534 strict build jobs**, **47 public tests**, no warnings or skips.
+See the [public release report](docs/release-v0.5.2.en.md).
 
 ## Earlier additions in v0.5.1
 

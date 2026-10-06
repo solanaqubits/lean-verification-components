@@ -1,3 +1,4 @@
+import Verification.QuantumGroverArbitraryPhase
 import Verification.DistributedChandyMisraHaasDeadlock
 import Verification.DistributedThreePhaseCommit
 import Verification.DistributedTwoPhaseCommitTimeout
@@ -343,6 +344,7 @@ structure QuantumPhysicsFullSuite : Prop where
   phase_estimation : QuantumPhaseEstimation.QuantumPhaseEstimationSuite
   grover_multiple_targets : QuantumGroverMultipleTargets.QuantumGroverMultipleTargetsSuite
   deutsch_jozsa_general : QuantumDeutschJozsaGeneral.QuantumDeutschJozsaGeneralSuite
+  grover_arbitrary_phase : QuantumGroverArbitraryPhase.QuantumGroverArbitraryPhaseSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -378,6 +380,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumGroverMultipleTargets.quantum_grover_multiple_targets_master_suite
   deutsch_jozsa_general := by
     exact QuantumDeutschJozsaGeneral.quantum_deutsch_jozsa_general_master_suite
+  grover_arbitrary_phase := by
+    exact QuantumGroverArbitraryPhase.quantum_grover_arbitrary_phase_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

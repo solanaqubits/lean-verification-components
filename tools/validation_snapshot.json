@@ -1,18 +1,21 @@
 {
-  "modules_checked": 152,
+  "modules_checked": 153,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 11347,
+    "declarations": 11475,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "ffc9106fb0f92359822deee95967632ca0fc2c52b576162e07e36b2801372b15",
-    "Verification.MasterSuite": "914c924d1bd9e88930aa64a17b8713f6f08f3e942f9389bb3bffaf24cc4ac4f0",
+    "Verification.AxiomAudit": "1c121fc267e2c5d44fbf3ef0320569442cfb8b3ca426057dcecce48b70d1fdc2",
+    "Verification.MasterSuite": "fec6bf439ea24e8e327fc8103c19d30b9c8d2848c77cef70c91b7aaec37ee3d7",
+    "Verification.QuantumGroverArbitraryPhase": "4afc3210de96950872b34e861b483e5a29bd0e50fb11364e48bfefd18c8eb59f",
+    "Verification.QuantumGroverMultipleTargets": "7dbcf830bde6e8469b45f30b449da35c3806f2a2aa5b19a183b92e3820390f6b",
+    "Verification.QuantumGroverSearch": "5cbc65cf91941fbf9c483045f1afcdbb963f2e6f4502bd7d0fdca18635978faf",
     "Verification.DistributedChandyMisraHaasDeadlock": "b321a71b941abf249fa356819482d5f351a5ab03f3a5f9df7a33c0a5bf8985df",
     "Verification.DistributedThreePhaseCommit": "9cd8bdb5c494cb414690ad52567bb5dd8e7f6149fc5ede34edd3281633e0c8e1",
     "Verification.DistributedThreePhaseCommitCertificate": "f511de342b5d1b694770e43a56c704061119cabf2dd8416074c8b0e3947c45e8",
@@ -40,8 +43,6 @@
     "Verification.DistributedRaftLogReplication": "4ba9d4701f459629c616cc990a87e537eea85aa9c3e8735654349135acbf30d7",
     "Verification.QuantumDeutschJozsaGeneral": "212724069433680933166519c16daac4314cd3396294090e35589ad64f6c767f",
     "Verification.QuantumDeutschJozsa": "93cce3bdf53d1809912de5ee8906a2b204d89ef72409034bf4ac2df7302ccdb7",
-    "Verification.QuantumGroverMultipleTargets": "7dbcf830bde6e8469b45f30b449da35c3806f2a2aa5b19a183b92e3820390f6b",
-    "Verification.QuantumGroverSearch": "5cbc65cf91941fbf9c483045f1afcdbb963f2e6f4502bd7d0fdca18635978faf",
     "Verification.QuantumPhaseEstimation": "73b042a0deffd448b9ef434570890c0f69d9d2072315ae8030bdb84b3a6a7690",
     "Verification.DistributedChandyLamportSnapshot": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2",
     "Verification.NumericSQLGapBounds": "6b04b810667cc631f1774b8df002005e1731426722203a9a5c1c188f77861f3d",
@@ -52,7 +53,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "f5fd8c02e1c48e0b694b6b54d34be46499d2413b7394e713751e369f59d4ce64",
+    "Verification.MasterSuiteComponents": "d92749abd65b89d4c20a236172de45f554de3bea13822ccdceb2d87aa3260195",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
@@ -164,24 +165,24 @@
     "Verification.SolarisPhysicalModels": "f0a27eee365eac4e303fc154ea5850457872b4e7a9b7834f97387b78a9b3c5b9"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.10 static-epoch AND probe safety and conditional detection validation; proof sources match the selected private snapshot.",
+  "description": "Public v0.5.11 arbitrary-phase Grover unitarity, invariant plane and exact one-step success validation; all proof sources match the private snapshot.",
   "independent_axiom_audit": {
-    "declarations": 11347,
+    "declarations": 11475,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 47,
+    "passed": 48,
     "skipped": 0,
     "runs": [
-      47
+      48
     ],
-    "seconds": 84.632,
+    "seconds": 89.271,
     "note": "Public live unittest discovery with LEAN_VERIFIER_LIVE_TESTS=1."
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 112,
-  "full_build_jobs": 3534,
+  "master_direct_imports": 113,
+  "full_build_jobs": 3535,
   "pipeline": {
     "strict_build": true,
     "verify_all": true,
@@ -239,7 +240,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "50007e10c7995c97edf8871e266a949d0130f8c42c626c27d6bea2524c389128",
+  "root_source_sha256": "6e9e2136a9802d826cfd4304a1163c0b5942493114b4d54f72f2ebaab9e4934f",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -674,31 +675,49 @@
     "or_model_crashes_packet_loss": false,
     "python_json_sha256_simlab_bytes": false
   },
-  "private_regression_tests": {
-    "passed": 50,
-    "skipped": 0,
-    "runs": [
-      50
-    ],
-    "seconds": 82.04,
-    "note": "Private live tests after the approved CMH import compatibility correction."
-  },
-  "private_source_commit": "ac3e2363e6711b981f31e1cc782ec1b51cf69b35",
-  "public_release": {
-    "version": "0.5.10",
-    "previous_public_commit": "b9a026b03e486e530480f9b6e01ef522d9dbd4b6",
-    "source_lean_files_including_root": 153,
-    "all_lean_sources_match_private": true,
-    "lean_source_differences": [],
-    "integration_idempotent": true,
-    "full_build_jobs": 3534,
-    "public_tests": 47
-  },
   "import_compatibility_correction": {
     "base_commit": "766668434c2f1c1220f384ecb4db3047a7819393",
     "removed_unused_broad_tactic_import": true,
     "explicit_fin_cases_import_in_regression": true,
     "theorem_statements_and_proof_bodies_unchanged": true,
     "full_private_verification_repeated": true
+  },
+  "grover_arbitrary_phase_scope": {
+    "dimension": 4,
+    "marked_items": 1,
+    "state_scalars": "complex",
+    "complex_linearity": true,
+    "explicit_adjoint_and_two_sided_inverse": true,
+    "hermitian_product_preservation": true,
+    "plane_invariant_for_all_real_phase_pairs": true,
+    "all_iterates_normalized_and_in_plane": true,
+    "one_step_equal_phase_probability": "1 - 3*(1+cos(phi))^2/16",
+    "exact_one_step_success_iff": "cos(phi)=-1",
+    "canonical_step_global_phase": -1,
+    "old_real_modules_unchanged": true,
+    "noncanonical_fractional_overshoot_correction": false,
+    "general_hoyer_matching_or_long_schedule": false,
+    "arbitrary_dimension_multiple_targets_hardware_noise": false,
+    "python_json_sha256_simlab_bytes": false
+  },
+  "private_regression_tests": {
+    "passed": 51,
+    "skipped": 0,
+    "runs": [
+      51
+    ],
+    "seconds": 93.733,
+    "note": "Private live discovery including the arbitrary-phase compiler regressions and byte-preserving export."
+  },
+  "private_source_commit": "2fbb1074ecec7634393cd3081938b2f9fb22edba",
+  "public_release": {
+    "version": "0.5.11",
+    "previous_public_commit": "3d2c1cddaf4583baeac6fd43cdd7779f7588c0dd",
+    "source_lean_files_including_root": 154,
+    "all_lean_sources_match_private": true,
+    "lean_source_differences": [],
+    "integration_idempotent": true,
+    "full_build_jobs": 3535,
+    "public_tests": 48
   }
 }

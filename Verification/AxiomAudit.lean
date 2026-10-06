@@ -50,3 +50,5 @@ end AxiomAudit
 #audit_axioms DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite
 
 #audit_axioms DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite
+
+#audit_axioms QuantumGroverArbitraryPhase.quantum_grover_arbitrary_phase_master_suite

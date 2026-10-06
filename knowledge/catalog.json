@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumGroverArbitraryPhase",
         "Verification.DistributedChandyMisraHaasDeadlock",
         "Verification.DistributedThreePhaseCommit",
         "Verification.DistributedTwoPhaseCommitTimeout",
@@ -1347,6 +1348,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumGroverArbitraryPhase",
         "Verification.DistributedChandyMisraHaasDeadlock",
         "Verification.DistributedThreePhaseCommit",
         "Verification.DistributedTwoPhaseCommitTimeout",
@@ -1643,6 +1645,16 @@
       "source": "Verification/DistributedChandyMisraHaasDeadlock.lean",
       "card": "knowledge/09_distributed_systems/DistributedChandyMisraHaasDeadlock.md",
       "project_imports": [],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumGroverArbitraryPhase",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumGroverArbitraryPhase.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumGroverArbitraryPhase.md",
+      "project_imports": [
+        "Verification.QuantumGroverMultipleTargets"
+      ],
       "novelty": "not-assessed"
     }
   ]

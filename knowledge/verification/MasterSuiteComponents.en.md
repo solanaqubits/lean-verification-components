@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: f5fd8c02e1c48e0b694b6b54d34be46499d2413b7394e713751e369f59d4ce64
+source_sha256: d92749abd65b89d4c20a236172de45f554de3bea13822ccdceb2d87aa3260195
 novelty: not-assessed
 status: reviewed
 ---
@@ -45,3 +45,5 @@ QuantumPhysicsFullSuite now includes phase_estimation, constructed by QuantumPha
 `DistributedSystemsFullSuite.three_phase_commit` includes operational two-participant agreement, finite completion paths and conditional weak-fair completion. The accurate epoch-view service remains an explicit environment contract.
 
 DistributedSystemsFullSuite.chandy_misra_haas adds inductive probe provenance and soundness for a fixed AND wait graph, finite detection paths and conditional progress under payload delivery fairness. Fresh-epoch reset is an external contract; arbitrary dynamic WFG soundness is explicitly refuted for the naive send-time-only extension. See the [CMH scope card](../09_distributed_systems/DistributedChandyMisraHaasDeadlock.md).
+
+QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-target C^4 scope: arbitrary phases preserve a complex plane, exact one-step success has cos(phi)=-1, and the canonical bridge includes a global minus sign.
