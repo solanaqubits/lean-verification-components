@@ -692,5 +692,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumGroverArbitraryPhase.quantum_grover_arbitrary_phase_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumSimonsAlgorithm": {
+    "suite_struct": "QuantumSimonsSuite",
+    "suite_type": "QuantumSimonsAlgorithm.QuantumSimonsSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "simon",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumSimonsAlgorithm.quantum_simons_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

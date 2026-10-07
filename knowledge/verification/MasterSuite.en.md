@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: fec6bf439ea24e8e327fc8103c19d30b9c8d2848c77cef70c91b7aaec37ee3d7
+source_sha256: a3e7628f67a360f8fd4d3563af709b8441f2b5fe9807c375f62ef570e202f3a2
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 113 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate with 114 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 113 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 114 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 
@@ -78,3 +78,5 @@ The central registry now has 113 direct imports and the separate `rounding_certi
 `QuantumPhysicsFullSuite.grover_multiple_targets` adds exact N=4 subset dynamics, norm preservation, the proper-subset invariant plane and both rank-one reflection counterexamples.
 
 `QuantumPhysicsFullSuite.deutsch_jozsa_general` adds the general Hadamard and XOR-ancilla circuit, promise separation, edge cases and one-qubit compatibility.
+
+`QuantumPhysicsFullSuite.simon` adds the complex two-register Simon circuit, exact promised distribution and rank-conditional period recovery. See [Simon](../03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md).

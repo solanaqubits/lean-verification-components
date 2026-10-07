@@ -1,12 +1,12 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.11](../docs/release-v0.5.11.en.md)
+[Knowledge base](README.md) · [Release v0.5.12](../docs/release-v0.5.12.en.md)
 
-This release contains 113 direct imports, 153 Lean files under Verification/ and
-11,475 project declarations. Exact proof-source hashes are recorded in
+This release contains 114 direct imports, 154 Lean files under Verification/ and
+11,588 project declarations. Exact proof-source hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3535 strict build jobs, 48 tests with no skips, and two audits covering 11475 declarations.
+Public validation passed: 3537 strict build jobs, 49 tests with no skips, and two audits covering 11588 declarations.
 
 Reproduce with:
 
@@ -26,7 +26,7 @@ The CLI has no `audit-all` or `test-all` subcommands.
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 154 Lean sources, including the root file, match private snapshot `2fbb1074ecec7634393cd3081938b2f9fb22edba` byte-for-byte.
+All 155 Lean sources, including the root file, match private snapshot `8a58301154937e277e38e417dda503cff403e1b6` byte-for-byte.
 
 ## Exact QPE scope
 
@@ -118,3 +118,7 @@ P(phi)=1-3*(1+cos(phi))^2/16 and P=1 iff cos(phi)=-1. At pi the raw step is the
 negative of the canonical step; measurement weights agree. This is not a general
 Hoyer phase-matching theorem or Long iteration schedule. Hardware, noise and
 Python/JSON/SHA-256/SimLab byte binding remain outside the result.
+
+## Simon scope
+
+The complex H/XOR/H circuit yields exact uniform probability 2/(2^n) on s-perp under SimonPromise with nonzero s. Recovery requires orthogonal rows spanning rank n-1 over F2. No sample-count bound or implemented Gaussian solver is certified. See the [Simon card](03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md).

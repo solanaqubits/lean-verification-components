@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumSimonsAlgorithm",
         "Verification.QuantumGroverArbitraryPhase",
         "Verification.DistributedChandyMisraHaasDeadlock",
         "Verification.DistributedThreePhaseCommit",
@@ -1348,6 +1349,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumSimonsAlgorithm",
         "Verification.QuantumGroverArbitraryPhase",
         "Verification.DistributedChandyMisraHaasDeadlock",
         "Verification.DistributedThreePhaseCommit",
@@ -1654,6 +1656,16 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumGroverArbitraryPhase.md",
       "project_imports": [
         "Verification.QuantumGroverMultipleTargets"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumSimonsAlgorithm",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumSimonsAlgorithm.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md",
+      "project_imports": [
+        "Verification.QuantumDeutschJozsaGeneral"
       ],
       "novelty": "not-assessed"
     }

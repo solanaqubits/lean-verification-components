@@ -4,7 +4,7 @@
 
 This project collects reusable, machine-checked components and the tooling needed
 to keep their proofs, assumptions, and documentation connected. The validated
-snapshot contains 149 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
+snapshot contains 150 subject files across eleven areas, plus four registry/audit support files. See the [validation record](VERIFICATION.en.md) for counts and evidence.
 
 ## What has been achieved
 
@@ -96,3 +96,5 @@ Release v0.5.8 contains 110 direct imports and 148 Lean files; see the [release 
 Release v0.5.9 contains 111 direct imports and 151 Lean files; see the [release report](../docs/release-v0.5.9.en.md).
 
 Release v0.5.10 adds static-epoch AND probe soundness, conditional delivery progress and a counterexample to naive dynamic edge checking. See the [release report](../docs/release-v0.5.10.en.md).
+
+- [Simon: exact sampling and rank-conditional recovery](03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md)

@@ -28,12 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **153 Lean files** under
-`Verification/` and **113 direct MasterSuite imports**. There are **11,475 audited
+The [validation record](knowledge/VERIFICATION.en.md) covers **154 Lean files** under
+`Verification/` and **114 direct MasterSuite imports**. There are **11,588 audited
 declarations**, including generated declarations, with only `propext`,
 `Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
 
-## Release v0.5.11
+## Release v0.5.12
+
+[Simon](knowledge/03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md) derives
+the complex two-register circuit and exact uniform weights on s-perp under the
+nonzero-period promise. The unique nonzero solution is recovered when the
+orthogonal observations span rank n-1 over F2. Sampling complexity and physical
+implementation remain outside scope. See the [public release report](docs/release-v0.5.12.en.md)
+and [Reservoir readiness](docs/reservoir-readiness.en.md).
+
+**3537 strict build jobs**, **49 public live tests**, no warnings or skips.
+
+## Earlier additions in v0.5.11
 
 [Arbitrary-phase Grover](knowledge/03_quantum_physics_and_optics/QuantumGroverArbitraryPhase.md)
 proves complex unitarity and invariant-plane preservation for every real phase pair

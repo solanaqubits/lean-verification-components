@@ -71,3 +71,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 [QuantumDeutschJozsaGeneral](../03_quantum_physics_and_optics/QuantumDeutschJozsaGeneral.md) — general real Hadamard/XOR circuit, promise separation and one-bit compatibility.
 
 - [QuantumGroverArbitraryPhase](../03_quantum_physics_and_optics/QuantumGroverArbitraryPhase.md) — complex unitarity, arbitrary-phase invariant plane and exact one-step probability.
+
+- [QuantumSimonsAlgorithm](../03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md) — complex XOR circuit, exact Simon sampling and rank-conditional recovery.

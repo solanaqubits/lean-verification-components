@@ -1,3 +1,4 @@
+import Verification.QuantumSimonsAlgorithm
 import Verification.QuantumGroverArbitraryPhase
 import Verification.DistributedChandyMisraHaasDeadlock
 import Verification.DistributedThreePhaseCommit

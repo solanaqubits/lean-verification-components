@@ -52,3 +52,5 @@ end AxiomAudit
 #audit_axioms DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite
 
 #audit_axioms QuantumGroverArbitraryPhase.quantum_grover_arbitrary_phase_master_suite
+
+#audit_axioms QuantumSimonsAlgorithm.quantum_simons_master_suite
