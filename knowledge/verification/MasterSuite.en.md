@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: a3e7628f67a360f8fd4d3563af709b8441f2b5fe9807c375f62ef570e202f3a2
+source_sha256: 0e8b2393053dd5a3038c26a2927b779e0ee82a2ba65da56ff8a9aae4e7faf28c
 novelty: not-assessed
 status: reviewed
 ---
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L204)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L216)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L228)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L247)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L277)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L349)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L392)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L402)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L412)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L450)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L505)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L549)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L145)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L206)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L218)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L230)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L249)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L279)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L352)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L397)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L407)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L417)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L455)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L511)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L557)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L147)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L562)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L570)
 
 ## Verification
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 114 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 115 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 

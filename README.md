@@ -28,12 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **154 Lean files** under
-`Verification/` and **114 direct MasterSuite imports**. There are **11,588 audited
-declarations**, including generated declarations, with only `propext`,
-`Classical.choice`, and `Quot.sound`. These are declarations, not independent theorems.
+The [validation record](knowledge/VERIFICATION.en.md) covers **157 Lean files**
+under `Verification/` (155 top-level and two auxiliary specifications),
+**115 direct MasterSuite imports** and **12,035 audited declarations**.
+Only `propext`, `Classical.choice` and `Quot.sound` occur. Declarations include
+constructors and generated definitions, not only named mathematical theorems.
 
-## Release v0.5.12
+## Release v0.5.13
+
+[Ricart–Agrawala](knowledge/09_distributed_systems/DistributedRicartAgrawalaMutex.md)
+proves mutual exclusion on reachable states and eventual entry for each request
+under explicit delivery, weak fairness and finite critical-section residence.
+The [Simon conformance pilot](docs/statement-conformance.en.md) checks a pinned
+independent contract and kernel-checked bridge; it is auxiliary tooling and adds
+no subject import. It is not a universal detector of vacuous statements.
+
+**3540 strict build jobs**, **60 public live tests**, no warnings or skips.
+All 158 root-inclusive proof sources match private snapshot `09507001`.
+See the [public release report](docs/release-v0.5.13.en.md).
+
+## Earlier additions in v0.5.12
 
 [Simon](knowledge/03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md) derives
 the complex two-register circuit and exact uniform weights on s-perp under the

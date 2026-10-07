@@ -32,6 +32,14 @@ def main():
         errors.append('Duplicate card paths')
     sources = {str(path.relative_to(ROOT)) for path in (ROOT / 'Verification').glob('*.lean')}
     indexed = {module['source'] for module in modules}
+    support = catalog.get('support_modules', [])
+    nested = {str(p.relative_to(ROOT)) for p in (ROOT / 'Verification').rglob('*.lean')
+              if p.parent != ROOT / 'Verification'}
+    if nested != {entry['source'] for entry in support}:
+        errors.append('Support-module coverage mismatch')
+    for entry in support:
+        if not (ROOT / entry['documentation']).is_file():
+            errors.append(f"Missing support documentation: {entry['source']}")
     if sources != indexed:
         errors.append(f'Coverage mismatch: missing={sources - indexed}, extra={indexed - sources}')
     for module in modules:
@@ -98,7 +106,7 @@ def main():
     if errors:
         raise SystemExit('\n'.join(errors))
     print(f'Knowledge catalog OK: {len(modules)} modules, {len(sections)} sections; '
-          f'local links checked in {len(markdown)} Markdown files.')
+          f'{len(support)} support modules; local links checked in {len(markdown)} Markdown files.')
 
 
 if __name__ == '__main__':

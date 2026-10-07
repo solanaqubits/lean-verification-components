@@ -1,32 +1,38 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.12](../docs/release-v0.5.12.en.md)
+[Knowledge base](README.md) · [Release v0.5.13](../docs/release-v0.5.13.en.md)
 
-This release contains 114 direct imports, 154 Lean files under Verification/ and
-11,588 project declarations. Exact proof-source hashes are recorded in
+This release contains 115 direct imports, 157 Lean files under Verification/
+and 12,035 project declarations. The two nested specification files belong to
+meta-audit tooling, not additional subject suites. Exact hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3537 strict build jobs, 49 tests with no skips, and two audits covering 11588 declarations.
-
-Reproduce with:
+Public validation passed: 3540 strict build jobs, 60 live tests with no failures
+or skips (245.329 seconds), and two full audits covering 12035 declarations.
+Both permit only `propext`, `Classical.choice`, and `Quot.sound`.
+The strict registry AxiomAudit hook also passed; it checks selected theorems and
+is separate from the complete independent audit.
 
 ```bash
 lake build --wfail
 python3 tools/verifier_skill.py verify-all
-LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -v
+LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p 'test_*.py' -v
+lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
 python3 scripts/check_knowledge.py
-python3 scripts/generate_chip_manifest.py --check
 ```
 
-Both audits permit only `propext`, `Classical.choice`, and `Quot.sound`.
-The pinned independent axiom-audit complements the complete local verifier.
-The CLI has no `audit-all` or `test-all` subcommands.
+[Ricart–Agrawala](09_distributed_systems/DistributedRicartAgrawalaMutex.md) proves
+reachable mutual exclusion without progress assumptions. Per-request eventual
+entry requires delivery, weak fairness and finite critical-section residence.
+[Statement conformance](../docs/statement-conformance.en.md) checks the fixed Simon
+contract, satisfiability witnesses and bridge. Its historical private pilot metrics
+are distinct from this public validation.
 
 ## Operational snapshot scope
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 155 Lean sources, including the root file, match private snapshot `8a58301154937e277e38e417dda503cff403e1b6` byte-for-byte.
+All 158 Lean sources, including the root file, match private snapshot `09507001387c0e684c981e8d1ffdf67a77f68f41` byte-for-byte.
 
 ## Exact QPE scope
 

@@ -701,5 +701,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumSimonsAlgorithm.quantum_simons_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedRicartAgrawalaMutex": {
+    "suite_struct": "DistributedRicartAgrawalaSuite",
+    "suite_type": "DistributedRicartAgrawalaMutex.DistributedRicartAgrawalaSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "ricart_agrawala",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

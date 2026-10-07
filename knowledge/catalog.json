@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedRicartAgrawalaMutex",
         "Verification.QuantumSimonsAlgorithm",
         "Verification.QuantumGroverArbitraryPhase",
         "Verification.DistributedChandyMisraHaasDeadlock",
@@ -1349,6 +1350,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedRicartAgrawalaMutex",
         "Verification.QuantumSimonsAlgorithm",
         "Verification.QuantumGroverArbitraryPhase",
         "Verification.DistributedChandyMisraHaasDeadlock",
@@ -1668,6 +1670,27 @@
         "Verification.QuantumDeutschJozsaGeneral"
       ],
       "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRicartAgrawalaMutex",
+      "section": "distributed",
+      "source": "Verification/DistributedRicartAgrawalaMutex.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRicartAgrawalaMutex.md",
+      "project_imports": [
+        "Verification.DistributedLamportClocks"
+      ]
+    }
+  ],
+  "support_modules": [
+    {
+      "source": "Verification/Specs/QuantumSimonsSpec.lean",
+      "documentation": "docs/statement-conformance.en.md",
+      "role": "meta-audit support; not a MasterSuite subject import"
+    },
+    {
+      "source": "Verification/Specs/QuantumSimonsConformance.lean",
+      "documentation": "docs/statement-conformance.en.md",
+      "role": "meta-audit support; not a MasterSuite subject import"
     }
   ]
 }

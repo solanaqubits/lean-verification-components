@@ -79,3 +79,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedChandyMisraHaasDeadlock](../09_distributed_systems/DistributedChandyMisraHaasDeadlock.md) — static-epoch AND probes, soundness, fair delivery and dynamic counterexample.
 
 -  — static-epoch AND wait-graph detector.
+
+- [Ricart–Agrawala mutual exclusion](../09_distributed_systems/DistributedRicartAgrawalaMutex.md): reachable safety and per-request progress under delivery, weak fairness and finite critical-section residence.

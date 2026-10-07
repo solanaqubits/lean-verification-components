@@ -1,3 +1,5 @@
+import Verification.DistributedRicartAgrawalaMutex
+import Verification.Specs.QuantumSimonsConformance
 import Verification.QuantumSimonsAlgorithm
 import Verification.QuantumGroverArbitraryPhase
 import Verification.DistributedChandyMisraHaasDeadlock

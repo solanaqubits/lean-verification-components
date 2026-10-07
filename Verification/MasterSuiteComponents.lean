@@ -1,3 +1,4 @@
+import Verification.DistributedRicartAgrawalaMutex
 import Verification.QuantumSimonsAlgorithm
 import Verification.QuantumGroverArbitraryPhase
 import Verification.DistributedChandyMisraHaasDeadlock
@@ -505,6 +506,7 @@ structure DistributedSystemsFullSuite : Prop where
   two_phase_commit_timeout : DistributedTwoPhaseCommitTimeout.DistributedTwoPhaseCommitTimeoutSuite
   three_phase_commit : DistributedThreePhaseCommit.DistributedThreePhaseCommitSuite
   chandy_misra_haas : DistributedChandyMisraHaasDeadlock.DistributedChandyMisraHaasSuite
+  ricart_agrawala : DistributedRicartAgrawalaMutex.DistributedRicartAgrawalaSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -541,6 +543,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedThreePhaseCommit.distributed_three_phase_commit_master_suite
   chandy_misra_haas := by
     exact DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite
+  ricart_agrawala := by
+    exact DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

@@ -54,3 +54,5 @@ end AxiomAudit
 #audit_axioms QuantumGroverArbitraryPhase.quantum_grover_arbitrary_phase_master_suite
 
 #audit_axioms QuantumSimonsAlgorithm.quantum_simons_master_suite
+
+#audit_axioms DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite

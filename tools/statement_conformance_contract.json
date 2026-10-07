@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "contract_version": "simon-v1",
+  "baseline_private_commit": "8a58301154937e277e38e417dda503cff403e1b6",
+  "review_policy": "Explicit human review required to change gold, bridge or probe pins; never regenerate from a candidate.",
+  "trusted_sha256": {
+    "Verification/Specs/QuantumSimonsSpec.lean": "87af35a457c2a8e052f398cf5ce4a5b125ce2bfe15a62bd0518a84244640d86a",
+    "Verification/Specs/QuantumSimonsConformance.lean": "d68314b49020267a905e174d8856a3e1f7a02a0809bd855904e38a6e4110728d",
+    "tools/statement_conformance_probe.lean": "d2be81c5c2fb75b6c803e8169d27f9b339194a5a7dda706de1104f70f9962fea",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  }
+}
