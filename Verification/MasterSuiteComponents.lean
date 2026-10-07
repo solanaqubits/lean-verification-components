@@ -1,3 +1,4 @@
+import Verification.QuantumShorOrderFindingCore
 import Verification.QuantumPhaseEstimationGeneral
 import Verification.DistributedRicartAgrawalaMutex
 import Verification.QuantumSimonsAlgorithm
@@ -350,6 +351,7 @@ structure QuantumPhysicsFullSuite : Prop where
   grover_arbitrary_phase : QuantumGroverArbitraryPhase.QuantumGroverArbitraryPhaseSuite
   simon : QuantumSimonsAlgorithm.QuantumSimonsSuite
   phase_estimation_general : QuantumPhaseEstimationGeneral.QuantumPhaseEstimationGeneralSuite
+  shor_order_finding : QuantumShorOrderFindingCore.QuantumShorOrderFindingSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -391,6 +393,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumSimonsAlgorithm.quantum_simons_master_suite
   phase_estimation_general := by
     exact QuantumPhaseEstimationGeneral.quantum_phase_estimation_general_master_suite
+  shor_order_finding := by
+    exact QuantumShorOrderFindingCore.quantum_shor_order_finding_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

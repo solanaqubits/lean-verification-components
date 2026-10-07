@@ -1,14 +1,14 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.14](../docs/release-v0.5.14.en.md)
+[Knowledge base](README.md) · [Release v0.5.15](../docs/release-v0.5.15.en.md)
 
-This release contains 116 direct imports, 158 Lean files under Verification/
-and 12,210 project declarations. The two nested specification files belong to
+This release contains 117 direct imports, 159 Lean files under Verification/
+and 12,359 project declarations. The two nested specification files belong to
 meta-audit tooling, not additional subject suites. Exact hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3541 strict build jobs, 61 live tests with no failures
-or skips (247.364 seconds), and two full audits covering 12210 declarations.
+Public validation passed: 3542 strict build jobs, 62 live tests with no failures
+or skips (249.324 seconds), and two full audits covering 12359 declarations.
 Both permit only `propext`, `Classical.choice`, and `Quot.sound`.
 The strict registry AxiomAudit hook also passed; it checks selected theorems and
 is separate from the complete independent audit.
@@ -20,6 +20,19 @@ LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p 'test_*.py' 
 lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
 python3 scripts/check_knowledge.py
 ```
+
+## Spectral order-finding scope
+
+[QuantumShorOrderFindingCore](03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md)
+constructs a permutation of every residue modulo N for a coprime base, fixes padded
+register states, and proves inverse and unitary operator identities. Its orbit
+spectrum is orthonormal and decomposes |1⟩ without requiring knowledge of the order
+for input preparation. The actual QPE joint output yields a normalized marginal
+mixture with weights 1/r. The nearest-sample 4/π² bound applies to each component;
+the guaranteed contribution of one component to the mixture is 4/(rπ²).
+Order recovery, continued fractions, repeated-run LCM recovery, factorization,
+gate synthesis, complexity and physical noise are outside scope. Python,
+JSON/SHA-256 and binding external SimLab inputs to bytes remain external obligations.
 
 ## General QPE scope
 
@@ -38,7 +51,7 @@ full Shor are not proved. Python, JSON/SHA-256 and SimLab byte binding remain ex
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 159 Lean sources, including the root file, match private snapshot `9970e9170023db76f1a392a7235bb5a1af6778e2` byte-for-byte.
+All 160 Lean sources, including the root file, match private snapshot `110558af4e7411ac48d75c1a6fc9795db6c2fde1` byte-for-byte.
 
 ## Exact QPE scope
 

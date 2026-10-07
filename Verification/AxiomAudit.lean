@@ -58,3 +58,5 @@ end AxiomAudit
 #audit_axioms DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite
 
 #audit_axioms QuantumPhaseEstimationGeneral.quantum_phase_estimation_general_master_suite
+
+#audit_axioms QuantumShorOrderFindingCore.quantum_shor_order_finding_master_suite

@@ -28,13 +28,27 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **158 Lean files**
-under `Verification/` (156 top-level and two auxiliary specifications),
-**116 direct MasterSuite imports** and **12,210 audited declarations**.
+The [validation record](knowledge/VERIFICATION.en.md) covers **159 Lean files**
+under `Verification/` (157 top-level and two auxiliary specifications),
+**117 direct MasterSuite imports** and **12,359 audited declarations**.
 Only `propext`, `Classical.choice` and `Quot.sound` occur. Declarations include
 constructors and generated definitions, not only named mathematical theorems.
 
-## Release v0.5.14
+## Release v0.5.15
+
+[Shor order-finding core](knowledge/03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md)
+constructs padded modular multiplication, its orthonormal orbit spectrum and the
+coherent decomposition of the accessible input |1⟩. The actual QPE marginal is
+derived as a uniform mixture of spectral components. The nearest-sample bound
+is **4/π² per component**, giving an individual contribution of **4/(rπ²)**
+to the mixture. Recovering the order, continued fractions, factorization and
+physical gate synthesis remain outside scope.
+
+**3542 strict build jobs**, **62 public live tests**, no warnings or skips.
+All 160 root-inclusive proof sources match private snapshot `110558af`.
+See the [public release report](docs/release-v0.5.15.en.md).
+
+## Earlier additions in v0.5.14
 
 [General Quantum Phase Estimation](knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md)
 derives output amplitudes from an explicit controlled-power cascade and inverse

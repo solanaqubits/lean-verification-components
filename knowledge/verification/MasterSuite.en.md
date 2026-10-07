@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 2fc4b57391e8425c7018c922d32f1eef30e760bc6a6a543c839d66bd92536807
+source_sha256: db8feecadf17dca92c93e610d2bce8f9110c48e5daf1b2700514119d8a9fde5f
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 116 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 117 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L207)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L219)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L231)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L250)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L280)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L354)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L401)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L411)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L421)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L459)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L515)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L561)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L148)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L208)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L220)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L232)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L251)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L281)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L356)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L405)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L415)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L425)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L463)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L519)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L565)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L149)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L574)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L578)
 
 ## Verification
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 116 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 117 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 
@@ -82,3 +82,5 @@ The central registry now has 116 direct imports and the separate `rounding_certi
 `QuantumPhysicsFullSuite.simon` adds the complex two-register Simon circuit, exact promised distribution and rank-conditional period recovery. See [Simon](../03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md).
 
 `QuantumPhysicsFullSuite.phase_estimation_general` adds general controlled-power QPE, unitary Fourier transforms, exact dyadic recovery and the nearest-sample 4/π² probability bound. A normalized eigenstate is supplied. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md).
+
+`QuantumPhysicsFullSuite.shor_order_finding` derives the padded modular-multiplication spectrum and the QPE marginal on |1⟩. The component bound is 4/π²; its guaranteed contribution to the mixture is 4/(rπ²). Order recovery and factorization are not claimed. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md).

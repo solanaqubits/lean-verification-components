@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 451fe4e3c776757495f39bdb1d8384f5ea3d6d39bf80f79b3ac82c22bb860e35
+source_sha256: 035ab3b65f907aaf4244d395ba45e37951f4d28b01cc44f170d90ce78d059c41
 novelty: not-assessed
 status: reviewed
 ---
@@ -51,3 +51,5 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `QuantumPhysicsFullSuite.simon` adds the complex two-register circuit, exact Simon distribution and rank-conditional binary period recovery. Existing fields are preserved.
 
 `QuantumPhysicsFullSuite.phase_estimation_general` adds general controlled-power QPE, unitary Fourier transforms, exact dyadic recovery and the nearest-sample 4/π² probability bound. A normalized eigenstate is supplied. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md).
+
+`QuantumPhysicsFullSuite.shor_order_finding` derives the padded modular-multiplication spectrum and the QPE marginal on |1⟩. The component bound is 4/π²; its guaranteed contribution to the mixture is 4/(rπ²). Order recovery and factorization are not claimed. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md).

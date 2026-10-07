@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumShorOrderFindingCore",
         "Verification.QuantumPhaseEstimationGeneral",
         "Verification.DistributedRicartAgrawalaMutex",
         "Verification.QuantumSimonsAlgorithm",
@@ -1351,6 +1352,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumShorOrderFindingCore",
         "Verification.QuantumPhaseEstimationGeneral",
         "Verification.DistributedRicartAgrawalaMutex",
         "Verification.QuantumSimonsAlgorithm",
@@ -1689,6 +1691,15 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md",
       "project_imports": [
         "Verification.QuantumPhaseEstimation"
+      ]
+    },
+    {
+      "id": "QuantumShorOrderFindingCore",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumShorOrderFindingCore.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md",
+      "project_imports": [
+        "Verification.QuantumPhaseEstimationGeneral"
       ]
     }
   ],

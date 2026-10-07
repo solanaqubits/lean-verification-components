@@ -719,5 +719,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumPhaseEstimationGeneral.quantum_phase_estimation_general_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumShorOrderFindingCore": {
+    "suite_struct": "QuantumShorOrderFindingSuite",
+    "suite_type": "QuantumShorOrderFindingCore.QuantumShorOrderFindingSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "shor_order_finding",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumShorOrderFindingCore.quantum_shor_order_finding_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

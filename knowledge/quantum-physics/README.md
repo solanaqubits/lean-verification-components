@@ -75,3 +75,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumSimonsAlgorithm](../03_quantum_physics_and_optics/QuantumSimonsAlgorithm.md) — complex XOR circuit, exact Simon sampling and rank-conditional recovery.
 
 - [QuantumPhaseEstimationGeneral](../03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md) — general controlled-power QPE, unitary Fourier transform, exact dyadic recovery and nearest-sample probability at least 4/π².
+
+- [QuantumShorOrderFindingCore](../03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md) — padded modular multiplication, orthonormal orbit spectrum, accessible |1⟩ input and the derived QPE probability mixture.
