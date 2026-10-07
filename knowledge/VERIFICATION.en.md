@@ -1,14 +1,14 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.13](../docs/release-v0.5.13.en.md)
+[Knowledge base](README.md) · [Release v0.5.14](../docs/release-v0.5.14.en.md)
 
-This release contains 115 direct imports, 157 Lean files under Verification/
-and 12,035 project declarations. The two nested specification files belong to
+This release contains 116 direct imports, 158 Lean files under Verification/
+and 12,210 project declarations. The two nested specification files belong to
 meta-audit tooling, not additional subject suites. Exact hashes are recorded in
 [validation_snapshot.json](../tools/validation_snapshot.json).
 
-Public validation passed: 3540 strict build jobs, 60 live tests with no failures
-or skips (245.329 seconds), and two full audits covering 12035 declarations.
+Public validation passed: 3541 strict build jobs, 61 live tests with no failures
+or skips (247.364 seconds), and two full audits covering 12210 declarations.
 Both permit only `propext`, `Classical.choice`, and `Quot.sound`.
 The strict registry AxiomAudit hook also passed; it checks selected theorems and
 is separate from the complete independent audit.
@@ -21,18 +21,24 @@ lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
 python3 scripts/check_knowledge.py
 ```
 
-[Ricart–Agrawala](09_distributed_systems/DistributedRicartAgrawalaMutex.md) proves
-reachable mutual exclusion without progress assumptions. Per-request eventual
-entry requires delivery, weak fairness and finite critical-section residence.
-[Statement conformance](../docs/statement-conformance.en.md) checks the fixed Simon
-contract, satisfiability witnesses and bridge. Its historical private pilot metrics
-are distinct from this public validation.
+## General QPE scope
+
+[QuantumPhaseEstimationGeneral](03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md)
+derives the output for an arbitrary finite target and n-bit control register from
+controlled powers and the inverse Fourier transform. Fourier unitarity, exact
+dyadic recovery, probability normalization and the nearest-sample lower bound
+4/π² hold in the exact complex model. The measured-output claims use a supplied
+normalized eigenvector of a unitary operator. Both midpoint choices, modular
+wraparound, negative phases, the singular geometric-sum branch and n=0 are covered.
+The n=2 bridge identifies the complete old operational output.
+Eigenstate preparation, gate synthesis and cost, physical noise, decoherence and
+full Shor are not proved. Python, JSON/SHA-256 and SimLab byte binding remain external.
 
 ## Operational snapshot scope
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 158 Lean sources, including the root file, match private snapshot `09507001387c0e684c981e8d1ffdf67a77f68f41` byte-for-byte.
+All 159 Lean sources, including the root file, match private snapshot `9970e9170023db76f1a392a7235bb5a1af6778e2` byte-for-byte.
 
 ## Exact QPE scope
 

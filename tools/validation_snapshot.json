@@ -1,18 +1,20 @@
 {
-  "modules_checked": 157,
+  "modules_checked": 158,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 12035,
+    "declarations": 12210,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "44b1a8edfe4a79f61f0e6f0feb83a9becfb4bd9399281086450cea86a0abf878",
-    "Verification.MasterSuite": "0e8b2393053dd5a3038c26a2927b779e0ee82a2ba65da56ff8a9aae4e7faf28c",
+    "Verification.AxiomAudit": "8adbdf38d2701cf8c5d65864c6e7f588355ac784a62eaa4b7e7612a7394f134f",
+    "Verification.MasterSuite": "2fc4b57391e8425c7018c922d32f1eef30e760bc6a6a543c839d66bd92536807",
+    "Verification.QuantumPhaseEstimationGeneral": "ca48423f64948d3b170a7fabf46b6d139a587032ea3b82543c73d019a7596a71",
+    "Verification.QuantumPhaseEstimation": "73b042a0deffd448b9ef434570890c0f69d9d2072315ae8030bdb84b3a6a7690",
     "Verification.DistributedRicartAgrawalaMutex": "5241798d73c0e06b663aff4057793c93a718562332e31f73bff38440fdd88544",
     "Verification.DistributedLamportClocks": "2ea1af72a0e3dba8b708808b0692fb8513ddc4992a3a1208bb0849103374219f",
     "Verification.QuantumSimonsAlgorithm": "f59fb92293df5dadc613ad9b4e64c21ea7793ba107e4025726427edf59c66361",
@@ -46,7 +48,6 @@
     "Verification.DistributedRaftLogAppend": "2c0570f8c65fc8f65b505d77c1c18bbea5fda3e4a628caf5f4f0de9dac145449",
     "Verification.DistributedRaftConsensus": "89cf3887f090c80d0fbcc0058a1c1733ce524d906253a67a3489e081f6b045c2",
     "Verification.DistributedRaftLogReplication": "4ba9d4701f459629c616cc990a87e537eea85aa9c3e8735654349135acbf30d7",
-    "Verification.QuantumPhaseEstimation": "73b042a0deffd448b9ef434570890c0f69d9d2072315ae8030bdb84b3a6a7690",
     "Verification.DistributedChandyLamportSnapshot": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2",
     "Verification.NumericSQLGapBounds": "6b04b810667cc631f1774b8df002005e1731426722203a9a5c1c188f77861f3d",
     "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
@@ -56,7 +57,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "2d1d06959ff57ab06145669de136b8cd2345559171af24371a496ac77f142bde",
+    "Verification.MasterSuiteComponents": "451fe4e3c776757495f39bdb1d8384f5ea3d6d39bf80f79b3ac82c22bb860e35",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
@@ -169,24 +170,24 @@
     "Verification.Specs.QuantumSimonsSpec": "87af35a457c2a8e052f398cf5ce4a5b125ce2bfe15a62bd0518a84244640d86a"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.13 validation: Ricart-Agrawala and the Simon statement-conformance pilot.",
+  "description": "Public v0.5.14 validation: general finite-register Quantum Phase Estimation.",
   "independent_axiom_audit": {
-    "declarations": 12035,
+    "declarations": 12210,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 60,
+    "passed": 61,
     "skipped": 0,
     "runs": [
-      60
+      61
     ],
-    "seconds": 245.329,
-    "note": "Measured in the isolated public v0.5.13 checkout with live tests enabled."
+    "seconds": 247.364,
+    "note": "Measured in the isolated public v0.5.14 checkout with live tests enabled."
   },
   "verifier_sha256": "8f52f476908a9883828d5020ab1faca90de198b0ea7fdfbbea606911ddc3bff1",
-  "master_direct_imports": 115,
-  "full_build_jobs": 3540,
+  "master_direct_imports": 116,
+  "full_build_jobs": 3541,
   "pipeline": {
     "strict_build": true,
     "verify": true,
@@ -245,7 +246,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "47978641eaaf4c3f6f98d7988c58bd0e80a7ffd100697e73ad56a70a5355fbfc",
+  "root_source_sha256": "ada937d70f929337f8453eb0f54f1d60ab310439f1cbd5a7786237b837f7bcdc",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -732,7 +733,7 @@
     "russian_cards": 0,
     "public_release_performed": false
   },
-  "validation_base_commit": "5f5ea31603985f18bc67c8214437598640226703",
+  "validation_base_commit": "92962f30505be1cf63b3b6360fa084234e7e4f9e",
   "statement_conformance_scope": {
     "subject_imports_added": 0,
     "support_modules_added": 2,
@@ -799,13 +800,43 @@
     "independent_axiom_audit_declarations": 12035,
     "public_release_performed": false
   },
+  "qpe_general_scope": {
+    "control_dimension": "2^n for every natural n",
+    "target_dimension": "arbitrary finite d; normalized eigen-input required for output probabilities",
+    "phase": "arbitrary real, modulo integer shifts",
+    "explicit_hadamard_zero_preparation": true,
+    "controlled_power_cascade": true,
+    "fourier_both_inverses_and_hermitian_unitarity": true,
+    "derived_amplitudes": true,
+    "exact_dyadic_distribution": true,
+    "distribution_normalized": true,
+    "geometric_sine_formula_nonintegral_branch": true,
+    "integral_branch_separate": true,
+    "nearest_sample_constructed_and_proved": true,
+    "lower_bound": "4/pi^2 for either nearest tie, including wrap-around",
+    "actual_joint_output_bound": true,
+    "two_qubit_operational_bridge": true,
+    "zero_control_qubits": true,
+    "eigenstate_preparation": false,
+    "gate_synthesis_or_complexity": false,
+    "noise_or_full_shor": false,
+    "python_json_sha256_simlab": false
+  },
+  "qpe_general_export_validation": {
+    "live_tests": 61,
+    "seconds": 252.818,
+    "strict_build_jobs": 3541,
+    "independent_axiom_audit_declarations": 12210,
+    "proof_sources_byte_identical": 159,
+    "public_release_performed": false
+  },
   "public_release_validation": {
-    "version": "0.5.13",
-    "private_snapshot": "09507001387c0e684c981e8d1ffdf67a77f68f41",
+    "version": "0.5.14",
+    "private_snapshot": "9970e9170023db76f1a392a7235bb5a1af6778e2",
     "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
-    "independent_audited_declarations": 12035,
-    "lean_files_recursive": 157,
-    "root_inclusive_byte_identical_sources": 158,
+    "independent_audited_declarations": 12210,
+    "lean_files_recursive": 158,
+    "root_inclusive_byte_identical_sources": 159,
     "commands": [
       {
         "name": "build",
@@ -815,7 +846,7 @@
           "--wfail"
         ],
         "exit_code": 0,
-        "seconds": 150.838
+        "seconds": 151.11
       },
       {
         "name": "verify-all",
@@ -825,7 +856,7 @@
           "verify-all"
         ],
         "exit_code": 0,
-        "seconds": 439.571
+        "seconds": 445.847
       },
       {
         "name": "tests",
@@ -841,7 +872,7 @@
           "-v"
         ],
         "exit_code": 0,
-        "seconds": 245.397
+        "seconds": 247.434
       },
       {
         "name": "registry",
@@ -853,7 +884,7 @@
           "Verification/AxiomAudit.lean"
         ],
         "exit_code": 0,
-        "seconds": 2.302
+        "seconds": 2.36
       },
       {
         "name": "independent",
@@ -868,7 +899,7 @@
           "--json"
         ],
         "exit_code": 0,
-        "seconds": 3.569
+        "seconds": 3.644
       },
       {
         "name": "knowledge",
@@ -877,7 +908,7 @@
           "scripts/check_knowledge.py"
         ],
         "exit_code": 0,
-        "seconds": 0.089
+        "seconds": 0.095
       }
     ]
   }

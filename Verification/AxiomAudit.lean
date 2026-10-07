@@ -56,3 +56,5 @@ end AxiomAudit
 #audit_axioms QuantumSimonsAlgorithm.quantum_simons_master_suite
 
 #audit_axioms DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite
+
+#audit_axioms QuantumPhaseEstimationGeneral.quantum_phase_estimation_general_master_suite

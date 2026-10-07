@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 2d1d06959ff57ab06145669de136b8cd2345559171af24371a496ac77f142bde
+source_sha256: 451fe4e3c776757495f39bdb1d8384f5ea3d6d39bf80f79b3ac82c22bb860e35
 novelty: not-assessed
 status: reviewed
 ---
@@ -49,3 +49,5 @@ DistributedSystemsFullSuite.chandy_misra_haas adds inductive probe provenance an
 QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-target C^4 scope: arbitrary phases preserve a complex plane, exact one-step success has cos(phi)=-1, and the canonical bridge includes a global minus sign.
 
 `QuantumPhysicsFullSuite.simon` adds the complex two-register circuit, exact Simon distribution and rank-conditional binary period recovery. Existing fields are preserved.
+
+`QuantumPhysicsFullSuite.phase_estimation_general` adds general controlled-power QPE, unitary Fourier transforms, exact dyadic recovery and the nearest-sample 4/π² probability bound. A normalized eigenstate is supplied. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md).

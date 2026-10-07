@@ -28,13 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **157 Lean files**
-under `Verification/` (155 top-level and two auxiliary specifications),
-**115 direct MasterSuite imports** and **12,035 audited declarations**.
+The [validation record](knowledge/VERIFICATION.en.md) covers **158 Lean files**
+under `Verification/` (156 top-level and two auxiliary specifications),
+**116 direct MasterSuite imports** and **12,210 audited declarations**.
 Only `propext`, `Classical.choice` and `Quot.sound` occur. Declarations include
 constructors and generated definitions, not only named mathematical theorems.
 
-## Release v0.5.13
+## Release v0.5.14
+
+[General Quantum Phase Estimation](knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md)
+derives output amplitudes from an explicit controlled-power cascade and inverse
+Fourier transform. It proves Fourier unitarity, exact dyadic recovery, normalized
+probabilities and a nearest-sample success bound of **4/π²** for every real phase.
+The supplied target eigenstate is normalized; its preparation, gate synthesis,
+hardware noise and the full Shor algorithm remain outside scope.
+
+**3541 strict build jobs**, **61 public live tests**, no warnings or skips.
+All 159 root-inclusive proof sources match private snapshot `9970e917`.
+See the [public release report](docs/release-v0.5.14.en.md).
+
+## Earlier additions in v0.5.13
 
 [Ricart–Agrawala](knowledge/09_distributed_systems/DistributedRicartAgrawalaMutex.md)
 proves mutual exclusion on reachable states and eventual entry for each request

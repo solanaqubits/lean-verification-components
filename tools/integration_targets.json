@@ -710,5 +710,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumPhaseEstimationGeneral": {
+    "suite_struct": "QuantumPhaseEstimationGeneralSuite",
+    "suite_type": "QuantumPhaseEstimationGeneral.QuantumPhaseEstimationGeneralSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "phase_estimation_general",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumPhaseEstimationGeneral.quantum_phase_estimation_general_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

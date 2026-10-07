@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumPhaseEstimationGeneral",
         "Verification.DistributedRicartAgrawalaMutex",
         "Verification.QuantumSimonsAlgorithm",
         "Verification.QuantumGroverArbitraryPhase",
@@ -1350,6 +1351,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumPhaseEstimationGeneral",
         "Verification.DistributedRicartAgrawalaMutex",
         "Verification.QuantumSimonsAlgorithm",
         "Verification.QuantumGroverArbitraryPhase",
@@ -1678,6 +1680,15 @@
       "card": "knowledge/09_distributed_systems/DistributedRicartAgrawalaMutex.md",
       "project_imports": [
         "Verification.DistributedLamportClocks"
+      ]
+    },
+    {
+      "id": "QuantumPhaseEstimationGeneral",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumPhaseEstimationGeneral.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md",
+      "project_imports": [
+        "Verification.QuantumPhaseEstimation"
       ]
     }
   ],

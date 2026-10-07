@@ -1,3 +1,4 @@
+import Verification.QuantumPhaseEstimationGeneral
 import Verification.DistributedRicartAgrawalaMutex
 import Verification.QuantumSimonsAlgorithm
 import Verification.QuantumGroverArbitraryPhase
