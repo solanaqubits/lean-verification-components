@@ -737,5 +737,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedSuzukiKasamiMutex.distributed_suzuki_kasami_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumShorContinuedFractions": {
+    "suite_struct": "QuantumShorContinuedFractionsSuite",
+    "suite_type": "QuantumShorContinuedFractions.QuantumShorContinuedFractionsSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "shor_continued_fractions",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumShorContinuedFractions.quantum_shor_continued_fractions_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

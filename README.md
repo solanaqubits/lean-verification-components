@@ -28,13 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **160 Lean files**
-under `Verification/` (158 top-level and two auxiliary specifications),
-**118 direct MasterSuite imports** and **12,794 audited declarations**.
-Only `propext`, `Classical.choice` and `Quot.sound` occur. Declaration counts include
-constructors and generated definitions, not only named mathematical theorems.
+The [validation record](knowledge/VERIFICATION.en.md) covers **161 Lean files**
+under `Verification/` (159 top-level and two auxiliary specifications),
+**119 direct MasterSuite imports** and **12,863 audited declarations**.
+Only `propext`, `Classical.choice` and `Quot.sound` occur. Counts include generated
+constructors and definitions, not only named mathematical theorems.
 
-## Release v0.5.16
+## Release v0.5.17
+
+[Shor continued fractions](knowledge/03_quantum_physics_and_optics/QuantumShorContinuedFractions.md)
+adds executable candidates, strict Legendre recovery and the bound
+**2·floor(log₂ Q)+1 Euclidean stages**. The correct reduced denominator is r/gcd(s,r).
+Exact recovery is conditional; modular validation alone admits multiples of the order.
+Bit complexity, repeated-sampling analysis and integer factorization are outside scope.
+
+**3546 strict build jobs**, **64 public live tests**, no warnings or skips.
+All 162 root-inclusive Lean sources match private snapshot `189077d1`.
+See the [public release report](docs/release-v0.5.17.en.md).
+
+## Earlier additions in v0.5.16
 
 [Suzuki–Kasami mutual exclusion](knowledge/09_distributed_systems/DistributedSuzukiKasamiMutex.md)
 proves reachable token conservation, mutual exclusion and queue invariants.

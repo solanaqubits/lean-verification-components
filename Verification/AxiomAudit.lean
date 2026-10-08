@@ -62,3 +62,5 @@ end AxiomAudit
 #audit_axioms QuantumShorOrderFindingCore.quantum_shor_order_finding_master_suite
 
 #audit_axioms DistributedSuzukiKasamiMutex.distributed_suzuki_kasami_master_suite
+
+#audit_axioms QuantumShorContinuedFractions.quantum_shor_continued_fractions_master_suite

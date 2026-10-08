@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 0963efb04921dfb678c0e8d003c51d5874a8aa9e3c53e022b42c777296665f84
+source_sha256: f4e4b64ed7c393b19a737e6cfe159202c8436511cbcb2fd5589a9099faaeada3
 novelty: not-assessed
 status: reviewed
 ---
@@ -55,3 +55,5 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `QuantumPhysicsFullSuite.shor_order_finding` derives the padded modular-multiplication spectrum and the QPE marginal on |1⟩. The component bound is 4/π²; its guaranteed contribution to the mixture is 4/(rπ²). Order recovery and factorization are not claimed. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md).
 
 `DistributedSystemsFullSuite.suzuki_kasami` proves reachable token conservation and mutual exclusion. Eventual service requires ReliableDelivery, WeakFairness and FiniteCS. A reachable counterexample refutes LN ≤ RN at the holder. [Scope and serialization](../09_distributed_systems/DistributedSuzukiKasamiMutex.md).
+
+`QuantumPhysicsFullSuite.shor_continued_fractions` proves finite executable candidates and conditional recovery under the strict Legendre bound. Euclidean stages are bounded separately from bit complexity. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorContinuedFractions.md).

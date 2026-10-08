@@ -1,15 +1,48 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.16](../docs/release-v0.5.16.en.md)
+[Knowledge base](README.md) · [Release v0.5.17](../docs/release-v0.5.17.en.md)
 
-This release contains 118 direct imports, 160 Lean files under Verification/
-and 12,794 project declarations. The two nested specification files are auxiliary
-meta-audit tooling. [Source hashes and commands](../tools/validation_snapshot.json).
+Measured: 119 direct imports, 161 Lean files under Verification/,
+12,863 project declarations, 3546 strict build jobs and 64 public live tests
+without failures or skips (252.627s). Both complete audits allow only
+`propext`, `Classical.choice`, and `Quot.sound`. The strict registry hook also passed.
+The two nested specification files are auxiliary meta-audit tooling.
+[Hashes and measured commands](../tools/validation_snapshot.json).
 
-Public validation passed: 3543 strict build jobs and 63 live tests with no
-failures or skips (251.324 seconds). Both full audits covered 12794 declarations
-and allowed only `propext`, `Classical.choice`, and `Quot.sound`.
-The strict registry hook passed separately; it is not a second proof kernel.
+## Shor continued-fraction scope
+
+[Theorems and assumptions](03_quantum_physics_and_optics/QuantumShorContinuedFractions.md).
+
+The algorithm computes finite partial quotients and convergents of the exact rational
+y/Q by Euclidean descent, terminating at an integer. Its inputs y,Q,N do not contain
+the unknown spectral numerator s or period r. The candidate list filters denominators
+strictly below N. Membership in the unfiltered list is equivalent to being a Mathlib
+Real.convergent, including its repeated terminal values.
+
+For N≥2, a coprime to N, r=orderOf(a : ZMod N), 0≤s<r and 0≤y<Q, the existing Shor
+model proves 0<r<N. With Q=2^n≥N², the modular QPE Nearest condition implies ordinary
+|y/Q-s/r|≤1/(2Q). The proof handles s=0 and rules out wrap-around at this resolution.
+Since q=r/gcd(s,r)≤r<N, the error is strictly below 1/(2q²). Pinned Mathlib's strict
+Legendre theorem supplies the convergent, and the finite-list bridge proves its
+presence among the executable candidates.
+
+The correct reduced denominator q divides r. Other list entries are not asserted
+to divide r. If gcd(s,r)=1, q=r and r belongs to the modularly checked list. The
+modular check a^q mod N = 1 mod N proves r divides q; proper multiples can pass.
+If q divides r is separately established, mutual divisibility gives equality.
+For s=0 the reduced denominator is one, recovering the order only when r=1.
+
+The number of Euclidean stages is at most 2*Nat.log 2 Q+1 for Q>0. This counts partial
+quotients, not every list operation, bit operation, modular exponentiation or total
+runtime. No O(log N) claim is made without additionally bounding Q in terms of N.
+
+The existing actual-input QPE mixture gives a contribution bound 4/(r*pi²) for a
+single component's nearest sample, combined here with candidate membership. This
+is distinct from the conditional component bound 4/pi². Guaranteed single-run
+success, independent repeated measurements, LCM recovery, classical factorization,
+long-integer bit complexity, physical noise and gate synthesis are outside scope.
+Python, JSON/SHA-256 and external SimLab input-to-byte binding remain open obligations.
+No scientific-priority claim or full factoring algorithm is asserted.
 
 ## Suzuki–Kasami scope
 
@@ -75,7 +108,7 @@ full Shor are not proved. Python, JSON/SHA-256 and SimLab byte binding remain ex
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 161 Lean sources, including the root file, match private snapshot `ef9c48132533ccbf950462326a7282c335bf0777` byte-for-byte.
+All 162 Lean sources, including the root file, match private snapshot `189077d10183ebf11198f486c48fa156c4cbf11d` byte-for-byte.
 
 ## Exact QPE scope
 

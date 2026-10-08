@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumShorContinuedFractions",
         "Verification.DistributedSuzukiKasamiMutex",
         "Verification.QuantumShorOrderFindingCore",
         "Verification.QuantumPhaseEstimationGeneral",
@@ -1353,6 +1354,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumShorContinuedFractions",
         "Verification.DistributedSuzukiKasamiMutex",
         "Verification.QuantumShorOrderFindingCore",
         "Verification.QuantumPhaseEstimationGeneral",
@@ -1710,6 +1712,15 @@
       "source": "Verification/DistributedSuzukiKasamiMutex.lean",
       "card": "knowledge/09_distributed_systems/DistributedSuzukiKasamiMutex.md",
       "project_imports": []
+    },
+    {
+      "id": "QuantumShorContinuedFractions",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumShorContinuedFractions.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumShorContinuedFractions.md",
+      "project_imports": [
+        "Verification.QuantumShorOrderFindingCore"
+      ]
     }
   ],
   "support_modules": [
