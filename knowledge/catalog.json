@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedRaymondTreeMutex",
         "Verification.QuantumShorOrderRecoveryGCD",
         "Verification.QuantumShorContinuedFractions",
         "Verification.DistributedSuzukiKasamiMutex",
@@ -1355,6 +1356,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedRaymondTreeMutex",
         "Verification.QuantumShorOrderRecoveryGCD",
         "Verification.QuantumShorContinuedFractions",
         "Verification.DistributedSuzukiKasamiMutex",
@@ -1732,6 +1734,13 @@
       "project_imports": [
         "Verification.QuantumShorContinuedFractions"
       ]
+    },
+    {
+      "id": "DistributedRaymondTreeMutex",
+      "section": "distributed",
+      "source": "Verification/DistributedRaymondTreeMutex.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaymondTreeMutex.md",
+      "project_imports": []
     }
   ],
   "support_modules": [

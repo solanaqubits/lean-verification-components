@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: bb37ed77bd97c8d4c01b0d858286e6c87df016797812c6e4a2039f84914cfb35
+source_sha256: f00780d2db6f3ff22d69a31c42c2562874b7ee219736a39197b8a801e7cbf4af
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 120 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 121 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L211)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L223)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L235)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L254)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L284)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L361)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L414)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L424)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L434)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L472)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L529)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L577)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L152)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L212)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L224)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L236)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L255)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L285)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L362)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L415)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L425)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L435)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L473)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L531)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L581)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L153)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L590)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L594)
 
 ## Verification
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 120 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 121 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 
@@ -90,3 +90,5 @@ The central registry now has 120 direct imports and the separate `rounding_certi
 `QuantumPhysicsFullSuite.shor_continued_fractions` proves finite executable candidates and conditional recovery under the strict Legendre bound. Euclidean stages are bounded separately from bit complexity. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorContinuedFractions.md).
 
 `QuantumPhysicsFullSuite.shor_order_recovery` proves conditional recovery from certified divisors, the spectral GCD criterion and a counterexample to taking all candidate denominators. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md).
+
+`DistributedSystemsFullSuite.raymond_tree` includes reachable token conservation, effective holder routing, conditional starvation freedom and exact isolated traffic. [Contract](../09_distributed_systems/DistributedRaymondTreeMutex.md).

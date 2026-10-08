@@ -28,13 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **162 Lean files**
-under `Verification/` (160 top-level and two auxiliary specifications),
-**120 direct MasterSuite imports** and **12,922 audited declarations**.
+The [validation record](knowledge/VERIFICATION.en.md) covers **163 Lean files**
+under `Verification/` (161 top-level and two auxiliary specifications),
+**121 direct MasterSuite imports** and **13,610 audited declarations**.
 Only `propext`, `Classical.choice` and `Quot.sound` occur. Counts include generated
 constructors and definitions, not only named mathematical theorems.
 
-## Release v0.5.18
+## Release v0.5.19
+
+[Raymond tree mutual exclusion](knowledge/09_distributed_systems/DistributedRaymondTreeMutex.md)
+proves token conservation, mutual exclusion and effective holder routing. Starvation
+freedom requires delivery, weak local fairness and finite CS occupancy. Isolated
+completed entries cost exactly twice the initial tree distance in messages. A reachable
+counterexample establishes that raw holder pointers can form a two-cycle during transit.
+
+**3585 strict build jobs**, **66 public live tests**, no warnings or skips.
+All 164 root-inclusive Lean sources match private snapshot `d4a72dfb`.
+See the [public release report](docs/release-v0.5.19.en.md).
+
+## Earlier additions in v0.5.18
 
 [Shor LCM/GCD recovery](knowledge/03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md)
 proves conditional recovery from certified divisors and the equivalent spectral GCD

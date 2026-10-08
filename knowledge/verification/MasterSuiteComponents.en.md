@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: c9093fa290b6d19ea8ce743249db1b604b86cc6853706984d5aaf1b986e18131
+source_sha256: a69c40de07a13d9643da32a5ab4d396b7f8243a305cba3d2ed909532ee26b236
 novelty: not-assessed
 status: reviewed
 ---
@@ -59,3 +59,5 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `QuantumPhysicsFullSuite.shor_continued_fractions` proves finite executable candidates and conditional recovery under the strict Legendre bound. Euclidean stages are bounded separately from bit complexity. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorContinuedFractions.md).
 
 `QuantumPhysicsFullSuite.shor_order_recovery` proves conditional recovery from certified divisors, the spectral GCD criterion and a counterexample to taking all candidate denominators. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md).
+
+`DistributedSystemsFullSuite.raymond_tree` includes reachable token conservation, effective holder routing, conditional starvation freedom and exact isolated traffic. [Contract](../09_distributed_systems/DistributedRaymondTreeMutex.md).

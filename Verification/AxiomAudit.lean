@@ -66,3 +66,5 @@ end AxiomAudit
 #audit_axioms QuantumShorContinuedFractions.quantum_shor_continued_fractions_master_suite
 
 #audit_axioms QuantumShorOrderRecoveryGCD.quantum_shor_order_recovery_master_suite
+
+#audit_axioms DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite

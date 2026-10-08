@@ -1,3 +1,4 @@
+import Verification.DistributedRaymondTreeMutex
 import Verification.QuantumShorOrderRecoveryGCD
 import Verification.QuantumShorContinuedFractions
 import Verification.DistributedSuzukiKasamiMutex
@@ -525,6 +526,7 @@ structure DistributedSystemsFullSuite : Prop where
   chandy_misra_haas : DistributedChandyMisraHaasDeadlock.DistributedChandyMisraHaasSuite
   ricart_agrawala : DistributedRicartAgrawalaMutex.DistributedRicartAgrawalaSuite
   suzuki_kasami : DistributedSuzukiKasamiMutex.DistributedSuzukiKasamiSuite
+  raymond_tree : DistributedRaymondTreeMutex.DistributedRaymondTreeSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -565,6 +567,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite
   suzuki_kasami := by
     exact DistributedSuzukiKasamiMutex.distributed_suzuki_kasami_master_suite
+  raymond_tree := by
+    exact DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

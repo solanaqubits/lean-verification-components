@@ -1,5 +1,62 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.19](../docs/release-v0.5.19.en.md)
+
+## Current public snapshot: Raymond tree mutual exclusion
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 121 |
+| Lean files under Verification/ | 161 top-level + 2 auxiliary = 163 |
+| Root-inclusive sources identical to the private snapshot | 164 |
+| Clean strict build | 3585 jobs; no warnings |
+| Complete verifier audit | 13610 declarations; no violations |
+| Pinned independent full audit | 13610 declarations; no violations |
+| Public live tests | 66; no failures or skips; 253.584s |
+
+All 164 Lean sources including the root file match private snapshot `d4a72dfb113fbdb5f4a4157db0f9f824ff5ffb48`.
+Both complete audits permit only propext, Classical.choice and Quot.sound.
+The strict registry hook and knowledge catalog passed separately. The two nested
+specification files remain auxiliary tooling rather than subject-module increments.
+[Hashes and measured commands](../tools/validation_snapshot.json).
+
+[Raymond contract](09_distributed_systems/DistributedRaymondTreeMutex.md).
+
+The model uses a fixed finite connected acyclic graph, one initial token owner,
+empty queues/channels, and serialized local ASSIGN_PRIVILEGE / MAKE_REQUEST handlers.
+The network permits reordering; receipt is exact-once and rejects fabricated messages.
+Occurrence serials identify REQUEST packets, not protocol priorities. No mechanical
+refinement to an implementation or the original pseudocode is asserted.
+
+Reachable-state proofs establish exactly one privilege token across nodes and transit,
+mutual exclusion (each inCS node is an actual owner), and duplicate-free FIFO queues.
+Queue uniqueness is derived from request accounting, not imposed by a constructor.
+
+Effective holder paths end at the current owner or the destination of an in-flight
+PRIVILEGE. A reachable two-node counterexample has holder(0)=1 and holder(1)=0 while
+the token travels from 0 to 1. Thus raw holder pointers need not be globally acyclic;
+the effective path stops at the packet destination and suppresses its outgoing edge.
+
+Every requesting observation eventually reaches inCS under ReliableDelivery (eventual
+receipt of every REQUEST and PRIVILEGE), WeakFairness of local internal handlers and
+FiniteCS (eventual exit). These contracts do not assume eventual service. Concurrent
+later requests are allowed. The proof uses finite FIFO positions and the finite holder
+path; it does not assert that distance to the token decreases under contention.
+
+For isolated executions from quiescent initialization with only application client u,
+at completed entry each message kind has exactly dist(u,initialOwner) sends: total
+2*dist. Arbitrary legal delays and interleavings are allowed. Retained-token reentry
+adds no traffic. This counts sends, not time or local steps. A chain can require
+2*(n-1) messages; O(log n) is not a universal bound and no such bound is claimed under
+arbitrary contention.
+
+Node/link failures with token loss, token regeneration, dynamic topology/membership,
+Byzantine behavior and real-time guarantees are outside scope. Python, JSON/SHA-256
+and external SimLab input-to-byte binding remain open obligations. Scientific priority
+has not been assessed.
+
+## Historical verification records
+
 [Knowledge base](README.md) · [Release v0.5.18](../docs/release-v0.5.18.en.md)
 
 Measured: 120 direct imports, 162 Lean files under Verification/,
