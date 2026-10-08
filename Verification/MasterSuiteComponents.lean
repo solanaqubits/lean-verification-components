@@ -1,3 +1,4 @@
+import Verification.DistributedSuzukiKasamiMutex
 import Verification.QuantumShorOrderFindingCore
 import Verification.QuantumPhaseEstimationGeneral
 import Verification.DistributedRicartAgrawalaMutex
@@ -515,6 +516,7 @@ structure DistributedSystemsFullSuite : Prop where
   three_phase_commit : DistributedThreePhaseCommit.DistributedThreePhaseCommitSuite
   chandy_misra_haas : DistributedChandyMisraHaasDeadlock.DistributedChandyMisraHaasSuite
   ricart_agrawala : DistributedRicartAgrawalaMutex.DistributedRicartAgrawalaSuite
+  suzuki_kasami : DistributedSuzukiKasamiMutex.DistributedSuzukiKasamiSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -553,6 +555,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedChandyMisraHaasDeadlock.distributed_chandy_misra_haas_master_suite
   ricart_agrawala := by
     exact DistributedRicartAgrawalaMutex.distributed_ricart_agrawala_master_suite
+  suzuki_kasami := by
+    exact DistributedSuzukiKasamiMutex.distributed_suzuki_kasami_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

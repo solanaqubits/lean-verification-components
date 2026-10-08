@@ -1,25 +1,49 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.15](../docs/release-v0.5.15.en.md)
+[Knowledge base](README.md) · [Release v0.5.16](../docs/release-v0.5.16.en.md)
 
-This release contains 117 direct imports, 159 Lean files under Verification/
-and 12,359 project declarations. The two nested specification files belong to
-meta-audit tooling, not additional subject suites. Exact hashes are recorded in
-[validation_snapshot.json](../tools/validation_snapshot.json).
+This release contains 118 direct imports, 160 Lean files under Verification/
+and 12,794 project declarations. The two nested specification files are auxiliary
+meta-audit tooling. [Source hashes and commands](../tools/validation_snapshot.json).
 
-Public validation passed: 3542 strict build jobs, 62 live tests with no failures
-or skips (249.324 seconds), and two full audits covering 12359 declarations.
-Both permit only `propext`, `Classical.choice`, and `Quot.sound`.
-The strict registry AxiomAudit hook also passed; it checks selected theorems and
-is separate from the complete independent audit.
+Public validation passed: 3543 strict build jobs and 63 live tests with no
+failures or skips (251.324 seconds). Both full audits covered 12794 declarations
+and allowed only `propext`, `Classical.choice`, and `Quot.sound`.
+The strict registry hook passed separately; it is not a second proof kernel.
 
-```bash
-lake build --wfail
-python3 tools/verifier_skill.py verify-all
-LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p 'test_*.py' -v
-lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
-python3 scripts/check_knowledge.py
-```
+## Suzuki–Kasami scope
+
+[Model and theorem details](09_distributed_systems/DistributedSuzukiKasamiMutex.md).
+
+The fixed-membership, crash-free model uses Fin n, unbounded natural request
+sequences and serialized client invocations. Reachability implies exactly one token,
+counting both holders and the channel, mutual exclusion, and a duplicate-free queue.
+The payload is a global semantic coordinate exposed only to the holder; it is
+unchanged in transit. No runtime shared memory is assumed.
+
+ReliableDelivery requires eventual delivery of actual REQUEST and token messages.
+WeakFairness schedules continuously enabled send and enter actions. FiniteCS requires
+every critical-section visit eventually to leave. Under these contracts, every
+Requesting observation eventually reaches InCS, including runs with later requests.
+Safety does not require fairness. No numerical waiting-time bound is proved.
+
+The model separates immediate idle-holder handoff into queue reservation and a
+separately scheduled send. New local requests cannot bypass an already reserved
+handoff. This serialization is explicit; no mechanized refinement to the original
+program is claimed. FIFO holds after queue insertion, not as global request order.
+REQUEST fanout is atomically enqueued; individual deliveries are separate, unordered
+and exact-once. Token transport uses one in-flight slot, without loss or duplication.
+
+RN and LN are nondecreasing, with LN[j] ≤ RN_j[j] ≤ LN[j]+1 at the sender. The stronger
+claim LN[j] ≤ RN_holder[j] is false: a reachable three-node trace leaves node 2 holding
+a token with LN[1]=1 and RN_2[1]=0 before a delayed REQUEST arrives. Receiving the token
+does not silently synchronize RN. Retained-token reentry does not increment the
+network request number and need not join the queue. LN is not a count of every CS visit.
+
+Crashes, lost-token recovery, dynamic membership, partitions, Byzantine behavior,
+finite counter overflow, real-time bounds and network/application implementations
+are outside scope. Python, JSON/SHA-256 and binding external SimLab inputs to bytes
+remain open obligations. No scientific-priority claim is made.
 
 ## Spectral order-finding scope
 
@@ -51,7 +75,7 @@ full Shor are not proved. Python, JSON/SHA-256 and SimLab byte binding remain ex
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 160 Lean sources, including the root file, match private snapshot `110558af4e7411ac48d75c1a6fc9795db6c2fde1` byte-for-byte.
+All 161 Lean sources, including the root file, match private snapshot `ef9c48132533ccbf950462326a7282c335bf0777` byte-for-byte.
 
 ## Exact QPE scope
 

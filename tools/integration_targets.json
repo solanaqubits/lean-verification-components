@@ -728,5 +728,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumShorOrderFindingCore.quantum_shor_order_finding_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedSuzukiKasamiMutex": {
+    "suite_struct": "DistributedSuzukiKasamiSuite",
+    "suite_type": "DistributedSuzukiKasamiMutex.DistributedSuzukiKasamiSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "suzuki_kasami",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedSuzukiKasamiMutex.distributed_suzuki_kasami_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

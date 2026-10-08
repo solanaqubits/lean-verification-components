@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedSuzukiKasamiMutex",
         "Verification.QuantumShorOrderFindingCore",
         "Verification.QuantumPhaseEstimationGeneral",
         "Verification.DistributedRicartAgrawalaMutex",
@@ -1352,6 +1353,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedSuzukiKasamiMutex",
         "Verification.QuantumShorOrderFindingCore",
         "Verification.QuantumPhaseEstimationGeneral",
         "Verification.DistributedRicartAgrawalaMutex",
@@ -1701,6 +1703,13 @@
       "project_imports": [
         "Verification.QuantumPhaseEstimationGeneral"
       ]
+    },
+    {
+      "id": "DistributedSuzukiKasamiMutex",
+      "section": "distributed",
+      "source": "Verification/DistributedSuzukiKasamiMutex.lean",
+      "card": "knowledge/09_distributed_systems/DistributedSuzukiKasamiMutex.md",
+      "project_imports": []
     }
   ],
   "support_modules": [

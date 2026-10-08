@@ -28,13 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **159 Lean files**
-under `Verification/` (157 top-level and two auxiliary specifications),
-**117 direct MasterSuite imports** and **12,359 audited declarations**.
-Only `propext`, `Classical.choice` and `Quot.sound` occur. Declarations include
+The [validation record](knowledge/VERIFICATION.en.md) covers **160 Lean files**
+under `Verification/` (158 top-level and two auxiliary specifications),
+**118 direct MasterSuite imports** and **12,794 audited declarations**.
+Only `propext`, `Classical.choice` and `Quot.sound` occur. Declaration counts include
 constructors and generated definitions, not only named mathematical theorems.
 
-## Release v0.5.15
+## Release v0.5.16
+
+[Suzuki–Kasami mutual exclusion](knowledge/09_distributed_systems/DistributedSuzukiKasamiMutex.md)
+proves reachable token conservation, mutual exclusion and queue invariants.
+Eventual service requires reliable delivery, weak fairness and finite CS visits.
+A reachable counterexample refutes LN ≤ RN at the holder; retained-token reentry
+needs no artificial sequence increment. The operational serialization and exclusions
+are documented explicitly.
+
+**3543 strict build jobs**, **63 public live tests**, no warnings or skips.
+All 161 root-inclusive proof sources match private snapshot `ef9c4813`.
+See the [public release report](docs/release-v0.5.16.en.md).
+
+## Earlier additions in v0.5.15
 
 [Shor order-finding core](knowledge/03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md)
 constructs padded modular multiplication, its orthonormal orbit spectrum and the

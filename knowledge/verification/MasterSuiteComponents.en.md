@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 035ab3b65f907aaf4244d395ba45e37951f4d28b01cc44f170d90ce78d059c41
+source_sha256: 0963efb04921dfb678c0e8d003c51d5874a8aa9e3c53e022b42c777296665f84
 novelty: not-assessed
 status: reviewed
 ---
@@ -53,3 +53,5 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `QuantumPhysicsFullSuite.phase_estimation_general` adds general controlled-power QPE, unitary Fourier transforms, exact dyadic recovery and the nearest-sample 4/π² probability bound. A normalized eigenstate is supplied. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumPhaseEstimationGeneral.md).
 
 `QuantumPhysicsFullSuite.shor_order_finding` derives the padded modular-multiplication spectrum and the QPE marginal on |1⟩. The component bound is 4/π²; its guaranteed contribution to the mixture is 4/(rπ²). Order recovery and factorization are not claimed. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md).
+
+`DistributedSystemsFullSuite.suzuki_kasami` proves reachable token conservation and mutual exclusion. Eventual service requires ReliableDelivery, WeakFairness and FiniteCS. A reachable counterexample refutes LN ≤ RN at the holder. [Scope and serialization](../09_distributed_systems/DistributedSuzukiKasamiMutex.md).
