@@ -70,3 +70,5 @@ end AxiomAudit
 #audit_axioms DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite
 
 #audit_axioms CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite
+
+#audit_axioms CryptoSchnorrIdentification.crypto_schnorr_identification_master_suite

@@ -1,3 +1,4 @@
+import Verification.CryptoSchnorrIdentification
 import Verification.CryptoPedersenHomomorphicSum
 import Verification.DistributedRaymondTreeMutex
 import Verification.QuantumShorOrderRecoveryGCD

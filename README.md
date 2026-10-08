@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**164 Lean files** under Verification/ (162 top-level + 2 auxiliary),
-**122 direct imports**, **13,704 audited declarations**.
-Clean strict build: **3613 jobs**. Public live tests: **67**, no errors or skips.
+**165 Lean files** under Verification/ (163 top-level + 2 auxiliary),
+**123 direct imports**, **13,805 audited declarations**.
+Clean strict build: **3614 jobs**. Public live tests: **68**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.20
+## Release v0.5.21
+
+[Schnorr identification](docs/release-v0.5.21.en.md) adds perfect completeness,
+algebraic witness extraction from two accepting transcripts with one commitment
+and distinct challenges, and exact equality of real and simulated transcript
+PMFs. The simulator has no secret input. Perfect special HVZK covers fixed or
+independent honest-verifier challenges. Malicious-verifier security, computational
+hardness, polynomial runtime and Fiat-Shamir signatures are not claimed.
+
+## Earlier additions in v0.5.20
 
 [Pedersen homomorphic sums](docs/release-v0.5.20.en.md) add exact linear-combination
 identities and PMF hiding over a finite prime-order group. Aggregate hiding needs

@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoSchnorrIdentification",
         "Verification.CryptoPedersenHomomorphicSum",
         "Verification.DistributedRaymondTreeMutex",
         "Verification.QuantumShorOrderRecoveryGCD",
@@ -1357,6 +1358,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoSchnorrIdentification",
         "Verification.CryptoPedersenHomomorphicSum",
         "Verification.DistributedRaymondTreeMutex",
         "Verification.QuantumShorOrderRecoveryGCD",
@@ -1750,6 +1752,15 @@
       "source": "Verification/CryptoPedersenHomomorphicSum.lean",
       "card": "knowledge/04_cryptography_and_protocols/CryptoPedersenHomomorphicSum.md",
       "project_imports": []
+    },
+    {
+      "id": "CryptoSchnorrIdentification",
+      "section": "cryptography",
+      "source": "Verification/CryptoSchnorrIdentification.lean",
+      "card": "knowledge/04_cryptography_and_protocols/CryptoSchnorrIdentification.md",
+      "project_imports": [
+        "Verification.CryptoPedersenHomomorphicSum"
+      ]
     }
   ],
   "support_modules": [

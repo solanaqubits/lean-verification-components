@@ -773,5 +773,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoSchnorrIdentification": {
+    "suite_struct": "CryptoSchnorrIdentificationSuite",
+    "suite_type": "CryptoSchnorrIdentification.CryptoSchnorrIdentificationSuite.{u₁}",
+    "parent": "CryptoFullSuite",
+    "field": "schnorr_identification",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoSchnorrIdentification.crypto_schnorr_identification_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

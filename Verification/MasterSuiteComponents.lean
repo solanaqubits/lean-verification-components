@@ -1,3 +1,4 @@
+import Verification.CryptoSchnorrIdentification
 import Verification.CryptoPedersenHomomorphicSum
 import Verification.DistributedRaymondTreeMutex
 import Verification.QuantumShorOrderRecoveryGCD
@@ -283,6 +284,7 @@ structure CryptoFullSuite : Prop where
   schnorr_batch : CryptoSchnorrBatchVerification.SchnorrBatchVerificationFormalSuite
   forking_lemma : CryptoTranscriptForkingLemma.ForkingLemmaFormalSuite
   pedersen_homomorphic_sum : CryptoPedersenHomomorphicSum.CryptoPedersenHomomorphicSumSuite.{u₁}
+  schnorr_identification : CryptoSchnorrIdentification.CryptoSchnorrIdentificationSuite.{u₁}
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -314,6 +316,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   forking_lemma := CryptoTranscriptForkingLemma.transcript_forking_master_suite
   pedersen_homomorphic_sum := by
     exact CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite
+  schnorr_identification := by
+    exact CryptoSchnorrIdentification.crypto_schnorr_identification_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :
