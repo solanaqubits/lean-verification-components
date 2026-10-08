@@ -1,6 +1,6 @@
 # Knowledge base
 
-English summaries of the verified components, grouped into eleven subject areas and one verification section.
+Verified components grouped into eleven subject areas and one verification section.
 
 | Section | Modules |
 |---|---:|
@@ -10,19 +10,15 @@ English summaries of the verified components, grouped into eleven subject areas 
 | [Polynomial functionals and integrals](lamzouri/README.md) | 3 |
 | [Coordinate and multilinear geometry](finsler/README.md) | 3 |
 | [Proof certificates and DAGs](proof-graphs/README.md) | 2 |
-| [Cryptographic algebra and ZK components](cryptography/README.md) | 20 |
+| [Cryptographic algebra and ZK components](cryptography/README.md) | 21 |
 | [Quantum algebra, photonics, and mechanics](quantum-physics/README.md) | 40 |
 | [Finance, liquidity, and mechanisms](finance/README.md) | 19 |
 | [Distributed consensus](distributed/README.md) | 37 |
 | [Exact numeric certificates](12_numeric_certificates/README.md) | 6 |
 | [Registry and axiom audit](verification/README.md) | 4 |
 
-161 module cards: 157 subject files and four registry/audit files. Two additional nested specification/bridge files give 163 Lean files under Verification/. MasterSuite directly imports 121 modules; these counts describe different sets.
+162 module cards: 158 subject files and four registry/audit files. Two additional nested specifications give 164 Lean files under Verification/. MasterSuite directly imports 122 modules; these counts describe different sets.
 
 [Project value](SUMMARY.en.md) · [Validation](VERIFICATION.en.md) · [Contributing](CONTRIBUTING.en.md) · [Catalog](catalog.json)
 
-The English cards are concise scope summaries, not word-for-word translations of every historical note. Lean statements remain authoritative. No scientific priority is claimed.
-
-[Exact numeric certificates](12_numeric_certificates/README.md)
-
-[Statement conformance pilot](../docs/statement-conformance.en.md) documents the two auxiliary specifications.
+The cards summarize formal results and their scope. Lean statements remain authoritative. No scientific priority is claimed.

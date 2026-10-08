@@ -68,3 +68,5 @@ end AxiomAudit
 #audit_axioms QuantumShorOrderRecoveryGCD.quantum_shor_order_recovery_master_suite
 
 #audit_axioms DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite
+
+#audit_axioms CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite

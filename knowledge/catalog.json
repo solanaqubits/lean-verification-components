@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoPedersenHomomorphicSum",
         "Verification.DistributedRaymondTreeMutex",
         "Verification.QuantumShorOrderRecoveryGCD",
         "Verification.QuantumShorContinuedFractions",
@@ -1356,6 +1357,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoPedersenHomomorphicSum",
         "Verification.DistributedRaymondTreeMutex",
         "Verification.QuantumShorOrderRecoveryGCD",
         "Verification.QuantumShorContinuedFractions",
@@ -1740,6 +1742,13 @@
       "section": "distributed",
       "source": "Verification/DistributedRaymondTreeMutex.lean",
       "card": "knowledge/09_distributed_systems/DistributedRaymondTreeMutex.md",
+      "project_imports": []
+    },
+    {
+      "id": "CryptoPedersenHomomorphicSum",
+      "section": "cryptography",
+      "source": "Verification/CryptoPedersenHomomorphicSum.lean",
+      "card": "knowledge/04_cryptography_and_protocols/CryptoPedersenHomomorphicSum.md",
       "project_imports": []
     }
   ],

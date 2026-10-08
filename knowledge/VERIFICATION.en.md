@@ -1,8 +1,64 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.20](../docs/release-v0.5.20.en.md)
+
+## Current public snapshot: Pedersen homomorphic sums
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 122 |
+| Lean files under Verification/ | 162 top-level + 2 auxiliary = 164 |
+| Root-inclusive sources identical to the private snapshot | 165 |
+| Clean strict build | 3613 jobs; no warnings |
+| Complete verifier audit | 13704 declarations; no violations |
+| Pinned independent full audit | 13704 declarations; no violations |
+| Public live tests | 67; no failures or skips; 248.050s |
+
+All 165 proof sources match private snapshot `2c01798362d54124a711be83a0855e40dbf0efdc`.
+
+The setup is an abstract finite additive abelian group of prime order q, with a
+Module (ZMod q) structure and two nonzero generators g,h. No discrete logarithm
+relation is supplied. Finite weighted sums satisfy
+sum cᵢ • C(mᵢ,rᵢ) = C(sum cᵢmᵢ,sum cᵢrᵢ), including empty families.
+
+Perfect hiding is an exact PMF equality: uniform masking gives a uniform group
+value for every fixed message. Aggregate hiding requires an index in the family
+with a nonzero coefficient and a fresh independent uniform mask. Coefficients
+and messages are fixed; the remaining masks may have an arbitrary joint law.
+The refreshed coordinate's joint law with the remaining vector is proved to
+factor. All-zero weights give a point mass at zero, not a uniform group value.
+Uniform marginals alone do not suffice: correlated masks [t,−t] cancel exactly.
+
+A collision C(m,r)=C(m′,r′) with m≠m′ implies r≠r′ and
+h = ((m−m′)/(r′−r)) • g. This is an algebraic DLOG extraction, not a theorem of
+computational binding or DLOG hardness. Aggregation concerns the scalar weighted
+sum; vectors [1,0] and [0,1] have equal aggregates under weights [1,1].
+A concrete setup proves satisfiability, while a known generator relation permits
+alternative openings. The older real-scalar commitment module is unchanged.
+
+PPT adversaries, computational hardness, IND-CPA/EUF-CMA games, multi-generator
+vector commitments and implementation security are not claimed. Python,
+JSON/SHA-256 and SimLab linkage remain open obligations.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Its deleted temporary checkout was restored at that commit and rebuilt with Lean
+v4.33.1; the resulting binary exactly matches the previous pinned hash.
+The auditor source toolchain file records v4.32.0-rc1; the executable is pinned
+separately. No second independent proof kernel is asserted.
+
+The project build directory started empty; pinned dependency caches were copied
+into the isolated tree. Actual public checks were rerun, rather than inferred
+from the earlier private/export evidence. Counts include generated declarations.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.19](../docs/release-v0.5.19.en.md)
 
-## Current public snapshot: Raymond tree mutual exclusion
+## Historical public snapshot v0.5.19: Raymond tree mutual exclusion
 
 | Check | Measured public result |
 |---|---:|

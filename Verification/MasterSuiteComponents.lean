@@ -1,3 +1,4 @@
+import Verification.CryptoPedersenHomomorphicSum
 import Verification.DistributedRaymondTreeMutex
 import Verification.QuantumShorOrderRecoveryGCD
 import Verification.QuantumShorContinuedFractions
@@ -281,6 +282,7 @@ structure CryptoFullSuite : Prop where
   musig2_aggregation : CryptoMuSig2Aggregation.MuSig2AggregationFormalSuite
   schnorr_batch : CryptoSchnorrBatchVerification.SchnorrBatchVerificationFormalSuite
   forking_lemma : CryptoTranscriptForkingLemma.ForkingLemmaFormalSuite
+  pedersen_homomorphic_sum : CryptoPedersenHomomorphicSum.CryptoPedersenHomomorphicSumSuite.{u₁}
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -310,6 +312,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   musig2_aggregation := CryptoMuSig2Aggregation.crypto_musig2_aggregation_master_suite
   schnorr_batch := CryptoSchnorrBatchVerification.schnorr_batch_verification_master_suite
   forking_lemma := CryptoTranscriptForkingLemma.transcript_forking_master_suite
+  pedersen_homomorphic_sum := by
+    exact CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :

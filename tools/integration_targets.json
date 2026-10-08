@@ -574,7 +574,7 @@
   },
   "Verification.MasterHundredRegistry": {
     "suite_struct": "MasterHundredFormalSuite",
-    "suite_type": "MasterHundredFormalSuite.{u\u2081, u\u2082, u\u2083, u\u2084, u\u2085,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
+    "suite_type": "MasterHundredFormalSuite.{u₁, u₂, u₃, u₄, u₅,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
     "parent": "VerificationMasterRegistry",
     "field": "master_hundred_registry",
     "constructor": "verification_master_registry",
@@ -763,6 +763,15 @@
     "field": "raymond_tree",
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoPedersenHomomorphicSum": {
+    "suite_struct": "CryptoPedersenHomomorphicSumSuite",
+    "suite_type": "CryptoPedersenHomomorphicSum.CryptoPedersenHomomorphicSumSuite.{u₁}",
+    "parent": "CryptoFullSuite",
+    "field": "pedersen_homomorphic_sum",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
   }
 }

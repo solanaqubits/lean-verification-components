@@ -28,13 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **163 Lean files**
-under `Verification/` (161 top-level and two auxiliary specifications),
-**121 direct MasterSuite imports** and **13,610 audited declarations**.
-Only `propext`, `Classical.choice` and `Quot.sound` occur. Counts include generated
-constructors and definitions, not only named mathematical theorems.
+**164 Lean files** under Verification/ (162 top-level + 2 auxiliary),
+**122 direct imports**, **13,704 audited declarations**.
+Clean strict build: **3613 jobs**. Public live tests: **67**, no errors or skips.
+Both full audits allow only propext, Classical.choice and Quot.sound.
+[Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.19
+## Release v0.5.20
+
+[Pedersen homomorphic sums](docs/release-v0.5.20.en.md) add exact linear-combination
+identities and PMF hiding over a finite prime-order group. Aggregate hiding needs
+an independent uniform mask with a nonzero weight. Collisions with distinct
+messages yield an algebraic DLOG extractor; computational hardness is not proved.
+The aggregate concerns a scalar weighted sum, not the full vector of messages.
+
+## Earlier additions in v0.5.19
 
 [Raymond tree mutual exclusion](knowledge/09_distributed_systems/DistributedRaymondTreeMutex.md)
 proves token conservation, mutual exclusion and effective holder routing. Starvation
