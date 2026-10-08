@@ -746,5 +746,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumShorContinuedFractions.quantum_shor_continued_fractions_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumShorOrderRecoveryGCD": {
+    "suite_struct": "QuantumShorOrderRecoverySuite",
+    "suite_type": "QuantumShorOrderRecoveryGCD.QuantumShorOrderRecoverySuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "shor_order_recovery",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumShorOrderRecoveryGCD.quantum_shor_order_recovery_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

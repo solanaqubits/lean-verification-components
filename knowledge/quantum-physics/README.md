@@ -79,3 +79,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumShorOrderFindingCore](../03_quantum_physics_and_optics/QuantumShorOrderFindingCore.md) — padded modular multiplication, orthonormal orbit spectrum, accessible |1⟩ input and the derived QPE probability mixture.
 
 - [QuantumShorContinuedFractions](../03_quantum_physics_and_optics/QuantumShorContinuedFractions.md) — executable continued fractions, strict Legendre recovery and reduced-order candidate boundaries.
+
+- [QuantumShorOrderRecoveryGCD](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md) — conditional LCM/GCD order recovery and candidate-provenance boundaries.

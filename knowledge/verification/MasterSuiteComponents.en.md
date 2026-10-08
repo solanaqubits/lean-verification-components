@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: f4e4b64ed7c393b19a737e6cfe159202c8436511cbcb2fd5589a9099faaeada3
+source_sha256: c9093fa290b6d19ea8ce743249db1b604b86cc6853706984d5aaf1b986e18131
 novelty: not-assessed
 status: reviewed
 ---
@@ -57,3 +57,5 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `DistributedSystemsFullSuite.suzuki_kasami` proves reachable token conservation and mutual exclusion. Eventual service requires ReliableDelivery, WeakFairness and FiniteCS. A reachable counterexample refutes LN ≤ RN at the holder. [Scope and serialization](../09_distributed_systems/DistributedSuzukiKasamiMutex.md).
 
 `QuantumPhysicsFullSuite.shor_continued_fractions` proves finite executable candidates and conditional recovery under the strict Legendre bound. Euclidean stages are bounded separately from bit complexity. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorContinuedFractions.md).
+
+`QuantumPhysicsFullSuite.shor_order_recovery` proves conditional recovery from certified divisors, the spectral GCD criterion and a counterexample to taking all candidate denominators. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md).

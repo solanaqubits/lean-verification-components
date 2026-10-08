@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumShorOrderRecoveryGCD",
         "Verification.QuantumShorContinuedFractions",
         "Verification.DistributedSuzukiKasamiMutex",
         "Verification.QuantumShorOrderFindingCore",
@@ -1354,6 +1355,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumShorOrderRecoveryGCD",
         "Verification.QuantumShorContinuedFractions",
         "Verification.DistributedSuzukiKasamiMutex",
         "Verification.QuantumShorOrderFindingCore",
@@ -1720,6 +1722,15 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumShorContinuedFractions.md",
       "project_imports": [
         "Verification.QuantumShorOrderFindingCore"
+      ]
+    },
+    {
+      "id": "QuantumShorOrderRecoveryGCD",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumShorOrderRecoveryGCD.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md",
+      "project_imports": [
+        "Verification.QuantumShorContinuedFractions"
       ]
     }
   ],

@@ -1,13 +1,50 @@
 # Public verification record
 
-[Knowledge base](README.md) · [Release v0.5.17](../docs/release-v0.5.17.en.md)
+[Knowledge base](README.md) · [Release v0.5.18](../docs/release-v0.5.18.en.md)
 
-Measured: 119 direct imports, 161 Lean files under Verification/,
-12,863 project declarations, 3546 strict build jobs and 64 public live tests
-without failures or skips (252.627s). Both complete audits allow only
+Measured: 120 direct imports, 162 Lean files under Verification/,
+12,922 project declarations, 3547 strict build jobs and 65 public live tests
+without failures or skips (253.994s). Both complete audits allow only
 `propext`, `Classical.choice`, and `Quot.sound`. The strict registry hook also passed.
 The two nested specification files are auxiliary meta-audit tooling.
 [Hashes and measured commands](../tools/validation_snapshot.json).
+
+## Shor LCM/GCD recovery scope
+
+[Theorems and assumptions](03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md).
+
+listLCM is executable structural recursion over a finite list of natural-number
+candidates. Neither the unknown order nor spectral numerators are inputs. The empty
+LCM is one; append and membership invariance cover incremental use, reordering and
+duplicates. No time or bit-complexity bound is asserted.
+
+For r>0 and a nonempty list with every q dividing r, L=listLCM(qs) divides r and
+L=r iff foldr (fun q acc => gcd(r/q,acc)) 0 qs = 1. Nonemptiness is necessary for
+this unanchored GCD criterion. For spectral denominators q=r/gcd(s,r), the exact
+identity is L=r/gcd(r,foldr gcd 0 ss); thus L=r iff the anchored GCD is one.
+This version includes empty ss: empty input recovers only order one. At r=6,
+ss=[3,2] gives denominators [2,3] and recovers six without any individual q=r.
+
+The bridge reuses module 119's canonical reduced denominators and the existing
+Shor Parameters (N>=2, coprime a,N, positive actual order and padded target register).
+Given Q=2^n>=N² and each observed y<Q satisfying Nearest to its latent s/r with s<r,
+the correct denominator occurs among the corresponding continued-fraction candidates.
+This does not identify the latent label or select its denominator from the observable list.
+
+The modular check proves r divides L. With separately established L divides r,
+it gives equality. A certified divisor means mathematical provenance, not merely
+a successful modular check. No automatic candidate-selection algorithm is supplied.
+
+A kernel-checked counterexample has N=31,a=2,order=5,y=410,Q=1024. Candidate
+denominators [1,2,5] have LCM 10, which passes the modular check but is not the order.
+Regressions verify 31²<=1024 and |410/1024-2/5|<=1/(2*1024), so this failure persists
+at adequate QPE resolution. Taking the LCM of all candidates is unjustified.
+
+No i.i.d. measurement law, probability of a coprime sample family, number of runs,
+factorization via gcd(a^(r/2)±1,N), physical implementation or gate synthesis is proved.
+Python, JSON/SHA-256 and external SimLab input-to-byte binding remain open obligations.
+The algebra reuses pinned Mathlib Nat.div_lcm_eq_div_gcd; scientific priority has
+not been assessed. This is conditional multi-sample recovery, not a full Shor algorithm.
 
 ## Shor continued-fraction scope
 
@@ -108,7 +145,7 @@ full Shor are not proved. Python, JSON/SHA-256 and SimLab byte binding remain ex
 
 DistributedChandyLamportSnapshot derives saved-cut consistency and exact completed-channel contents from two-process FIFO transitions. Open-channel recording has separate received-so-far semantics. There is one snapshot instance; no failures, arbitrary n-node topology, fairness, eventual completion or completion detector are verified.
 
-All 162 Lean sources, including the root file, match private snapshot `189077d10183ebf11198f486c48fa156c4cbf11d` byte-for-byte.
+All 163 Lean sources, including the root file, match private snapshot `5e714619c1455a47bc58d0f87d8cfe8a94db0c7b` byte-for-byte.
 
 ## Exact QPE scope
 

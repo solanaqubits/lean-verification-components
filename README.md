@@ -28,13 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-The [validation record](knowledge/VERIFICATION.en.md) covers **161 Lean files**
-under `Verification/` (159 top-level and two auxiliary specifications),
-**119 direct MasterSuite imports** and **12,863 audited declarations**.
+The [validation record](knowledge/VERIFICATION.en.md) covers **162 Lean files**
+under `Verification/` (160 top-level and two auxiliary specifications),
+**120 direct MasterSuite imports** and **12,922 audited declarations**.
 Only `propext`, `Classical.choice` and `Quot.sound` occur. Counts include generated
 constructors and definitions, not only named mathematical theorems.
 
-## Release v0.5.17
+## Release v0.5.18
+
+[Shor LCM/GCD recovery](knowledge/03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md)
+proves conditional recovery from certified divisors and the equivalent spectral GCD
+criterion. Modular validation alone establishes a multiple of the order. A formal
+counterexample shows that taking every candidate denominator can pass the check
+while returning a proper multiple. Candidate selection and sampling probabilities
+remain outside scope.
+
+**3547 strict build jobs**, **65 public live tests**, no warnings or skips.
+All 163 root-inclusive Lean sources match private snapshot `5e714619`.
+See the [public release report](docs/release-v0.5.18.en.md).
+
+## Earlier additions in v0.5.17
 
 [Shor continued fractions](knowledge/03_quantum_physics_and_optics/QuantumShorContinuedFractions.md)
 adds executable candidates, strict Legendre recovery and the bound
