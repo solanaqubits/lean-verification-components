@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumDeutschJozsaNBitBalanced",
         "Verification.DistributedChandyLamportGeneral",
         "Verification.CryptoSchnorrIdentification",
         "Verification.CryptoPedersenHomomorphicSum",
@@ -1359,6 +1360,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumDeutschJozsaNBitBalanced",
         "Verification.DistributedChandyLamportGeneral",
         "Verification.CryptoSchnorrIdentification",
         "Verification.CryptoPedersenHomomorphicSum",
@@ -1771,6 +1773,15 @@
       "card": "knowledge/09_distributed_systems/DistributedChandyLamportGeneral.md",
       "project_imports": [
         "Verification.DistributedChandyLamportSnapshot"
+      ]
+    },
+    {
+      "id": "QuantumDeutschJozsaNBitBalanced",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumDeutschJozsaNBitBalanced.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumDeutschJozsaNBitBalanced.md",
+      "project_imports": [
+        "Verification.QuantumDeutschJozsaGeneral"
       ]
     }
   ],

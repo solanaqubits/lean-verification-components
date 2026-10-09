@@ -28,13 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**166 Lean files** under Verification/ (164 top-level + 2 auxiliary),
-**124 direct imports**, **14,271 audited declarations**.
-Clean strict build: **3615 jobs**. Public live tests: **69**, no errors or skips.
+**167 Lean files** under Verification/ (165 top-level + 2 auxiliary),
+**125 direct imports**, **14,330 audited declarations**.
+Clean strict build: **3616 jobs**. Public live tests: **70**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.22
+## Release v0.5.23
+
+[Balanced Deutsch-Jozsa oracle classification](docs/release-v0.5.23.en.md) adds an
+explicit support bijection, exact binomial counts for positive n, the empty
+zero-qubit family, and equivalence between balance and zero amplitude/probability
+in the existing runDJ circuit. Counts 0,2,6,70 and a first-bit projection witness
+are proved. Efficient enumeration, asymptotic density and hardware are not claimed.
+
+## Earlier additions in v0.5.22
 
 [General Chandy-Lamport snapshots](docs/release-v0.5.22.en.md) add consistent cuts,
 exact ordered FIFO channel records, and conditional termination on finite directed

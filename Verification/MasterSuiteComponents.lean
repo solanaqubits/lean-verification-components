@@ -1,3 +1,4 @@
+import Verification.QuantumDeutschJozsaNBitBalanced
 import Verification.DistributedChandyLamportGeneral
 import Verification.CryptoSchnorrIdentification
 import Verification.CryptoPedersenHomomorphicSum
@@ -367,6 +368,7 @@ structure QuantumPhysicsFullSuite : Prop where
   shor_order_finding : QuantumShorOrderFindingCore.QuantumShorOrderFindingSuite
   shor_continued_fractions : QuantumShorContinuedFractions.QuantumShorContinuedFractionsSuite
   shor_order_recovery : QuantumShorOrderRecoveryGCD.QuantumShorOrderRecoverySuite
+  deutsch_jozsa_nbit_balanced : QuantumDeutschJozsaNBitBalanced.QuantumDeutschJozsaNBitBalancedSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -414,6 +416,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumShorContinuedFractions.quantum_shor_continued_fractions_master_suite
   shor_order_recovery := by
     exact QuantumShorOrderRecoveryGCD.quantum_shor_order_recovery_master_suite
+  deutsch_jozsa_nbit_balanced := by
+    exact QuantumDeutschJozsaNBitBalanced.quantum_deutsch_jozsa_nbit_balanced_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

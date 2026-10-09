@@ -74,3 +74,5 @@ end AxiomAudit
 #audit_axioms CryptoSchnorrIdentification.crypto_schnorr_identification_master_suite
 
 #audit_axioms DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite
+
+#audit_axioms QuantumDeutschJozsaNBitBalanced.quantum_deutsch_jozsa_nbit_balanced_master_suite

@@ -81,3 +81,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumShorContinuedFractions](../03_quantum_physics_and_optics/QuantumShorContinuedFractions.md) — executable continued fractions, strict Legendre recovery and reduced-order candidate boundaries.
 
 - [QuantumShorOrderRecoveryGCD](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md) — conditional LCM/GCD order recovery and candidate-provenance boundaries.
+
+- [QuantumDeutschJozsaNBitBalanced](../03_quantum_physics_and_optics/QuantumDeutschJozsaNBitBalanced.md) — Exact balanced-oracle cardinality and circuit interference.

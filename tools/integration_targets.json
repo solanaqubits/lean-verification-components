@@ -574,7 +574,7 @@
   },
   "Verification.MasterHundredRegistry": {
     "suite_struct": "MasterHundredFormalSuite",
-    "suite_type": "MasterHundredFormalSuite.{u\u2081, u\u2082, u\u2083, u\u2084, u\u2085,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
+    "suite_type": "MasterHundredFormalSuite.{u₁, u₂, u₃, u₄, u₅,\n    uFRI, uHopf, uRaft1, uRaft2, uRaft3}",
     "parent": "VerificationMasterRegistry",
     "field": "master_hundred_registry",
     "constructor": "verification_master_registry",
@@ -767,7 +767,7 @@
   },
   "Verification.CryptoPedersenHomomorphicSum": {
     "suite_struct": "CryptoPedersenHomomorphicSumSuite",
-    "suite_type": "CryptoPedersenHomomorphicSum.CryptoPedersenHomomorphicSumSuite.{u\u2081}",
+    "suite_type": "CryptoPedersenHomomorphicSum.CryptoPedersenHomomorphicSumSuite.{u₁}",
     "parent": "CryptoFullSuite",
     "field": "pedersen_homomorphic_sum",
     "constructor": "crypto_full_master_suite",
@@ -776,7 +776,7 @@
   },
   "Verification.CryptoSchnorrIdentification": {
     "suite_struct": "CryptoSchnorrIdentificationSuite",
-    "suite_type": "CryptoSchnorrIdentification.CryptoSchnorrIdentificationSuite.{u\u2081}",
+    "suite_type": "CryptoSchnorrIdentification.CryptoSchnorrIdentificationSuite.{u₁}",
     "parent": "CryptoFullSuite",
     "field": "schnorr_identification",
     "constructor": "crypto_full_master_suite",
@@ -790,6 +790,15 @@
     "field": "chandy_lamport_general",
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumDeutschJozsaNBitBalanced": {
+    "suite_struct": "QuantumDeutschJozsaNBitBalancedSuite",
+    "suite_type": "QuantumDeutschJozsaNBitBalanced.QuantumDeutschJozsaNBitBalancedSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "deutsch_jozsa_nbit_balanced",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumDeutschJozsaNBitBalanced.quantum_deutsch_jozsa_nbit_balanced_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
   }
 }

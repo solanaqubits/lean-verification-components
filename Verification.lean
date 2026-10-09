@@ -1,3 +1,4 @@
+import Verification.QuantumDeutschJozsaNBitBalanced
 import Verification.DistributedChandyLamportGeneral
 import Verification.CryptoSchnorrIdentification
 import Verification.CryptoPedersenHomomorphicSum
