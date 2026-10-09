@@ -1,3 +1,4 @@
+import Verification.DistributedChandyLamportGeneral
 import Verification.CryptoSchnorrIdentification
 import Verification.CryptoPedersenHomomorphicSum
 import Verification.DistributedRaymondTreeMutex
@@ -535,6 +536,7 @@ structure DistributedSystemsFullSuite : Prop where
   ricart_agrawala : DistributedRicartAgrawalaMutex.DistributedRicartAgrawalaSuite
   suzuki_kasami : DistributedSuzukiKasamiMutex.DistributedSuzukiKasamiSuite
   raymond_tree : DistributedRaymondTreeMutex.DistributedRaymondTreeSuite
+  chandy_lamport_general : DistributedChandyLamportGeneral.DistributedChandyLamportGeneralSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -577,6 +579,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedSuzukiKasamiMutex.distributed_suzuki_kasami_master_suite
   raymond_tree := by
     exact DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite
+  chandy_lamport_general := by
+    exact DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

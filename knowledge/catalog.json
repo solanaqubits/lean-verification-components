@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedChandyLamportGeneral",
         "Verification.CryptoSchnorrIdentification",
         "Verification.CryptoPedersenHomomorphicSum",
         "Verification.DistributedRaymondTreeMutex",
@@ -1358,6 +1359,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedChandyLamportGeneral",
         "Verification.CryptoSchnorrIdentification",
         "Verification.CryptoPedersenHomomorphicSum",
         "Verification.DistributedRaymondTreeMutex",
@@ -1760,6 +1762,15 @@
       "card": "knowledge/04_cryptography_and_protocols/CryptoSchnorrIdentification.md",
       "project_imports": [
         "Verification.CryptoPedersenHomomorphicSum"
+      ]
+    },
+    {
+      "id": "DistributedChandyLamportGeneral",
+      "section": "distributed",
+      "source": "Verification/DistributedChandyLamportGeneral.lean",
+      "card": "knowledge/09_distributed_systems/DistributedChandyLamportGeneral.md",
+      "project_imports": [
+        "Verification.DistributedChandyLamportSnapshot"
       ]
     }
   ],

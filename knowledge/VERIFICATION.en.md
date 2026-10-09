@@ -1,8 +1,66 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.22](../docs/release-v0.5.22.en.md)
+
+## Current public snapshot: General Chandy-Lamport snapshots
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 124 |
+| Lean files under Verification/ | 164 top-level + 2 auxiliary = 166 |
+| Root-inclusive sources identical to the private snapshot | 167 |
+| Clean strict build | 3615 jobs; no warnings |
+| Complete verifier audit | 14271 declarations; no violations |
+| Pinned independent full audit | 14271 declarations; no violations |
+| Public live tests | 69; no failures or skips; 260.408s |
+
+All 167 proof sources match private snapshot `d06eee279392f800cbb8a5ff8dff3af30b051edc`.
+
+The model covers arbitrary finite directed networks with edge-indexed FIFO queues,
+arbitrary application payloads and local data. A node captures its actual local
+value and event counter once, atomically appending markers to outgoing queues.
+The cut is consistent: every receipt before the destination cut has a matching
+send before the source cut. Phase observations are linked to strict event order.
+
+Every closed channel records exactly the ordered crossing messages: sent before
+the sender cut and received after the receiver cut. Packet identities distinguish
+repeated payloads. Snapshots and closed channel records remain unchanged.
+
+Termination requires directed reachability of all nodes from the initiator,
+ReliableDelivery and WeakFairness. ReliableDelivery means each already queued
+item is eventually processed or offered at the FIFO head; it includes progress
+past earlier packets and is stronger than absence of transport loss alone.
+Weak fairness governs continuously enabled initiation and marker reactions.
+The theorem supplies a finite common completion index, not a uniform latency bound.
+An explicit reliable fair execution witnesses satisfiability of the assumptions.
+
+A non-FIFO counterexample adds only an adjacent swap: a marker overtakes an older
+packet, and the closed channel record misses that packet. This demonstrates failure
+of exact recording; it does not claim every reordering violates cut consistency.
+A reliable fair disconnected execution demonstrates the need for root reachability.
+
+One snapshot and fixed topology are modeled. Permutation/causal equivalence via
+commuting application events, global termination detection, snapshot collection,
+crashes, loss, recovery, dynamic topology, overlapping snapshots and Byzantine
+behavior are outside the model. Python, JSON/SHA-256 and SimLab remain open obligations.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1,
+and the executable is pinned separately. No second independent proof kernel is asserted.
+
+The project build directory started empty; pinned dependency caches were copied
+into the isolated tree. Public checks were rerun against this release candidate.
+Counts include generated declarations, not just independent mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.21](../docs/release-v0.5.21.en.md)
 
-## Current public snapshot: Schnorr identification
+## Historical public snapshot v0.5.21: Schnorr identification
 
 | Check | Measured public result |
 |---|---:|

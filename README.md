@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**165 Lean files** under Verification/ (163 top-level + 2 auxiliary),
-**123 direct imports**, **13,805 audited declarations**.
-Clean strict build: **3614 jobs**. Public live tests: **68**, no errors or skips.
+**166 Lean files** under Verification/ (164 top-level + 2 auxiliary),
+**124 direct imports**, **14,271 audited declarations**.
+Clean strict build: **3615 jobs**. Public live tests: **69**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.21
+## Release v0.5.22
+
+[General Chandy-Lamport snapshots](docs/release-v0.5.22.en.md) add consistent cuts,
+exact ordered FIFO channel records, and conditional termination on finite directed
+networks. Termination requires root reachability, eventual message progress and
+weak fairness of local snapshot reactions. Explicit executions demonstrate the
+non-FIFO recording anomaly and the need for reachability. Causal permutation
+equivalence, failures, dynamic topology and overlapping snapshots are not claimed.
+
+## Earlier additions in v0.5.21
 
 [Schnorr identification](docs/release-v0.5.21.en.md) adds perfect completeness,
 algebraic witness extraction from two accepting transcripts with one commitment

@@ -72,3 +72,5 @@ end AxiomAudit
 #audit_axioms CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite
 
 #audit_axioms CryptoSchnorrIdentification.crypto_schnorr_identification_master_suite
+
+#audit_axioms DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite

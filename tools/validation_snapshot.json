@@ -1,18 +1,20 @@
 {
-  "modules_checked": 165,
+  "modules_checked": 166,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 13805,
+    "declarations": 14271,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "45cce30207b2856a0352b4801446388f33a50dc6d1d280716dc35bbcda37628c",
-    "Verification.MasterSuite": "64a1c0d05885b74c2c6467df229f1f99e2515711ad0de03ee40cc006b7b1a5cf",
+    "Verification.AxiomAudit": "c26aa9e118b7f5d4e624fe3ca27b1cd5731df4edfc781830a7bb026788a7caeb",
+    "Verification.MasterSuite": "581a8352aa9a64c9556a0834013f32d2a53f84a161a7a2f03bd91fedead8dbf8",
+    "Verification.DistributedChandyLamportGeneral": "5d7064f4692c8bdffeb3150e4f760babebca41b4bc1a03e00ff6447fba48acff",
+    "Verification.DistributedChandyLamportSnapshot": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2",
     "Verification.CryptoSchnorrIdentification": "ad11b94e5b5399adc1f7f24fbacef433d096ea72689e43b474f4a82ef2eb424b",
     "Verification.CryptoPedersenHomomorphicSum": "6a1928b37e34dd2fd93380c9e64c875a3ecc762a9c69bd1d3d803da6987bcaba",
     "Verification.DistributedRaymondTreeMutex": "68fd823edc7264d201c5f80dd277aa662cc2f81a33524885a851e13aa3cf08ec",
@@ -55,7 +57,6 @@
     "Verification.DistributedRaftLogAppend": "2c0570f8c65fc8f65b505d77c1c18bbea5fda3e4a628caf5f4f0de9dac145449",
     "Verification.DistributedRaftConsensus": "89cf3887f090c80d0fbcc0058a1c1733ce524d906253a67a3489e081f6b045c2",
     "Verification.DistributedRaftLogReplication": "4ba9d4701f459629c616cc990a87e537eea85aa9c3e8735654349135acbf30d7",
-    "Verification.DistributedChandyLamportSnapshot": "7db4e83d0a10a51665e09d8c7283d7df011a3ca0827611c2a80286a68c9449d2",
     "Verification.NumericSQLGapBounds": "6b04b810667cc631f1774b8df002005e1731426722203a9a5c1c188f77861f3d",
     "Verification.QuantumStandardQuantumLimit": "408f63ff00145bc26d53a998b38c623f85feb98e2584afcc940d28ac8a688aac",
     "Verification.NumericRealRounding": "13e59b66be0e03567abf2301c6a911e05b25e87348c6183e79040bb0a8f45e2b",
@@ -64,7 +65,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "d60d20442d3796343ea0a4267c86fb05d8fc81f12cf23d0ec6482e73efcb6cc7",
+    "Verification.MasterSuiteComponents": "37e12f73690b3785a8c40db03a2289dd785e107e1127669a0a5a96e1644213a1",
     "Verification.QuantumBeamSplitterTransform": "e1c41a70782fb73dca7f68df696594da522cdaf2a006887cba188879b2747895",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
@@ -177,21 +178,21 @@
     "Verification.Specs.QuantumSimonsSpec": "87af35a457c2a8e052f398cf5ce4a5b125ce2bfe15a62bd0518a84244640d86a"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.21 validation: finite-group Schnorr identification, algebraic special soundness and perfect special HVZK.",
+  "description": "Public v0.5.22 validation: general Chandy-Lamport snapshots, FIFO cut safety, exact channel recording and conditional termination.",
   "independent_axiom_audit": {
-    "declarations": 13805,
+    "declarations": 14271,
     "passed": true,
     "tool_commit": "46024e005996495c65ef609368e11ab39c4222e3"
   },
   "regression_tests": {
-    "passed": 68,
+    "passed": 69,
     "skipped": 0,
-    "seconds": 257.02,
+    "seconds": 260.408,
     "note": "Measured full public live suite with LEAN_VERIFIER_LIVE_TESTS=1."
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 123,
-  "full_build_jobs": 3614,
+  "master_direct_imports": 124,
+  "full_build_jobs": 3615,
   "pipeline": {
     "strict_build": true,
     "verify": true,
@@ -250,7 +251,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "e3a749286d95264f11c74a4ccd18aa59333dae65a8ae93ab0c22c322cebb992c",
+  "root_source_sha256": "3f98cbbcdf44c050c642162f30a89231e24e95c1d8c5dc9109bb64f7e0f40248",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -737,7 +738,7 @@
     "russian_cards": 0,
     "public_release_performed": false
   },
-  "validation_base_commit": "2c01798362d54124a711be83a0855e40dbf0efdc",
+  "validation_base_commit": "0c7104839e071108f4f9d08d6a75c4799f6d2581",
   "statement_conformance_scope": {
     "subject_imports_added": 0,
     "support_modules_added": 2,
@@ -2157,16 +2158,135 @@
       }
     ]
   },
-  "previous_public_release_validation": {
-    "version": "0.5.20",
-    "private_snapshot": "2c01798362d54124a711be83a0855e40dbf0efdc",
-    "public_baseline": "516a6784205e5ae66459def7087733e8dfd152b4",
-    "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
-    "independent_auditor_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
-    "independent_audited_declarations": 13704,
-    "lean_files_recursive": 164,
-    "root_inclusive_byte_identical_sources": 165,
-    "publication_method": "sequential main then annotated tag, not atomic",
+  "chandy_lamport_general_scope": {
+    "topology": "Finite directed graph, edge-indexed FIFO queues, arbitrary payload and application state; self-loops allowed",
+    "snapshot": "One instance; atomic capture and outgoing marker append; application traffic before and after",
+    "cut_safety": "Pre-cut receipt implies matching pre-cut send; phase stamps linked to strict application event order",
+    "channel_recording": "Exact ordered list with identities and multiplicities; stable after closure",
+    "local_snapshot": "Actual local value and event counter; never overwritten",
+    "termination": "Finite common completion index from directed reachability, eventual offering/processing of each queued item, and weak fairness of continuously enabled local snapshot reactions",
+    "reliability_boundary": "End-to-end eventual head offering or processing; stronger than transport no-loss alone; does not assume global completion",
+    "satisfiability": "Explicit reliable fair two-node execution",
+    "non_fifo_counterexample": "Only adjacent message/marker swap is added; an old packet is missing from a closed record",
+    "disconnected_counterexample": "Reliable fair trace with unreachable node never completes",
+    "permutation_equivalence_crash_loss_overlap_dynamic_topology_modeled": false,
+    "python_json_sha256_simlab_proved": false
+  },
+  "chandy_lamport_general_private_validation_commands": [
+    {
+      "name": "verify",
+      "command": [
+        "python3",
+        "tools/verifier_skill.py",
+        "verify",
+        "Verification/DistributedChandyLamportGeneral.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.895
+    },
+    {
+      "name": "audit",
+      "command": [
+        "python3",
+        "tools/verifier_skill.py",
+        "audit",
+        "Verification/DistributedChandyLamportGeneral.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 20.94
+    },
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 166.405
+    },
+    {
+      "name": "verify-all",
+      "command": [
+        "python3",
+        "tools/verifier_skill.py",
+        "verify-all"
+      ],
+      "exit_code": 0,
+      "seconds": 452.983
+    },
+    {
+      "name": "tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 253.122
+    },
+    {
+      "name": "registry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Verification/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.28
+    },
+    {
+      "name": "independent",
+      "command": [
+        "lake",
+        "env",
+        "/tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit",
+        "--root",
+        "Verification",
+        "--allow",
+        "propext,Classical.choice,Quot.sound",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 3.555
+    },
+    {
+      "name": "knowledge",
+      "command": [
+        "python3",
+        "scripts/check_knowledge.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.161
+    },
+    {
+      "name": "idempotence",
+      "command": [
+        "python3",
+        "tools/verifier_skill.py",
+        "integrate",
+        "Verification/DistributedChandyLamportGeneral.lean",
+        "DistributedChandyLamportGeneralSuite"
+      ],
+      "exit_code": 0,
+      "seconds": 0.029
+    }
+  ],
+  "chandy_lamport_general_export_validation": {
+    "live_tests": 69,
+    "seconds": 269.251,
+    "strict_build_jobs": 3615,
+    "independent_axiom_audit_declarations": 14271,
+    "proof_sources_byte_identical": 167,
+    "public_release_performed": false,
     "commands": [
       {
         "name": "build",
@@ -2176,17 +2296,7 @@
           "--wfail"
         ],
         "exit_code": 0,
-        "seconds": 152.613
-      },
-      {
-        "name": "verify-all",
-        "command": [
-          "python3",
-          "tools/verifier_skill.py",
-          "verify-all"
-        ],
-        "exit_code": 0,
-        "seconds": 433.332
+        "seconds": 177.89
       },
       {
         "name": "tests",
@@ -2202,7 +2312,7 @@
           "-v"
         ],
         "exit_code": 0,
-        "seconds": 248.128
+        "seconds": 269.327
       },
       {
         "name": "registry",
@@ -2214,7 +2324,7 @@
           "Verification/AxiomAudit.lean"
         ],
         "exit_code": 0,
-        "seconds": 2.244
+        "seconds": 2.336
       },
       {
         "name": "independent",
@@ -2229,7 +2339,7 @@
           "--json"
         ],
         "exit_code": 0,
-        "seconds": 3.549
+        "seconds": 3.721
       },
       {
         "name": "knowledge",
@@ -2238,11 +2348,11 @@
           "scripts/check_knowledge.py"
         ],
         "exit_code": 0,
-        "seconds": 0.094
+        "seconds": 0.098
       }
     ]
   },
-  "public_release_validation": {
+  "previous_public_release_validation": {
     "version": "0.5.21",
     "private_snapshot": "0c7104839e071108f4f9d08d6a75c4799f6d2581",
     "public_baseline": "6c7a2435b27c46435f4f8fee1222bdd7ba7eaa11",
@@ -2324,6 +2434,91 @@
         ],
         "exit_code": 0,
         "seconds": 0.093
+      }
+    ]
+  },
+  "public_release_validation": {
+    "version": "0.5.22",
+    "private_snapshot": "d06eee279392f800cbb8a5ff8dff3af30b051edc",
+    "public_baseline": "b11f5ca5ea2d619bd678155f069e447c098e9c7c",
+    "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
+    "independent_auditor_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
+    "independent_audited_declarations": 14271,
+    "lean_files_recursive": 166,
+    "root_inclusive_byte_identical_sources": 167,
+    "publication_method": "sequential main then annotated tag, not atomic",
+    "commands": [
+      {
+        "name": "build",
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 154.548
+      },
+      {
+        "name": "verify-all",
+        "command": [
+          "python3",
+          "tools/verifier_skill.py",
+          "verify-all"
+        ],
+        "exit_code": 0,
+        "seconds": 460.633
+      },
+      {
+        "name": "tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "seconds": 260.483
+      },
+      {
+        "name": "registry",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Verification/AxiomAudit.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 2.372
+      },
+      {
+        "name": "independent",
+        "command": [
+          "lake",
+          "env",
+          "/tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit",
+          "--root",
+          "Verification",
+          "--allow",
+          "propext,Classical.choice,Quot.sound",
+          "--json"
+        ],
+        "exit_code": 0,
+        "seconds": 3.653
+      },
+      {
+        "name": "knowledge",
+        "command": [
+          "python3",
+          "scripts/check_knowledge.py"
+        ],
+        "exit_code": 0,
+        "seconds": 0.098
       }
     ]
   }

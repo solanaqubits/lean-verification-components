@@ -1,3 +1,4 @@
+import Verification.DistributedChandyLamportGeneral
 import Verification.CryptoSchnorrIdentification
 import Verification.CryptoPedersenHomomorphicSum
 import Verification.DistributedRaymondTreeMutex
