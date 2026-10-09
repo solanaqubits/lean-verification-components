@@ -83,3 +83,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumShorOrderRecoveryGCD](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md) — conditional LCM/GCD order recovery and candidate-provenance boundaries.
 
 - [QuantumDeutschJozsaNBitBalanced](../03_quantum_physics_and_optics/QuantumDeutschJozsaNBitBalanced.md) — Exact balanced-oracle cardinality and circuit interference.
+
+- [PhotonicsBeamSplitterPhaseShift](../03_quantum_physics_and_optics/PhotonicsBeamSplitterPhaseShift.md) — Complex unitary beam splitter, MZI intensities and visibility.

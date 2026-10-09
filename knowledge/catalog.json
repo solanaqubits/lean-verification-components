@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.QuantumDeutschJozsaNBitBalanced",
         "Verification.DistributedChandyLamportGeneral",
         "Verification.CryptoSchnorrIdentification",
@@ -1360,6 +1361,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.QuantumDeutschJozsaNBitBalanced",
         "Verification.DistributedChandyLamportGeneral",
         "Verification.CryptoSchnorrIdentification",
@@ -1782,6 +1784,17 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumDeutschJozsaNBitBalanced.md",
       "project_imports": [
         "Verification.QuantumDeutschJozsaGeneral"
+      ]
+    },
+    {
+      "id": "PhotonicsBeamSplitterPhaseShift",
+      "section": "quantum-physics",
+      "source": "Verification/PhotonicsBeamSplitterPhaseShift.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/PhotonicsBeamSplitterPhaseShift.md",
+      "project_imports": [
+        "Verification.SolarisMithraCore",
+        "Verification.MithraicPhaseCollapse",
+        "Verification.QuantumBeamSplitterTransform"
       ]
     }
   ],

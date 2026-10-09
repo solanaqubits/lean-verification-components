@@ -1,8 +1,65 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.24](../docs/release-v0.5.24.en.md)
+
+## Current public snapshot: Complex beam splitter and MZI phase response
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 126 |
+| Lean files under Verification/ | 166 top-level + 2 auxiliary = 168 |
+| Root-inclusive sources identical to the private snapshot | 169 |
+| Clean strict build | 3617 jobs; no warnings |
+| Complete verifier audit | 14415 declarations; no violations |
+| Pinned independent full audit | 14415 declarations; no violations |
+| Public live tests | 71; no failures or skips; 263.419s |
+
+All 169 proof sources match private snapshot `0556810415b74197251b6a7e8c2e712f5375b97f`.
+
+For 0<=T<=1 the lossless symmetric splitter is
+B=[[sqrt(T),i sqrt(1-T)],[i sqrt(1-T),sqrt(T)]]. The arm operator is
+D(phi)=diag(exp(i phi),1), and U=B†DB explicitly uses the inverse second splitter.
+Both inverse identities and Hermitian Euclidean norm preservation hold for B and U.
+The reflection factor i=exp(i pi/2) belongs to this chosen convention, not every
+reflecting device; a zero component does not have a defined relative phase.
+
+For input (1,0), the actual matrix output gives c0=T exp(i phi)+1-T and
+c1=i sqrt(T)sqrt(1-T)(1-exp(i phi)). Probabilities are defined by Complex.normSq,
+then proved to equal P0=1-4T(1-T)sin²(phi/2) and P1=4T(1-T)sin²(phi/2).
+They lie in [0,1], sum to one, have period 2pi and satisfy the endpoint cases.
+At T=1/2 they are cos²(phi/2) and sin²(phi/2). For nonnegative input power,
+the corresponding intensities exactly equal the SolarisMithraCore formulas.
+
+For positive I0, port-0 extrema are I0 and I0(2T-1)², with both bounds proved
+and attained at phases 0 and pi. They construct a valid InterferencePattern with
+V=4T(1-T)/(1+(2T-1)²), equal to one at T=1/2. A constant phase offset shifts
+the attainment points but leaves the extrema and visibility unchanged.
+Geometric dependence is substitution under the external premise phi=kappa*DeltaL+phi0;
+kappa=0 does not allow scanning the phase curve by changing path length.
+
+These results follow from the specified complex matrix model, not from Maxwell's
+equations. Material dispersion, polarization, loss, detectors, hardware synthesis
+and full Fock-space dynamics are not modeled. Decoherence and stochastic phase
+noise are not inferred from a deterministic phase offset. Python, JSON/SHA-256
+and SimLab-to-Lean correspondence remain open obligations. Novelty is not assessed.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1,
+and the executable is pinned separately. No second independent proof kernel is asserted.
+
+The project build directory started empty; pinned dependency caches were copied
+into the isolated tree. Public checks were rerun against this release candidate.
+Counts include generated declarations, not just independent mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.23](../docs/release-v0.5.23.en.md)
 
-## Current public snapshot: Balanced Deutsch-Jozsa oracle classification
+## Historical public snapshot v0.5.23: Balanced Deutsch-Jozsa oracle classification
 
 | Check | Measured public result |
 |---|---:|

@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**167 Lean files** under Verification/ (165 top-level + 2 auxiliary),
-**125 direct imports**, **14,330 audited declarations**.
-Clean strict build: **3616 jobs**. Public live tests: **70**, no errors or skips.
+**168 Lean files** under Verification/ (166 top-level + 2 auxiliary),
+**126 direct imports**, **14,415 audited declarations**.
+Clean strict build: **3617 jobs**. Public live tests: **71**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.23
+## Release v0.5.24
+
+[Complex beam splitter and MZI](docs/release-v0.5.24.en.md) adds the lossless
+unitary convention U=B†DB, output probabilities derived from complex amplitudes,
+exact Solaris intensity bridges and a certified interference visibility model.
+A static phase offset preserves the extrema and contrast. The pi/2 reflection
+phase is model-specific; Maxwell equations, dispersion, polarization and physical
+noise are not modeled.
+
+## Earlier additions in v0.5.23
 
 [Balanced Deutsch-Jozsa oracle classification](docs/release-v0.5.23.en.md) adds an
 explicit support bijection, exact binomial counts for positive n, the empty

@@ -76,3 +76,5 @@ end AxiomAudit
 #audit_axioms DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite
 
 #audit_axioms QuantumDeutschJozsaNBitBalanced.quantum_deutsch_jozsa_nbit_balanced_master_suite
+
+#audit_axioms PhotonicsBeamSplitterPhaseShift.photonics_beam_splitter_phase_shift_master_suite
