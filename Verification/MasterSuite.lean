@@ -1,3 +1,4 @@
+import Verification.DistributedRaymondTreeMessageComplexity
 import Verification.PhotonicsHongOuMandelInterference
 import Verification.PhotonicsBeamSplitterPhaseShift
 import Verification.QuantumDeutschJozsaNBitBalanced
@@ -129,6 +130,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedRaymondTreeMessageComplexity
 
 open MasterHundredRegistry
 

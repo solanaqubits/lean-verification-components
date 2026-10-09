@@ -1,3 +1,4 @@
+import Verification.DistributedRaymondTreeMessageComplexity
 import Verification.PhotonicsHongOuMandelInterference
 import Verification.PhotonicsBeamSplitterPhaseShift
 import Verification.QuantumDeutschJozsaNBitBalanced
@@ -125,6 +126,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedRaymondTreeMessageComplexity
 
 open QuantumBeamSplitterTransform
 
@@ -549,6 +552,7 @@ structure DistributedSystemsFullSuite : Prop where
   suzuki_kasami : DistributedSuzukiKasamiMutex.DistributedSuzukiKasamiSuite
   raymond_tree : DistributedRaymondTreeMutex.DistributedRaymondTreeSuite
   chandy_lamport_general : DistributedChandyLamportGeneral.DistributedChandyLamportGeneralSuite
+  raymond_message_complexity : DistributedRaymondTreeMessageComplexitySuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -593,6 +597,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedRaymondTreeMutex.distributed_raymond_tree_master_suite
   chandy_lamport_general := by
     exact DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite
+  raymond_message_complexity := by
+    exact distributed_raymond_tree_message_complexity_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

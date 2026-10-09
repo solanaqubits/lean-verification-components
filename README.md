@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**169 Lean files** under Verification/ (167 top-level + 2 auxiliary),
-**127 direct imports**, **14,510 audited declarations**.
-Clean strict build: **3618 jobs**. Public live tests: **72**, no errors or skips.
+**170 Lean files** under Verification/ (168 top-level + 2 auxiliary),
+**128 direct imports**, **14,727 audited declarations**.
+Clean strict build: **3619 jobs**. Public live tests: **73**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.25
+## Release v0.5.26
+
+[Raymond tree message complexity](docs/release-v0.5.26.en.md) connects
+actual isolated protocol send counters to sharp diameter and height bounds.
+Finite completion is proved separately. Complete k-ary trees have exact
+node counts, diameter 2h and worst-case sends 4h=4 floor(log_k N), with IsBigO.
+The binary height-three regression requires 12 messages. Concurrent load,
+amortization, random traffic and physical delays are outside this extension.
+
+## Earlier additions in v0.5.25
 
 [Two-photon Hong–Ou–Mandel interference](docs/release-v0.5.25.en.md) derives
 the unitary normalized two-photon lift, output probabilities and balanced bunching.

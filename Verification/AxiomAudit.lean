@@ -80,3 +80,6 @@ end AxiomAudit
 #audit_axioms PhotonicsBeamSplitterPhaseShift.photonics_beam_splitter_phase_shift_master_suite
 
 #audit_axioms PhotonicsHongOuMandelInterference.photonics_hong_ou_mandel_master_suite
+
+open DistributedRaymondTreeMessageComplexity in
+#audit_axioms distributed_raymond_tree_message_complexity_master_suite

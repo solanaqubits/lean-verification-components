@@ -818,5 +818,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact PhotonicsHongOuMandelInterference.photonics_hong_ou_mandel_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedRaymondTreeMessageComplexity": {
+    "suite_struct": "DistributedRaymondTreeMessageComplexitySuite",
+    "suite_type": "DistributedRaymondTreeMessageComplexitySuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raymond_message_complexity",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact distributed_raymond_tree_message_complexity_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

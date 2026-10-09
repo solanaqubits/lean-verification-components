@@ -87,3 +87,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedRaymondTreeMutex](../09_distributed_systems/DistributedRaymondTreeMutex.md) — token conservation, effective holder paths, conditional starvation freedom and exact isolated message counts.
 
 - [DistributedChandyLamportGeneral](../09_distributed_systems/DistributedChandyLamportGeneral.md) — Directed FIFO snapshots, exact channel records and conditional termination.
+
+- [DistributedRaymondTreeMessageComplexity](../09_distributed_systems/DistributedRaymondTreeMessageComplexity.md) — Raymond message costs, attained diameter and height bounds, and complete tree families.
