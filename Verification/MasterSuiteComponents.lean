@@ -1,3 +1,4 @@
+import Verification.DistributedVectorClocksCausalOrder
 import Verification.DistributedRaymondTreeMessageComplexity
 import Verification.PhotonicsHongOuMandelInterference
 import Verification.PhotonicsBeamSplitterPhaseShift
@@ -127,6 +128,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open DistributedVectorClocksCausalOrder
 open DistributedRaymondTreeMessageComplexity
 
 open QuantumBeamSplitterTransform
@@ -553,6 +555,7 @@ structure DistributedSystemsFullSuite : Prop where
   raymond_tree : DistributedRaymondTreeMutex.DistributedRaymondTreeSuite
   chandy_lamport_general : DistributedChandyLamportGeneral.DistributedChandyLamportGeneralSuite
   raymond_message_complexity : DistributedRaymondTreeMessageComplexitySuite
+  vector_clocks_causal_order : DistributedVectorClocksCausalOrderSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -599,6 +602,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedChandyLamportGeneral.distributed_chandy_lamport_general_master_suite
   raymond_message_complexity := by
     exact distributed_raymond_tree_message_complexity_master_suite
+  vector_clocks_causal_order := by
+    exact distributed_vector_clocks_causal_order_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

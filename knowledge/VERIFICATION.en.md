@@ -1,8 +1,78 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.27](../docs/release-v0.5.27.en.md)
+
+## Current public snapshot: Vector clocks and causal order
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 129 |
+| Lean files under Verification/ | 169 top-level + 2 auxiliary = 171 |
+| Root-inclusive sources identical to the private snapshot | 172 |
+| Clean strict build | 3620 jobs; no warnings |
+| Complete verifier audit | 15015 declarations; no violations |
+| Pinned independent full audit | 15015 declarations; no violations |
+| Public live tests | 74; no failures or skips; 264.431s |
+
+All 172 proof sources match private snapshot `035b98853ca060ea70ea70815a56ae55d0d7e1d4`.
+
+The new module formalizes vector clocks on Fin n over finite legal histories.
+Events have a process, positive local sequence number, and Local, Send or Recv
+payload. Message identifiers distinguish actual sends and receives. Every receive
+matches an earlier send addressed to that process; timestamps are immutable.
+Sends and receives are unique within their respective identifier classes.
+Outstanding messages and delivery out of send order are permitted.
+
+HappensBefore is the strict transitive closure of local event order and matching
+send-to-receive edges. Its definition does not use vector clocks. CausalPast adds
+reflexivity separately. An executable, terminating recurrence computes timestamps
+from predecessors using coordinatewise maxima and one increment of the executing
+process. The local predecessor fold is proved equal to the last local timestamp;
+the message fold is proved equal to the unique delivered send timestamp.
+These lemmas recover the ordinary local/send tick and receive max-then-tick rules.
+
+Induction over trace prefixes proves the causal-past invariant: each coordinate
+is the maximum local event number of that process in the reflexive causal past,
+or zero if empty. It yields both directions of HappensBefore e f iff V(e)<V(f),
+timestamp injectivity and causal incomparability iff vector incomparability for
+distinct events. Strict vector comparison means coordinatewise <= and unequal
+vectors, not strict inequality in every coordinate. The order isomorphism is onto
+the image of event timestamps, not onto the entire space of natural-number vectors.
+Concurrency here does not mean physical simultaneity or commutation of application
+operations. No desired causal invariant is assumed in execution legality.
+
+The n=2 bridge preserves the existing DistributedVectorClocks tick, merge, receive
+and comparison operations. Kernel regressions cover independent first events,
+a three-process causal relay, out-of-order delivery, outstanding messages, n=1,
+and exclusion of self-concurrency. Formal counterexamples show that omitting the
+increment can identify causally ordered events and omitting merge can lose a
+send-to-receive causal dependency.
+
+These finite-trace safety results require neither FIFO delivery nor an eventual
+delivery or scheduler-fairness assumption. Receives must be authentic and match
+previous sends; duplicate receives are excluded. Delivery liveness is not claimed.
+Counters are unbounded naturals. Bounded-machine counter overflow, node failures,
+process restarts, Byzantine timestamp forgery, dynamic membership, clock compression,
+physical time and network latency are not modeled. Python correctness, JSON/SHA-256
+correctness and SimLab-to-Lean correspondence remain open. Novelty is not assessed.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.26](../docs/release-v0.5.26.en.md)
 
-## Current public snapshot: Raymond tree message complexity
+## Historical public snapshot v0.5.26: Raymond tree message complexity
 
 | Check | Measured public result |
 |---|---:|

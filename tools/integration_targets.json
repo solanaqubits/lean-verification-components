@@ -827,5 +827,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact distributed_raymond_tree_message_complexity_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedVectorClocksCausalOrder": {
+    "suite_struct": "DistributedVectorClocksCausalOrderSuite",
+    "suite_type": "DistributedVectorClocksCausalOrderSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "vector_clocks_causal_order",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact distributed_vector_clocks_causal_order_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

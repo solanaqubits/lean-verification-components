@@ -1,3 +1,4 @@
+import Verification.DistributedVectorClocksCausalOrder
 import Verification.DistributedRaymondTreeMessageComplexity
 import Verification.PhotonicsHongOuMandelInterference
 import Verification.PhotonicsBeamSplitterPhaseShift
@@ -131,6 +132,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open DistributedVectorClocksCausalOrder
 open DistributedRaymondTreeMessageComplexity
 
 open MasterHundredRegistry

@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**170 Lean files** under Verification/ (168 top-level + 2 auxiliary),
-**128 direct imports**, **14,727 audited declarations**.
-Clean strict build: **3619 jobs**. Public live tests: **73**, no errors or skips.
+**171 Lean files** under Verification/ (169 top-level + 2 auxiliary),
+**129 direct imports**, **15,015 audited declarations**.
+Clean strict build: **3620 jobs**. Public live tests: **74**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.26
+## Release v0.5.27
+
+[Vector clocks and causal order](docs/release-v0.5.27.en.md) proves exact
+correspondence between independently defined event causality and vector comparison.
+The causal-past invariant gives injective timestamps and detection of causal
+incomparability. Executable traces cover reordered delivery and outstanding messages;
+a two-process bridge preserves the older clock API. The model uses fixed processes,
+unbounded counters and authentic immutable timestamps, without a delivery-liveness claim.
+
+## Earlier additions in v0.5.26
 
 [Raymond tree message complexity](docs/release-v0.5.26.en.md) connects
 actual isolated protocol send counters to sharp diameter and height bounds.

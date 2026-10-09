@@ -83,3 +83,6 @@ end AxiomAudit
 
 open DistributedRaymondTreeMessageComplexity in
 #audit_axioms distributed_raymond_tree_message_complexity_master_suite
+
+open DistributedVectorClocksCausalOrder in
+#audit_axioms distributed_vector_clocks_causal_order_master_suite

@@ -89,3 +89,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedChandyLamportGeneral](../09_distributed_systems/DistributedChandyLamportGeneral.md) — Directed FIFO snapshots, exact channel records and conditional termination.
 
 - [DistributedRaymondTreeMessageComplexity](../09_distributed_systems/DistributedRaymondTreeMessageComplexity.md) — Raymond message costs, attained diameter and height bounds, and complete tree families.
+
+- [DistributedVectorClocksCausalOrder](../09_distributed_systems/DistributedVectorClocksCausalOrder.md) — Independent event causality, exact vector-clock order and executable trace regressions.

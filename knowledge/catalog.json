@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedVectorClocksCausalOrder",
         "Verification.DistributedRaymondTreeMessageComplexity",
         "Verification.PhotonicsHongOuMandelInterference",
         "Verification.PhotonicsBeamSplitterPhaseShift",
@@ -1363,6 +1364,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedVectorClocksCausalOrder",
         "Verification.DistributedRaymondTreeMessageComplexity",
         "Verification.PhotonicsHongOuMandelInterference",
         "Verification.PhotonicsBeamSplitterPhaseShift",
@@ -1818,6 +1820,15 @@
       "card": "knowledge/09_distributed_systems/DistributedRaymondTreeMessageComplexity.md",
       "project_imports": [
         "Verification.DistributedRaymondTreeMutex"
+      ]
+    },
+    {
+      "id": "DistributedVectorClocksCausalOrder",
+      "section": "distributed",
+      "source": "Verification/DistributedVectorClocksCausalOrder.lean",
+      "card": "knowledge/09_distributed_systems/DistributedVectorClocksCausalOrder.md",
+      "project_imports": [
+        "Verification.DistributedVectorClocks"
       ]
     }
   ],
