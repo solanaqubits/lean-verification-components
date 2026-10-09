@@ -78,3 +78,5 @@ end AxiomAudit
 #audit_axioms QuantumDeutschJozsaNBitBalanced.quantum_deutsch_jozsa_nbit_balanced_master_suite
 
 #audit_axioms PhotonicsBeamSplitterPhaseShift.photonics_beam_splitter_phase_shift_master_suite
+
+#audit_axioms PhotonicsHongOuMandelInterference.photonics_hong_ou_mandel_master_suite

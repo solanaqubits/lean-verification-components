@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.PhotonicsHongOuMandelInterference",
         "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.QuantumDeutschJozsaNBitBalanced",
         "Verification.DistributedChandyLamportGeneral",
@@ -1361,6 +1362,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.PhotonicsHongOuMandelInterference",
         "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.QuantumDeutschJozsaNBitBalanced",
         "Verification.DistributedChandyLamportGeneral",
@@ -1794,6 +1796,16 @@
       "project_imports": [
         "Verification.SolarisMithraCore",
         "Verification.MithraicPhaseCollapse",
+        "Verification.QuantumBeamSplitterTransform"
+      ]
+    },
+    {
+      "id": "PhotonicsHongOuMandelInterference",
+      "section": "quantum-physics",
+      "source": "Verification/PhotonicsHongOuMandelInterference.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/PhotonicsHongOuMandelInterference.md",
+      "project_imports": [
+        "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.QuantumBeamSplitterTransform"
       ]
     }

@@ -85,3 +85,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumDeutschJozsaNBitBalanced](../03_quantum_physics_and_optics/QuantumDeutschJozsaNBitBalanced.md) — Exact balanced-oracle cardinality and circuit interference.
 
 - [PhotonicsBeamSplitterPhaseShift](../03_quantum_physics_and_optics/PhotonicsBeamSplitterPhaseShift.md) — Complex unitary beam splitter, MZI intensities and visibility.
+
+- [PhotonicsHongOuMandelInterference](../03_quantum_physics_and_optics/PhotonicsHongOuMandelInterference.md) — Normalized two-photon HOM interference, phase bridge and distinguishable baseline.

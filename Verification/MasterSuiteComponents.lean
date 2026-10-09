@@ -1,3 +1,4 @@
+import Verification.PhotonicsHongOuMandelInterference
 import Verification.PhotonicsBeamSplitterPhaseShift
 import Verification.QuantumDeutschJozsaNBitBalanced
 import Verification.DistributedChandyLamportGeneral
@@ -371,6 +372,7 @@ structure QuantumPhysicsFullSuite : Prop where
   shor_order_recovery : QuantumShorOrderRecoveryGCD.QuantumShorOrderRecoverySuite
   deutsch_jozsa_nbit_balanced : QuantumDeutschJozsaNBitBalanced.QuantumDeutschJozsaNBitBalancedSuite
   beam_splitter_phase_shift : PhotonicsBeamSplitterPhaseShift.PhotonicsBeamSplitterPhaseShiftSuite
+  hong_ou_mandel : PhotonicsHongOuMandelInterference.PhotonicsHongOuMandelInterferenceSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -422,6 +424,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumDeutschJozsaNBitBalanced.quantum_deutsch_jozsa_nbit_balanced_master_suite
   beam_splitter_phase_shift := by
     exact PhotonicsBeamSplitterPhaseShift.photonics_beam_splitter_phase_shift_master_suite
+  hong_ou_mandel := by
+    exact PhotonicsHongOuMandelInterference.photonics_hong_ou_mandel_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

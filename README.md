@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**168 Lean files** under Verification/ (166 top-level + 2 auxiliary),
-**126 direct imports**, **14,415 audited declarations**.
-Clean strict build: **3617 jobs**. Public live tests: **71**, no errors or skips.
+**169 Lean files** under Verification/ (167 top-level + 2 auxiliary),
+**127 direct imports**, **14,510 audited declarations**.
+Clean strict build: **3618 jobs**. Public live tests: **72**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.24
+## Release v0.5.25
+
+[Two-photon Hong–Ou–Mandel interference](docs/release-v0.5.25.en.md) derives
+the unitary normalized two-photon lift, output probabilities and balanced bunching.
+A unitary gauge connects the real and complex conventions. Independent labeled
+paths give the distinguishable baseline and exact HOM visibility. Temporal
+wave packets, partial distinguishability, losses and detector imperfections
+are outside this finite model.
+
+## Earlier additions in v0.5.24
 
 [Complex beam splitter and MZI](docs/release-v0.5.24.en.md) adds the lossless
 unitary convention U=B†DB, output probabilities derived from complex amplitudes,
