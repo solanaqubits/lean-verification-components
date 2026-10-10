@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**173 Lean files** under Verification/ (171 top-level + 2 auxiliary),
-**174 including Verification.lean**, **131 direct imports**,
-**15,608 audited declarations**.
-Clean strict build: **3622 jobs**. Public live tests: **76**, no errors or skips.
+**174 Lean files** under Verification/ (172 top-level + 2 auxiliary),
+**175 including Verification.lean**, **132 direct imports**,
+**16,006 audited declarations**.
+Clean strict build: **3623 jobs**. Public live tests: **77**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.29
+## Release v0.5.30
+
+[State-based LWW register and strong convergence](docs/release-v0.5.30.en.md)
+derives unique stamps from fresh writes and constructs a join semilattice on
+compatible states. Equal included update sets give equal register payloads.
+Fair sending and reception of reliably available useful snapshots imply information
+dissemination; after writes cease, replicas stabilize to the global maximum.
+An incremental causal-broadcast adapter and collision/stale-write counterexamples
+are included. Consensus, linearizability and physical-time ordering are outside scope.
+
+## Earlier additions in v0.5.29
 
 [Causal broadcast and delivery safety](docs/release-v0.5.29.en.md) connects
 independent broadcast causality with operational delivered-prefix counters and

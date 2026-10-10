@@ -854,5 +854,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedCausalBroadcast.distributed_causal_broadcast_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedCRDTStateLWW": {
+    "suite_struct": "DistributedCRDTStateLWWSuite",
+    "suite_type": "DistributedCRDTStateLWW.DistributedCRDTStateLWWSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "crdt_state_lww",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedCRDTStateLWW.distributed_crdt_state_lww_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
