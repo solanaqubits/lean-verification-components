@@ -845,5 +845,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact PhotonicsCPhaseGateUnitary.photonics_cphase_gate_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedCausalBroadcast": {
+    "suite_struct": "DistributedCausalBroadcastSuite",
+    "suite_type": "DistributedCausalBroadcast.DistributedCausalBroadcastSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "causal_broadcast",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedCausalBroadcast.distributed_causal_broadcast_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

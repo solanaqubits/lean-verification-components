@@ -1,8 +1,61 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.29](../docs/release-v0.5.29.en.md)
+
+## Current public snapshot: Causal broadcast
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 131 |
+| Lean files under Verification/ | 171 top-level + 2 auxiliary = 173 |
+| Root-inclusive sources identical to the private snapshot | 174 |
+| Clean strict build | 3622 jobs; no warnings |
+| Complete verifier audit | 15608 declarations; no violations |
+| Pinned independent full audit | 15608 declarations; no violations |
+| Public live tests | 76; no failures or skips; 272.330s |
+
+All 174 proof sources match private snapshot `77948161a169a42dee824a8a2e1236e582665be4`.
+
+DistributedCausalBroadcast formalizes fixed-group causal multicast with authentic
+immutable messages and delivered-prefix vector counters. Broadcast atomically
+self-delivers; Arrive only buffers; Deliver requires the next sender sequence
+and every cross-sender dependency. Induction over operational transitions proves
+continuous prefixes, at-most-once application delivery, exact reflexive causal-past
+timestamps and causal delivery safety: if m1 precedes m2 and m2 is delivered at t,
+m1 was delivered at a strictly earlier step. Independent message causality is
+linked to actual delivery-before-broadcast events, not defined by vector comparison.
+
+Eventual delivery requires reliable network arrival and per-message weak fairness.
+It follows by induction on finite causal pasts; readiness is derived rather than
+assumed. Reordered and duplicate network arrivals are allowed. Regressions cover
+three-process relay, independent broadcasts, immediate self-delivery, a one-node
+group, and counterexamples to weakened cross-sender or next-sequence guards.
+Buffered arrival alone does not create an application causal dependency.
+
+Causal order does not imply total order or physical simultaneity. Crashes, restarts,
+Byzantine messages, dynamic membership, bounded-machine counter overflow, vector
+compression and physical delays are outside this model. Mathematical natural
+numbers themselves do not overflow. The full ISIS membership and virtual-synchrony
+protocol is not claimed. Python correctness, JSON/SHA-256 correctness and the
+SimLab-to-Lean correspondence remain open obligations.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.28](../docs/release-v0.5.28.en.md)
 
-## Current public snapshot: Postselected photonic controlled-Z
+## Historical public snapshot v0.5.28: Postselected photonic controlled-Z
 
 | Check | Measured public result |
 |---|---:|

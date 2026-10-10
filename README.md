@@ -28,13 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**172 Lean files** under Verification/ (170 top-level + 2 auxiliary),
-**130 direct imports**, **15,177 audited declarations**.
-Clean strict build: **3621 jobs**. Public live tests: **75**, no errors or skips.
+**173 Lean files** under Verification/ (171 top-level + 2 auxiliary),
+**174 including Verification.lean**, **131 direct imports**,
+**15,608 audited declarations**.
+Clean strict build: **3622 jobs**. Public live tests: **76**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.28
+## Release v0.5.29
+
+[Causal broadcast and delivery safety](docs/release-v0.5.29.en.md) connects
+independent broadcast causality with operational delivered-prefix counters and
+buffer guards. Prefix integrity, at-most-once delivery, exact causal-past timestamps
+and causal delivery order are proved. Eventual delivery requires reliable arrival
+and per-message weak fairness. Reordered arrivals and weakened-guard counterexamples
+are covered. The fixed-group model excludes failures, total-order guarantees and
+physical delay bounds.
+
+## Earlier additions in v0.5.28
 
 [Postselected photonic controlled-Z](docs/release-v0.5.28.en.md) derives
 K(T)=diag(T,T,T,2T-1) from a unitary six-mode optical network and its

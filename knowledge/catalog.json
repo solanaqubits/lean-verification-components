@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedCausalBroadcast",
         "Verification.PhotonicsCPhaseGateUnitary",
         "Verification.DistributedVectorClocksCausalOrder",
         "Verification.DistributedRaymondTreeMessageComplexity",
@@ -1365,6 +1366,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedCausalBroadcast",
         "Verification.PhotonicsCPhaseGateUnitary",
         "Verification.DistributedVectorClocksCausalOrder",
         "Verification.DistributedRaymondTreeMessageComplexity",
@@ -1841,6 +1843,15 @@
       "project_imports": [
         "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.PhotonicsHongOuMandelInterference"
+      ]
+    },
+    {
+      "id": "DistributedCausalBroadcast",
+      "section": "distributed",
+      "source": "Verification/DistributedCausalBroadcast.lean",
+      "card": "knowledge/09_distributed_systems/DistributedCausalBroadcast.md",
+      "project_imports": [
+        "Verification.DistributedVectorClocksCausalOrder"
       ]
     }
   ],

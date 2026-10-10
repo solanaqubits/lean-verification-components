@@ -1,3 +1,4 @@
+import Verification.DistributedCausalBroadcast
 import Verification.PhotonicsCPhaseGateUnitary
 import Verification.DistributedVectorClocksCausalOrder
 import Verification.DistributedRaymondTreeMessageComplexity
@@ -560,6 +561,7 @@ structure DistributedSystemsFullSuite : Prop where
   chandy_lamport_general : DistributedChandyLamportGeneral.DistributedChandyLamportGeneralSuite
   raymond_message_complexity : DistributedRaymondTreeMessageComplexitySuite
   vector_clocks_causal_order : DistributedVectorClocksCausalOrderSuite
+  causal_broadcast : DistributedCausalBroadcast.DistributedCausalBroadcastSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -608,6 +610,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact distributed_raymond_tree_message_complexity_master_suite
   vector_clocks_causal_order := by
     exact distributed_vector_clocks_causal_order_master_suite
+  causal_broadcast := by
+    exact DistributedCausalBroadcast.distributed_causal_broadcast_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

@@ -88,3 +88,5 @@ open DistributedVectorClocksCausalOrder in
 #audit_axioms distributed_vector_clocks_causal_order_master_suite
 
 #audit_axioms PhotonicsCPhaseGateUnitary.photonics_cphase_gate_master_suite
+
+#audit_axioms DistributedCausalBroadcast.distributed_causal_broadcast_master_suite
