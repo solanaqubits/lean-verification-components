@@ -28,13 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**171 Lean files** under Verification/ (169 top-level + 2 auxiliary),
-**129 direct imports**, **15,015 audited declarations**.
-Clean strict build: **3620 jobs**. Public live tests: **74**, no errors or skips.
+**172 Lean files** under Verification/ (170 top-level + 2 auxiliary),
+**130 direct imports**, **15,177 audited declarations**.
+Clean strict build: **3621 jobs**. Public live tests: **75**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.27
+## Release v0.5.28
+
+[Postselected photonic controlled-Z](docs/release-v0.5.28.en.md) derives
+K(T)=diag(T,T,T,2T-1) from a unitary six-mode optical network and its
+21-dimensional two-photon lift. At T=1/3 the accepted branch is CZ/3,
+with success probability 1/9 for every normalized input. Pauli conjugation,
+graph-state entanglement and reduced density matrices are proved.
+The model uses ideal coincidence postselection; nondestructive heralding,
+losses, detector noise and scalable KLM implementations are outside its scope.
+
+## Earlier additions in v0.5.27
 
 [Vector clocks and causal order](docs/release-v0.5.27.en.md) proves exact
 correspondence between independently defined event causality and vector comparison.

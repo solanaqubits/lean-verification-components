@@ -1,3 +1,4 @@
+import Verification.PhotonicsCPhaseGateUnitary
 import Verification.DistributedVectorClocksCausalOrder
 import Verification.DistributedRaymondTreeMessageComplexity
 import Verification.PhotonicsHongOuMandelInterference
@@ -131,6 +132,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open PhotonicsCPhaseGateUnitary
 
 open DistributedVectorClocksCausalOrder
 open DistributedRaymondTreeMessageComplexity

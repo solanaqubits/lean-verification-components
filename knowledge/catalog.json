@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.PhotonicsCPhaseGateUnitary",
         "Verification.DistributedVectorClocksCausalOrder",
         "Verification.DistributedRaymondTreeMessageComplexity",
         "Verification.PhotonicsHongOuMandelInterference",
@@ -1364,6 +1365,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.PhotonicsCPhaseGateUnitary",
         "Verification.DistributedVectorClocksCausalOrder",
         "Verification.DistributedRaymondTreeMessageComplexity",
         "Verification.PhotonicsHongOuMandelInterference",
@@ -1829,6 +1831,16 @@
       "card": "knowledge/09_distributed_systems/DistributedVectorClocksCausalOrder.md",
       "project_imports": [
         "Verification.DistributedVectorClocks"
+      ]
+    },
+    {
+      "id": "PhotonicsCPhaseGateUnitary",
+      "section": "quantum-physics",
+      "source": "Verification/PhotonicsCPhaseGateUnitary.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/PhotonicsCPhaseGateUnitary.md",
+      "project_imports": [
+        "Verification.PhotonicsBeamSplitterPhaseShift",
+        "Verification.PhotonicsHongOuMandelInterference"
       ]
     }
   ],

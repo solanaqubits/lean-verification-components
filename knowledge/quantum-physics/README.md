@@ -87,3 +87,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [PhotonicsBeamSplitterPhaseShift](../03_quantum_physics_and_optics/PhotonicsBeamSplitterPhaseShift.md) — Complex unitary beam splitter, MZI intensities and visibility.
 
 - [PhotonicsHongOuMandelInterference](../03_quantum_physics_and_optics/PhotonicsHongOuMandelInterference.md) — Normalized two-photon HOM interference, phase bridge and distinguishable baseline.
+
+- [PhotonicsCPhaseGateUnitary](../03_quantum_physics_and_optics/PhotonicsCPhaseGateUnitary.md) — Six-mode unitary scattering, postselected CZ with success probability 1/9 and graph-state entanglement.

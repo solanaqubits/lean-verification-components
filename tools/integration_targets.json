@@ -836,5 +836,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact distributed_vector_clocks_causal_order_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.PhotonicsCPhaseGateUnitary": {
+    "suite_struct": "PhotonicsCPhaseGateUnitarySuite",
+    "suite_type": "PhotonicsCPhaseGateUnitary.PhotonicsCPhaseGateUnitarySuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "postselected_cphase",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact PhotonicsCPhaseGateUnitary.photonics_cphase_gate_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
