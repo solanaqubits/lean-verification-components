@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**175 Lean files** under Verification/ (173 top-level + 2 auxiliary),
-**176 including Verification.lean**, **133 direct imports**,
-**16,494 audited declarations**.
-Clean strict build: **3624 jobs**. Public live tests: **78**, no errors or skips.
+**176 Lean files** under Verification/ (174 top-level + 2 auxiliary),
+**177 including Verification.lean**, **134 direct imports**,
+**16,721 audited declarations**.
+Clean strict build: **3625 jobs**. Public live tests: **79**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.31
+## Release v0.5.32
+
+[Linear-optical Bell analyzer](docs/release-v0.5.32.en.md) derives a unitary
+normalized ten-dimensional two-photon evolution from balanced splitters.
+It computes all four Bell outputs and derives positive, complete detector POVM
+effects and the Born identity. Psi-plus/minus are identified without error;
+Phi-plus/minus have identical outcome distributions. Success is one half for
+the uniform ensemble and one for a Psi-only ensemble. The result concerns this
+fixed ideal scheme; the universal bound for arbitrary optical networks is outside scope.
+
+## Earlier additions in v0.5.31
 
 [Observed-remove set and causal add-wins](docs/release-v0.5.31.en.md)
 derives fresh tags from operational counters and proves add-wins for concurrent

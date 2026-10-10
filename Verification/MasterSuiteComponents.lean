@@ -1,3 +1,4 @@
+import Verification.PhotonicsBellStateAnalyzer
 import Verification.DistributedCRDTORSet
 import Verification.DistributedCRDTStateLWW
 import Verification.DistributedCausalBroadcast
@@ -383,6 +384,7 @@ structure QuantumPhysicsFullSuite : Prop where
   beam_splitter_phase_shift : PhotonicsBeamSplitterPhaseShift.PhotonicsBeamSplitterPhaseShiftSuite
   hong_ou_mandel : PhotonicsHongOuMandelInterference.PhotonicsHongOuMandelInterferenceSuite
   postselected_cphase : PhotonicsCPhaseGateUnitary.PhotonicsCPhaseGateUnitarySuite
+  bell_state_analyzer : PhotonicsBellStateAnalyzer.PhotonicsBellStateAnalyzerSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -438,6 +440,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact PhotonicsHongOuMandelInterference.photonics_hong_ou_mandel_master_suite
   postselected_cphase := by
     exact PhotonicsCPhaseGateUnitary.photonics_cphase_gate_master_suite
+  bell_state_analyzer := by
+    exact PhotonicsBellStateAnalyzer.photonics_bell_state_analyzer_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

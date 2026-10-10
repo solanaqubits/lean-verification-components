@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 08f22476e81d5dc1df4e23bce89c28b7e2f0152e3ba2fd0f72010945de3413f6
+source_sha256: 4a11deb3144e3b987902ca24130ca17ca74f9d65c98e9ae561b68f3d90d44794
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 133 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 134 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -37,7 +37,7 @@ Scientific priority and first-formalization claims have not been established.
 - [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L506)
 - [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L570)
 - [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L632)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L173)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L175)
 
 - [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L645)
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 133 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 134 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 

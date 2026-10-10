@@ -1,3 +1,4 @@
+import Verification.PhotonicsBellStateAnalyzer
 import Verification.DistributedCRDTORSet
 import Verification.DistributedCRDTStateLWW
 import Verification.DistributedCausalBroadcast
@@ -139,6 +140,7 @@ namespace MasterSuite
 open DistributedCRDTORSet
 open DistributedCausalBroadcast
 
+open PhotonicsBellStateAnalyzer
 open PhotonicsCPhaseGateUnitary
 
 open DistributedVectorClocksCausalOrder

@@ -89,3 +89,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [PhotonicsHongOuMandelInterference](../03_quantum_physics_and_optics/PhotonicsHongOuMandelInterference.md) — Normalized two-photon HOM interference, phase bridge and distinguishable baseline.
 
 - [PhotonicsCPhaseGateUnitary](../03_quantum_physics_and_optics/PhotonicsCPhaseGateUnitary.md) — Six-mode unitary scattering, postselected CZ with success probability 1/9 and graph-state entanglement.
+
+- [PhotonicsBellStateAnalyzer](../03_quantum_physics_and_optics/PhotonicsBellStateAnalyzer.md) — Optical Bell amplitudes, derived detector POVM and prior-dependent discrimination.

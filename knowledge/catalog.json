@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.PhotonicsBellStateAnalyzer",
         "Verification.DistributedCRDTORSet",
         "Verification.DistributedCRDTStateLWW",
         "Verification.DistributedCausalBroadcast",
@@ -1368,6 +1369,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.PhotonicsBellStateAnalyzer",
         "Verification.DistributedCRDTORSet",
         "Verification.DistributedCRDTStateLWW",
         "Verification.DistributedCausalBroadcast",
@@ -1875,6 +1877,17 @@
       "project_imports": [
         "Verification.DistributedCRDTStateLWW",
         "Verification.DistributedCausalBroadcast"
+      ]
+    },
+    {
+      "id": "PhotonicsBellStateAnalyzer",
+      "section": "quantum-physics",
+      "source": "Verification/PhotonicsBellStateAnalyzer.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/PhotonicsBellStateAnalyzer.md",
+      "project_imports": [
+        "Verification.PhotonicsBeamSplitterPhaseShift",
+        "Verification.PhotonicsHongOuMandelInterference",
+        "Verification.PhotonicsCPhaseGateUnitary"
       ]
     }
   ],
