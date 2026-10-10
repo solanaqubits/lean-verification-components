@@ -1,8 +1,67 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.31](../docs/release-v0.5.31.en.md)
+
+## Current public snapshot: Observed-remove set
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 133 |
+| Lean files under Verification/ | 173 top-level + 2 auxiliary = 175 |
+| Root-inclusive sources identical to the private snapshot | 176 |
+| Clean strict build | 3624 jobs; no warnings |
+| Complete verifier audit | 16494 declarations; no violations |
+| Pinned independent full audit | 16494 declarations; no violations |
+| Public live tests | 78; no failures or skips; 277.247s |
+
+All 176 proof sources match private snapshot `9502d727465b13c7895370b4a6dc3f5000616e38`.
+
+The OR-Set retains finite sets of all added element/tag pairs and removed pairs.
+Visibility requires an added tag without a tombstone. Componentwise union gives an
+unconditional join semilattice; reachable transitions preserve removed subset added.
+Persistent per-replica counters imply unique operation IDs and fresh add tags.
+Removal captures its observed live tags once; reception never recomputes that context.
+
+Independent observation causality supports add-wins for a concurrent add/remove pair,
+including their complete post-operation snapshots. A later removal that observes the
+new tag may remove it. Tombstones prevent resurrection of a fixed removed tag;
+a new add restores visibility using a fresh tag. Metadata are monotone; visible
+membership is not. Equal included immutable updates, with their captured removal
+contexts, imply equal states independently of delivery order and duplicates.
+
+Authentic sent snapshots remain reliably available. Recurring sends and weak fairness
+for continuously useful receptions imply eventual dissemination. After updates cease,
+all replicas stabilize to the finite global join. The causal-broadcast adapter uses
+actual delivery logs and proves convergence for an announced covering finite batch,
+including snapshots of a fixed reachable checkpoint. It does not claim a fully coupled
+serializer for arbitrary ongoing updates. Full-state union does not need causal order.
+
+Regressions cover empty state, local add/remove/re-add, concurrent add/remove, partial
+observation, stale snapshots and duplicates. Counterexamples show suppression by tag
+reuse and resurrection after premature tombstone collection followed by a stale snapshot.
+
+Correct tombstone garbage collection, ORSWOT compression, linearizability, dynamic
+membership, memory-loss recovery and Byzantine behavior are not modeled. Natural
+counters do not overflow; bounded machine counters are outside this model. Python,
+JSON/SHA-256 and SimLab obligations remain open. Novelty is not assessed.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.30](../docs/release-v0.5.30.en.md)
 
-## Current public snapshot: State-based LWW register
+## Historical public snapshot v0.5.30: State-based LWW register
 
 | Check | Measured public result |
 |---|---:|

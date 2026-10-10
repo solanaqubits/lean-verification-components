@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedCRDTORSet",
         "Verification.DistributedCRDTStateLWW",
         "Verification.DistributedCausalBroadcast",
         "Verification.PhotonicsCPhaseGateUnitary",
@@ -1367,6 +1368,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedCRDTORSet",
         "Verification.DistributedCRDTStateLWW",
         "Verification.DistributedCausalBroadcast",
         "Verification.PhotonicsCPhaseGateUnitary",
@@ -1862,6 +1864,16 @@
       "source": "Verification/DistributedCRDTStateLWW.lean",
       "card": "knowledge/09_distributed_systems/DistributedCRDTStateLWW.md",
       "project_imports": [
+        "Verification.DistributedCausalBroadcast"
+      ]
+    },
+    {
+      "id": "DistributedCRDTORSet",
+      "section": "distributed",
+      "source": "Verification/DistributedCRDTORSet.lean",
+      "card": "knowledge/09_distributed_systems/DistributedCRDTORSet.md",
+      "project_imports": [
+        "Verification.DistributedCRDTStateLWW",
         "Verification.DistributedCausalBroadcast"
       ]
     }

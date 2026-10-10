@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**174 Lean files** under Verification/ (172 top-level + 2 auxiliary),
-**175 including Verification.lean**, **132 direct imports**,
-**16,006 audited declarations**.
-Clean strict build: **3623 jobs**. Public live tests: **77**, no errors or skips.
+**175 Lean files** under Verification/ (173 top-level + 2 auxiliary),
+**176 including Verification.lean**, **133 direct imports**,
+**16,494 audited declarations**.
+Clean strict build: **3624 jobs**. Public live tests: **78**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.30
+## Release v0.5.31
+
+[Observed-remove set and causal add-wins](docs/release-v0.5.31.en.md)
+derives fresh tags from operational counters and proves add-wins for concurrent
+operations and complete post-operation snapshots. Componentwise metadata union is
+an unconditional join semilattice. Equal included updates give equal states;
+authentic reliable snapshots and explicit fairness imply dissemination and,
+after updates cease, stabilization. The causal-broadcast adapter and counterexamples
+to tag reuse and premature tombstone collection are included. Tombstone GC,
+ORSWOT compression and linearizability remain outside scope.
+
+## Earlier additions in v0.5.30
 
 [State-based LWW register and strong convergence](docs/release-v0.5.30.en.md)
 derives unique stamps from fresh writes and constructs a join semilattice on

@@ -1,3 +1,4 @@
+import Verification.DistributedCRDTORSet
 import Verification.DistributedCRDTStateLWW
 import Verification.DistributedCausalBroadcast
 import Verification.PhotonicsCPhaseGateUnitary
@@ -564,6 +565,7 @@ structure DistributedSystemsFullSuite : Prop where
   vector_clocks_causal_order : DistributedVectorClocksCausalOrderSuite
   causal_broadcast : DistributedCausalBroadcast.DistributedCausalBroadcastSuite
   crdt_state_lww : DistributedCRDTStateLWW.DistributedCRDTStateLWWSuite
+  crdt_orset : DistributedCRDTORSet.DistributedCRDTORSetSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -616,6 +618,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedCausalBroadcast.distributed_causal_broadcast_master_suite
   crdt_state_lww := by
     exact DistributedCRDTStateLWW.distributed_crdt_state_lww_master_suite
+  crdt_orset := by
+    exact DistributedCRDTORSet.distributed_crdt_orset_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

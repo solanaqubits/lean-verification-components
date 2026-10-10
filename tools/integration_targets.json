@@ -863,5 +863,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedCRDTStateLWW.distributed_crdt_state_lww_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedCRDTORSet": {
+    "suite_struct": "DistributedCRDTORSetSuite",
+    "suite_type": "DistributedCRDTORSet.DistributedCRDTORSetSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "crdt_orset",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedCRDTORSet.distributed_crdt_orset_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

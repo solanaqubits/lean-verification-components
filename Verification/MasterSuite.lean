@@ -1,3 +1,4 @@
+import Verification.DistributedCRDTORSet
 import Verification.DistributedCRDTStateLWW
 import Verification.DistributedCausalBroadcast
 import Verification.PhotonicsCPhaseGateUnitary
@@ -135,6 +136,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open DistributedCRDTORSet
 open DistributedCausalBroadcast
 
 open PhotonicsCPhaseGateUnitary

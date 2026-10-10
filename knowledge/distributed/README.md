@@ -95,3 +95,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedCausalBroadcast](../09_distributed_systems/DistributedCausalBroadcast.md) — Delivered-prefix integrity, causal delivery safety and conditional eventual delivery.
 
 - [DistributedCRDTStateLWW](../09_distributed_systems/DistributedCRDTStateLWW.md) — Compatible joins, operational stamp uniqueness and conditional LWW convergence.
+
+- [DistributedCRDTORSet](../09_distributed_systems/DistributedCRDTORSet.md) — Causal add-wins, metadata joins and conditional OR-Set convergence.
