@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 21999fff2d5a110cbd2f70cd98440fb00b5a67ce8d14d170a2b8f299c79709f6
+source_sha256: 70c9cbe3354c8f84c430068c91344117d686cfda740053eeb9e359e0ff132380
 novelty: not-assessed
 status: reviewed
 ---
@@ -63,3 +63,6 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `DistributedSystemsFullSuite.raymond_tree` includes reachable token conservation, effective holder routing, conditional starvation freedom and exact isolated traffic. [Contract](../09_distributed_systems/DistributedRaymondTreeMutex.md).
 
 `QuantumPhysicsFullSuite.naimark` adds finite POVM dilation, Born-trace preservation, a unitary extension with a fixed pure ancilla and Lueders reduction. POVM effects do not uniquely specify state updates. [Contract](../03_quantum_physics_and_optics/QuantumPOVMNaimarkDilation.md).
+
+The `QuantumPhysicsFullSuite.no_cloning_unitary` field includes the exact unitary
+no-cloning suite, with phase-invariant density overlap constraints and BB84 obstruction.

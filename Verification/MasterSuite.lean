@@ -1,3 +1,4 @@
+import Verification.QuantumNoCloningUnitary
 import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
 import Verification.QuantumE91ProtocolBellCHSH
@@ -142,6 +143,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open QuantumNoCloningUnitary
 
 open QuantumPOVMNaimarkDilation
 open QuantumDepolarizingChannel

@@ -1,3 +1,4 @@
+import Verification.QuantumNoCloningUnitary
 import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
 import Verification.QuantumE91ProtocolBellCHSH
@@ -396,6 +397,7 @@ structure QuantumPhysicsFullSuite : Prop where
   naimark : QuantumPOVMNaimarkDilation.QuantumPOVMNaimarkDilationSuite
   depolarizing : QuantumDepolarizingChannel.QuantumDepolarizingChannelSuite
   e91 : QuantumE91ProtocolBellCHSH.QuantumE91ProtocolBellCHSHSuite
+  no_cloning_unitary : QuantumNoCloningUnitary.QuantumNoCloningUnitarySuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -463,6 +465,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite
   e91 := by
     exact QuantumE91ProtocolBellCHSH.quantum_e91_protocol_bell_chsh_master_suite
+  no_cloning_unitary := by
+    exact QuantumNoCloningUnitary.quantum_no_cloning_unitary_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

@@ -101,3 +101,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumDepolarizingChannel](../03_quantum_physics_and_optics/QuantumDepolarizingChannel.md) — Qubit depolarization, complete positivity and noisy E91 correlations.
 
 - [QuantumPOVMNaimarkDilation](../03_quantum_physics_and_optics/QuantumPOVMNaimarkDilation.md) — Finite POVMs, unitary Naimark dilation and Lueders reduction.
+
+- [QuantumNoCloningUnitary](../03_quantum_physics_and_optics/QuantumNoCloningUnitary.md) — Exact unitary no-cloning, phase-invariant overlap constraints and CNOT action.

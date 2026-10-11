@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumNoCloningUnitary",
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumDepolarizingChannel",
         "Verification.QuantumE91ProtocolBellCHSH",
@@ -1375,6 +1376,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumNoCloningUnitary",
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumDepolarizingChannel",
         "Verification.QuantumE91ProtocolBellCHSH",
@@ -1963,6 +1965,18 @@
       "project_imports": [
         "Verification.PhotonicsBellStateAnalyzer",
         "Verification.QuantumDepolarizingChannel"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumNoCloningUnitary",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumNoCloningUnitary.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumNoCloningUnitary.md",
+      "project_imports": [
+        "Verification.QuantumNoCloningTheorem",
+        "Verification.QuantumBB84ProtocolQBER",
+        "Verification.QuantumPOVMNaimarkDilation"
       ],
       "novelty": "not-assessed"
     }

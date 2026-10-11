@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**182 Lean files** under Verification/ (180 top-level + 2 auxiliary),
-**183 including Verification.lean**, **140 direct imports**,
-**18,067 audited declarations**.
-Clean strict build: **3730 jobs**. Public live tests: **85**, no errors or skips.
+**183 Lean files** under Verification/ (181 top-level + 2 auxiliary),
+**184 including Verification.lean**, **141 direct imports**,
+**18,166 audited declarations**.
+Clean strict build: **3731 jobs**. Public live tests: **86**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.38
+## Release v0.5.39
+
+[Exact unitary no-cloning](docs/release-v0.5.39.en.md)
+derives overlap constraints from unitary evolution and tensor factorization.
+Pure states cloned by one unitary with a fixed blank must be orthogonal or have
+identical density matrices. Global phases are handled explicitly. CNOT copies
+the computational basis and entangles a superposition. Universal cloning in
+dimension at least two and joint cloning of the four BB84 states are impossible.
+General CPTP cloning, mixed-state no-broadcasting and physical QKD security are
+outside scope.
+
+## Earlier additions in v0.5.38
 
 [Finite POVMs and Naimark dilation](docs/release-v0.5.38.en.md)
 proves the finite-dimensional Naimark theorem, preservation of Born probabilities

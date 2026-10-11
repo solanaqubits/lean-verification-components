@@ -1,8 +1,61 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.39](../docs/release-v0.5.39.en.md)
+
+## Current public snapshot: Exact unitary no-cloning
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 141 |
+| Lean files under Verification/ | 181 top-level + 2 auxiliary = 183 |
+| Root-inclusive sources identical to the private snapshot | 184 |
+| Clean strict build | 3731 jobs; no warnings |
+| Complete verifier audit | 18166 declarations; no violations |
+| Pinned independent full audit | 18166 declarations; no violations |
+| Public live tests | 86; no failures or skips; 289.434s |
+
+All 184 proof sources match private snapshot `845ef3d56ad066f0b3896d917e3ebf90e9f7367c`.
+
+Unitary evolution and tensor factorization imply c=c^2 for exact vector cloning
+and t=t^2 for pure-density cloning, where t is the squared overlap. For normalized
+inputs this proves a necessary condition: orthogonality or equality of the pure
+density matrices. The general sufficiency theorem for an arbitrary orthogonal
+pair is not asserted. Global phase invariance is proved for density matrices;
+literal cloning of both psi and -psi is impossible.
+
+An explicit unitary CNOT copies the computational basis, but sends |+>|0> to a
+Bell state proved unequal to every product vector. A unitary cloner exists for
+one prescribed normalized state and blank by isometry extension. This existence
+proof is noncomputable and does not synthesize a circuit.
+
+The squared overlap of |0> and |+> is 1/2 in every dimension at least two. No common
+unitary and fixed normalized blank can clone both densities, hence no universal
+cloner exists. Bridges derive the scalar module's quadratic premise and rule out
+joint cloning of the actual four BB84 states.
+
+The scope is exact deterministic square-unitary cloning of pure states on two
+systems. General CPTP maps with discarded environments, mixed-state
+no-broadcasting, probabilistic or approximate cloners and physical QKD security
+are outside scope. Python, JSON/SHA-256 and SimLab obligations remain open.
+Scientific novelty is not assessed.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.38](../docs/release-v0.5.38.en.md)
 
-## Current public snapshot: Finite Naimark dilation
+## Historical public snapshot v0.5.38: Finite Naimark dilation
 
 | Check | Measured public result |
 |---|---:|

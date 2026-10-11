@@ -101,3 +101,5 @@ open DistributedVectorClocksCausalOrder in
 
 #audit_axioms QuantumPOVMNaimarkDilation.quantum_povm_naimark_dilation_master_suite
 #audit_axioms QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite
+
+#audit_axioms QuantumNoCloningUnitary.quantum_no_cloning_unitary_master_suite

@@ -935,5 +935,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumPOVMNaimarkDilation.quantum_povm_naimark_dilation_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumNoCloningUnitary": {
+    "suite_struct": "QuantumNoCloningUnitarySuite",
+    "suite_type": "QuantumNoCloningUnitary.QuantumNoCloningUnitarySuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "no_cloning_unitary",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumNoCloningUnitary.quantum_no_cloning_unitary_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
