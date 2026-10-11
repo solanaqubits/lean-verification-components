@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumBB84ProtocolQBER",
         "Verification.PhotonicsQuantumTeleportation",
         "Verification.PhotonicsBellStateAnalyzer",
         "Verification.DistributedCRDTORSet",
@@ -1370,6 +1371,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumBB84ProtocolQBER",
         "Verification.PhotonicsQuantumTeleportation",
         "Verification.PhotonicsBellStateAnalyzer",
         "Verification.DistributedCRDTORSet",
@@ -1901,6 +1903,16 @@
         "Verification.PhotonicsBellStateAnalyzer",
         "Verification.QuantumTeleportationProtocol"
       ]
+    },
+    {
+      "id": "QuantumBB84ProtocolQBER",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumBB84ProtocolQBER.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumBB84ProtocolQBER.md",
+      "project_imports": [
+        "Verification.QuantumBB84Protocol"
+      ],
+      "novelty": "not-assessed"
     }
   ],
   "support_modules": [

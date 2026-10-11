@@ -1,3 +1,4 @@
+import Verification.QuantumBB84ProtocolQBER
 import Verification.PhotonicsQuantumTeleportation
 import Verification.PhotonicsBellStateAnalyzer
 import Verification.DistributedCRDTORSet
@@ -387,6 +388,7 @@ structure QuantumPhysicsFullSuite : Prop where
   postselected_cphase : PhotonicsCPhaseGateUnitary.PhotonicsCPhaseGateUnitarySuite
   bell_state_analyzer : PhotonicsBellStateAnalyzer.PhotonicsBellStateAnalyzerSuite
   optical_teleportation : PhotonicsQuantumTeleportation.PhotonicsQuantumTeleportationSuite
+  bb84_qber : QuantumBB84ProtocolQBER.QuantumBB84ProtocolQBERSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -446,6 +448,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact PhotonicsBellStateAnalyzer.photonics_bell_state_analyzer_master_suite
   optical_teleportation := by
     exact PhotonicsQuantumTeleportation.photonics_quantum_teleportation_master_suite
+  bb84_qber := by
+    exact QuantumBB84ProtocolQBER.quantum_bb84_protocol_qber_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

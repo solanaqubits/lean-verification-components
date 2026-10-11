@@ -93,3 +93,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [PhotonicsBellStateAnalyzer](../03_quantum_physics_and_optics/PhotonicsBellStateAnalyzer.md) — Optical Bell amplitudes, derived detector POVM and prior-dependent discrimination.
 
 - [PhotonicsQuantumTeleportation](../03_quantum_physics_and_optics/PhotonicsQuantumTeleportation.md) — Optical teleportation instrument, exact state recovery and no-signalling.
+
+- [QuantumBB84ProtocolQBER](../03_quantum_physics_and_optics/QuantumBB84ProtocolQBER.md) — Born-derived BB84 QBER, normalized intercept-resend channel and finite-sample detection.

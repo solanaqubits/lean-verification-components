@@ -1,3 +1,4 @@
+import Verification.QuantumBB84ProtocolQBER
 import Verification.PhotonicsQuantumTeleportation
 import Verification.PhotonicsBellStateAnalyzer
 import Verification.DistributedCRDTORSet
@@ -137,6 +138,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open QuantumBB84ProtocolQBER
 
 open PhotonicsQuantumTeleportation
 

@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**177 Lean files** under Verification/ (175 top-level + 2 auxiliary),
-**178 including Verification.lean**, **135 direct imports**,
-**16,901 audited declarations**.
-Clean strict build: **3725 jobs**. Public live tests: **80**, no errors or skips.
+**178 Lean files** under Verification/ (176 top-level + 2 auxiliary),
+**179 including Verification.lean**, **136 direct imports**,
+**17,081 audited declarations**.
+Clean strict build: **3726 jobs**. Public live tests: **81**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.33
+## Release v0.5.34
+
+[BB84 QBER from Born measurement](docs/release-v0.5.34.en.md) derives a
+trace-preserving intercept-resend channel with prefactor one half. The sifted
+error probability is exactly one quarter under full interception, and f/4 for
+independent interception with probability f. For m independent sifted rounds,
+detection probability is 1-(3/4)^m; evasion remains possible on every finite sample.
+The model assumes ideal Z/X preparations, projective measurement and an
+authenticated classical channel. Full QKD secrecy is outside its scope.
+
+## Earlier additions in v0.5.33
 
 [Linear-optical quantum teleportation](docs/release-v0.5.33.en.md) derives ten
 Kraus operators from the Bell analyzer on an invariant twenty-dimensional sector.

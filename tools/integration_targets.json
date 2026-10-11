@@ -890,5 +890,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact PhotonicsQuantumTeleportation.photonics_quantum_teleportation_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumBB84ProtocolQBER": {
+    "suite_struct": "QuantumBB84ProtocolQBERSuite",
+    "suite_type": "QuantumBB84ProtocolQBER.QuantumBB84ProtocolQBERSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "bb84_qber",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumBB84ProtocolQBER.quantum_bb84_protocol_qber_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
