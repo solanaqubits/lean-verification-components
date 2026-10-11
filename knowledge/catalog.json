@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.PhotonicsQuantumTeleportation",
         "Verification.PhotonicsBellStateAnalyzer",
         "Verification.DistributedCRDTORSet",
         "Verification.DistributedCRDTStateLWW",
@@ -1369,6 +1370,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.PhotonicsQuantumTeleportation",
         "Verification.PhotonicsBellStateAnalyzer",
         "Verification.DistributedCRDTORSet",
         "Verification.DistributedCRDTStateLWW",
@@ -1888,6 +1890,16 @@
         "Verification.PhotonicsBeamSplitterPhaseShift",
         "Verification.PhotonicsHongOuMandelInterference",
         "Verification.PhotonicsCPhaseGateUnitary"
+      ]
+    },
+    {
+      "id": "PhotonicsQuantumTeleportation",
+      "section": "quantum-physics",
+      "source": "Verification/PhotonicsQuantumTeleportation.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/PhotonicsQuantumTeleportation.md",
+      "project_imports": [
+        "Verification.PhotonicsBellStateAnalyzer",
+        "Verification.QuantumTeleportationProtocol"
       ]
     }
   ],

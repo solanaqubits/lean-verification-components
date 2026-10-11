@@ -1,3 +1,4 @@
+import Verification.PhotonicsQuantumTeleportation
 import Verification.PhotonicsBellStateAnalyzer
 import Verification.DistributedCRDTORSet
 import Verification.DistributedCRDTStateLWW
@@ -385,6 +386,7 @@ structure QuantumPhysicsFullSuite : Prop where
   hong_ou_mandel : PhotonicsHongOuMandelInterference.PhotonicsHongOuMandelInterferenceSuite
   postselected_cphase : PhotonicsCPhaseGateUnitary.PhotonicsCPhaseGateUnitarySuite
   bell_state_analyzer : PhotonicsBellStateAnalyzer.PhotonicsBellStateAnalyzerSuite
+  optical_teleportation : PhotonicsQuantumTeleportation.PhotonicsQuantumTeleportationSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -442,6 +444,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact PhotonicsCPhaseGateUnitary.photonics_cphase_gate_master_suite
   bell_state_analyzer := by
     exact PhotonicsBellStateAnalyzer.photonics_bell_state_analyzer_master_suite
+  optical_teleportation := by
+    exact PhotonicsQuantumTeleportation.photonics_quantum_teleportation_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

@@ -91,3 +91,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [PhotonicsCPhaseGateUnitary](../03_quantum_physics_and_optics/PhotonicsCPhaseGateUnitary.md) — Six-mode unitary scattering, postselected CZ with success probability 1/9 and graph-state entanglement.
 
 - [PhotonicsBellStateAnalyzer](../03_quantum_physics_and_optics/PhotonicsBellStateAnalyzer.md) — Optical Bell amplitudes, derived detector POVM and prior-dependent discrimination.
+
+- [PhotonicsQuantumTeleportation](../03_quantum_physics_and_optics/PhotonicsQuantumTeleportation.md) — Optical teleportation instrument, exact state recovery and no-signalling.

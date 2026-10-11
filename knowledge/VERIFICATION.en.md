@@ -1,8 +1,60 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.33](../docs/release-v0.5.33.en.md)
+
+## Current public snapshot: Optical quantum teleportation
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 135 |
+| Lean files under Verification/ | 175 top-level + 2 auxiliary = 177 |
+| Root-inclusive sources identical to the private snapshot | 178 |
+| Clean strict build | 3725 jobs; no warnings |
+| Complete verifier audit | 16901 declarations; no violations |
+| Pinned independent full audit | 16901 declarations; no violations |
+| Public live tests | 80; no failures or skips; 276.334s |
+
+All 178 proof sources match private snapshot `bc6ec6054e308654f2f2b010c66474b12719cc43`.
+
+The module derives an optical quantum instrument on the twenty-dimensional
+invariant sector (ten Alice Fock outcomes times two Bob modes). Its ten Kraus
+operators come from the existing Bell analyzer and resource embedding; their
+completeness is proved. The successful branches are E_minus(rho) = XZ rho (XZ)†/4
+and E_plus(rho) = X rho X†/4. Each has probability 1/4 for every density operator,
+including mixed inputs; total success is 1/2. Unitary corrections ZX and X give
+the successful channel rho/2, so normalization recovers rho with squared Uhlmann
+fidelity one. Without Alice's classical record the uncorrected channel is I₂/2.
+The physical partial trace and the abstract teleportation protocol are linked.
+
+Regressions include |0>, |1>, |+>, |+i>, the maximally mixed input and trace
+preservation. Incorrect correction Z leaves residual -X: |+> is preserved, but
+|0> and |+i> have squared fidelity zero. Of the six inconclusive detector outcomes,
+four have double occupation and two are dark on the embedded input sector.
+
+The result concerns this conditional passive linear-optical scheme, with a supplied
+ideal Phi-plus resource, matching photon wave packets, ideal detector projection
+and classical feed-forward. Resource generation, deterministic teleportation,
+universal optical discrimination bounds, spectral distinguishability, losses,
+dark counts and detector noise are not modeled. Python, JSON/SHA-256 and SimLab
+correctness obligations remain open.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.32](../docs/release-v0.5.32.en.md)
 
-## Current public snapshot: Concrete optical Bell analyzer
+## Historical public snapshot v0.5.32: Concrete optical Bell analyzer
 
 | Check | Measured public result |
 |---|---:|

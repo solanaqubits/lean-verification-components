@@ -881,5 +881,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact PhotonicsBellStateAnalyzer.photonics_bell_state_analyzer_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.PhotonicsQuantumTeleportation": {
+    "suite_struct": "PhotonicsQuantumTeleportationSuite",
+    "suite_type": "PhotonicsQuantumTeleportation.PhotonicsQuantumTeleportationSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "optical_teleportation",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact PhotonicsQuantumTeleportation.photonics_quantum_teleportation_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

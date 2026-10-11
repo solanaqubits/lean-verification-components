@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**176 Lean files** under Verification/ (174 top-level + 2 auxiliary),
-**177 including Verification.lean**, **134 direct imports**,
-**16,721 audited declarations**.
-Clean strict build: **3625 jobs**. Public live tests: **79**, no errors or skips.
+**177 Lean files** under Verification/ (175 top-level + 2 auxiliary),
+**178 including Verification.lean**, **135 direct imports**,
+**16,901 audited declarations**.
+Clean strict build: **3725 jobs**. Public live tests: **80**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.32
+## Release v0.5.33
+
+[Linear-optical quantum teleportation](docs/release-v0.5.33.en.md) derives ten
+Kraus operators from the Bell analyzer on an invariant twenty-dimensional sector.
+Success is one half for every density operator. Conditional Pauli corrections
+recover the input exactly, with squared Uhlmann fidelity one. The unconditioned
+channel gives Bob the maximally mixed state. The scheme assumes an ideal supplied
+Bell resource, ideal optics and detection; deterministic teleportation is outside scope.
+
+## Earlier additions in v0.5.32
 
 [Linear-optical Bell analyzer](docs/release-v0.5.32.en.md) derives a unitary
 normalized ten-dimensional two-photon evolution from balanced splitters.

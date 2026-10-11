@@ -1,3 +1,4 @@
+import Verification.PhotonicsQuantumTeleportation
 import Verification.PhotonicsBellStateAnalyzer
 import Verification.DistributedCRDTORSet
 import Verification.DistributedCRDTStateLWW
@@ -136,6 +137,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open PhotonicsQuantumTeleportation
 
 open DistributedCRDTORSet
 open DistributedCausalBroadcast
