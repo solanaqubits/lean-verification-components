@@ -1,3 +1,4 @@
+import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
 import Verification.QuantumBB84ProtocolQBER
 import Verification.PhotonicsQuantumTeleportation
@@ -139,6 +140,8 @@ import Verification.SpinPhotonicWaveguide
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open QuantumE91ProtocolBellCHSH
 
 open DistributedMultiPaxosConsensus
 

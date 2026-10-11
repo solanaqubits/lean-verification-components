@@ -95,3 +95,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [PhotonicsQuantumTeleportation](../03_quantum_physics_and_optics/PhotonicsQuantumTeleportation.md) — Optical teleportation instrument, exact state recovery and no-signalling.
 
 - [QuantumBB84ProtocolQBER](../03_quantum_physics_and_optics/QuantumBB84ProtocolQBER.md) — Born-derived BB84 QBER, normalized intercept-resend channel and finite-sample detection.
+
+- [QuantumE91ProtocolBellCHSH](../03_quantum_physics_and_optics/QuantumE91ProtocolBellCHSH.md) — Born-derived E91 correlations, CHSH bounds and key routing.

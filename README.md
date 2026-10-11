@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**179 Lean files** under Verification/ (177 top-level + 2 auxiliary),
-**180 including Verification.lean**, **137 direct imports**,
-**17,615 audited declarations**.
-Clean strict build: **3727 jobs**. Public live tests: **82**, no errors or skips.
+**180 Lean files** under Verification/ (178 top-level + 2 auxiliary),
+**181 including Verification.lean**, **138 direct imports**,
+**17,806 audited declarations**.
+Clean strict build: **3728 jobs**. Public live tests: **83**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.35
+## Release v0.5.36
+
+[Quantum E91 correlations and CHSH violation](docs/release-v0.5.36.en.md)
+derives all nine correlations from singlet Born probabilities, proves the exact
+CHSH value -2 sqrt(2), and separates key, test and discarded rounds. It proves
+classical bounds for finite local laws and separable qubit mixtures. The explicit
+XZ intercept/resend instrument on the supplied singlet produces a separable state.
+Universal Tsirelson bounds, device-independent secrecy and finite-key statistics
+are outside scope.
+
+## Earlier additions in v0.5.35
 
 [Operational Multi-Paxos consensus](docs/release-v0.5.35.en.md) derives slot
 Agreement across ballots from reachable protocol transitions and Promise snapshots,

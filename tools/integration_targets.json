@@ -908,5 +908,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedMultiPaxosConsensus.distributed_multi_paxos_consensus_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumE91ProtocolBellCHSH": {
+    "suite_struct": "QuantumE91ProtocolBellCHSHSuite",
+    "suite_type": "QuantumE91ProtocolBellCHSH.QuantumE91ProtocolBellCHSHSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "e91",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumE91ProtocolBellCHSH.quantum_e91_protocol_bell_chsh_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

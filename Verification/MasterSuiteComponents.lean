@@ -1,3 +1,4 @@
+import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
 import Verification.QuantumBB84ProtocolQBER
 import Verification.PhotonicsQuantumTeleportation
@@ -390,6 +391,7 @@ structure QuantumPhysicsFullSuite : Prop where
   bell_state_analyzer : PhotonicsBellStateAnalyzer.PhotonicsBellStateAnalyzerSuite
   optical_teleportation : PhotonicsQuantumTeleportation.PhotonicsQuantumTeleportationSuite
   bb84_qber : QuantumBB84ProtocolQBER.QuantumBB84ProtocolQBERSuite
+  e91 : QuantumE91ProtocolBellCHSH.QuantumE91ProtocolBellCHSHSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -451,6 +453,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact PhotonicsQuantumTeleportation.photonics_quantum_teleportation_master_suite
   bb84_qber := by
     exact QuantumBB84ProtocolQBER.quantum_bb84_protocol_qber_master_suite
+  e91 := by
+    exact QuantumE91ProtocolBellCHSH.quantum_e91_protocol_bell_chsh_master_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

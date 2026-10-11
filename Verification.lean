@@ -1,3 +1,4 @@
+import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
 import Verification.QuantumBB84ProtocolQBER
 import Verification.PhotonicsQuantumTeleportation
