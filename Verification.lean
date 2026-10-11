@@ -1,3 +1,4 @@
+import Verification.DistributedCoordinatedAttackImpossibility
 import Verification.QuantumNoCloningUnitary
 import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel

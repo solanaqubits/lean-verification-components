@@ -944,5 +944,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumNoCloningUnitary.quantum_no_cloning_unitary_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedCoordinatedAttackImpossibility": {
+    "suite_struct": "DistributedCoordinatedAttackImpossibilitySuite",
+    "suite_type": "DistributedCoordinatedAttackImpossibilitySuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "coordinated_attack",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact distributed_coordinated_attack_impossibility_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

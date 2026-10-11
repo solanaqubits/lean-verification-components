@@ -103,3 +103,6 @@ open DistributedVectorClocksCausalOrder in
 #audit_axioms QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite
 
 #audit_axioms QuantumNoCloningUnitary.quantum_no_cloning_unitary_master_suite
+
+open DistributedCoordinatedAttackImpossibility in
+#print axioms distributed_coordinated_attack_impossibility_master_suite

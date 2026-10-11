@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 70c9cbe3354c8f84c430068c91344117d686cfda740053eeb9e359e0ff132380
+source_sha256: 7a3a8fd6985e183147ce502841b24d3b5595db2b44af8a9af53df72e840bf167
 novelty: not-assessed
 status: reviewed
 ---
@@ -66,3 +66,8 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 
 The `QuantumPhysicsFullSuite.no_cloning_unitary` field includes the exact unitary
 no-cloning suite, with phase-invariant density overlap constraints and BB84 obstruction.
+
+`DistributedSystemsFullSuite.coordinated_attack` adds finite-horizon coordinated
+attack impossibility, with delivery-removal indistinguishability derived from
+local transitions. Agreement and ValidityZero force retreat, contradicting
+ReliableSuccess. [Contract](../09_distributed_systems/DistributedCoordinatedAttackImpossibility.md).

@@ -135,10 +135,13 @@ import Verification.FinslerMultilinear
 import Verification.ProofGraphDAG
 import Verification.CryptoSPNInvariants
 import Verification.SpinPhotonicWaveguide
+import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedCoordinatedAttackImpossibility
 
 open DistributedVectorClocksCausalOrder
 open DistributedRaymondTreeMessageComplexity
@@ -596,6 +599,7 @@ structure DistributedSystemsFullSuite : Prop where
   crdt_state_lww : DistributedCRDTStateLWW.DistributedCRDTStateLWWSuite
   crdt_orset : DistributedCRDTORSet.DistributedCRDTORSetSuite
   multi_paxos : DistributedMultiPaxosConsensus.DistributedMultiPaxosConsensusSuite
+  coordinated_attack : DistributedCoordinatedAttackImpossibilitySuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -652,6 +656,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedCRDTORSet.distributed_crdt_orset_master_suite
   multi_paxos := by
     exact DistributedMultiPaxosConsensus.distributed_multi_paxos_consensus_master_suite
+  coordinated_attack := by
+    exact distributed_coordinated_attack_impossibility_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

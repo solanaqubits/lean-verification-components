@@ -754,7 +754,8 @@
         "Verification.FinslerMultilinear",
         "Verification.ProofGraphDAG",
         "Verification.CryptoSPNInvariants",
-        "Verification.SpinPhotonicWaveguide"
+        "Verification.SpinPhotonicWaveguide",
+        "Verification.DistributedCoordinatedAttackImpossibility"
       ],
       "novelty": "not-assessed"
     },
@@ -1511,7 +1512,8 @@
         "Verification.FinslerMultilinear",
         "Verification.ProofGraphDAG",
         "Verification.CryptoSPNInvariants",
-        "Verification.SpinPhotonicWaveguide"
+        "Verification.SpinPhotonicWaveguide",
+        "Verification.DistributedCoordinatedAttackImpossibility"
       ],
       "novelty": "not-assessed"
     },
@@ -1977,6 +1979,16 @@
         "Verification.QuantumNoCloningTheorem",
         "Verification.QuantumBB84ProtocolQBER",
         "Verification.QuantumPOVMNaimarkDilation"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedCoordinatedAttackImpossibility",
+      "section": "distributed",
+      "source": "Verification/DistributedCoordinatedAttackImpossibility.lean",
+      "card": "knowledge/09_distributed_systems/DistributedCoordinatedAttackImpossibility.md",
+      "project_imports": [
+        "Verification.DistributedMultiPaxosConsensus"
       ],
       "novelty": "not-assessed"
     }

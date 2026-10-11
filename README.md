@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**183 Lean files** under Verification/ (181 top-level + 2 auxiliary),
-**184 including Verification.lean**, **141 direct imports**,
-**18,166 audited declarations**.
-Clean strict build: **3731 jobs**. Public live tests: **86**, no errors or skips.
+**184 Lean files** under Verification/ (182 top-level + 2 auxiliary),
+**185 including Verification.lean**, **142 direct imports**,
+**18,279 audited declarations**.
+Clean strict build: **3732 jobs**. Public live tests: **87**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.39
+## Release v0.5.40
+
+[Coordinated attack impossibility](docs/release-v0.5.40.en.md)
+derives delivery-removal indistinguishability from deterministic local transitions.
+For every fixed finite horizon, Agreement and ValidityZero force retreat on every
+input and delivery schedule, contradicting ReliableSuccess. The model permits
+synchronous rounds and arbitrary message losses, with no sender-visible delivery
+feedback. Regressions cover zero rounds, an always-retreat protocol, lost
+acknowledgements and commuting delivery removals. Unbounded stopping times,
+randomized agreement, quantum channels and Byzantine behavior are outside scope.
+
+## Earlier additions in v0.5.39
 
 [Exact unitary no-cloning](docs/release-v0.5.39.en.md)
 derives overlap constraints from unitary evolution and tensor factorization.

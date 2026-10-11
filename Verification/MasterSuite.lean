@@ -139,10 +139,13 @@ import Verification.FinslerMultilinear
 import Verification.ProofGraphDAG
 import Verification.CryptoSPNInvariants
 import Verification.SpinPhotonicWaveguide
+import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedCoordinatedAttackImpossibility
 
 open QuantumNoCloningUnitary
 
