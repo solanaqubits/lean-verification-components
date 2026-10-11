@@ -99,3 +99,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumE91ProtocolBellCHSH](../03_quantum_physics_and_optics/QuantumE91ProtocolBellCHSH.md) — Born-derived E91 correlations, CHSH bounds and key routing.
 
 - [QuantumDepolarizingChannel](../03_quantum_physics_and_optics/QuantumDepolarizingChannel.md) — Qubit depolarization, complete positivity and noisy E91 correlations.
+
+- [QuantumPOVMNaimarkDilation](../03_quantum_physics_and_optics/QuantumPOVMNaimarkDilation.md) — Finite POVMs, unitary Naimark dilation and Lueders reduction.

@@ -99,4 +99,5 @@ open DistributedVectorClocksCausalOrder in
 
 #audit_axioms QuantumE91ProtocolBellCHSH.quantum_e91_protocol_bell_chsh_master_suite
 
+#audit_axioms QuantumPOVMNaimarkDilation.quantum_povm_naimark_dilation_master_suite
 #audit_axioms QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite

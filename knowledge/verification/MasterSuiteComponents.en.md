@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 81d08a8992ee7ed9daf137e160b43f48708cd704c5047dcb0a701c986ea9fa16
+source_sha256: 21999fff2d5a110cbd2f70cd98440fb00b5a67ce8d14d170a2b8f299c79709f6
 novelty: not-assessed
 status: reviewed
 ---
@@ -61,3 +61,5 @@ QuantumPhysicsFullSuite includes grover_arbitrary_phase, preserving the single-t
 `QuantumPhysicsFullSuite.shor_order_recovery` proves conditional recovery from certified divisors, the spectral GCD criterion and a counterexample to taking all candidate denominators. [Scope and assumptions](../03_quantum_physics_and_optics/QuantumShorOrderRecoveryGCD.md).
 
 `DistributedSystemsFullSuite.raymond_tree` includes reachable token conservation, effective holder routing, conditional starvation freedom and exact isolated traffic. [Contract](../09_distributed_systems/DistributedRaymondTreeMutex.md).
+
+`QuantumPhysicsFullSuite.naimark` adds finite POVM dilation, Born-trace preservation, a unitary extension with a fixed pure ancilla and Lueders reduction. POVM effects do not uniquely specify state updates. [Contract](../03_quantum_physics_and_optics/QuantumPOVMNaimarkDilation.md).

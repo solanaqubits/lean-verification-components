@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
 import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
@@ -392,6 +393,7 @@ structure QuantumPhysicsFullSuite : Prop where
   bell_state_analyzer : PhotonicsBellStateAnalyzer.PhotonicsBellStateAnalyzerSuite
   optical_teleportation : PhotonicsQuantumTeleportation.PhotonicsQuantumTeleportationSuite
   bb84_qber : QuantumBB84ProtocolQBER.QuantumBB84ProtocolQBERSuite
+  naimark : QuantumPOVMNaimarkDilation.QuantumPOVMNaimarkDilationSuite
   depolarizing : QuantumDepolarizingChannel.QuantumDepolarizingChannelSuite
   e91 : QuantumE91ProtocolBellCHSH.QuantumE91ProtocolBellCHSHSuite
 
@@ -455,6 +457,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact PhotonicsQuantumTeleportation.photonics_quantum_teleportation_master_suite
   bb84_qber := by
     exact QuantumBB84ProtocolQBER.quantum_bb84_protocol_qber_master_suite
+  naimark := by
+    exact QuantumPOVMNaimarkDilation.quantum_povm_naimark_dilation_master_suite
   depolarizing := by
     exact QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite
   e91 := by

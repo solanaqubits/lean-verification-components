@@ -926,5 +926,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumPOVMNaimarkDilation": {
+    "suite_struct": "QuantumPOVMNaimarkDilationSuite",
+    "suite_type": "QuantumPOVMNaimarkDilation.QuantumPOVMNaimarkDilationSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "naimark",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumPOVMNaimarkDilation.quantum_povm_naimark_dilation_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

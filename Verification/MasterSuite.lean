@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
 import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
@@ -142,6 +143,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumPOVMNaimarkDilation
 open QuantumDepolarizingChannel
 open QuantumE91ProtocolBellCHSH
 

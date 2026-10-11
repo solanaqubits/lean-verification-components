@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**181 Lean files** under Verification/ (179 top-level + 2 auxiliary),
-**182 including Verification.lean**, **139 direct imports**,
-**17,940 audited declarations**.
-Clean strict build: **3729 jobs**. Public live tests: **84**, no errors or skips.
+**182 Lean files** under Verification/ (180 top-level + 2 auxiliary),
+**183 including Verification.lean**, **140 direct imports**,
+**18,067 audited declarations**.
+Clean strict build: **3730 jobs**. Public live tests: **85**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.37
+## Release v0.5.38
+
+[Finite POVMs and Naimark dilation](docs/release-v0.5.38.en.md)
+proves the finite-dimensional Naimark theorem, preservation of Born probabilities
+and density matrices, and unitary extension with a fixed pure ancilla. Partial
+trace yields the canonical Lueders instrument. Identical POVM effects need not
+determine identical state updates. The constructions are noncomputable; minimality,
+infinite-dimensional spectral measures and physical circuit synthesis are outside scope.
+
+## Earlier additions in v0.5.37
 
 [Quantum depolarizing channel and CHSH damping](docs/release-v0.5.37.en.md)
 proves Kraus completeness, trace preservation and complete positivity for every

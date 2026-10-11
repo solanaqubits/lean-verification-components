@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumDepolarizingChannel",
         "Verification.QuantumE91ProtocolBellCHSH",
         "Verification.DistributedMultiPaxosConsensus",
@@ -1374,6 +1375,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumDepolarizingChannel",
         "Verification.QuantumE91ProtocolBellCHSH",
         "Verification.DistributedMultiPaxosConsensus",
@@ -1950,6 +1952,17 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumDepolarizingChannel.md",
       "project_imports": [
         "Verification.QuantumE91ProtocolBellCHSH"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumPOVMNaimarkDilation",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumPOVMNaimarkDilation.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/QuantumPOVMNaimarkDilation.md",
+      "project_imports": [
+        "Verification.PhotonicsBellStateAnalyzer",
+        "Verification.QuantumDepolarizingChannel"
       ],
       "novelty": "not-assessed"
     }

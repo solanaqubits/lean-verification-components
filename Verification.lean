@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
 import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
