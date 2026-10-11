@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedMultiPaxosConsensus",
         "Verification.QuantumBB84ProtocolQBER",
         "Verification.PhotonicsQuantumTeleportation",
         "Verification.PhotonicsBellStateAnalyzer",
@@ -1371,6 +1372,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedMultiPaxosConsensus",
         "Verification.QuantumBB84ProtocolQBER",
         "Verification.PhotonicsQuantumTeleportation",
         "Verification.PhotonicsBellStateAnalyzer",
@@ -1911,6 +1913,17 @@
       "card": "knowledge/03_quantum_physics_and_optics/QuantumBB84ProtocolQBER.md",
       "project_imports": [
         "Verification.QuantumBB84Protocol"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedMultiPaxosConsensus",
+      "section": "distributed",
+      "source": "Verification/DistributedMultiPaxosConsensus.lean",
+      "card": "knowledge/09_distributed_systems/DistributedMultiPaxosConsensus.md",
+      "project_imports": [
+        "Verification.DistributedPaxos",
+        "Verification.DistributedPaxosConsensus"
       ],
       "novelty": "not-assessed"
     }

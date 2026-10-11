@@ -94,3 +94,5 @@ open DistributedVectorClocksCausalOrder in
 #audit_axioms DistributedCRDTStateLWW.distributed_crdt_state_lww_master_suite
 
 #audit_axioms QuantumBB84ProtocolQBER.quantum_bb84_protocol_qber_master_suite
+
+#audit_axioms DistributedMultiPaxosConsensus.distributed_multi_paxos_consensus_master_suite

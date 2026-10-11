@@ -97,3 +97,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedCRDTStateLWW](../09_distributed_systems/DistributedCRDTStateLWW.md) — Compatible joins, operational stamp uniqueness and conditional LWW convergence.
 
 - [DistributedCRDTORSet](../09_distributed_systems/DistributedCRDTORSet.md) — Causal add-wins, metadata joins and conditional OR-Set convergence.
+
+- [DistributedMultiPaxosConsensus](../09_distributed_systems/DistributedMultiPaxosConsensus.md) — Operational Multi-Paxos, inter-ballot agreement and executed log prefix safety.

@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**178 Lean files** under Verification/ (176 top-level + 2 auxiliary),
-**179 including Verification.lean**, **136 direct imports**,
-**17,081 audited declarations**.
-Clean strict build: **3726 jobs**. Public live tests: **81**, no errors or skips.
+**179 Lean files** under Verification/ (177 top-level + 2 auxiliary),
+**180 including Verification.lean**, **137 direct imports**,
+**17,615 audited declarations**.
+Clean strict build: **3727 jobs**. Public live tests: **82**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.34
+## Release v0.5.35
+
+[Operational Multi-Paxos consensus](docs/release-v0.5.35.en.md) derives slot
+Agreement across ballots from reachable protocol transitions and Promise snapshots,
+without an external SingleVote premise. One phase-one certificate supports multiple
+slots; replica execution preserves comparable chosen prefixes. Safety tolerates
+arbitrary message delays and duplicates. Liveness is not proved; progress requires
+additional leader, quorum, delivery and scheduler assumptions.
+
+## Earlier additions in v0.5.34
 
 [BB84 QBER from Born measurement](docs/release-v0.5.34.en.md) derives a
 trace-preserving intercept-resend channel with prefactor one half. The sifted

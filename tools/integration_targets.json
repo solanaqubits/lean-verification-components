@@ -899,5 +899,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumBB84ProtocolQBER.quantum_bb84_protocol_qber_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedMultiPaxosConsensus": {
+    "suite_struct": "DistributedMultiPaxosConsensusSuite",
+    "suite_type": "DistributedMultiPaxosConsensus.DistributedMultiPaxosConsensusSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "multi_paxos",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedMultiPaxosConsensus.distributed_multi_paxos_consensus_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

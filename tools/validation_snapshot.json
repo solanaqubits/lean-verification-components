@@ -1,18 +1,21 @@
 {
-  "modules_checked": 178,
+  "modules_checked": 179,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 17081,
+    "declarations": 17615,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "49dbaf2f6edb6bad75cc1be5398b3ec89b5fea7130c6302d331cbd2028d24d14",
-    "Verification.MasterSuite": "7b8c3cd72f4e1fefcc4c56de31de24b45b8dd2feb15fce1c2d119787861c5076",
+    "Verification.AxiomAudit": "267d39e64a0373d33441d7971db712cdba19143edea53cf13fb27070f484236a",
+    "Verification.MasterSuite": "c782d0804915c039407f9731e5c398e40b38c3afa6655a785f9a0a7f0c40b138",
+    "Verification.DistributedMultiPaxosConsensus": "bd34269434e9cd7ea1aeddbdb27dd3eb38b81277f2963cfc32b16f814b553185",
+    "Verification.DistributedPaxos": "fae29cb982da1331b2e2a40987bd2ff7d555209d20e45185bd7ff201967d8f8a",
+    "Verification.DistributedPaxosConsensus": "6add20b06145d0ed3456a7716b356c6d52787b7fa2698901d44bb2d080238ea2",
     "Verification.QuantumBB84ProtocolQBER": "e3c0bb64604fdf7a11ab8a00b5c2dd6431768600220b0d7ffb8e9467cb905210",
     "Verification.QuantumBB84Protocol": "d35acd467d3ade0b693b9efb22ed93bb4ad874fbe09b24e6fdc07cd0508fa6ca",
     "Verification.PhotonicsQuantumTeleportation": "ef9f9d795bdcdbd2b74d8b1a401092b9a03dd20583df39e1c5df79451cb42d38",
@@ -83,7 +86,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "b9b63fe3554f7ee39aeb3d1ea01d9b1c9ac5b49c5ced271b3efa22d27eea0430",
+    "Verification.MasterSuiteComponents": "b6f42d53c0060266162ba93688dc12984489baba77df82d0e2ca95859d4bdcd9",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
     "Verification.DistributedMarzulloAlgorithm": "a7c0b9c3f55e2be53a7cc5e90e567990295e699fbfc82172d5668f006ceef08d",
@@ -96,7 +99,6 @@
     "Verification.CryptoShamirSecretSharing": "59fde5cd871b66206025b821790f8dfc5610bfc2620f4f3e2bcb265e6dfeea4f",
     "Verification.ThermoOpticPhaseDrift": "f71198898e0a95337ba634905be7802041af7f0d71d8beb685d62980cfe803bf",
     "Verification.OpticalLossAttenuation": "2fc08e8a123535bf8b3f6fff06f6ed0055608c83ca3ebf7c5893204b0c5c1902",
-    "Verification.DistributedPaxos": "fae29cb982da1331b2e2a40987bd2ff7d555209d20e45185bd7ff201967d8f8a",
     "Verification.DeFiBondingCurve": "bddbfa7b14d5d1f6186fb7de8cb6dc0f0cf12511f064f14e86a51936516af5f3",
     "Verification.DeFiOvercollateralizedLending": "37ef8795e3103e7e56c6508867c7257fb9172e63c7e62794ffcb9697ade01743",
     "Verification.QuantumBellCHSH": "e78a250199ec126ecfc0646eef7e9e254eb54ba6d08fb6b726fb0d8d7dc956d5",
@@ -115,7 +117,6 @@
     "Verification.QuantumBernsteinVazirani": "166a4c7294a1b07cc939bb05eb077fea05df9e50acdb432094d9af5832ea6243",
     "Verification.DeFiERC4626InflationDefense": "427b7b4189ef97541edb31e95f8269de3bc19d567d59c64bb31e294d29239db8",
     "Verification.DeFiERC4626Vault": "3b4f2887fa040000751d03186c0ad66125795176f92d7eaf0b7a8fd4637a3423",
-    "Verification.DistributedPaxosConsensus": "6add20b06145d0ed3456a7716b356c6d52787b7fa2698901d44bb2d080238ea2",
     "Verification.CryptoMerkleTree": "5e4d846aa87640030fb295f2c574d3d4c9ad2ec7f9df34d5265b91292d0a5f53",
     "Verification.QuantumNoCloningTheorem": "069c749182aaa5998a132f1698ae3dddbfaba1ddc6a644b6fd316be6399ebce1",
     "Verification.DeFiImpermanentLoss": "4fafd51381bfb10fe0f73ffa134d33535237f992471f7d218bb2771eae78d72e",
@@ -190,9 +191,9 @@
     "Verification.Specs.QuantumSimonsSpec": "87af35a457c2a8e052f398cf5ce4a5b125ce2bfe15a62bd0518a84244640d86a"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.34 validation: Born-derived BB84 QBER, trace-preserving intercept-resend channel and independent finite samples.",
+  "description": "Public v0.5.35 validation: Operational Multi-Paxos, inter-ballot agreement and executed log prefix safety.",
   "independent_axiom_audit": {
-    "declarations": 17081,
+    "declarations": 17615,
     "passed": true,
     "source_commit": "46024e005996495c65ef609368e11ab39c4222e3",
     "executable_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
@@ -204,7 +205,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "audited": 17081,
+      "audited": 17615,
       "axiomsUsed": [
         "propext",
         "Classical.choice",
@@ -216,14 +217,14 @@
     }
   },
   "regression_tests": {
-    "passed": 81,
+    "passed": 82,
     "skipped": 0,
-    "seconds": 277.682,
+    "seconds": 278.315,
     "note": "Measured full public live suite with LEAN_VERIFIER_LIVE_TESTS=1."
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 136,
-  "full_build_jobs": 3726,
+  "master_direct_imports": 137,
+  "full_build_jobs": 3727,
   "pipeline": {
     "strict_build": true,
     "verify": true,
@@ -282,7 +283,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "fe3e7f4572957e2690769464ccad5e9abfea99043ed3cfd2b05db9d7847fad59",
+  "root_source_sha256": "6cb6c8b9b95fd538dd5334e35a815bce64aaa6aa9456876e562e58d03a830262",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -769,7 +770,7 @@
     "russian_cards": 0,
     "public_release_performed": false
   },
-  "validation_base_commit": "cefa4374b0985c6d56bc61b2c00ff069148ee0bc",
+  "validation_base_commit": "720856b936c4de9d68ffc799eb07b9fdb642309f",
   "statement_conformance_scope": {
     "subject_imports_added": 0,
     "support_modules_added": 2,
@@ -4348,16 +4349,122 @@
     ],
     "public_release_performed": false
   },
-  "previous_public_release_validation": {
-    "version": "0.5.33",
-    "private_snapshot": "bc6ec6054e308654f2f2b010c66474b12719cc43",
-    "public_baseline": "27be20e1c3de0d6ac1f9046ae0ad425f3ffcc59b",
-    "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
-    "independent_auditor_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
-    "independent_audited_declarations": 16901,
-    "lean_files_recursive": 177,
-    "root_inclusive_byte_identical_sources": 178,
-    "publication_method": "sequential main then annotated tag",
+  "multi_paxos_scope": {
+    "module": 137,
+    "base": "2fff8672332796ab463396cdf799e0112e3886eb",
+    "model": "reachable transitions, finite Promise snapshots, immutable per-epoch certificates, write-once slot proposals",
+    "chosen": "historical Accepted events; current simultaneous quorum implies historical Chosen",
+    "ballots": "lexicographic counter/node order proved via natural rank",
+    "proof": "reachable snapshot provenance and future lower-vote exclusion; strong induction on ballot rank",
+    "network": "finite message multiset with nondeterministic input selection, duplication, dropping and delay; refinement and loss-free core realization",
+    "execution": "per-replica next-slot append guarded by available majority acknowledgements; reachable prefix invariant",
+    "derived_legacy_SingleVote": true,
+    "external_SingleVote_or_Agreement_assumption": false,
+    "liveness_proved": false,
+    "flp_formalized": false,
+    "progress_requirements_if_added": [
+      "stable leader",
+      "available quorum",
+      "delivery/retransmission",
+      "scheduler fairness"
+    ],
+    "counterexamples": [
+      "ignore maximum accepted ballot",
+      "second actor reuses ballot and overwrites slot proposal"
+    ],
+    "not_modeled": [
+      "reconfiguration",
+      "crash recovery after lost state",
+      "snapshotting/compaction",
+      "Byzantine forgery",
+      "client deduplication",
+      "exactly-once effects",
+      "linearizability"
+    ],
+    "open_obligations": [
+      "Python",
+      "JSON/SHA-256",
+      "SimLab"
+    ],
+    "novelty": "not-assessed"
+  },
+  "multi_paxos_private_validation_commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 288.247
+    },
+    {
+      "name": "verify-all",
+      "command": [
+        "python3",
+        "tools/verifier_skill.py",
+        "verify-all"
+      ],
+      "exit_code": 0,
+      "seconds": 649.236
+    },
+    {
+      "name": "tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "seconds": 277.47
+    },
+    {
+      "name": "registry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Verification/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.391
+    },
+    {
+      "name": "independent",
+      "command": [
+        "lake",
+        "env",
+        "/tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit",
+        "--root",
+        "Verification",
+        "--allow",
+        "propext,Classical.choice,Quot.sound",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 11.341
+    },
+    {
+      "name": "knowledge",
+      "command": [
+        "python3",
+        "scripts/check_knowledge.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.194
+    }
+  ],
+  "multi_paxos_export_validation": {
+    "live_tests": 82,
+    "strict_build_jobs": 3727,
+    "byte_identical_lean_files": 180,
     "commands": [
       {
         "name": "build",
@@ -4367,18 +4474,7 @@
           "--wfail"
         ],
         "exit_code": 0,
-        "seconds": 222.761,
-        "note": "Fresh project rebuild after correcting release metadata from 0.5.32 to 0.5.33; dependency cache retained."
-      },
-      {
-        "name": "verify-all",
-        "command": [
-          "python3",
-          "tools/verifier_skill.py",
-          "verify-all"
-        ],
-        "exit_code": 0,
-        "seconds": 640.59
+        "seconds": 291.495
       },
       {
         "name": "tests",
@@ -4393,7 +4489,7 @@
           "test_*.py"
         ],
         "exit_code": 0,
-        "seconds": 276.417
+        "seconds": 292.06
       },
       {
         "name": "registry",
@@ -4405,7 +4501,7 @@
           "Verification/AxiomAudit.lean"
         ],
         "exit_code": 0,
-        "seconds": 2.451
+        "seconds": 2.515
       },
       {
         "name": "independent",
@@ -4420,7 +4516,7 @@
           "--json"
         ],
         "exit_code": 0,
-        "seconds": 12.535
+        "seconds": 14.692
       },
       {
         "name": "knowledge",
@@ -4429,11 +4525,12 @@
           "scripts/check_knowledge.py"
         ],
         "exit_code": 0,
-        "seconds": 0.114
+        "seconds": 0.127
       }
-    ]
+    ],
+    "public_release_performed": false
   },
-  "public_release_validation": {
+  "previous_public_release_validation": {
     "version": "0.5.34",
     "private_snapshot": "2fff8672332796ab463396cdf799e0112e3886eb",
     "public_baseline": "cefa4374b0985c6d56bc61b2c00ff069148ee0bc",
@@ -4514,6 +4611,90 @@
         ],
         "exit_code": 0,
         "seconds": 0.11
+      }
+    ]
+  },
+  "public_release_validation": {
+    "version": "0.5.35",
+    "private_snapshot": "c3a0f1586f2d4271fd1bb0ff3d1a22261341b235",
+    "public_baseline": "720856b936c4de9d68ffc799eb07b9fdb642309f",
+    "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
+    "independent_auditor_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
+    "independent_audited_declarations": 17615,
+    "lean_files_recursive": 179,
+    "root_inclusive_byte_identical_sources": 180,
+    "publication_method": "sequential main then annotated tag",
+    "commands": [
+      {
+        "name": "build",
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 230.725
+      },
+      {
+        "name": "verify-all",
+        "command": [
+          "python3",
+          "tools/verifier_skill.py",
+          "verify-all"
+        ],
+        "exit_code": 0,
+        "seconds": 644.532
+      },
+      {
+        "name": "tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py"
+        ],
+        "exit_code": 0,
+        "seconds": 278.395
+      },
+      {
+        "name": "registry",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Verification/AxiomAudit.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 2.423
+      },
+      {
+        "name": "independent",
+        "command": [
+          "lake",
+          "env",
+          "/tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit",
+          "--root",
+          "Verification",
+          "--allow",
+          "propext,Classical.choice,Quot.sound",
+          "--json"
+        ],
+        "exit_code": 0,
+        "seconds": 11.303
+      },
+      {
+        "name": "knowledge",
+        "command": [
+          "python3",
+          "scripts/check_knowledge.py"
+        ],
+        "exit_code": 0,
+        "seconds": 0.114
       }
     ]
   }

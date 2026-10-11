@@ -1,3 +1,4 @@
+import Verification.DistributedMultiPaxosConsensus
 import Verification.QuantumBB84ProtocolQBER
 import Verification.PhotonicsQuantumTeleportation
 import Verification.PhotonicsBellStateAnalyzer
@@ -578,6 +579,7 @@ structure DistributedSystemsFullSuite : Prop where
   causal_broadcast : DistributedCausalBroadcast.DistributedCausalBroadcastSuite
   crdt_state_lww : DistributedCRDTStateLWW.DistributedCRDTStateLWWSuite
   crdt_orset : DistributedCRDTORSet.DistributedCRDTORSetSuite
+  multi_paxos : DistributedMultiPaxosConsensus.DistributedMultiPaxosConsensusSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -632,6 +634,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact DistributedCRDTStateLWW.distributed_crdt_state_lww_master_suite
   crdt_orset := by
     exact DistributedCRDTORSet.distributed_crdt_orset_master_suite
+  multi_paxos := by
+    exact DistributedMultiPaxosConsensus.distributed_multi_paxos_consensus_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :
