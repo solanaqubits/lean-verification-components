@@ -1,8 +1,56 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.37](../docs/release-v0.5.37.en.md)
+
+## Current public snapshot: Qubit depolarization
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 139 |
+| Lean files under Verification/ | 179 top-level + 2 auxiliary = 181 |
+| Root-inclusive sources identical to the private snapshot | 182 |
+| Clean strict build | 3729 jobs; no warnings |
+| Complete verifier audit | 17940 declarations; no violations |
+| Pinned independent full audit | 17940 declarations; no violations |
+| Public live tests | 84; no failures or skips; 281.541s |
+
+All 182 proof sources match private snapshot `09e41d2eca4d4b88ac8c779d8b7d60622b51aaa3`.
+
+The Kraus-defined qubit depolarizing channel is trace preserving for p in [0,1]
+and completely positive for every finite ancilla dimension. Its exact linear form
+is D_p(M)=(1-4p/3) M+(2p/3) Tr(M) I for arbitrary complex matrices.
+The Bloch vector scales by lambda=1-4p/3 and its length by |lambda|, including
+negative lambda when p>3/4. Complete depolarization occurs at p=3/4.
+Composition has parameter p+q-4pq/3, which remains in [0,1].
+
+Acting on Bob's half of the E91 singlet yields lambda rho_minus+(1-lambda) I_4/4.
+The actual Born probabilities give S(p)=-2 sqrt(2) lambda and key QBER=2p/3.
+Regressions include endpoint channels, pure input states and a malformed affine
+formula without the trace factor, which maps zero to a nonzero matrix.
+
+The CHSH violation threshold is not a secret-key threshold. Quantum capacity,
+optimal coding, error-correction protocols, DI-QKD and finite-key effects are not
+modeled. The ideal E91 source, measurements and authenticated classical channel
+retain their existing assumptions. Python, JSON/SHA-256 and SimLab obligations
+remain open. Scientific novelty is not assessed.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.36](../docs/release-v0.5.36.en.md)
 
-## Current public snapshot: Born-derived E91
+## Historical public snapshot v0.5.36: Born-derived E91
 
 | Check | Measured public result |
 |---|---:|

@@ -917,5 +917,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumE91ProtocolBellCHSH.quantum_e91_protocol_bell_chsh_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumDepolarizingChannel": {
+    "suite_struct": "QuantumDepolarizingChannelSuite",
+    "suite_type": "QuantumDepolarizingChannel.QuantumDepolarizingChannelSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "depolarizing",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumDepolarizingChannel.quantum_depolarizing_channel_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

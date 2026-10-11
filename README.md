@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**180 Lean files** under Verification/ (178 top-level + 2 auxiliary),
-**181 including Verification.lean**, **138 direct imports**,
-**17,806 audited declarations**.
-Clean strict build: **3728 jobs**. Public live tests: **83**, no errors or skips.
+**181 Lean files** under Verification/ (179 top-level + 2 auxiliary),
+**182 including Verification.lean**, **139 direct imports**,
+**17,940 audited declarations**.
+Clean strict build: **3729 jobs**. Public live tests: **84**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.36
+## Release v0.5.37
+
+[Quantum depolarizing channel and CHSH damping](docs/release-v0.5.37.en.md)
+proves Kraus completeness, trace preservation and complete positivity for every
+finite ancilla dimension. It derives Bloch scaling, channel composition, the noisy
+E91 singlet, CHSH damping and key QBER. The physical parameter range is [0,1].
+Channel capacity, key secrecy, DI-QKD and finite-key statistics are outside scope.
+
+## Earlier additions in v0.5.36
 
 [Quantum E91 correlations and CHSH violation](docs/release-v0.5.36.en.md)
 derives all nine correlations from singlet Born probabilities, proves the exact

@@ -1,3 +1,4 @@
+import Verification.QuantumDepolarizingChannel
 import Verification.QuantumE91ProtocolBellCHSH
 import Verification.DistributedMultiPaxosConsensus
 import Verification.QuantumBB84ProtocolQBER
@@ -141,6 +142,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumDepolarizingChannel
 open QuantumE91ProtocolBellCHSH
 
 open DistributedMultiPaxosConsensus
