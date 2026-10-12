@@ -1,3 +1,4 @@
+import Verification.CryptoElGamalHomomorphismGroup
 import Verification.CryptoBLSSignatureAggregationGroup
 import Verification.DistributedByzantineSignedGeneralsValidity
 import Verification.DistributedByzantineThreeGeneralsOralImpossibility
@@ -149,6 +150,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open CryptoElGamalHomomorphismGroup
 open CryptoBLSSignatureAggregationGroup
 open DistributedByzantineSignedGeneralsValidity
 

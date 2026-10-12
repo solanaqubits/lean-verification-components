@@ -55,3 +55,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoSchnorrMultiSignaturesMuSigGroup](../04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md) — Finite-group Schnorr aggregation completeness and naive rogue-key witness.
 
 - [CryptoBLSSignatureAggregationGroup](../04_cryptography/CryptoBLSSignatureAggregationGroup.md) — Bilinear BLS aggregation, rogue-key and error-cancellation counterexamples.
+
+- [CryptoElGamalHomomorphismGroup](../04_cryptography/CryptoElGamalHomomorphismGroup.md) — Group ElGamal correctness, weighted homomorphism, rerandomization and malleability.

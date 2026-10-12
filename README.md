@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**188 Lean files** under Verification/ (186 top-level + 2 auxiliary),
-**189 including Verification.lean**, **146 direct imports**,
-**18,858 audited declarations**.
-Clean strict build: **3736 jobs**. Public live tests: **91**, no errors or skips.
+**189 Lean files** under Verification/ (187 top-level + 2 auxiliary),
+**190 including Verification.lean**, **147 direct imports**,
+**18,916 audited declarations**.
+Clean strict build: **3737 jobs**. Public live tests: **92**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.44
+## Release v0.5.45
+
+[Group ElGamal weighted homomorphism](docs/release-v0.5.45.en.md)
+proves group and exponential decryption correctness, scalar uniqueness,
+finite weighted homomorphism, algebraic rerandomization and nontrivial malleability.
+Decryption returns a group point; scalar uniqueness does not provide an efficient
+discrete-logarithm decoder. IND-CPA/IND-CCA proofs, DDH reductions, concrete curves
+and serialization remain outside scope.
+
+## Earlier additions in v0.5.44
 
 [BLS aggregation in bilinear groups](docs/release-v0.5.44.en.md)
 proves individual and aggregate completeness, common-message aggregation and

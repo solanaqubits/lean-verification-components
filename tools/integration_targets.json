@@ -989,5 +989,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact crypto_bls_group_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoElGamalHomomorphismGroup": {
+    "suite_struct": "CryptoElGamalHomomorphismGroupSuite",
+    "suite_type": "CryptoElGamalHomomorphismGroupSuite",
+    "parent": "CryptoFullSuite",
+    "field": "elgamal_group",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact crypto_elgamal_group_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

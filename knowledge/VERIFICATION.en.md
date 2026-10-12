@@ -1,8 +1,55 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.45](../docs/release-v0.5.45.en.md)
+
+## Current public snapshot: Group ElGamal weighted homomorphism
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 147 |
+| Lean files under Verification/ | 187 top-level + 2 auxiliary = 189 |
+| Root-inclusive sources identical to the private snapshot | 190 |
+| Clean strict build | 3737 jobs; no warnings |
+| Complete verifier audit | 18916 declarations; no violations |
+| Pinned independent full audit | 18916 declarations; no violations |
+| Public live tests | 92; no failures or skips; 287.423s |
+
+All 190 proof sources match private snapshot `3dded0e143eb6064cfccaf8e823147e19c3d4b08`.
+
+Group and exponential ElGamal decryption correctness, uniqueness of the scalar
+preimage, and homomorphism of arbitrary finite weighted sums under one public key
+are proved over cyclic groups of prime order q. Algebraic rerandomization adds an
+encryption of zero. A public ciphertext shift changes the decrypted point by a
+provably nonzero amount for a nonzero scalar shift. A concrete ZMod q model
+witnesses the assumptions; a general algebraic identity has separate real and
+modular specializations linking the earlier scalar model.
+
+Decryption returns the group point m • G. Uniqueness of m does not supply an
+efficient discrete-logarithm decoder. Weighted scalar sums are modulo q; interpreting
+them as integer totals requires separate range bounds. Rerandomization is an
+algebraic identity, with no probability-distribution claim.
+
+IND-CPA/IND-CCA security proofs, DDH reductions, efficient discrete-logarithm
+algorithms, concrete elliptic curves and serialization are not modeled.
+Python, JSON/SHA-256 and SimLab obligations remain open.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.44](../docs/release-v0.5.44.en.md)
 
-## Current public snapshot: BLS aggregation in bilinear groups
+## Historical public snapshot v0.5.44: BLS aggregation in bilinear groups
 
 | Check | Measured public result |
 |---|---:|

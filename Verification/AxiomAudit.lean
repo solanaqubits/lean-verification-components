@@ -118,3 +118,6 @@ open DistributedByzantineSignedGeneralsValidity in
 
 open CryptoBLSSignatureAggregationGroup in
 #print axioms crypto_bls_group_master_suite
+
+open CryptoElGamalHomomorphismGroup in
+#print axioms crypto_elgamal_group_master_suite

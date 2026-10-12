@@ -1,3 +1,4 @@
+import Verification.CryptoElGamalHomomorphismGroup
 import Verification.CryptoBLSSignatureAggregationGroup
 import Verification.DistributedByzantineSignedGeneralsValidity
 import Verification.DistributedByzantineThreeGeneralsOralImpossibility
@@ -145,6 +146,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open CryptoElGamalHomomorphismGroup
 open CryptoBLSSignatureAggregationGroup
 open DistributedByzantineSignedGeneralsValidity
 
@@ -322,6 +324,7 @@ structure CryptoFullSuite : Prop where
   schnorr_identification : CryptoSchnorrIdentification.CryptoSchnorrIdentificationSuite.{u₁}
   musig_group : CryptoSchnorrMultiSignaturesMuSigGroupSuite
   bls_group : CryptoBLSSignatureAggregationGroupSuite
+  elgamal_group : CryptoElGamalHomomorphismGroupSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -359,6 +362,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact crypto_schnorr_musig_group_master_suite
   bls_group := by
     exact crypto_bls_group_master_suite
+  elgamal_group := by
+    exact crypto_elgamal_group_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :
