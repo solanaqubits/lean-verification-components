@@ -121,3 +121,6 @@ open CryptoBLSSignatureAggregationGroup in
 
 open CryptoElGamalHomomorphismGroup in
 #print axioms crypto_elgamal_group_master_suite
+
+open CryptoCommitmentVectorPedersenGroup in
+#print axioms crypto_vector_pedersen_master_suite

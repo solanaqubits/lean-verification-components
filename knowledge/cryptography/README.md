@@ -57,3 +57,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoBLSSignatureAggregationGroup](../04_cryptography/CryptoBLSSignatureAggregationGroup.md) — Bilinear BLS aggregation, rogue-key and error-cancellation counterexamples.
 
 - [CryptoElGamalHomomorphismGroup](../04_cryptography/CryptoElGamalHomomorphismGroup.md) — Group ElGamal correctness, weighted homomorphism, rerandomization and malleability.
+
+- [CryptoCommitmentVectorPedersenGroup](../04_cryptography/CryptoCommitmentVectorPedersenGroup.md) — Vector Pedersen commitments, uniform-PMF hiding and collision relations.

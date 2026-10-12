@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoCommitmentVectorPedersenGroup",
         "Verification.CryptoElGamalHomomorphismGroup",
         "Verification.CryptoBLSSignatureAggregationGroup",
         "Verification.DistributedByzantineSignedGeneralsValidity",
@@ -1382,6 +1383,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoCommitmentVectorPedersenGroup",
         "Verification.CryptoElGamalHomomorphismGroup",
         "Verification.CryptoBLSSignatureAggregationGroup",
         "Verification.DistributedByzantineSignedGeneralsValidity",
@@ -2051,6 +2053,17 @@
       "card": "knowledge/04_cryptography/CryptoElGamalHomomorphismGroup.md",
       "project_imports": [
         "Verification.CryptoElGamalEncryption",
+        "Verification.CryptoSchnorrMultiSignaturesMuSigGroup"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoCommitmentVectorPedersenGroup",
+      "section": "cryptography",
+      "source": "Verification/CryptoCommitmentVectorPedersenGroup.lean",
+      "card": "knowledge/04_cryptography/CryptoCommitmentVectorPedersenGroup.md",
+      "project_imports": [
+        "Verification.CryptoPedersenHomomorphicSum",
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup"
       ],
       "novelty": "not-assessed"

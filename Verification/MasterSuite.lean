@@ -1,3 +1,4 @@
+import Verification.CryptoCommitmentVectorPedersenGroup
 import Verification.CryptoElGamalHomomorphismGroup
 import Verification.CryptoBLSSignatureAggregationGroup
 import Verification.DistributedByzantineSignedGeneralsValidity
@@ -149,6 +150,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open CryptoCommitmentVectorPedersenGroup
 
 open CryptoElGamalHomomorphismGroup
 open CryptoBLSSignatureAggregationGroup

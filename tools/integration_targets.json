@@ -998,5 +998,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact crypto_elgamal_group_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoCommitmentVectorPedersenGroup": {
+    "suite_struct": "CryptoCommitmentVectorPedersenGroupSuite",
+    "suite_type": "CryptoCommitmentVectorPedersenGroupSuite",
+    "parent": "CryptoFullSuite",
+    "field": "vector_pedersen",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact crypto_vector_pedersen_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

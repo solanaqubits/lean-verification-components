@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**189 Lean files** under Verification/ (187 top-level + 2 auxiliary),
-**190 including Verification.lean**, **147 direct imports**,
-**18,916 audited declarations**.
-Clean strict build: **3737 jobs**. Public live tests: **92**, no errors or skips.
+**190 Lean files** under Verification/ (188 top-level + 2 auxiliary),
+**191 including Verification.lean**, **148 direct imports**,
+**18,990 audited declarations**.
+Clean strict build: **3738 jobs**. Public live tests: **93**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.45
+## Release v0.5.46
+
+[Vector Pedersen commitments](docs/release-v0.5.46.en.md)
+proves vector linearity and weighted homomorphism, perfect hiding through a uniform
+PMF, exact collision relations and conditional logarithm extraction. Equal bases
+and known relations yield explicit alternate openings. Generators are an indexed
+family, not a linearly independent basis. Computational binding, parameter
+generation, coordinate opening proofs and ZKP protocols remain outside scope.
+
+## Earlier additions in v0.5.45
 
 [Group ElGamal weighted homomorphism](docs/release-v0.5.45.en.md)
 proves group and exponential decryption correctness, scalar uniqueness,
