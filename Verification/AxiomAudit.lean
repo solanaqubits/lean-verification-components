@@ -115,3 +115,6 @@ open DistributedByzantineThreeGeneralsOralImpossibility in
 
 open DistributedByzantineSignedGeneralsValidity in
 #print axioms byzantine_signed_generals_master_suite
+
+open CryptoBLSSignatureAggregationGroup in
+#print axioms crypto_bls_group_master_suite

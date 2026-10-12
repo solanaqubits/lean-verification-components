@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**187 Lean files** under Verification/ (185 top-level + 2 auxiliary),
-**188 including Verification.lean**, **145 direct imports**,
-**18,776 audited declarations**.
-Clean strict build: **3735 jobs**. Public live tests: **90**, no errors or skips.
+**188 Lean files** under Verification/ (186 top-level + 2 auxiliary),
+**189 including Verification.lean**, **146 direct imports**,
+**18,858 audited declarations**.
+Clean strict build: **3736 jobs**. Public live tests: **91**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.43
+## Release v0.5.44
+
+[BLS aggregation in bilinear groups](docs/release-v0.5.44.en.md)
+proves individual and aggregate completeness, common-message aggregation and
+composition of valid partial signatures. Pairing injectivity is derived from
+cyclicity and nondegeneracy. A concrete scalar model witnesses the assumptions.
+Rogue-key and error-cancellation counterexamples delimit what verification
+establishes. Concrete curves, hash-to-curve, serialization, PoP and computational
+security reductions remain outside scope.
+
+## Earlier additions in v0.5.43
 
 [Signed Byzantine broadcast](docs/release-v0.5.43.en.md)
 proves Agreement and CommanderValidity in f + 1 synchronous rounds with ideal

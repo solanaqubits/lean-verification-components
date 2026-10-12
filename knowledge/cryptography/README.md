@@ -53,3 +53,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoSchnorrIdentification](../04_cryptography_and_protocols/CryptoSchnorrIdentification.md) — Finite-group identification, algebraic extraction and exact HVZK transcript distributions.
 
 - [CryptoSchnorrMultiSignaturesMuSigGroup](../04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md) — Finite-group Schnorr aggregation completeness and naive rogue-key witness.
+
+- [CryptoBLSSignatureAggregationGroup](../04_cryptography/CryptoBLSSignatureAggregationGroup.md) — Bilinear BLS aggregation, rogue-key and error-cancellation counterexamples.

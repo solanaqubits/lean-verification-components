@@ -1,3 +1,4 @@
+import Verification.CryptoBLSSignatureAggregationGroup
 import Verification.DistributedByzantineSignedGeneralsValidity
 import Verification.DistributedByzantineThreeGeneralsOralImpossibility
 import Verification.CryptoSchnorrMultiSignaturesMuSigGroup

@@ -980,5 +980,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact byzantine_signed_generals_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBLSSignatureAggregationGroup": {
+    "suite_struct": "CryptoBLSSignatureAggregationGroupSuite",
+    "suite_type": "CryptoBLSSignatureAggregationGroupSuite",
+    "parent": "CryptoFullSuite",
+    "field": "bls_group",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact crypto_bls_group_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

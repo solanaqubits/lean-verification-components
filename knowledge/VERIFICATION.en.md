@@ -1,8 +1,60 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.44](../docs/release-v0.5.44.en.md)
+
+## Current public snapshot: BLS aggregation in bilinear groups
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 146 |
+| Lean files under Verification/ | 186 top-level + 2 auxiliary = 188 |
+| Root-inclusive sources identical to the private snapshot | 189 |
+| Clean strict build | 3736 jobs; no warnings |
+| Complete verifier audit | 18858 declarations; no violations |
+| Pinned independent full audit | 18858 declarations; no violations |
+| Public live tests | 91; no failures or skips; 294.911s |
+
+All 189 proof sources match private snapshot `d450b5712764642fbecf436870d0a1f713270819`.
+
+The module proves algebraic BLS completeness in three abstract cyclic groups
+of prime order q, with scalars in ZMod q and a nondegenerate bilinear pairing.
+It establishes individual verification, aggregation for arbitrary finite message
+families, common-message aggregation and composition of accepted partials.
+Message distinctness is not required for these algebraic identities.
+
+Pairing injectivity follows from cyclicity and nondegeneracy. A concrete model
+with all groups equal to ZMod q and multiplication as the pairing witnesses
+realizability of the assumptions; this model is not cryptographically secure.
+A shared commutative-ring identity is independently specialized over the reals
+and ZMod q, without asserting a homomorphism between these fields.
+
+Explicit algebraic counterexamples show rogue-key vulnerability of naive
+common-message aggregation without PoP and cancellation of two nonzero signature
+errors: both altered components are individually invalid while their sum verifies.
+Regressions cover one and two participants, repeated messages and keys,
+permutations, zero secrets, and concrete arithmetic modulo 7.
+
+Concrete curves such as BLS12-381, Miller's algorithm, hash-to-curve, point
+validation, serialization, PoP and computational security reductions in
+ROM/Co-CDH are not modeled. Python, JSON/SHA-256 and SimLab obligations remain open.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.43](../docs/release-v0.5.43.en.md)
 
-## Current public snapshot: Signed Byzantine broadcast
+## Historical public snapshot v0.5.43: Signed Byzantine broadcast
 
 | Check | Measured public result |
 |---|---:|
