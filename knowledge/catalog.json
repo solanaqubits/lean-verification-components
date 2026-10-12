@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoSchnorrMultiSignaturesMuSigGroup",
         "Verification.QuantumNoCloningUnitary",
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumDepolarizingChannel",
@@ -1377,6 +1378,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoSchnorrMultiSignaturesMuSigGroup",
         "Verification.QuantumNoCloningUnitary",
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumDepolarizingChannel",
@@ -1989,6 +1991,17 @@
       "card": "knowledge/09_distributed_systems/DistributedCoordinatedAttackImpossibility.md",
       "project_imports": [
         "Verification.DistributedMultiPaxosConsensus"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoSchnorrMultiSignaturesMuSigGroup",
+      "section": "cryptography",
+      "source": "Verification/CryptoSchnorrMultiSignaturesMuSigGroup.lean",
+      "card": "knowledge/04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md",
+      "project_imports": [
+        "Verification.CryptoMuSig2Aggregation",
+        "Verification.DistributedCoordinatedAttackImpossibility"
       ],
       "novelty": "not-assessed"
     }

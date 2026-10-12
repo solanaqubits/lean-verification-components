@@ -953,5 +953,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact distributed_coordinated_attack_impossibility_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoSchnorrMultiSignaturesMuSigGroup": {
+    "suite_struct": "CryptoSchnorrMultiSignaturesMuSigGroupSuite",
+    "suite_type": "CryptoSchnorrMultiSignaturesMuSigGroupSuite",
+    "parent": "CryptoFullSuite",
+    "field": "musig_group",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact crypto_schnorr_musig_group_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

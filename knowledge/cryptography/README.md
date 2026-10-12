@@ -51,3 +51,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoPedersenHomomorphicSum](../04_cryptography_and_protocols/CryptoPedersenHomomorphicSum.md) — Finite-group homomorphism, exact hiding distributions and collision extraction.
 
 - [CryptoSchnorrIdentification](../04_cryptography_and_protocols/CryptoSchnorrIdentification.md) — Finite-group identification, algebraic extraction and exact HVZK transcript distributions.
+
+- [CryptoSchnorrMultiSignaturesMuSigGroup](../04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md) — Finite-group Schnorr aggregation completeness and naive rogue-key witness.

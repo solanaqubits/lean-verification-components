@@ -1,3 +1,4 @@
+import Verification.CryptoSchnorrMultiSignaturesMuSigGroup
 import Verification.QuantumNoCloningUnitary
 import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
@@ -144,6 +145,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open CryptoSchnorrMultiSignaturesMuSigGroup
 
 open DistributedCoordinatedAttackImpossibility
 

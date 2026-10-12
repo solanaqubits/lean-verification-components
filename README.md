@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**184 Lean files** under Verification/ (182 top-level + 2 auxiliary),
-**185 including Verification.lean**, **142 direct imports**,
-**18,279 audited declarations**.
-Clean strict build: **3732 jobs**. Public live tests: **87**, no errors or skips.
+**185 Lean files** under Verification/ (183 top-level + 2 auxiliary),
+**186 including Verification.lean**, **143 direct imports**,
+**18,362 audited declarations**.
+Clean strict build: **3733 jobs**. Public live tests: **88**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.40
+## Release v0.5.41
+
+[Finite-group Schnorr aggregation](docs/release-v0.5.41.en.md)
+proves partial and aggregate algebraic completeness for a static key vector in
+a cyclic prime-order group. Accepted partial responses with a common challenge
+assemble into an accepted aggregate. A naive rogue-key witness exhibits key
+cancellation and a passing signature. A common ring identity connects the real
+scalar model and modular specialization. AGM/ROM security, hashed-coefficient
+rogue-key resistance, interactive MuSig2/BIP327 and serialization are outside scope.
+
+## Earlier additions in v0.5.40
 
 [Coordinated attack impossibility](docs/release-v0.5.40.en.md)
 derives delivery-removal indistinguishability from deterministic local transitions.

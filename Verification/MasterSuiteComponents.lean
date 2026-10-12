@@ -1,3 +1,4 @@
+import Verification.CryptoSchnorrMultiSignaturesMuSigGroup
 import Verification.QuantumNoCloningUnitary
 import Verification.QuantumPOVMNaimarkDilation
 import Verification.QuantumDepolarizingChannel
@@ -140,6 +141,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open CryptoSchnorrMultiSignaturesMuSigGroup
 
 open DistributedCoordinatedAttackImpossibility
 
@@ -309,6 +312,7 @@ structure CryptoFullSuite : Prop where
   forking_lemma : CryptoTranscriptForkingLemma.ForkingLemmaFormalSuite
   pedersen_homomorphic_sum : CryptoPedersenHomomorphicSum.CryptoPedersenHomomorphicSumSuite.{u₁}
   schnorr_identification : CryptoSchnorrIdentification.CryptoSchnorrIdentificationSuite.{u₁}
+  musig_group : CryptoSchnorrMultiSignaturesMuSigGroupSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -342,6 +346,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoPedersenHomomorphicSum.crypto_pedersen_homomorphic_sum_master_suite
   schnorr_identification := by
     exact CryptoSchnorrIdentification.crypto_schnorr_identification_master_suite
+  musig_group := by
+    exact crypto_schnorr_musig_group_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :

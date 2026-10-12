@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 7a3a8fd6985e183147ce502841b24d3b5595db2b44af8a9af53df72e840bf167
+source_sha256: 647e73af3e57247069d5a2c8a2ff7358fda7fef466c741537166017f2f8e22a4
 novelty: not-assessed
 status: reviewed
 ---
@@ -71,3 +71,7 @@ no-cloning suite, with phase-invariant density overlap constraints and BB84 obst
 attack impossibility, with delivery-removal indistinguishability derived from
 local transitions. Agreement and ValidityZero force retreat, contradicting
 ReliableSuccess. [Contract](../09_distributed_systems/DistributedCoordinatedAttackImpossibility.md).
+
+`CryptoFullSuite.musig_group` adds finite cyclic-group Schnorr aggregation,
+composition of accepted partial responses and a naive rogue-key witness.
+[Contract](../04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md).

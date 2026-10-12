@@ -106,3 +106,6 @@ open DistributedVectorClocksCausalOrder in
 
 open DistributedCoordinatedAttackImpossibility in
 #print axioms distributed_coordinated_attack_impossibility_master_suite
+
+open CryptoSchnorrMultiSignaturesMuSigGroup in
+#print axioms crypto_schnorr_musig_group_master_suite
