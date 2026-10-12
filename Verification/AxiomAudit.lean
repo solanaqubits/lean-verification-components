@@ -112,3 +112,6 @@ open CryptoSchnorrMultiSignaturesMuSigGroup in
 
 open DistributedByzantineThreeGeneralsOralImpossibility in
 #print axioms byzantine_three_generals_oral_master_suite
+
+open DistributedByzantineSignedGeneralsValidity in
+#print axioms byzantine_signed_generals_master_suite

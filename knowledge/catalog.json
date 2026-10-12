@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedByzantineSignedGeneralsValidity",
         "Verification.DistributedByzantineThreeGeneralsOralImpossibility",
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup",
         "Verification.QuantumNoCloningUnitary",
@@ -1379,6 +1380,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedByzantineSignedGeneralsValidity",
         "Verification.DistributedByzantineThreeGeneralsOralImpossibility",
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup",
         "Verification.QuantumNoCloningUnitary",
@@ -2014,6 +2016,16 @@
       "card": "knowledge/09_distributed_systems/DistributedByzantineThreeGeneralsOralImpossibility.md",
       "project_imports": [
         "Verification.DistributedCoordinatedAttackImpossibility"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedByzantineSignedGeneralsValidity",
+      "section": "distributed",
+      "source": "Verification/DistributedByzantineSignedGeneralsValidity.lean",
+      "card": "knowledge/09_distributed_systems/DistributedByzantineSignedGeneralsValidity.md",
+      "project_imports": [
+        "Verification.DistributedByzantineThreeGeneralsOralImpossibility"
       ],
       "novelty": "not-assessed"
     }

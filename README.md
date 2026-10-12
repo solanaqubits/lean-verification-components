@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**186 Lean files** under Verification/ (184 top-level + 2 auxiliary),
-**187 including Verification.lean**, **144 direct imports**,
-**18,521 audited declarations**.
-Clean strict build: **3734 jobs**. Public live tests: **89**, no errors or skips.
+**187 Lean files** under Verification/ (185 top-level + 2 auxiliary),
+**188 including Verification.lean**, **145 direct imports**,
+**18,776 audited declarations**.
+Clean strict build: **3735 jobs**. Public live tests: **90**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.42
+## Release v0.5.43
+
+[Signed Byzantine broadcast](docs/release-v0.5.43.en.md)
+proves Agreement and CommanderValidity in f + 1 synchronous rounds with ideal
+signatures, n >= f + 2 nodes and at most f static Byzantine faults. Signature
+origins and dissemination follow from execution transitions. Final honest
+lieutenant views coincide. A delayed-chain counterexample establishes why the
+round-length filter matters. Computational signature security, asynchrony and
+dynamic faults remain outside scope.
+
+## Earlier additions in v0.5.42
 
 [Three-generals oral Byzantine broadcast](docs/release-v0.5.42.en.md)
 proves that Agreement and CommanderValidity cannot both hold for three nodes

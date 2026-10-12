@@ -1,3 +1,4 @@
+import Verification.DistributedByzantineSignedGeneralsValidity
 import Verification.DistributedByzantineThreeGeneralsOralImpossibility
 import Verification.CryptoSchnorrMultiSignaturesMuSigGroup
 import Verification.DistributedCoordinatedAttackImpossibility

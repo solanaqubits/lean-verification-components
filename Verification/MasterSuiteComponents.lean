@@ -1,3 +1,4 @@
+import Verification.DistributedByzantineSignedGeneralsValidity
 import Verification.DistributedByzantineThreeGeneralsOralImpossibility
 import Verification.CryptoSchnorrMultiSignaturesMuSigGroup
 import Verification.QuantumNoCloningUnitary
@@ -142,6 +143,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedByzantineSignedGeneralsValidity
 
 open DistributedByzantineThreeGeneralsOralImpossibility
 
@@ -610,6 +613,7 @@ structure DistributedSystemsFullSuite : Prop where
   multi_paxos : DistributedMultiPaxosConsensus.DistributedMultiPaxosConsensusSuite
   coordinated_attack : DistributedCoordinatedAttackImpossibilitySuite
   byzantine_oral : DistributedByzantineThreeGeneralsOralImpossibilitySuite
+  byzantine_signed : DistributedByzantineSignedGeneralsValiditySuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -670,6 +674,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact distributed_coordinated_attack_impossibility_master_suite
   byzantine_oral := by
     exact byzantine_three_generals_oral_master_suite
+  byzantine_signed := by
+    exact byzantine_signed_generals_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

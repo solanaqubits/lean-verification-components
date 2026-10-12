@@ -103,3 +103,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedCoordinatedAttackImpossibility](../09_distributed_systems/DistributedCoordinatedAttackImpossibility.md) — Finite-round coordinated attack impossibility and operational delivery removal.
 
 - [DistributedByzantineThreeGeneralsOralImpossibility](../09_distributed_systems/DistributedByzantineThreeGeneralsOralImpossibility.md) — Three-generals oral Byzantine broadcast impossibility.
+
+- [DistributedByzantineSignedGeneralsValidity](../09_distributed_systems/DistributedByzantineSignedGeneralsValidity.md) — Signed Byzantine broadcast, operational signature origins and round filtering.

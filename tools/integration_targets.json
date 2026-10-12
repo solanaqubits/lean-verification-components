@@ -971,5 +971,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact byzantine_three_generals_oral_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedByzantineSignedGeneralsValidity": {
+    "suite_struct": "DistributedByzantineSignedGeneralsValiditySuite",
+    "suite_type": "DistributedByzantineSignedGeneralsValiditySuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "byzantine_signed",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact byzantine_signed_generals_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
