@@ -109,3 +109,6 @@ open DistributedCoordinatedAttackImpossibility in
 
 open CryptoSchnorrMultiSignaturesMuSigGroup in
 #print axioms crypto_schnorr_musig_group_master_suite
+
+open DistributedByzantineThreeGeneralsOralImpossibility in
+#print axioms byzantine_three_generals_oral_master_suite

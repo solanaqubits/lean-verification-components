@@ -1,3 +1,4 @@
+import Verification.DistributedByzantineThreeGeneralsOralImpossibility
 import Verification.CryptoSchnorrMultiSignaturesMuSigGroup
 import Verification.QuantumNoCloningUnitary
 import Verification.QuantumPOVMNaimarkDilation
@@ -145,6 +146,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedByzantineThreeGeneralsOralImpossibility
 
 open CryptoSchnorrMultiSignaturesMuSigGroup
 

@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**185 Lean files** under Verification/ (183 top-level + 2 auxiliary),
-**186 including Verification.lean**, **143 direct imports**,
-**18,362 audited declarations**.
-Clean strict build: **3733 jobs**. Public live tests: **88**, no errors or skips.
+**186 Lean files** under Verification/ (184 top-level + 2 auxiliary),
+**187 including Verification.lean**, **144 direct imports**,
+**18,521 audited declarations**.
+Clean strict build: **3734 jobs**. Public live tests: **89**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.41
+## Release v0.5.42
+
+[Three-generals oral Byzantine broadcast](docs/release-v0.5.42.en.md)
+proves that Agreement and CommanderValidity cannot both hold for three nodes
+and at most one static Byzantine fault in synchronous oral messages. Honest
+local-state equality is derived inductively in three constructed executions
+for every fixed finite horizon T. General n <= 3f, signed messages, randomized
+protocols and termination without a common finite bound are outside scope.
+
+## Earlier additions in v0.5.41
 
 [Finite-group Schnorr aggregation](docs/release-v0.5.41.en.md)
 proves partial and aggregate algebraic completeness for a static key vector in

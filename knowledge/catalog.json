@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedByzantineThreeGeneralsOralImpossibility",
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup",
         "Verification.QuantumNoCloningUnitary",
         "Verification.QuantumPOVMNaimarkDilation",
@@ -1378,6 +1379,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedByzantineThreeGeneralsOralImpossibility",
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup",
         "Verification.QuantumNoCloningUnitary",
         "Verification.QuantumPOVMNaimarkDilation",
@@ -2001,6 +2003,16 @@
       "card": "knowledge/04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md",
       "project_imports": [
         "Verification.CryptoMuSig2Aggregation",
+        "Verification.DistributedCoordinatedAttackImpossibility"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedByzantineThreeGeneralsOralImpossibility",
+      "section": "distributed",
+      "source": "Verification/DistributedByzantineThreeGeneralsOralImpossibility.lean",
+      "card": "knowledge/09_distributed_systems/DistributedByzantineThreeGeneralsOralImpossibility.md",
+      "project_imports": [
         "Verification.DistributedCoordinatedAttackImpossibility"
       ],
       "novelty": "not-assessed"

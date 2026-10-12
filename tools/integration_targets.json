@@ -962,5 +962,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact crypto_schnorr_musig_group_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedByzantineThreeGeneralsOralImpossibility": {
+    "suite_struct": "DistributedByzantineThreeGeneralsOralImpossibilitySuite",
+    "suite_type": "DistributedByzantineThreeGeneralsOralImpossibilitySuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "byzantine_oral",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact byzantine_three_generals_oral_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
