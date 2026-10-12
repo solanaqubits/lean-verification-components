@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**190 Lean files** under Verification/ (188 top-level + 2 auxiliary),
-**191 including Verification.lean**, **148 direct imports**,
-**18,990 audited declarations**.
-Clean strict build: **3738 jobs**. Public live tests: **93**, no errors or skips.
+**191 Lean files** under Verification/ (189 top-level + 2 auxiliary),
+**192 including Verification.lean**, **149 direct imports**,
+**19,077 audited declarations**.
+Clean strict build: **3740 jobs**. Public live tests: **94**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.46
+## Release v0.5.47
+
+[Finite-field Shamir sharing](docs/release-v0.5.47.en.md)
+proves t-of-n interpolation over ZMod q, joint PMF secrecy below threshold,
+group-point reconstruction and finite weighted linearity. The explicit secret-shift
+equivalence preserves every observed share. VSS, active share forgery, DKG,
+refresh, threshold signatures and efficient DLOG decoding remain outside scope.
+
+## Earlier additions in v0.5.46
 
 [Vector Pedersen commitments](docs/release-v0.5.46.en.md)
 proves vector linearity and weighted homomorphism, perfect hiding through a uniform

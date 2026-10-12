@@ -1,26 +1,28 @@
 {
-  "modules_checked": 190,
+  "modules_checked": 191,
   "audit": {
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "declarations": 18990,
+    "declarations": 19077,
     "violations": []
   },
   "source_sha256": {
     "Verification.AssetSettlement": "f946cff61b9b4fd509c4a18b5420dd46132a137721f32d71f497a589e1b3f68f",
-    "Verification.AxiomAudit": "21fe87aff5d072a075497f198de8c718a4dcd8ea4e87904df2b94f20fdbd76b7",
-    "Verification.MasterSuite": "3367ee3766b229bce42aa47ffe71a43ef64da019baf2370a1ea5c84dfd73e07a",
-    "Verification.CryptoCommitmentVectorPedersenGroup": "7498ec257e38efd1a80d34444449a63e039a6c2b16e4f18cfbc216fb0530b832",
-    "Verification.CryptoPedersenHomomorphicSum": "6a1928b37e34dd2fd93380c9e64c875a3ecc762a9c69bd1d3d803da6987bcaba",
+    "Verification.AxiomAudit": "7f743fc4e1495f94a4aee1b797515ccf01ba59628f0d63bbd3463d8a043687b2",
+    "Verification.MasterSuite": "0021c0927c78269d15360c8f1df9d34ef92a6b1c48f1e0e73a0d1f69e4848491",
+    "Verification.CryptoShamirSecretSharingGroup": "5337a3b024ca85c15a9b6f4d75f9c4762cb4bbf133a40abb25389f534e6a197c",
+    "Verification.CryptoShamirSecretSharing": "59fde5cd871b66206025b821790f8dfc5610bfc2620f4f3e2bcb265e6dfeea4f",
     "Verification.CryptoSchnorrMultiSignaturesMuSigGroup": "e58300315e0c35b9c2802f20b9fa01319834cd438ba814d901ac45df6fe07320",
     "Verification.CryptoMuSig2Aggregation": "5236457dfbdf59b40499475fe5f0a70a5d00118bc14bffe572db0b9adafa5f44",
     "Verification.DistributedCoordinatedAttackImpossibility": "7c62395bf8705b08def1db0b24b6befa9494a7b90ff8279776d432a7deaa7534",
     "Verification.DistributedMultiPaxosConsensus": "bd34269434e9cd7ea1aeddbdb27dd3eb38b81277f2963cfc32b16f814b553185",
     "Verification.DistributedPaxos": "fae29cb982da1331b2e2a40987bd2ff7d555209d20e45185bd7ff201967d8f8a",
     "Verification.DistributedPaxosConsensus": "6add20b06145d0ed3456a7716b356c6d52787b7fa2698901d44bb2d080238ea2",
+    "Verification.CryptoCommitmentVectorPedersenGroup": "7498ec257e38efd1a80d34444449a63e039a6c2b16e4f18cfbc216fb0530b832",
+    "Verification.CryptoPedersenHomomorphicSum": "6a1928b37e34dd2fd93380c9e64c875a3ecc762a9c69bd1d3d803da6987bcaba",
     "Verification.CryptoElGamalHomomorphismGroup": "868b644d916b4669c18044846ccb18e5e212b46af2773f0f335224726a253d85",
     "Verification.CryptoElGamalEncryption": "417ee25530fa7b57b72656c2728d9bb0093d3d34bf57356c194f2c715686c555",
     "Verification.CryptoBLSSignatureAggregationGroup": "1927eaccce9f68da65480a9edb22f8ebe02e029a9c0956a63fc0652f77f955cc",
@@ -102,7 +104,7 @@
     "Verification.NumericSQLIntervalBounds": "89f4d8f1ef0533636c6683f45f208b81d507acb516d3733429ac294132661fe7",
     "Verification.NumericCertificateDigestBridge": "7370e1299360e9217c95ef1a0e05020c76347c5bbeb8d705760db3dbdfb6cf3f",
     "Verification.MasterHundredRegistry": "832dc824621dd5a1ce0ed0259264d039408579b714b36c330003e83784518137",
-    "Verification.MasterSuiteComponents": "8cebec977beb10f060866156050235d805c59e16e78c5c02eabcbd6f0815b8b2",
+    "Verification.MasterSuiteComponents": "55020136fbf35aec91d0b3621c38818da056739a5875deaa7cb9929d6299a1ee",
     "Verification.CryptoTranscriptForkingLemma": "8732acdc0702e7e6f5edff6e1942848307d0a21f727ea03cf2d72d0f7ce39792",
     "Verification.CryptoSchnorrSignature": "37e53e36d02d5e36f7168c29aaaded0afcdcef03249fdb672707184650309842",
     "Verification.DistributedMarzulloAlgorithm": "a7c0b9c3f55e2be53a7cc5e90e567990295e699fbfc82172d5668f006ceef08d",
@@ -111,7 +113,6 @@
     "Verification.ChipLayoutGeometry": "e89d4dd29d86901037b766f572773ef786be264763de13dbc95af96d813d87ae",
     "Verification.QuantumOptomechanicalCoupling": "b77ce2d085411707b3de3a2546809d41ea21f13f1ff20b8c40b3f281eb087e54",
     "Verification.CryptoFeldmanVSS": "c093b765d886c521e4c47426cc588051f368073fb43ed62fb924c80073cb9af4",
-    "Verification.CryptoShamirSecretSharing": "59fde5cd871b66206025b821790f8dfc5610bfc2620f4f3e2bcb265e6dfeea4f",
     "Verification.ThermoOpticPhaseDrift": "f71198898e0a95337ba634905be7802041af7f0d71d8beb685d62980cfe803bf",
     "Verification.OpticalLossAttenuation": "2fc08e8a123535bf8b3f6fff06f6ed0055608c83ca3ebf7c5893204b0c5c1902",
     "Verification.DeFiBondingCurve": "bddbfa7b14d5d1f6186fb7de8cb6dc0f0cf12511f064f14e86a51936516af5f3",
@@ -202,9 +203,9 @@
     "Verification.Specs.QuantumSimonsSpec": "87af35a457c2a8e052f398cf5ce4a5b125ce2bfe15a62bd0518a84244640d86a"
   },
   "strict_checks_passed": true,
-  "description": "Public v0.5.46 validation: vector Pedersen homomorphism, uniform-PMF hiding and collision relation extraction.",
+  "description": "Public v0.5.47 validation: finite-field Shamir interpolation, joint PMF secrecy and group-point reconstruction.",
   "independent_axiom_audit": {
-    "declarations": 18990,
+    "declarations": 19077,
     "passed": true,
     "source_commit": "46024e005996495c65ef609368e11ab39c4222e3",
     "executable_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
@@ -216,7 +217,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "audited": 18990,
+      "audited": 19077,
       "axiomsUsed": [
         "propext",
         "Classical.choice",
@@ -228,14 +229,14 @@
     }
   },
   "regression_tests": {
-    "passed": 93,
+    "passed": 94,
     "skipped": 0,
-    "seconds": 290.036,
+    "seconds": 297.242,
     "note": "Measured full public live suite with LEAN_VERIFIER_LIVE_TESTS=1."
   },
   "verifier_sha256": "88eb7c500356f63b79f18f71d98bb1195b42af6b2a1fdfaf07090bdbb7ddbb87",
-  "master_direct_imports": 148,
-  "full_build_jobs": 3738,
+  "master_direct_imports": 149,
+  "full_build_jobs": 3740,
   "pipeline": {
     "strict_build": true,
     "verify": true,
@@ -294,7 +295,7 @@
     "force_strict_monotonicity": true,
     "arbitrary_positive_damping_enhancement": true
   },
-  "root_source_sha256": "c799ce818352804944e2e89cc86d64969a8d7d70ec8b186cc9e603ad00c7d9d8",
+  "root_source_sha256": "3633f2c5ba6b78db10159c07b8441c651e8320cd15041e40fe6498c47e06a624",
   "raft_network_induction_scope": {
     "unchanged_operational_steps": true,
     "global_reachable_log_matching": true,
@@ -781,7 +782,7 @@
     "russian_cards": 0,
     "public_release_performed": false
   },
-  "validation_base_commit": "bd0b9c69c788b37cab34f93a49b6790386a29aa9",
+  "validation_base_commit": "b1f43c3adc8eef1c070b64bff19df47078d8e592",
   "statement_conformance_scope": {
     "subject_imports_added": 0,
     "support_modules_added": 2,
@@ -6378,16 +6379,110 @@
     ],
     "public_release_performed": false
   },
-  "previous_public_release_validation": {
-    "version": "0.5.45",
-    "private_snapshot": "3dded0e143eb6064cfccaf8e823147e19c3d4b08",
-    "public_baseline": "6e9b7cf78b002b0c404f2e7bd73de1cdf5a50017",
-    "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
-    "independent_auditor_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
-    "independent_audited_declarations": 18916,
-    "lean_files_recursive": 189,
-    "root_inclusive_byte_identical_sources": 190,
-    "publication_method": "sequential main then annotated tag",
+  "shamir_group_scope": {
+    "model": "Static t-of-n Shamir sharing over ZMod q, 1 <= t <= n < q, injective nonzero coordinates, uniform bounded-degree polynomials with fixed constant term, and cyclic group lift",
+    "proved": [
+      "Lagrange reconstruction from any t valid shares with explicit nonzero denominators",
+      "normalized coalition polynomial of degree equal to coalition size",
+      "explicit reversible secret shift preserving the full vector of observed shares",
+      "joint PMF perfect secrecy for every fixed coalition of size less than t",
+      "finite weighted polynomial closure and scalar/group share linearity",
+      "group-point reconstruction with mathematical scalar uniqueness, without DLOG decoding",
+      "canonical setup with coordinates 1,...,n and generator 1 over ZMod q",
+      "thresholds 1, 2 and n, relabelling, zero-coordinate leakage, real 2-of-n bridge"
+    ],
+    "not_proved": [
+      "VSS/Feldman and active share forgery resistance",
+      "distributed key generation",
+      "proactive refresh and adaptive corruptions",
+      "threshold signatures",
+      "efficient discrete logarithm decoding",
+      "concrete curves and serialization"
+    ],
+    "external_obligations": [
+      "Python",
+      "JSON/SHA-256",
+      "SimLab"
+    ],
+    "dependency_cache": "Isolated copies of pinned packages; separate clean project builds"
+  },
+  "shamir_group_private_validation_commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 339.734
+    },
+    {
+      "name": "verify-all",
+      "command": [
+        "python3",
+        "tools/verifier_skill.py",
+        "verify-all"
+      ],
+      "exit_code": 0,
+      "seconds": 711.751
+    },
+    {
+      "name": "tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "seconds": 304.414
+    },
+    {
+      "name": "registry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Verification/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.46
+    },
+    {
+      "name": "independent",
+      "command": [
+        "lake",
+        "env",
+        "/tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit",
+        "--root",
+        "Verification",
+        "--allow",
+        "propext,Classical.choice,Quot.sound",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 13.099
+    },
+    {
+      "name": "knowledge",
+      "command": [
+        "python3",
+        "scripts/check_knowledge.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.245
+    }
+  ],
+  "shamir_group_export_validation": {
+    "live_tests": 94,
+    "strict_build_jobs": 3740,
+    "byte_identical_lean_files": 192,
     "commands": [
       {
         "name": "build",
@@ -6397,17 +6492,7 @@
           "--wfail"
         ],
         "exit_code": 0,
-        "seconds": 284.346
-      },
-      {
-        "name": "verify-all",
-        "command": [
-          "python3",
-          "tools/verifier_skill.py",
-          "verify-all"
-        ],
-        "exit_code": 0,
-        "seconds": 713.843
+        "seconds": 330.42
       },
       {
         "name": "tests",
@@ -6422,7 +6507,7 @@
           "test_*.py"
         ],
         "exit_code": 0,
-        "seconds": 287.5
+        "seconds": 310.637
       },
       {
         "name": "registry",
@@ -6434,7 +6519,7 @@
           "Verification/AxiomAudit.lean"
         ],
         "exit_code": 0,
-        "seconds": 2.34
+        "seconds": 2.442
       },
       {
         "name": "independent",
@@ -6449,7 +6534,7 @@
           "--json"
         ],
         "exit_code": 0,
-        "seconds": 9.845
+        "seconds": 11.502
       },
       {
         "name": "knowledge",
@@ -6458,11 +6543,12 @@
           "scripts/check_knowledge.py"
         ],
         "exit_code": 0,
-        "seconds": 0.135
+        "seconds": 0.132
       }
-    ]
+    ],
+    "public_release_performed": false
   },
-  "public_release_validation": {
+  "previous_public_release_validation": {
     "version": "0.5.46",
     "private_snapshot": "3f3dc24abfe6d9b6a44069e88f3abd5f49aaa8ed",
     "public_baseline": "bd0b9c69c788b37cab34f93a49b6790386a29aa9",
@@ -6543,6 +6629,90 @@
         ],
         "exit_code": 0,
         "seconds": 0.136
+      }
+    ]
+  },
+  "public_release_validation": {
+    "version": "0.5.47",
+    "private_snapshot": "2ad7e5e834573c88722a35a8ad2c47dbf971e302",
+    "public_baseline": "b1f43c3adc8eef1c070b64bff19df47078d8e592",
+    "independent_auditor_commit": "46024e005996495c65ef609368e11ab39c4222e3",
+    "independent_auditor_sha256": "8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254",
+    "independent_audited_declarations": 19077,
+    "lean_files_recursive": 191,
+    "root_inclusive_byte_identical_sources": 192,
+    "publication_method": "sequential main then annotated tag",
+    "commands": [
+      {
+        "name": "build",
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 279.155
+      },
+      {
+        "name": "verify-all",
+        "command": [
+          "python3",
+          "tools/verifier_skill.py",
+          "verify-all"
+        ],
+        "exit_code": 0,
+        "seconds": 715.559
+      },
+      {
+        "name": "tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py"
+        ],
+        "exit_code": 0,
+        "seconds": 297.327
+      },
+      {
+        "name": "registry",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Verification/AxiomAudit.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 2.366
+      },
+      {
+        "name": "independent",
+        "command": [
+          "lake",
+          "env",
+          "/tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit",
+          "--root",
+          "Verification",
+          "--allow",
+          "propext,Classical.choice,Quot.sound",
+          "--json"
+        ],
+        "exit_code": 0,
+        "seconds": 9.708
+      },
+      {
+        "name": "knowledge",
+        "command": [
+          "python3",
+          "scripts/check_knowledge.py"
+        ],
+        "exit_code": 0,
+        "seconds": 0.137
       }
     ]
   }

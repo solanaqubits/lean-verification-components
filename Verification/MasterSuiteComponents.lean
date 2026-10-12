@@ -1,3 +1,4 @@
+import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup
 import Verification.CryptoElGamalHomomorphismGroup
 import Verification.CryptoBLSSignatureAggregationGroup
@@ -147,6 +148,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open CryptoShamirSecretSharingGroup
 open CryptoCommitmentVectorPedersenGroup
 
 open CryptoElGamalHomomorphismGroup
@@ -329,6 +331,7 @@ structure CryptoFullSuite : Prop where
   bls_group : CryptoBLSSignatureAggregationGroupSuite
   elgamal_group : CryptoElGamalHomomorphismGroupSuite
   vector_pedersen : CryptoCommitmentVectorPedersenGroupSuite
+  shamir_group : CryptoShamirSecretSharingGroupSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -370,6 +373,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact crypto_elgamal_group_master_suite
   vector_pedersen := by
     exact crypto_vector_pedersen_master_suite
+  shamir_group := by
+    exact crypto_shamir_group_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :

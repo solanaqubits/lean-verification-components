@@ -1,3 +1,4 @@
+import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup
 import Verification.CryptoElGamalHomomorphismGroup
 import Verification.CryptoBLSSignatureAggregationGroup
@@ -151,6 +152,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open CryptoShamirSecretSharingGroup
 open CryptoCommitmentVectorPedersenGroup
 
 open CryptoElGamalHomomorphismGroup

@@ -1,3 +1,4 @@
+import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup
 import Verification.CryptoElGamalHomomorphismGroup
 import Verification.CryptoBLSSignatureAggregationGroup

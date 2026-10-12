@@ -1007,5 +1007,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact crypto_vector_pedersen_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoShamirSecretSharingGroup": {
+    "suite_struct": "CryptoShamirSecretSharingGroupSuite",
+    "suite_type": "CryptoShamirSecretSharingGroupSuite",
+    "parent": "CryptoFullSuite",
+    "field": "shamir_group",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact crypto_shamir_group_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

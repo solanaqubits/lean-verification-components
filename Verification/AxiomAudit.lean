@@ -124,3 +124,5 @@ open CryptoElGamalHomomorphismGroup in
 
 open CryptoCommitmentVectorPedersenGroup in
 #print axioms crypto_vector_pedersen_master_suite
+
+#audit_axioms CryptoShamirSecretSharingGroup.crypto_shamir_group_master_suite
