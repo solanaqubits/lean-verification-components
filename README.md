@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**195 Lean files** under Verification/ (193 top-level + 2 auxiliary),
-**196 including Verification.lean**, **153 direct imports**,
-**20,765 audited declarations**.
-Clean strict build: **3759 jobs**. Public live tests: **98**, no errors or skips.
+**196 Lean files** under Verification/ (194 top-level + 2 auxiliary),
+**197 including Verification.lean**, **154 direct imports**,
+**21,023 audited declarations**.
+Clean strict build: **3761 jobs**. Public live tests: **99**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.51
+## Release v0.5.52
+
+[Executable Marzullo interval consensus](docs/release-v0.5.52.en.md) proves rational
+event-sweep overlap counts, exact maximal peak intervals and deterministic
+selection by length and left endpoint. The computed safe hull equals the existing
+real-valued thresholdHull. A selected peak need not contain true time; its
+containment in the safe hull is non-strict. Full NTP and physical clock control
+remain outside scope.
+
+## Earlier additions in v0.5.51
 
 [Informationally complete POVMs](docs/release-v0.5.51.en.md) connect measurement
 injectivity to a positive definite, invertible frame operator and exact quantum

@@ -107,3 +107,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedByzantineSignedGeneralsValidity](../09_distributed_systems/DistributedByzantineSignedGeneralsValidity.md) — Signed Byzantine broadcast, operational signature origins and round filtering.
 
 - [DistributedRaftJointConsensusReconfig](../09_distributed_systems/DistributedRaftJointConsensusReconfig.md) — Operational Raft joint consensus, commit provenance and global safety invariants.
+
+- [DistributedMarzulloIntervalConsensus](../09_distributed_systems/DistributedMarzulloIntervalConsensus.md) — Executable rational event sweep, deterministic peak selection and exact safe-hull bridge.

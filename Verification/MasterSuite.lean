@@ -1,3 +1,4 @@
+import Verification.DistributedMarzulloIntervalConsensus
 import Verification.QuantumPOVMInformationallyComplete
 import Verification.QuantumNoBroadcastingMixed
 import Verification.CryptoThresholdSchnorrFrostGroup
@@ -156,6 +157,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open DistributedMarzulloIntervalConsensus
 open DistributedRaftJointConsensusReconfig
 
 open CryptoThresholdSchnorrFrostGroup

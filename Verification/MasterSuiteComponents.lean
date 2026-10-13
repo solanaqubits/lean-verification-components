@@ -1,3 +1,4 @@
+import Verification.DistributedMarzulloIntervalConsensus
 import Verification.QuantumPOVMInformationallyComplete
 import Verification.QuantumNoBroadcastingMixed
 import Verification.CryptoThresholdSchnorrFrostGroup
@@ -652,6 +653,7 @@ structure DistributedSystemsFullSuite : Prop where
   byzantine_oral : DistributedByzantineThreeGeneralsOralImpossibilitySuite
   byzantine_signed : DistributedByzantineSignedGeneralsValiditySuite
   raft_joint_reconfiguration : DistributedRaftJointConsensusReconfigSuite
+  marzullo_sweep : DistributedMarzulloIntervalConsensus.DistributedMarzulloIntervalConsensusSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -716,6 +718,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact byzantine_signed_generals_master_suite
   raft_joint_reconfiguration := by
     exact distributed_raft_joint_consensus_master_suite
+  marzullo_sweep := by
+    exact DistributedMarzulloIntervalConsensus.verification_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

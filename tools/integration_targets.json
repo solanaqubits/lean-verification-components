@@ -1052,5 +1052,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumPOVMInformationallyComplete.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedMarzulloIntervalConsensus": {
+    "suite_struct": "DistributedMarzulloIntervalConsensusSuite",
+    "suite_type": "DistributedMarzulloIntervalConsensus.DistributedMarzulloIntervalConsensusSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "marzullo_sweep",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedMarzulloIntervalConsensus.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

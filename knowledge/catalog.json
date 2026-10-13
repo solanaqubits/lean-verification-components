@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedMarzulloIntervalConsensus",
         "Verification.QuantumPOVMInformationallyComplete",
         "Verification.QuantumNoBroadcastingMixed",
         "Verification.CryptoThresholdSchnorrFrostGroup",
@@ -1388,6 +1389,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedMarzulloIntervalConsensus",
         "Verification.QuantumPOVMInformationallyComplete",
         "Verification.QuantumNoBroadcastingMixed",
         "Verification.CryptoThresholdSchnorrFrostGroup",
@@ -2130,6 +2132,17 @@
       "project_imports": [
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumNoBroadcastingMixed"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedMarzulloIntervalConsensus",
+      "section": "distributed",
+      "source": "Verification/DistributedMarzulloIntervalConsensus.lean",
+      "card": "knowledge/09_distributed_systems/DistributedMarzulloIntervalConsensus.md",
+      "project_imports": [
+        "Verification.DistributedMarzulloAlgorithm"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"
