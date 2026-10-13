@@ -105,3 +105,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumNoCloningUnitary](../03_quantum_physics_and_optics/QuantumNoCloningUnitary.md) — Exact unitary no-cloning, phase-invariant overlap constraints and CNOT action.
 
 - [Mixed-state no-broadcasting (BCFJS)](../03_quantum/QuantumNoBroadcastingMixed.md): complete CPTP equivalence, singular-state SLD/SOS necessity, and pure-state regressions.
+
+- [Informationally complete POVMs and exact tomography](../03_quantum/QuantumPOVMInformationallyComplete.md)

@@ -132,3 +132,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms CryptoThresholdSchnorrFrostGroup.crypto_threshold_schnorr_frost_group_master_suite
 
 #audit_axioms QuantumNoBroadcastingMixed.verification_suite
+
+#audit_axioms QuantumPOVMInformationallyComplete.verification_suite

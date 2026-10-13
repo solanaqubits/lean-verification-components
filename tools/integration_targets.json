@@ -1043,5 +1043,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumNoBroadcastingMixed.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumPOVMInformationallyComplete": {
+    "suite_struct": "QuantumPOVMInformationallyCompleteSuite",
+    "suite_type": "QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "ic_povm",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumPOVMInformationallyComplete.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

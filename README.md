@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**194 Lean files** under Verification/ (192 top-level + 2 auxiliary),
-**195 including Verification.lean**, **152 direct imports**,
-**20,622 audited declarations**.
-Clean strict build: **3752 jobs**. Public live tests: **97**, no errors or skips.
+**195 Lean files** under Verification/ (193 top-level + 2 auxiliary),
+**196 including Verification.lean**, **153 direct imports**,
+**20,765 audited declarations**.
+Clean strict build: **3759 jobs**. Public live tests: **98**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.50
+## Release v0.5.51
+
+[Informationally complete POVMs](docs/release-v0.5.51.en.md) connect measurement
+injectivity to a positive definite, invertible frame operator and exact quantum
+state reconstruction through its canonical dual. The module proves the d²
+outcome bound, constructs a tetrahedral qubit SIC-POVM and exhibits states that
+basis measurements cannot distinguish. Finite-sample statistics, numerical
+conditioning and SIC existence in arbitrary dimensions remain outside scope.
+
+## Earlier additions in v0.5.50
 
 [Mixed-state no-broadcasting](docs/release-v0.5.50.en.md) proves that a pair of
 finite-dimensional density matrices admits one exact CPTP broadcasting channel

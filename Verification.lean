@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMInformationallyComplete
 import Verification.QuantumNoBroadcastingMixed
 import Verification.CryptoThresholdSchnorrFrostGroup
 import Verification.DistributedRaftJointConsensusReconfig

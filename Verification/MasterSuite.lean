@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMInformationallyComplete
 import Verification.QuantumNoBroadcastingMixed
 import Verification.CryptoThresholdSchnorrFrostGroup
 import Verification.DistributedRaftJointConsensusReconfig
@@ -172,6 +173,7 @@ open CryptoSchnorrMultiSignaturesMuSigGroup
 open DistributedCoordinatedAttackImpossibility
 
 open QuantumNoCloningUnitary
+open QuantumPOVMInformationallyComplete
 open QuantumNoBroadcastingMixed
 
 open QuantumPOVMNaimarkDilation
