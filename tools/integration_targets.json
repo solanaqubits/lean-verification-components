@@ -1070,5 +1070,14 @@
     "constructor": "finance_defi_full_master_suite",
     "proof": "by\n    exact DeFiConcentratedLiquidityMath.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoPedersenRangeProofLinear": {
+    "suite_struct": "CryptoPedersenRangeProofLinearSuite",
+    "suite_type": "CryptoPedersenRangeProofLinear.CryptoPedersenRangeProofLinearSuite",
+    "parent": "CryptoFullSuite",
+    "field": "pedersen_range_linear",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoPedersenRangeProofLinear.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

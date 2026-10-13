@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**197 Lean files** under Verification/ (195 top-level + 2 auxiliary),
-**198 including Verification.lean**, **155 direct imports**,
-**21,365 audited declarations**.
-Clean strict build: **3762 jobs**. Public live tests: **100**, no errors or skips.
+**198 Lean files** under Verification/ (196 top-level + 2 auxiliary),
+**199 including Verification.lean**, **156 direct imports**,
+**21,556 audited declarations**.
+Clean strict build: **3763 jobs**. Public live tests: **101**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.53
+## Release v0.5.54
+
+[Linear interactive Pedersen range proofs](docs/release-v0.5.54.en.md) prove
+natural bit ranges, fixed-opening completeness, two-transcript witness extraction
+and equality of full joint special HVZK distributions. The simulator includes
+correlated bit commitments with the fixed aggregate. Computational binding,
+Fiat-Shamir/ROM and malicious-verifier security remain outside scope.
+
+## Earlier additions in v0.5.53
 
 [Discrete concentrated-liquidity reference arithmetic](docs/release-v0.5.53.en.md)
 proves directed token rounding, finite-grid swap budget bounds, and nonnegative

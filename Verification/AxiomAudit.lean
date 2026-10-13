@@ -138,3 +138,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DistributedMarzulloIntervalConsensus.verification_suite
 
 #audit_axioms DeFiConcentratedLiquidityMath.verification_suite
+
+#audit_axioms CryptoPedersenRangeProofLinear.verification_suite

@@ -1,3 +1,4 @@
+import Verification.CryptoPedersenRangeProofLinear
 import Verification.DeFiConcentratedLiquidityMath
 import Verification.DistributedMarzulloIntervalConsensus
 import Verification.QuantumPOVMInformationallyComplete
@@ -156,6 +157,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open CryptoPedersenRangeProofLinear
 open DeFiConcentratedLiquidityMath
 
 namespace MasterSuite

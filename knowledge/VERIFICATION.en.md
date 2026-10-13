@@ -1,6 +1,42 @@
 # Public verification record
 
-## Current public snapshot: Discrete concentrated-liquidity reference arithmetic
+## Current public snapshot: Linear interactive Pedersen range proofs
+
+[Release v0.5.54](../docs/release-v0.5.54.en.md) · [Detailed contract](04_cryptography/CryptoPedersenRangeProofLinear.md)
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 156 |
+| Lean files under Verification/ | 196 top-level + 2 auxiliary = 198 |
+| Root-inclusive sources identical to the private snapshot | 199 |
+| Clean strict build | 3763 jobs; no warnings |
+| Complete verifier audit | 21556 declarations; no violations |
+| Pinned independent full audit | 21556 declarations; no violations |
+| Public live tests | 101; no failures or skips; 315.244s |
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent auditor
+is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and executable
+SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+The project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+This is an independent axiom auditor, not a second proof kernel.
+
+The project build directory started empty; pinned dependency caches were copied
+into this isolated checkout. All 199 proof sources match private snapshot
+73f9a1aeee7071192a8487dd210a3502b6a74499 byte-for-byte.
+Russian cards are not exported; earlier public reports remain available.
+
+```bash
+lake build --wfail
+python3 tools/verifier_skill.py verify-all
+LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p "test_*.py"
+lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
+lake env /tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit --root Verification --allow propext,Classical.choice,Quot.sound --json
+python3 scripts/check_knowledge.py
+```
+
+
+## Historical public snapshot: Discrete concentrated-liquidity reference arithmetic
 
 [Release v0.5.53](../docs/release-v0.5.53.en.md) · [Detailed contract](01_defi/DeFiConcentratedLiquidityMath.md)
 
