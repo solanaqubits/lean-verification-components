@@ -1,8 +1,61 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.49](../docs/release-v0.5.49.en.md)
+
+## Current public snapshot: FROST threshold Schnorr signatures
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 151 |
+| Lean files under Verification/ | 191 top-level + 2 auxiliary = 193 |
+| Root-inclusive sources identical to the private snapshot | 194 |
+| Clean strict build | 3742 jobs; no warnings |
+| Complete verifier audit | 20451 declarations; no violations |
+| Pinned independent full audit | 20451 declarations; no violations |
+| Public live tests | 96; no failures or skips; 302.683s |
+
+All 194 proof sources match private snapshot `2e3aa42501d148f324dd9e1d88803fcf94710938`.
+
+This release proves algebraic FROST verification in a cyclic prime-order group
+with scalar field ZMod q. Participants hold evaluations of one Shamir polynomial
+of degree below t. Any selected set with at least t distinct nonzero identifiers
+can sign. Group interpolation explicitly reuses the verified Shamir theorem.
+
+Each participant supplies two nonce commitments. Binding factors depend on the
+common key, message, identifier and commitment list sorted by scalar identifier.
+The challenge depends on the aggregate commitment, common key and message.
+These are abstract deterministic functions, not concrete hashes or random oracles.
+Permuting a valid enumeration preserves the entire canonical session; changing
+the signing coalition requires independently recomputed coefficients and context.
+
+The proofs cover partial and aggregate verification, alternative coalitions,
+single-response tamper rejection under a fixed transcript, and two opposite errors
+that leave a valid aggregate while both partial equations fail. Regressions include
+t = 1, t = 2, t = n, more signers than the threshold, and duplicate rejection.
+
+Computational unforgeability and ROM security, concurrent-session attack resistance,
+nonce generation and enforced one-time nonce use, DKG/Feldman VSS, concrete curves
+and byte serialization are outside scope. No safety under nonce reuse is claimed.
+Python, JSON/SHA-256 and SimLab obligations remain open. The Lean-invoking test
+harness does not verify a runtime FROST implementation.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.48](../docs/release-v0.5.48.en.md)
 
-## Current public snapshot: Raft joint-consensus reconfiguration
+## Historical public snapshot v0.5.48: Raft joint-consensus reconfiguration
 
 | Check | Measured public result |
 |---|---:|

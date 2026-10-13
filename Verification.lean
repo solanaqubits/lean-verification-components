@@ -1,3 +1,4 @@
+import Verification.CryptoThresholdSchnorrFrostGroup
 import Verification.DistributedRaftJointConsensusReconfig
 import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup

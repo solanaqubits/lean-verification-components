@@ -1,3 +1,4 @@
+import Verification.CryptoThresholdSchnorrFrostGroup
 import Verification.DistributedRaftJointConsensusReconfig
 import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup
@@ -151,6 +152,7 @@ namespace MasterSuite
 
 open DistributedRaftJointConsensusReconfig
 
+open CryptoThresholdSchnorrFrostGroup
 open CryptoShamirSecretSharingGroup
 open CryptoCommitmentVectorPedersenGroup
 
@@ -335,6 +337,7 @@ structure CryptoFullSuite : Prop where
   elgamal_group : CryptoElGamalHomomorphismGroupSuite
   vector_pedersen : CryptoCommitmentVectorPedersenGroupSuite
   shamir_group : CryptoShamirSecretSharingGroupSuite
+  threshold_frost_group : CryptoThresholdSchnorrFrostGroupSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -378,6 +381,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact crypto_vector_pedersen_master_suite
   shamir_group := by
     exact crypto_shamir_group_master_suite
+  threshold_frost_group := by
+    exact crypto_threshold_schnorr_frost_group_master_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :

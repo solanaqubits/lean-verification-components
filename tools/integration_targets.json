@@ -1025,5 +1025,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact distributed_raft_joint_consensus_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoThresholdSchnorrFrostGroup": {
+    "suite_struct": "CryptoThresholdSchnorrFrostGroupSuite",
+    "suite_type": "CryptoThresholdSchnorrFrostGroupSuite",
+    "parent": "CryptoFullSuite",
+    "field": "threshold_frost_group",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact crypto_threshold_schnorr_frost_group_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

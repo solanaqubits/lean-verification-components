@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**192 Lean files** under Verification/ (190 top-level + 2 auxiliary),
-**193 including Verification.lean**, **150 direct imports**,
-**20,338 audited declarations**.
-Clean strict build: **3741 jobs**. Public live tests: **95**, no errors or skips.
+**193 Lean files** under Verification/ (191 top-level + 2 auxiliary),
+**194 including Verification.lean**, **151 direct imports**,
+**20,451 audited declarations**.
+Clean strict build: **3742 jobs**. Public live tests: **96**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.48
+## Release v0.5.49
+
+[FROST threshold Schnorr signatures](docs/release-v0.5.49.en.md)
+proves partial and aggregate verification for any signing set at or above the
+threshold, canonical session contexts and independently recomputed alternative
+coalitions. A single response error is rejected; opposite errors can cancel in
+the aggregate. ROM security, nonce-use enforcement, DKG/VSS and serialization
+remain outside scope.
+
+## Earlier additions in v0.5.48
 
 [Raft joint-consensus reconfiguration](docs/release-v0.5.48.en.md)
 proves reachable Election Safety, Log Matching and Leader Completeness for one

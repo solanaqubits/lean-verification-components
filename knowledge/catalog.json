@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoThresholdSchnorrFrostGroup",
         "Verification.DistributedRaftJointConsensusReconfig",
         "Verification.CryptoShamirSecretSharingGroup",
         "Verification.CryptoCommitmentVectorPedersenGroup",
@@ -1385,6 +1386,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoThresholdSchnorrFrostGroup",
         "Verification.DistributedRaftJointConsensusReconfig",
         "Verification.CryptoShamirSecretSharingGroup",
         "Verification.CryptoCommitmentVectorPedersenGroup",
@@ -2090,6 +2092,17 @@
       "card": "knowledge/09_distributed_systems/DistributedRaftJointConsensusReconfig.md",
       "project_imports": [
         "Verification.DistributedRaftStateMachine"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "CryptoThresholdSchnorrFrostGroup",
+      "section": "cryptography",
+      "source": "Verification/CryptoThresholdSchnorrFrostGroup.lean",
+      "card": "knowledge/04_cryptography/CryptoThresholdSchnorrFrostGroup.md",
+      "project_imports": [
+        "Verification.CryptoShamirSecretSharingGroup",
+        "Verification.CryptoSchnorrMultiSignaturesMuSigGroup"
       ],
       "novelty": "not-assessed"
     }

@@ -1,3 +1,4 @@
+import Verification.CryptoThresholdSchnorrFrostGroup
 import Verification.DistributedRaftJointConsensusReconfig
 import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup
@@ -155,6 +156,7 @@ namespace MasterSuite
 
 open DistributedRaftJointConsensusReconfig
 
+open CryptoThresholdSchnorrFrostGroup
 open CryptoShamirSecretSharingGroup
 open CryptoCommitmentVectorPedersenGroup
 

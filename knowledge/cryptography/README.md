@@ -61,3 +61,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoCommitmentVectorPedersenGroup](../04_cryptography/CryptoCommitmentVectorPedersenGroup.md) — Vector Pedersen commitments, uniform-PMF hiding and collision relations.
 
 - [CryptoShamirSecretSharingGroup](../04_cryptography/CryptoShamirSecretSharingGroup.md) — Shamir threshold sharing, joint PMF secrecy and group recovery.
+
+- [CryptoThresholdSchnorrFrostGroup](../04_cryptography/CryptoThresholdSchnorrFrostGroup.md) — FROST threshold completeness, canonical sessions and error cancellation.
