@@ -1,6 +1,43 @@
 # Public verification record
 
-## Current public snapshot: Stable Marzullo event merge sorting
+## Current public snapshot: Bulletproofs inner product algebra
+
+[Release v0.5.56](../docs/release-v0.5.56.en.md) · [Detailed contract](04_cryptography/CryptoBulletproofsInnerProduct.md)
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 158 |
+| Lean files under Verification/ | 198 top-level + 2 auxiliary = 200 |
+| Root-inclusive sources identical to the reference snapshot | 201 |
+| Clean strict build | 3765 jobs; no warnings |
+| Complete verifier audit | 21912 declarations; no violations |
+| Pinned independent full audit | 21912 declarations; no violations |
+| Public live tests | 103; no failures or skips; 309.775s |
+| New IPA kernel examples / compiled execution cases | 22 / 12 |
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent auditor
+is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and executable
+SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+The project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+This is an independent axiom auditor, not a second proof kernel.
+
+The project build directory started empty; pinned dependency caches were copied
+into this isolated checkout. All 201 proof sources match reference snapshot
+620e2e03d62506f6a231a33c8dc044b31cebd800 byte-for-byte.
+Only English cards were exported; earlier public reports remain available.
+
+```bash
+lake build --wfail
+python3 tools/verifier_skill.py verify-all
+LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p "test_*.py"
+lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
+lake env /tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit --root Verification --allow propext,Classical.choice,Quot.sound --json
+python3 scripts/check_knowledge.py
+```
+
+
+## Historical public snapshot: Stable Marzullo event merge sorting
 
 [Release v0.5.55](../docs/release-v0.5.55.en.md) · [Detailed contract](09_distributed_systems/DistributedMarzulloEventSorting.md)
 

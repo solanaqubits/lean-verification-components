@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**199 Lean files** under Verification/ (197 top-level + 2 auxiliary),
-**200 including Verification.lean**, **157 direct imports**,
-**21,722 audited declarations**.
-Clean strict build: **3764 jobs**. Public live tests: **102**, no errors or skips.
+**200 Lean files** under Verification/ (198 top-level + 2 auxiliary),
+**201 including Verification.lean**, **158 direct imports**,
+**21,912 audited declarations**.
+Clean strict build: **3765 jobs**. Public live tests: **103**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.55
+## Release v0.5.56
+
+[Bulletproofs inner product algebra](docs/release-v0.5.56.en.md) proves the
+halving invariant, recursive completeness, equivalence of expanded verification
+and an exact payload of 2k group elements plus two scalars for dimension 2^k.
+Knowledge extraction, range reduction, HVZK and Fiat-Shamir/ROM remain outside scope.
+Logarithmic proof size does not imply logarithmic verifier work.
+
+## Earlier additions in v0.5.55
 
 [Stable Marzullo event merge sorting](docs/release-v0.5.55.en.md) proves
 stable ordering, exact insertion-sort equivalence and the comparator-call bound

@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsInnerProduct
 import Verification.DistributedMarzulloEventSorting
 import Verification.CryptoPedersenRangeProofLinear
 import Verification.DeFiConcentratedLiquidityMath
@@ -345,6 +346,7 @@ structure CryptoFullSuite : Prop where
   shamir_group : CryptoShamirSecretSharingGroupSuite
   threshold_frost_group : CryptoThresholdSchnorrFrostGroupSuite
   pedersen_range_linear : CryptoPedersenRangeProofLinear.CryptoPedersenRangeProofLinearSuite
+  bulletproofs_inner_product : CryptoBulletproofsInnerProduct.CryptoBulletproofsInnerProductSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -392,6 +394,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact crypto_threshold_schnorr_frost_group_master_suite
   pedersen_range_linear := by
     exact CryptoPedersenRangeProofLinear.verification_suite
+  bulletproofs_inner_product := by
+    exact CryptoBulletproofsInnerProduct.verification_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :

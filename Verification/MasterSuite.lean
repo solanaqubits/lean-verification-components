@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsInnerProduct
 import Verification.DistributedMarzulloEventSorting
 import Verification.CryptoPedersenRangeProofLinear
 import Verification.DeFiConcentratedLiquidityMath
@@ -158,6 +159,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open CryptoBulletproofsInnerProduct
 open DistributedMarzulloEventSorting
 open CryptoPedersenRangeProofLinear
 open DeFiConcentratedLiquidityMath

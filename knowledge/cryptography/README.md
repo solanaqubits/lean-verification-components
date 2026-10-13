@@ -65,3 +65,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoThresholdSchnorrFrostGroup](../04_cryptography/CryptoThresholdSchnorrFrostGroup.md) — FROST threshold completeness, canonical sessions and error cancellation.
 
 - [CryptoPedersenRangeProofLinear](../04_cryptography/CryptoPedersenRangeProofLinear.md): interactive range proofs, two-transcript extraction and full joint special HVZK.
+
+- [CryptoBulletproofsInnerProduct](../04_cryptography/CryptoBulletproofsInnerProduct.md) — Recursive IPA completeness, expanded verification and exact payload counts.

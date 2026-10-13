@@ -1088,5 +1088,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedMarzulloEventSorting.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsInnerProduct": {
+    "suite_struct": "CryptoBulletproofsInnerProductSuite",
+    "suite_type": "CryptoBulletproofsInnerProduct.CryptoBulletproofsInnerProductSuite",
+    "parent": "CryptoFullSuite",
+    "field": "bulletproofs_inner_product",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsInnerProduct.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
