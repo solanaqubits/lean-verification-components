@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**193 Lean files** under Verification/ (191 top-level + 2 auxiliary),
-**194 including Verification.lean**, **151 direct imports**,
-**20,451 audited declarations**.
-Clean strict build: **3742 jobs**. Public live tests: **96**, no errors or skips.
+**194 Lean files** under Verification/ (192 top-level + 2 auxiliary),
+**195 including Verification.lean**, **152 direct imports**,
+**20,622 audited declarations**.
+Clean strict build: **3752 jobs**. Public live tests: **97**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.49
+## Release v0.5.50
+
+[Mixed-state no-broadcasting](docs/release-v0.5.50.en.md) proves that a pair of
+finite-dimensional density matrices admits one exact CPTP broadcasting channel
+if and only if the states commute. Correlated outputs and degenerate spectra are
+included. Necessity uses a constructed symmetric logarithmic derivative and an
+operator sum of squares. Infinite dimensions, approximate broadcasting and
+physical implementations remain outside scope.
+
+## Earlier additions in v0.5.49
 
 [FROST threshold Schnorr signatures](docs/release-v0.5.49.en.md)
 proves partial and aggregate verification for any signing set at or above the

@@ -1034,5 +1034,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact crypto_threshold_schnorr_frost_group_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumNoBroadcastingMixed": {
+    "suite_struct": "QuantumNoBroadcastingMixedSuite",
+    "suite_type": "QuantumNoBroadcastingMixed.QuantumNoBroadcastingMixedSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "no_broadcasting_mixed",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumNoBroadcastingMixed.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

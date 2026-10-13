@@ -103,3 +103,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [QuantumPOVMNaimarkDilation](../03_quantum_physics_and_optics/QuantumPOVMNaimarkDilation.md) — Finite POVMs, unitary Naimark dilation and Lueders reduction.
 
 - [QuantumNoCloningUnitary](../03_quantum_physics_and_optics/QuantumNoCloningUnitary.md) — Exact unitary no-cloning, phase-invariant overlap constraints and CNOT action.
+
+- [Mixed-state no-broadcasting (BCFJS)](../03_quantum/QuantumNoBroadcastingMixed.md): complete CPTP equivalence, singular-state SLD/SOS necessity, and pure-state regressions.

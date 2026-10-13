@@ -1,3 +1,4 @@
+import Verification.QuantumNoBroadcastingMixed
 import Verification.CryptoThresholdSchnorrFrostGroup
 import Verification.DistributedRaftJointConsensusReconfig
 import Verification.CryptoShamirSecretSharingGroup
@@ -442,6 +443,7 @@ structure QuantumPhysicsFullSuite : Prop where
   depolarizing : QuantumDepolarizingChannel.QuantumDepolarizingChannelSuite
   e91 : QuantumE91ProtocolBellCHSH.QuantumE91ProtocolBellCHSHSuite
   no_cloning_unitary : QuantumNoCloningUnitary.QuantumNoCloningUnitarySuite
+  no_broadcasting_mixed : QuantumNoBroadcastingMixed.QuantumNoBroadcastingMixedSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   spin_photonic := spin_photonic_master_verification_suite
@@ -511,6 +513,8 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumE91ProtocolBellCHSH.quantum_e91_protocol_bell_chsh_master_suite
   no_cloning_unitary := by
     exact QuantumNoCloningUnitary.quantum_no_cloning_unitary_master_suite
+  no_broadcasting_mixed := by
+    exact QuantumNoBroadcastingMixed.verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

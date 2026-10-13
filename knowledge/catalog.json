@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumNoBroadcastingMixed",
         "Verification.CryptoThresholdSchnorrFrostGroup",
         "Verification.DistributedRaftJointConsensusReconfig",
         "Verification.CryptoShamirSecretSharingGroup",
@@ -1386,6 +1387,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumNoBroadcastingMixed",
         "Verification.CryptoThresholdSchnorrFrostGroup",
         "Verification.DistributedRaftJointConsensusReconfig",
         "Verification.CryptoShamirSecretSharingGroup",
@@ -2105,6 +2107,18 @@
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup"
       ],
       "novelty": "not-assessed"
+    },
+    {
+      "id": "QuantumNoBroadcastingMixed",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumNoBroadcastingMixed.lean",
+      "card": "knowledge/03_quantum/QuantumNoBroadcastingMixed.md",
+      "project_imports": [
+        "Verification.QuantumNoCloningUnitary",
+        "Verification.QuantumPOVMNaimarkDilation"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
     }
   ],
   "support_modules": [
