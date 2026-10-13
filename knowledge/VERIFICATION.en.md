@@ -1,8 +1,56 @@
 # Public verification record
 
+[Knowledge base](README.md) · [Release v0.5.48](../docs/release-v0.5.48.en.md)
+
+## Current public snapshot: Raft joint-consensus reconfiguration
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 150 |
+| Lean files under Verification/ | 190 top-level + 2 auxiliary = 192 |
+| Root-inclusive sources identical to the private snapshot | 193 |
+| Clean strict build | 3741 jobs; no warnings |
+| Complete verifier audit | 20338 declarations; no violations |
+| Pinned independent full audit | 20338 declarations; no violations |
+| Public live tests | 95; no failures or skips; 303.516s |
+
+All 193 proof sources match private snapshot `6c11fa68d512262675d779ef4568e3782caa9f43`.
+
+This release proves safety for one arbitrary fixed transition from stable-old
+through joint-old-new to stable-new, with commands, leader changes and delayed,
+duplicated or reordered messages. Configurations activate from the latest local
+log entry before commitment and roll back deterministically on suffix removal.
+
+Reachability implies historical commit-index soundness, committed-prefix
+preservation, Election Safety in every term, Log Matching and Leader Completeness.
+Old and new stable quorums may be disjoint; incompatible successful elections are
+excluded by the historical joint-commit barrier, not by assuming they intersect.
+The regressions include a reachable disjoint handover, leader retirement and
+rollback after a leader change. The direct-switch counterexample is an algebraic
+split-vote construction, not a separate unsafe protocol execution.
+
+Unbounded reconfiguration chains, snapshots, Byzantine faults, crash/recovery
+and liveness are outside scope. The static Raft bridge concerns local command-only
+log merging, not a full simulation. Python, JSON/SHA-256 and SimLab obligations
+remain open; running the test harness does not verify a Python Raft implementation.
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent
+full auditor is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and
+binary SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+The executable is pinned separately; no second independent proof kernel is asserted.
+
+The project build directory started empty. Pinned dependency caches were copied
+into this isolated tree. All public checks were rerun against this release candidate.
+Declaration counts include generated declarations, not just mathematical theorems.
+
+[Commands and hashes](../tools/validation_snapshot.json).
+
+
 [Knowledge base](README.md) · [Release v0.5.47](../docs/release-v0.5.47.en.md)
 
-## Current public snapshot: Finite-field Shamir sharing
+## Historical public snapshot v0.5.47: Finite-field Shamir sharing
 
 | Check | Measured public result |
 |---|---:|

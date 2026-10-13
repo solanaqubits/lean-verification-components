@@ -105,3 +105,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedByzantineThreeGeneralsOralImpossibility](../09_distributed_systems/DistributedByzantineThreeGeneralsOralImpossibility.md) — Three-generals oral Byzantine broadcast impossibility.
 
 - [DistributedByzantineSignedGeneralsValidity](../09_distributed_systems/DistributedByzantineSignedGeneralsValidity.md) — Signed Byzantine broadcast, operational signature origins and round filtering.
+
+- [DistributedRaftJointConsensusReconfig](../09_distributed_systems/DistributedRaftJointConsensusReconfig.md) — Operational Raft joint consensus, commit provenance and global safety invariants.

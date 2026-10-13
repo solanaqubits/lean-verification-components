@@ -126,3 +126,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #print axioms crypto_vector_pedersen_master_suite
 
 #audit_axioms CryptoShamirSecretSharingGroup.crypto_shamir_group_master_suite
+
+#audit_axioms DistributedRaftJointConsensusReconfig.distributed_raft_joint_consensus_master_suite

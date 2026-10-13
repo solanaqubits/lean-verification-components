@@ -1016,5 +1016,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact crypto_shamir_group_master_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedRaftJointConsensusReconfig": {
+    "suite_struct": "DistributedRaftJointConsensusReconfigSuite",
+    "suite_type": "DistributedRaftJointConsensusReconfigSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "raft_joint_reconfiguration",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact distributed_raft_joint_consensus_master_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

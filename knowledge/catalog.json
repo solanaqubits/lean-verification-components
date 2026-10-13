@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedRaftJointConsensusReconfig",
         "Verification.CryptoShamirSecretSharingGroup",
         "Verification.CryptoCommitmentVectorPedersenGroup",
         "Verification.CryptoElGamalHomomorphismGroup",
@@ -1384,6 +1385,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedRaftJointConsensusReconfig",
         "Verification.CryptoShamirSecretSharingGroup",
         "Verification.CryptoCommitmentVectorPedersenGroup",
         "Verification.CryptoElGamalHomomorphismGroup",
@@ -2078,6 +2080,16 @@
       "project_imports": [
         "Verification.CryptoShamirSecretSharing",
         "Verification.CryptoSchnorrMultiSignaturesMuSigGroup"
+      ],
+      "novelty": "not-assessed"
+    },
+    {
+      "id": "DistributedRaftJointConsensusReconfig",
+      "section": "distributed",
+      "source": "Verification/DistributedRaftJointConsensusReconfig.lean",
+      "card": "knowledge/09_distributed_systems/DistributedRaftJointConsensusReconfig.md",
+      "project_imports": [
+        "Verification.DistributedRaftStateMachine"
       ],
       "novelty": "not-assessed"
     }

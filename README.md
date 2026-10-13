@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**191 Lean files** under Verification/ (189 top-level + 2 auxiliary),
-**192 including Verification.lean**, **149 direct imports**,
-**19,077 audited declarations**.
-Clean strict build: **3740 jobs**. Public live tests: **94**, no errors or skips.
+**192 Lean files** under Verification/ (190 top-level + 2 auxiliary),
+**193 including Verification.lean**, **150 direct imports**,
+**20,338 audited declarations**.
+Clean strict build: **3741 jobs**. Public live tests: **95**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.47
+## Release v0.5.48
+
+[Raft joint-consensus reconfiguration](docs/release-v0.5.48.en.md)
+proves reachable Election Safety, Log Matching and Leader Completeness for one
+old-to-joint-to-new transition, with historical commit-index soundness and local
+configuration rollback. Arbitrarily many reconfigurations, snapshots, Byzantine
+faults, crash/recovery and liveness remain outside scope.
+
+## Earlier additions in v0.5.47
 
 [Finite-field Shamir sharing](docs/release-v0.5.47.en.md)
 proves t-of-n interpolation over ZMod q, joint PMF secrecy below threshold,

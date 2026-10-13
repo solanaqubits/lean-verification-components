@@ -1,3 +1,4 @@
+import Verification.DistributedRaftJointConsensusReconfig
 import Verification.CryptoShamirSecretSharingGroup
 import Verification.CryptoCommitmentVectorPedersenGroup
 import Verification.CryptoElGamalHomomorphismGroup
@@ -147,6 +148,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open DistributedRaftJointConsensusReconfig
 
 open CryptoShamirSecretSharingGroup
 open CryptoCommitmentVectorPedersenGroup
@@ -635,6 +638,7 @@ structure DistributedSystemsFullSuite : Prop where
   coordinated_attack : DistributedCoordinatedAttackImpossibilitySuite
   byzantine_oral : DistributedByzantineThreeGeneralsOralImpossibilitySuite
   byzantine_signed : DistributedByzantineSignedGeneralsValiditySuite
+  raft_joint_reconfiguration : DistributedRaftJointConsensusReconfigSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -697,6 +701,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact byzantine_three_generals_oral_master_suite
   byzantine_signed := by
     exact byzantine_signed_generals_master_suite
+  raft_joint_reconfiguration := by
+    exact distributed_raft_joint_consensus_master_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :
