@@ -42,3 +42,5 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [DeFiOvercollateralizedLending](../08_finance_and_risk/DeFiOvercollateralizedLending.en.md)
 
 - [DeFiBondingCurve](../08_finance_and_risk/DeFiBondingCurve.en.md)
+
+- [DeFiConcentratedLiquidityMath](../01_defi/DeFiConcentratedLiquidityMath.md): executable Q64.96 reference arithmetic, directed rounding, budgeted finite-grid swap steps and position-derived tick transitions.

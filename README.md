@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**196 Lean files** under Verification/ (194 top-level + 2 auxiliary),
-**197 including Verification.lean**, **154 direct imports**,
-**21,023 audited declarations**.
-Clean strict build: **3761 jobs**. Public live tests: **99**, no errors or skips.
+**197 Lean files** under Verification/ (195 top-level + 2 auxiliary),
+**198 including Verification.lean**, **155 direct imports**,
+**21,365 audited declarations**.
+Clean strict build: **3762 jobs**. Public live tests: **100**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.52
+## Release v0.5.53
+
+[Discrete concentrated-liquidity reference arithmetic](docs/release-v0.5.53.en.md)
+proves directed token rounding, finite-grid swap budget bounds, and nonnegative
+position-derived liquidity through tick crossings. This executable exhaustive
+reference model does not establish equivalence to Solidity SwapMath/TickMath,
+efficient execution on wide price grids, or a complete pool lifecycle.
+
+## Earlier additions in v0.5.52
 
 [Executable Marzullo interval consensus](docs/release-v0.5.52.en.md) proves rational
 event-sweep overlap counts, exact maximal peak intervals and deterministic

@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiConcentratedLiquidityMath",
         "Verification.DistributedMarzulloIntervalConsensus",
         "Verification.QuantumPOVMInformationallyComplete",
         "Verification.QuantumNoBroadcastingMixed",
@@ -1389,6 +1390,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DeFiConcentratedLiquidityMath",
         "Verification.DistributedMarzulloIntervalConsensus",
         "Verification.QuantumPOVMInformationallyComplete",
         "Verification.QuantumNoBroadcastingMixed",
@@ -2143,6 +2145,17 @@
       "card": "knowledge/09_distributed_systems/DistributedMarzulloIntervalConsensus.md",
       "project_imports": [
         "Verification.DistributedMarzulloAlgorithm"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DeFiConcentratedLiquidityMath",
+      "section": "finance",
+      "source": "Verification/DeFiConcentratedLiquidityMath.lean",
+      "card": "knowledge/01_defi/DeFiConcentratedLiquidityMath.md",
+      "project_imports": [
+        "Verification.DeFiConcentratedLiquidity"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

@@ -1,3 +1,4 @@
+import Verification.DeFiConcentratedLiquidityMath
 import Verification.DistributedMarzulloIntervalConsensus
 import Verification.QuantumPOVMInformationallyComplete
 import Verification.QuantumNoBroadcastingMixed
@@ -154,6 +155,8 @@ import Verification.SpinPhotonicWaveguide
 import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
+
+open DeFiConcentratedLiquidityMath
 
 namespace MasterSuite
 

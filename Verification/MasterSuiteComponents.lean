@@ -1,3 +1,4 @@
+import Verification.DeFiConcentratedLiquidityMath
 import Verification.DistributedMarzulloIntervalConsensus
 import Verification.QuantumPOVMInformationallyComplete
 import Verification.QuantumNoBroadcastingMixed
@@ -546,10 +547,13 @@ theorem proof_dag_full_master_suite : ProofDAGFullSuite := {
 structure FinanceDeFiFullSuite : Prop where
   settlement : AssetSettlementFormalSuite
   amm : DeFiAMMFormalSuite
+  concentrated_math : DeFiConcentratedLiquidityMath.DeFiConcentratedLiquidityMathSuite
 
 theorem finance_defi_full_master_suite : FinanceDeFiFullSuite := {
   settlement := asset_settlement_master_verification_suite
   amm := defi_amm_master_verification_suite
+  concentrated_math := by
+    exact DeFiConcentratedLiquidityMath.verification_suite
 }
 
 /-- Explicit circuit results from the existing superdense component. -/

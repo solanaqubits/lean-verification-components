@@ -1061,5 +1061,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedMarzulloIntervalConsensus.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiConcentratedLiquidityMath": {
+    "suite_struct": "DeFiConcentratedLiquidityMathSuite",
+    "suite_type": "DeFiConcentratedLiquidityMath.DeFiConcentratedLiquidityMathSuite",
+    "parent": "FinanceDeFiFullSuite",
+    "field": "concentrated_math",
+    "constructor": "finance_defi_full_master_suite",
+    "proof": "by\n    exact DeFiConcentratedLiquidityMath.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
