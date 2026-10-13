@@ -1,3 +1,4 @@
+import Verification.DistributedMarzulloEventSorting
 import Verification.CryptoPedersenRangeProofLinear
 import Verification.DeFiConcentratedLiquidityMath
 import Verification.DistributedMarzulloIntervalConsensus
@@ -662,6 +663,7 @@ structure DistributedSystemsFullSuite : Prop where
   byzantine_signed : DistributedByzantineSignedGeneralsValiditySuite
   raft_joint_reconfiguration : DistributedRaftJointConsensusReconfigSuite
   marzullo_sweep : DistributedMarzulloIntervalConsensus.DistributedMarzulloIntervalConsensusSuite
+  marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
   bft_quorum := bft_consensus_master_verification_suite
@@ -728,6 +730,8 @@ theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
     exact distributed_raft_joint_consensus_master_suite
   marzullo_sweep := by
     exact DistributedMarzulloIntervalConsensus.verification_suite
+  marzullo_event_sorting := by
+    exact DistributedMarzulloEventSorting.verification_suite
 }
 
 theorem DistributedSystemsFullSuite.two_phase_commit (suite : DistributedSystemsFullSuite) :

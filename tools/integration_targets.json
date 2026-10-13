@@ -1079,5 +1079,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoPedersenRangeProofLinear.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedMarzulloEventSorting": {
+    "suite_struct": "DistributedMarzulloEventSortingSuite",
+    "suite_type": "DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "marzullo_event_sorting",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedMarzulloEventSorting.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

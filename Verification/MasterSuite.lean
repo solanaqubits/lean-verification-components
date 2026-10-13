@@ -1,3 +1,4 @@
+import Verification.DistributedMarzulloEventSorting
 import Verification.CryptoPedersenRangeProofLinear
 import Verification.DeFiConcentratedLiquidityMath
 import Verification.DistributedMarzulloIntervalConsensus
@@ -157,6 +158,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DistributedMarzulloEventSorting
 open CryptoPedersenRangeProofLinear
 open DeFiConcentratedLiquidityMath
 

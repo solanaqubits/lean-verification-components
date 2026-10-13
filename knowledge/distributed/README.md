@@ -109,3 +109,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [DistributedRaftJointConsensusReconfig](../09_distributed_systems/DistributedRaftJointConsensusReconfig.md) — Operational Raft joint consensus, commit provenance and global safety invariants.
 
 - [DistributedMarzulloIntervalConsensus](../09_distributed_systems/DistributedMarzulloIntervalConsensus.md) — Executable rational event sweep, deterministic peak selection and exact safe-hull bridge.
+
+- [Stable Marzullo event merge sort](../09_distributed_systems/DistributedMarzulloEventSorting.md): counted comparisons, stability and consensus equivalence.

@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedMarzulloEventSorting",
         "Verification.CryptoPedersenRangeProofLinear",
         "Verification.DeFiConcentratedLiquidityMath",
         "Verification.DistributedMarzulloIntervalConsensus",
@@ -1391,6 +1392,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedMarzulloEventSorting",
         "Verification.CryptoPedersenRangeProofLinear",
         "Verification.DeFiConcentratedLiquidityMath",
         "Verification.DistributedMarzulloIntervalConsensus",
@@ -2170,6 +2172,17 @@
       "project_imports": [
         "Verification.CryptoCommitmentVectorPedersenGroup",
         "Verification.CryptoSchnorrIdentification"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedMarzulloEventSorting",
+      "section": "distributed",
+      "source": "Verification/DistributedMarzulloEventSorting.lean",
+      "card": "knowledge/09_distributed_systems/DistributedMarzulloEventSorting.md",
+      "project_imports": [
+        "Verification.DistributedMarzulloIntervalConsensus"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

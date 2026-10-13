@@ -28,14 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**198 Lean files** under Verification/ (196 top-level + 2 auxiliary),
-**199 including Verification.lean**, **156 direct imports**,
-**21,556 audited declarations**.
-Clean strict build: **3763 jobs**. Public live tests: **101**, no errors or skips.
+**199 Lean files** under Verification/ (197 top-level + 2 auxiliary),
+**200 including Verification.lean**, **157 direct imports**,
+**21,722 audited declarations**.
+Clean strict build: **3764 jobs**. Public live tests: **102**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.54
+## Release v0.5.55
+
+[Stable Marzullo event merge sorting](docs/release-v0.5.55.en.md) proves
+stable ordering, exact insertion-sort equivalence and the comparator-call bound
+N * ceil(log2 N). The merge-based backend preserves peak and safe-hull semantics.
+Rational bit complexity and the complete consensus runtime remain outside scope.
+
+## Earlier additions in v0.5.54
 
 [Linear interactive Pedersen range proofs](docs/release-v0.5.54.en.md) prove
 natural bit ranges, fixed-opening completeness, two-transcript witness extraction
