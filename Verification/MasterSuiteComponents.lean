@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsBatchVerification
 import Verification.CryptoBulletproofsRangeReduction
 import Verification.CryptoBulletproofsInnerProduct
 import Verification.DistributedMarzulloEventSorting
@@ -348,6 +349,7 @@ structure CryptoFullSuite : Prop where
   threshold_frost_group : CryptoThresholdSchnorrFrostGroupSuite
   pedersen_range_linear : CryptoPedersenRangeProofLinear.CryptoPedersenRangeProofLinearSuite
   bulletproofs_inner_product : CryptoBulletproofsInnerProduct.CryptoBulletproofsInnerProductSuite
+  bulletproofs_batch : CryptoBulletproofsBatchVerification.CryptoBulletproofsBatchVerificationSuite
   range_reduction : CryptoBulletproofsRangeReduction.CryptoBulletproofsRangeReductionSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
@@ -398,6 +400,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoPedersenRangeProofLinear.verification_suite
   bulletproofs_inner_product := by
     exact CryptoBulletproofsInnerProduct.verification_suite
+  bulletproofs_batch := by
+    exact CryptoBulletproofsBatchVerification.verification_suite
   range_reduction := by
     exact CryptoBulletproofsRangeReduction.verification_suite
 }

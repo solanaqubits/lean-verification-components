@@ -69,3 +69,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoBulletproofsInnerProduct](../04_cryptography/CryptoBulletproofsInnerProduct.md) — Recursive IPA completeness, expanded verification and exact payload counts.
 
 - [Bulletproofs algebraic range reduction](../04_cryptography/CryptoBulletproofsRangeReduction.md)
+
+- [Bulletproofs batch verification](../04_cryptography/CryptoBulletproofsBatchVerification.md)

@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsBatchVerification
 import Verification.CryptoBulletproofsRangeReduction
 import Verification.CryptoBulletproofsInnerProduct
 import Verification.DistributedMarzulloEventSorting
@@ -160,6 +161,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open CryptoBulletproofsBatchVerification
 open CryptoBulletproofsRangeReduction
 open CryptoBulletproofsInnerProduct
 open DistributedMarzulloEventSorting

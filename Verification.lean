@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsBatchVerification
 import Verification.CryptoBulletproofsRangeReduction
 import Verification.CryptoBulletproofsInnerProduct
 import Verification.DistributedMarzulloEventSorting

@@ -1106,5 +1106,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoBulletproofsRangeReduction.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsBatchVerification": {
+    "suite_struct": "CryptoBulletproofsBatchVerificationSuite",
+    "suite_type": "CryptoBulletproofsBatchVerification.CryptoBulletproofsBatchVerificationSuite",
+    "parent": "CryptoFullSuite",
+    "field": "bulletproofs_batch",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsBatchVerification.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

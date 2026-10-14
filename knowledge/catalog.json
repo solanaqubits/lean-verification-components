@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsBatchVerification",
         "Verification.CryptoBulletproofsRangeReduction",
         "Verification.CryptoBulletproofsInnerProduct",
         "Verification.DistributedMarzulloEventSorting",
@@ -1394,6 +1395,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsBatchVerification",
         "Verification.CryptoBulletproofsRangeReduction",
         "Verification.CryptoBulletproofsInnerProduct",
         "Verification.DistributedMarzulloEventSorting",
@@ -2212,6 +2214,18 @@
         "Verification.CryptoCommitmentVectorPedersenGroup",
         "Verification.CryptoPedersenRangeProofLinear",
         "Verification.CryptoBulletproofsInnerProduct"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "CryptoBulletproofsBatchVerification",
+      "section": "cryptography",
+      "source": "Verification/CryptoBulletproofsBatchVerification.lean",
+      "card": "knowledge/04_cryptography/CryptoBulletproofsBatchVerification.md",
+      "project_imports": [
+        "Verification.CryptoBulletproofsInnerProduct",
+        "Verification.CryptoBulletproofsRangeReduction"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

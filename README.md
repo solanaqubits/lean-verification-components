@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**201 Lean files** under Verification/ (199 top-level + 2 auxiliary),
-**202 including Verification.lean**, **159 direct imports**,
-**22,043 audited declarations**.
-Clean strict build: **3766 jobs**. Public live tests: **104**, no errors or skips.
+**202 Lean files** under Verification/ (200 top-level + 2 auxiliary),
+**203 including Verification.lean**, **160 direct imports**,
+**22,183 audited declarations**.
+Clean strict build: **3767 jobs**. Public live tests: **105**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.57
+## Release v0.5.58
+
+[Bulletproofs batch verification](docs/release-v0.5.58.en.md) proves perfect
+completeness, equivalence to one expanded MSM, paired permutation invariance and
+an error bound of at most 1/q relative to individual verification. The probability
+bound applies to a fixed batch with fresh independent uniform field weights.
+Scalar checks reject invalid challenges deterministically. Original IPA transcripts
+are retained. Knowledge extraction, computational binding, HVZK, Fiat-Shamir/ROM
+and implementation of secure randomness remain open.
+
+## Earlier additions in v0.5.57
 
 [Bulletproofs algebraic range reduction](docs/release-v0.5.57.en.md) proves
 formal polynomial equivalence with bit constraints, natural range recovery under
