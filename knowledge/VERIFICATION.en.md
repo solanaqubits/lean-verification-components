@@ -1,6 +1,43 @@
 # Public verification record
 
-## Current public snapshot: Constant product with virtual reserves
+## Current public snapshot: POVM entropic uncertainty
+
+[Release v0.5.60](../docs/release-v0.5.60.en.md) · [Detailed contract](03_quantum_information/QuantumPOVMInformationEntropy.md)
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 162 |
+| Lean files under Verification/ | 202 top-level + 2 auxiliary = 204 |
+| Root-inclusive sources identical to the reference snapshot | 205 |
+| Clean strict build | 3842 jobs; no warnings |
+| Complete verifier audit | 22607 declarations; no violations |
+| Pinned independent full audit | 22607 declarations; no violations |
+| Public live tests | 107; no failures or skips; 317.111s |
+| New kernel regression examples | 30 |
+
+Both full audits allow only propext, Classical.choice and Quot.sound.
+The registry audit and knowledge catalog passed separately. The independent auditor
+is pinned to source commit 46024e005996495c65ef609368e11ab39c4222e3 and executable
+SHA-256 8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+The project toolchain is v4.33.1; the auditor source toolchain file records v4.32.0-rc1.
+This is an independent axiom auditor, not a second proof kernel.
+
+The project build directory started empty; pinned dependency caches were copied
+into this isolated checkout. All 205 proof sources match reference snapshot
+22f869e47aa9b9d9703bee7520b3798e693f6b15 byte-for-byte.
+Only English cards were exported; earlier public reports remain available.
+
+```bash
+lake build --wfail
+python3 tools/verifier_skill.py verify-all
+LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p "test_*.py"
+lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
+lake env /tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit --root Verification --allow propext,Classical.choice,Quot.sound --json
+python3 scripts/check_knowledge.py
+```
+
+
+## Historical public snapshot: Constant product with virtual reserves
 
 [Release v0.5.59](../docs/release-v0.5.59.en.md) · [Detailed contract](01_defi/DeFiConstantProductVirtualReserves.md)
 

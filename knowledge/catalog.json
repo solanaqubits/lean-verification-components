@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumPOVMInformationEntropy",
         "Verification.DeFiConstantProductVirtualReserves",
         "Verification.CryptoBulletproofsBatchVerification",
         "Verification.CryptoBulletproofsRangeReduction",
@@ -1396,6 +1397,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumPOVMInformationEntropy",
         "Verification.DeFiConstantProductVirtualReserves",
         "Verification.CryptoBulletproofsBatchVerification",
         "Verification.CryptoBulletproofsRangeReduction",
@@ -2240,6 +2242,18 @@
       "project_imports": [
         "Verification.DeFiConstantProductSwap",
         "Verification.DeFiConcentratedLiquidity"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumPOVMInformationEntropy",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumPOVMInformationEntropy.lean",
+      "card": "knowledge/03_quantum_information/QuantumPOVMInformationEntropy.md",
+      "project_imports": [
+        "Verification.QuantumPOVMNaimarkDilation",
+        "Verification.QuantumPOVMInformationallyComplete"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

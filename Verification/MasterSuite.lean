@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMInformationEntropy
 import Verification.DeFiConstantProductVirtualReserves
 import Verification.CryptoBulletproofsBatchVerification
 import Verification.CryptoBulletproofsRangeReduction
@@ -190,6 +191,7 @@ open CryptoSchnorrMultiSignaturesMuSigGroup
 open DistributedCoordinatedAttackImpossibility
 
 open QuantumNoCloningUnitary
+open QuantumPOVMInformationEntropy
 open QuantumPOVMInformationallyComplete
 open QuantumNoBroadcastingMixed
 

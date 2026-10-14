@@ -1124,5 +1124,14 @@
     "constructor": "finance_defi_full_master_suite",
     "proof": "by\n    exact DeFiConstantProductVirtualReserves.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumPOVMInformationEntropy": {
+    "suite_struct": "QuantumPOVMInformationEntropySuite",
+    "suite_type": "QuantumPOVMInformationEntropy.QuantumPOVMInformationEntropySuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "povm_entropy",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "by\n    exact QuantumPOVMInformationEntropy.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

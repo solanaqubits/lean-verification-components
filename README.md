@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**203 Lean files** under Verification/ (201 top-level + 2 auxiliary),
-**204 including Verification.lean**, **161 direct imports**,
-**22,437 audited declarations**.
-Clean strict build: **3768 jobs**. Public live tests: **106**, no errors or skips.
+**204 Lean files** under Verification/ (202 top-level + 2 auxiliary),
+**205 including Verification.lean**, **162 direct imports**,
+**22,607 audited declarations**.
+Clean strict build: **3842 jobs**. Public live tests: **107**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.59
+## Release v0.5.60
+
+[POVM information entropy](docs/release-v0.5.60.en.md) proves the general
+Maassen-Uffink lower bound for finite POVMs and density matrices through
+Hadamard interpolation, Naimark phase contractions and spectral mixtures.
+The overlap uses the Euclidean operator norm. Exact Pauli examples attain one
+bit; noncommuting qutrit measurements can share a zero-entropy eigenstate.
+Finite sampling, quantum side information and numerical logarithm certificates
+are outside this exact analytic model. Existing cryptographic and external
+correspondence obligations remain open.
+
+## Earlier additions in v0.5.59
 
 [Constant product with virtual reserves](docs/release-v0.5.59.en.md) proves exact
 real-reserve solvency, the retained-fee product identity, fixed-fee price impact

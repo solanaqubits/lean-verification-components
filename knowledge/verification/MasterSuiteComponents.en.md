@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: e54c3ed45b21a675e9d9585052f43ead5dafcb51d1ab5efbbf19c8c62fe90e79
+source_sha256: a00bc8a87509da5ab0fdf0b8b1bd8e82fb1384dfa98768084f0354288e41c53c
 novelty: not-assessed
 status: reviewed
 ---

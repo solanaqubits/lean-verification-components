@@ -1,3 +1,4 @@
+import Verification.QuantumPOVMInformationEntropy
 import Verification.DeFiConstantProductVirtualReserves
 import Verification.CryptoBulletproofsBatchVerification
 import Verification.CryptoBulletproofsRangeReduction
@@ -420,6 +421,7 @@ theorem CryptoFullSuite.pedersen_commitment (suite : CryptoFullSuite) :
 
 /-- The prescribed mode and gap models, without additional physical claims. -/
 structure QuantumPhysicsFullSuite : Prop where
+  povm_entropy : QuantumPOVMInformationEntropy.QuantumPOVMInformationEntropySuite
   spin_photonic : SpinPhotonicFormalSuite
   photonic_ep : NonHermitianPhotonicFormalSuite
   stabilizers : QuantumStabilizerFormalSuite
@@ -468,6 +470,8 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
+  povm_entropy := by
+    exact QuantumPOVMInformationEntropy.verification_suite
   spin_photonic := spin_photonic_master_verification_suite
   photonic_ep := non_hermitian_photonic_master_verification_suite
   stabilizers := quantum_stabilizer_master_verification_suite
