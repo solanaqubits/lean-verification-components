@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsAggregation",
         "Verification.QuantumPOVMInformationEntropy",
         "Verification.DeFiConstantProductVirtualReserves",
         "Verification.CryptoBulletproofsBatchVerification",
@@ -1397,6 +1398,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsAggregation",
         "Verification.QuantumPOVMInformationEntropy",
         "Verification.DeFiConstantProductVirtualReserves",
         "Verification.CryptoBulletproofsBatchVerification",
@@ -2254,6 +2256,19 @@
       "project_imports": [
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumPOVMInformationallyComplete"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "CryptoBulletproofsAggregation",
+      "section": "cryptography",
+      "source": "Verification/CryptoBulletproofsAggregation.lean",
+      "card": "knowledge/04_cryptography/CryptoBulletproofsAggregation.md",
+      "project_imports": [
+        "Verification.CryptoBulletproofsInnerProduct",
+        "Verification.CryptoBulletproofsRangeReduction",
+        "Verification.CryptoBulletproofsBatchVerification"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

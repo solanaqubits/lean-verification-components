@@ -1133,5 +1133,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "by\n    exact QuantumPOVMInformationEntropy.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsAggregation": {
+    "suite_struct": "CryptoBulletproofsAggregationSuite",
+    "suite_type": "CryptoBulletproofsAggregation.CryptoBulletproofsAggregationSuite",
+    "parent": "CryptoFullSuite",
+    "field": "bulletproofs_aggregation",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsAggregation.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

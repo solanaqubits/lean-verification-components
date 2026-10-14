@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**204 Lean files** under Verification/ (202 top-level + 2 auxiliary),
-**205 including Verification.lean**, **162 direct imports**,
-**22,607 audited declarations**.
-Clean strict build: **3842 jobs**. Public live tests: **107**, no errors or skips.
+**205 Lean files** under Verification/ (203 top-level + 2 auxiliary),
+**206 including Verification.lean**, **163 direct imports**,
+**22,780 audited declarations**.
+Clean strict build: **3843 jobs**. Public live tests: **108**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.60
+## Release v0.5.61
+
+[Bulletproofs multi-range aggregation](docs/release-v0.5.61.en.md) proves
+block-weighted polynomial reduction, formal coefficient recovery and honest
+composition with the recursive IPA. The single-block verifier equals module 159.
+The IPA payload contains exactly 2(a+b) group elements and two scalars;
+the proof body and envelope with public commitments are counted separately.
+Witness extraction, binding, HVZK, Fiat-Shamir/ROM and external correspondence
+obligations remain open.
+
+## Earlier additions in v0.5.60
 
 [POVM information entropy](docs/release-v0.5.60.en.md) proves the general
 Maassen-Uffink lower bound for finite POVMs and density matrices through

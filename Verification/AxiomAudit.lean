@@ -151,3 +151,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DeFiConstantProductVirtualReserves.verification_suite
 
 #audit_axioms QuantumPOVMInformationEntropy.verification_suite
+
+#audit_axioms CryptoBulletproofsAggregation.verification_suite

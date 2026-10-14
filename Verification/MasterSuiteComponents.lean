@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsAggregation
 import Verification.QuantumPOVMInformationEntropy
 import Verification.DeFiConstantProductVirtualReserves
 import Verification.CryptoBulletproofsBatchVerification
@@ -352,6 +353,7 @@ structure CryptoFullSuite : Prop where
   pedersen_range_linear : CryptoPedersenRangeProofLinear.CryptoPedersenRangeProofLinearSuite
   bulletproofs_inner_product : CryptoBulletproofsInnerProduct.CryptoBulletproofsInnerProductSuite
   bulletproofs_batch : CryptoBulletproofsBatchVerification.CryptoBulletproofsBatchVerificationSuite
+  bulletproofs_aggregation : CryptoBulletproofsAggregation.CryptoBulletproofsAggregationSuite
   range_reduction : CryptoBulletproofsRangeReduction.CryptoBulletproofsRangeReductionSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
@@ -404,6 +406,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoBulletproofsInnerProduct.verification_suite
   bulletproofs_batch := by
     exact CryptoBulletproofsBatchVerification.verification_suite
+  bulletproofs_aggregation := by
+    exact CryptoBulletproofsAggregation.verification_suite
   range_reduction := by
     exact CryptoBulletproofsRangeReduction.verification_suite
 }
