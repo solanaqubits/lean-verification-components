@@ -147,3 +147,5 @@ open CryptoCommitmentVectorPedersenGroup in
 
 #audit_axioms CryptoBulletproofsBatchVerification.verification_suite
 #audit_axioms CryptoBulletproofsRangeReduction.verification_suite
+
+#audit_axioms DeFiConstantProductVirtualReserves.verification_suite

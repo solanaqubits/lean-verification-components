@@ -28,14 +28,23 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**202 Lean files** under Verification/ (200 top-level + 2 auxiliary),
-**203 including Verification.lean**, **160 direct imports**,
-**22,183 audited declarations**.
-Clean strict build: **3767 jobs**. Public live tests: **105**, no errors or skips.
+**203 Lean files** under Verification/ (201 top-level + 2 auxiliary),
+**204 including Verification.lean**, **161 direct imports**,
+**22,437 audited declarations**.
+Clean strict build: **3768 jobs**. Public live tests: **106**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.58
+## Release v0.5.59
+
+[Constant product with virtual reserves](docs/release-v0.5.59.en.md) proves exact
+real-reserve solvency, the retained-fee product identity, fixed-fee price impact
+and executable natural swaps with directed rounding. Successful finite chains
+with variable valid fees have nondecreasing product. Fees remain in trading
+reserves; external-price value preservation and MEV/arbitrage security are not
+asserted. Existing Bulletproofs security and implementation obligations remain open.
+
+## Earlier additions in v0.5.58
 
 [Bulletproofs batch verification](docs/release-v0.5.58.en.md) proves perfect
 completeness, equivalence to one expanded MSM, paired permutation invariance and

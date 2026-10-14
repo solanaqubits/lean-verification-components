@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiConstantProductVirtualReserves",
         "Verification.CryptoBulletproofsBatchVerification",
         "Verification.CryptoBulletproofsRangeReduction",
         "Verification.CryptoBulletproofsInnerProduct",
@@ -1395,6 +1396,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DeFiConstantProductVirtualReserves",
         "Verification.CryptoBulletproofsBatchVerification",
         "Verification.CryptoBulletproofsRangeReduction",
         "Verification.CryptoBulletproofsInnerProduct",
@@ -2226,6 +2228,18 @@
       "project_imports": [
         "Verification.CryptoBulletproofsInnerProduct",
         "Verification.CryptoBulletproofsRangeReduction"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DeFiConstantProductVirtualReserves",
+      "section": "finance",
+      "source": "Verification/DeFiConstantProductVirtualReserves.lean",
+      "card": "knowledge/01_defi/DeFiConstantProductVirtualReserves.md",
+      "project_imports": [
+        "Verification.DeFiConstantProductSwap",
+        "Verification.DeFiConcentratedLiquidity"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

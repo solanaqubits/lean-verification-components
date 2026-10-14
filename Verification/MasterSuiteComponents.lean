@@ -1,3 +1,4 @@
+import Verification.DeFiConstantProductVirtualReserves
 import Verification.CryptoBulletproofsBatchVerification
 import Verification.CryptoBulletproofsRangeReduction
 import Verification.CryptoBulletproofsInnerProduct
@@ -562,11 +563,14 @@ theorem proof_dag_full_master_suite : ProofDAGFullSuite := {
 
 /-- Sequential settlement and exact real-valued swap invariants. -/
 structure FinanceDeFiFullSuite : Prop where
+  virtual_reserves : DeFiConstantProductVirtualReserves.DeFiConstantProductVirtualReservesSuite
   settlement : AssetSettlementFormalSuite
   amm : DeFiAMMFormalSuite
   concentrated_math : DeFiConcentratedLiquidityMath.DeFiConcentratedLiquidityMathSuite
 
 theorem finance_defi_full_master_suite : FinanceDeFiFullSuite := {
+  virtual_reserves := by
+    exact DeFiConstantProductVirtualReserves.verification_suite
   settlement := asset_settlement_master_verification_suite
   amm := defi_amm_master_verification_suite
   concentrated_math := by
