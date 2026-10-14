@@ -28,14 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**200 Lean files** under Verification/ (198 top-level + 2 auxiliary),
-**201 including Verification.lean**, **158 direct imports**,
-**21,912 audited declarations**.
-Clean strict build: **3765 jobs**. Public live tests: **103**, no errors or skips.
+**201 Lean files** under Verification/ (199 top-level + 2 auxiliary),
+**202 including Verification.lean**, **159 direct imports**,
+**22,043 audited declarations**.
+Clean strict build: **3766 jobs**. Public live tests: **104**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.56
+## Release v0.5.57
+
+[Bulletproofs algebraic range reduction](docs/release-v0.5.57.en.md) proves
+formal polynomial equivalence with bit constraints, natural range recovery under
+explicit bounds, the corrected public IPA target and honest composite completeness.
+Knowledge extraction, computational binding, HVZK and Fiat-Shamir/ROM remain open.
+An identity of formal polynomials is distinguished from equality at a fixed challenge.
+
+## Earlier additions in v0.5.56
 
 [Bulletproofs inner product algebra](docs/release-v0.5.56.en.md) proves the
 halving invariant, recursive completeness, equivalence of expanded verification

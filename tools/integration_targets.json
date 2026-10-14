@@ -1097,5 +1097,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoBulletproofsInnerProduct.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsRangeReduction": {
+    "suite_struct": "CryptoBulletproofsRangeReductionSuite",
+    "suite_type": "CryptoBulletproofsRangeReduction.CryptoBulletproofsRangeReductionSuite",
+    "parent": "CryptoFullSuite",
+    "field": "range_reduction",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsRangeReduction.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

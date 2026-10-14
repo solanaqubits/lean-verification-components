@@ -67,3 +67,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [CryptoPedersenRangeProofLinear](../04_cryptography/CryptoPedersenRangeProofLinear.md): interactive range proofs, two-transcript extraction and full joint special HVZK.
 
 - [CryptoBulletproofsInnerProduct](../04_cryptography/CryptoBulletproofsInnerProduct.md) — Recursive IPA completeness, expanded verification and exact payload counts.
+
+- [Bulletproofs algebraic range reduction](../04_cryptography/CryptoBulletproofsRangeReduction.md)

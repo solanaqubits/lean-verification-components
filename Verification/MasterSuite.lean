@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsRangeReduction
 import Verification.CryptoBulletproofsInnerProduct
 import Verification.DistributedMarzulloEventSorting
 import Verification.CryptoPedersenRangeProofLinear
@@ -159,6 +160,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open CryptoBulletproofsRangeReduction
 open CryptoBulletproofsInnerProduct
 open DistributedMarzulloEventSorting
 open CryptoPedersenRangeProofLinear

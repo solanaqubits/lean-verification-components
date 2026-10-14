@@ -144,3 +144,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DistributedMarzulloEventSorting.verification_suite
 
 #audit_axioms CryptoBulletproofsInnerProduct.verification_suite
+
+#audit_axioms CryptoBulletproofsRangeReduction.verification_suite
