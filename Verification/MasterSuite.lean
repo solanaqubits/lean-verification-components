@@ -1,3 +1,4 @@
+import Verification.DeFiLendingLiquidationHealthFactor
 import Verification.CryptoBulletproofsAggregation
 import Verification.QuantumPOVMInformationEntropy
 import Verification.DeFiConstantProductVirtualReserves
@@ -164,6 +165,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DeFiLendingLiquidationHealthFactor
 open DeFiConstantProductVirtualReserves
 open CryptoBulletproofsBatchVerification
 open CryptoBulletproofsRangeReduction

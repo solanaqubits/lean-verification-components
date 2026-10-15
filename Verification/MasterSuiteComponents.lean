@@ -1,3 +1,4 @@
+import Verification.DeFiLendingLiquidationHealthFactor
 import Verification.CryptoBulletproofsAggregation
 import Verification.QuantumPOVMInformationEntropy
 import Verification.DeFiConstantProductVirtualReserves
@@ -600,6 +601,7 @@ theorem QuantumPhysicsFullSuite.quantum_teleportation (suite : QuantumPhysicsFul
 
 /-- Extend the settlement and swap package with portfolio variance guarantees. -/
 structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
+  liquidation_health : DeFiLendingLiquidationHealthFactor.DeFiLendingLiquidationHealthFactorSuite
   risk_engine : PortfolioRiskFormalSuite
   lightning : LightningHTLCFormalSuite
   multihop : DeFiMultiHopFormalSuite
@@ -619,6 +621,8 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   bonding_curve : DeFiBondingCurve.DeFiBondingCurveFormalSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
+  liquidation_health := by
+    exact DeFiLendingLiquidationHealthFactor.verification_suite
   toFinanceDeFiFullSuite := finance_defi_full_master_suite
   risk_engine := portfolio_risk_master_verification_suite
   lightning := lightning_htlc_master_verification_suite

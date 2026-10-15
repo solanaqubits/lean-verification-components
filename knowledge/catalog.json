@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiLendingLiquidationHealthFactor",
         "Verification.CryptoBulletproofsAggregation",
         "Verification.QuantumPOVMInformationEntropy",
         "Verification.DeFiConstantProductVirtualReserves",
@@ -1398,6 +1399,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DeFiLendingLiquidationHealthFactor",
         "Verification.CryptoBulletproofsAggregation",
         "Verification.QuantumPOVMInformationEntropy",
         "Verification.DeFiConstantProductVirtualReserves",
@@ -2269,6 +2271,17 @@
         "Verification.CryptoBulletproofsInnerProduct",
         "Verification.CryptoBulletproofsRangeReduction",
         "Verification.CryptoBulletproofsBatchVerification"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DeFiLendingLiquidationHealthFactor",
+      "section": "finance",
+      "source": "Verification/DeFiLendingLiquidationHealthFactor.lean",
+      "card": "knowledge/01_defi/DeFiLendingLiquidationHealthFactor.md",
+      "project_imports": [
+        "Verification.DeFiOvercollateralizedLending"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

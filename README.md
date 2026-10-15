@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**205 Lean files** under Verification/ (203 top-level + 2 auxiliary),
-**206 including Verification.lean**, **163 direct imports**,
-**22,780 audited declarations**.
-Clean strict build: **3843 jobs**. Public live tests: **108**, no errors or skips.
+**206 Lean files** under Verification/ (204 top-level + 2 auxiliary),
+**207 including Verification.lean**, **164 direct imports**,
+**22,993 audited declarations**.
+Clean strict build: **3844 jobs**. Public live tests: **109**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.61
+## Release v0.5.62
+
+[Lending liquidation health factor](docs/release-v0.5.62.en.md) proves
+exact liquidation accounting, conditional health improvement, residual debt
+coverage and directed integer rounding. Zero debt has no numeric health factor.
+Executable guards distinguish liquidation admission from preserving coverage;
+counterexamples show why admissibility alone does not ensure either health
+improvement or residual coverage. Oracle truth, market execution, pool-wide
+solvency and external correspondence obligations remain outside these guarantees.
+
+## Earlier additions in v0.5.61
 
 [Bulletproofs multi-range aggregation](docs/release-v0.5.61.en.md) proves
 block-weighted polynomial reduction, formal coefficient recovery and honest

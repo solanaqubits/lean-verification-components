@@ -1142,5 +1142,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoBulletproofsAggregation.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiLendingLiquidationHealthFactor": {
+    "suite_struct": "DeFiLendingLiquidationHealthFactorSuite",
+    "suite_type": "DeFiLendingLiquidationHealthFactor.DeFiLendingLiquidationHealthFactorSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "liquidation_health",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "by\n    exact DeFiLendingLiquidationHealthFactor.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
