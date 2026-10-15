@@ -1178,5 +1178,14 @@
     "constructor": "finance_risk_full_master_suite",
     "proof": "DeFiKinkedInterestRateUtilization.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiLendingCompoundInterestIndex": {
+    "suite_struct": "DeFiLendingCompoundInterestIndexSuite",
+    "suite_type": "DeFiLendingCompoundInterestIndex.DeFiLendingCompoundInterestIndexSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "compound_index",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiLendingCompoundInterestIndex.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

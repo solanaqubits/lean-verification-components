@@ -1,3 +1,4 @@
+import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety

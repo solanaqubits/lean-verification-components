@@ -1,3 +1,4 @@
+import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety
@@ -625,6 +626,7 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   overcollateralized_lending : DeFiOvercollateralizedLendingFormalSuite
   bonding_curve : DeFiBondingCurve.DeFiBondingCurveFormalSuite
   kink_rate : DeFiKinkedInterestRateUtilization.DeFiKinkedInterestRateUtilizationSuite
+  compound_index : DeFiLendingCompoundInterestIndex.DeFiLendingCompoundInterestIndexSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   liquidation_health := by
@@ -654,6 +656,7 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   bonding_curve := by
     exact DeFiBondingCurve.defi_bonding_curve_master_suite
   kink_rate := DeFiKinkedInterestRateUtilization.verification_suite
+  compound_index := DeFiLendingCompoundInterestIndex.verification_suite
 }
 
 /-- Alias for the existing concentrated-liquidity component. -/

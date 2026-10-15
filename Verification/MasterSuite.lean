@@ -1,3 +1,4 @@
+import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety
@@ -168,6 +169,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DeFiLendingCompoundInterestIndex
 open DeFiKinkedInterestRateUtilization
 open QuantumChannelClassicalDataProcessing
 open DistributedTendermintCoreSafety

@@ -28,14 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**209 Lean files** under Verification/ (207 top-level + 2 auxiliary),
-**210 including Verification.lean**, **167 direct imports**,
-**23,749 audited declarations**.
-Clean strict build: **3848 jobs**. Public live tests: **112**, no errors or skips.
+**210 Lean files** under Verification/ (208 top-level + 2 auxiliary),
+**211 including Verification.lean**, **168 direct imports**,
+**23,912 audited declarations**.
+Clean strict build: **3849 jobs**. Public live tests: **113**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.65
+## Release v0.5.66
+
+[Debt-index accrual and rounding reconciliation](docs/release-v0.5.66.en.md)
+proves interval composition, the strict subdivision effect and guarded accrual,
+borrowing and repayment accounting. Natural accrual preserves balance by assigning
+the interest residual to suppliers. Index-derived reconciliation dust is at most
+n-1 and is explicitly separated from independent ledger/index drift. Local error
+bounds do not imply a uniform global bound over arbitrary update chains. Debt
+recoverability, default freedom, withdrawal liquidity and deployed-contract
+refinement remain outside scope. Tendermint accountability, Bulletproofs security
+and external Python, JSON/SHA-256 and SimLab obligations remain open.
+
+## Earlier additions in v0.5.65
 
 [Kinked utilization rates and rounding](docs/release-v0.5.65.en.md) proves exact
 utilization admission, continuity and monotonicity of the borrow curve, convexity

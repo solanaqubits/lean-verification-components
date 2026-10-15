@@ -161,3 +161,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumChannelClassicalDataProcessing.verification_suite
 
 #audit_axioms DeFiKinkedInterestRateUtilization.verification_suite
+
+#audit_axioms DeFiLendingCompoundInterestIndex.verification_suite

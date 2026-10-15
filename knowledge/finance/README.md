@@ -50,3 +50,5 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [Lending liquidation health factor](../01_defi/DeFiLendingLiquidationHealthFactor.md)
 
 - [Kinked utilization rates and directed rounding](../01_defi/DeFiKinkedInterestRateUtilization.md)
+
+- [Debt-index accrual and rounding reconciliation](../01_defi/DeFiLendingCompoundInterestIndex.md)
