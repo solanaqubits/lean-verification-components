@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumHelstromStateDiscrimination",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsWitnessExtraction",
         "Verification.DeFiLendingCompoundInterestIndex",
@@ -1405,6 +1406,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumHelstromStateDiscrimination",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsWitnessExtraction",
         "Verification.DeFiLendingCompoundInterestIndex",
@@ -2365,6 +2367,19 @@
       "project_imports": [
         "Verification.CryptoBulletproofsInnerProduct",
         "Verification.CryptoBulletproofsWitnessExtraction"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumHelstromStateDiscrimination",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumHelstromStateDiscrimination.lean",
+      "card": "knowledge/03_quantum_information/QuantumHelstromStateDiscrimination.md",
+      "project_imports": [
+        "Verification.QuantumPOVMNaimarkDilation",
+        "Verification.QuantumPOVMInformationEntropy",
+        "Verification.QuantumChannelClassicalDataProcessing"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

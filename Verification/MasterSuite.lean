@@ -1,3 +1,4 @@
+import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction
 import Verification.DeFiLendingCompoundInterestIndex
@@ -171,6 +172,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open QuantumHelstromStateDiscrimination
 open CryptoBulletproofsTreeExtraction
 open CryptoBulletproofsWitnessExtraction
 open DeFiLendingCompoundInterestIndex

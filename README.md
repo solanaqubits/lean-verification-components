@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**212 Lean files** under Verification/ (210 top-level + 2 auxiliary),
-**213 including Verification.lean**, **170 direct imports**,
-**24,415 audited declarations**.
-Clean strict build: **3851 jobs**. Public live tests: **115**, no errors or skips.
+**213 Lean files** under Verification/ (211 top-level + 2 auxiliary),
+**214 including Verification.lean**, **171 direct imports**,
+**24,623 audited declarations**.
+Clean strict build: **3852 jobs**. Public live tests: **116**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.68
+## Release v0.5.69
+
+[Holevo–Helstrom state discrimination](docs/release-v0.5.69.en.md) proves the optimal
+binary state discrimination bound without commutation assumptions, attainment by a
+spectral projector, freedom of selection at zero eigenvalues, Bayes decision rule
+optimality and classical postprocessing contraction of optimal guessing probability.
+Exact noncommuting qubit regressions give trace norm 1/sqrt(2). Certified numerical
+spectral algorithms, sampling, physical implementation and general quantum DPI remain
+outside this model. Full Bulletproofs range extraction, Tendermint accountability,
+Python, JSON/SHA-256 and SimLab obligations remain open.
+
+## Earlier additions in v0.5.68
 
 [Recursive IPA tree extraction](docs/release-v0.5.68.en.md) proves deterministic
 extraction from a supplied complete accepting four-branch tree. It recovers full

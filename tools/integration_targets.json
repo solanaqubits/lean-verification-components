@@ -1205,5 +1205,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoBulletproofsTreeExtraction.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumHelstromStateDiscrimination": {
+    "suite_struct": "QuantumHelstromStateDiscriminationSuite",
+    "suite_type": "QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "helstrom",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumHelstromStateDiscrimination.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

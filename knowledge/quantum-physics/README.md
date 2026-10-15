@@ -111,3 +111,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [POVM information entropy](../03_quantum_information/QuantumPOVMInformationEntropy.md)
 
 - [Classical POVM postprocessing and KL contraction](../03_quantum_information/QuantumChannelClassicalDataProcessing.md)
+
+- [Holevo–Helstrom state discrimination](../03_quantum_information/QuantumHelstromStateDiscrimination.md)

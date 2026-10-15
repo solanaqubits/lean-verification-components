@@ -167,3 +167,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms CryptoBulletproofsWitnessExtraction.verification_suite
 
 #audit_axioms CryptoBulletproofsTreeExtraction.verification_suite
+
+#audit_axioms QuantumHelstromStateDiscrimination.verification_suite
