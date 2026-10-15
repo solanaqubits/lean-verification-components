@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumChannelClassicalDataProcessing",
         "Verification.DistributedTendermintCoreSafety",
         "Verification.DeFiLendingLiquidationHealthFactor",
         "Verification.CryptoBulletproofsAggregation",
@@ -1400,6 +1401,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumChannelClassicalDataProcessing",
         "Verification.DistributedTendermintCoreSafety",
         "Verification.DeFiLendingLiquidationHealthFactor",
         "Verification.CryptoBulletproofsAggregation",
@@ -2295,6 +2297,19 @@
       "card": "knowledge/05_distributed_systems/DistributedTendermintCoreSafety.md",
       "project_imports": [
         "Verification.DistributedPBFTConsensus"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumChannelClassicalDataProcessing",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumChannelClassicalDataProcessing.lean",
+      "card": "knowledge/03_quantum_information/QuantumChannelClassicalDataProcessing.md",
+      "project_imports": [
+        "Verification.QuantumPOVMNaimarkDilation",
+        "Verification.QuantumPOVMInformationallyComplete",
+        "Verification.QuantumPOVMInformationEntropy"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

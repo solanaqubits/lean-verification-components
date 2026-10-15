@@ -1,3 +1,4 @@
+import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety
 import Verification.DeFiLendingLiquidationHealthFactor
 import Verification.CryptoBulletproofsAggregation
@@ -427,6 +428,7 @@ theorem CryptoFullSuite.pedersen_commitment (suite : CryptoFullSuite) :
 
 /-- The prescribed mode and gap models, without additional physical claims. -/
 structure QuantumPhysicsFullSuite : Prop where
+  classical_dpi : QuantumChannelClassicalDataProcessing.QuantumChannelClassicalDataProcessingSuite
   povm_entropy : QuantumPOVMInformationEntropy.QuantumPOVMInformationEntropySuite
   spin_photonic : SpinPhotonicFormalSuite
   photonic_ep : NonHermitianPhotonicFormalSuite
@@ -476,6 +478,7 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
+  classical_dpi := QuantumChannelClassicalDataProcessing.verification_suite
   povm_entropy := by
     exact QuantumPOVMInformationEntropy.verification_suite
   spin_photonic := spin_photonic_master_verification_suite

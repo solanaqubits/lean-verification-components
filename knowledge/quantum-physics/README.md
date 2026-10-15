@@ -109,3 +109,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Informationally complete POVMs and exact tomography](../03_quantum/QuantumPOVMInformationallyComplete.md)
 
 - [POVM information entropy](../03_quantum_information/QuantumPOVMInformationEntropy.md)
+
+- [Classical POVM postprocessing and KL contraction](../03_quantum_information/QuantumChannelClassicalDataProcessing.md)

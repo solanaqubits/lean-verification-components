@@ -157,3 +157,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DeFiLendingLiquidationHealthFactor.verification_suite
 
 #audit_axioms DistributedTendermintCoreSafety.verification_suite
+
+#audit_axioms QuantumChannelClassicalDataProcessing.verification_suite

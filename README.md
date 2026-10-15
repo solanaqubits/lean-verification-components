@@ -28,14 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**207 Lean files** under Verification/ (205 top-level + 2 auxiliary),
-**208 including Verification.lean**, **165 direct imports**,
-**23,432 audited declarations**.
-Clean strict build: **3845 jobs**. Public live tests: **110**, no errors or skips.
+**208 Lean files** under Verification/ (206 top-level + 2 auxiliary),
+**209 including Verification.lean**, **166 direct imports**,
+**23,587 audited declarations**.
+Clean strict build: **3846 jobs**. Public live tests: **111**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.63
+## Release v0.5.64
+
+[Classical POVM data processing](docs/release-v0.5.64.en.md) proves stochastic
+postprocessing of finite POVMs, support preservation and classical KL contraction
+under absolute continuity. Bistochastic channels cannot decrease Shannon entropy;
+binary symmetric noise strictly increases it for nonuniform inputs when
+0<epsilon<1/2. Deterministic merging provides the entropy-decrease counterexample
+for general stochastic channels. Singular infinite KL and general quantum Umegaki
+DPI remain outside scope. The exact real analysis is noncomputable; no numerical
+logarithm implementation is certified. External correspondence, Tendermint
+accountability and Bulletproofs security obligations remain open.
+
+## Earlier additions in v0.5.63
 
 [Weighted Tendermint core safety](docs/release-v0.5.63.en.md) proves quorum
 intersection, same-round uniqueness and cross-round commit safety from reachable

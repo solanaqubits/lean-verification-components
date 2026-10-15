@@ -1160,5 +1160,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintCoreSafety.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumChannelClassicalDataProcessing": {
+    "suite_struct": "QuantumChannelClassicalDataProcessingSuite",
+    "suite_type": "QuantumChannelClassicalDataProcessing.QuantumChannelClassicalDataProcessingSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "classical_dpi",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumChannelClassicalDataProcessing.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

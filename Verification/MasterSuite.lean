@@ -1,3 +1,4 @@
+import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety
 import Verification.DeFiLendingLiquidationHealthFactor
 import Verification.CryptoBulletproofsAggregation
@@ -166,6 +167,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open QuantumChannelClassicalDataProcessing
 open DistributedTendermintCoreSafety
 open DeFiLendingLiquidationHealthFactor
 open DeFiConstantProductVirtualReserves
