@@ -1,3 +1,4 @@
+import Verification.DistributedTendermintCoreSafety
 import Verification.DeFiLendingLiquidationHealthFactor
 import Verification.CryptoBulletproofsAggregation
 import Verification.QuantumPOVMInformationEntropy
@@ -655,6 +656,7 @@ theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuit
 
 /-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
+  tendermint : DistributedTendermintCoreSafety.DistributedTendermintCoreSafetySuite
   bft_quorum : BFTConsensusFormalSuite
   raft : DistributedRaftConsensus.DistributedRaftFormalSuite.{uRaft1, uRaft2, uRaft3}
   raft_append : DistributedRaftLogAppend.DistributedRaftLogAppendFormalSuite
@@ -694,6 +696,7 @@ structure DistributedSystemsFullSuite : Prop where
   marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
+  tendermint := DistributedTendermintCoreSafety.verification_suite
   bft_quorum := bft_consensus_master_verification_suite
   raft := DistributedRaftConsensus.distributed_raft_master_verification_suite
   raft_append := DistributedRaftLogAppend.distributed_raft_log_append_master_verification_suite

@@ -1151,5 +1151,14 @@
     "constructor": "finance_risk_full_master_suite",
     "proof": "by\n    exact DeFiLendingLiquidationHealthFactor.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintCoreSafety": {
+    "suite_struct": "DistributedTendermintCoreSafetySuite",
+    "suite_type": "DistributedTendermintCoreSafety.DistributedTendermintCoreSafetySuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "tendermint",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintCoreSafety.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

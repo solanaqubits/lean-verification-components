@@ -1,3 +1,4 @@
+import Verification.DistributedTendermintCoreSafety
 import Verification.DeFiLendingLiquidationHealthFactor
 import Verification.CryptoBulletproofsAggregation
 import Verification.QuantumPOVMInformationEntropy
@@ -165,6 +166,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DistributedTendermintCoreSafety
 open DeFiLendingLiquidationHealthFactor
 open DeFiConstantProductVirtualReserves
 open CryptoBulletproofsBatchVerification

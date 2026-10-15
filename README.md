@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**206 Lean files** under Verification/ (204 top-level + 2 auxiliary),
-**207 including Verification.lean**, **164 direct imports**,
-**22,993 audited declarations**.
-Clean strict build: **3844 jobs**. Public live tests: **109**, no errors or skips.
+**207 Lean files** under Verification/ (205 top-level + 2 auxiliary),
+**208 including Verification.lean**, **165 direct imports**,
+**23,432 audited declarations**.
+Clean strict build: **3845 jobs**. Public live tests: **110**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.62
+## Release v0.5.63
+
+[Weighted Tendermint core safety](docs/release-v0.5.63.en.md) proves quorum
+intersection, same-round uniqueness and cross-round commit safety from reachable
+states. Strict >2/3 quorums retain safety at exactly one-third Byzantine weight;
+a concrete reachable conflict is exhibited above that boundary. Executable guards
+check actual certificates and unique signers. This is a fixed-height safety
+abstraction, with full implementation refinement, liveness, signatures and
+attributable slashing evidence outside scope. External correspondence and
+Bulletproofs security obligations remain open.
+
+## Earlier additions in v0.5.62
 
 [Lending liquidation health factor](docs/release-v0.5.62.en.md) proves
 exact liquidation accounting, conditional health improvement, residual debt
