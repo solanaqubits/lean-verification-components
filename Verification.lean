@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsWitnessExtraction
 import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing

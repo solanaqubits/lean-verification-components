@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsWitnessExtraction",
         "Verification.DeFiLendingCompoundInterestIndex",
         "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.QuantumChannelClassicalDataProcessing",
@@ -1403,6 +1404,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsWitnessExtraction",
         "Verification.DeFiLendingCompoundInterestIndex",
         "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.QuantumChannelClassicalDataProcessing",
@@ -2337,6 +2339,18 @@
       "project_imports": [
         "Verification.DeFiLendingLiquidationHealthFactor",
         "Verification.DeFiKinkedInterestRateUtilization"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "CryptoBulletproofsWitnessExtraction",
+      "section": "cryptography",
+      "source": "Verification/CryptoBulletproofsWitnessExtraction.lean",
+      "card": "knowledge/04_cryptography/CryptoBulletproofsWitnessExtraction.md",
+      "project_imports": [
+        "Verification.CryptoBulletproofsInnerProduct",
+        "Verification.CryptoBulletproofsRangeReduction"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

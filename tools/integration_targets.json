@@ -1187,5 +1187,14 @@
     "constructor": "finance_risk_full_master_suite",
     "proof": "DeFiLendingCompoundInterestIndex.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsWitnessExtraction": {
+    "suite_struct": "CryptoBulletproofsWitnessExtractionSuite",
+    "suite_type": "CryptoBulletproofsWitnessExtraction.CryptoBulletproofsWitnessExtractionSuite",
+    "parent": "CryptoFullSuite",
+    "field": "ipa_extraction",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsWitnessExtraction.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

@@ -28,14 +28,27 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**210 Lean files** under Verification/ (208 top-level + 2 auxiliary),
-**211 including Verification.lean**, **168 direct imports**,
-**23,912 audited declarations**.
-Clean strict build: **3849 jobs**. Public live tests: **113**, no errors or skips.
+**211 Lean files** under Verification/ (209 top-level + 2 auxiliary),
+**212 including Verification.lean**, **169 direct imports**,
+**24,130 audited declarations**.
+Clean strict build: **3850 jobs**. Public live tests: **114**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.66
+## Release v0.5.67
+
+[Local Bulletproofs witness extraction](docs/release-v0.5.67.en.md) proves a
+one-step IPA extraction dichotomy from four accepting folded-witness responses
+with a common prefix and distinct nonzero challenge squares: an original witness
+or explicit nonzero coefficients of a zero generator combination. Generator
+independence is not assumed. The checked interface rejects invalid inputs.
+Three-point Vandermonde interpolation recovers the range-reduction polynomial's
+coefficients; it does not establish bitness. Full recursive extraction,
+probabilistic transcript-tree construction, computational binding, HVZK and
+Fiat-Shamir/ROM remain open, as do Tendermint accountability and external Python,
+JSON/SHA-256 and SimLab obligations.
+
+## Earlier additions in v0.5.66
 
 [Debt-index accrual and rounding reconciliation](docs/release-v0.5.66.en.md)
 proves interval composition, the strict subdivision effect and guarded accrual,

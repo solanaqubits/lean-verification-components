@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsWitnessExtraction
 import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing
@@ -169,6 +170,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open CryptoBulletproofsWitnessExtraction
 open DeFiLendingCompoundInterestIndex
 open DeFiKinkedInterestRateUtilization
 open QuantumChannelClassicalDataProcessing

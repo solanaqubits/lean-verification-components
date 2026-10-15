@@ -73,3 +73,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [Bulletproofs batch verification](../04_cryptography/CryptoBulletproofsBatchVerification.md)
 
 - [Bulletproofs range aggregation](../04_cryptography/CryptoBulletproofsAggregation.md)
+
+- [Local Bulletproofs witness extraction](../04_cryptography/CryptoBulletproofsWitnessExtraction.md)
