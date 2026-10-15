@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.QuantumChannelClassicalDataProcessing",
         "Verification.DistributedTendermintCoreSafety",
         "Verification.DeFiLendingLiquidationHealthFactor",
@@ -1401,6 +1402,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.QuantumChannelClassicalDataProcessing",
         "Verification.DistributedTendermintCoreSafety",
         "Verification.DeFiLendingLiquidationHealthFactor",
@@ -2310,6 +2312,17 @@
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumPOVMInformationallyComplete",
         "Verification.QuantumPOVMInformationEntropy"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DeFiKinkedInterestRateUtilization",
+      "section": "finance",
+      "source": "Verification/DeFiKinkedInterestRateUtilization.lean",
+      "card": "knowledge/01_defi/DeFiKinkedInterestRateUtilization.md",
+      "project_imports": [
+        "Verification.DeFiLendingLiquidationHealthFactor"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

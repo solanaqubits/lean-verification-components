@@ -1,3 +1,4 @@
+import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety
 import Verification.DeFiLendingLiquidationHealthFactor

@@ -1169,5 +1169,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumChannelClassicalDataProcessing.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiKinkedInterestRateUtilization": {
+    "suite_struct": "DeFiKinkedInterestRateUtilizationSuite",
+    "suite_type": "DeFiKinkedInterestRateUtilization.DeFiKinkedInterestRateUtilizationSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "kink_rate",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiKinkedInterestRateUtilization.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

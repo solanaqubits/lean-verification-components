@@ -28,14 +28,26 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**208 Lean files** under Verification/ (206 top-level + 2 auxiliary),
-**209 including Verification.lean**, **166 direct imports**,
-**23,587 audited declarations**.
-Clean strict build: **3846 jobs**. Public live tests: **111**, no errors or skips.
+**209 Lean files** under Verification/ (207 top-level + 2 auxiliary),
+**210 including Verification.lean**, **167 direct imports**,
+**23,749 audited declarations**.
+Clean strict build: **3848 jobs**. Public live tests: **112**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.64
+## Release v0.5.65
+
+[Kinked utilization rates and rounding](docs/release-v0.5.65.en.md) proves exact
+utilization admission, continuity and monotonicity of the borrow curve, convexity
+under ordered slopes, supply-rate monotonicity and conditional spread. Executable
+natural arithmetic has explicit rounding order and end-to-end error bounds against
+the rational lift of the same encoded parameters. The checked quote rejects U>1
+even when rounding would hide the excess. Rate order is an instantaneous property;
+pool solvency, defaults, withdrawable liquidity and accrual over time are outside
+scope. Deployed-contract refinement and external Tendermint, Bulletproofs, Python,
+JSON/SHA-256 and SimLab obligations remain open.
+
+## Earlier additions in v0.5.64
 
 [Classical POVM data processing](docs/release-v0.5.64.en.md) proves stochastic
 postprocessing of finite POVMs, support preservation and classical KL contraction

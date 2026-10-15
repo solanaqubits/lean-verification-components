@@ -1,3 +1,4 @@
+import Verification.DeFiKinkedInterestRateUtilization
 import Verification.QuantumChannelClassicalDataProcessing
 import Verification.DistributedTendermintCoreSafety
 import Verification.DeFiLendingLiquidationHealthFactor
@@ -167,6 +168,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DeFiKinkedInterestRateUtilization
 open QuantumChannelClassicalDataProcessing
 open DistributedTendermintCoreSafety
 open DeFiLendingLiquidationHealthFactor
