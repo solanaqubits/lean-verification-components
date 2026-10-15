@@ -75,3 +75,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [Bulletproofs range aggregation](../04_cryptography/CryptoBulletproofsAggregation.md)
 
 - [Local Bulletproofs witness extraction](../04_cryptography/CryptoBulletproofsWitnessExtraction.md)
+
+- [Recursive IPA tree extraction](../04_cryptography/CryptoBulletproofsTreeExtraction.md)

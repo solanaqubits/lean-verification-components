@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction
 import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
@@ -170,6 +171,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open CryptoBulletproofsTreeExtraction
 open CryptoBulletproofsWitnessExtraction
 open DeFiLendingCompoundInterestIndex
 open DeFiKinkedInterestRateUtilization

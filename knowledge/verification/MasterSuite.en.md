@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 4c24a7b4bf56618b767d7f2972b91a8ef63a7337bd8727a5ec13254ce62ddb1f
+source_sha256: a532ee331cdd1898a2067c10c3b52837e682bf8a898c8023a35adf48d2e0ac52
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 169 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 170 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L279)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L291)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L303)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L322)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L366)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L486)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L568)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L578)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L590)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L635)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L711)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L788)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L257)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L280)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L292)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L304)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L323)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L368)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L490)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L572)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L582)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L594)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L639)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L715)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L792)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L259)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L801)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L805)
 
 ## Verification
 
@@ -67,7 +67,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 
 `MasterHundredRegistry.master_hundred_registry_verified` aggregates eleven existing packages and five redundant recent-component projections. Shared declarations moved unchanged to `MasterSuiteComponents` in their original namespace. `MasterSuite` imports the milestone and retains the 99 earlier direct imports, giving 100 unique direct imports without a cycle. This organizational milestone preserves hypotheses and introduces no new domain theorem or all-declarations coverage claim. The 134 source files comprise 130 subject files and four registry/audit support files. These are historical v0.5.0 metrics. Current extensions are described in the validation record.
 
-The central registry now has 169 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
+The central registry now has 170 direct imports and the separate `rounding_certificates`, `sql_intervals`, `digest_bridge` and `sql_gap_bounds` fields. The historical MasterHundredRegistry remains unchanged. See [NumericRoundingCertificates](../12_numeric_certificates/NumericRoundingCertificates.md).
 
 [Verification.NumericSQLGapBounds](../../Verification/NumericSQLGapBounds.lean) — affine gap bounds, exact zero and real rounding composition.
 

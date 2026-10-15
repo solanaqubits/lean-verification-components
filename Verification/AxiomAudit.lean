@@ -165,3 +165,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DeFiLendingCompoundInterestIndex.verification_suite
 
 #audit_axioms CryptoBulletproofsWitnessExtraction.verification_suite
+
+#audit_axioms CryptoBulletproofsTreeExtraction.verification_suite

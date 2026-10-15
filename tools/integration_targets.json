@@ -1196,5 +1196,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoBulletproofsWitnessExtraction.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsTreeExtraction": {
+    "suite_struct": "CryptoBulletproofsTreeExtractionSuite",
+    "suite_type": "CryptoBulletproofsTreeExtraction.CryptoBulletproofsTreeExtractionSuite",
+    "parent": "CryptoFullSuite",
+    "field": "ipa_tree",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsTreeExtraction.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

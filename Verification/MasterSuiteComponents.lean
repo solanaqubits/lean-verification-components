@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction
 import Verification.DeFiLendingCompoundInterestIndex
 import Verification.DeFiKinkedInterestRateUtilization
@@ -362,6 +363,7 @@ structure CryptoFullSuite : Prop where
   bulletproofs_aggregation : CryptoBulletproofsAggregation.CryptoBulletproofsAggregationSuite
   range_reduction : CryptoBulletproofsRangeReduction.CryptoBulletproofsRangeReductionSuite
   ipa_extraction : CryptoBulletproofsWitnessExtraction.CryptoBulletproofsWitnessExtractionSuite
+  ipa_tree : CryptoBulletproofsTreeExtraction.CryptoBulletproofsTreeExtractionSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
   spn_suite := crypto_spn_master_verification_suite
@@ -419,6 +421,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoBulletproofsRangeReduction.verification_suite
   ipa_extraction := by
     exact CryptoBulletproofsWitnessExtraction.verification_suite
+  ipa_tree := by
+    exact CryptoBulletproofsTreeExtraction.verification_suite
 }
 
 theorem CryptoFullSuite.shamir_secret_sharing (suite : CryptoFullSuite) :

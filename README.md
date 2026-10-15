@@ -28,14 +28,27 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**211 Lean files** under Verification/ (209 top-level + 2 auxiliary),
-**212 including Verification.lean**, **169 direct imports**,
-**24,130 audited declarations**.
-Clean strict build: **3850 jobs**. Public live tests: **114**, no errors or skips.
+**212 Lean files** under Verification/ (210 top-level + 2 auxiliary),
+**213 including Verification.lean**, **170 direct imports**,
+**24,415 audited declarations**.
+Clean strict build: **3851 jobs**. Public live tests: **115**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.67
+## Release v0.5.68
+
+[Recursive IPA tree extraction](docs/release-v0.5.68.en.md) proves deterministic
+extraction from a supplied complete accepting four-branch tree. It recovers full
+witness vectors or explicit nonzero coefficients of a zero combination of the
+root generators. Relation lifting preserves evaluation and nontriviality; the
+checker validates every branch against the actual verifier's derived contexts.
+Honest trees recover their exact vectors at every depth. The tree has n^2 leaves,
+separate from the 2k group elements of a single IPA transcript. Probabilistic tree
+construction, full range extraction and bitness, computational binding, HVZK,
+Fiat-Shamir/ROM, Tendermint accountability, Python, JSON/SHA-256 and SimLab
+obligations remain open.
+
+## Earlier additions in v0.5.67
 
 [Local Bulletproofs witness extraction](docs/release-v0.5.67.en.md) proves a
 one-step IPA extraction dichotomy from four accepting folded-witness responses
