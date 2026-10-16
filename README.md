@@ -28,13 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**177 direct imports**, **220 Lean sources including Verification.lean**
-(217 top-level modules and 2 auxiliary specs under Verification/).
-All 220 sources match private snapshot `82173f51b471a3e2ceb3ef263909f8477dcb9bd8`.
-This is a **Z-level release** under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.75.en.md) is separate from the
+**178 direct imports**, **221 Lean sources including Verification.lean**
+(218 top-level modules and 2 auxiliary specs under Verification/).
+All 221 sources match private snapshot `26ae7e5b13c3e646cb7bcfc42109fbc70f421903`.
+This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
+[Current scoped evidence](docs/release-v0.5.76.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.76
+
+[Conditional range extraction](knowledge/04_cryptography/CryptoBulletproofsRangeWitnessExtraction.md)
+composes actual IPA tree extraction with polynomial/grid interpolation from
+certified openings of A,S,V. It returns a range witness opening the original V
+or a concrete nontrivial zero relation among the original generators, including
+blinding generators. Vector agreement is derived rather than assumed.
+Obtaining the supplied openings, rewinding, runtime bounds and Fiat–Shamir/ROM
+security remain outside this result. This release also names the existing scope
+ranks alpha/beta/gamma and documents delta iterations in parallel streams.
 
 ## Release v0.5.75
 

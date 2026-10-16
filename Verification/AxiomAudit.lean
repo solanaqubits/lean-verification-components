@@ -180,3 +180,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms CryptoBulletproofsRangeInterpolation.verification_suite
 
 #audit_axioms QuantumStinespringDilationContract.verification_suite
+
+#audit_axioms CryptoBulletproofsRangeWitnessExtraction.verification_suite

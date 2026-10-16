@@ -69,13 +69,13 @@ importing modules and run their regressions: module verification follows imports
 not reverse dependencies. Expand checks when the impact is unclear. Documentation
 edits need link/catalog checks rather than Lean rechecking.
 
-The approved [X/Y/Z policy](../VERSIONING.md) replaces the former full gate before
-every main/release. Z permits targeted validation of a bounded change, including
+The approved [alpha/beta/gamma policy](../VERSIONING.md) replaces the former full gate before
+every main/release. Gamma (formerly Z) permits targeted validation of a bounded change, including
 affected reverse dependents and registry integration; it need not add a module.
-X/Y require the full gate once on the final integrated source: `lake build
+Alpha/beta (formerly X/Y) require the full gate once on the final integrated source: `lake build
 --wfail`, `verify-all`, the entire live test suite, required registry and independent
 axiom audits, and `python3 scripts/check_knowledge.py`. Keep valid incremental
-cache. Changes requiring broad revalidation belong to Y unless they warrant X.
+cache. Changes requiring broad revalidation belong to beta unless they warrant alpha.
 
 Record commands, outcomes, source/configuration identities, toolchain, dependencies
 and the last fully validated commit. Reuse results only within their unchanged
@@ -83,3 +83,11 @@ scope. Private-tree evidence does not certify a different public tree. Report
 partial/full verification and cached/fresh compilation accurately. Scope selection
 and release classification are agent responsibilities, not newly implemented CLI
 features. See VERSIONING.md for the full-gate commands.
+
+Delta is a local iteration in a named parallel stream, recorded with its base SHA,
+stream ID, counter, current SHA and validation evidence. Epsilon and lower ranks
+may identify nested work with explicit parents; they do not weaken proof checks.
+At integration, classify and validate the combined diff and assign the common
+alpha/beta/gamma version once. Numeric tags retain vA.B.C; rank names describe
+scope, not prerelease maturity. This policy does not implement automatic counters
+or merge queues. See VERSIONING.md.

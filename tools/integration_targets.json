@@ -1268,5 +1268,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumStinespringDilationContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsRangeWitnessExtraction": {
+    "suite_struct": "CryptoBulletproofsRangeWitnessExtractionSuite",
+    "suite_type": "CryptoBulletproofsRangeWitnessExtractionSuite",
+    "parent": "CryptoFullSuite",
+    "field": "range_extraction",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoBulletproofsRangeWitnessExtraction.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

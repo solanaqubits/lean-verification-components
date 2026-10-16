@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsRangeWitnessExtraction
 import Verification.QuantumStinespringDilationContract
 import Verification.CryptoBulletproofsRangeInterpolation
 import Verification.DeFiLendingBadDebtSocialization
@@ -175,6 +176,8 @@ import Verification.DistributedCoordinatedAttackImpossibility
 set_option linter.style.header false
 
 namespace MasterSuite
+
+open CryptoBulletproofsRangeWitnessExtraction (CryptoBulletproofsRangeWitnessExtractionSuite)
 
 open DistributedRaftJointConsensusReconfig
 
@@ -370,6 +373,7 @@ structure CryptoFullSuite : Prop where
   bulletproofs_aggregation : CryptoBulletproofsAggregation.CryptoBulletproofsAggregationSuite
   range_reduction : CryptoBulletproofsRangeReduction.CryptoBulletproofsRangeReductionSuite
   ipa_extraction : CryptoBulletproofsWitnessExtraction.CryptoBulletproofsWitnessExtractionSuite
+  range_extraction : CryptoBulletproofsRangeWitnessExtractionSuite
   range_grid : CryptoBulletproofsRangeInterpolation.CryptoBulletproofsRangeInterpolationSuite
   ipa_tree : CryptoBulletproofsTreeExtraction.CryptoBulletproofsTreeExtractionSuite
 
@@ -429,6 +433,7 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoBulletproofsRangeReduction.verification_suite
   ipa_extraction := by
     exact CryptoBulletproofsWitnessExtraction.verification_suite
+  range_extraction := CryptoBulletproofsRangeWitnessExtraction.verification_suite
   range_grid := by
     exact CryptoBulletproofsRangeInterpolation.verification_suite
   ipa_tree := by

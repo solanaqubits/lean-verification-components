@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsRangeWitnessExtraction
 import Verification.QuantumStinespringDilationContract
 import Verification.CryptoBulletproofsRangeInterpolation
 import Verification.DeFiLendingBadDebtSocialization
@@ -184,6 +185,7 @@ open QuantumChannelTraceDistanceContract
 open QuantumStinespringDilationContract
 open QuantumCPTPChannelContract
 open QuantumHelstromStateDiscrimination
+open CryptoBulletproofsRangeWitnessExtraction
 open CryptoBulletproofsRangeInterpolation
 open CryptoBulletproofsTreeExtraction
 open CryptoBulletproofsWitnessExtraction

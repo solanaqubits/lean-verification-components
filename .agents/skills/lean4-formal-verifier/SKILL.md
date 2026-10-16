@@ -43,21 +43,27 @@ dependents: when changing an existing API, also build affected importing modules
 and run their relevant regressions. Expand the scope if dependencies are unclear.
 Documentation-only edits need documentation/catalog checks, not Lean rechecking.
 
-Follow [VERSIONING.md](../../../VERSIONING.md): X is a major architectural or
-key-contract compatibility change; Y is a full-validation checkpoint; Z is a
-bounded change with targeted validation, with or without a new module. For Z,
+Follow [VERSIONING.md](../../../VERSIONING.md): alpha (α, formerly X) is a major architectural or
+key-contract compatibility change; beta (β, formerly Y) is a full-validation checkpoint; gamma (γ, formerly Z) is a
+bounded change with targeted validation, with or without a new module. For gamma,
 verify changed proofs and their imported axiom closure, affected reverse
 dependents, registry integration and relevant live tests. Documentation-only
-changes need documentation checks. Do not run a full gate solely for a Z release.
+changes need documentation checks. Do not run a full gate solely for a gamma release.
 
-For X/Y, run the full project gate once on the final integrated source:
+For alpha/beta, run the full project gate once on the final integrated source:
 `lake build --wfail`, `verify-all`, all live tests with
 `LEAN_VERIFIER_LIVE_TESTS=1`, required independent/registry axiom audits, and
 `python3 scripts/check_knowledge.py`. Toolchain/dependency changes, shared
-foundations, verifier changes affecting trust, or unclear impact require Y
-unless the architectural/compatibility change warrants X. A bounded tooling
-change can remain Z when targeted checks justify its scope. Retain valid cache;
+foundations, verifier changes affecting trust, or unclear impact require beta
+unless the architectural/compatibility change warrants alpha. A bounded tooling
+change can remain gamma when targeted checks justify its scope. Retain valid cache;
 full verification does not imply a clean rebuild.
+
+Delta (δ) identifies a local iteration in a named parallel stream; epsilon and
+lower ranks may identify nested work with explicit parents. Record the base SHA,
+stream ID, local counter, current SHA and checked scope. These ranks do not reduce
+validation requirements. Allocate a common alpha/beta/gamma release only at
+integration and check the combined changes. Existing numeric tags stay unchanged.
 
 Record the last full-validation commit and subsequent scoped evidence. Reuse
 results only for their recorded scope and unchanged source, configuration,
