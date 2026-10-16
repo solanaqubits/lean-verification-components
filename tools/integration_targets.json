@@ -1250,5 +1250,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumCPTPChannelContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsRangeInterpolation": {
+    "suite_struct": "CryptoBulletproofsRangeInterpolationSuite",
+    "suite_type": "CryptoBulletproofsRangeInterpolation.CryptoBulletproofsRangeInterpolationSuite",
+    "parent": "CryptoFullSuite",
+    "field": "range_grid",
+    "constructor": "crypto_full_master_suite",
+    "proof": "by\n    exact CryptoBulletproofsRangeInterpolation.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

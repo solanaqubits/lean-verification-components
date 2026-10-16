@@ -77,3 +77,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [Local Bulletproofs witness extraction](../04_cryptography/CryptoBulletproofsWitnessExtraction.md)
 
 - [Recursive IPA tree extraction](../04_cryptography/CryptoBulletproofsTreeExtraction.md)
+
+- [Bulletproofs finite-grid range interpolation](../04_cryptography/CryptoBulletproofsRangeInterpolation.md) — fixed-witness formal identity and range constraints.

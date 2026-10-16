@@ -43,19 +43,29 @@ dependents: when changing an existing API, also build affected importing modules
 and run their relevant regressions. Expand the scope if dependencies are unclear.
 Documentation-only edits need documentation/catalog checks, not Lean rechecking.
 
-Run the full project gate once on the final integrated source before main/release:
-`lake build --wfail`, `verify-all`, all live tests with
-`LEAN_VERIFIER_LIVE_TESTS=1`, the required independent/registry axiom audits, and
-`python3 scripts/check_knowledge.py`. Retain the full release gate and axiom policy;
-this workflow changes iteration scope, not the publication standard. A clean build
-is needed when explicitly requested or investigating cache/toolchain problems.
+Follow [VERSIONING.md](../../../VERSIONING.md): X is a major architectural or
+key-contract compatibility change; Y is a full-validation checkpoint; Z is a
+bounded change with targeted validation, with or without a new module. For Z,
+verify changed proofs and their imported axiom closure, affected reverse
+dependents, registry integration and relevant live tests. Documentation-only
+changes need documentation checks. Do not run a full gate solely for a Z release.
 
-Reuse successful results only for their recorded scope and unchanged source,
-configuration, toolchain and dependencies. Record those inputs and commands;
-do not reuse private-tree evidence as proof that a different public tree passed.
-After further changes, rerun affected checks and complete the final gate for the
-final code. Distinguish cached build targets from freshly compiled modules and
-partial verification from full-project results. See the guide for commands.
+For X/Y, run the full project gate once on the final integrated source:
+`lake build --wfail`, `verify-all`, all live tests with
+`LEAN_VERIFIER_LIVE_TESTS=1`, required independent/registry axiom audits, and
+`python3 scripts/check_knowledge.py`. Toolchain/dependency changes, shared
+foundations, verifier changes affecting trust, or unclear impact require Y
+unless the architectural/compatibility change warrants X. A bounded tooling
+change can remain Z when targeted checks justify its scope. Retain valid cache;
+full verification does not imply a clean rebuild.
+
+Record the last full-validation commit and subsequent scoped evidence. Reuse
+results only for their recorded scope and unchanged source, configuration,
+toolchain and dependencies; private-tree evidence does not certify a different
+public tree. After changes rerun affected checks for the final integrated code.
+Report cached build targets separately from freshly compiled modules and never
+report a targeted run as a fresh whole-library check. Existing CLI commands do
+not automatically select reverse dependents or enforce this release policy.
 
 ## Integration and cards
 

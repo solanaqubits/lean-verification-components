@@ -28,12 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**217 Lean files** under Verification/ (215 top-level + 2 auxiliary),
-**218 including Verification.lean**, **175 direct imports**,
-**25,193 audited declarations**.
-Incremental strict build: **3856 targets**. Public live tests: **120**, no errors or skips.
-Both full audits allow only propext, Classical.choice and Quot.sound.
-[Measured evidence](knowledge/VERIFICATION.en.md).
+**176 direct imports**, **219 Lean sources including Verification.lean**
+(216 top-level modules and 2 auxiliary specs under Verification/).
+All 219 sources match private snapshot `f5bac6750f7d5c9b741041ac86d213d9ca1474c0`.
+This is a **Z-level release** under the [version policy](VERSIONING.md).
+[Current scoped evidence](docs/release-v0.5.74.en.md) is separate from the
+[last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
+`b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.74
+
+[Finite-grid range interpolation](knowledge/04_cryptography/CryptoBulletproofsRangeInterpolation.md)
+turns pointwise equalities on an injective Y/Z grid for fixed witnesses into a
+formal polynomial identity, bit constraints and a natural range bound under
+explicit no-wrap hypotheses. This is not a full transcript witness extractor.
+The release includes targeted regressions, a checked grid interface and the
+approved X/Y/Z verification policy.
 
 ## Release v0.5.73
 

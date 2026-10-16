@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsRangeInterpolation
 import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
@@ -181,6 +182,7 @@ open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
 open QuantumCPTPChannelContract
 open QuantumHelstromStateDiscrimination
+open CryptoBulletproofsRangeInterpolation
 open CryptoBulletproofsTreeExtraction
 open CryptoBulletproofsWitnessExtraction
 open DeFiLendingCompoundInterestIndex

@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsRangeInterpolation
 import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
@@ -368,6 +369,7 @@ structure CryptoFullSuite : Prop where
   bulletproofs_aggregation : CryptoBulletproofsAggregation.CryptoBulletproofsAggregationSuite
   range_reduction : CryptoBulletproofsRangeReduction.CryptoBulletproofsRangeReductionSuite
   ipa_extraction : CryptoBulletproofsWitnessExtraction.CryptoBulletproofsWitnessExtractionSuite
+  range_grid : CryptoBulletproofsRangeInterpolation.CryptoBulletproofsRangeInterpolationSuite
   ipa_tree : CryptoBulletproofsTreeExtraction.CryptoBulletproofsTreeExtractionSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
@@ -426,6 +428,8 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
     exact CryptoBulletproofsRangeReduction.verification_suite
   ipa_extraction := by
     exact CryptoBulletproofsWitnessExtraction.verification_suite
+  range_grid := by
+    exact CryptoBulletproofsRangeInterpolation.verification_suite
   ipa_tree := by
     exact CryptoBulletproofsTreeExtraction.verification_suite
 }

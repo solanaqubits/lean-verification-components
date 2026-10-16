@@ -14,8 +14,8 @@ section. Use English for public documentation, comments, and generated cards.
    `python3 scripts/check_knowledge.py`.
 6. During development, run targeted live regressions and preserve the Lake cache.
    `verify` includes the axiom audit; do not duplicate it with `audit` on unchanged inputs.
-   For existing API changes, also check affected importing modules. Run one full
-   final gate before release; see [verification scope](../docs/verifier-skill.en.md).
+   For existing API changes, also check affected importing modules. Follow
+   [X/Y/Z scope](../VERSIONING.md): targeted checks for Z, one full final gate for X/Y. See [verification scope](../docs/verifier-skill.en.md).
 
 Each catalog entry has one English `card`, a `source`, `section`, and ordered
 `project_imports`. Preserve assumptions and scope when documenting a proof.

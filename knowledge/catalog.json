@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsRangeInterpolation",
         "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
         "Verification.QuantumChannelTraceDistanceContract",
@@ -1410,6 +1411,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsRangeInterpolation",
         "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
         "Verification.QuantumChannelTraceDistanceContract",
@@ -2441,6 +2443,17 @@
       "project_imports": [
         "Verification.QuantumNoBroadcastingMixed",
         "Verification.QuantumChannelTraceDistanceContract"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "CryptoBulletproofsRangeInterpolation",
+      "section": "cryptography",
+      "source": "Verification/CryptoBulletproofsRangeInterpolation.lean",
+      "card": "knowledge/04_cryptography/CryptoBulletproofsRangeInterpolation.md",
+      "project_imports": [
+        "Verification.CryptoBulletproofsRangeReduction"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

@@ -1,10 +1,15 @@
 # Public verification record
 
-## Current public snapshot: CPTP channels and trace-distance contraction
+Current Z release: [v0.5.74 scoped validation](../docs/release-v0.5.74.en.md).
+176 direct imports, 219 root-inclusive Lean sources. The full-project figures
+below belong to `b3410720b9af49c2fb70d15d65d3d012091cbf0b`; they are not fresh
+full-validation results for v0.5.74.
+
+## Last full-validation baseline: v0.5.73
 
 [Release v0.5.73](../docs/release-v0.5.73.en.md) · [Detailed contract](03_quantum_information/QuantumCPTPChannelContract.md)
 
-## Measured validation
+## Historical full-validation measurements
 
 | Check | Measured public result |
 |---|---:|
