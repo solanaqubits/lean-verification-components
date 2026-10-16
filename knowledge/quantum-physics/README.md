@@ -117,3 +117,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Trace distance and measurement contraction](../03_quantum_information/QuantumChannelTraceDistanceContract.md)
 
 | [QuantumCPTPChannelContract](../03_quantum_information/QuantumCPTPChannelContract.md) | Kraus channels, dual effects and CPTP trace-distance contraction; unitary equality, reset and strict dephasing loss. |
+
+- [Stinespring isometric dilation](../03_quantum_information/QuantumStinespringDilationContract.md) — rectangular Kraus families, partial trace, dual maps and redundant environments.

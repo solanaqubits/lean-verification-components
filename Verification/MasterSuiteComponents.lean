@@ -1,3 +1,4 @@
+import Verification.QuantumStinespringDilationContract
 import Verification.CryptoBulletproofsRangeInterpolation
 import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
@@ -497,6 +498,7 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
   helstrom : QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite
   trace_distance : QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite
+  stinespring : QuantumStinespringDilationContract.QuantumStinespringDilationContractSuite
   cptp_channel : QuantumCPTPChannelContract.QuantumCPTPChannelContractSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
@@ -576,6 +578,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumPOVMInformationallyComplete.verification_suite
   helstrom := QuantumHelstromStateDiscrimination.verification_suite
   trace_distance := QuantumChannelTraceDistanceContract.verification_suite
+  stinespring := QuantumStinespringDilationContract.verification_suite
   cptp_channel := QuantumCPTPChannelContract.verification_suite
 }
 

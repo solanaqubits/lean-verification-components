@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumStinespringDilationContract",
         "Verification.CryptoBulletproofsRangeInterpolation",
         "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
@@ -1411,6 +1412,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumStinespringDilationContract",
         "Verification.CryptoBulletproofsRangeInterpolation",
         "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
@@ -2454,6 +2456,19 @@
       "card": "knowledge/04_cryptography/CryptoBulletproofsRangeInterpolation.md",
       "project_imports": [
         "Verification.CryptoBulletproofsRangeReduction"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumStinespringDilationContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumStinespringDilationContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumStinespringDilationContract.md",
+      "project_imports": [
+        "Verification.QuantumPOVMInformationEntropy",
+        "Verification.QuantumCPTPChannelContract",
+        "Verification.QuantumPOVMNaimarkDilation"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

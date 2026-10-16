@@ -1259,5 +1259,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "by\n    exact CryptoBulletproofsRangeInterpolation.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumStinespringDilationContract": {
+    "suite_struct": "QuantumStinespringDilationContractSuite",
+    "suite_type": "QuantumStinespringDilationContract.QuantumStinespringDilationContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "stinespring",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumStinespringDilationContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

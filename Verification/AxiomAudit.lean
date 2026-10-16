@@ -178,3 +178,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DeFiLendingBadDebtSocialization.verification_suite
 
 #audit_axioms CryptoBulletproofsRangeInterpolation.verification_suite
+
+#audit_axioms QuantumStinespringDilationContract.verification_suite

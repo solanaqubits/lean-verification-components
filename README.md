@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**176 direct imports**, **219 Lean sources including Verification.lean**
-(216 top-level modules and 2 auxiliary specs under Verification/).
-All 219 sources match private snapshot `f5bac6750f7d5c9b741041ac86d213d9ca1474c0`.
+**177 direct imports**, **220 Lean sources including Verification.lean**
+(217 top-level modules and 2 auxiliary specs under Verification/).
+All 220 sources match private snapshot `82173f51b471a3e2ceb3ef263909f8477dcb9bd8`.
 This is a **Z-level release** under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.74.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.75.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.75
+
+[Stinespring dilation](knowledge/03_quantum_information/QuantumStinespringDilationContract.md)
+constructs an isometry from supplied rectangular Kraus operators, recovers the
+channel through the existing partial trace and identifies its dual map.
+Joint density matrices and their recoverability are proved. Exact regressions
+cover unequal dimensions, dephasing and redundant zero Kraus blocks.
+Minimality, uniqueness and general unitary extension are outside this module.
 
 ## Release v0.5.74
 

@@ -1,9 +1,9 @@
 # Public verification record
 
-Current Z release: [v0.5.74 scoped validation](../docs/release-v0.5.74.en.md).
-176 direct imports, 219 root-inclusive Lean sources. The full-project figures
+Current Z release: [v0.5.75 scoped validation](../docs/release-v0.5.75.en.md).
+177 direct imports, 220 root-inclusive Lean sources. The full-project figures
 below belong to `b3410720b9af49c2fb70d15d65d3d012091cbf0b`; they are not fresh
-full-validation results for v0.5.74.
+full-validation results for v0.5.75.
 
 ## Last full-validation baseline: v0.5.73
 
