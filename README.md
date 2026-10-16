@@ -28,13 +28,20 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**189 direct imports**, **232 Lean sources including Verification.lean**
-(229 top-level modules and 2 auxiliary specs under Verification/).
-All 232 sources match private snapshot `330ea2350bae059cac7b546fb9d8748ccf4ae0ef`.
+**190 direct imports**, **233 Lean sources including Verification.lean**
+(230 top-level modules and 2 auxiliary specs under Verification/).
+All 233 sources match private snapshot `98c20f1755dc36138a2e7394e4473864328c5059`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.87.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.88.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.88
+
+[Explicit qutrit decoder](knowledge/03_quantum_information/QuantumQutritSecretSharingExplicitDecoder.md)
+constructs the basis permutation D|u,v>=|v-u,2v-u> and proves both unitary
+identities and full-state factorization. Three explicit Kraus operators recover
+all logical matrices from every pair and preserve arbitrary external references.
 
 ## Release v0.5.87
 

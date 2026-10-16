@@ -1,3 +1,4 @@
+import Verification.QuantumQutritSecretSharingExplicitDecoder
 import Verification.QuantumQutritTwoOfThreeSecretSharingContract
 import Verification.QuantumErasureCorrectabilityContract
 import Verification.QuantumReferencePreservingRecoveryContract
@@ -193,6 +194,7 @@ set_option linter.style.header false
 open DeFiLendingBadDebtSocialization
 open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
+open QuantumQutritSecretSharingExplicitDecoder
 open QuantumQutritTwoOfThreeSecretSharingContract
 open QuantumErasureCorrectabilityContract
 open QuantumReferencePreservingRecoveryContract

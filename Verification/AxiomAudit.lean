@@ -202,3 +202,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumErasureCorrectabilityContract.verification_suite
 
 #audit_axioms QuantumQutritTwoOfThreeSecretSharingContract.verification_suite
+
+#audit_axioms QuantumQutritSecretSharingExplicitDecoder.verification_suite

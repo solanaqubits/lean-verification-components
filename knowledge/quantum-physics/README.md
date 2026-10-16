@@ -137,3 +137,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Subsystem erasure correctability](../03_quantum_information/QuantumErasureCorrectabilityContract.md) — Known erased factor, recovery/privacy equivalence and explicit auxiliary-pair example.
 
 - [Qutrit two-of-three secret sharing](../03_quantum_information/QuantumQutritTwoOfThreeSecretSharingContract.md) — Explicit isometric code, singleton privacy, recovery from every pair and reference preservation.
+
+- [Explicit qutrit decoder](../03_quantum_information/QuantumQutritSecretSharingExplicitDecoder.md) — Basis permutation, full-state factorization and three explicit recovery Kraus operators.
