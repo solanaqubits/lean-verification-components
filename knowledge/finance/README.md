@@ -56,3 +56,5 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [Liquidation accounting and separate asset ledgers](../01_defi/DeFiLendingLiquidationAccounting.md)
 
 - [Authorized bad debt writeoff and supplier loss](../01_defi/DeFiLendingBadDebtSocialization.md)
+
+- [Utilization feedback stability](../01_defi/DeFiLendingUtilizationFeedbackStability.md) — conditional contraction, bounded disturbances and exact rational trajectories.

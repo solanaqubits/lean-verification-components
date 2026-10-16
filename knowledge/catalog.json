@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiLendingUtilizationFeedbackStability",
         "Verification.DistributedTendermintAccountableSafety",
         "Verification.CryptoBulletproofsRangeWitnessExtraction",
         "Verification.QuantumStinespringDilationContract",
@@ -1414,6 +1415,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DeFiLendingUtilizationFeedbackStability",
         "Verification.DistributedTendermintAccountableSafety",
         "Verification.CryptoBulletproofsRangeWitnessExtraction",
         "Verification.QuantumStinespringDilationContract",
@@ -2498,6 +2500,18 @@
       "card": "knowledge/05_distributed/DistributedTendermintAccountableSafety.md",
       "project_imports": [
         "Verification.DistributedTendermintCoreSafety"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DeFiLendingUtilizationFeedbackStability",
+      "section": "finance",
+      "source": "Verification/DeFiLendingUtilizationFeedbackStability.lean",
+      "card": "knowledge/01_defi/DeFiLendingUtilizationFeedbackStability.md",
+      "project_imports": [
+        "Verification.DeFiKinkedInterestRateUtilization",
+        "Verification.DeFiLendingLiquidationHealthFactor"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

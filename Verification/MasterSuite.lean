@@ -1,3 +1,4 @@
+import Verification.DeFiLendingUtilizationFeedbackStability
 import Verification.DistributedTendermintAccountableSafety
 import Verification.CryptoBulletproofsRangeWitnessExtraction
 import Verification.QuantumStinespringDilationContract
@@ -186,6 +187,7 @@ open QuantumChannelTraceDistanceContract
 open QuantumStinespringDilationContract
 open QuantumCPTPChannelContract
 open QuantumHelstromStateDiscrimination
+open DeFiLendingUtilizationFeedbackStability
 open DistributedTendermintAccountableSafety
 open CryptoBulletproofsRangeWitnessExtraction
 open CryptoBulletproofsRangeInterpolation

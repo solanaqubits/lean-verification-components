@@ -28,13 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**179 direct imports**, **222 Lean sources including Verification.lean**
-(219 top-level modules and 2 auxiliary specs under Verification/).
-All 222 sources match private snapshot `13f4caf469645fd7f0dcdcb831f922d19d32c1c7`.
+**180 direct imports**, **223 Lean sources including Verification.lean**
+(220 top-level modules and 2 auxiliary specs under Verification/).
+All 223 sources match private snapshot `8224e7cf8eaeeb5d9779618dfe7e6f36c36e0d92`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.77.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.78.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.78
+
+[Utilization feedback stability](knowledge/01_defi/DeFiLendingUtilizationFeedbackStability.md)
+extends the existing rational kinked rate to a real projected feedback law,
+with an exact rational bridge. It proves invariant unit-interval bounds,
+contraction conditions across the kink, finite-time disturbance bounds and
+zero-noise convergence to a specified equilibrium. Rational trajectories and
+integer-rate rounding have explicit correspondence theorems. A large-step
+example cycles between zero and one while remaining bounded by projection.
+The response law is a prescribed model, not a proof of market stability,
+liquidity or economic solvency.
 
 ## Release v0.5.77
 

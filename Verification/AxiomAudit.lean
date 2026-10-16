@@ -183,3 +183,4 @@ open CryptoCommitmentVectorPedersenGroup in
 
 #audit_axioms CryptoBulletproofsRangeWitnessExtraction.verification_suite
 #audit_axioms DistributedTendermintAccountableSafety.verification_suite
+#audit_axioms DeFiLendingUtilizationFeedbackStability.verification_suite

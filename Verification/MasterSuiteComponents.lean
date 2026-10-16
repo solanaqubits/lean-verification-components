@@ -1,3 +1,4 @@
+import Verification.DeFiLendingUtilizationFeedbackStability
 import Verification.DistributedTendermintAccountableSafety
 import Verification.CryptoBulletproofsRangeWitnessExtraction
 import Verification.QuantumStinespringDilationContract
@@ -178,6 +179,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open DeFiLendingUtilizationFeedbackStability (DeFiLendingUtilizationFeedbackStabilitySuite)
 open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
 open CryptoBulletproofsRangeWitnessExtraction (CryptoBulletproofsRangeWitnessExtractionSuite)
 
@@ -661,6 +663,7 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   kink_rate : DeFiKinkedInterestRateUtilization.DeFiKinkedInterestRateUtilizationSuite
   compound_index : DeFiLendingCompoundInterestIndex.DeFiLendingCompoundInterestIndexSuite
   liquidation_accounting : DeFiLendingLiquidationAccounting.DeFiLendingLiquidationAccountingSuite
+  utilization_feedback : DeFiLendingUtilizationFeedbackStabilitySuite
   bad_debt : DeFiLendingBadDebtSocialization.DeFiLendingBadDebtSocializationSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
@@ -693,6 +696,7 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   kink_rate := DeFiKinkedInterestRateUtilization.verification_suite
   compound_index := DeFiLendingCompoundInterestIndex.verification_suite
   liquidation_accounting := DeFiLendingLiquidationAccounting.verification_suite
+  utilization_feedback := DeFiLendingUtilizationFeedbackStability.verification_suite
   bad_debt := DeFiLendingBadDebtSocialization.verification_suite
 }
 

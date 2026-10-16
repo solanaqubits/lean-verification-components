@@ -1286,5 +1286,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintAccountableSafety.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiLendingUtilizationFeedbackStability": {
+    "suite_struct": "DeFiLendingUtilizationFeedbackStabilitySuite",
+    "suite_type": "DeFiLendingUtilizationFeedbackStabilitySuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "utilization_feedback",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiLendingUtilizationFeedbackStability.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

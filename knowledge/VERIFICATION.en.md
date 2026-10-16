@@ -1,9 +1,9 @@
 # Public verification record
 
-Current gamma release (formerly Z): [v0.5.77 scoped validation](../docs/release-v0.5.77.en.md).
-179 direct imports, 222 root-inclusive Lean sources. The full-project figures
+Current gamma release (formerly Z): [v0.5.78 scoped validation](../docs/release-v0.5.78.en.md).
+180 direct imports, 223 root-inclusive Lean sources. The full-project figures
 below belong to `b3410720b9af49c2fb70d15d65d3d012091cbf0b`; they are not fresh
-full-validation results for v0.5.77.
+full-validation results for v0.5.78.
 
 ## Last full-validation baseline: v0.5.73
 
