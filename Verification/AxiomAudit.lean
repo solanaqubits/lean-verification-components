@@ -188,3 +188,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumComplementaryChannelContract.verification_suite
 
 #audit_axioms QuantumKnillLaflammeEnvironmentCriterion.verification_suite
+
+#audit_axioms QuantumOrthogonalErrorRecoveryContract.verification_suite

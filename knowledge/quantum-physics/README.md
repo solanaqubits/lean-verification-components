@@ -123,3 +123,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Complementary channel and environment state](../03_quantum_information/QuantumComplementaryChannelContract.md) — Kraus construction, both reductions and explicit environment isometries.
 
 - [Knill-Laflamme environment criterion](../03_quantum_information/QuantumKnillLaflammeEnvironmentCriterion.md) — Trace-pairing equivalence, environment density and index convention.
+
+- [Orthogonal error recovery](../03_quantum_information/QuantumOrthogonalErrorRecoveryContract.md) — Explicit CPTP recovery, zero weights and completion on the unused output space.

@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**182 direct imports**, **225 Lean sources including Verification.lean**
-(222 top-level modules and 2 auxiliary specs under Verification/).
-All 225 sources match private snapshot `56f231609ee635fe929b760c9e60e56f6be6f2eb`.
+**183 direct imports**, **226 Lean sources including Verification.lean**
+(223 top-level modules and 2 auxiliary specs under Verification/).
+All 226 sources match private snapshot `d5d6dad4440eb91e6241fe485e025cd0c097adef`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.80.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.81.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.81
+
+[Orthogonal error recovery](knowledge/03_quantum_information/QuantumOrthogonalErrorRecoveryContract.md)
+constructs a recovery CPTP channel for diagonal Knill-Laflamme data. Normalized
+error adjoints are completed with reset operators on the unused output space.
+The channel recovers every complex logical matrix, including coherences, and
+handles zero error weights. General non-diagonal coefficient reduction and the
+full recovery theorem remain open.
 
 ## Release v0.5.80
 

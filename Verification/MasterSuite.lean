@@ -1,3 +1,4 @@
+import Verification.QuantumOrthogonalErrorRecoveryContract
 import Verification.QuantumKnillLaflammeEnvironmentCriterion
 import Verification.QuantumComplementaryChannelContract
 import Verification.DeFiLendingUtilizationFeedbackStability
@@ -186,6 +187,7 @@ set_option linter.style.header false
 open DeFiLendingBadDebtSocialization
 open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
+open QuantumOrthogonalErrorRecoveryContract
 open QuantumKnillLaflammeEnvironmentCriterion
 open QuantumComplementaryChannelContract
 open QuantumStinespringDilationContract

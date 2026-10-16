@@ -1313,5 +1313,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumKnillLaflammeEnvironmentCriterion.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumOrthogonalErrorRecoveryContract": {
+    "suite_struct": "QuantumOrthogonalErrorRecoveryContractSuite",
+    "suite_type": "QuantumOrthogonalErrorRecoveryContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "orthogonal_recovery",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumOrthogonalErrorRecoveryContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
