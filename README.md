@@ -28,13 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**186 direct imports**, **229 Lean sources including Verification.lean**
-(226 top-level modules and 2 auxiliary specs under Verification/).
-All 229 sources match private snapshot `23becc8e3952239aa0142d72c97c530d3442c4b2`.
+**187 direct imports**, **230 Lean sources including Verification.lean**
+(227 top-level modules and 2 auxiliary specs under Verification/).
+All 230 sources match private snapshot `42bc9680b7be87d4b81664b50b8a2b21f46903b2`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.84.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.85.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.85
+
+[Reference-preserving recovery](knowledge/03_quantum_information/QuantumReferencePreservingRecoveryContract.md)
+extends exact recovery to every finite reference with the same recovery channel,
+derives reference/environment factorization and proves the normalized maximally
+entangled-state criterion by matrix-block extraction. Bell coherence regressions
+include the impossibility of full-qubit dephasing recovery.
 
 ## Release v0.5.84
 

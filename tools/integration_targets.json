@@ -1349,5 +1349,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumKnillLaflammeRecoveryNecessity.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumReferencePreservingRecoveryContract": {
+    "suite_struct": "QuantumReferencePreservingRecoveryContractSuite",
+    "suite_type": "QuantumReferencePreservingRecoveryContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "reference_recovery",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumReferencePreservingRecoveryContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

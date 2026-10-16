@@ -131,3 +131,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [General Knill-Laflamme recovery](../03_quantum_information/QuantumKnillLaflammeGeneralRecoveryTheorem.md) — Spectral construction and exact CPTP recovery without an external diagonalization certificate.
 
 - [Knill-Laflamme recovery necessity](../03_quantum_information/QuantumKnillLaflammeRecoveryNecessity.md) — Necessity, exact recovery equivalence and impossibility of full-qubit dephasing recovery.
+
+- [Reference-preserving entanglement recovery](../03_quantum_information/QuantumReferencePreservingRecoveryContract.md) — Arbitrary references, environment decoupling and a normalized maximally entangled test.
