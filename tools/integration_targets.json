@@ -1304,5 +1304,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumComplementaryChannelContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumKnillLaflammeEnvironmentCriterion": {
+    "suite_struct": "QuantumKnillLaflammeEnvironmentCriterionSuite",
+    "suite_type": "QuantumKnillLaflammeEnvironmentCriterionSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "knill_laflamme",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumKnillLaflammeEnvironmentCriterion.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

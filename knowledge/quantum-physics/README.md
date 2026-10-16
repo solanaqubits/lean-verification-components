@@ -121,3 +121,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Stinespring isometric dilation](../03_quantum_information/QuantumStinespringDilationContract.md) — rectangular Kraus families, partial trace, dual maps and redundant environments.
 
 - [Complementary channel and environment state](../03_quantum_information/QuantumComplementaryChannelContract.md) — Kraus construction, both reductions and explicit environment isometries.
+
+- [Knill-Laflamme environment criterion](../03_quantum_information/QuantumKnillLaflammeEnvironmentCriterion.md) — Trace-pairing equivalence, environment density and index convention.

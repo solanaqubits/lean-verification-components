@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**181 direct imports**, **224 Lean sources including Verification.lean**
-(221 top-level modules and 2 auxiliary specs under Verification/).
-All 224 sources match private snapshot `6efc674f70eb0181cd1c5667f919bcf0826cdd21`.
+**182 direct imports**, **225 Lean sources including Verification.lean**
+(222 top-level modules and 2 auxiliary specs under Verification/).
+All 225 sources match private snapshot `56f231609ee635fe929b760c9e60e56f6be6f2eb`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.79.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.80.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.80
+
+[Knill-Laflamme environment criterion](knowledge/03_quantum_information/QuantumKnillLaflammeEnvironmentCriterion.md)
+proves the equivalence between compressed Kraus-product scalar identities and
+constancy of the complementary channel on an encoded space, for all complex
+logical matrices. Isometric encoding with positive logical dimension yields a
+normalized positive environment state. Complex regressions check the ordinary
+transpose convention. Recovery CPTP maps and full error correction remain open.
 
 ## Release v0.5.79
 
