@@ -1,3 +1,4 @@
+import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination
@@ -174,6 +175,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DeFiLendingBadDebtSocialization
 open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
 open QuantumHelstromStateDiscrimination

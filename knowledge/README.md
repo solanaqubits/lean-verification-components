@@ -12,12 +12,12 @@ Verified components grouped into eleven subject areas and one verification secti
 | [Proof certificates and DAGs](proof-graphs/README.md) | 2 |
 | [Cryptographic algebra and ZK components](cryptography/README.md) | 35 |
 | [Quantum algebra, photonics, and mechanics](quantum-physics/README.md) | 57 |
-| [Finance, liquidity, and mechanisms](finance/README.md) | 25 |
+| [Finance, liquidity, and mechanisms](finance/README.md) | 26 |
 | [Distributed consensus](distributed/README.md) | 51 |
 | [Exact numeric certificates](12_numeric_certificates/README.md) | 6 |
 | [Registry and axiom audit](verification/README.md) | 4 |
 
-213 module cards: 209 subject files and four registry/audit files. Two additional nested specifications give 215 Lean files under Verification/ (216 including the root Verification.lean). MasterSuite directly imports 173 modules; these counts describe different sets.
+214 module cards: 210 subject files and four registry/audit files. Two additional nested specifications give 216 Lean files under Verification/ (217 including the root Verification.lean). MasterSuite directly imports 174 modules; these counts describe different sets.
 
 [Project value](SUMMARY.en.md) · [Validation](VERIFICATION.en.md) · [Contributing](CONTRIBUTING.en.md) · [Catalog](catalog.json)
 

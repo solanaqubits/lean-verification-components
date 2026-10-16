@@ -1,3 +1,4 @@
+import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination
@@ -643,6 +644,7 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   kink_rate : DeFiKinkedInterestRateUtilization.DeFiKinkedInterestRateUtilizationSuite
   compound_index : DeFiLendingCompoundInterestIndex.DeFiLendingCompoundInterestIndexSuite
   liquidation_accounting : DeFiLendingLiquidationAccounting.DeFiLendingLiquidationAccountingSuite
+  bad_debt : DeFiLendingBadDebtSocialization.DeFiLendingBadDebtSocializationSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   liquidation_health := by
@@ -674,6 +676,7 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   kink_rate := DeFiKinkedInterestRateUtilization.verification_suite
   compound_index := DeFiLendingCompoundInterestIndex.verification_suite
   liquidation_accounting := DeFiLendingLiquidationAccounting.verification_suite
+  bad_debt := DeFiLendingBadDebtSocialization.verification_suite
 }
 
 /-- Alias for the existing concentrated-liquidity component. -/

@@ -1,3 +1,4 @@
+import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination

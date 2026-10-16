@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**215 Lean files** under Verification/ (213 top-level + 2 auxiliary),
-**216 including Verification.lean**, **173 direct imports**,
-**24,948 audited declarations**.
-Clean strict build: **3854 jobs**. Public live tests: **118**, no errors or skips.
+**216 Lean files** under Verification/ (214 top-level + 2 auxiliary),
+**217 including Verification.lean**, **174 direct imports**,
+**25,105 audited declarations**.
+Clean strict build: **3855 jobs**. Public live tests: **119**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.71
+## Release v0.5.72
+
+[Bad debt accounting](docs/release-v0.5.72.en.md) allocates authorized writeoff
+losses first to reserves and then to supplier claims, preserving the accounting
+balance with fixed cash. It proves indexed debt consistency, supplier-share price
+decline, exact integer loss allocation and explicit rounding bounds. The signed
+debt-ledger/index gap is separated from reconciliation dust. Actual uncollectibility,
+withdrawal liquidity, economic solvency and specific protocol mechanisms remain
+outside scope. Full Bulletproofs range extraction, Tendermint accountability,
+Python, JSON/SHA-256 and SimLab obligations remain open.
+
+## Earlier additions in v0.5.71
 
 [Liquidation accounting](docs/release-v0.5.71.en.md) connects liquidation admission
 to indexed debt repayment, splits the collateral bonus between liquidator and a

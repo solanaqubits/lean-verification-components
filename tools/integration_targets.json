@@ -1232,5 +1232,14 @@
     "constructor": "finance_risk_full_master_suite",
     "proof": "DeFiLendingLiquidationAccounting.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiLendingBadDebtSocialization": {
+    "suite_struct": "DeFiLendingBadDebtSocializationSuite",
+    "suite_type": "DeFiLendingBadDebtSocialization.DeFiLendingBadDebtSocializationSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "bad_debt",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiLendingBadDebtSocialization.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

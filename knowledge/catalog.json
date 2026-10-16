@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
         "Verification.QuantumChannelTraceDistanceContract",
         "Verification.QuantumHelstromStateDiscrimination",
@@ -1408,6 +1409,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
         "Verification.QuantumChannelTraceDistanceContract",
         "Verification.QuantumHelstromStateDiscrimination",
@@ -2411,6 +2413,20 @@
         "Verification.DeFiLendingLiquidationHealthFactor",
         "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.DeFiLendingCompoundInterestIndex"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DeFiLendingBadDebtSocialization",
+      "section": "finance",
+      "source": "Verification/DeFiLendingBadDebtSocialization.lean",
+      "card": "knowledge/01_defi/DeFiLendingBadDebtSocialization.md",
+      "project_imports": [
+        "Verification.DeFiLendingLiquidationHealthFactor",
+        "Verification.DeFiKinkedInterestRateUtilization",
+        "Verification.DeFiLendingCompoundInterestIndex",
+        "Verification.DeFiLendingLiquidationAccounting"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

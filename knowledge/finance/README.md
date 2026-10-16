@@ -54,3 +54,5 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [Debt-index accrual and rounding reconciliation](../01_defi/DeFiLendingCompoundInterestIndex.md)
 
 - [Liquidation accounting and separate asset ledgers](../01_defi/DeFiLendingLiquidationAccounting.md)
+
+- [Authorized bad debt writeoff and supplier loss](../01_defi/DeFiLendingBadDebtSocialization.md)
