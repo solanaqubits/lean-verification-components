@@ -1214,5 +1214,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumHelstromStateDiscrimination.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumChannelTraceDistanceContract": {
+    "suite_struct": "QuantumChannelTraceDistanceContractSuite",
+    "suite_type": "QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "trace_distance",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumChannelTraceDistanceContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

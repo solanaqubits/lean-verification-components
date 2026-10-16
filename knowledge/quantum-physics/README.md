@@ -113,3 +113,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Classical POVM postprocessing and KL contraction](../03_quantum_information/QuantumChannelClassicalDataProcessing.md)
 
 - [Holevo–Helstrom state discrimination](../03_quantum_information/QuantumHelstromStateDiscrimination.md)
+
+- [Trace distance and measurement contraction](../03_quantum_information/QuantumChannelTraceDistanceContract.md)

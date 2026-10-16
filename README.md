@@ -28,14 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**213 Lean files** under Verification/ (211 top-level + 2 auxiliary),
-**214 including Verification.lean**, **171 direct imports**,
-**24,623 audited declarations**.
-Clean strict build: **3852 jobs**. Public live tests: **116**, no errors or skips.
+**214 Lean files** under Verification/ (212 top-level + 2 auxiliary),
+**215 including Verification.lean**, **172 direct imports**,
+**24,705 audited declarations**.
+Clean strict build: **3853 jobs**. Public live tests: **117**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.69
+## Release v0.5.70
+
+[Trace distance and measurement contraction](docs/release-v0.5.70.en.md) proves
+metric laws on density matrices, an attained maximum over effects, the equal-prior
+Helstrom identity and TV contraction under finite POVM measurements and classical
+postprocessing. A binary spectral POVM attains the maximum over all finite outcome
+counts. General quantum-channel contraction, numerical spectral certification and
+physical implementation remain outside scope. Full Bulletproofs range extraction,
+Tendermint accountability, Python, JSON/SHA-256 and SimLab obligations remain open.
+
+## Earlier additions in v0.5.69
 
 [Holevo–Helstrom state discrimination](docs/release-v0.5.69.en.md) proves the optimal
 binary state discrimination bound without commutation assumptions, attainment by a

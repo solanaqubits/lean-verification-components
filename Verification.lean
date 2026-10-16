@@ -1,3 +1,4 @@
+import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction

@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumChannelTraceDistanceContract",
         "Verification.QuantumHelstromStateDiscrimination",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsWitnessExtraction",
@@ -1406,6 +1407,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumChannelTraceDistanceContract",
         "Verification.QuantumHelstromStateDiscrimination",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsWitnessExtraction",
@@ -2380,6 +2382,20 @@
         "Verification.QuantumPOVMNaimarkDilation",
         "Verification.QuantumPOVMInformationEntropy",
         "Verification.QuantumChannelClassicalDataProcessing"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumChannelTraceDistanceContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumChannelTraceDistanceContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumChannelTraceDistanceContract.md",
+      "project_imports": [
+        "Verification.QuantumPOVMNaimarkDilation",
+        "Verification.QuantumPOVMInformationEntropy",
+        "Verification.QuantumChannelClassicalDataProcessing",
+        "Verification.QuantumHelstromStateDiscrimination"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

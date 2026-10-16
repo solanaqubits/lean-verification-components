@@ -1,3 +1,4 @@
+import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction
@@ -488,6 +489,7 @@ structure QuantumPhysicsFullSuite : Prop where
   no_broadcasting_mixed : QuantumNoBroadcastingMixed.QuantumNoBroadcastingMixedSuite
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
   helstrom : QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite
+  trace_distance : QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   classical_dpi := QuantumChannelClassicalDataProcessing.verification_suite
@@ -565,6 +567,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   ic_povm := by
     exact QuantumPOVMInformationallyComplete.verification_suite
   helstrom := QuantumHelstromStateDiscrimination.verification_suite
+  trace_distance := QuantumChannelTraceDistanceContract.verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/
