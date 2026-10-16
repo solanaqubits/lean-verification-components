@@ -115,3 +115,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Holevo–Helstrom state discrimination](../03_quantum_information/QuantumHelstromStateDiscrimination.md)
 
 - [Trace distance and measurement contraction](../03_quantum_information/QuantumChannelTraceDistanceContract.md)
+
+| [QuantumCPTPChannelContract](../03_quantum_information/QuantumCPTPChannelContract.md) | Kraus channels, dual effects and CPTP trace-distance contraction; unitary equality, reset and strict dephasing loss. |

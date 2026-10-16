@@ -1241,5 +1241,14 @@
     "constructor": "finance_risk_full_master_suite",
     "proof": "DeFiLendingBadDebtSocialization.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumCPTPChannelContract": {
+    "suite_struct": "QuantumCPTPChannelContractSuite",
+    "suite_type": "QuantumCPTPChannelContract.QuantumCPTPChannelContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "cptp_channel",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumCPTPChannelContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

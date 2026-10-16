@@ -617,6 +617,7 @@
         "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
         "Verification.QuantumChannelTraceDistanceContract",
+        "Verification.QuantumCPTPChannelContract",
         "Verification.QuantumHelstromStateDiscrimination",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsWitnessExtraction",
@@ -1412,6 +1413,7 @@
         "Verification.DeFiLendingBadDebtSocialization",
         "Verification.DeFiLendingLiquidationAccounting",
         "Verification.QuantumChannelTraceDistanceContract",
+        "Verification.QuantumCPTPChannelContract",
         "Verification.QuantumHelstromStateDiscrimination",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsWitnessExtraction",
@@ -2427,6 +2429,18 @@
         "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.DeFiLendingCompoundInterestIndex",
         "Verification.DeFiLendingLiquidationAccounting"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumCPTPChannelContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumCPTPChannelContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumCPTPChannelContract.md",
+      "project_imports": [
+        "Verification.QuantumNoBroadcastingMixed",
+        "Verification.QuantumChannelTraceDistanceContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**216 Lean files** under Verification/ (214 top-level + 2 auxiliary),
-**217 including Verification.lean**, **174 direct imports**,
-**25,105 audited declarations**.
-Clean strict build: **3855 jobs**. Public live tests: **119**, no errors or skips.
+**217 Lean files** under Verification/ (215 top-level + 2 auxiliary),
+**218 including Verification.lean**, **175 direct imports**,
+**25,193 audited declarations**.
+Incremental strict build: **3856 targets**. Public live tests: **120**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.72
+## Release v0.5.73
+
+[CPTP channel contract](docs/release-v0.5.73.en.md) proves quantum trace-distance
+contraction, dual effect pullback and trace preservation for Kraus channels, with
+an additional theorem for the existing abstract CPTP interface. Identity and
+unitary channels preserve distance; basis-state reset and dephasing demonstrate
+loss of distinguishability. Stinespring dilation, full equivalence of channel
+representations and relative-entropy DPI are outside this module.
+The updated verification workflow retains incremental caches and runs a single
+full final release gate.
+
+## Earlier additions in v0.5.72
 
 [Bad debt accounting](docs/release-v0.5.72.en.md) allocates authorized writeoff
 losses first to reserves and then to supplier claims, preserving the accounting

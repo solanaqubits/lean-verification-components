@@ -1,6 +1,7 @@
 import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
+import Verification.QuantumCPTPChannelContract
 import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction
@@ -178,6 +179,7 @@ set_option linter.style.header false
 open DeFiLendingBadDebtSocialization
 open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
+open QuantumCPTPChannelContract
 open QuantumHelstromStateDiscrimination
 open CryptoBulletproofsTreeExtraction
 open CryptoBulletproofsWitnessExtraction

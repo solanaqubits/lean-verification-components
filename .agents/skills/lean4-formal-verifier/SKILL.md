@@ -16,7 +16,7 @@ Lean statement. A defined predicate is not a proved transition invariant.
 Preserve distinctions between a scalar model, a protocol, and its implementation.
 
 Use `python3 tools/verifier_skill.py verify Verification/Module.lean` after
-writing code. A successful report requires strict compilation, a fresh Lake build,
+writing code. A successful report requires strict compilation, a Lake build against current sources,
 and a transitive axiom audit of all declarations in imported Verification modules.
 `python3 tools/verifier_skill.py audit Verification/Module.lean` also rebuilds
 and verifies before auditing, so stale artifacts cannot certify changed source.
@@ -29,6 +29,34 @@ or `nlinarith`. It does not translate prose, generate arbitrary data models, or
 certify that a proposition matches the user's intent. On failure, review and
 improve the proof; never replace the intended conclusion with `True` or assume it.
 
+## Verification scope and resource use
+
+During proof development, verify the changed module and run its targeted live
+regressions. `verify` already includes the transitive axiom audit: do not follow a
+successful `verify` with `audit` for the same unchanged inputs. `audit` is an
+alternative entry point, not an independent second auditor. `card` also verifies;
+use it when a generated draft is needed, not as another routine check.
+
+Keep Lake's incremental cache. Do not delete `.lake/build` or request clean
+rebuilds on every edit. Checking one module follows its imports, not its reverse
+dependents: when changing an existing API, also build affected importing modules
+and run their relevant regressions. Expand the scope if dependencies are unclear.
+Documentation-only edits need documentation/catalog checks, not Lean rechecking.
+
+Run the full project gate once on the final integrated source before main/release:
+`lake build --wfail`, `verify-all`, all live tests with
+`LEAN_VERIFIER_LIVE_TESTS=1`, the required independent/registry axiom audits, and
+`python3 scripts/check_knowledge.py`. Retain the full release gate and axiom policy;
+this workflow changes iteration scope, not the publication standard. A clean build
+is needed when explicitly requested or investigating cache/toolchain problems.
+
+Reuse successful results only for their recorded scope and unchanged source,
+configuration, toolchain and dependencies. Record those inputs and commands;
+do not reuse private-tree evidence as proof that a different public tree passed.
+After further changes, rerun affected checks and complete the final gate for the
+final code. Distinguish cached build targets from freshly compiled modules and
+partial verification from full-project results. See the guide for commands.
+
 ## Integration and cards
 
 `integrate MODULE SUITE` returns a diff. `--apply` updates the recipe-selected
@@ -40,7 +68,7 @@ suite rather than guessing universes or overwriting the registry. Preserve inher
 fields, integral results and existing public APIs. Source rollback does not
 restore build caches; rebuild before using them after failure.
 
-`card MODULE` returns a English draft after verification. Read theorem types,
+`card MODULE` returns an English draft after verification. Read theorem types,
 add the actual assumptions and limitations, then save it in the appropriate
 knowledge section. Do not overwrite an existing reviewed card with the generic
 draft. Update catalog imports, section navigation and source-line links, and run

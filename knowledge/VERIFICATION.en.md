@@ -1,6 +1,44 @@
 # Public verification record
 
-## Current public snapshot: Authorized bad debt writeoff and supplier loss
+## Current public snapshot: CPTP channels and trace-distance contraction
+
+[Release v0.5.73](../docs/release-v0.5.73.en.md) · [Detailed contract](03_quantum_information/QuantumCPTPChannelContract.md)
+
+## Measured validation
+
+| Check | Measured public result |
+|---|---:|
+| Direct MasterSuite imports | 175 |
+| Lean files under Verification/ | 215 top-level + 2 auxiliary = 217 |
+| Root-inclusive sources identical to the private snapshot | 218 |
+| Incremental strict build | 3856 targets; no warnings; 12.582s |
+| Complete verifier audit | 25193 declarations; no violations |
+| Pinned independent full audit | 25193 declarations; no violations |
+| Public live tests | 120; no failures or skips; 355.399s |
+| New exact Lean regressions | 30 |
+
+Only propext, Classical.choice and Quot.sound are allowed. Registry and catalog
+checks also passed. The independent auditor is pinned to commit
+46024e005996495c65ef609368e11ab39c4222e3 and binary SHA-256
+8a045cbabfa078df6577541d9768d5971ce573915f40e60806f32a50c3ffc254.
+Project toolchain: v4.33.1; auditor source toolchain file: v4.32.0-rc1.
+The independent audit is not a second proof kernel.
+
+The final public gate ran once with the Lake cache retained. This is not a clean
+rebuild; the target count does not count freshly compiled proofs. All 218 proof
+sources match 6c5e9b05db4502232b9d90608694c9ccf1912a0c byte-for-byte.
+Public baseline: deb762a760e4aaee8bbb188740ebb7f71e9681f2. No Russian cards were exported.
+
+```bash
+lake build --wfail
+python3 tools/verifier_skill.py verify-all
+LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p "test_*.py"
+lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
+lake env /tmp/simon-axiom-audit-source/.lake/build/bin/axiom-audit --root Verification --allow propext,Classical.choice,Quot.sound --json
+python3 scripts/check_knowledge.py
+```
+
+## Historical public snapshot: Authorized bad debt writeoff and supplier loss
 
 [Release v0.5.72](../docs/release-v0.5.72.en.md) · [Detailed contract](01_defi/DeFiLendingBadDebtSocialization.md)
 

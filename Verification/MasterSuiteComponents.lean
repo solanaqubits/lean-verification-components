@@ -1,6 +1,7 @@
 import Verification.DeFiLendingBadDebtSocialization
 import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
+import Verification.QuantumCPTPChannelContract
 import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
 import Verification.CryptoBulletproofsWitnessExtraction
@@ -492,6 +493,7 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
   helstrom : QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite
   trace_distance : QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite
+  cptp_channel : QuantumCPTPChannelContract.QuantumCPTPChannelContractSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
   classical_dpi := QuantumChannelClassicalDataProcessing.verification_suite
@@ -570,6 +572,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumPOVMInformationallyComplete.verification_suite
   helstrom := QuantumHelstromStateDiscrimination.verification_suite
   trace_distance := QuantumChannelTraceDistanceContract.verification_suite
+  cptp_channel := QuantumCPTPChannelContract.verification_suite
 }
 
 /-- Abstract barrier results and separate seven-coordinate product identities. -/

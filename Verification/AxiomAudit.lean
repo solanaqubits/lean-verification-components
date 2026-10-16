@@ -171,6 +171,7 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumHelstromStateDiscrimination.verification_suite
 
 #audit_axioms QuantumChannelTraceDistanceContract.verification_suite
+#audit_axioms QuantumCPTPChannelContract.verification_suite
 
 #audit_axioms DeFiLendingLiquidationAccounting.verification_suite
 
