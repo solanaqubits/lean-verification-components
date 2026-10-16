@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumKnillLaflammeRecoveryNecessity",
         "Verification.QuantumKnillLaflammeGeneralRecoveryTheorem",
         "Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract",
         "Verification.QuantumOrthogonalErrorRecoveryContract",
@@ -1420,6 +1421,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumKnillLaflammeRecoveryNecessity",
         "Verification.QuantumKnillLaflammeGeneralRecoveryTheorem",
         "Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract",
         "Verification.QuantumOrthogonalErrorRecoveryContract",
@@ -2584,6 +2586,17 @@
       "card": "knowledge/03_quantum_information/QuantumKnillLaflammeGeneralRecoveryTheorem.md",
       "project_imports": [
         "Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumKnillLaflammeRecoveryNecessity",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumKnillLaflammeRecoveryNecessity.lean",
+      "card": "knowledge/03_quantum_information/QuantumKnillLaflammeRecoveryNecessity.md",
+      "project_imports": [
+        "Verification.QuantumKnillLaflammeGeneralRecoveryTheorem"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

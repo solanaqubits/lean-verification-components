@@ -129,3 +129,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Recovery with certified unitary diagonalization](../03_quantum_information/QuantumUnitaryKrausDiagonalizationRecoveryContract.md) — Complex Kraus mixing, derived spectral weights and exact recovery with a supplied diagonalization certificate.
 
 - [General Knill-Laflamme recovery](../03_quantum_information/QuantumKnillLaflammeGeneralRecoveryTheorem.md) — Spectral construction and exact CPTP recovery without an external diagonalization certificate.
+
+- [Knill-Laflamme recovery necessity](../03_quantum_information/QuantumKnillLaflammeRecoveryNecessity.md) — Necessity, exact recovery equivalence and impossibility of full-qubit dephasing recovery.

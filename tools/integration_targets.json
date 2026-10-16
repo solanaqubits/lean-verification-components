@@ -1340,5 +1340,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumKnillLaflammeGeneralRecoveryTheorem.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumKnillLaflammeRecoveryNecessity": {
+    "suite_struct": "QuantumKnillLaflammeRecoveryNecessitySuite",
+    "suite_type": "QuantumKnillLaflammeRecoveryNecessitySuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "recovery_necessity",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumKnillLaflammeRecoveryNecessity.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

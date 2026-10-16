@@ -28,13 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**185 direct imports**, **228 Lean sources including Verification.lean**
-(225 top-level modules and 2 auxiliary specs under Verification/).
-All 228 sources match private snapshot `5d3bca96616bdc3981ac060c6ca2ae4ff5c7b3ae`.
+**186 direct imports**, **229 Lean sources including Verification.lean**
+(226 top-level modules and 2 auxiliary specs under Verification/).
+All 229 sources match private snapshot `23becc8e3952239aa0142d72c97c530d3442c4b2`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.83.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.84.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.84
+
+[Knill-Laflamme recovery necessity](knowledge/03_quantum_information/QuantumKnillLaflammeRecoveryNecessity.md)
+proves scalar structure of composite Kraus operators and derives the general
+Knill-Laflamme conditions from arbitrary exact CPTP recovery. Together with the
+previous sufficiency and environment criteria, it establishes the finite-dimensional
+equivalence and rules out exact recovery of full-qubit dephasing.
 
 ## Release v0.5.83
 

@@ -1,3 +1,4 @@
+import Verification.QuantumKnillLaflammeRecoveryNecessity
 import Verification.QuantumKnillLaflammeGeneralRecoveryTheorem
 import Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract
 import Verification.QuantumOrthogonalErrorRecoveryContract
