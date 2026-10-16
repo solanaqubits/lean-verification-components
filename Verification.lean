@@ -1,3 +1,4 @@
+import Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract
 import Verification.QuantumOrthogonalErrorRecoveryContract
 import Verification.QuantumKnillLaflammeEnvironmentCriterion
 import Verification.QuantumComplementaryChannelContract

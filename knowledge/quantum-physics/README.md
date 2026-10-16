@@ -125,3 +125,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Knill-Laflamme environment criterion](../03_quantum_information/QuantumKnillLaflammeEnvironmentCriterion.md) — Trace-pairing equivalence, environment density and index convention.
 
 - [Orthogonal error recovery](../03_quantum_information/QuantumOrthogonalErrorRecoveryContract.md) — Explicit CPTP recovery, zero weights and completion on the unused output space.
+
+- [Recovery with certified unitary diagonalization](../03_quantum_information/QuantumUnitaryKrausDiagonalizationRecoveryContract.md) — Complex Kraus mixing, derived spectral weights and exact recovery with a supplied diagonalization certificate.

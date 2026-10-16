@@ -28,13 +28,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**183 direct imports**, **226 Lean sources including Verification.lean**
-(223 top-level modules and 2 auxiliary specs under Verification/).
-All 226 sources match private snapshot `d5d6dad4440eb91e6241fe485e025cd0c097adef`.
+**184 direct imports**, **227 Lean sources including Verification.lean**
+(224 top-level modules and 2 auxiliary specs under Verification/).
+All 227 sources match private snapshot `d319bed6b9f14a54d67d650fa2a246c025cce9d2`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.81.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.82.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.82
+
+[Recovery with certified unitary diagonalization](knowledge/03_quantum_information/QuantumUnitaryKrausDiagonalizationRecoveryContract.md)
+uses complex Kraus mixing with the exact transpose bridge W=U^T. It derives
+nonnegative normalized spectral weights and preserves the physical channel.
+The explicit CPTP recovery from module 183 then recovers every complex logical
+matrix. A unitary diagonalization certificate is supplied as input; existence
+of such a certificate and the general recovery equivalence are outside scope.
 
 ## Release v0.5.81
 

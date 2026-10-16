@@ -1,3 +1,4 @@
+import Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract
 import Verification.QuantumOrthogonalErrorRecoveryContract
 import Verification.QuantumKnillLaflammeEnvironmentCriterion
 import Verification.QuantumComplementaryChannelContract
@@ -182,6 +183,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumUnitaryKrausDiagonalizationRecoveryContract
 open QuantumOrthogonalErrorRecoveryContract
 open QuantumKnillLaflammeEnvironmentCriterion
 open QuantumComplementaryChannelContract
@@ -513,6 +515,7 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
   helstrom : QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite
   trace_distance : QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite
+  unitary_kraus_recovery : QuantumUnitaryKrausDiagonalizationRecoveryContractSuite
   orthogonal_recovery : QuantumOrthogonalErrorRecoveryContractSuite
   knill_laflamme : QuantumKnillLaflammeEnvironmentCriterionSuite
   complementary_channel : QuantumComplementaryChannelContractSuite
@@ -596,6 +599,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumPOVMInformationallyComplete.verification_suite
   helstrom := QuantumHelstromStateDiscrimination.verification_suite
   trace_distance := QuantumChannelTraceDistanceContract.verification_suite
+  unitary_kraus_recovery := QuantumUnitaryKrausDiagonalizationRecoveryContract.verification_suite
   orthogonal_recovery := QuantumOrthogonalErrorRecoveryContract.verification_suite
   knill_laflamme := QuantumKnillLaflammeEnvironmentCriterion.verification_suite
   complementary_channel := QuantumComplementaryChannelContract.verification_suite

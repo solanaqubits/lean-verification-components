@@ -1322,5 +1322,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumOrthogonalErrorRecoveryContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract": {
+    "suite_struct": "QuantumUnitaryKrausDiagonalizationRecoveryContractSuite",
+    "suite_type": "QuantumUnitaryKrausDiagonalizationRecoveryContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "unitary_kraus_recovery",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumUnitaryKrausDiagonalizationRecoveryContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract",
         "Verification.QuantumOrthogonalErrorRecoveryContract",
         "Verification.QuantumKnillLaflammeEnvironmentCriterion",
         "Verification.QuantumComplementaryChannelContract",
@@ -1418,6 +1419,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract",
         "Verification.QuantumOrthogonalErrorRecoveryContract",
         "Verification.QuantumKnillLaflammeEnvironmentCriterion",
         "Verification.QuantumComplementaryChannelContract",
@@ -2556,6 +2558,19 @@
         "Verification.QuantumKnillLaflammeEnvironmentCriterion",
         "Verification.QuantumComplementaryChannelContract",
         "Verification.QuantumCPTPChannelContract"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumUnitaryKrausDiagonalizationRecoveryContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumUnitaryKrausDiagonalizationRecoveryContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumUnitaryKrausDiagonalizationRecoveryContract.md",
+      "project_imports": [
+        "Verification.QuantumComplementaryChannelContract",
+        "Verification.QuantumKnillLaflammeEnvironmentCriterion",
+        "Verification.QuantumOrthogonalErrorRecoveryContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

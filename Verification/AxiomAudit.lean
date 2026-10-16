@@ -190,3 +190,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumKnillLaflammeEnvironmentCriterion.verification_suite
 
 #audit_axioms QuantumOrthogonalErrorRecoveryContract.verification_suite
+
+#audit_axioms QuantumUnitaryKrausDiagonalizationRecoveryContract.verification_suite
