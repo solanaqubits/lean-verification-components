@@ -28,13 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**184 direct imports**, **227 Lean sources including Verification.lean**
-(224 top-level modules and 2 auxiliary specs under Verification/).
-All 227 sources match private snapshot `d319bed6b9f14a54d67d650fa2a246c025cce9d2`.
+**185 direct imports**, **228 Lean sources including Verification.lean**
+(225 top-level modules and 2 auxiliary specs under Verification/).
+All 228 sources match private snapshot `5d3bca96616bdc3981ac060c6ca2ae4ff5c7b3ae`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.82.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.83.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.83
+
+[General Knill-Laflamme recovery](knowledge/03_quantum_information/QuantumKnillLaflammeGeneralRecoveryTheorem.md)
+derives coefficient Hermiticity and constructs the spectral certificate using
+Mathlib. It proves exact CPTP recovery of every complex logical matrix from
+general Knill-Laflamme conditions, without a supplied diagonalization certificate.
+This is sufficiency; necessity and an executable numerical decoder remain outside scope.
 
 ## Release v0.5.82
 

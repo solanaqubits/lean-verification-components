@@ -127,3 +127,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Orthogonal error recovery](../03_quantum_information/QuantumOrthogonalErrorRecoveryContract.md) — Explicit CPTP recovery, zero weights and completion on the unused output space.
 
 - [Recovery with certified unitary diagonalization](../03_quantum_information/QuantumUnitaryKrausDiagonalizationRecoveryContract.md) — Complex Kraus mixing, derived spectral weights and exact recovery with a supplied diagonalization certificate.
+
+- [General Knill-Laflamme recovery](../03_quantum_information/QuantumKnillLaflammeGeneralRecoveryTheorem.md) — Spectral construction and exact CPTP recovery without an external diagonalization certificate.

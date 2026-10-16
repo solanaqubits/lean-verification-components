@@ -1331,5 +1331,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumUnitaryKrausDiagonalizationRecoveryContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumKnillLaflammeGeneralRecoveryTheorem": {
+    "suite_struct": "QuantumKnillLaflammeGeneralRecoveryTheoremSuite",
+    "suite_type": "QuantumKnillLaflammeGeneralRecoveryTheoremSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "general_recovery",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumKnillLaflammeGeneralRecoveryTheorem.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

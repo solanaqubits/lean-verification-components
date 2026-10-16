@@ -1,3 +1,4 @@
+import Verification.QuantumKnillLaflammeGeneralRecoveryTheorem
 import Verification.QuantumUnitaryKrausDiagonalizationRecoveryContract
 import Verification.QuantumOrthogonalErrorRecoveryContract
 import Verification.QuantumKnillLaflammeEnvironmentCriterion
@@ -188,6 +189,7 @@ set_option linter.style.header false
 open DeFiLendingBadDebtSocialization
 open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
+open QuantumKnillLaflammeGeneralRecoveryTheorem
 open QuantumUnitaryKrausDiagonalizationRecoveryContract
 open QuantumOrthogonalErrorRecoveryContract
 open QuantumKnillLaflammeEnvironmentCriterion
