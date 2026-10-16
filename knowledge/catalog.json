@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumQutritTwoOfThreeSecretSharingContract",
         "Verification.QuantumErasureCorrectabilityContract",
         "Verification.QuantumReferencePreservingRecoveryContract",
         "Verification.QuantumKnillLaflammeRecoveryNecessity",
@@ -1423,6 +1424,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumQutritTwoOfThreeSecretSharingContract",
         "Verification.QuantumErasureCorrectabilityContract",
         "Verification.QuantumReferencePreservingRecoveryContract",
         "Verification.QuantumKnillLaflammeRecoveryNecessity",
@@ -2623,6 +2625,17 @@
       "card": "knowledge/03_quantum_information/QuantumErasureCorrectabilityContract.md",
       "project_imports": [
         "Verification.QuantumReferencePreservingRecoveryContract"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumQutritTwoOfThreeSecretSharingContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumQutritTwoOfThreeSecretSharingContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumQutritTwoOfThreeSecretSharingContract.md",
+      "project_imports": [
+        "Verification.QuantumErasureCorrectabilityContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

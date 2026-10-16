@@ -28,13 +28,20 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**188 direct imports**, **231 Lean sources including Verification.lean**
-(228 top-level modules and 2 auxiliary specs under Verification/).
-All 231 sources match private snapshot `edc9fadd245c6da61c333448cb5211daac76a9ae`.
+**189 direct imports**, **232 Lean sources including Verification.lean**
+(229 top-level modules and 2 auxiliary specs under Verification/).
+All 232 sources match private snapshot `330ea2350bae059cac7b546fb9d8748ccf4ae0ef`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.86.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.87.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.87
+
+[Qutrit two-of-three secret sharing](knowledge/03_quantum_information/QuantumQutritTwoOfThreeSecretSharingContract.md)
+proves an explicit modulo-three isometric code, perfect single-share privacy
+and CPTP recovery from every pair. The same recoveries preserve arbitrary
+external references, while no single share permits exact recovery.
 
 ## Release v0.5.86
 

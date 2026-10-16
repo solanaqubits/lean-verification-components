@@ -135,3 +135,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Reference-preserving entanglement recovery](../03_quantum_information/QuantumReferencePreservingRecoveryContract.md) — Arbitrary references, environment decoupling and a normalized maximally entangled test.
 
 - [Subsystem erasure correctability](../03_quantum_information/QuantumErasureCorrectabilityContract.md) — Known erased factor, recovery/privacy equivalence and explicit auxiliary-pair example.
+
+- [Qutrit two-of-three secret sharing](../03_quantum_information/QuantumQutritTwoOfThreeSecretSharingContract.md) — Explicit isometric code, singleton privacy, recovery from every pair and reference preservation.

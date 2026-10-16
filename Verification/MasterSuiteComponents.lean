@@ -1,3 +1,4 @@
+import Verification.QuantumQutritTwoOfThreeSecretSharingContract
 import Verification.QuantumErasureCorrectabilityContract
 import Verification.QuantumReferencePreservingRecoveryContract
 import Verification.QuantumKnillLaflammeRecoveryNecessity
@@ -187,6 +188,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumQutritTwoOfThreeSecretSharingContract
 open QuantumErasureCorrectabilityContract
 open QuantumReferencePreservingRecoveryContract
 open QuantumKnillLaflammeRecoveryNecessity
@@ -523,6 +525,7 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
   helstrom : QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite
   trace_distance : QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite
+  qutrit_secret_sharing : QuantumQutritTwoOfThreeSecretSharingContractSuite
   erasure_correctability : QuantumErasureCorrectabilityContractSuite
   reference_recovery : QuantumReferencePreservingRecoveryContractSuite
   recovery_necessity : QuantumKnillLaflammeRecoveryNecessitySuite
@@ -611,6 +614,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumPOVMInformationallyComplete.verification_suite
   helstrom := QuantumHelstromStateDiscrimination.verification_suite
   trace_distance := QuantumChannelTraceDistanceContract.verification_suite
+  qutrit_secret_sharing := QuantumQutritTwoOfThreeSecretSharingContract.verification_suite
   erasure_correctability := QuantumErasureCorrectabilityContract.verification_suite
   reference_recovery := QuantumReferencePreservingRecoveryContract.verification_suite
   recovery_necessity := QuantumKnillLaflammeRecoveryNecessity.verification_suite

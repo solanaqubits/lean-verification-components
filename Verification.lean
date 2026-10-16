@@ -1,3 +1,4 @@
+import Verification.QuantumQutritTwoOfThreeSecretSharingContract
 import Verification.QuantumErasureCorrectabilityContract
 import Verification.QuantumReferencePreservingRecoveryContract
 import Verification.QuantumKnillLaflammeRecoveryNecessity

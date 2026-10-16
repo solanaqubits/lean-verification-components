@@ -1367,5 +1367,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumErasureCorrectabilityContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumQutritTwoOfThreeSecretSharingContract": {
+    "suite_struct": "QuantumQutritTwoOfThreeSecretSharingContractSuite",
+    "suite_type": "QuantumQutritTwoOfThreeSecretSharingContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "qutrit_secret_sharing",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumQutritTwoOfThreeSecretSharingContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
