@@ -1,3 +1,4 @@
+import Verification.DistributedTendermintAccountableSafety
 import Verification.CryptoBulletproofsRangeWitnessExtraction
 import Verification.QuantumStinespringDilationContract
 import Verification.CryptoBulletproofsRangeInterpolation
@@ -177,6 +178,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
 open CryptoBulletproofsRangeWitnessExtraction (CryptoBulletproofsRangeWitnessExtractionSuite)
 
 open DistributedRaftJointConsensusReconfig
@@ -700,6 +702,7 @@ theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuit
 
 /-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
+  tendermint_accountability : DistributedTendermintAccountableSafetySuite
   tendermint : DistributedTendermintCoreSafety.DistributedTendermintCoreSafetySuite
   bft_quorum : BFTConsensusFormalSuite
   raft : DistributedRaftConsensus.DistributedRaftFormalSuite.{uRaft1, uRaft2, uRaft3}
@@ -740,6 +743,7 @@ structure DistributedSystemsFullSuite : Prop where
   marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
+  tendermint_accountability := DistributedTendermintAccountableSafety.verification_suite
   tendermint := DistributedTendermintCoreSafety.verification_suite
   bft_quorum := bft_consensus_master_verification_suite
   raft := DistributedRaftConsensus.distributed_raft_master_verification_suite

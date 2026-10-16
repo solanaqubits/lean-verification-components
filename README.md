@@ -28,13 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**178 direct imports**, **221 Lean sources including Verification.lean**
-(218 top-level modules and 2 auxiliary specs under Verification/).
-All 221 sources match private snapshot `26ae7e5b13c3e646cb7bcfc42109fbc70f421903`.
+**179 direct imports**, **222 Lean sources including Verification.lean**
+(219 top-level modules and 2 auxiliary specs under Verification/).
+All 222 sources match private snapshot `13f4caf469645fd7f0dcdcb831f922d19d32c1c7`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.76.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.77.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.77
+
+[Tendermint evidence accountability](knowledge/05_distributed/DistributedTendermintAccountableSafety.md)
+constructs explicit accusations and a deduplicated offender set for conflicting
+votes, uncertified precommits and unjustified lock switches. Conflicting commits
+force strictly more than one third of the total weight into that set.
+No-framing is proved for reachable core histories under a sufficient view of an
+externally authenticated complete reference transcript. The checker verifies
+relative prevote coverage; it cannot establish the reference's own completeness.
+Missing evidence is rejected. Concrete signatures, slashing, evidence deadlines,
+dynamic membership and deployed-protocol equivalence remain outside this result.
 
 ## Release v0.5.76
 

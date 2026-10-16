@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintAccountableSafety",
         "Verification.CryptoBulletproofsRangeWitnessExtraction",
         "Verification.QuantumStinespringDilationContract",
         "Verification.CryptoBulletproofsRangeInterpolation",
@@ -1413,6 +1414,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintAccountableSafety",
         "Verification.CryptoBulletproofsRangeWitnessExtraction",
         "Verification.QuantumStinespringDilationContract",
         "Verification.CryptoBulletproofsRangeInterpolation",
@@ -2485,6 +2487,17 @@
         "Verification.CryptoBulletproofsWitnessExtraction",
         "Verification.CryptoBulletproofsTreeExtraction",
         "Verification.CryptoBulletproofsRangeInterpolation"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedTendermintAccountableSafety",
+      "section": "distributed",
+      "source": "Verification/DistributedTendermintAccountableSafety.lean",
+      "card": "knowledge/05_distributed/DistributedTendermintAccountableSafety.md",
+      "project_imports": [
+        "Verification.DistributedTendermintCoreSafety"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

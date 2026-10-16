@@ -1277,5 +1277,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "CryptoBulletproofsRangeWitnessExtraction.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintAccountableSafety": {
+    "suite_struct": "DistributedTendermintAccountableSafetySuite",
+    "suite_type": "DistributedTendermintAccountableSafetySuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "tendermint_accountability",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintAccountableSafety.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

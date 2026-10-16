@@ -113,3 +113,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Stable Marzullo event merge sort](../09_distributed_systems/DistributedMarzulloEventSorting.md): counted comparisons, stability and consensus equivalence.
 
 - [Weighted Tendermint core safety](../05_distributed_systems/DistributedTendermintCoreSafety.md)
+
+- [Tendermint evidence accountability](../05_distributed/DistributedTendermintAccountableSafety.md) — conditional no-framing and strict culprit weight for conflicting commits.
