@@ -28,13 +28,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**187 direct imports**, **230 Lean sources including Verification.lean**
-(227 top-level modules and 2 auxiliary specs under Verification/).
-All 230 sources match private snapshot `42bc9680b7be87d4b81664b50b8a2b21f46903b2`.
+**188 direct imports**, **231 Lean sources including Verification.lean**
+(228 top-level modules and 2 auxiliary specs under Verification/).
+All 231 sources match private snapshot `edc9fadd245c6da61c333448cb5211daac76a9ae`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.85.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.86.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.86
+
+[Subsystem erasure correctability](knowledge/03_quantum_information/QuantumErasureCorrectabilityContract.md)
+constructs the partial-trace Kraus channel and identifies its complement with
+the lost subsystem. Exact recovery is equivalent to independence of the lost
+part, with reference preservation. Explicit fixed-factor and entangled-auxiliary
+codes are verified alongside the repetition-code obstruction.
 
 ## Release v0.5.85
 

@@ -198,3 +198,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumKnillLaflammeRecoveryNecessity.verification_suite
 
 #audit_axioms QuantumReferencePreservingRecoveryContract.verification_suite
+
+#audit_axioms QuantumErasureCorrectabilityContract.verification_suite

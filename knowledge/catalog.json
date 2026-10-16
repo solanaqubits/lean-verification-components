@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumErasureCorrectabilityContract",
         "Verification.QuantumReferencePreservingRecoveryContract",
         "Verification.QuantumKnillLaflammeRecoveryNecessity",
         "Verification.QuantumKnillLaflammeGeneralRecoveryTheorem",
@@ -1422,6 +1423,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumErasureCorrectabilityContract",
         "Verification.QuantumReferencePreservingRecoveryContract",
         "Verification.QuantumKnillLaflammeRecoveryNecessity",
         "Verification.QuantumKnillLaflammeGeneralRecoveryTheorem",
@@ -2610,6 +2612,17 @@
       "card": "knowledge/03_quantum_information/QuantumReferencePreservingRecoveryContract.md",
       "project_imports": [
         "Verification.QuantumKnillLaflammeRecoveryNecessity"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumErasureCorrectabilityContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumErasureCorrectabilityContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumErasureCorrectabilityContract.md",
+      "project_imports": [
+        "Verification.QuantumReferencePreservingRecoveryContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

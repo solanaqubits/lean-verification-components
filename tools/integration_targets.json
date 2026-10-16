@@ -1358,5 +1358,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumReferencePreservingRecoveryContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumErasureCorrectabilityContract": {
+    "suite_struct": "QuantumErasureCorrectabilityContractSuite",
+    "suite_type": "QuantumErasureCorrectabilityContractSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "erasure_correctability",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumErasureCorrectabilityContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

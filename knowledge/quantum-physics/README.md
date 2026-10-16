@@ -133,3 +133,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Knill-Laflamme recovery necessity](../03_quantum_information/QuantumKnillLaflammeRecoveryNecessity.md) — Necessity, exact recovery equivalence and impossibility of full-qubit dephasing recovery.
 
 - [Reference-preserving entanglement recovery](../03_quantum_information/QuantumReferencePreservingRecoveryContract.md) — Arbitrary references, environment decoupling and a normalized maximally entangled test.
+
+- [Subsystem erasure correctability](../03_quantum_information/QuantumErasureCorrectabilityContract.md) — Known erased factor, recovery/privacy equivalence and explicit auxiliary-pair example.
