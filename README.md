@@ -28,14 +28,25 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**214 Lean files** under Verification/ (212 top-level + 2 auxiliary),
-**215 including Verification.lean**, **172 direct imports**,
-**24,705 audited declarations**.
-Clean strict build: **3853 jobs**. Public live tests: **117**, no errors or skips.
+**215 Lean files** under Verification/ (213 top-level + 2 auxiliary),
+**216 including Verification.lean**, **173 direct imports**,
+**24,948 audited declarations**.
+Clean strict build: **3854 jobs**. Public live tests: **118**, no errors or skips.
 Both full audits allow only propext, Classical.choice and Quot.sound.
 [Measured evidence](knowledge/VERIFICATION.en.md).
 
-## Release v0.5.70
+## Release v0.5.71
+
+[Liquidation accounting](docs/release-v0.5.71.en.md) connects liquidation admission
+to indexed debt repayment, splits the collateral bonus between liquidator and a
+separate treasury, and conserves both asset balances. The checked integer policy
+has explicit rounding bounds and distinguishes the debt-ledger/index gap from
+reconciliation dust. Health-factor improvement is conditional. Oracle accuracy,
+market execution, debt recoverability, economic solvency and deployed-contract
+correspondence remain outside scope. Full Bulletproofs range extraction,
+Tendermint accountability, Python, JSON/SHA-256 and SimLab obligations remain open.
+
+## Earlier additions in v0.5.70
 
 [Trace distance and measurement contraction](docs/release-v0.5.70.en.md) proves
 metric laws on density matrices, an attained maximum over effects, the equal-prior

@@ -1,3 +1,4 @@
+import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
@@ -173,6 +174,7 @@ import Verification.DistributedCoordinatedAttackImpossibility
 
 set_option linter.style.header false
 
+open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
 open QuantumHelstromStateDiscrimination
 open CryptoBulletproofsTreeExtraction

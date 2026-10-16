@@ -52,3 +52,5 @@ The models retain their stated balance, price, and fee assumptions. They do not 
 - [Kinked utilization rates and directed rounding](../01_defi/DeFiKinkedInterestRateUtilization.md)
 
 - [Debt-index accrual and rounding reconciliation](../01_defi/DeFiLendingCompoundInterestIndex.md)
+
+- [Liquidation accounting and separate asset ledgers](../01_defi/DeFiLendingLiquidationAccounting.md)

@@ -1,3 +1,4 @@
+import Verification.DeFiLendingLiquidationAccounting
 import Verification.QuantumChannelTraceDistanceContract
 import Verification.QuantumHelstromStateDiscrimination
 import Verification.CryptoBulletproofsTreeExtraction
@@ -641,6 +642,7 @@ structure FinanceRiskFullSuite : Prop extends FinanceDeFiFullSuite where
   bonding_curve : DeFiBondingCurve.DeFiBondingCurveFormalSuite
   kink_rate : DeFiKinkedInterestRateUtilization.DeFiKinkedInterestRateUtilizationSuite
   compound_index : DeFiLendingCompoundInterestIndex.DeFiLendingCompoundInterestIndexSuite
+  liquidation_accounting : DeFiLendingLiquidationAccounting.DeFiLendingLiquidationAccountingSuite
 
 theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
   liquidation_health := by
@@ -671,6 +673,7 @@ theorem finance_risk_full_master_suite : FinanceRiskFullSuite := {
     exact DeFiBondingCurve.defi_bonding_curve_master_suite
   kink_rate := DeFiKinkedInterestRateUtilization.verification_suite
   compound_index := DeFiLendingCompoundInterestIndex.verification_suite
+  liquidation_accounting := DeFiLendingLiquidationAccounting.verification_suite
 }
 
 /-- Alias for the existing concentrated-liquidity component. -/

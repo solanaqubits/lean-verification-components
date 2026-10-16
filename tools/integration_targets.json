@@ -1223,5 +1223,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumChannelTraceDistanceContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DeFiLendingLiquidationAccounting": {
+    "suite_struct": "DeFiLendingLiquidationAccountingSuite",
+    "suite_type": "DeFiLendingLiquidationAccounting.DeFiLendingLiquidationAccountingSuite",
+    "parent": "FinanceRiskFullSuite",
+    "field": "liquidation_accounting",
+    "constructor": "finance_risk_full_master_suite",
+    "proof": "DeFiLendingLiquidationAccounting.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }
