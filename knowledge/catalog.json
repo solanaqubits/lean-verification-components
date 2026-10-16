@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.QuantumComplementaryChannelContract",
         "Verification.DeFiLendingUtilizationFeedbackStability",
         "Verification.DistributedTendermintAccountableSafety",
         "Verification.CryptoBulletproofsRangeWitnessExtraction",
@@ -1415,6 +1416,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.QuantumComplementaryChannelContract",
         "Verification.DeFiLendingUtilizationFeedbackStability",
         "Verification.DistributedTendermintAccountableSafety",
         "Verification.CryptoBulletproofsRangeWitnessExtraction",
@@ -2512,6 +2514,18 @@
       "project_imports": [
         "Verification.DeFiKinkedInterestRateUtilization",
         "Verification.DeFiLendingLiquidationHealthFactor"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "QuantumComplementaryChannelContract",
+      "section": "quantum-physics",
+      "source": "Verification/QuantumComplementaryChannelContract.lean",
+      "card": "knowledge/03_quantum_information/QuantumComplementaryChannelContract.md",
+      "project_imports": [
+        "Verification.QuantumCPTPChannelContract",
+        "Verification.QuantumStinespringDilationContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

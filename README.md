@@ -28,13 +28,24 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**180 direct imports**, **223 Lean sources including Verification.lean**
-(220 top-level modules and 2 auxiliary specs under Verification/).
-All 223 sources match private snapshot `8224e7cf8eaeeb5d9779618dfe7e6f36c36e0d92`.
+**181 direct imports**, **224 Lean sources including Verification.lean**
+(221 top-level modules and 2 auxiliary specs under Verification/).
+All 224 sources match private snapshot `6efc674f70eb0181cd1c5667f919bcf0826cdd21`.
 This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.78.en.md) is separate from the
+[Current scoped evidence](docs/release-v0.5.79.en.md) is separate from the
 [last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
 `b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+
+## Release v0.5.79
+
+[Complementary quantum channel](knowledge/03_quantum_information/QuantumComplementaryChannelContract.md)
+constructs the environment output of a supplied Kraus/Stinespring representation,
+proves its CPTP properties and both partial-trace identities, and relates a given
+isometric environment change to the unchanged main channel and conjugated
+complement. Examples cover unitaries, reset, dephasing and zero padding.
+The joint matrix need not be pure; information absent from both marginals can
+remain in correlations. General dilation uniqueness, minimality, quantum
+capacity and general recovery maps are outside scope.
 
 ## Release v0.5.78
 

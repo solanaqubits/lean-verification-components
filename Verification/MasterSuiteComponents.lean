@@ -1,3 +1,4 @@
+import Verification.QuantumComplementaryChannelContract
 import Verification.DeFiLendingUtilizationFeedbackStability
 import Verification.DistributedTendermintAccountableSafety
 import Verification.CryptoBulletproofsRangeWitnessExtraction
@@ -179,6 +180,7 @@ set_option linter.style.header false
 
 namespace MasterSuite
 
+open QuantumComplementaryChannelContract
 open DeFiLendingUtilizationFeedbackStability (DeFiLendingUtilizationFeedbackStabilitySuite)
 open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
 open CryptoBulletproofsRangeWitnessExtraction (CryptoBulletproofsRangeWitnessExtractionSuite)
@@ -507,6 +509,7 @@ structure QuantumPhysicsFullSuite : Prop where
   ic_povm : QuantumPOVMInformationallyComplete.QuantumPOVMInformationallyCompleteSuite
   helstrom : QuantumHelstromStateDiscrimination.QuantumHelstromStateDiscriminationSuite
   trace_distance : QuantumChannelTraceDistanceContract.QuantumChannelTraceDistanceContractSuite
+  complementary_channel : QuantumComplementaryChannelContractSuite
   stinespring : QuantumStinespringDilationContract.QuantumStinespringDilationContractSuite
   cptp_channel : QuantumCPTPChannelContract.QuantumCPTPChannelContractSuite
 
@@ -587,6 +590,7 @@ theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
     exact QuantumPOVMInformationallyComplete.verification_suite
   helstrom := QuantumHelstromStateDiscrimination.verification_suite
   trace_distance := QuantumChannelTraceDistanceContract.verification_suite
+  complementary_channel := QuantumComplementaryChannelContract.verification_suite
   stinespring := QuantumStinespringDilationContract.verification_suite
   cptp_channel := QuantumCPTPChannelContract.verification_suite
 }

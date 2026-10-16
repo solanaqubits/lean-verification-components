@@ -1,3 +1,4 @@
+import Verification.QuantumComplementaryChannelContract
 import Verification.DeFiLendingUtilizationFeedbackStability
 import Verification.DistributedTendermintAccountableSafety
 import Verification.CryptoBulletproofsRangeWitnessExtraction
@@ -184,6 +185,7 @@ set_option linter.style.header false
 open DeFiLendingBadDebtSocialization
 open DeFiLendingLiquidationAccounting
 open QuantumChannelTraceDistanceContract
+open QuantumComplementaryChannelContract
 open QuantumStinespringDilationContract
 open QuantumCPTPChannelContract
 open QuantumHelstromStateDiscrimination
