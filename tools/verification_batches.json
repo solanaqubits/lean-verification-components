@@ -50,9 +50,10 @@
         "Verification.CryptoBulletproofsInnerProduct",
         "Verification.CryptoBulletproofsWitnessExtraction",
         "Verification.CryptoBulletproofsTreeExtraction",
-        "Verification.CryptoBulletproofsIPAForkingExtractionContract"
+        "Verification.CryptoBulletproofsIPAForkingExtractionContract",
+        "Verification.CryptoBulletproofsIPAFiniteForkingProbabilityContract"
       ],
-      "description": "Finite shared-prefix distinct-square branch acquisition and recursive composition with the existing IPA witness-or-generator-relation extractor."
+      "description": "Finite shared-prefix distinct-square branch acquisition and recursive composition with the existing IPA witness-or-generator-relation extractor. Finite four-draw probability and heavy-prefix bounds with explicit valid-child extraction bridge."
     }
   },
   "infrastructure_batches": {

@@ -1,3 +1,4 @@
+import Verification.CryptoBulletproofsIPAFiniteForkingProbabilityContract
 import Verification.CryptoBulletproofsIPAForkingExtractionContract
 import Verification.DistributedTendermintHeaderChainEpochAuthContract
 import Verification.HCTKScalarPartition
@@ -207,6 +208,8 @@ open QuantumQutritDecoderCircuitRefinement
 open QuantumQutritTwoOfThreeSecretSharingContract
 open QuantumErasureCorrectabilityContract
 open QuantumReferencePreservingRecoveryContract
+open CryptoBulletproofsIPAFiniteForkingProbabilityContract
+  (CryptoBulletproofsIPAFiniteForkingProbabilityContractSuite)
 open CryptoBulletproofsIPAForkingExtractionContract
   (CryptoBulletproofsIPAForkingExtractionContractSuite)
 open QuantumKnillLaflammeRecoveryNecessity
@@ -436,6 +439,7 @@ structure CryptoFullSuite : Prop where
   ipa_extraction : CryptoBulletproofsWitnessExtraction.CryptoBulletproofsWitnessExtractionSuite
   range_extraction : CryptoBulletproofsRangeWitnessExtractionSuite
   range_grid : CryptoBulletproofsRangeInterpolation.CryptoBulletproofsRangeInterpolationSuite
+  ipa_probability : CryptoBulletproofsIPAFiniteForkingProbabilityContractSuite
   ipa_forking : CryptoBulletproofsIPAForkingExtractionContractSuite
   ipa_tree : CryptoBulletproofsTreeExtraction.CryptoBulletproofsTreeExtractionSuite
 
@@ -499,6 +503,7 @@ theorem crypto_full_master_suite : CryptoFullSuite := {
   range_extraction := CryptoBulletproofsRangeWitnessExtraction.verification_suite
   range_grid := by
     exact CryptoBulletproofsRangeInterpolation.verification_suite
+  ipa_probability := CryptoBulletproofsIPAFiniteForkingProbabilityContract.verification_suite
   ipa_forking := CryptoBulletproofsIPAForkingExtractionContract.verification_suite
   ipa_tree := by
     exact CryptoBulletproofsTreeExtraction.verification_suite

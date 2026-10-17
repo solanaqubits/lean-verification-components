@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: d3a2c743a44a71e8a090c16446f5441d930e90e4f03127dd99cb415e643373a6
+source_sha256: bcbd259e1ecc3d504bc79871be63463fe0921f59f07ec57411e9496977a6d0b7
 novelty: not-assessed
 status: reviewed
 ---
@@ -136,3 +136,7 @@ Their conditional formal scopes are described in the new module cards.
 Release v0.7.10 adds `CryptoFullSuite.ipa_forking` and preserves the refined
 `QuantumPhysicsFullSuite.hctk_scalar` contract. The new finite acquisition
 result retains response availability and cryptographic security as external obligations.
+
+Release v0.7.11 adds `CryptoFullSuite.ipa_probability`: finite distinct-square
+fork probabilities and heavy-prefix bounds, with explicit valid-child premises
+for extractor composition. General forking and ROM security remain open.

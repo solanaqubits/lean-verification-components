@@ -30,18 +30,16 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**203 direct imports in MasterSuite**, **247 Lean sources including Verification.lean**.
-[Release v0.7.10](docs/release-v0.7.10.en.md) adds finite shared-prefix IPA fork
-acquisition (epsilon203) and refines the existing HCTK capture transition
-(epsilon201). Git release numbering is separate from Lake package version 0.7.1.
-Public checks are distinct from private evidence; the full public beta basis
-remains v0.7.1.
+**204 direct imports in MasterSuite**, **248 Lean sources including Verification.lean**.
+[Release v0.7.11](docs/release-v0.7.11.en.md) adds finite IPA forking probability
+(epsilon204). Lake remains 0.7.1; the full public beta basis remains v0.7.1.
 
-[Finite IPA fork acquisition](knowledge/04_cryptography/CryptoBulletproofsIPAForkingExtractionContract.md)
-selects four distinct nonzero square classes from seven distinct accepting calls,
-constructs a transcript tree under recursive coverage, and feeds the existing
-witness-or-generator-relation extractor. Response availability, probabilistic
-forking and Fiat–Shamir/ROM security remain external.
+[Finite IPA forking probability](knowledge/04_cryptography/CryptoBulletproofsIPAFiniteForkingProbabilityContract.md)
+bounds the probability of four accepting challenges with distinct squares under
+independent uniform sampling with replacement, and the fraction of heavy prefixes.
+Protocol composition filters zero/absent replies through `replySet` and requires
+valid completed child trees. General forking, Fiat–Shamir/ROM security and a
+success probability for the whole recursive tree are not established.
 
 [Composite epoch safety](knowledge/02_distributed_systems/DistributedTendermintEpochTransitionSafetyMasterContract.md)
 and [checked header chains](knowledge/02_distributed_systems/DistributedTendermintHeaderChainEpochAuthContract.md)

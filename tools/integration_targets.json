@@ -1502,5 +1502,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "CryptoBulletproofsIPAForkingExtractionContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsIPAFiniteForkingProbabilityContract": {
+    "suite_struct": "CryptoBulletproofsIPAFiniteForkingProbabilityContractSuite",
+    "suite_type": "CryptoBulletproofsIPAFiniteForkingProbabilityContractSuite",
+    "parent": "CryptoFullSuite",
+    "field": "ipa_probability",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoBulletproofsIPAFiniteForkingProbabilityContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

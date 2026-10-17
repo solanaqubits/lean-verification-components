@@ -230,3 +230,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DistributedTendermintHeaderChainEpochAuthContract.verification_suite
 
 #audit_axioms CryptoBulletproofsIPAForkingExtractionContract.verification_suite
+
+#audit_axioms CryptoBulletproofsIPAFiniteForkingProbabilityContract.verification_suite

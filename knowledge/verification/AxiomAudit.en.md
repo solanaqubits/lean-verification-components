@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: d20269a20b1a6f46423fc6ce357f40cf4b9f3e0394620d229156b333b0e8b43d
+source_sha256: bfaea294e45eeff2538b8767a7b3abb87241026b5135a2814169778a41b9682f
 novelty: not-assessed
 status: reviewed
 ---
@@ -60,3 +60,7 @@ Their conditional formal scopes are described in the new module cards.
 Release v0.7.10 adds `CryptoFullSuite.ipa_forking` and preserves the refined
 `QuantumPhysicsFullSuite.hctk_scalar` contract. The new finite acquisition
 result retains response availability and cryptographic security as external obligations.
+
+Release v0.7.11 adds `CryptoFullSuite.ipa_probability`: finite distinct-square
+fork probabilities and heavy-prefix bounds, with explicit valid-child premises
+for extractor composition. General forking and ROM security remain open.

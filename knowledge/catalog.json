@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsIPAFiniteForkingProbabilityContract",
         "Verification.CryptoBulletproofsIPAForkingExtractionContract",
         "Verification.DistributedTendermintHeaderChainEpochAuthContract",
         "Verification.HCTKScalarPartition",
@@ -1438,6 +1439,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoBulletproofsIPAFiniteForkingProbabilityContract",
         "Verification.CryptoBulletproofsIPAForkingExtractionContract",
         "Verification.DistributedTendermintHeaderChainEpochAuthContract",
         "Verification.HCTKScalarPartition",
@@ -2816,6 +2818,17 @@
       "card": "knowledge/04_cryptography/CryptoBulletproofsIPAForkingExtractionContract.md",
       "project_imports": [
         "Verification.CryptoBulletproofsTreeExtraction"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "CryptoBulletproofsIPAFiniteForkingProbabilityContract",
+      "section": "cryptography",
+      "source": "Verification/CryptoBulletproofsIPAFiniteForkingProbabilityContract.lean",
+      "card": "knowledge/04_cryptography/CryptoBulletproofsIPAFiniteForkingProbabilityContract.md",
+      "project_imports": [
+        "Verification.CryptoBulletproofsIPAForkingExtractionContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"
