@@ -1421,5 +1421,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintSlashingReplayProtection.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintUnbondingPeriodContract": {
+    "suite_struct": "DistributedTendermintUnbondingPeriodContractSuite",
+    "suite_type": "DistributedTendermintUnbondingPeriodContractSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "tendermint_unbonding",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintUnbondingPeriodContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

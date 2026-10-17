@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: adf0f836cbc892e616229129dc2becb838fff0608c866a03d7c295525ebba17a
+source_sha256: c8d3c8fabef8a8a2164451f3fd361ee079b0e217df486a595db4626b15e644bb
 novelty: not-assessed
 status: reviewed
 ---
@@ -42,3 +42,5 @@ attribution to exact rational slashing and conditional honest-share growth.
 Module 193 adds `CryptoFullSuite.pedersen_opening`: two-branch opening extraction and conditional composition with module 178.
 
 Module 194 adds `DistributedSystemsFullSuite.tendermint_replay`: sequential replay protection and conserved ledger accounting.
+
+Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queues, inclusive evidence windows, two-phase slots and conserved accounting.

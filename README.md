@@ -30,12 +30,18 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**194 direct imports**, **238 Lean sources including Verification.lean**.
-[Release v0.7.3](docs/release-v0.7.3.en.md) synchronizes epsilon module 194 in
+**195 direct imports**, **239 Lean sources including Verification.lean**.
+[Release v0.7.4](docs/release-v0.7.4.en.md) synchronizes epsilon module 195 in
 gamma `distributed`, delta `distributed/tendermint-accountability`.
 It is a Git publication serial; the Lake package version remains 0.7.1.
 Scoped public validation is separate from the last full public basis v0.7.1.
 Historical checkpoints and private evidence remain unchanged.
+
+[Evidence windows and delayed withdrawal](knowledge/02_distributed_systems/DistributedTendermintUnbondingPeriodContract.md)
+uses finite queues and two-phase slots. No-Escape covers liable tranches and
+certificates included before admission closes; unseen-certificate delivery is
+not guaranteed. Clock synchronization, network delays and concurrent execution
+remain external obligations.
 
 [Slashing replay protection](knowledge/02_distributed_systems/DistributedTendermintSlashingReplayProtection.md)
 uses checked (height, validator) keys, rejects invalid input without state changes,

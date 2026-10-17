@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 823588168f69846f687dc3087ffc97b36898117ea0b4480f9e9e00f8b0adc0ca
+source_sha256: 033fc47e52e863014510d3fa7ced6c8a5862c460af7cb5c1f57849bb08bb44a2
 novelty: not-assessed
 status: reviewed
 ---
@@ -87,3 +87,5 @@ attribution to exact rational slashing and conditional honest-share growth.
 Module 193 adds `CryptoFullSuite.pedersen_opening`: two-branch opening extraction and conditional composition with module 178.
 
 Module 194 adds `DistributedSystemsFullSuite.tendermint_replay`: sequential replay protection and conserved ledger accounting.
+
+Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queues, inclusive evidence windows, two-phase slots and conserved accounting.

@@ -84,3 +84,5 @@ Public checks are separate from private evidence; the last full public basis
 remains v0.7.1. The public planner selects actual verification scope.
 Only propext, Classical.choice and Quot.sound are permitted. Python equivalence,
 JSON/SHA-256 and SimLab remain open. Novelty is not assessed.
+
+[Module 195](DistributedTendermintUnbondingPeriodContract.md) adds abstract two-phase slots and a finite unbonding queue. Liability stops at request time; clock authentication, network delivery and persistence remain external.

@@ -16,9 +16,10 @@
         "Verification.DistributedTendermintCoreSafety",
         "Verification.DistributedTendermintAccountableSafety",
         "Verification.DistributedTendermintSlashingPenaltyContract",
-        "Verification.DistributedTendermintSlashingReplayProtection"
+        "Verification.DistributedTendermintSlashingReplayProtection",
+        "Verification.DistributedTendermintUnbondingPeriodContract"
       ],
-      "description": "Fixed-height safety, certified attribution, exact rational slashing and sequential replay protection."
+      "description": "Fixed-height safety, certified attribution, rational slashing, replay protection and two-phase unbonding."
     },
     "cryptography/pedersen-opening-extraction": {
       "direction": "cryptography",

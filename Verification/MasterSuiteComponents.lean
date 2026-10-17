@@ -1,3 +1,4 @@
+import Verification.DistributedTendermintUnbondingPeriodContract
 import Verification.DistributedTendermintSlashingReplayProtection
 import Verification.CryptoPedersenCommitmentOpeningExtractionContract
 import Verification.DistributedTendermintSlashingPenaltyContract
@@ -206,6 +207,8 @@ open QuantumKnillLaflammeEnvironmentCriterion
 open QuantumComplementaryChannelContract
 open DeFiLendingUtilizationFeedbackStability (DeFiLendingUtilizationFeedbackStabilitySuite)
 open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
+open DistributedTendermintUnbondingPeriodContract
+  (DistributedTendermintUnbondingPeriodContractSuite)
 open DistributedTendermintSlashingReplayProtection
   (DistributedTendermintSlashingReplayProtectionSuite)
 open DistributedTendermintSlashingPenaltyContract
@@ -761,6 +764,7 @@ theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuit
 
 /-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
+  tendermint_unbonding : DistributedTendermintUnbondingPeriodContractSuite
   tendermint_replay : DistributedTendermintSlashingReplayProtectionSuite
   tendermint_slashing : DistributedTendermintSlashingPenaltyContractSuite
   tendermint_accountability : DistributedTendermintAccountableSafetySuite
@@ -804,6 +808,7 @@ structure DistributedSystemsFullSuite : Prop where
   marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
+  tendermint_unbonding := DistributedTendermintUnbondingPeriodContract.verification_suite
   tendermint_replay := DistributedTendermintSlashingReplayProtection.verification_suite
   tendermint_slashing := DistributedTendermintSlashingPenaltyContract.verification_suite
   tendermint_accountability := DistributedTendermintAccountableSafety.verification_suite

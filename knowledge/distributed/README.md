@@ -119,3 +119,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Certified Tendermint slashing](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md): exact rational penalties, certified attribution and protected stake.
 
 - [Slashing replay protection](../02_distributed_systems/DistributedTendermintSlashingReplayProtection.md) — checked per-height keys, idempotence and conserved accounting.
+
+- [Evidence windows and delayed stake withdrawal](../02_distributed_systems/DistributedTendermintUnbondingPeriodContract.md) — liable tranches, two-phase slots and conditional payout.
