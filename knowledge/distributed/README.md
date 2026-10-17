@@ -127,3 +127,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Weighted honest quorum intersection across epochs](../02_distributed_systems/DistributedTendermintQuorumIntersectionEpochTransitionContract.md) — common mass, total variation and directed honest-weight loss.
 
 - [Checked lock handover](../02_distributed_systems/DistributedTendermintLockHandoverContract.md) — conditional round-zero agreement and justified local replacements.
+
+- [Conditional all-round handover agreement](../02_distributed_systems/DistributedTendermintHandoverRoundInduction.md) — strong round induction, explicit history rules and local execution refinement.

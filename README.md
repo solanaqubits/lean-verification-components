@@ -30,17 +30,22 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**198 direct imports**, **242 Lean sources including Verification.lean**.
-[Release v0.7.7](docs/release-v0.7.7.en.md) synchronizes epsilon module 198 in
+**199 direct imports**, **243 Lean sources including Verification.lean**.
+[Release v0.7.8](docs/release-v0.7.8.en.md) synchronizes epsilon module 199 in
 gamma `distributed`, delta `distributed/tendermint-accountability`.
 It is a Git publication serial; the Lake package version remains 0.7.1.
 Scoped public validation is separate from the last full public basis v0.7.1.
 Historical checkpoints and private evidence remain unchanged.
 
+[All-round handover agreement](knowledge/02_distributed_systems/DistributedTendermintHandoverRoundInduction.md)
+uses strong round induction under explicit honest prevote/precommit rules and
+universal honest quorum intersection. Registered local executions connect checked
+lock replacements to transcript Polka. Delivery, liveness, signature authentication
+and complete protocol refinement remain open.
+
 [Checked lock handover](knowledge/02_distributed_systems/DistributedTendermintLockHandoverContract.md)
-proves conditional commit agreement in target round zero at the same decision height,
-and justified local replacements in finite executions. Full later-round agreement,
-certificate authentication and message delivery remain open.
+provides adoption, conditional round-zero agreement and justified local replacements;
+the all-round theorem adds global history rules, not automatic network guarantees.
 
 [Weighted quorum intersection](knowledge/02_distributed_systems/DistributedTendermintQuorumIntersectionEpochTransitionContract.md)
 provides common-mass, total-variation and directed honest-weight-loss criteria

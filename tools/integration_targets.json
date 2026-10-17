@@ -1457,5 +1457,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintLockHandoverContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintHandoverRoundInduction": {
+    "suite_struct": "DistributedTendermintHandoverRoundInductionSuite",
+    "suite_type": "DistributedTendermintHandoverRoundInductionSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "handover_induction",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintHandoverRoundInduction.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

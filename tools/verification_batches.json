@@ -20,9 +20,10 @@
         "Verification.DistributedTendermintUnbondingPeriodContract",
         "Verification.DistributedTendermintEpochIdentityContract",
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract",
-        "Verification.DistributedTendermintLockHandoverContract"
+        "Verification.DistributedTendermintLockHandoverContract",
+        "Verification.DistributedTendermintHandoverRoundInduction"
       ],
-      "description": "Fixed-height safety, attribution, slashing, unbonding, epoch identity, quorum overlap and conditional lock handover."
+      "description": "Fixed-height safety, accountability, penalties, epoch identity, quorum overlap, handover and conditional all-round agreement."
     },
     "cryptography/pedersen-opening-extraction": {
       "direction": "cryptography",

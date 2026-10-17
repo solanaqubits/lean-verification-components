@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintHandoverRoundInduction",
         "Verification.DistributedTendermintLockHandoverContract",
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract",
         "Verification.DistributedTendermintEpochIdentityContract",
@@ -1433,6 +1434,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintHandoverRoundInduction",
         "Verification.DistributedTendermintLockHandoverContract",
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract",
         "Verification.DistributedTendermintEpochIdentityContract",
@@ -2753,6 +2755,17 @@
       "card": "knowledge/02_distributed_systems/DistributedTendermintLockHandoverContract.md",
       "project_imports": [
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedTendermintHandoverRoundInduction",
+      "section": "distributed",
+      "source": "Verification/DistributedTendermintHandoverRoundInduction.lean",
+      "card": "knowledge/02_distributed_systems/DistributedTendermintHandoverRoundInduction.md",
+      "project_imports": [
+        "Verification.DistributedTendermintLockHandoverContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

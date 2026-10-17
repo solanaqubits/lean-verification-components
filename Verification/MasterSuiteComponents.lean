@@ -1,3 +1,4 @@
+import Verification.DistributedTendermintHandoverRoundInduction
 import Verification.DistributedTendermintLockHandoverContract
 import Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract
 import Verification.DistributedTendermintEpochIdentityContract
@@ -210,6 +211,8 @@ open QuantumKnillLaflammeEnvironmentCriterion
 open QuantumComplementaryChannelContract
 open DeFiLendingUtilizationFeedbackStability (DeFiLendingUtilizationFeedbackStabilitySuite)
 open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
+open DistributedTendermintHandoverRoundInduction
+  (DistributedTendermintHandoverRoundInductionSuite)
 open DistributedTendermintLockHandoverContract
   (DistributedTendermintLockHandoverContractSuite)
 open DistributedTendermintQuorumIntersectionEpochTransitionContract
@@ -773,6 +776,7 @@ theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuit
 
 /-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
+  handover_induction : DistributedTendermintHandoverRoundInductionSuite
   lock_handover : DistributedTendermintLockHandoverContractSuite
   epoch_quorum : DistributedTendermintQuorumIntersectionEpochTransitionContractSuite
   tendermint_epoch_identity : DistributedTendermintEpochIdentityContractSuite
@@ -820,6 +824,7 @@ structure DistributedSystemsFullSuite : Prop where
   marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
+  handover_induction := DistributedTendermintHandoverRoundInduction.verification_suite
   lock_handover := DistributedTendermintLockHandoverContract.verification_suite
   epoch_quorum := DistributedTendermintQuorumIntersectionEpochTransitionContract.verification_suite
   tendermint_epoch_identity := DistributedTendermintEpochIdentityContract.verification_suite

@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: 6e0e43ed103b51944b41e9299b6636a9cd8958cc3c14071ee81226171a82a3c6
+source_sha256: a6be6d56c2adf6b87c30e49c93895803cad576ec44f10ce9629bf5ce738afb8b
 novelty: not-assessed
 status: reviewed
 ---
@@ -50,3 +50,5 @@ Module 196 adds `DistributedSystemsFullSuite.tendermint_epoch_identity`: histori
 Module 197 adds `DistributedSystemsFullSuite.epoch_quorum`: weighted honest quorum intersection across epochs, with strict and non-strict threshold conventions.
 
 Module 198 adds `DistributedSystemsFullSuite.lock_handover`: checked adoption, conditional round-zero agreement and justified finite local lock replacements.
+
+Module 199 adds `DistributedSystemsFullSuite.handover_induction`: conditional all-round agreement and registered local execution refinement.
