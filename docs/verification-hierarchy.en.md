@@ -25,9 +25,10 @@ The qutrit pilot rejects weakened claims even if the weakened theorem compiles.
 No universal test of non-vacuity, intent or arbitrary logical equivalence exists
 in these tools. New contracts can be added incrementally with review.
 
-For executable refinements, a next subject module can connect a finite sequence
-of qutrit coordinate operations to the existing decoder. Such a future result
-would not certify a numerical simulator, compiler or physical hardware by itself.
+Module 191 connects an executable finite sequence of qutrit coordinate operations
+to the explicit decoder and its channel. This algebraic refinement does not certify
+a numerical simulator, compiler or physical hardware. See
+[the beta 0.7 checkpoint](release-v0.7.0.en.md).
 
 Use a publisher isolated from candidate execution in deployments: proof workers
 need no release credentials, and the publisher accepts only reviewed evidence

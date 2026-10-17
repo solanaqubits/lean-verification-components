@@ -21,7 +21,10 @@ class HierarchyTests(unittest.TestCase):
         self.assertIn('Verification.MasterSuite',p['build_modules'])
     def test_batch_and_module_dependents(self):
         p=plan(ROOT,'delta',batch='quantum-physics/qutrit-secret-sharing')
-        self.assertEqual(len(p['selected']),2)
+        self.assertEqual(set(p['selected']), {
+            'Verification.QuantumQutritTwoOfThreeSecretSharingContract',
+            'Verification.QuantumQutritSecretSharingExplicitDecoder',
+            'Verification.QuantumQutritDecoderCircuitRefinement'})
         p=plan(ROOT,'epsilon',['Verification.QuantumQutritTwoOfThreeSecretSharingContract'])
         self.assertIn('Verification.QuantumQutritSecretSharingExplicitDecoder',p['reverse_dependents'])
     def test_trust_change_escalates(self):

@@ -30,13 +30,17 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**190 direct imports**, **233 Lean sources including Verification.lean**
-(230 top-level modules and 2 auxiliary specs under Verification/).
-All 233 sources match private snapshot `98c20f1755dc36138a2e7394e4473864328c5059`.
-This is a **gamma-level release** (formerly Z) under the [version policy](VERSIONING.md).
-[Current scoped evidence](docs/release-v0.5.88.en.md) is separate from the
-[last full-validation baseline](knowledge/VERIFICATION.en.md), public commit
-`b3410720b9af49c2fb70d15d65d3d012091cbf0b` (v0.5.73).
+**191 direct imports**, **235 Lean sources including Verification.lean**.
+[Beta checkpoint v0.7.0](docs/release-v0.7.0.en.md) uses the
+[alpha–zeta policy](VERSIONING.md). The current subject change is epsilon module
+191 in gamma `quantum-physics`, delta `qutrit-secret-sharing`. Publication requires
+full beta checks of the final tree; the annotated release tag records measured
+results and the accepted evidence digest. Previous tags retain their original scope.
+
+[Qutrit circuit refinement](knowledge/03_quantum_information/QuantumQutritDecoderCircuitRefinement.md)
+connects an executable three-gate finite interpreter to the explicit unitary
+decoder and Kraus channel on all complex input matrices. It preserves reference
+systems and rejects four deliberately incorrect gate configurations.
 
 ## Release v0.5.88
 

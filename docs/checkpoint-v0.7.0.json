@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "release_tag": "v0.7.0",
+  "alpha_generation": 0,
+  "beta_checkpoint": 7,
+  "change_level": "epsilon",
+  "direction": "quantum-physics",
+  "batch": "qutrit-secret-sharing",
+  "module_number": 191,
+  "module": "Verification.QuantumQutritDecoderCircuitRefinement",
+  "internal_correction": null,
+  "validation_level": "beta",
+  "evidence_location": "Annotated release tag and externally retained beta evidence",
+  "previous_tag": "v0.6.0",
+  "direct_imports": 191,
+  "lean_sources_including_root": 235
+}

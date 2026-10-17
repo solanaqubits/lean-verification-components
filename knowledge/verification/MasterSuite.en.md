@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: edbdae2134800495a721ff8f4c5bd968c3434fe514c385ecd5c9a10f26aa48af
+source_sha256: 1790c2c044ee1901bb581bd42f8e5fb5772ee120aa6a249be68f76a13ae36b73
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 174 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 191 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -106,3 +106,7 @@ ReliableSuccess. [Contract](../09_distributed_systems/DistributedCoordinatedAtta
 `CryptoFullSuite.musig_group` adds finite cyclic-group Schnorr aggregation,
 composition of accepted partial responses and a naive rogue-key witness.
 [Contract](../04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md).
+
+Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` through
+`QuantumPhysicsFullSuite.qutrit_circuit_refinement`; see the
+[beta 0.7 release](../../docs/release-v0.7.0.en.md).

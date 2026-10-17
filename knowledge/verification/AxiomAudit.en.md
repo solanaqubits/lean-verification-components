@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: b378c939711c09042defe529fd60fcd5d47044f99bfefb7dbb5fd4129797cc49
+source_sha256: b571a61c5410ad928741e44786cfd038dc0243ad08c8df601cbc29ffcc787507
 novelty: not-assessed
 status: reviewed
 ---
@@ -30,3 +30,7 @@ Scientific priority and first-formalization claims have not been established.
 ## Verification
 
 See the [validation record](../VERIFICATION.en.md) for the audited source snapshot.
+
+Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` through
+`QuantumPhysicsFullSuite.qutrit_circuit_refinement`; see the
+[beta 0.7 release](../../docs/release-v0.7.0.en.md).

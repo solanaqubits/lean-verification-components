@@ -1,5 +1,16 @@
 # Public verification record
 
+## Current checkpoint: v0.7.0
+
+191 direct imports and 235 root-inclusive Lean sources. The subject change is
+module 191 in `quantum-physics/qutrit-secret-sharing`. The
+[release contract](../docs/release-v0.7.0.en.md) records the exact hierarchy and
+acceptance checks. Measured beta results and evidence digests are recorded in the
+annotated release tags after validation; historical measurements below retain
+their original scope. No prior audit is relabelled as a fresh run.
+
+
+
 ## Beta 0.6 migration checkpoint
 
 The v0.6.0 candidate contains 190 direct imports and 234 root-inclusive Lean

@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 926571a6009980f4ceb170e7489585ec272e0e24b94df39c71c3ecd0d1bffc6f
+source_sha256: ba90c258f50bc31228ef570b299b3621b477ba3f06b0e5c4ecfbf988d96500da
 novelty: not-assessed
 status: reviewed
 ---
@@ -75,3 +75,7 @@ ReliableSuccess. [Contract](../09_distributed_systems/DistributedCoordinatedAtta
 `CryptoFullSuite.musig_group` adds finite cyclic-group Schnorr aggregation,
 composition of accepted partial responses and a naive rogue-key witness.
 [Contract](../04_cryptography/CryptoSchnorrMultiSignaturesMuSigGroup.md).
+
+Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` through
+`QuantumPhysicsFullSuite.qutrit_circuit_refinement`; see the
+[beta 0.7 release](../../docs/release-v0.7.0.en.md).

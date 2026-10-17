@@ -6,7 +6,8 @@
       "direction": "quantum-physics",
       "modules": [
         "Verification.QuantumQutritTwoOfThreeSecretSharingContract",
-        "Verification.QuantumQutritSecretSharingExplicitDecoder"
+        "Verification.QuantumQutritSecretSharingExplicitDecoder",
+        "Verification.QuantumQutritDecoderCircuitRefinement"
       ]
     }
   }

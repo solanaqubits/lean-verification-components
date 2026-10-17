@@ -1385,5 +1385,14 @@
     "constructor": "quantum_physics_full_master_suite",
     "proof": "QuantumQutritSecretSharingExplicitDecoder.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.QuantumQutritDecoderCircuitRefinement": {
+    "suite_struct": "QuantumQutritDecoderCircuitRefinementSuite",
+    "suite_type": "QuantumQutritDecoderCircuitRefinementSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "qutrit_circuit_refinement",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "QuantumQutritDecoderCircuitRefinement.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

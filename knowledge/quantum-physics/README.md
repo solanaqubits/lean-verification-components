@@ -139,3 +139,5 @@ The results concern the explicit matrices, transformations, and scalar energy mo
 - [Qutrit two-of-three secret sharing](../03_quantum_information/QuantumQutritTwoOfThreeSecretSharingContract.md) — Explicit isometric code, singleton privacy, recovery from every pair and reference preservation.
 
 - [Explicit qutrit decoder](../03_quantum_information/QuantumQutritSecretSharingExplicitDecoder.md) — Basis permutation, full-state factorization and three explicit recovery Kraus operators.
+
+- [Qutrit decoder circuit refinement](../03_quantum_information/QuantumQutritDecoderCircuitRefinement.md): executable three-gate interpreter, exact matrix/channel refinement, and incorrect-circuit witnesses.

@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.7.0 — beta checkpoint
+
+- Synchronizes epsilon module 191 in `quantum-physics/qutrit-secret-sharing`.
+- 191 direct imports and 235 root-inclusive Lean sources.
+- Adds the executable finite decoder circuit and exact matrix/channel refinement.
+- Full validation and evidence binding follow [the release contract](docs/release-v0.7.0.en.md).
+- Preserves v0.6.0 and all earlier tags; no global alpha-generation change.
+
 ## v0.5.0
 
 - Added threshold time envelopes, elementary transcript forking, and real beam-splitter models.
