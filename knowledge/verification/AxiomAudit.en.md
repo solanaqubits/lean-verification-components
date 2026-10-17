@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: 096b1399e992d215fd5e7563b9cafb9867b29411abef8155096f678fe4521d69
+source_sha256: d20269a20b1a6f46423fc6ce357f40cf4b9f3e0394620d229156b333b0e8b43d
 novelty: not-assessed
 status: reviewed
 ---
@@ -56,3 +56,7 @@ Module 199 adds `DistributedSystemsFullSuite.handover_induction`: conditional al
 Release v0.7.9 registers `DistributedSystemsFullSuite.epoch_transition_master`,
 `QuantumPhysicsFullSuite.hctk_scalar`, and `DistributedSystemsFullSuite.header_chain_auth`.
 Their conditional formal scopes are described in the new module cards.
+
+Release v0.7.10 adds `CryptoFullSuite.ipa_forking` and preserves the refined
+`QuantumPhysicsFullSuite.hctk_scalar` contract. The new finite acquisition
+result retains response availability and cryptographic security as external obligations.

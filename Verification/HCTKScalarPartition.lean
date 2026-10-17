@@ -207,6 +207,125 @@ theorem idealWindow_unbounded (tau bound : ℝ) (ht : 0 < tau) (hb : 0 < bound) 
   rw [heq] at hm
   linarith
 
+/-- Three scalar stores; names encode bookkeeping, not physical realizations. -/
+structure CaptureState where
+  localAmount : ℝ
+  capturedAmount : ℝ
+  remainderAmount : ℝ
+  label : ℤ
+
+/-- Total scalar amount. No information-theoretic or topological interpretation. -/
+def captureTotal (s : CaptureState) : ℝ :=
+  s.localAmount + s.capturedAmount + s.remainderAmount
+
+/-- Nonnegativity is separate from conservation. -/
+def CaptureNonnegative (s : CaptureState) : Prop :=
+  0 ≤ s.localAmount ∧ 0 ≤ s.capturedAmount ∧ 0 ≤ s.remainderAmount
+
+/-- Release d from the local store, partitioning it with a prescribed eta. -/
+def capture (s : CaptureState) (d eta : ℝ) : CaptureState :=
+  ⟨s.localAmount - d, s.capturedAmount + eta * d,
+    s.remainderAmount + (1 - eta) * d, s.label⟩
+
+/-- Conservation follows from the transition, without a final-state premise. -/
+theorem capture_total (s : CaptureState) (d eta : ℝ) :
+    captureTotal (capture s d eta) = captureTotal s := by
+  unfold captureTotal capture
+  ring
+
+/-- The copied integer label is not a computed Chern invariant. -/
+theorem capture_label (s : CaptureState) (d eta : ℝ) :
+    (capture s d eta).label = s.label := rfl
+
+/-- Bounds on release and efficiency suffice for admissible component values. -/
+theorem capture_nonnegative (s : CaptureState) (d eta : ℝ)
+    (hs : CaptureNonnegative s) (hd : 0 ≤ d) (hdl : d ≤ s.localAmount)
+    (he : 0 ≤ eta) (he1 : eta ≤ 1) : CaptureNonnegative (capture s d eta) := by
+  exact ⟨sub_nonneg.mpr hdl, add_nonneg hs.2.1 (mul_nonneg he hd),
+    add_nonneg hs.2.2 (mul_nonneg (sub_nonneg.mpr he1) hd)⟩
+
+/-- An inactive release is the identity. -/
+theorem capture_zero (s : CaptureState) (eta : ℝ) : capture s 0 eta = s := by
+  cases s
+  simp [capture]
+
+/-- Aggregate the two outgoing stores to the existing two-store model. -/
+def collapseCapture (s : CaptureState) : State :=
+  ⟨s.localAmount, s.capturedAmount + s.remainderAmount, s.label⟩
+
+/-- The new transition refines the existing epsilon201 transfer exactly over reals. -/
+theorem collapse_capture (s : CaptureState) (d eta : ℝ) :
+    collapseCapture (capture s d eta) = transfer (collapseCapture s) d := by
+  unfold collapseCapture capture transfer
+  congr 1
+  ring
+
+/-- A step records release then allocation efficiency; both are exact reals. -/
+def runCaptures : CaptureState → List (ℝ × ℝ) → CaptureState
+  | s, [] => s
+  | s, (d, eta) :: rest => runCaptures (capture s d eta) rest
+
+/-- Each release is bounded against its actual preceding local state. -/
+def AdmissibleCaptures : CaptureState → List (ℝ × ℝ) → Prop
+  | _, [] => True
+  | s, (d, eta) :: rest =>
+      (0 ≤ d ∧ d ≤ s.localAmount ∧ 0 ≤ eta ∧ eta ≤ 1) ∧
+      AdmissibleCaptures (capture s d eta) rest
+
+/-- Composition agrees with existing runTransfers after forgetting the allocation. -/
+theorem collapse_runCaptures (xs : List (ℝ × ℝ)) (s : CaptureState) :
+    collapseCapture (runCaptures s xs) = runTransfers (collapseCapture s) (xs.map Prod.fst) := by
+  induction xs generalizing s with
+  | nil => rfl
+  | cons a rest ih =>
+    rcases a with ⟨d, eta⟩
+    simpa [runCaptures, runTransfers, collapse_capture] using ih (capture s d eta)
+
+/-- Finite traces preserve total and copied label, without assuming final invariance. -/
+theorem runCaptures_invariants (xs : List (ℝ × ℝ)) (s : CaptureState) :
+    captureTotal (runCaptures s xs) = captureTotal s ∧
+    (runCaptures s xs).label = s.label := by
+  induction xs generalizing s with
+  | nil => exact ⟨rfl, rfl⟩
+  | cons a rest ih =>
+    rcases a with ⟨d, eta⟩
+    obtain ⟨ht, hn⟩ := ih (capture s d eta)
+    exact ⟨ht.trans (capture_total s d eta), hn.trans (capture_label s d eta)⟩
+
+/-- Validity is propagated by induction, not inferred from conservation alone. -/
+theorem runCaptures_nonnegative (xs : List (ℝ × ℝ)) (s : CaptureState)
+    (hs : CaptureNonnegative s) (ha : AdmissibleCaptures s xs) :
+    CaptureNonnegative (runCaptures s xs) := by
+  induction xs generalizing s with
+  | nil => exact hs
+  | cons a rest ih =>
+    rcases a with ⟨d, eta⟩
+    obtain ⟨⟨hd, hdl, he, he1⟩, hr⟩ := ha
+    exact ih (capture s d eta) (capture_nonnegative s d eta hs hd hdl he he1) hr
+
+/-- Corrected conservation contract: assumptions concern initial state and each step. -/
+theorem capture_trace_contract (xs : List (ℝ × ℝ)) (s : CaptureState)
+    (hs : CaptureNonnegative s) (ha : AdmissibleCaptures s xs) :
+    captureTotal (runCaptures s xs) = captureTotal s ∧
+    CaptureNonnegative (runCaptures s xs) ∧ (runCaptures s xs).label = s.label :=
+  ⟨(runCaptures_invariants xs s).1, runCaptures_nonnegative xs s hs ha,
+    (runCaptures_invariants xs s).2⟩
+
+/-- One complete release determines every final component; no target is assumed. -/
+theorem capture_complete (q eta : ℝ) (n : ℤ) :
+    capture ⟨q, 0, 0, n⟩ q eta = ⟨0, eta * q, (1 - eta) * q, n⟩ := by
+  simp [capture]
+
+/-- Transfer amount and efficiency determine the captured share, not arbitrary profiles. -/
+theorem captured_increment_bounds (s : CaptureState) (d eta : ℝ)
+    (hd : 0 ≤ d) (he : 0 ≤ eta) (he1 : eta ≤ 1) :
+    0 ≤ (capture s d eta).capturedAmount - s.capturedAmount ∧
+    (capture s d eta).capturedAmount - s.capturedAmount ≤ d := by
+  dsimp [capture]
+  constructor
+  · nlinarith [mul_nonneg he hd]
+  · nlinarith [mul_nonneg (sub_nonneg.mpr he1) hd]
+
 /-- Registry package of conditional scalar results; no physical/topological invariant. -/
 structure HCTKScalarPartitionSuite : Prop where
   partition_conservation : ∀ q p n, total (partition q p n) = q
@@ -216,6 +335,11 @@ structure HCTKScalarPartitionSuite : Prop where
   transfer_conservation : ∀ s a, total (transfer s a) = total s
   trace_invariants : ∀ xs s, total (runTransfers s xs) = total s ∧
     (runTransfers s xs).label = s.label
+  capture_trace : ∀ xs s, CaptureNonnegative s → AdmissibleCaptures s xs →
+    captureTotal (runCaptures s xs) = captureTotal s ∧
+    CaptureNonnegative (runCaptures s xs) ∧ (runCaptures s xs).label = s.label
+  capture_refinement : ∀ xs s, collapseCapture (runCaptures s xs) =
+    runTransfers (collapseCapture s) (xs.map Prod.fst)
   regularization_bound : ∀ tau eps p, 0 < tau → 0 < eps → 0 ≤ p →
     0 < regularizedWindow tau eps p ∧ regularizedWindow tau eps p ≤ tau / eps
   ideal_unbounded : ∀ tau bound, 0 < tau → 0 < bound →
@@ -223,7 +347,7 @@ structure HCTKScalarPartitionSuite : Prop where
 
 theorem verification_suite : HCTKScalarPartitionSuite :=
   ⟨partition_total, partition_bounds, transfer_total, runTransfers_invariants,
-    regularizedWindow_bounds, idealWindow_unbounded⟩
+    capture_trace_contract, collapse_runCaptures, regularizedWindow_bounds, idealWindow_unbounded⟩
 
 end
 end HCTKScalarPartition

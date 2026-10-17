@@ -24,3 +24,9 @@ class HCTKScalarPartitionTests(unittest.TestCase):
                                  "tests/lean/hctk_scalar_partition_registry.lean"],
                                 cwd=ROOT, text=True, capture_output=True, timeout=120)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_explicit_three_store_capture(self):
+        result = subprocess.run([shutil.which("lake"), "env", "lean", "-DwarningAsError=true",
+                                 "tests/lean/hctk_capture_regression.lean"],
+                                cwd=ROOT, text=True, capture_output=True, timeout=120)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

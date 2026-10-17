@@ -83,3 +83,5 @@ These components do not prove end-to-end cryptographic security. Finite cryptogr
 - [Conditional Bulletproofs range extraction](../04_cryptography/CryptoBulletproofsRangeWitnessExtraction.md) — certified openings, IPA trees and explicit generator relations.
 
 - [Two-branch Pedersen opening extraction](../04_cryptography/CryptoPedersenCommitmentOpeningExtractionContract.md) — scalar/vector special soundness, checked extraction and conditional range composition.
+
+- [Finite shared-prefix IPA fork acquisition](../04_cryptography/CryptoBulletproofsIPAForkingExtractionContract.md) — seven distinct nonzero accepting calls, recursive coverage, and witness-or-relation extraction.

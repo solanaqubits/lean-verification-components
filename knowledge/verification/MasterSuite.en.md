@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 0e48369218b102f1d4f20e81433a646e0ddacdfc6b882884d71a20ed28b813fd
+source_sha256: d3a2c743a44a71e8a090c16446f5441d930e90e4f03127dd99cb415e643373a6
 novelty: not-assessed
 status: reviewed
 ---
@@ -132,3 +132,7 @@ Module 199 adds `DistributedSystemsFullSuite.handover_induction`: conditional al
 Release v0.7.9 registers `DistributedSystemsFullSuite.epoch_transition_master`,
 `QuantumPhysicsFullSuite.hctk_scalar`, and `DistributedSystemsFullSuite.header_chain_auth`.
 Their conditional formal scopes are described in the new module cards.
+
+Release v0.7.10 adds `CryptoFullSuite.ipa_forking` and preserves the refined
+`QuantumPhysicsFullSuite.hctk_scalar` contract. The new finite acquisition
+result retains response availability and cryptographic security as external obligations.

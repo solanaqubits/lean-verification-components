@@ -1493,5 +1493,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "by\n    exact DistributedTendermintHeaderChainEpochAuthContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.CryptoBulletproofsIPAForkingExtractionContract": {
+    "suite_struct": "CryptoBulletproofsIPAForkingExtractionContractSuite",
+    "suite_type": "CryptoBulletproofsIPAForkingExtractionContractSuite",
+    "parent": "CryptoFullSuite",
+    "field": "ipa_forking",
+    "constructor": "crypto_full_master_suite",
+    "proof": "CryptoBulletproofsIPAForkingExtractionContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

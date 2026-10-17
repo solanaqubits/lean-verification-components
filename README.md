@@ -30,11 +30,18 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**202 direct imports in MasterSuite**, **246 Lean sources including Verification.lean**.
-[Release v0.7.9](docs/release-v0.7.9.en.md) publishes modules 200, 201 and 202 across
-`distributed` and `quantum-physics`. Git release numbering is separate from the Lake
-package version, which remains 0.7.1. Public checks are distinct from private evidence;
-the last full public beta basis remains v0.7.1.
+**203 direct imports in MasterSuite**, **247 Lean sources including Verification.lean**.
+[Release v0.7.10](docs/release-v0.7.10.en.md) adds finite shared-prefix IPA fork
+acquisition (epsilon203) and refines the existing HCTK capture transition
+(epsilon201). Git release numbering is separate from Lake package version 0.7.1.
+Public checks are distinct from private evidence; the full public beta basis
+remains v0.7.1.
+
+[Finite IPA fork acquisition](knowledge/04_cryptography/CryptoBulletproofsIPAForkingExtractionContract.md)
+selects four distinct nonzero square classes from seven distinct accepting calls,
+constructs a transcript tree under recursive coverage, and feeds the existing
+witness-or-generator-relation extractor. Response availability, probabilistic
+forking and Fiat–Shamir/ROM security remain external.
 
 [Composite epoch safety](knowledge/02_distributed_systems/DistributedTendermintEpochTransitionSafetyMasterContract.md)
 and [checked header chains](knowledge/02_distributed_systems/DistributedTendermintHeaderChainEpochAuthContract.md)
@@ -43,7 +50,7 @@ Trusted roots, signature authenticity, commitment binding, commit consistency an
 complete offence references remain explicit premises; delivery and liveness remain open.
 
 [HCTK scalar partition](knowledge/03_quantum_physics_and_optics/HCTKScalarPartition.md)
-proves algebraic partition, transfer and regularization properties. Physical stability,
+proves algebraic partition, transfer, explicit three-store capture and regularization properties. Physical stability,
 vacuum charge transport and a topological interpretation are not established.
 
 [All-round handover agreement](knowledge/02_distributed_systems/DistributedTendermintHandoverRoundInduction.md)

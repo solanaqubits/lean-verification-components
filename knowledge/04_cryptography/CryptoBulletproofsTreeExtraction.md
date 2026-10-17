@@ -96,3 +96,5 @@ Novelty has not been assessed.
 Baseline: c1171d85423c81d3d6dd6eaa8b040c9c817813ac.
 Measured validation is recorded in tools/validation_snapshot.json.
 Reference: [Bünz et al., Bulletproofs](https://eprint.iacr.org/2017/1066).
+
+[Finite prefix acquisition](CryptoBulletproofsIPAForkingExtractionContract.md) constructs the input tree from finite responses under recursive distinct-square coverage. Response availability and authentic shared-prefix rewind remain premises; no probabilistic or random-oracle guarantee is added.

@@ -1,6 +1,6 @@
 # HCTK scalar partition contract 1.0.0 (ε201)
 
-Parent: quantum-physics / hctk-scalar-partition. Public release v0.7.9 registers
+Parent: quantum-physics / hctk-scalar-partition. Public release v0.7.10 refines
 the formal scalar model. Numerical studies and artifacts are outside this release.
 
 ## Normative mathematical scope
@@ -60,4 +60,16 @@ These support the established formula contexts, not the proposed HCTK mechanism.
 
 The mathematical requirements above are unchanged. The master suite packages existing
 algebraic statements only; it adds no physical or topological guarantee. See
-[release v0.7.9](release-v0.7.9.en.md) for public verification scope.
+[release v0.7.10](release-v0.7.10.en.md) for public verification scope.
+
+## Capture refinement (existing epsilon201, no new module)
+
+The three-store explicit update is (b,c,v,n)->(b-d,c+eta*d,v+(1-eta)*d,n).
+Conservation is derived algebraically for arbitrary reals. Nonnegativity requires
+initial nonnegativity,0<=d<=b and0<=eta<=1 at each actual step. No premise assumes
+final conservation or an arbitrary final label equality. Finite-trace induction
+is packaged by capture_trace_contract. collapse_runCaptures proves exact agreement
+with runTransfers after aggregating c+v. No claim of a physical carrier, decoded
+information, phase-conjugation mechanism or topological Chern invariant follows.
+This is a distinct explicit model from the original independently prescribed
+Gaussian/tanh profiles; their previous counterexamples/results are retained.

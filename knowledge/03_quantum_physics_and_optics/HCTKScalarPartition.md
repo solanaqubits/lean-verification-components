@@ -5,7 +5,7 @@ section: quantum-physics
 source: Verification/HCTKScalarPartition.lean
 novelty: not-assessed
 status: reviewed
-source_sha256: c8851fdaa1cc8d19e4a5b52f59c76d2bedddab02ccd8a15df888d857625d9d55
+source_sha256: 4489592fae779ababb2445d3593c5d0bfa0e2f3d07aeca060bd198f2d4099445
 ---
 
 # HCTKScalarPartition
@@ -41,11 +41,26 @@ Landauer erasure protocol, physical charge transport or resonator stability is
 modeled. The Gaussian pulse belongs only to the separate illustrative simulation.
 A charge interpreted as mass is an unresolved dimensional assumption.
 
-Public release v0.7.9 exports private snapshot
-831248e509744e9a7900fa0cc7f01a88ee957b2f. Lake remains 0.7.1. Public-tree verification
-is recorded separately from private checks. The full public beta basis remains
-2419489245019fb16e32ffac641b9f88eea94126 (v0.7.1); private full control remains
-090aed141b831aee5182197e9ea205176f361c0f. See [release notes](../../docs/release-v0.7.9.en.md).
+Public release v0.7.10 synchronizes private snapshot
+5779d30ff6419ee91f787d04f45f3d3b5d483e55. Lake remains 0.7.1. Public validation
+is recorded separately; the full public beta basis remains
+2419489245019fb16e32ffac641b9f88eea94126 (v0.7.1).
+See [release notes](../../docs/release-v0.7.10.en.md).
 
-`QuantumPhysicsFullSuite.hctk_scalar` registers the scalar results. Numerical studies
-and their artifacts are outside this public Leanbook release. No physical claim is added.
+## Three-store capture refinement
+
+CaptureState=(b,c,v,n); capture(s,d,eta)=(b-d,c+eta*d,v+(1-eta)*d,n).
+capture_total derives conservation from the update; no final conservation premise.
+capture_nonnegative requires initial nonnegativity,0<=d<=b and0<=eta<=1.
+AdmissibleCaptures checks each actual intermediate state; capture_trace_contract
+extends total, nonnegativity and copied label to finite traces. collapse_capture
+and collapse_runCaptures refine the existing transfer/runTransfers by aggregating
+the two outgoing stores. capture_complete computes a full-release state;
+captured_increment_bounds bounds the captured increment. The existing suite
+exposes capture_trace/capture_refinement; no new module number.
+
+These real-number theorems do not prove Python/binary64 refinement, physical
+phase conjugation, a Chern invariant or preservation of brain information.
+The label is copied by definition. A single eta gives eta*q; the original
+numerical profile used eta twice and is a different model. Previous numerical
+observations and private thematic documents are outside this public export.

@@ -43,6 +43,16 @@
         "Verification.HCTKScalarPartition"
       ],
       "description": "Prescribed real scalar formulas, two-component partition, transfer invariants and bounded regularization; no physical topology claim."
+    },
+    "cryptography/bulletproofs-ipa": {
+      "direction": "cryptography",
+      "modules": [
+        "Verification.CryptoBulletproofsInnerProduct",
+        "Verification.CryptoBulletproofsWitnessExtraction",
+        "Verification.CryptoBulletproofsTreeExtraction",
+        "Verification.CryptoBulletproofsIPAForkingExtractionContract"
+      ],
+      "description": "Finite shared-prefix distinct-square branch acquisition and recursive composition with the existing IPA witness-or-generator-relation extractor."
     }
   },
   "infrastructure_batches": {
