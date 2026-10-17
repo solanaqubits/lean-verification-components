@@ -1466,5 +1466,32 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintHandoverRoundInduction.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintEpochTransitionSafetyMasterContract": {
+    "suite_struct": "DistributedTendermintEpochTransitionSafetyMasterContractSuite",
+    "suite_type": "DistributedTendermintEpochTransitionSafetyMasterContractSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "epoch_transition_master",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedTendermintEpochTransitionSafetyMasterContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.HCTKScalarPartition": {
+    "suite_struct": "HCTKScalarPartitionSuite",
+    "suite_type": "HCTKScalarPartition.HCTKScalarPartitionSuite",
+    "parent": "QuantumPhysicsFullSuite",
+    "field": "hctk_scalar",
+    "constructor": "quantum_physics_full_master_suite",
+    "proof": "HCTKScalarPartition.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintHeaderChainEpochAuthContract": {
+    "suite_struct": "DistributedTendermintHeaderChainEpochAuthContractSuite",
+    "suite_type": "DistributedTendermintHeaderChainEpochAuthContractSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "header_chain_auth",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "by\n    exact DistributedTendermintHeaderChainEpochAuthContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

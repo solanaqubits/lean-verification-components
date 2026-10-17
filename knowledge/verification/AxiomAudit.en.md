@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: a6be6d56c2adf6b87c30e49c93895803cad576ec44f10ce9629bf5ce738afb8b
+source_sha256: 096b1399e992d215fd5e7563b9cafb9867b29411abef8155096f678fe4521d69
 novelty: not-assessed
 status: reviewed
 ---
@@ -52,3 +52,7 @@ Module 197 adds `DistributedSystemsFullSuite.epoch_quorum`: weighted honest quor
 Module 198 adds `DistributedSystemsFullSuite.lock_handover`: checked adoption, conditional round-zero agreement and justified finite local lock replacements.
 
 Module 199 adds `DistributedSystemsFullSuite.handover_induction`: conditional all-round agreement and registered local execution refinement.
+
+Release v0.7.9 registers `DistributedSystemsFullSuite.epoch_transition_master`,
+`QuantumPhysicsFullSuite.hctk_scalar`, and `DistributedSystemsFullSuite.header_chain_auth`.
+Their conditional formal scopes are described in the new module cards.

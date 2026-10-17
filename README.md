@@ -30,12 +30,21 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**199 direct imports**, **243 Lean sources including Verification.lean**.
-[Release v0.7.8](docs/release-v0.7.8.en.md) synchronizes epsilon module 199 in
-gamma `distributed`, delta `distributed/tendermint-accountability`.
-It is a Git publication serial; the Lake package version remains 0.7.1.
-Scoped public validation is separate from the last full public basis v0.7.1.
-Historical checkpoints and private evidence remain unchanged.
+**202 direct imports in MasterSuite**, **246 Lean sources including Verification.lean**.
+[Release v0.7.9](docs/release-v0.7.9.en.md) publishes modules 200, 201 and 202 across
+`distributed` and `quantum-physics`. Git release numbering is separate from the Lake
+package version, which remains 0.7.1. Public checks are distinct from private evidence;
+the last full public beta basis remains v0.7.1.
+
+[Composite epoch safety](knowledge/02_distributed_systems/DistributedTendermintEpochTransitionSafetyMasterContract.md)
+and [checked header chains](knowledge/02_distributed_systems/DistributedTendermintHeaderChainEpochAuthContract.md)
+compose conditional agreement, actual historical slashing and structural history checks.
+Trusted roots, signature authenticity, commitment binding, commit consistency and
+complete offence references remain explicit premises; delivery and liveness remain open.
+
+[HCTK scalar partition](knowledge/03_quantum_physics_and_optics/HCTKScalarPartition.md)
+proves algebraic partition, transfer and regularization properties. Physical stability,
+vacuum charge transport and a topological interpretation are not established.
 
 [All-round handover agreement](knowledge/02_distributed_systems/DistributedTendermintHandoverRoundInduction.md)
 uses strong round induction under explicit honest prevote/precommit rules and

@@ -614,6 +614,9 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintHeaderChainEpochAuthContract",
+        "Verification.HCTKScalarPartition",
+        "Verification.DistributedTendermintEpochTransitionSafetyMasterContract",
         "Verification.DistributedTendermintHandoverRoundInduction",
         "Verification.DistributedTendermintLockHandoverContract",
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract",
@@ -1434,6 +1437,9 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintHeaderChainEpochAuthContract",
+        "Verification.HCTKScalarPartition",
+        "Verification.DistributedTendermintEpochTransitionSafetyMasterContract",
         "Verification.DistributedTendermintHandoverRoundInduction",
         "Verification.DistributedTendermintLockHandoverContract",
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract",
@@ -2766,6 +2772,37 @@
       "card": "knowledge/02_distributed_systems/DistributedTendermintHandoverRoundInduction.md",
       "project_imports": [
         "Verification.DistributedTendermintLockHandoverContract"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedTendermintEpochTransitionSafetyMasterContract",
+      "section": "distributed",
+      "source": "Verification/DistributedTendermintEpochTransitionSafetyMasterContract.lean",
+      "card": "knowledge/02_distributed_systems/DistributedTendermintEpochTransitionSafetyMasterContract.md",
+      "project_imports": [
+        "Verification.DistributedTendermintHandoverRoundInduction"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "HCTKScalarPartition",
+      "section": "quantum-physics",
+      "source": "Verification/HCTKScalarPartition.lean",
+      "card": "knowledge/03_quantum_physics_and_optics/HCTKScalarPartition.md",
+      "project_imports": [],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedTendermintHeaderChainEpochAuthContract",
+      "section": "distributed",
+      "source": "Verification/DistributedTendermintHeaderChainEpochAuthContract.lean",
+      "card": "knowledge/02_distributed_systems/DistributedTendermintHeaderChainEpochAuthContract.md",
+      "project_imports": [
+        "Verification.DistributedTendermintEpochTransitionSafetyMasterContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

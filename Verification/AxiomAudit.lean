@@ -222,3 +222,9 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DistributedTendermintLockHandoverContract.verification_suite
 
 #audit_axioms DistributedTendermintHandoverRoundInduction.verification_suite
+
+#audit_axioms DistributedTendermintEpochTransitionSafetyMasterContract.verification_suite
+
+#audit_axioms HCTKScalarPartition.verification_suite
+
+#audit_axioms DistributedTendermintHeaderChainEpochAuthContract.verification_suite

@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 18918d23251a88e8ab76d41267e7d0ce44e243ed8ff661d4a646b8afa1f877d2
+source_sha256: 0e48369218b102f1d4f20e81433a646e0ddacdfc6b882884d71a20ed28b813fd
 novelty: not-assessed
 status: reviewed
 ---
@@ -128,3 +128,7 @@ Module 197 adds `DistributedSystemsFullSuite.epoch_quorum`: weighted honest quor
 Module 198 adds `DistributedSystemsFullSuite.lock_handover`: checked adoption, conditional round-zero agreement and justified finite local lock replacements.
 
 Module 199 adds `DistributedSystemsFullSuite.handover_induction`: conditional all-round agreement and registered local execution refinement.
+
+Release v0.7.9 registers `DistributedSystemsFullSuite.epoch_transition_master`,
+`QuantumPhysicsFullSuite.hctk_scalar`, and `DistributedSystemsFullSuite.header_chain_auth`.
+Their conditional formal scopes are described in the new module cards.

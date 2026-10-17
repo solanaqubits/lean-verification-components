@@ -21,9 +21,11 @@
         "Verification.DistributedTendermintEpochIdentityContract",
         "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract",
         "Verification.DistributedTendermintLockHandoverContract",
-        "Verification.DistributedTendermintHandoverRoundInduction"
+        "Verification.DistributedTendermintHandoverRoundInduction",
+        "Verification.DistributedTendermintEpochTransitionSafetyMasterContract",
+        "Verification.DistributedTendermintHeaderChainEpochAuthContract"
       ],
-      "description": "Fixed-height safety, accountability, penalties, epoch identity, quorum overlap, handover and conditional all-round agreement."
+      "description": "Fixed-height safety, accountability, penalties, epoch identity, quorum overlap, handover, all-round agreement and conditional master settlement. Sequential abstract header authentication and derived historical configurations."
     },
     "cryptography/pedersen-opening-extraction": {
       "direction": "cryptography",
@@ -34,6 +36,13 @@
         "Verification.CryptoPedersenCommitmentOpeningExtractionContract"
       ],
       "description": "Linear representation forks, scalar/vector openings and conditional Bulletproofs composition."
+    },
+    "quantum-physics/hctk-scalar-partition": {
+      "direction": "quantum-physics",
+      "modules": [
+        "Verification.HCTKScalarPartition"
+      ],
+      "description": "Prescribed real scalar formulas, two-component partition, transfer invariants and bounded regularization; no physical topology claim."
     }
   },
   "infrastructure_batches": {

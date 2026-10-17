@@ -107,3 +107,5 @@ remain outside this contract. Python equivalence, JSON/SHA-256 and SimLab obliga
 remain open. Mathematical novelty is not assessed.
 
 [Module 197](DistributedTendermintQuorumIntersectionEpochTransitionContract.md) proves weighted honest quorum intersection for global epoch identities. Lock handover and protocol agreement remain external.
+
+[Module DistributedTendermintHeaderChainEpochAuthContract](DistributedTendermintHeaderChainEpochAuthContract.md) composes this result under explicit additional premises; no unconditional authentication or collection guarantee is added.

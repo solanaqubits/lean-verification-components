@@ -1,3 +1,5 @@
+import Verification.DistributedTendermintHeaderChainEpochAuthContract
+import Verification.DistributedTendermintEpochTransitionSafetyMasterContract
 import Verification.DistributedTendermintHandoverRoundInduction
 import Verification.DistributedTendermintLockHandoverContract
 import Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract
@@ -217,6 +219,7 @@ import Verification.HopfIntegrabilityBarrier
 import Verification.LamzouriMollifier
 import Verification.LamzouriOptimization
 import Verification.MasterSuite
+import Verification.HCTKScalarPartition
 import Verification.RiemannBounds
 import Verification.RiemannMainTerm
 import Verification.RiemannNumericBound

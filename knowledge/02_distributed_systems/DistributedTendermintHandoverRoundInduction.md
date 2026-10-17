@@ -119,3 +119,5 @@ Public Git release v0.7.8 exports private snapshot
 beta basis remains 2419489245019fb16e32ffac641b9f88eea94126 (v0.7.1).
 Private full control 090aed141b831aee5182197e9ea205176f361c0f and scoped evidence
 remain separate. Final commands and measurements are recorded in public evidence.
+
+[Module DistributedTendermintEpochTransitionSafetyMasterContract](DistributedTendermintEpochTransitionSafetyMasterContract.md) composes this result under explicit additional premises; no unconditional authentication or collection guarantee is added.

@@ -1,3 +1,6 @@
+import Verification.DistributedTendermintHeaderChainEpochAuthContract
+import Verification.HCTKScalarPartition
+import Verification.DistributedTendermintEpochTransitionSafetyMasterContract
 import Verification.DistributedTendermintHandoverRoundInduction
 import Verification.DistributedTendermintLockHandoverContract
 import Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract
@@ -211,6 +214,10 @@ open QuantumKnillLaflammeEnvironmentCriterion
 open QuantumComplementaryChannelContract
 open DeFiLendingUtilizationFeedbackStability (DeFiLendingUtilizationFeedbackStabilitySuite)
 open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
+open DistributedTendermintHeaderChainEpochAuthContract
+  (DistributedTendermintHeaderChainEpochAuthContractSuite)
+open DistributedTendermintEpochTransitionSafetyMasterContract
+  (DistributedTendermintEpochTransitionSafetyMasterContractSuite)
 open DistributedTendermintHandoverRoundInduction
   (DistributedTendermintHandoverRoundInductionSuite)
 open DistributedTendermintLockHandoverContract
@@ -505,6 +512,7 @@ theorem CryptoFullSuite.pedersen_commitment (suite : CryptoFullSuite) :
 
 /-- The prescribed mode and gap models, without additional physical claims. -/
 structure QuantumPhysicsFullSuite : Prop where
+  hctk_scalar : HCTKScalarPartition.HCTKScalarPartitionSuite
   classical_dpi : QuantumChannelClassicalDataProcessing.QuantumChannelClassicalDataProcessingSuite
   povm_entropy : QuantumPOVMInformationEntropy.QuantumPOVMInformationEntropySuite
   spin_photonic : SpinPhotonicFormalSuite
@@ -570,6 +578,7 @@ structure QuantumPhysicsFullSuite : Prop where
   cptp_channel : QuantumCPTPChannelContract.QuantumCPTPChannelContractSuite
 
 theorem quantum_physics_full_master_suite : QuantumPhysicsFullSuite := {
+  hctk_scalar := HCTKScalarPartition.verification_suite
   classical_dpi := QuantumChannelClassicalDataProcessing.verification_suite
   povm_entropy := by
     exact QuantumPOVMInformationEntropy.verification_suite
@@ -776,6 +785,8 @@ theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuit
 
 /-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
+  header_chain_auth : DistributedTendermintHeaderChainEpochAuthContractSuite
+  epoch_transition_master : DistributedTendermintEpochTransitionSafetyMasterContractSuite
   handover_induction : DistributedTendermintHandoverRoundInductionSuite
   lock_handover : DistributedTendermintLockHandoverContractSuite
   epoch_quorum : DistributedTendermintQuorumIntersectionEpochTransitionContractSuite
@@ -824,6 +835,10 @@ structure DistributedSystemsFullSuite : Prop where
   marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
+  header_chain_auth := by
+    exact DistributedTendermintHeaderChainEpochAuthContract.verification_suite
+  epoch_transition_master := by
+    exact DistributedTendermintEpochTransitionSafetyMasterContract.verification_suite
   handover_induction := DistributedTendermintHandoverRoundInduction.verification_suite
   lock_handover := DistributedTendermintLockHandoverContract.verification_suite
   epoch_quorum := DistributedTendermintQuorumIntersectionEpochTransitionContract.verification_suite
