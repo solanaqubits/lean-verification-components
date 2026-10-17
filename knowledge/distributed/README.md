@@ -121,3 +121,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Slashing replay protection](../02_distributed_systems/DistributedTendermintSlashingReplayProtection.md) — checked per-height keys, idempotence and conserved accounting.
 
 - [Evidence windows and delayed stake withdrawal](../02_distributed_systems/DistributedTendermintUnbondingPeriodContract.md) — liable tranches, two-phase slots and conditional payout.
+
+- [Stable validator identities across epochs](../02_distributed_systems/DistributedTendermintEpochIdentityContract.md) — historical certificates and preserved global liabilities.

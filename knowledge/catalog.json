@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintEpochIdentityContract",
         "Verification.DistributedTendermintUnbondingPeriodContract",
         "Verification.DistributedTendermintSlashingReplayProtection",
         "Verification.CryptoPedersenCommitmentOpeningExtractionContract",
@@ -1430,6 +1431,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintEpochIdentityContract",
         "Verification.DistributedTendermintUnbondingPeriodContract",
         "Verification.DistributedTendermintSlashingReplayProtection",
         "Verification.CryptoPedersenCommitmentOpeningExtractionContract",
@@ -2714,6 +2716,17 @@
       "card": "knowledge/02_distributed_systems/DistributedTendermintUnbondingPeriodContract.md",
       "project_imports": [
         "Verification.DistributedTendermintSlashingReplayProtection"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedTendermintEpochIdentityContract",
+      "section": "distributed",
+      "source": "Verification/DistributedTendermintEpochIdentityContract.lean",
+      "card": "knowledge/02_distributed_systems/DistributedTendermintEpochIdentityContract.md",
+      "project_imports": [
+        "Verification.DistributedTendermintUnbondingPeriodContract"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

@@ -30,12 +30,19 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**195 direct imports**, **239 Lean sources including Verification.lean**.
-[Release v0.7.4](docs/release-v0.7.4.en.md) synchronizes epsilon module 195 in
+**196 direct imports**, **240 Lean sources including Verification.lean**.
+[Release v0.7.5](docs/release-v0.7.5.en.md) synchronizes epsilon module 196 in
 gamma `distributed`, delta `distributed/tendermint-accountability`.
 It is a Git publication serial; the Lake package version remains 0.7.1.
 Scoped public validation is separate from the last full public basis v0.7.1.
 Historical checkpoints and private evidence remain unchanged.
+
+[Stable epoch identity](knowledge/02_distributed_systems/DistributedTendermintEpochIdentityContract.md)
+resolves old certificates against historical identity maps and preserves global
+slashing keys and unbonding liabilities. Exclusion from the entire certified
+historical offender set protects a subject from that penalty; inequality with
+one former index owner alone is insufficient. History authentication and quorum
+handover remain external obligations.
 
 [Evidence windows and delayed withdrawal](knowledge/02_distributed_systems/DistributedTendermintUnbondingPeriodContract.md)
 uses finite queues and two-phase slots. No-Escape covers liable tranches and

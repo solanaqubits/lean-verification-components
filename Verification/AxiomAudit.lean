@@ -214,3 +214,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms DistributedTendermintSlashingReplayProtection.verification_suite
 
 #audit_axioms DistributedTendermintUnbondingPeriodContract.verification_suite
+
+#audit_axioms DistributedTendermintEpochIdentityContract.verification_suite

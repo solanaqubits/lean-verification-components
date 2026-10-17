@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: c8d3c8fabef8a8a2164451f3fd361ee079b0e217df486a595db4626b15e644bb
+source_sha256: 8917bc16c9755d16c770a029487d97811705c3a68af7c0206184669314bbdd15
 novelty: not-assessed
 status: reviewed
 ---
@@ -44,3 +44,5 @@ Module 193 adds `CryptoFullSuite.pedersen_opening`: two-branch opening extractio
 Module 194 adds `DistributedSystemsFullSuite.tendermint_replay`: sequential replay protection and conserved ledger accounting.
 
 Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queues, inclusive evidence windows, two-phase slots and conserved accounting.
+
+Module 196 adds `DistributedSystemsFullSuite.tendermint_epoch_identity`: historical resolution, stable global identities and preserved cross-epoch liabilities.

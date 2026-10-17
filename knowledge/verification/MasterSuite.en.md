@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: ee999afd75643e0f9068012830dbf15e9a36f377dda0bc08451908ecc9c6c3df
+source_sha256: 8177f36343a7b14a295097319034bd2fb4352d43ecd8dd13866bc2ad67f3130f
 novelty: not-assessed
 status: reviewed
 ---
@@ -120,3 +120,5 @@ Module 193 adds `CryptoFullSuite.pedersen_opening`: two-branch opening extractio
 Module 194 adds `DistributedSystemsFullSuite.tendermint_replay`: sequential replay protection and conserved ledger accounting.
 
 Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queues, inclusive evidence windows, two-phase slots and conserved accounting.
+
+Module 196 adds `DistributedSystemsFullSuite.tendermint_epoch_identity`: historical resolution, stable global identities and preserved cross-epoch liabilities.

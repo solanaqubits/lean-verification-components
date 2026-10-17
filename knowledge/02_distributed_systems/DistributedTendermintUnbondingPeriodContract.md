@@ -109,3 +109,5 @@ synchronization/authentication, concurrent mempools, durable databases, chain re
 epoch identity mapping, changing the window during execution and production-code
 refinement remain external obligations. Python equivalence, JSON/SHA-256 and SimLab
 remain open. Novelty is not assessed.
+
+[Module 196](DistributedTendermintEpochIdentityContract.md) adds injective epoch identity maps and checked historical attribution into global liability keys. Quorum handover and history authentication remain external.
