@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: edf909e54b3be4a7b760ebc6fb1921a3d722c69e63a8f9797c1aeefe493f6631
+source_sha256: ed51b6127a027b176ac414309b9458492462c7d6a374653bed1d209fb3d026bd
 novelty: not-assessed
 status: reviewed
 ---
@@ -124,3 +124,5 @@ Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queue
 Module 196 adds `DistributedSystemsFullSuite.tendermint_epoch_identity`: historical resolution, stable global identities and preserved cross-epoch liabilities.
 
 Module 197 adds `DistributedSystemsFullSuite.epoch_quorum`: weighted honest quorum intersection across epochs, with strict and non-strict threshold conventions.
+
+Module 198 adds `DistributedSystemsFullSuite.lock_handover`: checked adoption, conditional round-zero agreement and justified finite local lock replacements.

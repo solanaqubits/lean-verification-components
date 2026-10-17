@@ -1448,5 +1448,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintQuorumIntersectionEpochTransitionContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintLockHandoverContract": {
+    "suite_struct": "DistributedTendermintLockHandoverContractSuite",
+    "suite_type": "DistributedTendermintLockHandoverContractSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "lock_handover",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintLockHandoverContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

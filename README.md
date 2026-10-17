@@ -30,12 +30,17 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**197 direct imports**, **241 Lean sources including Verification.lean**.
-[Release v0.7.6](docs/release-v0.7.6.en.md) synchronizes epsilon module 197 in
+**198 direct imports**, **242 Lean sources including Verification.lean**.
+[Release v0.7.7](docs/release-v0.7.7.en.md) synchronizes epsilon module 198 in
 gamma `distributed`, delta `distributed/tendermint-accountability`.
 It is a Git publication serial; the Lake package version remains 0.7.1.
 Scoped public validation is separate from the last full public basis v0.7.1.
 Historical checkpoints and private evidence remain unchanged.
+
+[Checked lock handover](knowledge/02_distributed_systems/DistributedTendermintLockHandoverContract.md)
+proves conditional commit agreement in target round zero at the same decision height,
+and justified local replacements in finite executions. Full later-round agreement,
+certificate authentication and message delivery remain open.
 
 [Weighted quorum intersection](knowledge/02_distributed_systems/DistributedTendermintQuorumIntersectionEpochTransitionContract.md)
 provides common-mass, total-variation and directed honest-weight-loss criteria

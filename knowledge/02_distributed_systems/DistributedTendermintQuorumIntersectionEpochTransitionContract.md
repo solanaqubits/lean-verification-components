@@ -108,3 +108,5 @@ epochs. Lock transfer, round synchronization, polling/commit semantics, authenti
 of headers/configurations/identities, fault-set truth, activation, network behavior,
 production implementation, Python equivalence, JSON/SHA-256 and SimLab remain
 external obligations. Mathematical novelty is not assessed.
+
+[Module 198](DistributedTendermintLockHandoverContract.md) adds checked adoption and conditional round-zero agreement. Complete transition safety and authentication remain open.

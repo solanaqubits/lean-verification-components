@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: 7bee72c14eac083b0e512afc924dd1ca18a3fcde23b42b1e3d8fa8c878906e4a
+source_sha256: 6e0e43ed103b51944b41e9299b6636a9cd8958cc3c14071ee81226171a82a3c6
 novelty: not-assessed
 status: reviewed
 ---
@@ -48,3 +48,5 @@ Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queue
 Module 196 adds `DistributedSystemsFullSuite.tendermint_epoch_identity`: historical resolution, stable global identities and preserved cross-epoch liabilities.
 
 Module 197 adds `DistributedSystemsFullSuite.epoch_quorum`: weighted honest quorum intersection across epochs, with strict and non-strict threshold conventions.
+
+Module 198 adds `DistributedSystemsFullSuite.lock_handover`: checked adoption, conditional round-zero agreement and justified finite local lock replacements.

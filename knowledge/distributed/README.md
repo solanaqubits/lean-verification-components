@@ -125,3 +125,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Stable validator identities across epochs](../02_distributed_systems/DistributedTendermintEpochIdentityContract.md) — historical certificates and preserved global liabilities.
 
 - [Weighted honest quorum intersection across epochs](../02_distributed_systems/DistributedTendermintQuorumIntersectionEpochTransitionContract.md) — common mass, total variation and directed honest-weight loss.
+
+- [Checked lock handover](../02_distributed_systems/DistributedTendermintLockHandoverContract.md) — conditional round-zero agreement and justified local replacements.
