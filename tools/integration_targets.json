@@ -1412,5 +1412,14 @@
     "constructor": "crypto_full_master_suite",
     "proof": "CryptoPedersenCommitmentOpeningExtractionContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintSlashingReplayProtection": {
+    "suite_struct": "DistributedTendermintSlashingReplayProtectionSuite",
+    "suite_type": "DistributedTendermintSlashingReplayProtectionSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "tendermint_replay",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintSlashingReplayProtection.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

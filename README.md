@@ -30,12 +30,17 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**193 direct imports**, **237 Lean sources including Verification.lean**.
-[Release v0.7.2](docs/release-v0.7.2.en.md) synchronizes epsilon module 193 in
-gamma `cryptography`, delta `cryptography/pedersen-opening-extraction`.
+**194 direct imports**, **238 Lean sources including Verification.lean**.
+[Release v0.7.3](docs/release-v0.7.3.en.md) synchronizes epsilon module 194 in
+gamma `distributed`, delta `distributed/tendermint-accountability`.
 It is a Git publication serial; the Lake package version remains 0.7.1.
 Scoped public validation is separate from the last full public basis v0.7.1.
 Historical checkpoints and private evidence remain unchanged.
+
+[Slashing replay protection](knowledge/02_distributed_systems/DistributedTendermintSlashingReplayProtection.md)
+uses checked (height, validator) keys, rejects invalid input without state changes,
+and preserves accounting across finite sequential request lists. Database durability,
+concurrent execution, reorganizations and unbonding remain outside the model.
 
 [Pedersen opening extraction](knowledge/04_cryptography/CryptoPedersenCommitmentOpeningExtractionContract.md)
 proves scalar/vector special soundness and checked extraction. The conditional

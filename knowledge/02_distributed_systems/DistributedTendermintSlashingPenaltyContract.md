@@ -91,3 +91,5 @@ requires one full beta control on the final public tree. This is separate from
 the prior private scoped module evidence. Historical beta 7 / v0.7.0 is immutable.
 See [release scope](../../docs/release-v0.7.1.en.md) for the distinction between
 change rank and executed validation scope. Lake cache is retained.
+
+[Module 194](DistributedTendermintSlashingReplayProtection.md) adds a sequential per-height replay ledger; durable storage, authenticated height context and concurrent execution remain separate obligations.

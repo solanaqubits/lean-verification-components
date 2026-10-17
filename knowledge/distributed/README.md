@@ -117,3 +117,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Tendermint evidence accountability](../05_distributed/DistributedTendermintAccountableSafety.md) — conditional no-framing and strict culprit weight for conflicting commits.
 
 - [Certified Tendermint slashing](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md): exact rational penalties, certified attribution and protected stake.
+
+- [Slashing replay protection](../02_distributed_systems/DistributedTendermintSlashingReplayProtection.md) — checked per-height keys, idempotence and conserved accounting.
