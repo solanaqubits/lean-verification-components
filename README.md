@@ -1,6 +1,6 @@
 # Mathematical Verification Components in Lean 4
 
-[![Lean verification](https://github.com/solanaqubits/lean-verification-components/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/solanaqubits/lean-verification-components/actions/workflows/lean_action_ci.yml)
+[![Lean verification](https://github.com/solanaqubits/leanbook/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/solanaqubits/leanbook/actions/workflows/lean_action_ci.yml)
 
 Machine-checked mathematical components built with Lean 4 and Mathlib: algebraic
 invariants, finite computations, conditional protocol properties, and explicit
@@ -30,12 +30,17 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**196 direct imports**, **240 Lean sources including Verification.lean**.
-[Release v0.7.5](docs/release-v0.7.5.en.md) synchronizes epsilon module 196 in
+**197 direct imports**, **241 Lean sources including Verification.lean**.
+[Release v0.7.6](docs/release-v0.7.6.en.md) synchronizes epsilon module 197 in
 gamma `distributed`, delta `distributed/tendermint-accountability`.
 It is a Git publication serial; the Lake package version remains 0.7.1.
 Scoped public validation is separate from the last full public basis v0.7.1.
 Historical checkpoints and private evidence remain unchanged.
+
+[Weighted quorum intersection](knowledge/02_distributed_systems/DistributedTendermintQuorumIntersectionEpochTransitionContract.md)
+provides common-mass, total-variation and directed honest-weight-loss criteria
+for a shared honest validator across epochs. Strict and non-strict quorum thresholds
+are distinguished. This does not establish lock handover or protocol agreement.
 
 [Stable epoch identity](knowledge/02_distributed_systems/DistributedTendermintEpochIdentityContract.md)
 resolves old certificates against historical identity maps and preserves global

@@ -1439,5 +1439,14 @@
     "constructor": "distributed_systems_full_master_suite",
     "proof": "DistributedTendermintEpochIdentityContract.verification_suite",
     "parent_module": "Verification.MasterSuiteComponents"
+  },
+  "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract": {
+    "suite_struct": "DistributedTendermintQuorumIntersectionEpochTransitionContractSuite",
+    "suite_type": "DistributedTendermintQuorumIntersectionEpochTransitionContractSuite",
+    "parent": "DistributedSystemsFullSuite",
+    "field": "epoch_quorum",
+    "constructor": "distributed_systems_full_master_suite",
+    "proof": "DistributedTendermintQuorumIntersectionEpochTransitionContract.verification_suite",
+    "parent_module": "Verification.MasterSuiteComponents"
   }
 }

@@ -123,3 +123,5 @@ The operational machine establishes election safety; NetworkInduction establishe
 - [Evidence windows and delayed stake withdrawal](../02_distributed_systems/DistributedTendermintUnbondingPeriodContract.md) — liable tranches, two-phase slots and conditional payout.
 
 - [Stable validator identities across epochs](../02_distributed_systems/DistributedTendermintEpochIdentityContract.md) — historical certificates and preserved global liabilities.
+
+- [Weighted honest quorum intersection across epochs](../02_distributed_systems/DistributedTendermintQuorumIntersectionEpochTransitionContract.md) — common mass, total variation and directed honest-weight loss.

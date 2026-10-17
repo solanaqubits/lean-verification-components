@@ -105,3 +105,5 @@ activation delays, authentication of history and stable IDs, deposits/redelegati
 clock authentication, network inclusion, concurrent execution, storage and reorgs
 remain outside this contract. Python equivalence, JSON/SHA-256 and SimLab obligations
 remain open. Mathematical novelty is not assessed.
+
+[Module 197](DistributedTendermintQuorumIntersectionEpochTransitionContract.md) proves weighted honest quorum intersection for global epoch identities. Lock handover and protocol agreement remain external.

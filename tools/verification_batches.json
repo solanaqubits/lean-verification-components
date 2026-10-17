@@ -18,9 +18,10 @@
         "Verification.DistributedTendermintSlashingPenaltyContract",
         "Verification.DistributedTendermintSlashingReplayProtection",
         "Verification.DistributedTendermintUnbondingPeriodContract",
-        "Verification.DistributedTendermintEpochIdentityContract"
+        "Verification.DistributedTendermintEpochIdentityContract",
+        "Verification.DistributedTendermintQuorumIntersectionEpochTransitionContract"
       ],
-      "description": "Fixed-height safety, attribution, slashing, replay protection, unbonding and historical epoch identity."
+      "description": "Fixed-height safety, attribution, slashing, unbonding, epoch identity and weighted cross-epoch quorum intersection."
     },
     "cryptography/pedersen-opening-extraction": {
       "direction": "cryptography",

@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: da3aceb9a8b7df554f25adc6f7e5726d08f920f0d1bf9465d51c6c948d3db1b1
+source_sha256: ff46f64e66eacf094eb394bedb99914cee6d78033a2d33f92ce3058f053f3b57
 novelty: not-assessed
 status: reviewed
 ---
@@ -91,3 +91,5 @@ Module 194 adds `DistributedSystemsFullSuite.tendermint_replay`: sequential repl
 Module 195 adds `DistributedSystemsFullSuite.tendermint_unbonding`: finite queues, inclusive evidence windows, two-phase slots and conserved accounting.
 
 Module 196 adds `DistributedSystemsFullSuite.tendermint_epoch_identity`: historical resolution, stable global identities and preserved cross-epoch liabilities.
+
+Module 197 adds `DistributedSystemsFullSuite.epoch_quorum`: weighted honest quorum intersection across epochs, with strict and non-strict threshold conventions.
