@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: b571a61c5410ad928741e44786cfd038dc0243ad08c8df601cbc29ffcc787507
+source_sha256: d72b302de458311913ec2d2dca6fd2c7eae1f4c408af71fdc758864381f452e8
 novelty: not-assessed
 status: reviewed
 ---
@@ -34,3 +34,7 @@ See the [validation record](../VERIFICATION.en.md) for the audited source snapsh
 Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` through
 `QuantumPhysicsFullSuite.qutrit_circuit_refinement`; see the
 [beta 0.7 release](../../docs/release-v0.7.0.en.md).
+
+`DistributedSystemsFullSuite.tendermint_slashing` connects certified offender
+attribution to exact rational slashing and conditional honest-share growth.
+[Contract](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md).

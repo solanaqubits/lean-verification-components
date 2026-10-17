@@ -37,3 +37,7 @@ create OS sandboxes, GitHub branch protections or a distributed integration queu
 
 Historical snapshots remain valid for their recorded scope. The migration does
 not retroactively relabel earlier gamma checks as whole-direction or beta checks.
+
+For metadata-aware impact analysis and strictly bound cache reuse, see
+[verification scope policy](verification-scope-policy.en.md). Infrastructure work
+has its own batch identity without allocating a mathematical module number.

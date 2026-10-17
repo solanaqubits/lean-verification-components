@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: ba90c258f50bc31228ef570b299b3621b477ba3f06b0e5c4ecfbf988d96500da
+source_sha256: 659e674a5ff1c235d852d0510d0f5d75e391e112c6026049a539e8da7dd7c0ec
 novelty: not-assessed
 status: reviewed
 ---
@@ -79,3 +79,7 @@ composition of accepted partial responses and a naive rogue-key witness.
 Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` through
 `QuantumPhysicsFullSuite.qutrit_circuit_refinement`; see the
 [beta 0.7 release](../../docs/release-v0.7.0.en.md).
+
+`DistributedSystemsFullSuite.tendermint_slashing` connects certified offender
+attribution to exact rational slashing and conditional honest-share growth.
+[Contract](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md).

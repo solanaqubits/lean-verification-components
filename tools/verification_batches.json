@@ -9,6 +9,20 @@
         "Verification.QuantumQutritSecretSharingExplicitDecoder",
         "Verification.QuantumQutritDecoderCircuitRefinement"
       ]
+    },
+    "distributed/tendermint-accountability": {
+      "direction": "distributed",
+      "modules": [
+        "Verification.DistributedTendermintCoreSafety",
+        "Verification.DistributedTendermintAccountableSafety",
+        "Verification.DistributedTendermintSlashingPenaltyContract"
+      ],
+      "description": "Fixed-height safety, certified attribution and exact rational slashing."
+    }
+  },
+  "infrastructure_batches": {
+    "verification-scope-policy": {
+      "description": "Validated declarative metadata, dependency impact analysis and accepted scoped evidence reuse; no mathematical module allocated."
     }
   }
 }

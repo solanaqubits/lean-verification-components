@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintSlashingPenaltyContract",
         "Verification.QuantumQutritDecoderCircuitRefinement",
         "Verification.QuantumQutritSecretSharingExplicitDecoder",
         "Verification.QuantumQutritTwoOfThreeSecretSharingContract",
@@ -1426,6 +1427,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.DistributedTendermintSlashingPenaltyContract",
         "Verification.QuantumQutritDecoderCircuitRefinement",
         "Verification.QuantumQutritSecretSharingExplicitDecoder",
         "Verification.QuantumQutritTwoOfThreeSecretSharingContract",
@@ -2662,6 +2664,17 @@
       "card": "knowledge/03_quantum_information/QuantumQutritDecoderCircuitRefinement.md",
       "project_imports": [
         "Verification.QuantumQutritSecretSharingExplicitDecoder"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "DistributedTendermintSlashingPenaltyContract",
+      "section": "distributed",
+      "source": "Verification/DistributedTendermintSlashingPenaltyContract.lean",
+      "card": "knowledge/02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md",
+      "project_imports": [
+        "Verification.DistributedTendermintAccountableSafety"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

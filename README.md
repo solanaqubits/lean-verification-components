@@ -30,12 +30,18 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**191 direct imports**, **235 Lean sources including Verification.lean**.
-[Beta checkpoint v0.7.0](docs/release-v0.7.0.en.md) uses the
-[alpha–zeta policy](VERSIONING.md). The current subject change is epsilon module
-191 in gamma `quantum-physics`, delta `qutrit-secret-sharing`. Publication requires
-full beta checks of the final tree; the annotated release tag records measured
-results and the accepted evidence digest. Previous tags retain their original scope.
+**192 direct imports**, **236 Lean sources including Verification.lean**.
+[Release v0.7.1](docs/release-v0.7.1.en.md) synchronizes the verification-scope
+policy and epsilon module 192 in gamma `distributed`, delta
+`distributed/tendermint-accountability`. Its final public tree requires full beta
+control because trusted verification tooling changes. The historical v0.7.0
+checkpoint remains immutable; public and private evidence are kept separate.
+
+[Certified Tendermint slashing](knowledge/02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md)
+proves exact rational penalties, protection of honest stake, a strict
+confiscation bound and conditional growth of the honest share.
+[Scope policy](docs/verification-scope-policy.en.md) separates validated metadata
+from executable checking mechanisms and binds evidence to exact checked inputs.
 
 [Qutrit circuit refinement](knowledge/03_quantum_information/QuantumQutritDecoderCircuitRefinement.md)
 connects an executable three-gate finite interpreter to the explicit unitary

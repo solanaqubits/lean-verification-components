@@ -3,7 +3,7 @@ id: MasterSuite
 language: en
 section: verification
 source: Verification/MasterSuite.lean
-source_sha256: 1790c2c044ee1901bb581bd42f8e5fb5772ee120aa6a249be68f76a13ae36b73
+source_sha256: fc8ee637da73bc170aed5b82ab24ac806ce7df0cbdcc05817cc3cfe03954317f
 novelty: not-assessed
 status: reviewed
 ---
@@ -14,7 +14,7 @@ status: reviewed
 
 ## Verified result
 
-Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 191 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
+Eleven existing domain suites, four numerical certificate suites, and the historical milestone aggregate; the current registry has 192 direct imports. The registry does not contain every declaration in the project. The Raft package includes reachable-state election safety, global Log Matching, operational Leader Completeness for actual commit events, and preservation of committed prefixes. The new bridge proves the operational conclusion directly; it does not instantiate the earlier whole-log VoterEvolution abstraction.
 
 ## Assumptions and scope
 
@@ -25,21 +25,21 @@ Scientific priority and first-formalization claims have not been established.
 
 ## Proof entry points
 
-- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L284)
-- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L296)
-- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L308)
-- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L327)
-- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L372)
-- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L496)
-- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L580)
-- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L590)
-- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L602)
-- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L649)
-- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L727)
-- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L804)
-- [`verification_master_registry`](../../Verification/MasterSuite.lean#L267)
+- [`finsler_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L319)
+- [`finsler_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L331)
+- [`lamzouri_full_master_verification_suite`](../../Verification/MasterSuiteComponents.lean#L343)
+- [`collatz_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L362)
+- [`crypto_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L409)
+- [`quantum_physics_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L549)
+- [`hopf_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L646)
+- [`proof_dag_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L656)
+- [`finance_defi_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L668)
+- [`finance_risk_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L716)
+- [`distributed_systems_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L797)
+- [`riemann_full_master_suite`](../../Verification/MasterSuiteComponents.lean#L876)
+- [`verification_master_registry`](../../Verification/MasterSuite.lean#L303)
 
-- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L817)
+- [`photonics_interposer_master_suite`](../../Verification/MasterSuiteComponents.lean#L889)
 
 ## Verification
 
@@ -110,3 +110,7 @@ composition of accepted partial responses and a naive rogue-key witness.
 Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` through
 `QuantumPhysicsFullSuite.qutrit_circuit_refinement`; see the
 [beta 0.7 release](../../docs/release-v0.7.0.en.md).
+
+`DistributedSystemsFullSuite.tendermint_slashing` connects certified offender
+attribution to exact rational slashing and conditional honest-share growth.
+[Contract](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md).

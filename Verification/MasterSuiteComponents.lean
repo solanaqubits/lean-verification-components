@@ -1,3 +1,4 @@
+import Verification.DistributedTendermintSlashingPenaltyContract
 import Verification.QuantumQutritDecoderCircuitRefinement
 import Verification.QuantumQutritSecretSharingExplicitDecoder
 import Verification.QuantumQutritTwoOfThreeSecretSharingContract
@@ -203,6 +204,8 @@ open QuantumKnillLaflammeEnvironmentCriterion
 open QuantumComplementaryChannelContract
 open DeFiLendingUtilizationFeedbackStability (DeFiLendingUtilizationFeedbackStabilitySuite)
 open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSafetySuite)
+open DistributedTendermintSlashingPenaltyContract
+  (DistributedTendermintSlashingPenaltyContractSuite)
 open CryptoBulletproofsRangeWitnessExtraction (CryptoBulletproofsRangeWitnessExtractionSuite)
 
 open DistributedRaftJointConsensusReconfig
@@ -750,6 +753,7 @@ theorem FinanceRiskFullSuite.concentrated_liquidity (suite : FinanceRiskFullSuit
 
 /-- Quorum lemmas, conditional log safety, and operational Raft election invariants. -/
 structure DistributedSystemsFullSuite : Prop where
+  tendermint_slashing : DistributedTendermintSlashingPenaltyContractSuite
   tendermint_accountability : DistributedTendermintAccountableSafetySuite
   tendermint : DistributedTendermintCoreSafety.DistributedTendermintCoreSafetySuite
   bft_quorum : BFTConsensusFormalSuite
@@ -791,6 +795,7 @@ structure DistributedSystemsFullSuite : Prop where
   marzullo_event_sorting : DistributedMarzulloEventSorting.DistributedMarzulloEventSortingSuite
 
 theorem distributed_systems_full_master_suite : DistributedSystemsFullSuite := {
+  tendermint_slashing := DistributedTendermintSlashingPenaltyContract.verification_suite
   tendermint_accountability := DistributedTendermintAccountableSafety.verification_suite
   tendermint := DistributedTendermintCoreSafety.verification_suite
   bft_quorum := bft_consensus_master_verification_suite

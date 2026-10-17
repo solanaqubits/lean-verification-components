@@ -16,12 +16,15 @@ from pathlib import Path
 import re
 import shutil
 import signal
+import sys
 import subprocess
 import tempfile
 import time
 import uuid
 
 HERE = Path(__file__).resolve().parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
 ALLOWED_AXIOMS = ['propext', 'Classical.choice', 'Quot.sound']
 IDENTIFIER = re.compile(r'[A-Za-z_][A-Za-z_0-9]*(?:\.[A-Za-z_][A-Za-z_0-9]*)*\Z')
 FORBIDDEN = {'sorry', 'admit', 'axiom', 'native_decide', 'unsafe', 'implemented_by',
@@ -236,6 +239,11 @@ class Verifier:
         target = targets.get(module)
         if not target or target['suite_struct'] != suite_struct:
             raise VerificationError('No explicit integration recipe for this module/suite; add a reviewed recipe')
+        from verification_metadata import validate_recipe
+        try:
+            validate_recipe(module, target, {module})
+        except ValueError as e:
+            raise VerificationError(str(e)) from e
         parent_path, _ = self.source(target.get('parent_module', 'Verification.MasterSuite'))
         parent_name = str(parent_path.relative_to(self.project))
         original = parent_path.read_text(); updated = original

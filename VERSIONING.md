@@ -93,3 +93,19 @@ checks and publication succeed. Until then retain the previous successful beta.
 Private and public trees each require their own checks. Fresh compilation counts,
 Lake task counts, unittest counts, Lean assertion counts and audit declaration
 counts are separate. Record overlapping audit closures without summing them.
+
+## Declarative scope and accepted reuse
+
+See [verification scope policy](docs/verification-scope-policy.en.md). Batch,
+catalog and integration JSON data are validated separately from executable rules.
+Use `verification_plan.py --base <accepted-main-sha>` to compare metadata and both
+old/new dependency graphs. Description-only data edits do not run Lean. Changed
+relations select old/new members and integration consumers. Unknown impact and
+changes to verification/trust mechanisms still require beta.
+
+`scope_evidence.py` reuses scoped command results only with an externally accepted
+report digest and unchanged inputs, closure, tools, configuration, runtime and
+commands. It reports invalidation reasons and never downgrades a beta plan.
+The change rank and performed verification level are distinct. Infrastructure
+batches do not increment the mathematical module counter. Historical checkpoint
+tags stay immutable even when subsequent commits undergo full control.
