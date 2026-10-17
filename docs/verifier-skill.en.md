@@ -23,12 +23,14 @@ it does not trust an old compiled artifact after source changes.
 
 `integrate` previews a diff using a recipe in
 [integration_targets.json](../tools/integration_targets.json). Add `--apply` to
-write the change, verify it, and build. Failure restores the registry and root
-source files; it does not restore build caches. Existing guarantees and universes
+write the change, verify it, and build. A recipe may name `parent_module`
+(default `Verification.MasterSuite`); existing domain packages live in
+`Verification.MasterSuiteComponents`. Integration also maintains the central and
+root imports. Failure restores all changed parent, central, and root source files; it does not restore build caches. Existing guarantees and universes
 must be preserved when adding recipes.
 
-`card` returns an English draft without overwriting existing cards. Review the Lean
-statements and add precise scope before saving a card.
+`card` returns a Russian draft without overwriting existing cards. Review the Lean
+statements and add precise scope before saving a card and an English companion.
 `scaffold DOMAIN --spec-file FILE` attempts a small explicit Lean proposition;
 it does not turn arbitrary prose into a verified specification. Run `--help` for
 available commands and arguments.
@@ -45,15 +47,6 @@ report = Verifier(".").verify_module("Verification/CryptoPedersenCommitment.lean
 assert report["ok"], report
 ```
 
-## Registry integration after the component split
-
-Domain recipes select `Verification.MasterSuiteComponents` using `parent_module`.
-The default parent remains `Verification.MasterSuite` for central integration.
-The selected parent must resolve to a Lean source inside `Verification/`.
-Integration edits the parent suite and constructor, the central direct import, and
-the root import; a failed verification restores every changed source file. Existing
-recipes are idempotent. The milestone type carries explicit universe arguments.
-
 ## Verification scope
 
 During development, run `verify` on the changed module and only its relevant live
@@ -69,25 +62,25 @@ importing modules and run their regressions: module verification follows imports
 not reverse dependencies. Expand checks when the impact is unclear. Documentation
 edits need link/catalog checks rather than Lean rechecking.
 
-The approved [alpha/beta/gamma policy](../VERSIONING.md) replaces the former full gate before
-every main/release. Gamma (formerly Z) permits targeted validation of a bounded change, including
+The approved [X/Y/Z policy](../VERSIONING.md) replaces the former full gate before
+every main/release. Z permits targeted validation of a bounded change, including
 affected reverse dependents and registry integration; it need not add a module.
-Alpha/beta (formerly X/Y) require the full gate once on the final integrated source: `lake build
+X/Y require the full gate once on the final integrated source: `lake build
 --wfail`, `verify-all`, the entire live test suite, required registry and independent
 axiom audits, and `python3 scripts/check_knowledge.py`. Keep valid incremental
-cache. Changes requiring broad revalidation belong to beta unless they warrant alpha.
+cache. Changes requiring broad revalidation belong to Y unless they warrant X.
 
 Record commands, outcomes, source/configuration identities, toolchain, dependencies
 and the last fully validated commit. Reuse results only within their unchanged
 scope. Private-tree evidence does not certify a different public tree. Report
 partial/full verification and cached/fresh compilation accurately. Scope selection
 and release classification are agent responsibilities, not newly implemented CLI
-features. See VERSIONING.md for the full-gate commands.
+features. See the Russian guide for the full commands.
 
-Delta is a local iteration in a named parallel stream, recorded with its base SHA,
-stream ID, counter, current SHA and validation evidence. Epsilon and lower ranks
-may identify nested work with explicit parents; they do not weaken proof checks.
-At integration, classify and validate the combined diff and assign the common
-alpha/beta/gamma version once. Numeric tags retain vA.B.C; rank names describe
-scope, not prerelease maturity. This policy does not implement automatic counters
-or merge queues. See VERSIONING.md.
+
+## Hierarchy migration at beta 0.6
+
+The current rules are in [VERSIONING.md](../VERSIONING.md) and the
+[hierarchy guide](verification-hierarchy.en.md). Gamma now means a direction,
+delta a batch, epsilon a module and zeta a module correction. Earlier scope
+descriptions in historical reports retain their original meaning.

@@ -2664,6 +2664,11 @@
       "source": "Verification/Specs/QuantumSimonsConformance.lean",
       "documentation": "docs/statement-conformance.en.md",
       "role": "meta-audit support; not a MasterSuite subject import"
+    },
+    {
+      "source": "Verification/Specs/QuantumQutritDecoderSpec.lean",
+      "documentation": "docs/qutrit-conformance.en.md",
+      "role": "pinned normative specification; not a subject module"
     }
   ]
 }

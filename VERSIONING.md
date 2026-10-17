@@ -1,110 +1,95 @@
-# Release versions and verification scope
+# Hierarchical versions and verification scope
 
-Status: approved by the project owner. This policy replaces the requirement to
-run the full project gate before every main integration or release. It is a
-project-specific alpha/beta/gamma rank scheme (formerly X/Y/Z), not a claim of
-Semantic Versioning compliance. These names describe change scope, not release
-maturity: alpha and beta do not mean unstable prereleases here.
-Existing published tags and their evidence remain immutable.
+Owner-approved policy, effective from the beta 0.6 checkpoint. Historical tags
+and their evidence are immutable. This replaces the former alpha/beta/gamma
+change-size convention; old "gamma release" records retain their old meaning.
 
-| Rank | Meaning | Required validation |
+| Level | Meaning | Minimum checked scope |
 | --- | --- | --- |
-| Alpha (α; formerly X) | Substantial architectural change or incompatible change to key proof contracts | Full gate |
-| Beta (β; formerly Y) | Full-validation checkpoint, including updates requiring broad revalidation | Full gate |
-| Gamma (γ; formerly Z) | Bounded module, fix, documentation or tooling update | Checks covering the affected scope |
+| Alpha (α) | Global release or system architecture change | Whole system; compatibility and migration review |
+| Beta (β) | Full verification checkpoint | All proof sources, integration, registered conformance contracts, all tests and audits |
+| Gamma (γ) | A subject direction in the shared base | All modules in that catalog direction and affected external dependents |
+| Delta (δ) | A named batch/block inside a direction | Every batch member, their imported closure and affected dependents |
+| Epsilon (ε) | A module inside a batch | Module proofs plus affected batch/direction/integration checks |
+| Zeta (ζ) | A correction or section inside a module | Changed obligations and their impact; at least strict module checking for proof changes |
 
-Published versions retain numeric form `vA.B.C`: A is alpha, B is beta, C is
-gamma. Incrementing alpha resets beta and gamma; incrementing beta resets gamma.
-A gamma release may contain
-a new module, several related changes, or no module. A commit is not automatically
-a release. Allocate the release version at integration, not separately in every
-parallel branch. No existing package version is changed by adopting this policy.
+Lower levels may be introduced only with a named parent and a concrete need.
+A batch can contain one module. New directions receive stable catalog IDs.
+A level identifies an object's place, not permission to omit required checks.
+Shared definitions, cross-direction changes, trust-tooling changes or uncertain
+impact escalate verification. Trust mechanisms/toolchains require beta; global
+incompatible architecture changes require alpha. Documentation-only changes
+require documentation checks unless they change verification/trust policy.
 
-## Parallel work and lower ranks
+## Names and counters
 
-Delta (δ) is the fourth rank: a local iteration within a named parallel work
-stream. It is not a shared fourth counter allocated independently by all agents.
-Keep stream identity separate from iteration number. Record the parent/base SHA,
-stream ID, local delta counter, current SHA, changed scope and validation evidence.
-For example: base `v0.5.75`, stream `bulletproofs`, delta `3`, commit `<SHA>`.
-This example is an evidence record, not a new published tag format.
+A full checkpoint uses tag vA.B.0 (this migration: v0.6.0). Retain the current
+alpha counter unless there is a global system release. A/B identify the common
+system and beta generation; direction/batch/module are stable named identities,
+not interchangeable global decimal counters. Scoped work records:
 
-Epsilon (ε), zeta (ζ) and further lower ranks may identify nested work units when
-needed. Each has an explicit parent and a counter local to that parent. Introduce
-another rank only for actual nested work; rank depth is not a measure of quality
-or proof strength. Lower-rank records do not replace commits or proof evidence.
-A new base starts a new local counter scope; preserve earlier records unchanged.
+    beta: v0.6.0
+    direction: quantum-physics
+    batch: qutrit-secret-sharing
+    module: QuantumQutritSecretSharingExplicitDecoder
+    revision: 1
+    integration_sequence: allocated when accepted on main
+    base_sha: <actual parent>
+    result_sha: <actual commit>
 
-A delta or deeper iteration inherits the validation obligations of its semantic
-change. A small proof edit still needs its affected proof checks. Toolchain,
-shared-foundation or trust changes still require beta validation before integration;
-major architectural changes require alpha. Parallel execution alone neither
-requires a full gate nor permits skipping required checks.
+Versions of different directions are not ordered by comparing their local
+revision counters. The single main commit history defines integration order.
+Package patch releases may use vA.B.N as serial publication numbers; N is not a
+direction ID or proof-coverage claim. Every scoped release states its actual
+rank and hierarchy path. No retrospective renumbering of modules 1–190 or tags.
 
-Agents work in separate branches/worktrees and do not allocate competing common
-release numbers. At integration, classify the combined diff as gamma, beta or
-alpha, allocate the common numeric version once, and validate the final merged
-state and affected interactions. Branch checks apply only to their recorded
-inputs. Preserve the last fully validated SHA and link every incorporated stream's
-SHA and evidence. Unclear combined impact requires beta validation.
+## Sequential integration
 
-This hierarchy is a workflow convention. Automatic counter allocation, merge
-queues, branch-evidence manifests and new tag syntax are not implemented by this
-document. Existing numeric tags remain unchanged.
+Parallel development may use isolated branches/worktrees. Integrate one batch
+at a time on current main. Before each integration, compare the actual remote
+main with the expected parent, rebase/merge the candidate onto that parent, and
+rerun checks invalidated by the combined change. Allocate the integration
+sequence centrally at acceptance. A stale base fails integration. Never force
+push main or reuse a tag. In shared automation use a single publisher/queue;
+a process-local lock alone does not serialize multiple machines.
 
-## Selecting scope
+## Checks and evidence
 
-For changed Lean code, use module verification (including its imported axiom
-closure), affected reverse dependents and relevant live regressions. Verify final
-registry/root integration as well. A chosen target can import much of the library;
-Gamma is not a promise that exactly one file is processed. Preserve valid Lake caches.
-For documentation-only changes, use documentation/link/catalog checks.
+Use tools/verification_plan.py to inventory local imports and reverse dependents.
+Gamma selects the complete direction. Delta uses tools/verification_batches.json.
+Epsilon/zeta select named modules. Cross-direction effects expand the plan;
+registry dependents are always built. Explicit reviewed test selection is still
+required for scoped runs; the planner does not infer test coverage from names.
+It does not infer whether arbitrary natural-language requirements are correct.
 
-Lean/Mathlib upgrades, changes to shared foundations, verification mechanisms
-affecting trust, and unclear dependency impact require broad validation and beta,
-unless their architectural significance warrants alpha. Bounded tooling changes may
-remain gamma when the affected behavior and necessary tests can be identified.
-Choose scope based on semantic impact, not the number of changed lines.
-
-The full gate is run once on the final integrated source for alpha/beta:
+Beta runs on the final tree, preserving .lake/build:
 
 ```bash
-lake build --wfail
-python3 tools/verifier_skill.py verify-all
-LEAN_VERIFIER_LIVE_TESTS=1 python3 -m unittest discover -s tests -p 'test_*.py'
-lake env lean -DwarningAsError=true Verification/AxiomAudit.lean
-python3 scripts/check_knowledge.py
+python3 tools/release_evidence.py run-beta --output /absolute/external/evidence \
+  --auditor /absolute/path/to/pinned/axiom-audit
 ```
 
-Run the project's required pinned independent axiom auditor as well. Its binary,
-version, command and results must be recorded. Allowed axioms remain strictly
-`propext`, `Classical.choice`, `Quot.sound`. `audit` immediately after successful
-`verify` on identical inputs duplicates work and is not an independent audit.
+This runs strict root build, verify-all, registry audit, the pinned independent
+axiom auditor over every Verification source, all unittest with live checks,
+knowledge checks, import-graph/scope checks and diff checks. Errors, incomplete
+reports, unexpected skips or changed inputs reject the checkpoint. The full
+unittest includes the registered Simon and qutrit statement-conformance checks.
+Full proof checking is not universal independent specification checking: record
+which modules have normative conformance contracts and which do not.
 
-Full validation is not the same as a clean rebuild: retain valid caches, letting
-Lake rebuild stale dependencies. A clean rebuild is reserved for an explicit
-reproducibility requirement or cache/toolchain diagnosis. If a check fails, fix
-the issue and rerun the invalidated checks; "once" never forbids necessary reruns.
+Only propext, Classical.choice and Quot.sound are allowed. No sorry, admit,
+user axioms or native-decide bypasses. Do not duplicate an audit immediately
+after verify on unchanged inputs. A separate pinned auditor is a distinct
+implementation, not a second independent proof kernel.
 
-## Evidence and integration
+Evidence binds source/configuration/test hashes, commands, logs, tool identities
+and results. A trusted publisher pins its accepted evidence digest and checks
+that committed bytes match before publication. Hash consistency is not report
+authentication. The checker, manifest, specifications and publisher need review
+independent of a candidate; agents may not silently relax these controls.
 
-Each release records its source commit, last successful full-validation commit,
-changed scope since that baseline, current checked scope, commands, results,
-source/configuration hashes and toolchain/dependency identities. Record intervening
-gamma and branch evidence so the entire delta is covered; a baseline alone does not certify it.
-Record uncommitted input hashes during checking and bind them to the final commit.
-
-Reusing a result requires unchanged inputs within its scope. A merge or rebase can
-invalidate results: assess the combined diff and check the final integrated tree.
-Unclear combined impact requires beta. Private-tree evidence does not automatically
-certify a different public tree. Never describe targeted checks as a new full
-audit or cached build target counts as freshly rechecked proof counts.
-
-This is an agent/release policy. The current CLI does not automatically classify
-versions, select reverse dependencies or enforce evidence coverage. Do not claim
-such automation until it is implemented and tested.
-
-Simulation runs and research-note updates alone do not require a Lean release.
-If they change Lean contracts, fixtures or integration interfaces, classify and
-validate that Lean change under this policy. Independent components can be pinned
-together in an integration manifest without forcing synchronized version numbers.
+A checkpoint is promoted to "last successful beta" only after all required
+checks and publication succeed. Until then retain the previous successful beta.
+Private and public trees each require their own checks. Fresh compilation counts,
+Lake task counts, unittest counts, Lean assertion counts and audit declaration
+counts are separate. Record overlapping audit closures without summing them.

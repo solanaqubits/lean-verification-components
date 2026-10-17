@@ -43,27 +43,29 @@ dependents: when changing an existing API, also build affected importing modules
 and run their relevant regressions. Expand the scope if dependencies are unclear.
 Documentation-only edits need documentation/catalog checks, not Lean rechecking.
 
-Follow [VERSIONING.md](../../../VERSIONING.md): alpha (α, formerly X) is a major architectural or
-key-contract compatibility change; beta (β, formerly Y) is a full-validation checkpoint; gamma (γ, formerly Z) is a
-bounded change with targeted validation, with or without a new module. For gamma,
-verify changed proofs and their imported axiom closure, affected reverse
-dependents, registry integration and relevant live tests. Documentation-only
-changes need documentation checks. Do not run a full gate solely for a gamma release.
+Follow [VERSIONING.md](../../../VERSIONING.md): alpha is global system change;
+beta is a full checkpoint; gamma is a catalog direction; delta is a named batch
+(possibly one module); epsilon is a module; zeta is an internal correction.
+Lower levels require an explicit parent. Historical tags retain their old meaning.
+Use `tools/verification_plan.py` to include imported and reverse dependencies.
+Escalate cross-direction changes and trust/toolchain changes as the policy requires.
 
-For alpha/beta, run the full project gate once on the final integrated source:
-`lake build --wfail`, `verify-all`, all live tests with
-`LEAN_VERIFIER_LIVE_TESTS=1`, required independent/registry axiom audits, and
-`python3 scripts/check_knowledge.py`. Toolchain/dependency changes, shared
-foundations, verifier changes affecting trust, or unclear impact require beta
-unless the architectural/compatibility change warrants alpha. A bounded tooling
-change can remain gamma when targeted checks justify its scope. Retain valid cache;
-full verification does not imply a clean rebuild.
+For beta run `tools/release_evidence.py run-beta` with an external evidence directory
+and the pinned independent auditor. This runs every proof, all live tests, registry
+integration, registered conformance checks and catalog checks with cache retained.
+Do not describe registered conformance coverage as independent semantic review of
+all modules. Consult [the hierarchy guide](../../../docs/verification-hierarchy.en.md)
+and [qutrit contract](../../../docs/qutrit-conformance.en.md) for those workflows.
 
-Delta (δ) identifies a local iteration in a named parallel stream; epsilon and
-lower ranks may identify nested work with explicit parents. Record the base SHA,
-stream ID, local counter, current SHA and checked scope. These ranks do not reduce
-validation requirements. Allocate a common alpha/beta/gamma release only at
-integration and check the combined changes. Existing numeric tags stay unchanged.
+Keep requirements separate from candidate proofs. Never regenerate a normative
+specification or its pins merely to make a candidate pass. Review changes to them
+as specification changes. Classify tests as API applications, independent expected
+values, counterexamples, mutation rejection or concrete satisfiability witnesses.
+
+Develop in isolated trees; integrate batches sequentially on current main. Reject
+stale expected parents, rerun invalidated checks, and never force-push a divergent
+main. Check exact committed bytes against accepted evidence before publishing.
+Respect authorization already given by the user; do not add redundant approvals.
 
 Record the last full-validation commit and subsequent scoped evidence. Reuse
 results only for their recorded scope and unchanged source, configuration,
@@ -84,7 +86,7 @@ suite rather than guessing universes or overwriting the registry. Preserve inher
 fields, integral results and existing public APIs. Source rollback does not
 restore build caches; rebuild before using them after failure.
 
-`card MODULE` returns an English draft after verification. Read theorem types,
+`card MODULE` returns a English draft after verification. Read theorem types,
 add the actual assumptions and limitations, then save it in the appropriate
 knowledge section. Do not overwrite an existing reviewed card with the generic
 draft. Update catalog imports, section navigation and source-line links, and run

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "contract_version": "qutrit-decoder-v1",
+  "approved_requirement": "Module 190 explicit decoder contract; introduced with beta 0.6",
+  "review_policy": "Do not regenerate from a candidate. Changes to normative definitions, probe or pins require specification review independently of the implementation.",
+  "trusted_sha256": {
+    "Verification/Specs/QuantumQutritDecoderSpec.lean": "c1552a6c758ececc7fa3f4e73bff9e49eade53663f9befb7ad6471363e60c7f2",
+    "tools/qutrit_conformance_probe.lean": "142945a63fb43efc03f9d9b76d43fab87d715891a2241c03157093a818ef26e6",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  }
+}

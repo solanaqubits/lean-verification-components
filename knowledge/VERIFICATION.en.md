@@ -1,11 +1,17 @@
 # Public verification record
 
-Current gamma release (formerly Z): [v0.5.88 scoped validation](../docs/release-v0.5.88.en.md).
-190 direct imports, 233 root-inclusive Lean sources. The full-project figures
-below belong to `b3410720b9af49c2fb70d15d65d3d012091cbf0b`; they are not fresh
-full-validation results for v0.5.88.
+## Beta 0.6 migration checkpoint
 
-## Last full-validation baseline: v0.5.73
+The v0.6.0 candidate contains 190 direct imports and 234 root-inclusive Lean
+sources, including three nested support specifications. Publication requires the
+complete beta gate in [VERSIONING.md](../VERSIONING.md), with exact source and
+runtime fingerprints and externally retained logs. No measurement below is a
+new beta 0.6 result; the historical baseline remains distinct until that gate
+passes. Independent normative conformance is registered for Simon and the
+explicit qutrit decoder, not every subject module.
+
+
+## Historical full-validation baseline: v0.5.73
 
 [Release v0.5.73](../docs/release-v0.5.73.en.md) · [Detailed contract](03_quantum_information/QuantumCPTPChannelContract.md)
 

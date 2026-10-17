@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "policy": "Batches have stable IDs within a catalog direction. A singleton batch is valid. Allocate integration sequence only on current main.",
+  "batches": {
+    "quantum-physics/qutrit-secret-sharing": {
+      "direction": "quantum-physics",
+      "modules": [
+        "Verification.QuantumQutritTwoOfThreeSecretSharingContract",
+        "Verification.QuantumQutritSecretSharingExplicitDecoder"
+      ]
+    }
+  }
+}
