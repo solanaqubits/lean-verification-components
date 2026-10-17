@@ -97,3 +97,5 @@ Public-tree checks are recorded in [the release report](../../docs/release-v0.5.
 Private evidence is not substituted for public validation; no new full-project
 verify-all or full unittest result is claimed. The permitted axioms remain
 propext, Classical.choice and Quot.sound.
+
+[Module 193](CryptoPedersenCommitmentOpeningExtractionContract.md) constructs opening certificates from additional accepting representation-protocol forks. Obtaining those forks from the original Bulletproofs transcript remains an open obligation.

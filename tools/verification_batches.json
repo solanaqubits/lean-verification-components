@@ -18,6 +18,16 @@
         "Verification.DistributedTendermintSlashingPenaltyContract"
       ],
       "description": "Fixed-height safety, certified attribution and exact rational slashing."
+    },
+    "cryptography/pedersen-opening-extraction": {
+      "direction": "cryptography",
+      "modules": [
+        "Verification.CryptoPedersenHomomorphicSum",
+        "Verification.CryptoCommitmentVectorPedersenGroup",
+        "Verification.CryptoBulletproofsRangeWitnessExtraction",
+        "Verification.CryptoPedersenCommitmentOpeningExtractionContract"
+      ],
+      "description": "Linear representation forks, scalar/vector openings and conditional Bulletproofs composition."
     }
   },
   "infrastructure_batches": {

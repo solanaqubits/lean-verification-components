@@ -30,12 +30,17 @@ the components in larger formal developments.
 
 ## Verified snapshot
 
-**192 direct imports**, **236 Lean sources including Verification.lean**.
-[Release v0.7.1](docs/release-v0.7.1.en.md) synchronizes the verification-scope
-policy and epsilon module 192 in gamma `distributed`, delta
-`distributed/tendermint-accountability`. Its final public tree requires full beta
-control because trusted verification tooling changes. The historical v0.7.0
-checkpoint remains immutable; public and private evidence are kept separate.
+**193 direct imports**, **237 Lean sources including Verification.lean**.
+[Release v0.7.2](docs/release-v0.7.2.en.md) synchronizes epsilon module 193 in
+gamma `cryptography`, delta `cryptography/pedersen-opening-extraction`.
+It is a Git publication serial; the Lake package version remains 0.7.1.
+Scoped public validation is separate from the last full public basis v0.7.1.
+Historical checkpoints and private evidence remain unchanged.
+
+[Pedersen opening extraction](knowledge/04_cryptography/CryptoPedersenCommitmentOpeningExtractionContract.md)
+proves scalar/vector special soundness and checked extraction. The conditional
+Bulletproofs bridge needs additional opening forks; obtaining them from the
+original protocol and probabilistic forking remain open obligations.
 
 [Certified Tendermint slashing](knowledge/02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md)
 proves exact rational penalties, protection of honest stake, a strict

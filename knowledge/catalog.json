@@ -614,6 +614,7 @@
       "source": "Verification/MasterSuite.lean",
       "card": "knowledge/verification/MasterSuite.en.md",
       "project_imports": [
+        "Verification.CryptoPedersenCommitmentOpeningExtractionContract",
         "Verification.DistributedTendermintSlashingPenaltyContract",
         "Verification.QuantumQutritDecoderCircuitRefinement",
         "Verification.QuantumQutritSecretSharingExplicitDecoder",
@@ -1427,6 +1428,7 @@
       "source": "Verification/MasterSuiteComponents.lean",
       "card": "knowledge/verification/MasterSuiteComponents.en.md",
       "project_imports": [
+        "Verification.CryptoPedersenCommitmentOpeningExtractionContract",
         "Verification.DistributedTendermintSlashingPenaltyContract",
         "Verification.QuantumQutritDecoderCircuitRefinement",
         "Verification.QuantumQutritSecretSharingExplicitDecoder",
@@ -2675,6 +2677,17 @@
       "card": "knowledge/02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md",
       "project_imports": [
         "Verification.DistributedTendermintAccountableSafety"
+      ],
+      "novelty": "not-assessed",
+      "status": "reviewed"
+    },
+    {
+      "id": "CryptoPedersenCommitmentOpeningExtractionContract",
+      "section": "cryptography",
+      "source": "Verification/CryptoPedersenCommitmentOpeningExtractionContract.lean",
+      "card": "knowledge/04_cryptography/CryptoPedersenCommitmentOpeningExtractionContract.md",
+      "project_imports": [
+        "Verification.CryptoBulletproofsRangeWitnessExtraction"
       ],
       "novelty": "not-assessed",
       "status": "reviewed"

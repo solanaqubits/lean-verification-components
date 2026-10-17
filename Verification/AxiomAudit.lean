@@ -208,3 +208,5 @@ open CryptoCommitmentVectorPedersenGroup in
 #audit_axioms QuantumQutritDecoderCircuitRefinement.verification_suite
 
 #audit_axioms DistributedTendermintSlashingPenaltyContract.verification_suite
+
+#audit_axioms CryptoPedersenCommitmentOpeningExtractionContract.verification_suite

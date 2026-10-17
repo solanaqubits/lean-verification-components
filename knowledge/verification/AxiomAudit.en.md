@@ -3,7 +3,7 @@ id: AxiomAudit
 language: en
 section: verification
 source: Verification/AxiomAudit.lean
-source_sha256: d72b302de458311913ec2d2dca6fd2c7eae1f4c408af71fdc758864381f452e8
+source_sha256: 2479371ef5aef58fac35b96bc1426ab4d162eb23a9764f6b809d5c561d4eb490
 novelty: not-assessed
 status: reviewed
 ---
@@ -38,3 +38,5 @@ Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` throu
 `DistributedSystemsFullSuite.tendermint_slashing` connects certified offender
 attribution to exact rational slashing and conditional honest-share growth.
 [Contract](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md).
+
+Module 193 adds `CryptoFullSuite.pedersen_opening`: two-branch opening extraction and conditional composition with module 178.

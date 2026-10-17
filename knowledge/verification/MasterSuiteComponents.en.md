@@ -3,7 +3,7 @@ id: MasterSuiteComponents
 language: en
 section: verification
 source: Verification/MasterSuiteComponents.lean
-source_sha256: 659e674a5ff1c235d852d0510d0f5d75e391e112c6026049a539e8da7dd7c0ec
+source_sha256: 0311fda9e2fbde34e488f0a9d5dca53d3cae225b9aefc353af4f7435c6088b23
 novelty: not-assessed
 status: reviewed
 ---
@@ -83,3 +83,5 @@ Module 191 adds `QuantumQutritDecoderCircuitRefinement.verification_suite` throu
 `DistributedSystemsFullSuite.tendermint_slashing` connects certified offender
 attribution to exact rational slashing and conditional honest-share growth.
 [Contract](../02_distributed_systems/DistributedTendermintSlashingPenaltyContract.md).
+
+Module 193 adds `CryptoFullSuite.pedersen_opening`: two-branch opening extraction and conditional composition with module 178.

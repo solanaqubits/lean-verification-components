@@ -1,3 +1,4 @@
+import Verification.CryptoPedersenCommitmentOpeningExtractionContract
 import Verification.DistributedTendermintSlashingPenaltyContract
 import Verification.QuantumQutritDecoderCircuitRefinement
 import Verification.QuantumQutritSecretSharingExplicitDecoder
@@ -207,6 +208,8 @@ open DistributedTendermintAccountableSafety (DistributedTendermintAccountableSaf
 open DistributedTendermintSlashingPenaltyContract
   (DistributedTendermintSlashingPenaltyContractSuite)
 open CryptoBulletproofsRangeWitnessExtraction (CryptoBulletproofsRangeWitnessExtractionSuite)
+open CryptoPedersenCommitmentOpeningExtractionContract
+  (CryptoPedersenCommitmentOpeningExtractionContractSuite)
 
 open DistributedRaftJointConsensusReconfig
 
@@ -368,6 +371,7 @@ theorem collatz_full_master_suite : CollatzFullSuite := {
 
 /-- Rational diffusion and generic deterministic trace guarantees. -/
 structure CryptoFullSuite : Prop where
+  pedersen_opening : CryptoPedersenCommitmentOpeningExtractionContractSuite
   spn_suite : CryptoSPNFormalSuite
   air_suite : CryptoZKAirFormalSuite.{u₁, u₂, u₃, u₄, u₅}
   fri_suite : CryptoZKFRISuite.{uFRI}
@@ -407,6 +411,7 @@ structure CryptoFullSuite : Prop where
   ipa_tree : CryptoBulletproofsTreeExtraction.CryptoBulletproofsTreeExtractionSuite
 
 theorem crypto_full_master_suite : CryptoFullSuite := {
+  pedersen_opening := CryptoPedersenCommitmentOpeningExtractionContract.verification_suite
   spn_suite := crypto_spn_master_verification_suite
   air_suite := crypto_zk_air_master_verification_suite
   fri_suite := crypto_zk_fri_master_verification_suite
